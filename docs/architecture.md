@@ -1,6 +1,6 @@
 # Architecture
 
-Novigrad has two separate execution paths. The **plastic rate engine** loads a fixed input→hidden edge table and a plastic hidden→output edge table. The **full-graph LIF runner** activates the much larger derived FlyWire graph but does not train it. The public Rust crate remains `nobi`.
+Novigrad has two separate execution paths. The **plastic rate engine** loads a fixed input→hidden edge table and a plastic hidden→output edge table. The **full-graph LIF runner** activates the much larger derived FlyWire graph but does not train it. The public Rust crate and default executable are `novi`. `novi_engine` provides the generic CLI; `novi_rt` provides periodic execution; the optional `novi_api` serves local HTTP requests.
 
 ## Plastic rate engine
 
@@ -22,10 +22,36 @@ The checked-in v1 confirmation evaluates binary, four-way, and XOR synthetic tas
 
 ## Execution limits
 
-The implementation is a single-thread CPU prototype. The repository's Cargo release configuration sets `target-cpu=native`, so a compiled binary is tuned for the build machine. The full-graph LIF path and two-layer rate path differ in both dynamics and scope. Neither path demonstrates whole-brain learning, biological time constants for the plastic model, real dopamine, hardware NPU execution, or embodied control.
+Each circuit executes on a CPU thread. Independent task experiments and HTTP requests may run on separate worker threads; one model instance serializes state changes. The repository's Cargo release configuration sets `target-cpu=native`, so a compiled binary is tuned for the build machine. The full-graph LIF path and two-layer rate path differ in both dynamics and scope. Neither path demonstrates whole-brain learning, biological time constants for the plastic model, real dopamine, hardware NPU execution, or embodied control.
 
 ## Modality and output adapters
 
 The image adapter extracts label-free local gradients and pooled pixels, fits fractional PCA whitening on training images only, and maps signed components to nonnegative neuronal rate ports. A fixed-grid decoder applies the same character classifier four times for the synthetic CAPTCHA example.
 
 The optional opponent readout assigns fixed +1/-1 gains to output neurons within each action group. It supplies positive and negative class evidence without changing the sign of any KC→MBON synapse. The gains are engineered external output wiring, not inferred anatomical neurotransmitters. The corresponding gain enters both the forward action score and its learning derivative and is stored in schema 4 Safetensors.
+
+## A shared engine behind multiple interfaces
+
+```mermaid
+flowchart LR
+  sensor[Image, sensor or application data] --> adapter[Task input adapter]
+  adapter --> frame[Ordered numeric input ports]
+  frame --> cli[CLI or Rust caller]
+  frame --> timer[Periodic runtime]
+  frame --> http[Local HTTP API]
+  cli --> engine[Connectome-constrained Engine]
+  timer --> engine
+  http --> engine
+  engine --> output[Action probabilities]
+  output --> decoder[Application output decoder]
+  teacher[External reward or teacher] --> engine
+  model[Safetensors checkpoint] <--> engine
+```
+
+The core does not depend on image dimensions, class names, HTTP, or wall-clock scheduling. An adapter owns conversion from the application's data to the model's ordered input IDs. The application owns decoding and the source of rewards. API neuron IDs are decimal strings so JavaScript clients do not lose precision on U64 FlyWire identifiers.
+
+State ownership is explicit: inference closes a trial without changing weights; online feedback consumes one forward trial; minibatch learning consumes several trials and applies the mean gradient once. An incomplete batch cannot be checkpointed or mixed with online updates. Per-sample buffers and gradient storage are reused.
+
+The [periodic runtime](runtime.md) measures execution against a chosen period and skips missed scheduling slots. It provides soft real-time behavior under macOS, not hard deadline guarantees. The [local API](api.md) registers model files at startup and exposes controlled inference/learning operations; it does not accept arbitrary client-side file paths. Both interfaces use the same checkpoint and engine semantics.
+
+[Optimization mechanisms](optimization.md) documents controlled changes to learning, activation and encoding. New modalities can reuse this architecture by implementing an input adapter and an output decoder; the biological circuit need not acquire modality-specific branches.

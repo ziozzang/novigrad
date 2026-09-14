@@ -1,0 +1,18 @@
+{
+  "mode": "soft-real-time",
+  "ticks": 1000,
+  "period_us": 1000,
+  "compute_deadline_misses": 0,
+  "scheduled_finish_misses": 0,
+  "late_starts": 1000,
+  "skipped_periods": 0,
+  "mean_compute_ns": 115965,
+  "max_compute_ns": 220083,
+  "elapsed_ms": 999,
+  "selected_action": 3,
+  "checkpoint": "examples/vision/models/captcha/model.safetensors",
+  "model_scope": "v0.1.0 baseline CAPTCHA",
+  "hardware": "Apple M2 Ultra",
+  "binary_target_cpu": "apple-m1",
+  "concurrent_work": "vision training and development tasks; not an isolated latency guarantee"
+}

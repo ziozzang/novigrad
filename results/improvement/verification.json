@@ -1,0 +1,17 @@
+{
+  "rust_tests_passed": 34,
+  "python_tests_passed": 8,
+  "clippy": "pass",
+  "formatting": "pass",
+  "commands": [
+    "cargo test --release --features api --all-targets",
+    "cargo clippy --features api --all-targets -- -D warnings",
+    "cargo fmt --all --check",
+    ".venv/bin/python -m unittest discover -s scripts -p 'test_*.py'"
+  ],
+  "hardware": "Apple M2 Ultra",
+  "architecture": "arm64",
+  "version": "0.1.1",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25) (Homebrew)",
+  "macos": "26.5"
+}

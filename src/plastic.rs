@@ -84,6 +84,8 @@ pub struct Engine {
     output_l1: Vec<f32>,
     ranks: Vec<usize>,
     pending: bool,
+    batch_gradient: Vec<f32>,
+    batch_count: usize,
 }
 impl Engine {
     pub fn load<P: AsRef<Path>, Q: AsRef<Path>>(
@@ -163,6 +165,7 @@ impl Engine {
             });
         }
         let output_actions: Vec<_> = (0..output_ids.len()).map(|i| i % config.actions).collect();
+        let plastic_edge_count = plastic_edges.len();
         let mut engine = Self {
             config,
             input_ids,
@@ -180,12 +183,18 @@ impl Engine {
             output_l1: vec![0.0; om.len()],
             ranks: (0..hm.len()).collect(),
             pending: false,
+            batch_gradient: vec![0.0; plastic_edge_count],
+            batch_count: 0,
         };
         engine.recount_groups();
         Ok(engine)
     }
     pub fn config(&self) -> PlasticConfig {
         self.config
+    }
+    /// True while a forward trial or accumulated gradient batch is unapplied.
+    pub fn has_pending_work(&self) -> bool {
+        self.pending || self.batch_count > 0
     }
     pub fn input_ids(&self) -> &[u64] {
         &self.input_ids
@@ -210,6 +219,9 @@ impl Engine {
         &self.output_gains
     }
     pub fn set_output_gains(&mut self, gains: &[f32]) -> Result<(), String> {
+        if self.batch_count > 0 {
+            return Err("apply accumulated batch before changing output gains".into());
+        }
         if gains.len() != self.output_ids.len()
             || gains
                 .iter()
@@ -235,6 +247,9 @@ impl Engine {
         self.plastic_edges.iter().map(|e| e.weight)
     }
     pub fn set_output_actions(&mut self, groups: &[usize]) -> Result<(), String> {
+        if self.batch_count > 0 {
+            return Err("apply accumulated batch before changing output actions".into());
+        }
         if groups.len() != self.output_ids.len() || groups.iter().any(|&g| g >= self.config.actions)
         {
             return Err("output action mapping has wrong length or invalid action".into());
@@ -345,6 +360,9 @@ impl Engine {
         &self.probabilities
     }
     pub fn reward(&mut self, action: usize, reward: f32) -> Result<(), String> {
+        if self.batch_count > 0 {
+            return Err("reward cannot mix online updates with an accumulated batch".into());
+        }
         if !self.pending {
             return Err("reward requires one unmatched forward call".into());
         }
@@ -391,12 +409,82 @@ impl Engine {
         self.pending = false;
         Ok(())
     }
+    /// Accumulate a teacher/reward gradient at the current weights without updating them.
+    /// Every call consumes exactly one preceding forward trial, including zero reward.
+    pub fn accumulate_reward(&mut self, action: usize, reward: f32) -> Result<(), String> {
+        if !self.pending {
+            return Err("accumulate_reward requires one unmatched forward call".into());
+        }
+        if action >= self.config.actions || !reward.is_finite() {
+            return Err("invalid action or reward".into());
+        }
+        if self.batch_count == usize::MAX {
+            return Err("batch count overflow".into());
+        }
+        if reward != 0.0 {
+            for g in 0..self.config.actions {
+                let indicator = if g == action { 1.0 } else { 0.0 };
+                self.reward_coeff[g] = self.config.learning_rate
+                    * reward
+                    * (indicator - self.probabilities[g])
+                    * self.config.logit_gain
+                    / self.group_counts[g] as f32;
+            }
+            for (gradient, e) in self.batch_gradient.iter_mut().zip(&self.plastic_edges) {
+                if e.sign != 0 && self.hidden[e.pre] != 0.0 {
+                    let g = self.output_actions[e.post];
+                    *gradient +=
+                        self.reward_coeff[g] * self.output_gains[e.post] * self.hidden[e.pre];
+                }
+            }
+        }
+        self.batch_count += 1;
+        self.pending = false;
+        Ok(())
+    }
+    /// Apply the mean gradient of the accumulated trials, then project weights once.
+    pub fn apply_batch(&mut self) -> Result<(), String> {
+        if self.pending {
+            return Err("apply_batch requires a completed trial".into());
+        }
+        if self.batch_count == 0 {
+            return Err("apply_batch requires accumulated trials".into());
+        }
+        let divisor = self.batch_count as f32;
+        if !divisor.is_finite() || self.batch_gradient.iter().any(|x| !x.is_finite()) {
+            return Err("batch gradient is not finite".into());
+        }
+        for (e, &gradient) in self.plastic_edges.iter_mut().zip(&self.batch_gradient) {
+            if e.sign == 0 {
+                continue;
+            }
+            let next = e.weight + gradient / divisor;
+            e.weight = if e.sign > 0 {
+                next.clamp(0.0, self.config.weight_limit)
+            } else {
+                next.clamp(-self.config.weight_limit, 0.0)
+            };
+        }
+        if self.config.homeostasis {
+            self.output_l1.fill(0.0);
+            for e in &self.plastic_edges {
+                self.output_l1[e.post] += e.weight.abs();
+            }
+            for e in &mut self.plastic_edges {
+                let total = self.output_l1[e.post];
+                if total > 1.0 {
+                    e.weight /= total;
+                }
+            }
+        }
+        self.batch_gradient.fill(0.0);
+        self.batch_count = 0;
+        Ok(())
+    }
     /// Save a self-contained, versioned safetensors checkpoint at a completed trial boundary.
     pub fn save_checkpoint<P: AsRef<Path>>(&self, path: P) -> Result<(), String> {
-        if self.pending {
-            return Err(
-                "checkpoint requires a completed trial; call reward or clear_pending".into(),
-            );
+        if self.pending || self.batch_count > 0 {
+            return Err("checkpoint requires a completed trial and applied batch".into());
         }
         use safetensors::tensor::{serialize_to_file, Dtype, TensorView};
         let data: Vec<(&str, Dtype, Vec<u8>)> = vec![
@@ -509,8 +597,14 @@ impl Engine {
         }
         result
     }
-    /// Discard the latest forward trial without changing weights, for evaluation or a skipped trial.
+    /// Discard only the latest forward trial; accumulated batch gradients remain intact.
     pub fn clear_pending(&mut self) {
+        self.pending = false;
+    }
+    /// Intentionally discard all unapplied batch gradients and any current forward trial.
+    pub fn discard_batch(&mut self) {
+        self.batch_gradient.fill(0.0);
+        self.batch_count = 0;
         self.pending = false;
     }
     pub fn load_checkpoint<P: AsRef<Path>>(path: P) -> Result<Self, String> {
@@ -731,7 +825,7 @@ mod tests {
     static NEXT: AtomicUsize = AtomicUsize::new(0);
     fn path(label: &str) -> std::path::PathBuf {
         std::env::temp_dir().join(format!(
-            "nobi_plastic_{}_{}_{}",
+            "novi_plastic_{}_{}_{}",
             label,
             std::process::id(),
             NEXT.fetch_add(1, Ordering::Relaxed)
@@ -779,6 +873,72 @@ mod tests {
         assert_eq!(after[2], 0.0); // unknown sign is frozen
         assert!(e.reward(0, 1.0).is_err());
         assert!(p[0] > p[1]);
+    }
+    #[test]
+    fn batch_applies_mean_of_finite_difference_gradients() {
+        let mut e = fixture();
+        e.plastic_edges[0].weight = 0.5;
+        let original = e.plastic_edges[0].weight;
+        let eps = 1e-3;
+        e.plastic_edges[0].weight = original + eps;
+        let plus = (e.forward(&[1.0, 0.0])[0].ln() + e.forward(&[0.0, 1.0])[0].ln()) / 2.0;
+        e.plastic_edges[0].weight = original - eps;
+        let minus = (e.forward(&[1.0, 0.0])[0].ln() + e.forward(&[0.0, 1.0])[0].ln()) / 2.0;
+        let numeric = (plus - minus) / (2.0 * eps);
+        e.plastic_edges[0].weight = original;
+        e.forward(&[1.0, 0.0]);
+        e.accumulate_reward(0, 1.0).unwrap();
+        assert!(e.reward(0, 1.0).is_err());
+        assert!(e.save_checkpoint(path("unapplied_batch")).is_err());
+        e.forward(&[0.0, 1.0]);
+        e.accumulate_reward(0, 1.0).unwrap();
+        e.apply_batch().unwrap();
+        let analytic = (e.plastic_edges[0].weight - original) / e.config.learning_rate;
+        assert!((numeric - analytic).abs() < 0.001, "{numeric} {analytic}");
+        assert_eq!(e.batch_count, 0);
+        assert!(e.batch_gradient.iter().all(|&x| x == 0.0));
+    }
+    #[test]
+    fn one_accumulated_sample_matches_online_update() {
+        let mut online = fixture();
+        let mut batch = fixture();
+        online.plastic_edges[0].weight = 0.5;
+        batch.plastic_edges[0].weight = 0.5;
+        online.forward(&[1.0, 0.0]);
+        online.reward(0, 1.0).unwrap();
+        batch.forward(&[1.0, 0.0]);
+        batch.accumulate_reward(0, 1.0).unwrap();
+        batch.apply_batch().unwrap();
+        assert_eq!(
+            online.weights().collect::<Vec<_>>(),
+            batch.weights().collect::<Vec<_>>()
+        );
+    }
+    #[test]
+    fn decoder_changes_are_atomic_during_batch_and_discard_recovers() {
+        let mut e = fixture();
+        let groups = e.output_actions().to_vec();
+        let gains = e.output_gains().to_vec();
+        let weights = e.weights().collect::<Vec<_>>();
+        e.forward(&[1.0, 0.0]);
+        e.accumulate_reward(0, 1.0).unwrap();
+        let swapped: Vec<_> = groups.iter().map(|&g| 1 - g).collect();
+        assert!(e.set_output_actions(&swapped).is_err());
+        assert!(e.set_output_gains(&[-1.0, 1.0]).is_err());
+        assert_eq!(e.output_actions(), groups);
+        assert_eq!(e.output_gains(), gains);
+        assert_eq!(e.weights().collect::<Vec<_>>(), weights);
+        e.clear_pending();
+        assert_eq!(e.batch_count, 1);
+        assert!(e.save_checkpoint(path("still_unapplied")).is_err());
+        e.discard_batch();
+        assert_eq!(e.batch_count, 0);
+        assert!(e.batch_gradient.iter().all(|&g| g == 0.0));
+        assert!(e.apply_batch().is_err());
+        let saved = path("discarded_batch");
+        e.save_checkpoint(&saved).unwrap();
+        fs::remove_file(saved).unwrap();
+        e.set_output_actions(&swapped).unwrap();
     }
     #[test]
     fn checkpoint_roundtrip_and_resume() {

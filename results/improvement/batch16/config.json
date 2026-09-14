@@ -1,0 +1,12 @@
+{
+  "name": "batch16",
+  "gain": 12,
+  "lr": 0.0016,
+  "active": 0.1,
+  "homeostasis": "false",
+  "components": 64,
+  "whitening": 0.5,
+  "batch_size": 16,
+  "epochs": 75,
+  "patience": 10
+}

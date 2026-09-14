@@ -1,0 +1,15 @@
+{
+  "example": "synthetic_odor_virtual_action",
+  "mode": "shuffled",
+  "seed": 3,
+  "episodes": 300,
+  "reverse_after": 300,
+  "delay_steps": 3,
+  "frozen_accuracy": 0.33,
+  "pre_reversal_accuracy": null,
+  "final_accuracy": 0.6525,
+  "baseline": 0.07509,
+  "changed_synapses": 62229,
+  "checkpoint": "results/neuromodulation/shuffled-seed3-episodes300.safetensors",
+  "checkpoint_sha256": "cb999d30687b5cfd1cb3636ce4d2f7ff105a5928ce220624efbbdacd2e5dc92a"
+}

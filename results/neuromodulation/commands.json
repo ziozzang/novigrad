@@ -1,0 +1,110 @@
+[
+  {
+    "name": "reward-seed1-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 1 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed1-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed1-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 1 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed1-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed1-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 1 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed1-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed2-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 2 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed2-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed2-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 2 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed2-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed2-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 2 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed2-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed3-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 3 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed3-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed3-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 3 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed3-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed3-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 3 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed3-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed4-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 4 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed4-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed4-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 4 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed4-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed4-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 4 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed4-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed5-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 5 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed5-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed5-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 5 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed5-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed5-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 5 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed5-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed6-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 6 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed6-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed6-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 6 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed6-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed6-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 6 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed6-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed7-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 7 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed7-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed7-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 7 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed7-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed7-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 7 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed7-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed8-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 8 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed8-episodes300.safetensors"
+  },
+  {
+    "name": "frozen-seed8-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 8 --mode frozen --reverse-after 300 --out results/neuromodulation/frozen-seed8-episodes300.safetensors"
+  },
+  {
+    "name": "shuffled-seed8-episodes300",
+    "command": "target/odor-experiments/release/odor_motor --episodes 300 --seed 8 --mode shuffled --reverse-after 300 --out results/neuromodulation/shuffled-seed8-episodes300.safetensors"
+  },
+  {
+    "name": "reward-seed1-episodes600",
+    "command": "target/odor-experiments/release/odor_motor --episodes 600 --seed 1 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed1-episodes600.safetensors"
+  },
+  {
+    "name": "reward-seed2-episodes600",
+    "command": "target/odor-experiments/release/odor_motor --episodes 600 --seed 2 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed2-episodes600.safetensors"
+  },
+  {
+    "name": "reward-seed3-episodes600",
+    "command": "target/odor-experiments/release/odor_motor --episodes 600 --seed 3 --mode reward --reverse-after 300 --out results/neuromodulation/reward-seed3-episodes600.safetensors"
+  }
+]

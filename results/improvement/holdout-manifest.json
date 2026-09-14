@@ -1,0 +1,86 @@
+{
+  "purpose": "Sealed final evaluation only; do not inspect predictions or accuracy until configuration selection is complete",
+  "schema_version": 1,
+  "original_artifact_sha256": {
+    "fashion_mnist.npz": "a2e24eea666ebe42355ab175310822ed10c89e0e724e7ce91af47d9c70d6d92f",
+    "captcha.npz": "9fa5a2ab56d753ea9504987ce0ad42312be9370e4c5e1177702b6e1b5a7b48b1",
+    "manifest.json": "832e952211c8845e53fbb19618371a56b60fa1f60103e0d8c591f11e5a20e2c2"
+  },
+  "preparation_script_sha256": "13488805cfd9d44fae2f4995525261fabb998bcf27ef1e95e4b7efdf4150a6ab",
+  "upstream_generator_sha256": "7367648ec40cd75fc2a819c9644c766797cc395582f4a700effb083cd48d206d",
+  "datasets": {
+    "fashion": {
+      "source": "Official Fashion-MNIST test set only",
+      "source_files": {
+        "t10k-images-idx3-ubyte.gz": {
+          "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-images-idx3-ubyte.gz",
+          "md5": "bef4ecab320f06d8554ea6380940ec79",
+          "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073"
+        },
+        "t10k-labels-idx1-ubyte.gz": {
+          "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-labels-idx1-ubyte.gz",
+          "md5": "bb300cfdad3c16e7a12a480ee83cd310",
+          "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5"
+        }
+      },
+      "selection": "Ascending official test indices excluding original test_source_indices",
+      "source_indices_sha256": "57f1a334a90c2ce33d512f308cce84f7f75f7b6bf596a11d90e7dbabab91f5b3",
+      "excluded_test_indices_sha256": "b9af9dd71c730bc067ae849c9e69b1c378dc417d3bf6e4ad3c86dfcc44696ee8",
+      "excluded_count": 2000,
+      "exclusion_assertions": {
+        "original_test_indices_disjoint": true,
+        "official_training_source_unused": true,
+        "original_test_images_and_labels_match_source": true
+      },
+      "artifact": "data/vision/holdout_fashion.npz",
+      "artifact_sha256": "51dba27a339f5775e17586dcbaf3cfeea2d5b95954abac911d97936a01064a4d",
+      "count": 8000,
+      "images_shape": [
+        8000,
+        28,
+        28
+      ],
+      "labels_shape": [
+        8000
+      ],
+      "dtype": "uint8",
+      "images_sha256": "1812bc80c261019f91671f0a79ca8632ab805754dc1319cb9c5b35978a5c7d89",
+      "labels_sha256": "99d9adadb6991e4eb3b82424e471868e8ec35e71ed43ffc7e3bf62d39bb42a91"
+    },
+    "captcha": {
+      "source": "Fresh synthetic four-digit CAPTCHA using prepare_vision.glyph and original noise process",
+      "seed": 20260916,
+      "font_files": {
+        "/System/Library/Fonts/SFNSMono.ttf": "55caaed55254a28ac793847e8976be16c5ba7cbad1ec2ee2d5d86d4e6b3fa0c1",
+        "/System/Library/Fonts/Geneva.ttf": "b33d76749bbe41ebdffbdfc0330ace133f231d845539063bb2499d6681681a2a"
+      },
+      "selection": "Random permutation of all four-digit codes absent from every original split; first 1000",
+      "codes_sha256": "cb41f8359adab6754093ad51e727bab8fcadbf08eb42cfbb71a2e2312f5326d7",
+      "excluded_count": 4000,
+      "excluded_codes_sha256": "0877765e1c11c3a91e976521eacbc3b4ab8897b48fea812335cd763c8b66fdc1",
+      "exclusion_assertions": {
+        "original_train_codes_disjoint": true,
+        "original_validation_codes_disjoint": true,
+        "original_test_codes_disjoint": true
+      },
+      "unique_holdout_codes": true,
+      "limitations": "Synthetic fixed-cell CAPTCHA; not an arbitrary web CAPTCHA benchmark",
+      "artifact": "data/vision/holdout_captcha.npz",
+      "artifact_sha256": "bb77abda1cb6c9a5cfcff00605713a3e43a45fb2ede0c1c17516d5d3603c4256",
+      "count": 1000,
+      "images_shape": [
+        1000,
+        28,
+        112
+      ],
+      "labels_shape": [
+        1000,
+        4
+      ],
+      "dtype": "uint8",
+      "images_sha256": "639cb0c6b2b1d4ee8fb99a7be19cb593a5b2cc3b64a9a8425025a64ddc8663e4",
+      "labels_sha256": "8c983f248ed31c19032a19b9a074280500ff5f34db7bcc13d11f030d9ffd5939"
+    }
+  },
+  "original_artifacts_unchanged": true
+}

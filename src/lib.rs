@@ -3,7 +3,9 @@
 //! `plastic::Engine` for topology-defined tasks and Safetensors models.
 
 pub mod connectome;
+pub mod modulation;
 pub mod plastic;
+pub mod runtime;
 
 pub const CUES: usize = 2;
 pub const ACTIONS: usize = 2;

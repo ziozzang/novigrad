@@ -1,6 +1,6 @@
 # Novigrad — Software-defined Bionic NPU
 
-Novigrad는 공개 FlyWire 연결망을 회로 구조로 사용해 신호를 계산하고 스칼라 보상으로 기존 시냅스 가중치를 학습하는 CPU 연구 프로토타입이다. Rust crate와 실행 파일 이름은 현재 `nobi`이다. [English README](README.md).
+Novigrad는 공개 FlyWire 연결망을 회로 구조로 사용해 신호를 계산하고 스칼라 보상으로 기존 시냅스 가중치를 학습하는 CPU 연구 프로토타입이다. Rust crate와 실행 파일 이름은 `novi`이다. [English README](README.md).
 
 학습 회로는 **ALPN 입력 319개 → KC 5,177개 → MBON 출력 96개**다. ALPN→KC 연결 27,848개는 고정하고 KC→MBON 연결 62,261개의 가중치를 갱신한다. 새 연결은 만들지 않는다. 전체 초파리 뇌를 학습한 결과는 아니다.
 
@@ -29,14 +29,32 @@ cargo run --release --bin train_connectome -- \
 
 엔진은 임의의 입력·출력 ID, 두 연결 파일, 행동 수를 받는다. 외부 실행기가 감각 인코딩, 행동 선택, 보상을 제공한다. [영문 README의 CLI 예제](README.md#generic-engine), [구조](docs/architecture.md), [Safetensors 형식](docs/model-format.md)을 참고한다.
 
-이미지 예제는 학습 분할에서만 비지도 HOG·픽셀 풀링·PCA 어댑터를 맞춰 이미지를 319개 입력 포트로 변환한다. Fashion-MNIST는 학습/검증/시험 10,000/2,000/2,000장이고, 별도 로컬 생성 네 자리 CAPTCHA는 전체 이미지 3,000/500/500장과 네 출력 셀을 사용한다. 분류기는 지도 teacher-gradient 방식과 보상 방식을 지원한다. 공개 이미지 실험은 지도 학습과 섞인 라벨 대조군을 평가한다. **세 seed 평균 시험 정확도는 의류 72.62%, CAPTCHA 문자 83.32%, 네 자리 모두 정답 48.67%다.** 고정 가중치와 라벨 섞기 대조군은 약 10% 수준이다. 일반 장면 탐지나 임의의 웹 CAPTCHA 해결을 검증한 것은 아니다. [실행 안내](examples/vision/README.md), [결과 보고서](results/VISION_REPORT.md), [자료 출처](data/README.md)를 참고한다.
+이미지 어댑터는 학습 이미지에서만 HOG·픽셀 풀링·PCA를 맞춰 319개 포트의 입력률을 만든다. 여덟 설정을 비교한 결과, 출력 가중치 총량 정규화를 끄고 최대 75회 반복하며 KC 20%를 활성화하는 설정이 가장 좋았다. 기존 연결 구조·부호·개별 가중치 한도는 유지한다.
+
+| 새 평가 데이터 | 기존 모델 | 개선 3 seed 평균 |
+|---|---:|---:|
+| 의류 8,000장 | 71.20% | **85.04%** |
+| CAPTCHA 문자 4,000개 | 83.50% | **99.49%** |
+| 네 자리 전체 1,000장 | 49.20% | **98.00%** |
+
+동일한 새 평가 데이터에서 비교했다. [전체 실험 보고서](results/IMPROVEMENT_REPORT.ko.md), [개선 메커니즘](docs/optimization.ko.md), [이미지 실행 안내](examples/vision/README.ko.md)에 실패한 실험, 대조군, 원시 예측과 한계를 남겼다. 이미지 실험은 지도 학습이고, CAPTCHA는 고정된 셀과 공유된 글꼴 분포 안에서 검증했다.
+
+## API·주기 실행·지연 보상
+
+- [로컬 HTTP API](docs/api.ko.md): 포트 메타데이터·추론·선택적 학습·체크포인트. `cargo build --release --features api --bins`로 빌드한다.
+- [주기 실행 런타임](docs/runtime.ko.md): `novi_rt`로 실행 주기와 deadline 초과를 측정한다. Mac의 hard real-time 보장은 아니다.
+- [지연 보상](docs/neuromodulation.ko.md): 보상 예측 오차와 과거 행동 재실행을 적용한다. [후각→가상 행동 27회 실험](results/NEUROMODULATION_REPORT.ko.md)에 동결·무관한 보상·규칙 전환 대조군을 포함했다. 앞다리 출력은 가상 행동 의미이며 실제 운동신경 경로를 재구성한 것은 아니다.
+
+모든 인터페이스는 같은 엔진과 포트·Safetensors 모델을 사용한다. 감각 인코딩과 행동 해석·보상 출처는 외부 어댑터와 응용 프로그램이 맡는다.
 
 ## 범위
 
-전체 파생 연결망의 LIF 활성화 실행기는 위 rate 학습 모델과 별개다. 현재 단일 스레드 CPU 구현이며 로컬 Cargo 설정은 `target-cpu=native`를 사용한다. M2 Ultra에서 고정 입력 forward와 보상 0의 측정치는 초당 9,732 episode이며 실제 보상 학습 처리량이나 로봇 제어 지연시간을 뜻하지 않는다.
+전체 파생 연결망의 LIF 활성화 실행기는 위 rate 학습 모델과 별개다. 각 회로는 CPU 스레드에서 실행하며 API는 모델별 잠금과 제한된 작업 풀을 사용한다. 또한 로컬 Cargo 설정은 `target-cpu=native`를 사용한다. M2 Ultra에서 고정 입력 forward와 보상 0의 측정치는 초당 9,732 episode이며 실제 보상 학습 처리량이나 로봇 제어 지연시간을 뜻하지 않는다.
 
 실제 도파민 신호, 생물학적 시간 상수, 하드웨어 NPU, 전체 뇌 재학습, 보지 않은 XOR 조합에 대한 일반화는 입증하지 않았다. 연결 구조는 생물학 자료이지만 입력 인코딩·행동 매핑·보상·학습 규칙은 공학적으로 설계했다.
 
 ## 릴리스
 
-[v0.1.0 다운로드](https://github.com/ziozzang/novigrad/releases/tag/v0.1.0): Apple Silicon 실행 파일, Safetensors 모델 묶음, SHA-256 체크섬. 코드는 MIT이며 데이터 및 외부 자료 권리는 [NOTICE](NOTICE.md)를 참고한다.
+[v0.1.1 다운로드](https://github.com/ziozzang/novigrad/releases/tag/v0.1.1): Apple Silicon 실행 파일, Safetensors 모델 묶음, SHA-256 체크섬. 코드는 MIT이며 데이터 및 외부 자료 권리는 [NOTICE](NOTICE.md)를 참고한다.
+
+Author: jioh jung <jung@jioh.net> · License: MIT

@@ -1,0 +1,15 @@
+{
+  "example": "synthetic_odor_virtual_action",
+  "mode": "reward",
+  "seed": 3,
+  "episodes": 300,
+  "reverse_after": 300,
+  "delay_steps": 3,
+  "frozen_accuracy": 0.33,
+  "pre_reversal_accuracy": null,
+  "final_accuracy": 1.0,
+  "baseline": 0.353277,
+  "changed_synapses": 62228,
+  "checkpoint": "results/neuromodulation/reward-seed3-episodes300.safetensors",
+  "checkpoint_sha256": "414207fb630a360015e772aa9250ada820b1b44b4561def4e22fb5d870ab277a"
+}

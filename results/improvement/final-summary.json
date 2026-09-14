@@ -1,0 +1,58 @@
+{
+  "fashion": {
+    "selection": "active20",
+    "samples": 8000,
+    "baseline_accuracy": 0.712,
+    "baseline_exact": 0.712,
+    "accuracy_mean": 0.8504166666666666,
+    "accuracy_min": 0.84825,
+    "accuracy_max": 0.852625,
+    "exact_mean": 0.8504166666666666,
+    "exact_min": 0.84825,
+    "exact_max": 0.852625,
+    "cross_entropy_mean": 0.4314518824962076,
+    "baseline_cross_entropy": 1.5124094050232726,
+    "shuffled_accuracy": 0.092375,
+    "shuffled_exact": 0.092375,
+    "model_bytes": 2548921,
+    "adapter_bytes": 174216,
+    "per_seed_accuracy": [
+      0.852625,
+      0.850375,
+      0.84825
+    ],
+    "per_seed_exact": [
+      0.852625,
+      0.850375,
+      0.84825
+    ]
+  },
+  "captcha": {
+    "selection": "active20",
+    "samples": 1000,
+    "baseline_accuracy": 0.835,
+    "baseline_exact": 0.492,
+    "accuracy_mean": 0.9949166666666667,
+    "accuracy_min": 0.99475,
+    "accuracy_max": 0.995,
+    "exact_mean": 0.98,
+    "exact_min": 0.98,
+    "exact_max": 0.98,
+    "cross_entropy_mean": 0.06395868623343257,
+    "baseline_cross_entropy": 1.6327206613357543,
+    "shuffled_accuracy": 0.12525,
+    "shuffled_exact": 0.0,
+    "model_bytes": 2548921,
+    "adapter_bytes": 174216,
+    "per_seed_accuracy": [
+      0.995,
+      0.995,
+      0.99475
+    ],
+    "per_seed_exact": [
+      0.98,
+      0.98,
+      0.98
+    ]
+  }
+}

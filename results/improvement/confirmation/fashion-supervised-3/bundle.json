@@ -1,0 +1,40 @@
+{
+  "format": "nobi.image_bundle.v1",
+  "adapter": "adapter.safetensors",
+  "model": "model.safetensors",
+  "sequence_length": 1,
+  "cell_size": [
+    28,
+    28
+  ],
+  "segmentation": "whole image",
+  "class_labels": [
+    "T-shirt/top",
+    "Trouser",
+    "Pullover",
+    "Dress",
+    "Coat",
+    "Sandal",
+    "Shirt",
+    "Sneaker",
+    "Bag",
+    "Ankle boot"
+  ],
+  "components": 64,
+  "whitening": 0.5,
+  "readout": "opponent",
+  "training_configuration": {
+    "name": "active20",
+    "gain": 12,
+    "lr": 0.0001,
+    "active": 0.2,
+    "homeostasis": "false",
+    "components": 64,
+    "whitening": 0.5,
+    "batch_size": 1,
+    "epochs": 75,
+    "patience": 10
+  },
+  "training_seed": 3,
+  "training_mode": "supervised"
+}

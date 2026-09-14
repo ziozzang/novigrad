@@ -1,14 +1,29 @@
 [package]
-name = "nobi"
-version = "0.1.0"
+name = "novi"
+version = "0.1.1"
 edition = "2021"
-default-run = "nobi"
+default-run = "novi"
 description = "Novigrad: a software-defined Bionic NPU research engine with connectome-constrained learning"
 repository = "https://github.com/ziozzang/novigrad"
 license = "MIT"
+authors = ["jioh jung <jung@jioh.net>"]
+
+[features]
+default = []
+api = ["dep:axum", "dep:tokio", "dep:serde", "dep:serde_json", "dep:tempfile"]
+
+[[bin]]
+name = "novi_api"
+path = "src/bin/novi_api.rs"
+required-features = ["api"]
 
 [dependencies]
 safetensors = "0.8"
+axum = { version = "0.8", default-features = false, features = ["http1", "json", "tokio"], optional = true }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "sync", "signal"], optional = true }
+serde = { version = "1", features = ["derive"], optional = true }
+serde_json = { version = "1", optional = true }
+tempfile = { version = "3", optional = true }
 
 [profile.release]
 lto = "thin"

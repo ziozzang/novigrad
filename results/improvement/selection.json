@@ -1,0 +1,6 @@
+{
+  "fashion": "active20",
+  "captcha": "active20",
+  "_selection_rule": "highest seed1 validation accuracy; ties prefer smaller batch, fewer PCA components, then lower validation cross entropy",
+  "_scope": "fixed before any fresh holdout prediction; same eight configurations considered for both tasks"
+}

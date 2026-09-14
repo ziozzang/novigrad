@@ -7,7 +7,7 @@ static NEXT: AtomicUsize = AtomicUsize::new(0);
 
 fn temp(name: &str) -> PathBuf {
     std::env::temp_dir().join(format!(
-        "nobi_cli_{}_{}_{}",
+        "novi_cli_{}_{}_{}",
         std::process::id(),
         NEXT.fetch_add(1, Ordering::Relaxed),
         name
@@ -25,10 +25,10 @@ fn path(p: &Path) -> &str {
 }
 
 fn run(args: &[&str]) -> std::process::Output {
-    Command::new(env!("CARGO_BIN_EXE_nobi_engine"))
+    Command::new(env!("CARGO_BIN_EXE_novi_engine"))
         .args(args)
         .output()
-        .expect("run nobi_engine")
+        .expect("run novi_engine")
 }
 
 #[test]

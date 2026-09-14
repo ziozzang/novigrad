@@ -1,4 +1,4 @@
-use nobi::Agent;
+use novi::Agent;
 use std::{error::Error, time::Instant};
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -43,13 +43,13 @@ fn main() -> Result<(), Box<dyn Error>> {
         "connectome" => {
             let path = args
                 .get(2)
-                .ok_or("usage: nobi connectome edges.tsv [steps] [root_id]")?;
+                .ok_or("usage: novi connectome edges.tsv [steps] [root_id]")?;
             let steps: usize = args.get(3).map(|s| s.parse()).transpose()?.unwrap_or(1000);
             if steps == 0 {
                 return Err("steps must be positive".into());
             }
             let start = Instant::now();
-            let graph = nobi::connectome::Graph::load(path)?;
+            let graph = novi::connectome::Graph::load(path)?;
             let root: u64 = args
                 .get(4)
                 .map(|s| s.parse())
@@ -61,7 +61,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 graph.edge_count(),
                 start.elapsed().as_secs_f64()
             );
-            let mut sim = nobi::connectome::Simulator::new(graph);
+            let mut sim = novi::connectome::Simulator::new(graph);
             let start = Instant::now();
             let mut spikes = 0u64;
             for _ in 0..steps {

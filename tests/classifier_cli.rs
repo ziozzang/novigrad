@@ -1,9 +1,12 @@
-use safetensors::tensor::{serialize_to_file, Dtype, TensorView};
+use safetensors::{
+    tensor::{serialize_to_file, Dtype, TensorView},
+    SafeTensors,
+};
 use std::{fs, path::PathBuf, process::Command};
 
 #[test]
 fn tune_never_writes_predictions_and_full_reports_frozen_baseline() {
-    let root = std::env::temp_dir().join(format!("nobi_classifier_{}", std::process::id()));
+    let root = std::env::temp_dir().join(format!("novi_classifier_{}", std::process::id()));
     fs::create_dir_all(&root).unwrap();
     let input = root.join("input.tsv");
     let plastic = root.join("plastic.tsv");
@@ -119,5 +122,71 @@ fn tune_never_writes_predictions_and_full_reports_frozen_baseline() {
         .unwrap();
     assert!(!rejected.status.success());
     assert!(String::from_utf8_lossy(&rejected.stderr).contains("input_ids mismatch"));
+    let no_homeostasis = root.join("no_homeostasis");
+    let result = Command::new(env!("CARGO_BIN_EXE_train_classifier"))
+        .args([
+            features.as_os_str(),
+            input.as_os_str(),
+            plastic.as_os_str(),
+            no_homeostasis.as_os_str(),
+        ])
+        .args([
+            "--actions",
+            "2",
+            "--epochs",
+            "1",
+            "--phase",
+            "tune",
+            "--homeostasis",
+            "false",
+        ])
+        .output()
+        .unwrap();
+    assert!(
+        result.status.success(),
+        "{}",
+        String::from_utf8_lossy(&result.stderr)
+    );
+    let metrics = fs::read_to_string(no_homeostasis.join("metrics.json")).unwrap();
+    assert!(metrics.contains("\"homeostasis\": false"));
+    let checkpoint = fs::read(no_homeostasis.join("model.safetensors")).unwrap();
+    let (_, header) = SafeTensors::read_metadata(&checkpoint).unwrap();
+    assert_eq!(
+        header
+            .metadata()
+            .as_ref()
+            .unwrap()
+            .get("homeostasis")
+            .unwrap(),
+        "false"
+    );
+    let remainder = root.join("batch_remainder");
+    let result = Command::new(env!("CARGO_BIN_EXE_train_classifier"))
+        .args([
+            features.as_os_str(),
+            input.as_os_str(),
+            plastic.as_os_str(),
+            remainder.as_os_str(),
+        ])
+        .args([
+            "--actions",
+            "2",
+            "--epochs",
+            "1",
+            "--phase",
+            "tune",
+            "--batch-size",
+            "3",
+        ])
+        .output()
+        .unwrap();
+    assert!(
+        result.status.success(),
+        "{}",
+        String::from_utf8_lossy(&result.stderr)
+    );
+    let metrics = fs::read_to_string(remainder.join("metrics.json")).unwrap();
+    assert!(metrics.contains("\"batch_size\": 3"));
+    assert!(remainder.join("model.safetensors").exists());
     fs::remove_dir_all(root).unwrap();
 }

@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "prediction": "5420",
+  "max_probability_error": 4.983377456350968e-10,
+  "scope": "optimized seed1 CAPTCHA bundle via Apple M1-target local binary and localhost HTTP API",
+  "port_ids_transport": "decimal strings"
+}

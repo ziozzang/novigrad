@@ -1,0 +1,11 @@
+{
+  "name": "baseline",
+  "gain": 12,
+  "lr": 0.0001,
+  "active": 0.1,
+  "homeostasis": "true",
+  "components": 64,
+  "whitening": 0.5,
+  "epochs": 25,
+  "patience": 5
+}

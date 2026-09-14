@@ -1,0 +1,15 @@
+{
+  "example": "synthetic_odor_virtual_action",
+  "mode": "frozen",
+  "seed": 2,
+  "episodes": 300,
+  "reverse_after": 300,
+  "delay_steps": 3,
+  "frozen_accuracy": 0.33,
+  "pre_reversal_accuracy": null,
+  "final_accuracy": 0.33,
+  "baseline": 0.0,
+  "changed_synapses": 0,
+  "checkpoint": "results/neuromodulation/frozen-seed2-episodes300.safetensors",
+  "checkpoint_sha256": "6a2792a857e6c9295b2de309a31ee27ce370ab64857f5f3987611bd6582d27e4"
+}

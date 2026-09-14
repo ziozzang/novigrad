@@ -1,0 +1,22 @@
+{
+  "source": "data/neurons_783.tsv",
+  "sha256": "9a4f8b2f843196074431ebd7cd883536afa1be86c8a4ce90970441e8be81d1be",
+  "row_count": 139248,
+  "annotation_field_counts": {
+    "DAN": 331,
+    "MBON": 96,
+    "motor": 0,
+    "descending": 1303
+  },
+  "interpretation": "FlyWire brain annotation rows, not a whole-CNS or foreleg-motor census",
+  "edge_files": {
+    "pn_kc.tsv": {
+      "source": "data/pn_kc.tsv",
+      "sha256": "c824900604e71579cdfca93fe67b200ae792818f534d8a056e8805a4b49e427c"
+    },
+    "kc_mbon.tsv": {
+      "source": "data/kc_mbon.tsv",
+      "sha256": "b28a3c6abe944f74a55aa4907b9479039499713ec507b4614ca0dabf69c617b1"
+    }
+  }
+}

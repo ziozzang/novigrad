@@ -1,15 +1,15 @@
 //! Data-driven command-line interface to the plastic rate-neuron engine.
-use nobi::plastic::{Engine, PlasticConfig};
+use novi::plastic::{Engine, PlasticConfig};
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 use std::path::Path;
 
 const USAGE: &str = "Usage:
-  nobi_engine train INPUT_EDGES PLASTIC_EDGES SAMPLES CHECKPOINT [actions] [epochs] [seed]
-  nobi_engine eval CHECKPOINT SAMPLES
-  nobi_engine infer CHECKPOINT INPUTS
-  nobi_engine bench CHECKPOINT [iterations]
+  novi_engine train INPUT_EDGES PLASTIC_EDGES SAMPLES CHECKPOINT [actions] [epochs] [seed]
+  novi_engine eval CHECKPOINT SAMPLES
+  novi_engine infer CHECKPOINT INPUTS
+  novi_engine bench CHECKPOINT [iterations]
 
 Edges: pre<TAB>post<TAB>count<TAB>sign (-1, 0, or 1).
 Training/evaluation samples: label<TAB>root_id:value[<TAB>root_id:value...].

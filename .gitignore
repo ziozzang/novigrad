@@ -13,3 +13,8 @@ __pycache__/
 /results/**/*.safetensors
 /examples/vision/models/
 /results/*.log
+
+# Local experiment runtime state
+/autoresearch-*
+/research-results.tsv
+/results/improvement/**/*.log

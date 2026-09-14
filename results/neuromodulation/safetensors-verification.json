@@ -1,0 +1,20 @@
+[
+  {
+    "checkpoint": "results/neuromodulation/reward-seed1-episodes300.safetensors",
+    "tensor_count": 14,
+    "input_neurons": 319,
+    "hidden_neurons": 5177,
+    "output_neurons": 96,
+    "plastic_edges": 62261,
+    "numpy_probabilities": [
+      0.5353502035140991,
+      0.46464982628822327
+    ],
+    "rust_probabilities": [
+      0.53535,
+      0.46465
+    ],
+    "max_absolute_error": 2.0351409912855445e-07,
+    "passed": true
+  }
+]

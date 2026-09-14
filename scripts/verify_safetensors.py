@@ -60,7 +60,7 @@ def verify(checkpoint, binary):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("checkpoints", nargs="+", type=Path)
-    parser.add_argument("--binary", type=Path, default=Path("target/release/nobi_engine"))
+    parser.add_argument("--binary", type=Path, default=Path("target/release/novi_engine"))
     parser.add_argument("--report", type=Path, default=Path("results/safetensors-verification.json"))
     args = parser.parse_args()
     records = [verify(path, args.binary) for path in args.checkpoints]

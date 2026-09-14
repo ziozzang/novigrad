@@ -1,0 +1,11 @@
+{
+  "name": "gain48",
+  "gain": 48.0,
+  "lr": 2.5e-05,
+  "active": 0.1,
+  "homeostasis": "true",
+  "components": 64,
+  "whitening": 0.5,
+  "epochs": 25,
+  "patience": 5
+}

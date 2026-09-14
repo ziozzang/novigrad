@@ -2,6 +2,8 @@
 
 Checkpoints use the official Safetensors format. The current `__metadata__` values are `format = nobi.plastic` and `version = 4`. Version 4 identifies the file schema changed during development; the product scope remains v1. Schema 3 remains readable with unit output gains; earlier experimental schemas are rejected.
 
+The crate and CLI are now named `novi` and `novi_engine`. Existing on-disk identifiers (`nobi.plastic`, `nobi.image_rate.v1`, `nobi.image_bundle.v1`, and `nobi.classifier_dataset.v1`) are retained unchanged for checkpoint and image-bundle compatibility. Existing models require no conversion.
+
 | Tensor | dtype | Meaning |
 | --- | --- | --- |
 | `input_ids` | U64 | Sorted external input root IDs |

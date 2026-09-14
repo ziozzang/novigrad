@@ -1,5 +1,5 @@
 //! Batch inference for generic, precomputed features.
-use nobi::plastic::Engine;
+use novi::plastic::Engine;
 use safetensors::{tensor::Dtype, SafeTensors};
 use std::{
     env,

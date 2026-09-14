@@ -1,0 +1,10 @@
+{
+  "fashion": {
+    "train_holdout_exact_image_duplicates": 0,
+    "holdout_count": 8000
+  },
+  "captcha": {
+    "train_holdout_exact_image_duplicates": 0,
+    "holdout_count": 1000
+  }
+}

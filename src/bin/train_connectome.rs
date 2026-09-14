@@ -1,5 +1,5 @@
 //! Reproducible reward-learning experiments on real anatomical synapses.
-use nobi::plastic::{Engine, PlasticConfig};
+use novi::plastic::{Engine, PlasticConfig};
 use std::{
     error::Error,
     fs::{self, File},

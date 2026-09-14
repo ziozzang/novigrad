@@ -277,7 +277,7 @@ mod tests {
     use std::io::Write;
     fn graph(input: &str) -> Result<Graph, ConnectomeError> {
         let path = std::env::temp_dir().join(format!(
-            "nobi-connectome-{}-{:?}.tsv",
+            "novi-connectome-{}-{:?}.tsv",
             std::process::id(),
             std::thread::current().id()
         ));

@@ -1,0 +1,11 @@
+{
+  "name": "no-homeostasis",
+  "gain": 12,
+  "lr": 0.0001,
+  "active": 0.1,
+  "homeostasis": "false",
+  "components": 64,
+  "whitening": 0.5,
+  "epochs": 25,
+  "patience": 5
+}

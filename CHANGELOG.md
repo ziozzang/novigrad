@@ -1,3 +1,38 @@
+# Novigrad v0.1.1 — Learning mechanisms, local API and periodic runtime
+
+The executable and Rust crate are now **novi**. Author: **jioh jung <jung@jioh.net>**. Source license: **MIT**.
+
+Eight controlled image experiments identified a stronger configuration without adding anatomical edges, changing synapse signs, or using pretrained CNN/OCR models. It disables output L1 normalization, trains for up to 75 epochs and retains 20% of hidden cells.
+
+| Fresh evaluation metric | v0.1.0 model on the same data | Improved mean, 3 seeds |
+|---|---:|---:|
+| Clothing, 8,000 images | 71.20% | **85.04%** |
+| CAPTCHA characters, 4,000 cells | 83.50% | **99.49%** |
+| Exact four-digit strings, 1,000 images | 49.20% | **98.00%** |
+
+These are clothing classification and synthetic fixed-cell CAPTCHA examples, not arbitrary scene detection or live CAPTCHA solving. Configuration selection used validation only; all additional training seeds and shuffled-label controls completed before fresh holdout evaluation. Reports include failed settings, learning curves, provenance, raw predictions and reproduction commands.
+
+## New reusable capabilities
+
+- Mean-gradient minibatches, remainder handling and explicit completed-batch checkpoint boundaries. Batch sizes 16/64 did not improve accuracy over their matched online controls; the feature remains optional.
+- `novi_api`: optional local HTTP model metadata, batch inference, opt-in learning/checkpoints, per-model locking and bounded worker jobs. Neuron IDs are decimal strings.
+- `novi_rt`: periodic fixed-port execution, reusable buffers, measured deadlines and skipped overdue slots. This is soft real-time under macOS, not a hard RTOS guarantee.
+- Delayed reward modulation: bounded eligibility replay and reward-minus-baseline signals. A separate 27-run synthetic odor/virtual-action experiment includes frozen, unrelated-reward and reversal controls. Outputs are virtual foreleg commands, not reconstructed foreleg motor neurons.
+- Existing Safetensors models load despite the executable rename; legacy serialized `nobi.*` identifiers are preserved.
+
+## Assets and checks
+
+The Apple Silicon archive contains `novi`, `novi_engine`, `novi_api`, `novi_rt`, `train_classifier`, `classify_features`, `train_connectome` and `odor_motor`. Binaries target Apple M1 instructions and were tested on M2 Ultra; they are unsigned and unnotarized.
+
+The model archive contains original baseline bundles, optimized vision bundles under `examples/vision/models/{fashion,captcha}-optimized/`, logic models and one odor/action model. Extract at the source repository root. Raw datasets and font binaries are excluded. `SHA256SUMS` verifies both archives.
+
+Validation: 34 Rust tests (including real HTTP integration), 8 Python tests, warning-free Clippy, old-model loading, independent NumPy/Rust inference, actual image HTTP/local equivalence and a periodic-runner smoke benchmark. The 1-ms/1,000-tick baseline-model run averaged about 116µs compute with zero measured deadline misses; it is one observation, not an OS scheduling guarantee.
+
+[English documentation](https://github.com/ziozzang/novigrad/blob/v0.1.1/README.md) · [Full experiment report](https://github.com/ziozzang/novigrad/blob/v0.1.1/results/IMPROVEMENT_REPORT.md) · [한국어 문서](https://github.com/ziozzang/novigrad/blob/v0.1.1/README.ko.md)
+
+한국어: 실행 파일 이름을 novi로 변경하고, 학습 개선 실험과 원시 결과를 문서화했습니다. 새 평가에서 의류 85.04%, CAPTCHA 문자 99.49%, 네 자리 전체 98.00%를 확인했습니다. 로컬 API, soft real-time 주기 실행, 지연 보상·가상 행동 예제를 함께 제공합니다.
+
+
 # Novigrad v0.1.0 — Software-defined Bionic NPU
 
 First public research release: a Mac-focused Rust engine with interchangeable input adapters, connectome-constrained plasticity, external action/reward interfaces, and self-contained Safetensors checkpoints.
