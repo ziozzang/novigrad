@@ -1,0 +1,4 @@
+Topology-constrained rate learning; 2000 training + 2000 reversal episodes per run; lr=0.02, gain=12, homeostasis=true; 8 seeds starting at 101; 1024 held-out noisy trials. No anatomy superiority or in-vivo claim.
+binary: reward=0.9955, frozen=0.4961, random_reward=0.4856, reversal=0.9960, reversal_frozen=0.5040, reversal_random=0.4949, pass=true
+fourway: reward=0.9829, frozen=0.2458, random_reward=0.2279, reversal=0.9832, reversal_frozen=0.2524, reversal_random=0.2318, pass=true
+xor: reward=0.8998, frozen=0.5011, random_reward=0.5161, reversal=0.9012, reversal_frozen=0.4990, reversal_random=0.4944, pass=true

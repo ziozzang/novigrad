@@ -1,0 +1,4 @@
+Topology-constrained rate learning; 2000 training + 2000 reversal episodes per run; 8 seeds; 1024 held-out noisy trials. No anatomy superiority or in-vivo claim.
+binary: reward=0.9999, frozen=0.4954, random_reward=0.6247, reversal=0.6874, pass=false
+fourway: reward=0.9998, frozen=0.2498, random_reward=0.3746, reversal=0.4056, pass=false
+xor: reward=0.9998, frozen=0.5031, random_reward=0.5313, reversal=0.3750, pass=false

@@ -1,0 +1,17 @@
+{
+  "fashion": {
+    "split": "test",
+    "index": 0,
+    "label": 6
+  },
+  "captcha": {
+    "split": "test",
+    "index": 0,
+    "label": [
+      5,
+      4,
+      2,
+      0
+    ]
+  }
+}

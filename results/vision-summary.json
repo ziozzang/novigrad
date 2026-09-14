@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "fashion": {
+      "mean": 0.7261666666666666,
+      "minimum": 0.7245,
+      "maximum": 0.728
+    },
+    "captcha": {
+      "mean": 0.8331666666666667,
+      "minimum": 0.8305,
+      "maximum": 0.8355,
+      "exact_mean": 0.48666666666666664
+    }
+  },
+  "runs": [
+    {
+      "task": "fashion",
+      "mode": "supervised",
+      "seed": 1,
+      "test_accuracy": 0.726,
+      "exact_sequence_accuracy": null,
+      "baseline_test_accuracy": 0.108,
+      "best_epoch": 12,
+      "changed_weights": 62260,
+      "elapsed_seconds": 51.822
+    },
+    {
+      "task": "fashion",
+      "mode": "supervised",
+      "seed": 2,
+      "test_accuracy": 0.7245,
+      "exact_sequence_accuracy": null,
+      "baseline_test_accuracy": 0.108,
+      "best_epoch": 9,
+      "changed_weights": 62260,
+      "elapsed_seconds": 43.943
+    },
+    {
+      "task": "fashion",
+      "mode": "supervised",
+      "seed": 3,
+      "test_accuracy": 0.728,
+      "exact_sequence_accuracy": null,
+      "baseline_test_accuracy": 0.108,
+      "best_epoch": 14,
+      "changed_weights": 62261,
+      "elapsed_seconds": 58.489
+    },
+    {
+      "task": "fashion",
+      "mode": "shuffled",
+      "seed": 1,
+      "test_accuracy": 0.108,
+      "exact_sequence_accuracy": null,
+      "baseline_test_accuracy": 0.108,
+      "best_epoch": 0,
+      "changed_weights": 0,
+      "elapsed_seconds": 13.013
+    },
+    {
+      "task": "captcha",
+      "mode": "supervised",
+      "seed": 1,
+      "test_accuracy": 0.8335,
+      "exact_sequence_accuracy": 0.488,
+      "baseline_test_accuracy": 0.0795,
+      "best_epoch": 6,
+      "changed_weights": 62261,
+      "elapsed_seconds": 40.197
+    },
+    {
+      "task": "captcha",
+      "mode": "supervised",
+      "seed": 2,
+      "test_accuracy": 0.8355,
+      "exact_sequence_accuracy": 0.492,
+      "baseline_test_accuracy": 0.0795,
+      "best_epoch": 8,
+      "changed_weights": 62260,
+      "elapsed_seconds": 48.546
+    },
+    {
+      "task": "captcha",
+      "mode": "supervised",
+      "seed": 3,
+      "test_accuracy": 0.8305,
+      "exact_sequence_accuracy": 0.48,
+      "baseline_test_accuracy": 0.0795,
+      "best_epoch": 10,
+      "changed_weights": 62261,
+      "elapsed_seconds": 54.918
+    },
+    {
+      "task": "captcha",
+      "mode": "shuffled",
+      "seed": 1,
+      "test_accuracy": 0.111,
+      "exact_sequence_accuracy": 0.0,
+      "baseline_test_accuracy": 0.0795,
+      "best_epoch": 5,
+      "changed_weights": 62260,
+      "elapsed_seconds": 29.301
+    }
+  ]
+}

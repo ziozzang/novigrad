@@ -1,0 +1,161 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25) (Homebrew)",
+  "configuration": {
+    "episodes": "2000",
+    "reversal_episodes": "2000",
+    "eval_trials": "1024",
+    "learning_rate": "0.02",
+    "logit_gain": "12"
+  },
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ],
+  "results": [
+    {
+      "task": "binary",
+      "before_greedy": 0.4639892575,
+      "after_greedy": 1.0,
+      "expected": 0.99547850625,
+      "frozen": 0.49614313625,
+      "random_reward": 0.4856181525,
+      "before_reversal": 0.004470025,
+      "reversal": 0.99600048875,
+      "reversal_greedy": 1.0,
+      "minimum_seed_expected": 0.99481649,
+      "changed_weights_min": 62176,
+      "changed_weights_max": 62261
+    },
+    {
+      "task": "fourway",
+      "before_greedy": 0.21752929625,
+      "after_greedy": 1.0,
+      "expected": 0.98288218,
+      "frozen": 0.245849365,
+      "random_reward": 0.22792940125,
+      "before_reversal": 0.00566579625,
+      "reversal": 0.9832473025,
+      "reversal_greedy": 1.0,
+      "minimum_seed_expected": 0.9812406,
+      "changed_weights_min": 62246,
+      "changed_weights_max": 62261
+    },
+    {
+      "task": "xor",
+      "before_greedy": 0.4831542975,
+      "after_greedy": 1.0,
+      "expected": 0.8998150725,
+      "frozen": 0.5010798075,
+      "random_reward": 0.51608512625,
+      "before_reversal": 0.09963980124999999,
+      "reversal": 0.9011801725,
+      "reversal_greedy": 1.0,
+      "minimum_seed_expected": 0.88693243,
+      "changed_weights_min": 62261,
+      "changed_weights_max": 62261
+    }
+  ],
+  "artifacts": {
+    "results/v1-confirmation/metrics.csv": "10db5688c0ca63755663d9f666dd83aba815d9cf3aded8c06c55c9a343622149",
+    "results/v1-confirmation/summary.txt": "3d5c4ab86ebcab6b4abb4cbde4a5f31d2ec6e1770b803b25115033d4827d4cc5",
+    "results/v1-confirmation/binary.safetensors": "4fd5a0e614095dc7e7c21111e7c5e058c7bec6c725413e808bd25fb8be9ceccf",
+    "results/v1-confirmation/fourway.safetensors": "0ad3b9cd025afcb5e691c6b10b704c68914b109ac8d901bc1e16840cea8f0e7f",
+    "results/v1-confirmation/xor.safetensors": "6b4e26f99709c16fe8bf2bc231528dfb7c6587b0f1f0b4d78996de06223868f2",
+    "data/pn_kc.tsv": "c824900604e71579cdfca93fe67b200ae792818f534d8a056e8805a4b49e427c",
+    "data/kc_mbon.tsv": "b28a3c6abe944f74a55aa4907b9479039499713ec507b4614ca0dabf69c617b1",
+    "data/training_circuit.json": "df2eea314921f4b55040095ffe75466d2d254c4511c88aca89cab0b7277b852c",
+    "Cargo.lock": "4a92af6fb079d6c0293a5ecb81e04d737e5a57e3a547666b5bdcf5d12b217dde"
+  },
+  "final_source_sha256": {
+    "src/plastic.rs": "9712821650bcdf58ae783387ef7587167c0f34c41fdc70d4573e2e7bb96887dc",
+    "src/bin/train_connectome.rs": "03060d2c132e7e8ad09fc2cebe3cf03156ede039bc31a9b9aa023e5c050b4cd4",
+    "src/bin/nobi_engine.rs": "d0fea6484b57ab4d82cb2fb4596fd217f0c1a7b3ea8da48afa183302efd90c77"
+  },
+  "safetensors_verification": [
+    {
+      "checkpoint": "results/generic.safetensors",
+      "tensor_count": 13,
+      "input_neurons": 2,
+      "hidden_neurons": 2,
+      "output_neurons": 2,
+      "plastic_edges": 4,
+      "numpy_probabilities": [
+        0.002994057023897767,
+        0.9970059990882874
+      ],
+      "rust_probabilities": [
+        0.002994,
+        0.997006
+      ],
+      "max_absolute_error": 5.702389776693351e-08,
+      "passed": true
+    },
+    {
+      "checkpoint": "results/v1-confirmation/binary.safetensors",
+      "tensor_count": 13,
+      "input_neurons": 319,
+      "hidden_neurons": 5177,
+      "output_neurons": 96,
+      "plastic_edges": 62261,
+      "numpy_probabilities": [
+        0.6071162819862366,
+        0.39288368821144104
+      ],
+      "rust_probabilities": [
+        0.607116,
+        0.392884
+      ],
+      "max_absolute_error": 3.1178855897096014e-07,
+      "passed": true
+    },
+    {
+      "checkpoint": "results/v1-confirmation/fourway.safetensors",
+      "tensor_count": 13,
+      "input_neurons": 319,
+      "hidden_neurons": 5177,
+      "output_neurons": 96,
+      "plastic_edges": 62261,
+      "numpy_probabilities": [
+        0.3256795108318329,
+        0.12807972729206085,
+        0.2986430525779724,
+        0.24759776890277863
+      ],
+      "rust_probabilities": [
+        0.32568,
+        0.12808,
+        0.298643,
+        0.247598
+      ],
+      "max_absolute_error": 4.891681671392867e-07,
+      "passed": true
+    },
+    {
+      "checkpoint": "results/v1-confirmation/xor.safetensors",
+      "tensor_count": 13,
+      "input_neurons": 319,
+      "hidden_neurons": 5177,
+      "output_neurons": 96,
+      "plastic_edges": 62261,
+      "numpy_probabilities": [
+        0.5157673358917236,
+        0.48423269391059875
+      ],
+      "rust_probabilities": [
+        0.515767,
+        0.484233
+      ],
+      "max_absolute_error": 3.3589172365733333e-07,
+      "passed": true
+    }
+  ],
+  "criteria_passed": true
+}

@@ -1,0 +1,15 @@
+[package]
+name = "nobi"
+version = "0.1.0"
+edition = "2021"
+default-run = "nobi"
+description = "Novigrad: a software-defined Bionic NPU research engine with connectome-constrained learning"
+repository = "https://github.com/ziozzang/novigrad"
+license = "MIT"
+
+[dependencies]
+safetensors = "0.8"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

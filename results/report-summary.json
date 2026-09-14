@@ -1,0 +1,44 @@
+[
+  {
+    "task": "binary",
+    "before_greedy": 0.4639892575,
+    "after_greedy": 1.0,
+    "expected": 0.99547850625,
+    "frozen": 0.49614313625,
+    "random_reward": 0.4856181525,
+    "before_reversal": 0.004470025,
+    "reversal": 0.99600048875,
+    "reversal_greedy": 1.0,
+    "minimum_seed_expected": 0.99481649,
+    "changed_weights_min": 62176,
+    "changed_weights_max": 62261
+  },
+  {
+    "task": "fourway",
+    "before_greedy": 0.21752929625,
+    "after_greedy": 1.0,
+    "expected": 0.98288218,
+    "frozen": 0.245849365,
+    "random_reward": 0.22792940125,
+    "before_reversal": 0.00566579625,
+    "reversal": 0.9832473025,
+    "reversal_greedy": 1.0,
+    "minimum_seed_expected": 0.9812406,
+    "changed_weights_min": 62246,
+    "changed_weights_max": 62261
+  },
+  {
+    "task": "xor",
+    "before_greedy": 0.4831542975,
+    "after_greedy": 1.0,
+    "expected": 0.8998150725,
+    "frozen": 0.5010798075,
+    "random_reward": 0.51608512625,
+    "before_reversal": 0.09963980124999999,
+    "reversal": 0.9011801725,
+    "reversal_greedy": 1.0,
+    "minimum_seed_expected": 0.88693243,
+    "changed_weights_min": 62261,
+    "changed_weights_max": 62261
+  }
+]

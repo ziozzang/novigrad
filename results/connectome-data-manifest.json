@@ -1,0 +1,26 @@
+{
+  "dataset": "FlyWire FAFB v783; Shiu model derivative",
+  "source_files": [
+    {
+      "file": "Connectivity_783.parquet",
+      "url": "https://raw.githubusercontent.com/philshiu/Drosophila_brain_model/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960/Connectivity_783.parquet",
+      "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347"
+    },
+    {
+      "file": "Completeness_783.csv",
+      "url": "https://raw.githubusercontent.com/philshiu/Drosophila_brain_model/91bdd1e7dcf193f3e7ca5a8933497fcef63b7960/Completeness_783.csv",
+      "sha256": "bbb847a4cc2caaa7a16349722d220c087317b946d148d4d592d94d250617a311"
+    },
+    {
+      "file": "neurons_783.tsv",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/8587524c1748ce5ef2080822a2fc890fc03bf597/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "sha256": "9a4f8b2f843196074431ebd7cd883536afa1be86c8a4ce90970441e8be81d1be"
+    }
+  ],
+  "neurons_in_completeness": 138639,
+  "connection_rows": 15091983,
+  "summed_synapse_counts": 54492922,
+  "output_sha256": "de6e458f38dbc1b9d8c2b7bfe03874dddd535414098198750296ebb4b7c769ea",
+  "conversion": "all rows retained; original root IDs/counts/polarity; source indices validated against Completeness CSV",
+  "runtime_transform": "Rust normalizes each source's signed outgoing counts by their absolute sum; nodes with no edges omitted"
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "checkpoint": "results/generic.safetensors",
+    "tensor_count": 13,
+    "input_neurons": 2,
+    "hidden_neurons": 2,
+    "output_neurons": 2,
+    "plastic_edges": 4,
+    "numpy_probabilities": [
+      0.002994057023897767,
+      0.9970059990882874
+    ],
+    "rust_probabilities": [
+      0.002994,
+      0.997006
+    ],
+    "max_absolute_error": 5.702389776693351e-08,
+    "passed": true
+  },
+  {
+    "checkpoint": "results/v1-confirmation/binary.safetensors",
+    "tensor_count": 13,
+    "input_neurons": 319,
+    "hidden_neurons": 5177,
+    "output_neurons": 96,
+    "plastic_edges": 62261,
+    "numpy_probabilities": [
+      0.6071162819862366,
+      0.39288368821144104
+    ],
+    "rust_probabilities": [
+      0.607116,
+      0.392884
+    ],
+    "max_absolute_error": 3.1178855897096014e-07,
+    "passed": true
+  },
+  {
+    "checkpoint": "results/v1-confirmation/fourway.safetensors",
+    "tensor_count": 13,
+    "input_neurons": 319,
+    "hidden_neurons": 5177,
+    "output_neurons": 96,
+    "plastic_edges": 62261,
+    "numpy_probabilities": [
+      0.3256795108318329,
+      0.12807972729206085,
+      0.2986430525779724,
+      0.24759776890277863
+    ],
+    "rust_probabilities": [
+      0.32568,
+      0.12808,
+      0.298643,
+      0.247598
+    ],
+    "max_absolute_error": 4.891681671392867e-07,
+    "passed": true
+  },
+  {
+    "checkpoint": "results/v1-confirmation/xor.safetensors",
+    "tensor_count": 13,
+    "input_neurons": 319,
+    "hidden_neurons": 5177,
+    "output_neurons": 96,
+    "plastic_edges": 62261,
+    "numpy_probabilities": [
+      0.5157673358917236,
+      0.48423269391059875
+    ],
+    "rust_probabilities": [
+      0.515767,
+      0.484233
+    ],
+    "max_absolute_error": 3.3589172365733333e-07,
+    "passed": true
+  }
+]

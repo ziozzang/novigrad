@@ -1,0 +1,6 @@
+{
+  "seed": 101,
+  "matched_runs": 9,
+  "all_non_timing_metrics_identical": true,
+  "note": "Single-seed reproduction also reruns suite criteria; random-reward binary reversal happened to score highly in this one seed, so only the independent eight-seed confirmation is used for aggregate acceptance."
+}

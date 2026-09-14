@@ -1,0 +1,2 @@
+-r requirements-verify.txt
+Pillow==12.3.0

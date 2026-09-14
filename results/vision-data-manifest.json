@@ -1,0 +1,69 @@
+{
+  "fashion_mnist": {
+    "source": "Zalando Research Fashion-MNIST",
+    "source_url": "https://github.com/zalandoresearch/fashion-mnist",
+    "source_files": {
+      "train-images-idx3-ubyte.gz": {
+        "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/train-images-idx3-ubyte.gz",
+        "md5": "8d4fb7e6c68d591d4c3dfef9ec88bf0d",
+        "sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84"
+      },
+      "train-labels-idx1-ubyte.gz": {
+        "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/train-labels-idx1-ubyte.gz",
+        "md5": "25c81989df183df01b3e8a0aad5dffbe",
+        "sha256": "a04f17134ac03560a47e3764e11b92fc97de4d1bfaf8ba1a3aa29af54cc90845"
+      },
+      "t10k-images-idx3-ubyte.gz": {
+        "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-images-idx3-ubyte.gz",
+        "md5": "bef4ecab320f06d8554ea6380940ec79",
+        "sha256": "346e55b948d973a97e58d2351dde16a484bd415d4595297633bb08f03db6a073"
+      },
+      "t10k-labels-idx1-ubyte.gz": {
+        "url": "https://raw.githubusercontent.com/zalandoresearch/fashion-mnist/master/data/fashion/t10k-labels-idx1-ubyte.gz",
+        "md5": "bb300cfdad3c16e7a12a480ee83cd310",
+        "sha256": "67da17c76eaffca5446c3361aaab5c3cd6d1c2608764d35dfb1850b086bf8dd5"
+      }
+    },
+    "classes": [
+      "T-shirt/top",
+      "Trouser",
+      "Pullover",
+      "Dress",
+      "Coat",
+      "Sandal",
+      "Shirt",
+      "Sneaker",
+      "Bag",
+      "Ankle boot"
+    ],
+    "seed": 20260914,
+    "splits": {
+      "train": 10000,
+      "validation": 2000,
+      "test": 2000
+    },
+    "split_index_sha256": {
+      "train": "74af67d10bcbadfb65c0907345edc667286f5af3e0d92a4349fe4bac3a0ab2ce",
+      "validation": "64866a4ffcbedddf83ab08276386df2a3a2313767e57f01bc5eeba53a1a0fc3f",
+      "test": "b9af9dd71c730bc067ae849c9e69b1c378dc417d3bf6e4ad3c86dfcc44696ee8"
+    },
+    "split_provenance": "train and val disjoint within official train; test from official test; each class has 1000/200/200 images",
+    "artifact_sha256": "a2e24eea666ebe42355ab175310822ed10c89e0e724e7ce91af47d9c70d6d92f"
+  },
+  "captcha": {
+    "source": "locally generated synthetic four-digit CAPTCHA",
+    "seed": 20260915,
+    "font_files": {
+      "/System/Library/Fonts/SFNSMono.ttf": "55caaed55254a28ac793847e8976be16c5ba7cbad1ec2ee2d5d86d4e6b3fa0c1",
+      "/System/Library/Fonts/Geneva.ttf": "b33d76749bbe41ebdffbdfc0330ace133f231d845539063bb2499d6681681a2a"
+    },
+    "splits": {
+      "train": 3000,
+      "validation": 500,
+      "test": 500
+    },
+    "layout": "fixed four 28x28 cells in each 28x112 uint8 grayscale image; labels are four digit values; codes unique across splits",
+    "limitations": "Known fixed-cell segmentation; synthetic digits, not a benchmark of arbitrary web CAPTCHAs",
+    "artifact_sha256": "9fa5a2ab56d753ea9504987ce0ad42312be9370e4c5e1177702b6e1b5a7b48b1"
+  }
+}

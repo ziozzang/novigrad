@@ -1,0 +1,2 @@
+load_ms=8.026 input_neurons=319 hidden_neurons=5177 output_neurons=96 input_edges=27848 plastic_edges=62261
+iterations=10000 elapsed_ms=1027.532 episodes_per_second=9732.1

@@ -1,0 +1,15 @@
+/target/
+/.venv/
+/data/*
+!/data/README.md
+__pycache__/
+/results/**/*.safetensors
+/results/**/*.nobi
+/results/**/*.verification-input.tsv
+/dist/
+.env
+.env.*
+*.pem
+/results/**/*.safetensors
+/examples/vision/models/
+/results/*.log
