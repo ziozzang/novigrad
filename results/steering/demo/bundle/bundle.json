@@ -1,0 +1,24 @@
+{
+  "format": "nobi.image_bundle.v1",
+  "adapter": "adapter.safetensors",
+  "model": "model.safetensors",
+  "sequence_length": 1,
+  "cell_size": [
+    28,
+    28
+  ],
+  "segmentation": "whole image",
+  "class_labels": [
+    "left",
+    "straight",
+    "right"
+  ],
+  "components": 64,
+  "whitening": 0.5,
+  "train_class_steer_mean": [
+    -0.42710140347480774,
+    -0.0037921408656984568,
+    0.40776005387306213
+  ],
+  "steer_decoding": "probability-weighted training class means"
+}

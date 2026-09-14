@@ -1,0 +1,20 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "command": [
+    "/Users/a405394/fly/nobi/.venv/bin/python",
+    "scripts/replay_steering.py",
+    "results/steering/demo/bundle/bundle.json",
+    "data/steering/source/test",
+    "--api-url",
+    "http://127.0.0.1:52782",
+    "--fps",
+    "30",
+    "--ticks",
+    "300",
+    "--out",
+    "results/steering/realtime30"
+  ],
+  "script_sha256": "16e74e26b1b5e1d40cc9f6eb9796f84751d62b3f25ad8640ed779204d56a103e",
+  "api_binary_sha256": "0dfe0f2fb703abbc72719c02f1c97f07942e38ff0d804bb7629171fa57a87608",
+  "model_sha256": "62177df11391ce50779f85b113c53a85635309e0bee552de6992c219c72fae0e"
+}

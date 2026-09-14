@@ -55,6 +55,8 @@ After eight controlled configurations, the selected model disables per-output L1
 
 See the [full experiment report](results/IMPROVEMENT_REPORT.md), [mechanism documentation](docs/optimization.md), and [image instructions](examples/vision/README.md). The report preserves unsuccessful PCA/batch experiments, controls, source hashes and raw predictions. CAPTCHA uses known cell positions and shared fonts; these results do not establish arbitrary live CAPTCHA solving or general scene detection.
 
+A small [Hugging Face steering imitation example](examples/steering/README.md) extends the same image-to-port interface to simulated driving commands. It tests offline command prediction, with separate driving sessions for evaluation. Accuracy is still weak (60% versus a 58% always-straight baseline). A 30 FPS replay measured 2.77 ms mean end-to-end processing latency and no deadline misses in 300 ticks on the M2 Ultra; this excludes live-camera and actuator latency.
+
 ## API, periodic execution, and delayed reward
 
 All interfaces use the same numeric input ports and Safetensors engine:

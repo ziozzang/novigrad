@@ -1,0 +1,22 @@
+{
+  "mode": "paced prerecorded JPEG replay, open-loop observations",
+  "frames": 50,
+  "ticks": 300,
+  "warmup_ticks_excluded": 10,
+  "requested_fps": 30.0,
+  "period_ms": 33.333333333333336,
+  "elapsed_seconds": 9.974355665966868,
+  "latency_ms": {
+    "mean": 2.7654173597693443,
+    "p50": 2.752728760242462,
+    "p95": 3.2111155800521374,
+    "p99": 3.3800208941102023,
+    "max": 3.481416031718254
+  },
+  "compute_over_period_count": 0,
+  "scheduled_deadline_misses": 0,
+  "skipped_slots": 0,
+  "max_start_lateness_ms": 5.037561058998108,
+  "latency_scope": "file read, JPEG decode/resize, adapter, JSON request, local HTTP inference, response validation and action decode; excludes initial loading, warmup, pacing sleep and final report writes",
+  "limitations": "OS file cache may be warm; no live camera capture, network camera, actuation, closed-loop dynamics or hard real-time guarantee"
+}

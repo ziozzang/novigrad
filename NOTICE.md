@@ -33,3 +33,10 @@ Dataset commits, checksums, extraction rules, and model lineage are recorded in
 the preparation scripts, generated manifests, and model bundle manifests. The
 project makes no claim that connectome-constrained models reproduce a whole fly
 brain or outperform conventional vision systems.
+
+The optional steering imitation example samples viewer JPEG derivatives from
+[URJC DeepRacer CARLA expert racing](https://huggingface.co/datasets/urjc-deepracer/carla-expert-racing)
+by Sergio Robledo / URJC DeepRacer. The publisher's dataset card declares
+Apache-2.0. Source revision, sampled row IDs, and downloaded image hashes are
+recorded separately in `results/steering/data-manifest.json`. Dataset images are
+not included in the source repository; the preparation script downloads them.

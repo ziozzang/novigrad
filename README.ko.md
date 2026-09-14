@@ -39,6 +39,8 @@ cargo run --release --bin train_connectome -- \
 
 동일한 새 평가 데이터에서 비교했다. [전체 실험 보고서](results/IMPROVEMENT_REPORT.ko.md), [개선 메커니즘](docs/optimization.ko.md), [이미지 실행 안내](examples/vision/README.ko.md)에 실패한 실험, 대조군, 원시 예측과 한계를 남겼다. 이미지 실험은 지도 학습이고, CAPTCHA는 고정된 셀과 공유된 글꼴 분포 안에서 검증했다.
 
+[Hugging Face 조향 모방 예제](examples/steering/README.ko.md)는 같은 이미지 입력 포트로 시뮬레이터의 조향 명령을 예측한다. 서로 다른 주행 세션으로 오프라인 모방 성능을 확인하는 작은 예제다. 시험 정확도는 60%로 항상 직진하는 기준선58%와 차이가 작다. 30 FPS 재생에서는 M2 Ultra 평균2.77ms, 300회 deadline 초과0회를 기록했다. 실제 카메라·액추에이터 지연은 제외한다.
+
 ## API·주기 실행·지연 보상
 
 - [로컬 HTTP API](docs/api.ko.md): 포트 메타데이터·추론·선택적 학습·체크포인트. `cargo build --release --features api --bins`로 빌드한다.

@@ -1,0 +1,18 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "machine": "arm64",
+  "core_source_commit": "51e515be2d3435e7ca95a7f68d0fd1b1a13a85de",
+  "files_sha256": {
+    "scripts/experiment_steering.py": "6eb4b19be7e338a976b88067b3d4b149c040f8ee6b798842389f7731eb0ac02d",
+    "scripts/image_adapter.py": "a003b60351d5a7a69030ff49ee30622532724e78aa23016484b530f41e58cc71",
+    "scripts/predict_steering.py": "5523636f563e97eaf8886dea6fdd7df2e3efb1d71a26e4691b0c1574cf06bad6",
+    "data/steering/carla_racing.npz": "1689959ce40e85acc0e9335b2e49f1001ec1a6142bff9ab7ace7c35b1555e57b",
+    "data/pn_kc.tsv": "c824900604e71579cdfca93fe67b200ae792818f534d8a056e8805a4b49e427c",
+    "data/kc_mbon.tsv": "b28a3c6abe944f74a55aa4907b9479039499713ec507b4614ca0dabf69c617b1",
+    "target/release/train_classifier": "95899279b66672716cde1ed664711f151aeba9a0de8f956bc56bd2ba7e5c0004",
+    "target/release/classify_features": "4e30f810e01b3bd5f6fbb64fef4762934fd4f2cdb986981bf391399624e0ef3c",
+    "results/steering/demo/bundle/model.safetensors": "62177df11391ce50779f85b113c53a85635309e0bee552de6992c219c72fae0e",
+    "results/steering/demo/bundle/adapter.safetensors": "f1ed78ad4ab8d9e9db28a9621aaaf99580e3fb3fd9faf19f10e3a9ddecaf4c59"
+  },
+  "note": "Runner components metadata changed after run to report actual PCA count; this run had64 before and after."
+}

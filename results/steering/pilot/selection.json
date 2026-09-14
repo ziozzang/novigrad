@@ -1,0 +1,20 @@
+{
+  "selected": "homeostasis_on",
+  "criterion": "highest validation accuracy, then lowest validation cross-entropy",
+  "candidates": {
+    "homeostasis_on": {
+      "homeostasis": true,
+      "baseline_validation_accuracy": 0.4,
+      "validation_accuracy": 0.6,
+      "validation_cross_entropy": 1.071289511,
+      "best_epoch": 5
+    },
+    "homeostasis_off": {
+      "homeostasis": false,
+      "baseline_validation_accuracy": 0.4,
+      "validation_accuracy": 0.55,
+      "validation_cross_entropy": 1.025328019,
+      "best_epoch": 25
+    }
+  }
+}

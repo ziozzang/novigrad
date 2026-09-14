@@ -1,0 +1,33 @@
+{
+  "local": {
+    "prediction": "straight",
+    "indices": [
+      1
+    ],
+    "probabilities": [
+      [
+        0.312070012,
+        0.395875275,
+        0.292054683
+      ]
+    ],
+    "sequence_length": 1,
+    "segmentation": "whole image"
+  },
+  "http": {
+    "prediction": "straight",
+    "indices": [
+      1
+    ],
+    "probabilities": [
+      [
+        0.31207001209259033,
+        0.3958752751350403,
+        0.292054682970047
+      ]
+    ],
+    "sequence_length": 1,
+    "segmentation": "whole image"
+  },
+  "max_probability_difference": 1.3504025675459275e-10
+}

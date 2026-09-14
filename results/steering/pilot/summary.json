@@ -1,0 +1,111 @@
+{
+  "task": "offline_three_action_steering",
+  "data": "/private/tmp/novi-steering-cached-pilot.npz",
+  "settings": {
+    "split_counts": {
+      "train": 58,
+      "validation": 20,
+      "test": 31
+    },
+    "group_counts": {
+      "train": 2,
+      "validation": 1,
+      "test": 1
+    },
+    "train_class_steer_mean": [
+      -0.4187178313732147,
+      -0.0447438545525074,
+      0.3756205141544342
+    ],
+    "train_constant_median_steer": -0.13458251953125
+  },
+  "validation_candidates": {
+    "homeostasis_on": {
+      "homeostasis": true,
+      "baseline_validation_accuracy": 0.4,
+      "validation_accuracy": 0.6,
+      "validation_cross_entropy": 1.071289511,
+      "best_epoch": 5
+    },
+    "homeostasis_off": {
+      "homeostasis": false,
+      "baseline_validation_accuracy": 0.4,
+      "validation_accuracy": 0.55,
+      "validation_cross_entropy": 1.025328019,
+      "best_epoch": 25
+    }
+  },
+  "selected": "homeostasis_on",
+  "selected_best_epoch": 5,
+  "shuffled_validation_accuracy": 0.5,
+  "train_majority_test_accuracy": 0.41935483870967744,
+  "test": {
+    "accuracy": 0.6129032258064516,
+    "balanced_accuracy": 0.5993589743589743,
+    "per_class_recall": [
+      0.875,
+      0.9230769230769231,
+      0.0
+    ],
+    "confusion_rows_actual_columns_predicted": [
+      [
+        7,
+        1,
+        0
+      ],
+      [
+        1,
+        12,
+        0
+      ],
+      [
+        0,
+        10,
+        0
+      ]
+    ],
+    "probability_decoded_steer_mae": 0.2977963192907738,
+    "train_median_constant_steer_mae": 0.3336673859627016,
+    "per_group": {
+      "4Cv21764866024143": {
+        "count": 31,
+        "accuracy": 0.6129032258064516
+      }
+    }
+  },
+  "shuffled_test": {
+    "accuracy": 0.5161290322580645,
+    "balanced_accuracy": 0.4903846153846154,
+    "per_class_recall": [
+      0.625,
+      0.8461538461538461,
+      0.0
+    ],
+    "confusion_rows_actual_columns_predicted": [
+      [
+        5,
+        2,
+        1
+      ],
+      [
+        2,
+        11,
+        0
+      ],
+      [
+        0,
+        10,
+        0
+      ]
+    ],
+    "probability_decoded_steer_mae": 0.3018051899545516,
+    "train_median_constant_steer_mae": 0.3336673859627016,
+    "per_group": {
+      "4Cv21764866024143": {
+        "count": 31,
+        "accuracy": 0.5161290322580645
+      }
+    }
+  },
+  "test_selection_policy": "validation accuracy, cross-entropy tie break; one test inference after selection"
+}
