@@ -21,3 +21,6 @@ __pycache__/
 
 /results/steering/**/*.log
 /results/steering/*/features/
+
+/bindings/python/target/
+/bindings/python/python/novigrad/*.so

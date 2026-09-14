@@ -1,0 +1,46 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "model_sha256": "b1af63db03b7cb26ed64350362b0f244f9d466d18b4aa7579de200bf00b6435f",
+  "scope": "Python list input through validated native or persistent local HTTP to returned probabilities; excludes model loading and sensor adapter",
+  "native": {
+    "1": {
+      "mean_ms": 0.10280178859829903,
+      "p95_ms": 0.11281948536634445,
+      "max_ms": 0.1187492161989212,
+      "repeats": 100
+    },
+    "32": {
+      "mean_ms": 3.440892528742552,
+      "p95_ms": 3.7273235619068146,
+      "max_ms": 3.844914957880974,
+      "repeats": 100
+    },
+    "128": {
+      "mean_ms": 13.663679733872414,
+      "p95_ms": 13.981482945382595,
+      "max_ms": 14.338668435811996,
+      "repeats": 100
+    }
+  },
+  "http": {
+    "1": {
+      "mean_ms": 0.4225536435842514,
+      "p95_ms": 0.5130001343786716,
+      "max_ms": 0.5846694111824036,
+      "repeats": 100
+    },
+    "32": {
+      "mean_ms": 7.356282528489828,
+      "p95_ms": 7.739466708153486,
+      "max_ms": 7.825000211596489,
+      "repeats": 100
+    },
+    "128": {
+      "mean_ms": 28.966896291822195,
+      "p95_ms": 29.556567687541246,
+      "max_ms": 29.718248173594475,
+      "repeats": 100
+    }
+  },
+  "native_http_update_weights_exact": true
+}

@@ -1,0 +1,131 @@
+{
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "mlx_version": "0.32.2",
+  "device": {
+    "device_name": "Apple M2 Ultra",
+    "max_recommended_working_set_size": 173173080064,
+    "memory_size": 206158430208,
+    "architecture": "applegpu_g14d",
+    "max_buffer_length": 129879801856,
+    "resource_limit": 499000
+  },
+  "model": "examples/vision/models/fashion-optimized/model.safetensors",
+  "model_sha256": "ffa29d829f4ac2d168f926ae372083b509cef4b5c904e721e0afd70a8e46d86f",
+  "features_sha256": "5d33bb968bcb93b7ecd3b71017f2e884e545e95fe33d66dbc16384443b682053",
+  "parity_rows": 1024,
+  "max_probability_error": 2.384185791015625e-07,
+  "action_disagreements": 0,
+  "cpu_load_seconds": 0.008492419496178627,
+  "metal_load_seconds": 0.016213662922382355,
+  "first_metal_call_seconds": 0.14192095957696438,
+  "metal_setup": {
+    "matrix_conversion_and_upload_seconds": 0.001619875431060791,
+    "sparse_conversion_and_upload_seconds": 0.00584029033780098,
+    "dense_matrix_bytes": 0,
+    "shape": [
+      319,
+      5177,
+      96
+    ],
+    "keep": 1036
+  },
+  "inference": {
+    "1": {
+      "native": {
+        "median_ms": 0.11083390563726425,
+        "p95_ms": 0.14068195596337316,
+        "mean_ms": 0.11405956000089645,
+        "repeats": 50
+      },
+      "metal": {
+        "median_ms": 1.2353956699371338,
+        "p95_ms": 1.9270090386271477,
+        "mean_ms": 1.3714048266410828,
+        "repeats": 50
+      }
+    },
+    "8": {
+      "native": {
+        "median_ms": 0.8473331108689308,
+        "p95_ms": 1.0278209112584589,
+        "mean_ms": 0.8679841086268425,
+        "repeats": 50
+      },
+      "metal": {
+        "median_ms": 1.2821462005376816,
+        "p95_ms": 1.9041467458009707,
+        "mean_ms": 1.3683614879846573,
+        "repeats": 50
+      }
+    },
+    "32": {
+      "native": {
+        "median_ms": 3.3732717856764793,
+        "p95_ms": 3.6517313681542873,
+        "mean_ms": 3.3965517207980156,
+        "repeats": 50
+      },
+      "metal": {
+        "median_ms": 1.4549382030963898,
+        "p95_ms": 2.0673301070928574,
+        "mean_ms": 1.5508266910910606,
+        "repeats": 50
+      }
+    },
+    "128": {
+      "native": {
+        "median_ms": 13.47404159605503,
+        "p95_ms": 14.104661345481873,
+        "mean_ms": 13.495399914681911,
+        "repeats": 50
+      },
+      "metal": {
+        "median_ms": 2.191227860748768,
+        "p95_ms": 3.035121969878673,
+        "mean_ms": 2.3327064141631126,
+        "repeats": 50
+      }
+    },
+    "256": {
+      "native": {
+        "median_ms": 27.527437545359135,
+        "p95_ms": 27.98336362466216,
+        "mean_ms": 27.46889490634203,
+        "repeats": 50
+      },
+      "metal": {
+        "median_ms": 3.191688098013401,
+        "p95_ms": 3.8265686482191086,
+        "mean_ms": 3.282509371638298,
+        "repeats": 50
+      }
+    }
+  },
+  "native_training": {
+    "1": {
+      "median_ms": 0.23722928017377853,
+      "p95_ms": 0.270172581076622,
+      "mean_ms": 0.24287281557917595,
+      "repeats": 20
+    },
+    "32": {
+      "median_ms": 5.322019569575787,
+      "p95_ms": 5.595883075147867,
+      "mean_ms": 5.3151351399719715,
+      "repeats": 20
+    },
+    "128": {
+      "median_ms": 21.1207065731287,
+      "p95_ms": 21.441730670630932,
+      "mean_ms": 21.097816806286573,
+      "repeats": 20
+    }
+  },
+  "scope": "Same prepared Python-list inputs to returned Python-list probabilities, including marshalling, GPU input construction, synchronized compute and readback; excludes initial loading and feature encoding.",
+  "limitations": [
+    "Metal inference only, not GPU training or MLX-C integration",
+    "Warm shader caches possible; four input arrays alternate to avoid timing an already materialized output",
+    "Native training timings update a throwaway model each call; weights are not reset per sample",
+    "Parity is checked on these inputs, not a proof for every checkpoint/device"
+  ]
+}

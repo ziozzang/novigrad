@@ -68,3 +68,6 @@ cargo run --release --bin train_connectome -- \
 [v0.1.1 다운로드](https://github.com/ziozzang/novigrad/releases/tag/v0.1.1): Apple Silicon 실행 파일, Safetensors 모델 묶음, SHA-256 체크섬. 코드는 MIT이며 데이터 및 외부 자료 권리는 [NOTICE](NOTICE.md)를 참고한다.
 
 Author: jioh jung <jung@jioh.net> · License: MIT
+
+
+Python 네이티브 바인딩과 선택적인 MLX/Metal 배치 추론: [예제](examples/python/README.ko.md), [성능 실험 및 미채택 최적화](results/PYTHON_PERFORMANCE_REPORT.ko.md).

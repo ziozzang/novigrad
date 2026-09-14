@@ -1,0 +1,117 @@
+{
+  "mlx_version": "0.32.2",
+  "device": "Device(gpu, 0)",
+  "device_info": {
+    "device_name": "Apple M2 Ultra",
+    "max_recommended_working_set_size": 173173080064,
+    "memory_size": 206158430208,
+    "architecture": "applegpu_g14d",
+    "max_buffer_length": 129879801856,
+    "resource_limit": 499000
+  },
+  "model": "results/steering/demo/bundle/model.safetensors",
+  "features": "results/steering/demo/test_inputs.safetensors",
+  "parity_rows": 53,
+  "repeats": 50,
+  "setup": {
+    "matrix_conversion_and_upload_seconds": 0.003255331888794899,
+    "dense_matrix_bytes": 8594972,
+    "shape": [
+      319,
+      5177,
+      96
+    ],
+    "keep": 1036
+  },
+  "mlx": {
+    "eager": {
+      "first_call_seconds": 0.04418749921023846,
+      "max_absolute_probability_error": 0.012162923812866211,
+      "action_disagreements": 0,
+      "probability_allclose_atol_1e_5_rtol_1e_5": false,
+      "batches": {
+        "1": {
+          "warmup_seconds": 0.00367770716547966,
+          "median_ms": 0.5596475675702095,
+          "p95_ms": 1.1220036074519157
+        },
+        "32": {
+          "warmup_seconds": 0.0029620006680488586,
+          "median_ms": 0.4874998703598976,
+          "p95_ms": 0.5996052175760267
+        },
+        "128": {
+          "warmup_seconds": 0.0051361266523599625,
+          "median_ms": 0.6172275170683861,
+          "p95_ms": 0.6835971958935261
+        }
+      }
+    },
+    "compiled": {
+      "first_call_seconds": 0.002933582291007042,
+      "max_absolute_probability_error": 0.012162923812866211,
+      "action_disagreements": 0,
+      "probability_allclose_atol_1e_5_rtol_1e_5": false,
+      "batches": {
+        "1": {
+          "warmup_seconds": 0.002185959368944168,
+          "median_ms": 0.48058386892080307,
+          "p95_ms": 0.8510678075253956
+        },
+        "32": {
+          "warmup_seconds": 0.001941625028848648,
+          "median_ms": 0.453791581094265,
+          "p95_ms": 0.5952680483460424
+        },
+        "128": {
+          "warmup_seconds": 0.002452833577990532,
+          "median_ms": 0.5869185552001,
+          "p95_ms": 1.0417353361845012
+        }
+      }
+    },
+    "ordered_sparse_compiled": {
+      "first_call_seconds": 0.16089158318936825,
+      "max_absolute_probability_error": 5.960464477539063e-08,
+      "action_disagreements": 0,
+      "probability_allclose_atol_1e_5_rtol_1e_5": true,
+      "batches": {
+        "1": {
+          "warmup_seconds": 0.006168333813548088,
+          "median_ms": 1.2232083827257156,
+          "p95_ms": 2.1280240267515182
+        },
+        "32": {
+          "warmup_seconds": 0.006589958444237709,
+          "median_ms": 1.259208656847477,
+          "p95_ms": 2.7867437340319148
+        },
+        "128": {
+          "warmup_seconds": 0.0058535002171993256,
+          "median_ms": 1.3904795050621033,
+          "p95_ms": 2.16539017856121
+        }
+      }
+    }
+  },
+  "native_pyo3": {
+    "1": {
+      "median_ms": 0.15674997121095657,
+      "p95_ms": 0.1831633038818836
+    },
+    "32": {
+      "median_ms": 3.4257713705301285,
+      "p95_ms": 3.646874614059925
+    },
+    "128": {
+      "median_ms": 13.6640015989542,
+      "p95_ms": 14.088283851742744
+    }
+  },
+  "limitations": [
+    "Python MLX prototype, not MLX-C; inference only",
+    "Dense reductions and duplicate-edge consolidation can change sparse sequential rounding",
+    "MLX timing excludes NumPy upload and output readback; native includes Python list marshalling",
+    "No labels or driving performance assessed"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "mlx_version": "0.32.2",
+  "device": "Device(gpu, 0)",
+  "device_info": {
+    "device_name": "Apple M2 Ultra",
+    "max_recommended_working_set_size": 173173080064,
+    "memory_size": 206158430208,
+    "architecture": "applegpu_g14d",
+    "max_buffer_length": 129879801856,
+    "resource_limit": 499000
+  },
+  "model": "results/steering/demo/bundle/model.safetensors",
+  "features": "data/vision/fashion64/features.safetensors",
+  "selection": "partition",
+  "parity_rows": 259,
+  "repeats": 50,
+  "setup": {
+    "matrix_conversion_and_upload_seconds": 0.0033259596675634384,
+    "sparse_conversion_and_upload_seconds": 0.005788708105683327,
+    "dense_matrix_bytes": 8594972,
+    "shape": [
+      319,
+      5177,
+      96
+    ],
+    "keep": 1036
+  },
+  "mlx": {
+    "eager": {
+      "first_call_seconds": 0.11831074953079224,
+      "max_absolute_probability_error": 0.008950769901275635,
+      "action_disagreements": 0,
+      "probability_allclose_atol_1e_5_rtol_1e_5": false,
+      "batches": {
+        "1": {
+          "warmup_seconds": 0.019999081268906593,
+          "median_ms": 0.5772281438112259,
+          "p95_ms": 1.1333335191011429,
+          "host_to_host_median_ms": 0.5461880937218666,
+          "host_to_host_p95_ms": 1.0655152611434453
+        },
+        "32": {
+          "warmup_seconds": 0.002797374501824379,
+          "median_ms": 0.5300212651491165,
+          "p95_ms": 0.608477648347616,
+          "host_to_host_median_ms": 0.5379170179367065,
+          "host_to_host_p95_ms": 0.7436769083142277
+        },
+        "128": {
+          "warmup_seconds": 0.003726460039615631,
+          "median_ms": 0.6615212187170982,
+          "p95_ms": 1.0683349333703505,
+          "host_to_host_median_ms": 0.6904155015945435,
+          "host_to_host_p95_ms": 0.8230490610003469
+        }
+      }
+    },
+    "compiled": {
+      "first_call_seconds": 0.5897263344377279,
+      "max_absolute_probability_error": 0.008950769901275635,
+      "action_disagreements": 0,
+      "probability_allclose_atol_1e_5_rtol_1e_5": false,
+      "batches": {
+        "1": {
+          "warmup_seconds": 0.012057915329933167,
+          "median_ms": 0.5335202440619469,
+          "p95_ms": 1.107268687337637,
+          "host_to_host_median_ms": 0.5022501572966576,
+          "host_to_host_p95_ms": 0.8994240313768378
+        },
+        "32": {
+          "warmup_seconds": 0.0021091680973768234,
+          "median_ms": 0.4787920042872429,
+          "p95_ms": 0.6882714107632634,
+          "host_to_host_median_ms": 0.4847906529903412,
+          "host_to_host_p95_ms": 0.5796875804662703
+        },
+        "128": {
+          "warmup_seconds": 0.004047084599733353,
+          "median_ms": 0.6033750250935555,
+          "p95_ms": 1.2160791084170341,
+          "host_to_host_median_ms": 0.609230250120163,
+          "host_to_host_p95_ms": 0.8198197931051249
+        }
+      }
+    },
+    "ordered_sparse_compiled": {
+      "first_call_seconds": 0.002723041921854019,
+      "max_absolute_probability_error": 5.960464477539063e-08,
+      "action_disagreements": 0,
+      "probability_allclose_atol_1e_5_rtol_1e_5": true,
+      "batches": {
+        "1": {
+          "warmup_seconds": 0.0051506683230400085,
+          "median_ms": 1.2476863339543343,
+          "p95_ms": 1.8877332098782054,
+          "host_to_host_median_ms": 1.3039568439126015,
+          "host_to_host_p95_ms": 2.089233417063951
+        },
+        "32": {
+          "warmup_seconds": 0.006534291431307793,
+          "median_ms": 1.3351673260331154,
+          "p95_ms": 1.8632204271852963,
+          "host_to_host_median_ms": 1.387791708111763,
+          "host_to_host_p95_ms": 2.0188485272228713
+        },
+        "128": {
+          "warmup_seconds": 0.008081167936325073,
+          "median_ms": 1.5358123928308487,
+          "p95_ms": 2.2185588255524635,
+          "host_to_host_median_ms": 1.568707637488842,
+          "host_to_host_p95_ms": 2.3830011487007132
+        }
+      }
+    }
+  },
+  "native_pyo3": {
+    "1": {
+      "median_ms": 0.21881237626075745,
+      "p95_ms": 0.23338459432125092
+    },
+    "32": {
+      "median_ms": 3.4566251561045647,
+      "p95_ms": 4.055942315608262
+    },
+    "128": {
+      "median_ms": 13.715436682105064,
+      "p95_ms": 14.155466761440039
+    }
+  },
+  "limitations": [
+    "Python MLX prototype, not MLX-C; inference only",
+    "Dense reductions and duplicate-edge consolidation can change sparse sequential rounding",
+    "MLX timing excludes NumPy upload and output readback; native includes Python list marshalling",
+    "First-call timing may reuse persistent Metal shader cache",
+    "No labels or driving performance assessed"
+  ]
+}

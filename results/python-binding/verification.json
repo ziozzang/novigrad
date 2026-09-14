@@ -1,0 +1,18 @@
+{
+  "native_and_metal_tests": {
+    "passed": 5,
+    "command": ".venv/bin/python -m unittest discover -s tests/python -p test_*.py -v"
+  },
+  "existing_script_tests": {
+    "passed": 14
+  },
+  "binding_cargo_fmt": "passed",
+  "binding_cargo_clippy": "passed -D warnings",
+  "wheel_install": "passed isolated target import and basic learning example",
+  "sdist_to_wheel": "passed pip wheel --no-deps",
+  "basic_example": {
+    "before_correct_probability": 0.5,
+    "after_correct_probability": 0.9912161827087402,
+    "safetensors_roundtrip_exact": true
+  }
+}

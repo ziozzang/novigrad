@@ -88,3 +88,6 @@ This prototype does not implement whole-brain training, actual dopaminergic sign
 [Download v0.1.1](https://github.com/ziozzang/novigrad/releases/tag/v0.1.1): Apple Silicon binaries, Safetensors model bundles, and SHA-256 checksums. Code is MIT; see [NOTICE](NOTICE.md) for data and third-party attribution.
 
 Author: jioh jung <jung@jioh.net> · License: MIT
+
+
+Native Python bindings and optional MLX/Metal batch inference are available: [examples](examples/python/README.md), [measured performance and rejected optimizations](results/PYTHON_PERFORMANCE_REPORT.md).
