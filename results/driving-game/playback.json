@@ -1,0 +1,10 @@
+{
+  "seed": 20000,
+  "return": 28.667414073778296,
+  "steps": 40,
+  "collision": false,
+  "decision_frequency_hz": 2,
+  "observation_api_simulator_step_mean_ms": 11.648633377626538,
+  "observation_api_simulator_step_max_ms": 13.188125565648079,
+  "timing_note": "includes simulator stepping; human mode may pace rendering, GIF encoding excluded"
+}

@@ -1,0 +1,10 @@
+# Closed-loop HighwayEnv demo; installed/verified on macOS arm64, Python 3.11.
+-r requirements-vision.txt
+highway-env==1.12.1
+gymnasium==1.3.0
+pygame-ce==2.5.8
+pandas==3.0.5
+matplotlib==3.11.2
+cloudpickle==3.1.2
+farama-notifications==0.0.6
+typing-extensions==4.16.0

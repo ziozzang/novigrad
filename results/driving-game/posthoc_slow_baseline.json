@@ -1,0 +1,313 @@
+{
+  "aggregate": {
+    "episodes": 20,
+    "mean_return": 28.667414073778296,
+    "collision_rate": 0.0,
+    "mean_distance_m": 403.0,
+    "mean_speed_m_s": 20.08398731455601,
+    "mean_steps": 40.0
+  },
+  "episodes": [
+    {
+      "seed": 20000,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20001,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20002,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20003,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20004,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20005,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20006,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20007,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20008,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20009,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20010,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20011,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20012,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20013,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20014,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20015,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20016,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20017,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20018,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.0,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    },
+    {
+      "seed": 20019,
+      "return": 28.667414073778296,
+      "steps": 40,
+      "collision": false,
+      "distance_m": 403.00000000000006,
+      "mean_speed_m_s": 20.083987314556012,
+      "action_counts": [
+        0,
+        0,
+        0,
+        0,
+        40
+      ]
+    }
+  ],
+  "note": "Post-hoc diagnostic baseline after observing learned action counts; no model/setting changed from test results. Future runner includes this baseline by default."
+}

@@ -1,0 +1,34 @@
+{
+  "initial_tensor_comparison": {
+    "hidden_ids": true,
+    "input_count": true,
+    "input_ids": true,
+    "input_post": true,
+    "input_pre": true,
+    "input_sign": true,
+    "output_actions": true,
+    "output_gains": true,
+    "output_ids": true,
+    "plastic_count": true,
+    "plastic_post": true,
+    "plastic_pre": true,
+    "plastic_sign": true,
+    "plastic_weight": true
+  },
+  "files_sha256": {
+    "scripts/train_driving_game.py": "1bbe3625c6fde4ee20e2a61924773483883fd1279e588799d188b6f13e1e0e3a",
+    "scripts/driving_environment.py": "f938c6c055f86f503273f0fdfe68857da0efef4629bbd5771e7bf7e388bcaea0",
+    "scripts/play_driving_game.py": "363942cf6356675df31a4bdf2fe7085058d45b9ce68b7186f9148619651b0ee6",
+    "requirements-simulation.txt": "0c52e01c93da21fba8f3f837f48e544687cc2fd09404d656d6c4542292112437",
+    "target/release/novi_engine": "d81ebce03b50f79b1cf2c1f602ddf2dcf5fbe721556867988b3312dce360c017",
+    "target/release/novi_api": "0dfe0f2fb703abbc72719c02f1c97f07942e38ff0d804bb7629171fa57a87608",
+    "data/pn_kc.tsv": "c824900604e71579cdfca93fe67b200ae792818f534d8a056e8805a4b49e427c",
+    "data/kc_mbon.tsv": "b28a3c6abe944f74a55aa4907b9479039499713ec507b4614ca0dabf69c617b1",
+    "results/driving-game/model.safetensors": "b1af63db03b7cb26ed64350362b0f244f9d466d18b4aa7579de200bf00b6435f"
+  },
+  "post_run_changes": [
+    "Offscreen GIF regenerated with SDL_VIDEODRIVER unset; dummy produced black frames.",
+    "Always-slow diagnostic added after primary test; no learned model changed. Future runs include this baseline."
+  ],
+  "training_reset_policy": "New Engine::load per learning-rate candidate; unrelated control starts from selected candidate INITIAL model, not trained model. Game reset per episode; weights retained within training run. Evaluation never learns."
+}

@@ -1,0 +1,5 @@
+{
+  "learning_rate": 0.01,
+  "folder": "lr0.01",
+  "criterion": "validation mean episode return; initial model eligible"
+}

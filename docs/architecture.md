@@ -55,3 +55,7 @@ State ownership is explicit: inference closes a trial without changing weights; 
 The [periodic runtime](runtime.md) measures execution against a chosen period and skips missed scheduling slots. It provides soft real-time behavior under macOS, not hard deadline guarantees. The [local API](api.md) registers model files at startup and exposes controlled inference/learning operations; it does not accept arbitrary client-side file paths. Both interfaces use the same checkpoint and engine semantics.
 
 [Optimization mechanisms](optimization.md) documents controlled changes to learning, activation and encoding. New modalities can reuse this architecture by implementing an input adapter and an output decoder; the biological circuit need not acquire modality-specific branches.
+
+## Closed-loop environment adapter
+
+The optional HighwayEnv example uses the same319 input ports and5 output actions. A fixed kinematic encoder produces rates, the policy samples a meta-action, the environment advances, and scalar reward returns to an episodic learner through the existing `/learn` endpoint. Four episodes share fixed weights before a batch update. Environment resets and model resets are separate: only independent training runs reset weights; validation and test freeze them. See [the game example](../examples/driving-game/README.md).

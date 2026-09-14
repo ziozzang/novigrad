@@ -1,0 +1,13 @@
+[
+  "/Users/a405394/fly/nobi/target/release/novi_engine",
+  "init",
+  "/Users/a405394/fly/nobi/data/pn_kc.tsv",
+  "/Users/a405394/fly/nobi/data/kc_mbon.tsv",
+  "/Users/a405394/fly/nobi/results/driving-game/lr0.01/initial.safetensors",
+  "5",
+  "0.01",
+  "6",
+  ".2",
+  "false",
+  "opponent"
+]

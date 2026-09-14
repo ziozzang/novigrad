@@ -6,6 +6,7 @@ use std::io::{BufRead, BufReader};
 use std::path::Path;
 
 const USAGE: &str = "Usage:
+  novi_engine init INPUT_EDGES PLASTIC_EDGES CHECKPOINT [actions] [learning_rate] [gain] [active_fraction] [homeostasis] [readout]
   novi_engine train INPUT_EDGES PLASTIC_EDGES SAMPLES CHECKPOINT [actions] [epochs] [seed]
   novi_engine eval CHECKPOINT SAMPLES
   novi_engine infer CHECKPOINT INPUTS
@@ -16,8 +17,103 @@ Training/evaluation samples: label<TAB>root_id:value[<TAB>root_id:value...].
 Inference INPUTS: one row of root_id:value fields, with no label.
 Labels are zero-based action indices; values must be finite and nonnegative.
 Output cells, sorted by ID, map to action index modulo actions.
-Defaults: actions=2, epochs=10, seed=1. Training metrics use training samples only.
+Init defaults: actions=5, learning_rate=0.01, gain=6, active_fraction=0.2,
+homeostasis=false, readout=opponent. Init uses edges only and refuses an existing checkpoint.
+Train defaults: actions=2, epochs=10, seed=1. Training metrics use training samples only.
 Use separate samples with eval to measure generalization.";
+
+fn init(args: &[String]) -> Result<(), String> {
+    if !(5..=11).contains(&args.len()) {
+        return Err(USAGE.into());
+    }
+    let actions = args
+        .get(5)
+        .map(|s| s.parse::<usize>())
+        .transpose()
+        .map_err(|_| "invalid actions")?
+        .unwrap_or(5);
+    let learning_rate = args
+        .get(6)
+        .map(|s| s.parse::<f32>())
+        .transpose()
+        .map_err(|_| "invalid learning_rate")?
+        .unwrap_or(0.01);
+    let logit_gain = args
+        .get(7)
+        .map(|s| s.parse::<f32>())
+        .transpose()
+        .map_err(|_| "invalid gain")?
+        .unwrap_or(6.0);
+    let active_fraction = args
+        .get(8)
+        .map(|s| s.parse::<f32>())
+        .transpose()
+        .map_err(|_| "invalid active_fraction")?
+        .unwrap_or(0.2);
+    let homeostasis = args
+        .get(9)
+        .map(|s| s.parse::<bool>())
+        .transpose()
+        .map_err(|_| "invalid homeostasis (true|false)")?
+        .unwrap_or(false);
+    let readout = args.get(10).map(String::as_str).unwrap_or("opponent");
+    if !matches!(readout, "positive" | "opponent") {
+        return Err("readout must be positive or opponent".into());
+    }
+    let checkpoint = Path::new(&args[4]);
+    if checkpoint.exists() {
+        return Err(format!(
+            "checkpoint already exists: {}",
+            checkpoint.display()
+        ));
+    }
+    let mut engine = Engine::load(
+        &args[2],
+        &args[3],
+        PlasticConfig {
+            actions,
+            learning_rate,
+            logit_gain,
+            active_fraction,
+            homeostasis,
+            ..PlasticConfig::default()
+        },
+    )?;
+    if readout == "opponent" {
+        let gains: Vec<f32> = (0..engine.output_ids().len())
+            .map(|i| {
+                if (i / actions).is_multiple_of(2) {
+                    1.0
+                } else {
+                    -1.0
+                }
+            })
+            .collect();
+        engine.set_output_gains(&gains)?;
+    }
+    // A same-directory hard link publishes the completed checkpoint only when
+    // the destination does not exist, including under a concurrent init.
+    let mut staging = checkpoint.as_os_str().to_os_string();
+    staging.push(format!(
+        ".{}.{}.staging",
+        std::process::id(),
+        std::time::SystemTime::now()
+            .duration_since(std::time::UNIX_EPOCH)
+            .map_err(|e| e.to_string())?
+            .as_nanos()
+    ));
+    let staging = std::path::PathBuf::from(staging);
+    let result = engine.save_checkpoint(&staging).and_then(|_| {
+        std::fs::hard_link(&staging, checkpoint)
+            .map_err(|e| format!("cannot publish checkpoint without overwrite: {e}"))
+    });
+    let _ = std::fs::remove_file(&staging);
+    result?;
+    println!("initialized checkpoint={} actions={} input_ports={} hidden_neurons={} output_neurons={} plastic_edges={} readout={}",
+        checkpoint.display(), actions, engine.input_ids().len(), engine.hidden_ids().len(),
+        engine.output_ids().len(), engine.plastic_edge_count(), readout);
+    Ok(())
+}
 
 #[derive(Clone)]
 struct Sample {
@@ -294,6 +390,7 @@ fn bench(args: &[String]) -> Result<(), String> {
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let result = match args.get(1).map(String::as_str) {
+        Some("init") => init(&args),
         Some("train") => train(&args),
         Some("eval") => eval(&args),
         Some("infer") => infer(&args),

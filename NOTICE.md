@@ -40,3 +40,9 @@ by Sergio Robledo / URJC DeepRacer. The publisher's dataset card declares
 Apache-2.0. Source revision, sampled row IDs, and downloaded image hashes are
 recorded separately in `results/steering/data-manifest.json`. Dataset images are
 not included in the source repository; the preparation script downloads them.
+
+The optional driving-game example uses Farama HighwayEnv (MIT), Gymnasium
+(MIT), and pygame-ce (LGPL-2.1-or-later) under their respective upstream terms.
+The repository includes an original rendered simulation GIF, not third-party
+source code or a pretrained driving policy. Exact installed versions are pinned
+in requirements-simulation.txt.

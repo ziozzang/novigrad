@@ -1,5 +1,11 @@
 # Novigrad v0.1.1 — Learning mechanisms, local API and periodic runtime
 
+## Unreleased
+
+- Add pinned Hugging Face steering imitation and30 FPS replay examples.
+- Add HighwayEnv closed-loop reward learning, controls, GIF/human playback, and English/Korean reports.
+- Add `novi_engine init` for untrained Safetensors checkpoints without labeled samples.
+
 The executable and Rust crate are now **novi**. Author: **jioh jung <jung@jioh.net>**. Source license: **MIT**.
 
 Eight controlled image experiments identified a stronger configuration without adding anatomical edges, changing synapse signs, or using pretrained CNN/OCR models. It disables output L1 normalization, trains for up to 75 epochs and retains 20% of hidden cells.
