@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add three-policy MAGI-inspired majority/probability voting, independent training seeds, bundle playback and measured negative results.
+
 - Add pinned Hugging Face steering imitation and30 FPS replay examples.
 - Add HighwayEnv closed-loop reward learning, controls, GIF/human playback, and English/Korean reports.
 - Add `novi_engine init` for untrained Safetensors checkpoints without labeled samples.

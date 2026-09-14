@@ -1,0 +1,115 @@
+{
+  "members": 3,
+  "member_rng_and_environment_starts": [
+    [
+      11,
+      5000
+    ],
+    [
+      22,
+      6000
+    ],
+    [
+      33,
+      7000
+    ]
+  ],
+  "episodes_per_member": 128,
+  "learning_rate": 0.01,
+  "validation_seeds": [
+    30000,
+    30001,
+    30002,
+    30003,
+    30004,
+    30005,
+    30006,
+    30007
+  ],
+  "test_seeds": [
+    40000,
+    40001,
+    40002,
+    40003,
+    40004,
+    40005,
+    40006,
+    40007,
+    40008,
+    40009,
+    40010,
+    40011,
+    40012,
+    40013,
+    40014,
+    40015,
+    40016,
+    40017,
+    40018,
+    40019,
+    40020,
+    40021,
+    40022,
+    40023,
+    40024,
+    40025,
+    40026,
+    40027,
+    40028,
+    40029
+  ],
+  "environment": {
+    "observation": {
+      "type": "Kinematics",
+      "vehicles_count": 5,
+      "features": [
+        "presence",
+        "x",
+        "y",
+        "vx",
+        "vy"
+      ],
+      "absolute": false,
+      "order": "sorted",
+      "normalize": true,
+      "clip": true,
+      "see_behind": false,
+      "observe_intentions": false
+    },
+    "action": {
+      "type": "DiscreteMetaAction",
+      "longitudinal": true,
+      "lateral": true
+    },
+    "lanes_count": 3,
+    "vehicles_count": 12,
+    "controlled_vehicles": 1,
+    "duration": 20,
+    "policy_frequency": 2,
+    "simulation_frequency": 10,
+    "collision_reward": -1.0,
+    "high_speed_reward": 0.4,
+    "right_lane_reward": 0.0,
+    "lane_change_reward": 0.0,
+    "reward_speed_range": [
+      20,
+      30
+    ],
+    "normalize_reward": true,
+    "offroad_terminal": false,
+    "offscreen_rendering": true
+  },
+  "actions": [
+    "LANE_LEFT",
+    "IDLE",
+    "LANE_RIGHT",
+    "FASTER",
+    "SLOWER"
+  ],
+  "voting": [
+    "majority with mean-probability tie break",
+    "equal probability mean"
+  ],
+  "reset": "identical initial topology and weights; independent exploration and training environment seeds",
+  "selection": "each checkpoint and best single selected on validation before test; no ensemble tuning"
+}

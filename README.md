@@ -73,6 +73,10 @@ The [HighwayEnv example](examples/driving-game/README.md) learns from game rewar
 
 Run `scripts/play_driving_game.py MODEL.safetensors --human` to watch a saved policy in a local game window. Training uses structured kinematic observations and an environment-defined reward; this is not arbitrary game-goal understanding or a raw-camera driver.
 
+## Three-policy voting
+
+The [MAGI-inspired ensemble](examples/magi/README.md) gives three independently trained circuits the same observation and compares majority voting with probability averaging. On30 fresh games, collisions were0 for the validation-selected single member,20 for majority, and3 for probability averaging. Two weaker policies made identical votes; more voters did not mean better judgment. [Full report](results/MAGI_REPORT.md).
+
 ## Scope and performance
 
 A separate full-graph LIF runner activates the derived FlyWire graph; it is not the rate-learning circuit. Each circuit executes on a CPU thread; independent API models use separate locks and bounded worker jobs. The local Cargo configuration uses `target-cpu=native`, so release binaries should be built on the target Mac rather than assumed portable. The measured M2 Ultra fixed-input forward plus zero-reward loop was 9,732 episodes/s; it is not actual training throughput or robot-control latency ([measurement](results/V1_REPORT.md)).

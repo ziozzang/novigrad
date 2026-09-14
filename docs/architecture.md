@@ -59,3 +59,7 @@ The [periodic runtime](runtime.md) measures execution against a chosen period an
 ## Closed-loop environment adapter
 
 The optional HighwayEnv example uses the same319 input ports and5 output actions. A fixed kinematic encoder produces rates, the policy samples a meta-action, the environment advances, and scalar reward returns to an episodic learner through the existing `/learn` endpoint. Four episodes share fixed weights before a batch update. Environment resets and model resets are separate: only independent training runs reset weights; validation and test freeze them. See [the game example](../examples/driving-game/README.md).
+
+## Policy ensemble
+
+`ensemble_policy.py` composes compatible categorical policies above the engine. Every member receives the same ordered input rates and returns probabilities over the same action meanings. Majority or probability-mean aggregation produces a decision while recording agreement and latency. Each member retains its own Safetensors checkpoint; `novi.ensemble.v1` JSON describes composition. This is an application-level decision layer with no Rust core or checkpoint-schema change.

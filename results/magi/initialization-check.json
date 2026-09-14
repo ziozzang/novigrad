@@ -1,0 +1,6 @@
+{
+  "members": 3,
+  "tensor_count": 14,
+  "all_initial_tensors_equal": true,
+  "diversity_source": "different action RNG and nonoverlapping training environment seed ranges"
+}

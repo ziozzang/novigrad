@@ -1,0 +1,20 @@
+{
+  "return": 28.667414073778296,
+  "collision": false,
+  "voting": {
+    "decisions": 40,
+    "unanimous_fraction": 0.0,
+    "all_distinct_fraction": 0.0,
+    "pairwise_disagreement": {
+      "0-1": 1.0,
+      "0-2": 1.0,
+      "1-2": 0.0
+    },
+    "latency_ms": {
+      "mean": 1.356169953942299,
+      "p95": 1.6179685480892658,
+      "max": 1.7597079277038574
+    },
+    "latency_scope": "sequential local HTTP member inference plus aggregation; excludes observation encoding and simulator stepping"
+  }
+}

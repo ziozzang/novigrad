@@ -1,0 +1,3279 @@
+{
+  "results": {
+    "member1": {
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 28.6674140737783,
+        "collision_rate": 0.0,
+        "mean_distance_m": 403.0,
+        "mean_speed_m_s": 20.08398731455601,
+        "mean_steps": 40.0
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 402.99999999999994,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        }
+      ]
+    },
+    "member2": {
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 23.48445512558733,
+        "collision_rate": 0.6666666666666666,
+        "mean_distance_m": 349.83845909192576,
+        "mean_speed_m_s": 24.852437321344645,
+        "mean_steps": 28.033333333333335
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 19.72142857142858,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 299.0259017227829,
+          "mean_speed_m_s": 24.802083333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 6.007142857142859,
+          "steps": 8,
+          "collision": true,
+          "distance_m": 99.09049628339798,
+          "mean_speed_m_s": 24.40625,
+          "action_counts": [
+            0,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.6685145669618,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 499.99999999999994,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 24.007142857142867,
+          "steps": 29,
+          "collision": true,
+          "distance_m": 361.6283694568742,
+          "mean_speed_m_s": 24.836206896551722,
+          "action_counts": [
+            0,
+            25,
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 23.15000000000001,
+          "steps": 28,
+          "collision": true,
+          "distance_m": 349.0348335000056,
+          "mean_speed_m_s": 24.830357142857142,
+          "action_counts": [
+            0,
+            28,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 14.571428571428578,
+          "steps": 18,
+          "collision": true,
+          "distance_m": 223.36396952555194,
+          "mean_speed_m_s": 24.623611111111114,
+          "action_counts": [
+            0,
+            18,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 30.928571428571445,
+          "steps": 37,
+          "collision": true,
+          "distance_m": 462.2891509803324,
+          "mean_speed_m_s": 24.93243243243243,
+          "action_counts": [
+            0,
+            37,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 26.714285714285726,
+          "steps": 32,
+          "collision": true,
+          "distance_m": 399.8884192586359,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            32,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.3263427338889,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 30.071428571428587,
+          "steps": 36,
+          "collision": true,
+          "distance_m": 449.73821845709574,
+          "mean_speed_m_s": 24.930555555555557,
+          "action_counts": [
+            0,
+            36,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 19.785714285714295,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 299.7600744121005,
+          "mean_speed_m_s": 24.895833333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 15.416826883809826,
+          "steps": 19,
+          "collision": true,
+          "distance_m": 234.61934348879294,
+          "mean_speed_m_s": 24.5475,
+          "action_counts": [
+            0,
+            17,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 10.292857142857148,
+          "steps": 13,
+          "collision": true,
+          "distance_m": 161.73599401314453,
+          "mean_speed_m_s": 24.634615384615383,
+          "action_counts": [
+            0,
+            13,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 17.214285714285722,
+          "steps": 21,
+          "collision": true,
+          "distance_m": 262.0509078626617,
+          "mean_speed_m_s": 24.88095238095238,
+          "action_counts": [
+            0,
+            21,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 19.72142857142858,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 298.8089072739841,
+          "mean_speed_m_s": 24.802083333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 27.571428571428584,
+          "steps": 33,
+          "collision": true,
+          "distance_m": 412.4568596381696,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            33,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 11.995398312381253,
+          "steps": 15,
+          "collision": true,
+          "distance_m": 186.39063188976735,
+          "mean_speed_m_s": 24.683333333333334,
+          "action_counts": [
+            0,
+            14,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 12.007142857142863,
+          "steps": 15,
+          "collision": true,
+          "distance_m": 186.6451699262721,
+          "mean_speed_m_s": 24.683333333333334,
+          "action_counts": [
+            0,
+            14,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 23.142857142857153,
+          "steps": 28,
+          "collision": true,
+          "distance_m": 347.62772274705037,
+          "mean_speed_m_s": 24.692946428571428,
+          "action_counts": [
+            0,
+            27,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 10.357142857142861,
+          "steps": 13,
+          "collision": true,
+          "distance_m": 162.00394502029988,
+          "mean_speed_m_s": 24.807692307692307,
+          "action_counts": [
+            0,
+            12,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "member3": {
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 23.48445512558733,
+        "collision_rate": 0.6666666666666666,
+        "mean_distance_m": 349.83845909192576,
+        "mean_speed_m_s": 24.852437321344645,
+        "mean_steps": 28.033333333333335
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 19.72142857142858,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 299.0259017227829,
+          "mean_speed_m_s": 24.802083333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 6.007142857142859,
+          "steps": 8,
+          "collision": true,
+          "distance_m": 99.09049628339798,
+          "mean_speed_m_s": 24.40625,
+          "action_counts": [
+            0,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.6685145669618,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 499.99999999999994,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 24.007142857142867,
+          "steps": 29,
+          "collision": true,
+          "distance_m": 361.6283694568742,
+          "mean_speed_m_s": 24.836206896551722,
+          "action_counts": [
+            0,
+            25,
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 23.15000000000001,
+          "steps": 28,
+          "collision": true,
+          "distance_m": 349.0348335000056,
+          "mean_speed_m_s": 24.830357142857142,
+          "action_counts": [
+            0,
+            28,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 14.571428571428578,
+          "steps": 18,
+          "collision": true,
+          "distance_m": 223.36396952555194,
+          "mean_speed_m_s": 24.623611111111114,
+          "action_counts": [
+            0,
+            18,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 30.928571428571445,
+          "steps": 37,
+          "collision": true,
+          "distance_m": 462.2891509803324,
+          "mean_speed_m_s": 24.93243243243243,
+          "action_counts": [
+            0,
+            37,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 26.714285714285726,
+          "steps": 32,
+          "collision": true,
+          "distance_m": 399.8884192586359,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            32,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.3263427338889,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 30.071428571428587,
+          "steps": 36,
+          "collision": true,
+          "distance_m": 449.73821845709574,
+          "mean_speed_m_s": 24.930555555555557,
+          "action_counts": [
+            0,
+            36,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 19.785714285714295,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 299.7600744121005,
+          "mean_speed_m_s": 24.895833333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 15.416826883809826,
+          "steps": 19,
+          "collision": true,
+          "distance_m": 234.61934348879294,
+          "mean_speed_m_s": 24.5475,
+          "action_counts": [
+            0,
+            17,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 10.292857142857148,
+          "steps": 13,
+          "collision": true,
+          "distance_m": 161.73599401314453,
+          "mean_speed_m_s": 24.634615384615383,
+          "action_counts": [
+            0,
+            13,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 17.214285714285722,
+          "steps": 21,
+          "collision": true,
+          "distance_m": 262.0509078626617,
+          "mean_speed_m_s": 24.88095238095238,
+          "action_counts": [
+            0,
+            21,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 19.72142857142858,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 298.8089072739841,
+          "mean_speed_m_s": 24.802083333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 27.571428571428584,
+          "steps": 33,
+          "collision": true,
+          "distance_m": 412.4568596381696,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            33,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 11.995398312381253,
+          "steps": 15,
+          "collision": true,
+          "distance_m": 186.39063188976735,
+          "mean_speed_m_s": 24.683333333333334,
+          "action_counts": [
+            0,
+            14,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 12.007142857142863,
+          "steps": 15,
+          "collision": true,
+          "distance_m": 186.6451699262721,
+          "mean_speed_m_s": 24.683333333333334,
+          "action_counts": [
+            0,
+            14,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 23.142857142857153,
+          "steps": 28,
+          "collision": true,
+          "distance_m": 347.62772274705037,
+          "mean_speed_m_s": 24.692946428571428,
+          "action_counts": [
+            0,
+            27,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 10.357142857142861,
+          "steps": 13,
+          "collision": true,
+          "distance_m": 162.00394502029988,
+          "mean_speed_m_s": 24.807692307692307,
+          "action_counts": [
+            0,
+            12,
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "majority": {
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 23.48445512558733,
+        "collision_rate": 0.6666666666666666,
+        "mean_distance_m": 349.83845909192576,
+        "mean_speed_m_s": 24.852437321344645,
+        "mean_steps": 28.033333333333335
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 19.72142857142858,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 299.0259017227829,
+          "mean_speed_m_s": 24.802083333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 6.007142857142859,
+          "steps": 8,
+          "collision": true,
+          "distance_m": 99.09049628339798,
+          "mean_speed_m_s": 24.40625,
+          "action_counts": [
+            0,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.6685145669618,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 499.99999999999994,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 24.007142857142867,
+          "steps": 29,
+          "collision": true,
+          "distance_m": 361.6283694568742,
+          "mean_speed_m_s": 24.836206896551722,
+          "action_counts": [
+            0,
+            25,
+            4,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 23.15000000000001,
+          "steps": 28,
+          "collision": true,
+          "distance_m": 349.0348335000056,
+          "mean_speed_m_s": 24.830357142857142,
+          "action_counts": [
+            0,
+            28,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 14.571428571428578,
+          "steps": 18,
+          "collision": true,
+          "distance_m": 223.36396952555194,
+          "mean_speed_m_s": 24.623611111111114,
+          "action_counts": [
+            0,
+            18,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 30.928571428571445,
+          "steps": 37,
+          "collision": true,
+          "distance_m": 462.2891509803324,
+          "mean_speed_m_s": 24.93243243243243,
+          "action_counts": [
+            0,
+            37,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 26.714285714285726,
+          "steps": 32,
+          "collision": true,
+          "distance_m": 399.8884192586359,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            32,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.3263427338889,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 30.071428571428587,
+          "steps": 36,
+          "collision": true,
+          "distance_m": 449.73821845709574,
+          "mean_speed_m_s": 24.930555555555557,
+          "action_counts": [
+            0,
+            36,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 19.785714285714295,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 299.7600744121005,
+          "mean_speed_m_s": 24.895833333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 15.416826883809826,
+          "steps": 19,
+          "collision": true,
+          "distance_m": 234.61934348879294,
+          "mean_speed_m_s": 24.5475,
+          "action_counts": [
+            0,
+            17,
+            2,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 10.292857142857148,
+          "steps": 13,
+          "collision": true,
+          "distance_m": 161.73599401314453,
+          "mean_speed_m_s": 24.634615384615383,
+          "action_counts": [
+            0,
+            13,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 17.214285714285722,
+          "steps": 21,
+          "collision": true,
+          "distance_m": 262.0509078626617,
+          "mean_speed_m_s": 24.88095238095238,
+          "action_counts": [
+            0,
+            21,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 19.72142857142858,
+          "steps": 24,
+          "collision": true,
+          "distance_m": 298.8089072739841,
+          "mean_speed_m_s": 24.802083333333332,
+          "action_counts": [
+            0,
+            24,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 27.571428571428584,
+          "steps": 33,
+          "collision": true,
+          "distance_m": 412.4568596381696,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            33,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 11.995398312381253,
+          "steps": 15,
+          "collision": true,
+          "distance_m": 186.39063188976735,
+          "mean_speed_m_s": 24.683333333333334,
+          "action_counts": [
+            0,
+            14,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 12.007142857142863,
+          "steps": 15,
+          "collision": true,
+          "distance_m": 186.6451699262721,
+          "mean_speed_m_s": 24.683333333333334,
+          "action_counts": [
+            0,
+            14,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 23.142857142857153,
+          "steps": 28,
+          "collision": true,
+          "distance_m": 347.62772274705037,
+          "mean_speed_m_s": 24.692946428571428,
+          "action_counts": [
+            0,
+            27,
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 10.357142857142861,
+          "steps": 13,
+          "collision": true,
+          "distance_m": 162.00394502029988,
+          "mean_speed_m_s": 24.807692307692307,
+          "action_counts": [
+            0,
+            12,
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "voting_statistics": {
+        "decisions": 841,
+        "unanimous_fraction": 0.0,
+        "all_distinct_fraction": 0.0,
+        "pairwise_disagreement": {
+          "0-1": 1.0,
+          "0-2": 1.0,
+          "1-2": 0.0
+        },
+        "latency_ms": {
+          "mean": 1.2921667641181582,
+          "p95": 1.5073325484991074,
+          "max": 1.9652917981147766
+        },
+        "latency_scope": "sequential local HTTP member inference plus aggregation; excludes observation encoding and simulator stepping"
+      }
+    },
+    "mean": {
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 27.73998791861836,
+        "collision_rate": 0.1,
+        "mean_distance_m": 393.8462460100407,
+        "mean_speed_m_s": 21.087793547565006,
+        "mean_steps": 37.63333333333333
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            38,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 29.95312835949253,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 425.49999999999807,
+          "mean_speed_m_s": 21.208987314555962,
+          "action_counts": [
+            0,
+            38,
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 6.007142857142859,
+          "steps": 8,
+          "collision": true,
+          "distance_m": 99.09049628339798,
+          "mean_speed_m_s": 24.40625,
+          "action_counts": [
+            0,
+            8,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 9.500000000000004,
+          "steps": 12,
+          "collision": true,
+          "distance_m": 149.6685145669618,
+          "mean_speed_m_s": 24.791666666666668,
+          "action_counts": [
+            0,
+            12,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            13,
+            0,
+            0,
+            27
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 30.66741407377342,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 437.9999999998475,
+          "mean_speed_m_s": 21.833987314551738,
+          "action_counts": [
+            0,
+            35,
+            0,
+            0,
+            5
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 24.007142857142867,
+          "steps": 29,
+          "collision": true,
+          "distance_m": 361.6283694568742,
+          "mean_speed_m_s": 24.836206896551722,
+          "action_counts": [
+            0,
+            17,
+            12,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            39,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            37,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            34,
+            0,
+            0,
+            6
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 402.99999999999994,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            21,
+            0,
+            0,
+            19
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            39,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            19,
+            0,
+            0,
+            21
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 30.238842645206553,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 430.49999999998965,
+          "mean_speed_m_s": 21.458987314555735,
+          "action_counts": [
+            0,
+            11,
+            0,
+            0,
+            29
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            35,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            39,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.0,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            37,
+            3,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            37,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            30,
+            0,
+            0,
+            10
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            37,
+            0,
+            0,
+            3
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 34.28571428571429,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 500.00000000000006,
+          "mean_speed_m_s": 25.0,
+          "action_counts": [
+            0,
+            40,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            39,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            39,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            39,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 31.23884264501969,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 447.99999999414956,
+          "mean_speed_m_s": 22.333987314392225,
+          "action_counts": [
+            0,
+            36,
+            0,
+            0,
+            4
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            23,
+            2,
+            0,
+            15
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            33,
+            3,
+            0,
+            4
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            35,
+            0,
+            0,
+            5
+          ]
+        }
+      ],
+      "voting_statistics": {
+        "decisions": 1129,
+        "unanimous_fraction": 0.0,
+        "all_distinct_fraction": 0.0,
+        "pairwise_disagreement": {
+          "0-1": 1.0,
+          "0-2": 1.0,
+          "1-2": 0.0
+        },
+        "latency_ms": {
+          "mean": 1.2749155275556658,
+          "p95": 1.4787334948778152,
+          "max": 1.7125438898801804
+        },
+        "latency_scope": "sequential local HTTP member inference plus aggregation; excludes observation encoding and simulator stepping"
+      }
+    },
+    "always_slow": {
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 28.6674140737783,
+        "collision_rate": 0.0,
+        "mean_distance_m": 403.0,
+        "mean_speed_m_s": 20.08398731455601,
+        "mean_steps": 40.0
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 402.99999999999994,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        }
+      ]
+    },
+    "best_validation_single": {
+      "member": 1,
+      "aggregate": {
+        "episodes": 30,
+        "mean_return": 28.6674140737783,
+        "collision_rate": 0.0,
+        "mean_distance_m": 403.0,
+        "mean_speed_m_s": 20.08398731455601,
+        "mean_steps": 40.0
+      },
+      "episodes": [
+        {
+          "seed": 40000,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40001,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40002,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40003,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40004,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40005,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40006,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40007,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40008,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40009,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40010,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 402.99999999999994,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40011,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40012,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40013,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40014,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40015,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40016,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40017,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40018,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40019,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40020,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40021,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40022,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40023,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40024,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40025,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40026,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40027,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.00000000000006,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40028,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        },
+        {
+          "seed": 40029,
+          "return": 28.667414073778296,
+          "steps": 40,
+          "collision": false,
+          "distance_m": 403.0,
+          "mean_speed_m_s": 20.083987314556012,
+          "action_counts": [
+            0,
+            0,
+            0,
+            0,
+            40
+          ]
+        }
+      ]
+    }
+  },
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "training_episodes_total": 384,
+  "note": "three full models vs one; disagreement is measured on common observations within each ensemble trajectory, not compared across different trajectories",
+  "source_sha256": {
+    "scripts/train_magi.py": "309403c62fe223f04f08e66e1b5ea1a8434e43b5e9b88ff076e325610faa377f",
+    "scripts/train_driving_game.py": "de9b984bcffcf548e1f29996c04ae8fd738da0e5af6a45b8f5d8fdb626607ae8",
+    "scripts/ensemble_policy.py": "3a0152c9de4b8de10a3e846d2b4df27008bfad3fb5b59e5c4e997f4f7784c3a4"
+  }
+}

@@ -134,22 +134,23 @@ def advantages(rewards, baseline):
     return np.clip((returns[:len(rewards)] - baseline[:len(rewards)]) / 10, -1, 1), returns
 
 
-def train(initial, out, feedback='reward'):
+def train(initial, out, feedback='reward', *, rng_seed=1, training_seed_start=1000, validation_seeds=None):
     out.mkdir(parents=True, exist_ok=True)
-    rng = np.random.default_rng(1)
+    rng = np.random.default_rng(rng_seed)
+    validation_seeds = VALIDATION_SEEDS if validation_seeds is None else validation_seeds
     feedback_rng = np.random.default_rng(9001)
     history, validation = [], []
     baseline = np.zeros(40)
     started = time.perf_counter()
     with server(initial, out/'live') as client:
-        initial_validation = evaluate(client, VALIDATION_SEEDS)
+        initial_validation = evaluate(client, validation_seeds)
         best = initial_validation['aggregate']['mean_return']
         shutil.copy2(initial, out/'best.safetensors')
         best_episode = 0
         for batch_start in range(0, EPISODES, BATCH_EPISODES):
             samples, batch_returns = [], []
             for index in range(batch_start, batch_start + BATCH_EPISODES):
-                row, trace, rewards, _ = episode(client, 1000 + index, rng)
+                row, trace, rewards, _ = episode(client, training_seed_start + index, rng)
                 history.append(row)
                 advantage, returns = advantages(rewards, baseline)
                 batch_returns.append(returns)
@@ -163,7 +164,7 @@ def train(initial, out, feedback='reward'):
             client.learn(samples)
             baseline = .9 * baseline + .1 * np.mean(batch_returns, axis=0)
             if (batch_start + BATCH_EPISODES) % 32 == 0:
-                measured = evaluate(client, VALIDATION_SEEDS)
+                measured = evaluate(client, validation_seeds)
                 validation.append({'episode': batch_start + BATCH_EPISODES, **measured})
                 score = measured['aggregate']['mean_return']
                 if score > best:
@@ -173,7 +174,8 @@ def train(initial, out, feedback='reward'):
                     shutil.copy2(out/'live/policy.safetensors', out/'best.safetensors')
                 print(json.dumps({'run': out.name, 'episodes': batch_start + BATCH_EPISODES,
                                   'validation': measured['aggregate']}), flush=True)
-    result = {'feedback': feedback, 'best_episode': best_episode, 'best_validation_return': best,
+    result = {'feedback': feedback, 'rng_seed': rng_seed, 'training_seed_start': training_seed_start,
+              'validation_seeds': validation_seeds, 'best_episode': best_episode, 'best_validation_return': best,
               'initial_validation': initial_validation, 'validation': validation, 'training': history,
               'elapsed_seconds': time.perf_counter() - started}
     (out/'training.json').write_text(json.dumps(result, indent=2) + '\n')

@@ -1,0 +1,17 @@
+{
+  "format": "novi.ensemble.v1",
+  "members": [
+    "member1/best.safetensors",
+    "member2/best.safetensors",
+    "member3/best.safetensors"
+  ],
+  "default_mode": "majority",
+  "actions": [
+    "LANE_LEFT",
+    "IDLE",
+    "LANE_RIGHT",
+    "FASTER",
+    "SLOWER"
+  ],
+  "encoding": "driving_environment.encode_observation"
+}

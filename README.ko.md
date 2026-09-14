@@ -53,6 +53,10 @@ cargo run --release --bin train_connectome -- \
 
 [HighwayEnv 예제](examples/driving-game/README.ko.md)는 정답 행동 없이 게임 보상으로 학습합니다. 독립 실험마다 같은 초기 가중치로 시작하고 검증·시험 중에는 학습하지 않습니다. 시험20게임에서 충돌15→1회로 줄었지만, 주로 감속을 배웠으며 항상 감속 규칙은 충돌0회로 더 좋았습니다. [전체 보고서](results/DRIVING_GAME_REPORT.ko.md)와 [게임 GIF](results/driving-game/driving.gif)에 결과와 한계를 기록했습니다. 저장된 모델은 `scripts/play_driving_game.py MODEL.safetensors --human`으로 게임 창에서 볼 수 있습니다.
 
+## 세 정책의 투표
+
+[MAGI형 군집 예제](examples/magi/README.ko.md)는 독립 학습한 세 회로의 다수결과 확률 평균을 비교합니다. 새 시험30게임의 충돌은 최상 단일 모델0회·다수결20회·확률 평균3회였습니다. 약한 두 정책이 같은 판단을 반복해 다수결이 나빠졌습니다. [전체 보고서](results/MAGI_REPORT.ko.md)에 판단 불일치·처리 시간과 한계를 남겼습니다.
+
 ## 범위
 
 전체 파생 연결망의 LIF 활성화 실행기는 위 rate 학습 모델과 별개다. 각 회로는 CPU 스레드에서 실행하며 API는 모델별 잠금과 제한된 작업 풀을 사용한다. 또한 로컬 Cargo 설정은 `target-cpu=native`를 사용한다. M2 Ultra에서 고정 입력 forward와 보상 0의 측정치는 초당 9,732 episode이며 실제 보상 학습 처리량이나 로봇 제어 지연시간을 뜻하지 않는다.
