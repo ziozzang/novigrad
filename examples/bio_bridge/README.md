@@ -153,3 +153,5 @@ Do not run `context_memory.py` without understanding that a fresh full run repla
 The queue enforces capacity `delay + 1`; overflow leaves the next ID unchanged. The guard-fix rerun matched every metric and training count. Raw checkpoint file hashes changed across runs because metadata key serialization order is not canonical; this is not proof of byte-identical retraining. Current files and their hashes are recorded in the report.
 
 ![Biological and Gemma diagnostic comparisons](../../results/bio-bridge/biological-mechanisms.png)
+
+Follow-up: [continuous input, one-shot cues, signal strength, and repeated learning](SIGNAL_RESULTS.md), with [primary-source research](SIGNAL_RESEARCH.md).

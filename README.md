@@ -101,3 +101,5 @@ FunctionGemma typed API and LoRA routing experiments: [example](examples/functio
 Further research: [grounded goals, sensor reliability and reward-learning mechanisms](examples/function_bridge/DEEP_RESULTS.md), including negative results and stronger conventional baselines.
 
 Biological mechanism diagnostics: [EmbeddingGemma sparsity, FunctionGemma abstention, context memory, and sequential delayed credit](examples/bio_bridge/README.md), with [primary-source research](examples/bio_bridge/RESEARCH.md).
+
+Signal timing and strength: [continuous versus one-shot input, host memory, reward magnitude, and spaced/repeated exposure](examples/bio_bridge/SIGNAL_RESULTS.md).

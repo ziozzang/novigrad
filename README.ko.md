@@ -81,3 +81,5 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 추가 연구: [목표 공간 연결·센서 신뢰도·보상 학습 메커니즘](examples/function_bridge/DEEP_RESULTS.ko.md). 실패 사례와 개선된 일반 정책 비교도 포함합니다.
 
 생물학적 메커니즘 진단: [EmbeddingGemma 희소성, FunctionGemma 거절, 문맥 기억, 순차 지연 보상](examples/bio_bridge/README.ko.md)과 [일차 문헌 연구](examples/bio_bridge/RESEARCH.ko.md).
+
+신호 타이밍과 세기: [지속 입력·단발 입력, 외부 기억, 보상 크기, 반복·간격 학습 비교](examples/bio_bridge/SIGNAL_RESULTS.ko.md).

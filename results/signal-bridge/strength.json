@@ -1,0 +1,1562 @@
+{
+  "stage": "strength",
+  "design": {
+    "data": "Reused 32-text confirmation set; exploratory mechanistic audit, not fresh holdout",
+    "policy": "frozen 128D 2%-active policies from prior campaign; three training seeds, same anatomy",
+    "no_learning": true,
+    "logical_ticks_not_seconds": true,
+    "primary": "post-initial-cue accuracy at ticks1..11 and13..23 on clean one-shot episodes",
+    "settings": "All grids specified before running this study; no best-configuration selection",
+    "zero_input": "uniform policy; argmax ties select class0, yielding 25% on balanced labels",
+    "source_sha256": "14362f0c1f03a5fe31ecae65db02403ccd729f04fead5a680425dfd8a9ac588c",
+    "provenance": {
+      "examples/bio_bridge/sparsity_confirmation.json": "64d70f92afc5c0ddafd6bbc724dfab8e331032a3866a963e42a7e5b724f0ae63",
+      "results/bio-bridge/confirmation-features.safetensors": "6de2669ed3c46a6114fffe2ac6cb5de3387cb7e92aa57d9f06efa481aecc5fe4"
+    },
+    "checkpoints": {
+      "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+      "results/bio-bridge/sparse-d128-f0.02-s602.safetensors": "81bc3c761b0999142784bc9337fbed0388caabd84eae17fe7c82aa67783cc42c",
+      "results/bio-bridge/sparse-d128-f0.02-s603.safetensors": "859c0d652d22d1fd39d3808172f7b62c874fd4f47a27cd8c815f361c0edbee46"
+    },
+    "global_gains": [
+      0.0,
+      1e-06,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000000.0
+    ],
+    "mixture_ratios": [
+      0.0,
+      0.1,
+      0.25,
+      1.0,
+      4.0,
+      10.0
+    ],
+    "decay_delays": [
+      0,
+      4,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "strength_scope": "global scalar vs relative feature direction; neither is calibrated odor concentration"
+  },
+  "runs": [],
+  "global_gain": [
+    {
+      "seed": 601,
+      "gain": 0.0,
+      "accuracy": 0.25,
+      "mean_correct_probability": 0.25,
+      "mean_entropy_nats": 1.3862943611198906,
+      "max_probability_change": 0.07581192255020142,
+      "changed_predictions": 21
+    },
+    {
+      "seed": 601,
+      "gain": 1e-06,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.265775749925524,
+      "mean_entropy_nats": 1.382474038135278,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "gain": 0.01,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757494598627,
+      "mean_entropy_nats": 1.382474037751185,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "gain": 0.1,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757494598627,
+      "mean_entropy_nats": 1.3824740403806897,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "gain": 1.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757489942014,
+      "mean_entropy_nats": 1.3824740383832252,
+      "max_probability_change": 0.0,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "gain": 10.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757489942014,
+      "mean_entropy_nats": 1.382474038047095,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "gain": 100.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757503911853,
+      "mean_entropy_nats": 1.3824740392904928,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "gain": 1000000.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757462002337,
+      "mean_entropy_nats": 1.38247403551897,
+      "max_probability_change": 5.960464477539063e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 0.0,
+      "accuracy": 0.25,
+      "mean_correct_probability": 0.25,
+      "mean_entropy_nats": 1.3862943611198906,
+      "max_probability_change": 0.08053538203239441,
+      "changed_predictions": 24
+    },
+    {
+      "seed": 602,
+      "gain": 1e-06,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645248802378774,
+      "mean_entropy_nats": 1.3835355450240199,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 0.01,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645248802378774,
+      "mean_entropy_nats": 1.383535544704685,
+      "max_probability_change": 4.470348358154297e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 0.1,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645248802378774,
+      "mean_entropy_nats": 1.3835355453440235,
+      "max_probability_change": 4.470348358154297e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 1.0,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645248802378774,
+      "mean_entropy_nats": 1.3835355455603282,
+      "max_probability_change": 0.0,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 10.0,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.2664524889551103,
+      "mean_entropy_nats": 1.3835355461934236,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 100.0,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645248802378774,
+      "mean_entropy_nats": 1.3835355455391989,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "gain": 1000000.0,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645248802378774,
+      "mean_entropy_nats": 1.3835355458022183,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 0.0,
+      "accuracy": 0.25,
+      "mean_correct_probability": 0.25,
+      "mean_entropy_nats": 1.3862943611198906,
+      "max_probability_change": 0.075712651014328,
+      "changed_predictions": 16
+    },
+    {
+      "seed": 603,
+      "gain": 1e-06,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2655392470769584,
+      "mean_entropy_nats": 1.3820398816287685,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 0.01,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924521431327,
+      "mean_entropy_nats": 1.3820398803182654,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 0.1,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924661129713,
+      "mean_entropy_nats": 1.3820398811586312,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 1.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924661129713,
+      "mean_entropy_nats": 1.3820398803063307,
+      "max_probability_change": 0.0,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 10.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924661129713,
+      "mean_entropy_nats": 1.3820398821142685,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 100.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924614563584,
+      "mean_entropy_nats": 1.3820398790836765,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "gain": 1000000.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924614563584,
+      "mean_entropy_nats": 1.3820398801800653,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    }
+  ],
+  "relative_mixture": [
+    {
+      "seed": 601,
+      "distractor_ratio": 0.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2657757489942014,
+      "mean_entropy_nats": 1.382474037949898,
+      "mean_target_minus_distractor_probability": 0.02073102490976453,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 601,
+      "distractor_ratio": 0.1,
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.2649383475072682,
+      "mean_entropy_nats": 1.3825493401763331,
+      "mean_target_minus_distractor_probability": 0.01881988812237978,
+      "max_probability_change": 0.006764322519302368,
+      "changed_predictions": 1
+    },
+    {
+      "seed": 601,
+      "distractor_ratio": 0.25,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26372561091557145,
+      "mean_entropy_nats": 1.382581102533648,
+      "mean_target_minus_distractor_probability": 0.015636512078344822,
+      "max_probability_change": 0.014572888612747192,
+      "changed_predictions": 2
+    },
+    {
+      "seed": 601,
+      "distractor_ratio": 1.0,
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.2572010369040072,
+      "mean_entropy_nats": 1.3829903542756603,
+      "mean_target_minus_distractor_probability": 0.002855823375284672,
+      "max_probability_change": 0.030618220567703247,
+      "changed_predictions": 11
+    },
+    {
+      "seed": 601,
+      "distractor_ratio": 4.0,
+      "accuracy": 0.25,
+      "mean_correct_probability": 0.2491853074170649,
+      "mean_entropy_nats": 1.3827864659177294,
+      "mean_target_minus_distractor_probability": -0.012947948649525642,
+      "max_probability_change": 0.06079408526420593,
+      "changed_predictions": 22
+    },
+    {
+      "seed": 601,
+      "distractor_ratio": 10.0,
+      "accuracy": 0.21875,
+      "mean_correct_probability": 0.2471570367924869,
+      "mean_entropy_nats": 1.3826404137924735,
+      "mean_target_minus_distractor_probability": -0.01698499731719494,
+      "max_probability_change": 0.064478799700737,
+      "changed_predictions": 23
+    },
+    {
+      "seed": 602,
+      "distractor_ratio": 0.0,
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.2664524889551103,
+      "mean_entropy_nats": 1.3835355454674416,
+      "mean_target_minus_distractor_probability": 0.022244343999773264,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 602,
+      "distractor_ratio": 0.1,
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.2655381425283849,
+      "mean_entropy_nats": 1.3836820800504552,
+      "mean_target_minus_distractor_probability": 0.020143025554716587,
+      "max_probability_change": 0.006699621677398682,
+      "changed_predictions": 1
+    },
+    {
+      "seed": 602,
+      "distractor_ratio": 0.25,
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.26433219434693456,
+      "mean_entropy_nats": 1.3837884789186812,
+      "mean_target_minus_distractor_probability": 0.01695570955052972,
+      "max_probability_change": 0.014200925827026367,
+      "changed_predictions": 4
+    },
+    {
+      "seed": 602,
+      "distractor_ratio": 1.0,
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.2575454758480191,
+      "mean_entropy_nats": 1.3842101726296356,
+      "mean_target_minus_distractor_probability": 0.0032059173099696636,
+      "max_probability_change": 0.033955931663513184,
+      "changed_predictions": 12
+    },
+    {
+      "seed": 602,
+      "distractor_ratio": 4.0,
+      "accuracy": 0.1875,
+      "mean_correct_probability": 0.2493901620618999,
+      "mean_entropy_nats": 1.3840163185808845,
+      "mean_target_minus_distractor_probability": -0.013094859663397074,
+      "max_probability_change": 0.06594538688659668,
+      "changed_predictions": 21
+    },
+    {
+      "seed": 602,
+      "distractor_ratio": 10.0,
+      "accuracy": 0.125,
+      "mean_correct_probability": 0.24729009391739964,
+      "mean_entropy_nats": 1.383804364138614,
+      "mean_target_minus_distractor_probability": -0.017359322402626276,
+      "max_probability_change": 0.06889265775680542,
+      "changed_predictions": 23
+    },
+    {
+      "seed": 603,
+      "distractor_ratio": 0.0,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26553924567997456,
+      "mean_entropy_nats": 1.3820398801543674,
+      "mean_target_minus_distractor_probability": 0.02125090779736638,
+      "max_probability_change": 2.9802322387695312e-08,
+      "changed_predictions": 0
+    },
+    {
+      "seed": 603,
+      "distractor_ratio": 0.1,
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2646376946941018,
+      "mean_entropy_nats": 1.3821198574444211,
+      "mean_target_minus_distractor_probability": 0.01930252881720662,
+      "max_probability_change": 0.00762002170085907,
+      "changed_predictions": 2
+    },
+    {
+      "seed": 603,
+      "distractor_ratio": 0.25,
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2633792539127171,
+      "mean_entropy_nats": 1.382082809022907,
+      "mean_target_minus_distractor_probability": 0.016016324516385794,
+      "max_probability_change": 0.012178927659988403,
+      "changed_predictions": 3
+    },
+    {
+      "seed": 603,
+      "distractor_ratio": 1.0,
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.25734474835917354,
+      "mean_entropy_nats": 1.3821106582000873,
+      "mean_target_minus_distractor_probability": 0.003317085560411215,
+      "max_probability_change": 0.030402779579162598,
+      "changed_predictions": 10
+    },
+    {
+      "seed": 603,
+      "distractor_ratio": 4.0,
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.24949528323486447,
+      "mean_entropy_nats": 1.3822245411494778,
+      "mean_target_minus_distractor_probability": -0.01211750041693449,
+      "max_probability_change": 0.06013861298561096,
+      "changed_predictions": 13
+    },
+    {
+      "seed": 603,
+      "distractor_ratio": 10.0,
+      "accuracy": 0.3125,
+      "mean_correct_probability": 0.24744628788903356,
+      "mean_entropy_nats": 1.3822195092034364,
+      "mean_target_minus_distractor_probability": -0.01640869351103902,
+      "max_probability_change": 0.06408347189426422,
+      "changed_predictions": 15
+    }
+  ],
+  "decay_silence": [
+    {
+      "seed": 601,
+      "mode": "leaky16",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_correct_probability": [
+        0.2657757494598627,
+        0.26577575132250786,
+        0.2657757527194917,
+        0.26577575178816915,
+        0.2657757489942014,
+        0.26577575504779816,
+        0.26577575085684657
+      ],
+      "mean_state_norm": [
+        0.009999998845160007,
+        0.007788006216287613,
+        0.0036787947174161673,
+        0.0013533532619476318,
+        0.00018315654597245157,
+        3.354630734975217e-06,
+        1.1253541432054703e-09
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "leaky16",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_correct_probability": [
+        0.2657757489942014,
+        0.26577574852854013,
+        0.2657757489942014,
+        0.265775749925524,
+        0.2657757462002337,
+        0.265775749925524,
+        0.26577575458213687
+      ],
+      "mean_state_norm": [
+        1.0,
+        0.778800904750824,
+        0.36787956953048706,
+        0.13533532619476318,
+        0.018315648660063744,
+        0.0003354630316607654,
+        1.125354174291715e-07
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "leaky16",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_correct_probability": [
+        0.2657757503911853,
+        0.2657757489942014,
+        0.26577574806287885,
+        0.2657757494598627,
+        0.26577575132250786,
+        0.26577575085684657,
+        0.2657757503911853
+      ],
+      "mean_state_norm": [
+        100.0,
+        77.8801040649414,
+        36.787960052490234,
+        13.533535957336426,
+        1.831565260887146,
+        0.03354630991816521,
+        1.1253544471401256e-05
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "leaky16_cutoff",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "leaky16_cutoff",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.2657757489942014,
+        0.26577574852854013,
+        0.2657757489942014,
+        0.265775749925524,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        1.0,
+        0.778800904750824,
+        0.36787956953048706,
+        0.13533532619476318,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "leaky16_cutoff",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.2657757503911853,
+        0.2657757489942014,
+        0.26577574806287885,
+        0.2657757494598627,
+        0.26577575132250786,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        100.0,
+        77.8801040649414,
+        36.787960052490234,
+        13.533535957336426,
+        1.831565260887146,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "ttl8",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.2657757494598627,
+        0.2657757494598627,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        0.009999998845160007,
+        0.009999998845160007,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "ttl8",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.2657757489942014,
+        0.2657757489942014,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 601,
+      "mode": "ttl8",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.2657757503911853,
+        0.2657757503911853,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        100.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "leaky16",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.266452488489449,
+        0.2664524889551103,
+        0.26645248709246516,
+        0.2664524847641587,
+        0.2664524866268039,
+        0.26645248755812645
+      ],
+      "mean_state_norm": [
+        0.009999998845160007,
+        0.007788006216287613,
+        0.0036787947174161673,
+        0.0013533532619476318,
+        0.00018315654597245157,
+        3.354630734975217e-06,
+        1.1253541432054703e-09
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "leaky16",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.26645248802378774,
+        0.2664524856954813,
+        0.2664524866268039,
+        0.26645248802378774,
+        0.2664524861611426,
+        0.2664524926804006
+      ],
+      "mean_state_norm": [
+        1.0,
+        0.778800904750824,
+        0.36787956953048706,
+        0.13533532619476318,
+        0.018315648660063744,
+        0.0003354630316607654,
+        1.125354174291715e-07
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "leaky16",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.2664524889551103,
+        0.26645248755812645,
+        0.2664524889551103,
+        0.266452488489449,
+        0.2664524861611426,
+        0.26645248802378774
+      ],
+      "mean_state_norm": [
+        100.0,
+        77.8801040649414,
+        36.787960052490234,
+        13.533535957336426,
+        1.831565260887146,
+        0.03354630991816521,
+        1.1253544471401256e-05
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "leaky16_cutoff",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "leaky16_cutoff",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.26645248802378774,
+        0.2664524856954813,
+        0.2664524866268039,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        1.0,
+        0.778800904750824,
+        0.36787956953048706,
+        0.13533532619476318,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "leaky16_cutoff",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.5625,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.2664524889551103,
+        0.26645248755812645,
+        0.2664524889551103,
+        0.266452488489449,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        100.0,
+        77.8801040649414,
+        36.787960052490234,
+        13.533535957336426,
+        1.831565260887146,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "ttl8",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.26645248802378774,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        0.009999998845160007,
+        0.009999998845160007,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "ttl8",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.26645248802378774,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 602,
+      "mode": "ttl8",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5625,
+        0.5625,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26645248802378774,
+        0.26645248802378774,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        100.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "leaky16",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_correct_probability": [
+        0.26553924521431327,
+        0.26553924661129713,
+        0.265539248008281,
+        0.2655392470769584,
+        0.26553924893960357,
+        0.2655392475426197,
+        0.2655392508022487
+      ],
+      "mean_state_norm": [
+        0.009999998845160007,
+        0.007788006216287613,
+        0.0036787947174161673,
+        0.0013533532619476318,
+        0.00018315654597245157,
+        3.354630734975217e-06,
+        1.1253541432054703e-09
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "leaky16",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_correct_probability": [
+        0.26553924661129713,
+        0.265539244748652,
+        0.26553924614563584,
+        0.26553924521431327,
+        0.26553924567997456,
+        0.265539244748652,
+        0.26553924893960357
+      ],
+      "mean_state_norm": [
+        1.0,
+        0.778800904750824,
+        0.36787956953048706,
+        0.13533532619476318,
+        0.018315648660063744,
+        0.0003354630316607654,
+        1.125354174291715e-07
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "leaky16",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "mean_correct_probability": [
+        0.26553924614563584,
+        0.265539248008281,
+        0.2655392475426197,
+        0.26553924567997456,
+        0.2655392484739423,
+        0.2655392470769584,
+        0.2655392470769584
+      ],
+      "mean_state_norm": [
+        100.0,
+        77.8801040649414,
+        36.787960052490234,
+        13.533535957336426,
+        1.831565260887146,
+        0.03354630991816521,
+        1.1253544471401256e-05
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "leaky16_cutoff",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "leaky16_cutoff",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26553924661129713,
+        0.265539244748652,
+        0.26553924614563584,
+        0.26553924521431327,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        1.0,
+        0.778800904750824,
+        0.36787956953048706,
+        0.13533532619476318,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "leaky16_cutoff",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26553924614563584,
+        0.265539248008281,
+        0.2655392475426197,
+        0.26553924567997456,
+        0.2655392484739423,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        100.0,
+        77.8801040649414,
+        36.787960052490234,
+        13.533535957336426,
+        1.831565260887146,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "ttl8",
+      "gain": 0.01,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26553924521431327,
+        0.26553924521431327,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        0.009999998845160007,
+        0.009999998845160007,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "ttl8",
+      "gain": 1.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26553924661129713,
+        0.26553924661129713,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "seed": 603,
+      "mode": "ttl8",
+      "gain": 100.0,
+      "delays": [
+        0,
+        4,
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "accuracy": [
+        0.5,
+        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_correct_probability": [
+        0.26553924614563584,
+        0.26553924614563584,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "mean_state_norm": [
+        100.0,
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "global_positive_max_probability_change": 5.960464477539063e-08,
+  "runtime_seconds": 1.2733270432800055
+}
