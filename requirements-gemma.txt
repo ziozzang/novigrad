@@ -1,0 +1,6 @@
+# Original float32 EmbeddingGemma reference execution on Mac MPS.
+sentence-transformers==6.0.1
+transformers==5.17.0
+torch==2.14.0
+numpy==2.4.6
+safetensors==0.8.0

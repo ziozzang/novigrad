@@ -1,0 +1,3332 @@
+{
+  "scope": "Read-only structural audit of local FlyWire FAFB v783-derived annotations and sparse connectivity.",
+  "sources": {
+    "annotations": {
+      "path": "/Users/a405394/fly/nobi/data/neurons_783.tsv",
+      "sha256": "9a4f8b2f843196074431ebd7cd883536afa1be86c8a4ce90970441e8be81d1be"
+    },
+    "edges": {
+      "path": "/Users/a405394/fly/nobi/data/edges_783.tsv",
+      "sha256": "de6e458f38dbc1b9d8c2b7bfe03874dddd535414098198750296ebb4b7c769ea",
+      "rows_scanned": 15091983
+    },
+    "edge_format": "Headerless TSV: pre root_id, post root_id, synapse count, Excitatory sign (-1/0/+1)."
+  },
+  "annotation_matching": {
+    "method": "Exact supplied field-value filters: MBON=cell_class MBON; FB tangential=cell_class CX plus cell_sub_class tangential; PFL2/PFL3/EPG=cell_type or hemibrain_type exact value; FC2=cell_type in the explicit family {FC2A, FC2B, FC2C}; descending=super_class descending.",
+    "warning": "Exact describes matching against annotation columns only. These are supplied annotation matches, not identities independently inferred from morphology. FB_tangential is a broad CX/tangential candidate filter including ambiguous or blank types, not independent validation of FB anatomy.",
+    "groups": {
+      "MBON": {
+        "annotated_roots": 96,
+        "cell_types": {
+          "MBON01": 2,
+          "MBON02": 2,
+          "MBON03": 2,
+          "MBON04": 2,
+          "MBON05": 2,
+          "MBON06": 2,
+          "MBON07": 4,
+          "MBON09": 4,
+          "MBON10": 9,
+          "MBON11": 2,
+          "MBON12": 4,
+          "MBON13": 2,
+          "MBON14": 4,
+          "MBON15": 4,
+          "MBON15-like": 5,
+          "MBON16": 2,
+          "MBON17": 2,
+          "MBON17-like": 2,
+          "MBON18": 2,
+          "MBON19": 4,
+          "MBON20": 2,
+          "MBON21": 2,
+          "MBON22": 2,
+          "MBON23": 2,
+          "MBON24": 2,
+          "MBON25,MBON34": 6,
+          "MBON26": 2,
+          "MBON27": 2,
+          "MBON28": 2,
+          "MBON29": 2,
+          "MBON30": 2,
+          "MBON31": 2,
+          "MBON32": 2,
+          "MBON33": 2,
+          "MBON35": 2
+        }
+      },
+      "FB_tangential": {
+        "annotated_roots": 609,
+        "cell_types": {
+          "(blank)": 2,
+          "CB4171": 7,
+          "FB1A": 3,
+          "FB1B": 7,
+          "FB1C": 4,
+          "FB1D": 6,
+          "FB1E": 4,
+          "FB1F": 2,
+          "FB1G": 2,
+          "FB1H": 2,
+          "FB1I,FB1J": 4,
+          "FB2A": 6,
+          "FB2B": 3,
+          "FB2B_b": 4,
+          "FB2C": 6,
+          "FB2D": 5,
+          "FB2E": 2,
+          "FB2F_b": 4,
+          "FB2F_c": 4,
+          "FB2F_d": 2,
+          "FB2G": 4,
+          "FB2G_a": 2,
+          "FB2H_a,FB2I_b": 4,
+          "FB2H_b": 2,
+          "FB2I_a": 11,
+          "FB2J_a,FB2J_c": 5,
+          "FB2J_b": 2,
+          "FB2K": 6,
+          "FB2L": 2,
+          "FB2M": 6,
+          "FB3A": 4,
+          "FB3B,FB3C,FB3E": 14,
+          "FB3D": 2,
+          "FB4A": 8,
+          "FB4B": 2,
+          "FB4C": 2,
+          "FB4D": 6,
+          "FB4E": 8,
+          "FB4F": 1,
+          "FB4F_a,FB4F_b,FB4F_c": 9,
+          "FB4G": 2,
+          "FB4H": 2,
+          "FB4I": 2,
+          "FB4J": 2,
+          "FB4K": 4,
+          "FB4L": 4,
+          "FB4M": 4,
+          "FB4N": 2,
+          "FB4O": 8,
+          "FB4P,FB4Q": 7,
+          "FB4P_a": 4,
+          "FB4Q_b": 4,
+          "FB4R": 4,
+          "FB4X": 2,
+          "FB4Y": 6,
+          "FB4Z": 16,
+          "FB4_unclear": 2,
+          "FB5A": 4,
+          "FB5AA": 2,
+          "FB5AB": 2,
+          "FB5B": 6,
+          "FB5C": 3,
+          "FB5D,FB5E": 3,
+          "FB5F": 2,
+          "FB5G": 6,
+          "FB5H": 2,
+          "FB5I": 2,
+          "FB5J": 2,
+          "FB5K": 2,
+          "FB5L": 3,
+          "FB5M": 2,
+          "FB5N": 2,
+          "FB5O": 3,
+          "FB5P,FB5T": 6,
+          "FB5Q": 4,
+          "FB5R,FB5U": 11,
+          "FB5S": 6,
+          "FB5V": 20,
+          "FB5W": 6,
+          "FB5X": 6,
+          "FB5Y": 4,
+          "FB5Z": 4,
+          "FB6,FB6J": 9,
+          "FB6A": 4,
+          "FB6A_c": 2,
+          "FB6B": 4,
+          "FB6C": 9,
+          "FB6D": 2,
+          "FB6E": 2,
+          "FB6F": 2,
+          "FB6G": 2,
+          "FB6H": 2,
+          "FB6I": 2,
+          "FB6K": 4,
+          "FB6L": 1,
+          "FB6M": 4,
+          "FB6N": 2,
+          "FB6O": 2,
+          "FB6P": 2,
+          "FB6Q": 2,
+          "FB6R": 4,
+          "FB6S": 6,
+          "FB6T": 4,
+          "FB6U": 3,
+          "FB6V": 2,
+          "FB6W": 2,
+          "FB6X": 2,
+          "FB6Y": 2,
+          "FB6Z": 2,
+          "FB7A": 6,
+          "FB7B": 2,
+          "FB7C": 3,
+          "FB7D": 4,
+          "FB7E": 5,
+          "FB7F": 5,
+          "FB7G,FB7I": 12,
+          "FB7H": 2,
+          "FB7J": 4,
+          "FB7K": 4,
+          "FB7L": 6,
+          "FB7M": 2,
+          "FB8A,FB8H": 14,
+          "FB8B": 5,
+          "FB8C": 4,
+          "FB8D": 3,
+          "FB8E": 4,
+          "FB8F_a": 7,
+          "FB8F_b": 8,
+          "FB8G": 8,
+          "FB8I": 6,
+          "FB9A": 4,
+          "FB9B": 21,
+          "FB9C": 10,
+          "FS1A": 1,
+          "SAF": 8
+        }
+      },
+      "PFL2": {
+        "annotated_roots": 12,
+        "cell_types": {
+          "PFL2": 12
+        }
+      },
+      "PFL3": {
+        "annotated_roots": 24,
+        "cell_types": {
+          "PFL3": 24
+        }
+      },
+      "EPG": {
+        "annotated_roots": 47,
+        "cell_types": {
+          "EPG": 47
+        }
+      },
+      "FC2": {
+        "annotated_roots": 85,
+        "cell_types": {
+          "FC2A": 17,
+          "FC2B": 28,
+          "FC2C": 40
+        }
+      },
+      "descending": {
+        "annotated_roots": 1303,
+        "cell_types": {
+          "DNa01": 2,
+          "DNa02": 2,
+          "DNa03": 2,
+          "DNa04": 2,
+          "DNa05": 2,
+          "DNa06": 2,
+          "DNa07": 2,
+          "DNa08": 2,
+          "DNa09": 2,
+          "DNa10": 2,
+          "DNa11": 2,
+          "DNa13": 4,
+          "DNa14": 2,
+          "DNa15": 2,
+          "DNa16": 2,
+          "DNae001": 2,
+          "DNae002": 2,
+          "DNae003": 2,
+          "DNae004": 2,
+          "DNae005": 2,
+          "DNae006": 2,
+          "DNae007": 2,
+          "DNae008": 2,
+          "DNae009": 2,
+          "DNae010": 2,
+          "DNb01": 2,
+          "DNb02": 4,
+          "DNb03": 4,
+          "DNb04": 3,
+          "DNb05": 2,
+          "DNb06": 2,
+          "DNb07": 2,
+          "DNb08": 4,
+          "DNb09": 2,
+          "DNbe001": 2,
+          "DNbe002": 4,
+          "DNbe003": 2,
+          "DNbe004": 2,
+          "DNbe005": 2,
+          "DNbe006": 2,
+          "DNbe007": 2,
+          "DNc01": 2,
+          "DNc02": 2,
+          "DNd02": 2,
+          "DNd03": 2,
+          "DNd04": 2,
+          "DNd05": 2,
+          "DNde001": 2,
+          "DNde002": 2,
+          "DNde003": 4,
+          "DNde005": 2,
+          "DNde006": 2,
+          "DNde007": 2,
+          "DNg01": 8,
+          "DNg02_a": 6,
+          "DNg02_b": 7,
+          "DNg02_c": 2,
+          "DNg02_d": 2,
+          "DNg02_e": 2,
+          "DNg02_f": 2,
+          "DNg02_g": 2,
+          "DNg02_h": 2,
+          "DNg03": 10,
+          "DNg04": 4,
+          "DNg05_a": 2,
+          "DNg05_b": 6,
+          "DNg06": 11,
+          "DNg07": 16,
+          "DNg08_a": 14,
+          "DNg08_b": 8,
+          "DNg09": 8,
+          "DNg10": 12,
+          "DNg100": 2,
+          "DNg101": 2,
+          "DNg102": 4,
+          "DNg103": 2,
+          "DNg104": 2,
+          "DNg105": 2,
+          "DNg106": 14,
+          "DNg107": 2,
+          "DNg108": 2,
+          "DNg109": 2,
+          "DNg11": 6,
+          "DNg110": 6,
+          "DNg111": 2,
+          "DNg12_a": 8,
+          "DNg12_b": 18,
+          "DNg12_c": 6,
+          "DNg12_d": 2,
+          "DNg12_e": 8,
+          "DNg13": 2,
+          "DNg14": 2,
+          "DNg15": 2,
+          "DNg16": 2,
+          "DNg17": 2,
+          "DNg18_a": 2,
+          "DNg18_b": 6,
+          "DNg19": 2,
+          "DNg20": 2,
+          "DNg21": 2,
+          "DNg22": 2,
+          "DNg23": 2,
+          "DNg24": 2,
+          "DNg26": 4,
+          "DNg27": 2,
+          "DNg28": 4,
+          "DNg29": 2,
+          "DNg30": 2,
+          "DNg31": 2,
+          "DNg32": 2,
+          "DNg33": 2,
+          "DNg34": 2,
+          "DNg35": 2,
+          "DNg36_a": 3,
+          "DNg36_b": 5,
+          "DNg37": 2,
+          "DNg38": 2,
+          "DNg39": 2,
+          "DNg40": 2,
+          "DNg41": 2,
+          "DNg42": 2,
+          "DNg43": 2,
+          "DNg44": 2,
+          "DNg45": 2,
+          "DNg46": 2,
+          "DNg47": 2,
+          "DNg48": 2,
+          "DNg49": 2,
+          "DNg50": 2,
+          "DNg51": 4,
+          "DNg52": 4,
+          "DNg53": 2,
+          "DNg54": 2,
+          "DNg55": 1,
+          "DNg56": 2,
+          "DNg57": 2,
+          "DNg58": 2,
+          "DNg59": 2,
+          "DNg60": 2,
+          "DNg61": 2,
+          "DNg62": 2,
+          "DNg63": 2,
+          "DNg64": 2,
+          "DNg65": 2,
+          "DNg66": 1,
+          "DNg67": 2,
+          "DNg68": 2,
+          "DNg69": 2,
+          "DNg70": 2,
+          "DNg71": 2,
+          "DNg72": 4,
+          "DNg73": 2,
+          "DNg74_a": 2,
+          "DNg74_b": 2,
+          "DNg75": 2,
+          "DNg76": 2,
+          "DNg77": 2,
+          "DNg78": 2,
+          "DNg79": 4,
+          "DNg80": 2,
+          "DNg81": 2,
+          "DNg82": 4,
+          "DNg83": 2,
+          "DNg84": 2,
+          "DNg85": 2,
+          "DNg86": 2,
+          "DNg87": 2,
+          "DNg88": 2,
+          "DNg89": 2,
+          "DNg90": 2,
+          "DNg91": 2,
+          "DNg92_a": 4,
+          "DNg92_b": 4,
+          "DNg93": 2,
+          "DNg94": 2,
+          "DNg95": 2,
+          "DNg96": 2,
+          "DNg97": 2,
+          "DNg98": 2,
+          "DNg99": 2,
+          "DNge001": 4,
+          "DNge002": 2,
+          "DNge003": 2,
+          "DNge004": 2,
+          "DNge005": 2,
+          "DNge006": 2,
+          "DNge007": 2,
+          "DNge008": 2,
+          "DNge009": 2,
+          "DNge010": 2,
+          "DNge011": 2,
+          "DNge012": 2,
+          "DNge013": 2,
+          "DNge014": 2,
+          "DNge015": 6,
+          "DNge016": 2,
+          "DNge017": 2,
+          "DNge018": 2,
+          "DNge019": 12,
+          "DNge020": 8,
+          "DNge021": 2,
+          "DNge022": 2,
+          "DNge023": 2,
+          "DNge024": 6,
+          "DNge025": 2,
+          "DNge026": 2,
+          "DNge027": 2,
+          "DNge028": 2,
+          "DNge029": 2,
+          "DNge030": 2,
+          "DNge031": 2,
+          "DNge032": 2,
+          "DNge033": 2,
+          "DNge034": 2,
+          "DNge035": 2,
+          "DNge036": 2,
+          "DNge037": 2,
+          "DNge038": 2,
+          "DNge039": 2,
+          "DNge040": 2,
+          "DNge041": 2,
+          "DNge042": 2,
+          "DNge043": 2,
+          "DNge044": 2,
+          "DNge045": 2,
+          "DNge046": 4,
+          "DNge047": 2,
+          "DNge048": 2,
+          "DNge049": 2,
+          "DNge050": 2,
+          "DNge051": 2,
+          "DNge052": 2,
+          "DNge053": 2,
+          "DNge054": 2,
+          "DNge055": 2,
+          "DNge056": 2,
+          "DNge057": 2,
+          "DNge058": 2,
+          "DNge059": 2,
+          "DNge060": 2,
+          "DNge061": 4,
+          "DNge062": 2,
+          "DNge063": 2,
+          "DNge064": 2,
+          "DNge065": 2,
+          "DNge067": 2,
+          "DNge068": 2,
+          "DNge069": 2,
+          "DNge070": 2,
+          "DNge071": 16,
+          "DNge072": 2,
+          "DNge073": 2,
+          "DNge074": 2,
+          "DNge075": 2,
+          "DNge076": 2,
+          "DNge077": 2,
+          "DNge078": 2,
+          "DNge079": 2,
+          "DNge080": 2,
+          "DNge081": 2,
+          "DNge082": 2,
+          "DNge083": 2,
+          "DNge084": 2,
+          "DNge085": 11,
+          "DNge086": 2,
+          "DNge087": 4,
+          "DNge088": 2,
+          "DNge089": 8,
+          "DNge090": 4,
+          "DNge091": 17,
+          "DNge092": 4,
+          "DNge093": 4,
+          "DNge094": 14,
+          "DNge095": 2,
+          "DNge096": 2,
+          "DNge097": 2,
+          "DNge098": 2,
+          "DNge099": 2,
+          "DNge100": 2,
+          "DNge101": 2,
+          "DNge102": 3,
+          "DNge103": 2,
+          "DNge104": 2,
+          "DNge105": 2,
+          "DNge106": 2,
+          "DNge107": 2,
+          "DNge108": 3,
+          "DNge109": 2,
+          "DNge110": 2,
+          "DNge111": 5,
+          "DNge112": 2,
+          "DNge113": 5,
+          "DNge114": 6,
+          "DNge115": 8,
+          "DNge116": 4,
+          "DNge117": 2,
+          "DNge118": 2,
+          "DNge119": 2,
+          "DNge120": 2,
+          "DNge121": 2,
+          "DNge122": 2,
+          "DNge123": 2,
+          "DNge124": 2,
+          "DNge125": 2,
+          "DNge126": 2,
+          "DNge127": 2,
+          "DNge128": 2,
+          "DNge129": 2,
+          "DNge130": 2,
+          "DNge131": 2,
+          "DNge132": 2,
+          "DNge133": 2,
+          "DNge134": 2,
+          "DNge135": 2,
+          "DNge136": 4,
+          "DNge137": 2,
+          "DNge138": 2,
+          "DNge139": 2,
+          "DNge140": 2,
+          "DNge141": 2,
+          "DNge142": 2,
+          "DNge143": 2,
+          "DNge144": 2,
+          "DNge145": 4,
+          "DNge146": 2,
+          "DNge147": 2,
+          "DNge148": 2,
+          "DNge149": 1,
+          "DNge150": 1,
+          "DNge151": 1,
+          "DNge152": 1,
+          "DNge153": 1,
+          "DNge154": 1,
+          "DNge156": 1,
+          "DNge172": 2,
+          "DNge173": 2,
+          "DNge174": 2,
+          "DNge175": 2,
+          "DNp01": 2,
+          "DNp02": 2,
+          "DNp03": 2,
+          "DNp04": 2,
+          "DNp05": 2,
+          "DNp06": 2,
+          "DNp07": 2,
+          "DNp08": 2,
+          "DNp09": 2,
+          "DNp10": 2,
+          "DNp101": 2,
+          "DNp102": 2,
+          "DNp103": 2,
+          "DNp104": 2,
+          "DNp11": 2,
+          "DNp12": 2,
+          "DNp13": 2,
+          "DNp14": 2,
+          "DNp15": 2,
+          "DNp16": 4,
+          "DNp17": 12,
+          "DNp18": 2,
+          "DNp19": 2,
+          "DNp20": 2,
+          "DNp22": 2,
+          "DNp23": 2,
+          "DNp24": 2,
+          "DNp25": 2,
+          "DNp26": 2,
+          "DNp27": 2,
+          "DNp28": 2,
+          "DNp29": 2,
+          "DNp30": 2,
+          "DNp31": 2,
+          "DNp32": 2,
+          "DNp33": 2,
+          "DNp34": 2,
+          "DNp35": 2,
+          "DNp36": 2,
+          "DNp37": 2,
+          "DNp38": 2,
+          "DNp39": 2,
+          "DNp40": 2,
+          "DNp41": 4,
+          "DNp42": 2,
+          "DNp43": 2,
+          "DNp44": 2,
+          "DNp45": 2,
+          "DNp46": 2,
+          "DNp47": 2,
+          "DNp48": 2,
+          "DNp49": 2,
+          "DNp51": 2,
+          "DNp52": 2,
+          "DNp53": 2,
+          "DNp54": 2,
+          "DNp55": 2,
+          "DNp56": 2,
+          "DNp57": 2,
+          "DNp58": 2,
+          "DNp59": 2,
+          "DNp60": 2,
+          "DNp62": 2,
+          "DNp63": 2,
+          "DNp64": 2,
+          "DNp65": 2,
+          "DNp66": 2,
+          "DNp67": 2,
+          "DNp68": 2,
+          "DNp69": 2,
+          "DNp70": 2,
+          "DNp71": 2,
+          "DNp72": 1,
+          "DNp73": 2,
+          "DNpe001": 2,
+          "DNpe002": 2,
+          "DNpe003": 4,
+          "DNpe004": 2,
+          "DNpe005": 2,
+          "DNpe006": 2,
+          "DNpe007": 2,
+          "DNpe008": 18,
+          "DNpe009": 8,
+          "DNpe010": 2,
+          "DNpe011": 7,
+          "DNpe012": 8,
+          "DNpe013": 2,
+          "DNpe014": 4,
+          "DNpe015": 10,
+          "DNpe016": 2,
+          "DNpe017": 2,
+          "DNpe018": 2,
+          "DNpe019": 2,
+          "DNpe020": 2,
+          "DNpe021": 2,
+          "DNpe022": 2,
+          "DNpe023": 2,
+          "DNpe024": 2,
+          "DNpe025": 2,
+          "DNpe026": 2,
+          "DNpe027": 2,
+          "DNpe028": 2,
+          "DNpe029": 4,
+          "DNpe030": 2,
+          "DNpe031": 4,
+          "DNpe032": 2,
+          "DNpe033": 2,
+          "DNpe034": 2,
+          "DNpe035": 2,
+          "DNpe036": 2,
+          "DNpe037": 2,
+          "DNpe038": 2,
+          "DNpe039": 2,
+          "DNpe040": 2,
+          "DNpe041": 2,
+          "DNpe042": 2,
+          "DNpe043": 2,
+          "DNpe044": 2,
+          "DNpe045": 2,
+          "DNpe046": 2,
+          "DNpe047": 2,
+          "DNpe048": 2,
+          "DNpe049": 2,
+          "DNpe050": 2,
+          "DNpe052": 2,
+          "DNpe053": 2,
+          "DNpe054": 8,
+          "DNpe055": 2,
+          "DNpe056": 2,
+          "DNxl114": 1,
+          "MDN": 4,
+          "aSP22": 2,
+          "oviDNa_a": 2,
+          "oviDNa_b": 2,
+          "oviDNb": 2
+        }
+      }
+    }
+  },
+  "direct_connectivity": {
+    "MBON_to_FB_tangential": {
+      "connection_rows": 938,
+      "synapses": 3854,
+      "connected_sources": 86,
+      "connected_targets": 258,
+      "polarity_rows": {
+        "-1": 399,
+        "0": 0,
+        "1": 539
+      },
+      "polarity_synapses": {
+        "-1": 1667,
+        "0": 0,
+        "1": 2187
+      }
+    },
+    "MBON_to_PFL": {
+      "connection_rows": 1,
+      "synapses": 1,
+      "connected_sources": 1,
+      "connected_targets": 1,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 1
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 1
+      }
+    },
+    "FB_tangential_to_PFL": {
+      "connection_rows": 3774,
+      "synapses": 11282,
+      "connected_sources": 327,
+      "connected_targets": 36,
+      "polarity_rows": {
+        "-1": 3236,
+        "0": 0,
+        "1": 538
+      },
+      "polarity_synapses": {
+        "-1": 10254,
+        "0": 0,
+        "1": 1028
+      }
+    },
+    "FB_tangential_to_PFL2": {
+      "connection_rows": 1303,
+      "synapses": 4173,
+      "connected_sources": 253,
+      "connected_targets": 12,
+      "polarity_rows": {
+        "-1": 1122,
+        "0": 0,
+        "1": 181
+      },
+      "polarity_synapses": {
+        "-1": 3776,
+        "0": 0,
+        "1": 397
+      }
+    },
+    "FB_tangential_to_PFL3": {
+      "connection_rows": 2471,
+      "synapses": 7109,
+      "connected_sources": 288,
+      "connected_targets": 24,
+      "polarity_rows": {
+        "-1": 2114,
+        "0": 0,
+        "1": 357
+      },
+      "polarity_synapses": {
+        "-1": 6478,
+        "0": 0,
+        "1": 631
+      }
+    },
+    "EPG_to_PFL": {
+      "connection_rows": 176,
+      "synapses": 1199,
+      "connected_sources": 41,
+      "connected_targets": 36,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 176
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 1199
+      }
+    },
+    "EPG_to_PFL2": {
+      "connection_rows": 68,
+      "synapses": 528,
+      "connected_sources": 32,
+      "connected_targets": 12,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 68
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 528
+      }
+    },
+    "EPG_to_PFL3": {
+      "connection_rows": 108,
+      "synapses": 671,
+      "connected_sources": 40,
+      "connected_targets": 24,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 108
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 671
+      }
+    },
+    "EPG_to_FC2": {
+      "connection_rows": 1,
+      "synapses": 1,
+      "connected_sources": 1,
+      "connected_targets": 1,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 1
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 1
+      }
+    },
+    "FC2_to_PFL3": {
+      "connection_rows": 476,
+      "synapses": 2470,
+      "connected_sources": 83,
+      "connected_targets": 24,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 476
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 2470
+      }
+    },
+    "PFL_to_descending": {
+      "connection_rows": 354,
+      "synapses": 4956,
+      "connected_sources": 36,
+      "connected_targets": 39,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 354
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 4956
+      }
+    },
+    "PFL2_to_descending": {
+      "connection_rows": 114,
+      "synapses": 1529,
+      "connected_sources": 12,
+      "connected_targets": 20,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 114
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 1529
+      }
+    },
+    "PFL3_to_descending": {
+      "connection_rows": 240,
+      "synapses": 3427,
+      "connected_sources": 24,
+      "connected_targets": 30,
+      "polarity_rows": {
+        "-1": 0,
+        "0": 0,
+        "1": 240
+      },
+      "polarity_synapses": {
+        "-1": 0,
+        "0": 0,
+        "1": 3427
+      }
+    }
+  },
+  "MBON_FB_tangential_PFL_descending_chains": {
+    "path_instances": 102872,
+    "path_instances_by_PFL_type": {
+      "PFL2": 34250,
+      "PFL3": 68622
+    },
+    "examples_truncated_to": 100,
+    "examples": [
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940630758418
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          25
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940614236200
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          17
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940608402524
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          13
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          24
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940610199781
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNp102"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          10
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940620380449
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          15
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940626730883
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          5
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940648636292
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNb09"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940629909199,
+          720575940628587202,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB6V",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          4,
+          1,
+          13
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940620918789
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          55
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940616826380
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNb09"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          2
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940610236514
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "MDN"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          3
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940616604817
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNpe023"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          2
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          3
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940629327659
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940631082808
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "MDN"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          8
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940616026939
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "MDN"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          2
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940648636292
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNb09"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          2
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940606953858,
+          720575940626138008,
+          720575940626763688,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON23",
+          "FB7G,FB7I",
+          "PFL2",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          1,
+          1,
+          37
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940620918789
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          10
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940620300308
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          13
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940625878160
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          14
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940623556755
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          27
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940624982823
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          11
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940629327659
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          9
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940631759663
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa15"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          4
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940605640905,
+          720575940627139530
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          4,
+          5
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940620918789
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          47
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940616826380
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNb09"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          3
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940614236200
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940610236514
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "MDN"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          2
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940640331472
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "MDN"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940613408552
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNa13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940616026939
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "MDN"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940648636292
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNb09"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          3
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623937976,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL2",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          43
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940630758418
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          33
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940614236200
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          24
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940608402524
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          8
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          21
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940606112940
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940610199781
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNp102"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          13
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940625090314
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa08"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940620380449
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          12
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940626730883
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940628627867
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe003"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612936154,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          18
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940620918789
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          21
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940620300308
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          18
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940617750070
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNp39"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          2
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940625878160
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          33
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940623556755
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          41
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940634140883
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa09"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940624982823
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          14
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940629327659
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          17
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940631759663
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa15"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940625308162,
+          720575940627139530
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          15
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940630758418
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          45
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940614236200
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          30
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940608402524
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          11
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          31
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940606112940
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940610199781
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNp102"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940620380449
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          12
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940626730883
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          5
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940630653604,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          19
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940630758418
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          33
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940614236200
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          36
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940608402524
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          13
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          21
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940610199781
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNp102"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          12
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940644022551
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe003"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940620380449
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          12
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940626730883
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          6
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940622234326,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          16
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940620918789
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          27
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940616471052
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940620300308
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          19
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940617750070
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNp39"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          5
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940625878160
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          33
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940623556755
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          38
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940624982823
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          24
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940613408552
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940629327659
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          25
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940631759663
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa15"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          5
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940627139530
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          19
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940612870952,
+          720575940623110123
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNde003"
+        ],
+        "direct_synapse_counts": [
+          17,
+          1,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940630758418
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNb01"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          37
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940614236200
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe016"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          44
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940608402524
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNbe006"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          12
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940604737708
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa02"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          17
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940606112940
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          3
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940610199781
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNp102"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          7
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940644022551
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNpe003"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940620380449
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNae002"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          6
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940626730883
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg97"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          6
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940623430621,
+          720575940630085583
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          3,
+          17
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940631151663,
+          720575940620918789
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNa03"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          31
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      },
+      {
+        "root_ids": [
+          720575940607155890,
+          720575940639410291,
+          720575940631151663,
+          720575940616471052
+        ],
+        "cell_types": [
+          "MBON26",
+          "FB4N",
+          "PFL3",
+          "DNg13"
+        ],
+        "direct_synapse_counts": [
+          17,
+          2,
+          1
+        ],
+        "edge_polarities": [
+          1,
+          -1,
+          1
+        ]
+      }
+    ],
+    "interpretation": "Each instance is a join of three observed direct edges. Synapse counts belong to individual edges and are not an end-to-end effective weight."
+  },
+  "limitations": [
+    "Connectivity is structural only and provides no functional, causal, behavioral, or prefrontal-homology evidence.",
+    "The polarity field is inherited from the processed connectivity source; it is not a measured edge-specific postsynaptic response.",
+    "The local data contain neuron-level aggregate edges, not synapse coordinates or VNC motor connectivity.",
+    "Absence of a selected path can reflect the exact annotation-based selection and does not prove biological absence."
+  ]
+}

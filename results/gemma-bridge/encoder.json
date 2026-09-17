@@ -1,0 +1,37 @@
+{
+  "model": "/Users/a405394/models/google_embeddinggemma-300m",
+  "weight_sha256": {
+    "2_Dense/model.safetensors": "c327f2acb00149676ade24a75e11eb6ebbd367f9ee050267ba56829d2979f702",
+    "3_Dense/model.safetensors": "ffb6cc5162e11e2ce6bc2367e121ee3bbbc4e82e1ee26826bd7573d4948d81b8",
+    "model.safetensors": "cbf5a78393b6a033e0b8a63a57549964f7ed5c6fbeb4ba0694214f36123f2fd2"
+  },
+  "device": "mps",
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.0.1"
+  },
+  "rows": 80,
+  "shape": [
+    80,
+    768
+  ],
+  "load_seconds": 1.0643491670489311,
+  "encode_seconds": 0.4785257074981928,
+  "batch_size": 16,
+  "single_text_ms": [
+    462.2984994202852,
+    156.6220000386238,
+    247.51362390816212,
+    30.6842103600502,
+    244.81116607785225,
+    30.39945848286152,
+    29.68733198940754,
+    30.13341687619686
+  ],
+  "prompt_name": "Classification",
+  "encoder_frozen": true
+}

@@ -91,3 +91,6 @@ Author: jioh jung <jung@jioh.net> · License: MIT
 
 
 Native Python bindings and optional MLX/Metal batch inference are available: [examples](examples/python/README.md), [measured performance and rejected optimizations](results/PYTHON_PERFORMANCE_REPORT.md).
+
+
+Frozen Gemma semantic bridge: [example and measured learning](examples/gemma_bridge/README.md), [anatomical interface research](examples/gemma_bridge/RESEARCH.md).

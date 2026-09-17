@@ -1,0 +1,402 @@
+[
+  {
+    "split": "train",
+    "label": 0,
+    "text": "I am thirsty."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "Please bring me water."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "I need something to drink."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "My mouth is dry."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "Give me a glass of water."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "I want to quench my thirst."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "I need to hydrate."
+  },
+  {
+    "split": "train",
+    "label": 0,
+    "text": "A drink would help me."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "I am hungry."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "Please bring me food."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "I need something to eat."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "My stomach is empty."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "Give me a meal."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "I want to satisfy my hunger."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "I need nourishment."
+  },
+  {
+    "split": "train",
+    "label": 1,
+    "text": "A snack would help me."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "I am cold."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "Please bring me a blanket."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "I need to get warm."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "I am shivering."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "Give me a warm coat."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "I want to escape this chill."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "I need insulation."
+  },
+  {
+    "split": "train",
+    "label": 2,
+    "text": "A heater would help me."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "I am tired."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "Please let me sleep."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "I need to rest."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "I can barely stay awake."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "Give me a quiet bed."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "I want to recover from exhaustion."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "I need a nap."
+  },
+  {
+    "split": "train",
+    "label": 3,
+    "text": "A break would help me."
+  },
+  {
+    "split": "validation",
+    "label": 0,
+    "text": "Could I have a refreshing beverage?"
+  },
+  {
+    "split": "validation",
+    "label": 0,
+    "text": "My body needs fluids."
+  },
+  {
+    "split": "validation",
+    "label": 0,
+    "text": "Find a drinking fountain for me."
+  },
+  {
+    "split": "validation",
+    "label": 1,
+    "text": "Could I have a bite to eat?"
+  },
+  {
+    "split": "validation",
+    "label": 1,
+    "text": "My body needs calories."
+  },
+  {
+    "split": "validation",
+    "label": 1,
+    "text": "Find a restaurant for me."
+  },
+  {
+    "split": "validation",
+    "label": 2,
+    "text": "Could I have something warm to wear?"
+  },
+  {
+    "split": "validation",
+    "label": 2,
+    "text": "My body is losing heat."
+  },
+  {
+    "split": "validation",
+    "label": 2,
+    "text": "Find a heated room for me."
+  },
+  {
+    "split": "validation",
+    "label": 3,
+    "text": "Could I have somewhere to lie down?"
+  },
+  {
+    "split": "validation",
+    "label": 3,
+    "text": "My body needs sleep."
+  },
+  {
+    "split": "validation",
+    "label": 3,
+    "text": "Find a bedroom for me."
+  },
+  {
+    "split": "test",
+    "label": 0,
+    "text": "After the hike my throat feels parched."
+  },
+  {
+    "split": "test",
+    "label": 0,
+    "text": "Fill my bottle so I can rehydrate."
+  },
+  {
+    "split": "test",
+    "label": 0,
+    "text": "The most useful thing now is a cup of plain water."
+  },
+  {
+    "split": "test",
+    "label": 0,
+    "text": "I have not had any liquids all day."
+  },
+  {
+    "split": "test",
+    "label": 0,
+    "text": "Help me get a sip from the tap."
+  },
+  {
+    "split": "test",
+    "label": 0,
+    "text": "Fetch a beverage rather than a meal."
+  },
+  {
+    "split": "test",
+    "label": 1,
+    "text": "After missing lunch my belly is rumbling."
+  },
+  {
+    "split": "test",
+    "label": 1,
+    "text": "Prepare a sandwich so I can refuel."
+  },
+  {
+    "split": "test",
+    "label": 1,
+    "text": "The most useful thing now is a bowl of soup to eat."
+  },
+  {
+    "split": "test",
+    "label": 1,
+    "text": "I have not eaten anything all day."
+  },
+  {
+    "split": "test",
+    "label": 1,
+    "text": "Help me get some bread and fruit."
+  },
+  {
+    "split": "test",
+    "label": 1,
+    "text": "Fetch a meal rather than a beverage."
+  },
+  {
+    "split": "test",
+    "label": 2,
+    "text": "The icy wind is making my teeth chatter."
+  },
+  {
+    "split": "test",
+    "label": 2,
+    "text": "Wrap me in something that retains heat."
+  },
+  {
+    "split": "test",
+    "label": 2,
+    "text": "The most useful thing now is a thick sweater."
+  },
+  {
+    "split": "test",
+    "label": 2,
+    "text": "This freezing room is unbearable."
+  },
+  {
+    "split": "test",
+    "label": 2,
+    "text": "Help me sit beside a radiator."
+  },
+  {
+    "split": "test",
+    "label": 2,
+    "text": "I need a coat rather than a bed."
+  },
+  {
+    "split": "test",
+    "label": 3,
+    "text": "After working through the night my eyelids keep closing."
+  },
+  {
+    "split": "test",
+    "label": 3,
+    "text": "Arrange a place where I can take a snooze."
+  },
+  {
+    "split": "test",
+    "label": 3,
+    "text": "The most useful thing now is uninterrupted sleep."
+  },
+  {
+    "split": "test",
+    "label": 3,
+    "text": "I have been awake for two days."
+  },
+  {
+    "split": "test",
+    "label": 3,
+    "text": "Help me lie down and recuperate."
+  },
+  {
+    "split": "test",
+    "label": 3,
+    "text": "I need a bed rather than a coat."
+  },
+  {
+    "split": "korean",
+    "label": 0,
+    "text": "목이 말라요. 물을 주세요."
+  },
+  {
+    "split": "korean",
+    "label": 0,
+    "text": "입이 바짝 말라서 마실 것이 필요해요."
+  },
+  {
+    "split": "korean",
+    "label": 0,
+    "text": "운동을 해서 수분을 보충하고 싶어요."
+  },
+  {
+    "split": "korean",
+    "label": 1,
+    "text": "배가 고파요. 먹을 것을 주세요."
+  },
+  {
+    "split": "korean",
+    "label": 1,
+    "text": "점심을 못 먹었어요. 식사가 필요해요."
+  },
+  {
+    "split": "korean",
+    "label": 1,
+    "text": "허기를 달랠 간식을 찾고 있어요."
+  },
+  {
+    "split": "korean",
+    "label": 2,
+    "text": "너무 추워요. 담요를 주세요."
+  },
+  {
+    "split": "korean",
+    "label": 2,
+    "text": "몸이 떨려서 따뜻한 곳으로 가고 싶어요."
+  },
+  {
+    "split": "korean",
+    "label": 2,
+    "text": "찬바람을 막아줄 두꺼운 옷이 필요해요."
+  },
+  {
+    "split": "korean",
+    "label": 3,
+    "text": "너무 졸려요. 잠을 자고 싶어요."
+  },
+  {
+    "split": "korean",
+    "label": 3,
+    "text": "밤을 새워서 누워 쉴 곳이 필요해요."
+  },
+  {
+    "split": "korean",
+    "label": 3,
+    "text": "피곤해서 잠깐 낮잠을 자고 싶어요."
+  }
+]

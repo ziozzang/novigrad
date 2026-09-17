@@ -1,0 +1,17 @@
+{
+  "bridge_tests_passed": 2,
+  "existing_native_and_metal_tests_passed": 5,
+  "pip_check": "passed",
+  "native_roundtrip_exact_seeds": [
+    101,
+    202,
+    303
+  ],
+  "anatomy_rows_scanned": 15091983,
+  "live_demo": {
+    "input": "목이 말라서 시원한 물을 마시고 싶어요.",
+    "selected": "water",
+    "probability": 0.9393566250801086,
+    "seconds_excluding_load": 0.1780175417661667
+  }
+}

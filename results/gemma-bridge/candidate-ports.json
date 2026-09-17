@@ -1,0 +1,1059 @@
+{
+  "scope": "Candidate root-ID groups for engineering experiments; not a calibrated biological interface.",
+  "sources": {
+    "annotations": {
+      "path": "/Users/a405394/fly/nobi/data/neurons_783.tsv",
+      "sha256": "9a4f8b2f843196074431ebd7cd883536afa1be86c8a4ce90970441e8be81d1be"
+    },
+    "edges": {
+      "path": "/Users/a405394/fly/nobi/data/edges_783.tsv",
+      "sha256": "de6e458f38dbc1b9d8c2b7bfe03874dddd535414098198750296ebb4b7c769ea"
+    }
+  },
+  "selection": {
+    "EPG": "Exact supplied cell_type or hemibrain_type value EPG.",
+    "FC2": "Exact supplied cell_type family members FC2A, FC2B, and FC2C.",
+    "PFL2": "Exact supplied cell_type or hemibrain_type value PFL2.",
+    "PFL3": "Exact supplied cell_type or hemibrain_type value PFL3."
+  },
+  "encoding": "None assigned. Root order and annotation side do not encode direction, heading, phase, action, or signed numeric value.",
+  "ports": {
+    "EPG": {
+      "role": "proposed_context_port",
+      "status": "proposed_not_calibrated",
+      "count": 47,
+      "neurons": [
+        {
+          "root_id": 720575940604801993,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940605827761,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940608722371,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940610453427,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940610901930,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940611216099,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940613829900,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940613836438,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940614297640,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940614926475,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940616502066,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940616569601,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940617769851,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940618612952,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940619006272,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940619296365,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940620020694,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940620282906,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940620664741,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940622364771,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940623046548,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940623852873,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940624096234,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940624784280,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940625351354,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940626137895,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940626315207,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940626449082,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940626721835,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940627140551,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940628493572,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940628802041,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940628843458,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940629691753,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940630199963,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940631125036,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940631708836,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940632614295,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940632844002,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940633719487,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940635427982,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940635461550,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940636730694,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940638850512,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940642634532,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940658101889,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940660921985,
+          "cell_type": "EPG",
+          "hemibrain_type": "EPG",
+          "side": "right"
+        }
+      ]
+    },
+    "FC2": {
+      "role": "proposed_intermediate_port",
+      "status": "proposed_not_calibrated",
+      "count": 85,
+      "neurons": [
+        {
+          "root_id": 720575940604064958,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940604709920,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940608839800,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940610634725,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940612627058,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940613005937,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940613348271,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940614442090,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940614530098,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940614738956,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940615326779,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940615463825,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940616617245,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940616657989,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940616956673,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940616967508,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940616968733,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940617296155,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940617501533,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940617600064,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940617787550,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940618133371,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940618177739,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940618388615,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940618463960,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940618792942,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940619196398,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940619489857,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940619578608,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940619935152,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940620014356,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940620156795,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940621025037,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940621193864,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940622374783,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940622406260,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940622713638,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940622870666,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940622942868,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940622943731,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940623712656,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940623784231,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940623815155,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940623880013,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940624126183,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940624295096,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940624611018,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940625579141,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940625637562,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940625678650,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940625816212,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940626356648,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940626533714,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940627126787,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940627162344,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940627569658,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940627617866,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940627740922,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940627786270,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940627901687,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940627943966,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940628136809,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940628860476,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940629331663,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940629923883,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940630019385,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940630256402,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940630976568,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940631004728,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940631025219,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940631413156,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940632259865,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940632803223,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940633519514,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940633982303,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940634489592,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940634534255,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940634647732,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940635530359,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940636229183,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940636735198,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940637558618,
+          "cell_type": "FC2B",
+          "hemibrain_type": "FC2B",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940637983814,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940641557133,
+          "cell_type": "FC2C",
+          "hemibrain_type": "FC2C",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940642936100,
+          "cell_type": "FC2A",
+          "hemibrain_type": "FC2A",
+          "side": "right"
+        }
+      ]
+    },
+    "PFL2": {
+      "role": "proposed_output_port",
+      "status": "proposed_not_calibrated",
+      "count": 12,
+      "neurons": [
+        {
+          "root_id": 720575940617498688,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940620657140,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940620952865,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940623585255,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940623937976,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940624754981,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940626763688,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940629922934,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940635153527,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940635467150,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940635990640,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940638678616,
+          "cell_type": "PFL2",
+          "hemibrain_type": "PFL2",
+          "side": "left"
+        }
+      ]
+    },
+    "PFL3": {
+      "role": "proposed_output_port",
+      "status": "proposed_not_calibrated",
+      "count": 24,
+      "neurons": [
+        {
+          "root_id": 720575940605640905,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940612870952,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940612936154,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940616654370,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940618759361,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940619006087,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940619648116,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940619802800,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940620202266,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940622234326,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940622727629,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940623430621,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940624320318,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940625308162,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940628457448,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940628587202,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940630653604,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940630728588,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "left"
+        },
+        {
+          "root_id": 720575940631151663,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940635430030,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940635481262,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940636868186,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940638901875,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        },
+        {
+          "root_id": 720575940644706083,
+          "cell_type": "PFL3",
+          "hemibrain_type": "PFL3",
+          "side": "right"
+        }
+      ]
+    }
+  },
+  "warning": "Roles are proposed engineering labels only. Structural annotations and synapse counts do not establish function or calibration."
+}

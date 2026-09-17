@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add frozen EmbeddingGemma language-to-reward-policy examples, reversal controls, and a sourced MB/CX bridge design with local FlyWire candidate-port audit.
+
 - Add native PyO3 Python bindings, learning/checkpoint examples and optional ordered sparse MLX/Metal batch inference; document measured latency and numerical parity.
 
 - Add three-policy MAGI-inspired majority/probability voting, independent training seeds, bundle playback and measured negative results.

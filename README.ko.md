@@ -71,3 +71,6 @@ Author: jioh jung <jung@jioh.net> · License: MIT
 
 
 Python 네이티브 바인딩과 선택적인 MLX/Metal 배치 추론: [예제](examples/python/README.ko.md), [성능 실험 및 미채택 최적화](results/PYTHON_PERFORMANCE_REPORT.ko.md).
+
+
+Gemma 의미 연결: [실행 예제와 학습 결과](examples/gemma_bridge/README.ko.md), [뇌 영역·연결 위치 연구](examples/gemma_bridge/RESEARCH.ko.md).
