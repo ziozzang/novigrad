@@ -155,3 +155,5 @@ The queue enforces capacity `delay + 1`; overflow leaves the next ID unchanged. 
 ![Biological and Gemma diagnostic comparisons](../../results/bio-bridge/biological-mechanisms.png)
 
 Follow-up: [continuous input, one-shot cues, signal strength, and repeated learning](SIGNAL_RESULTS.md), with [primary-source research](SIGNAL_RESEARCH.md).
+
+Mechanism extraction: [measured adaptation, hidden inhibition, and eligibility comparisons](MECHANISM_RESULTS.md), with [primary-source derivations](MECHANISM_RESEARCH.md).

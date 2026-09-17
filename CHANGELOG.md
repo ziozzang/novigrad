@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Extract fly-inspired adaptation, inhibitory competition, and eligibility rules into controlled diagnostics, including native-forward parity, matched supervised readouts, and trace magnitude controls.
+
 - Compare continuous/one-shot cue schedules, explicit host memory, global versus relative signal amplitude, reward strength, and repeated/spaced learning with measured controls and bilingual biological research.
 
 - Add 172 bilingual biological/Gemma diagnostic cases, sparsity confirmation, context interference controls, and bounded sequential delayed-credit experiments; retain negative results and primary-source English/Korean research.

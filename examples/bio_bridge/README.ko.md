@@ -133,3 +133,5 @@ python -m unittest discover -s examples/bio_bridge -p 'test_*.py' -q
 추가 history ablation 16문항에서 base는 전체 이력 10/16, 마지막 사용자 메시지만 사용하면 9/16이었고 adapter는 각각 12/16이었다. 사후 semantic-agreement gate는 adapter의 negative 7개를 거절하여 balanced accuracy 52.34%를 얻었지만 valid 정답은 50개에서 39개로 줄었다. Base의 53.91%보다 낮으며 기본 실행 경로에 적용하지 않았다. 이 gate는 마지막 메시지만 읽어 이력 의존 intent를 해결하지 못한다.
 
 후속 실험: [지속·단발 입력, 신호 세기, 반복 학습 비교](SIGNAL_RESULTS.ko.md) 및 [일차 문헌 연구](SIGNAL_RESEARCH.ko.md).
+
+메커니즘 추출: [감각 적응·숨은층 억제·보상 흔적 비교 실험](MECHANISM_RESULTS.ko.md) 및 [일차 문헌과 계산 규칙](MECHANISM_RESEARCH.ko.md).

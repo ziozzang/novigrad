@@ -1,0 +1,4983 @@
+{
+  "status": "APL-inspired engineered inhibition comparison; not a biological reconstruction",
+  "protocol": {
+    "frozen_before_evaluation": true,
+    "no_training": true,
+    "seeds": [
+      601,
+      602,
+      603
+    ],
+    "variants": [
+      "native_topk_2",
+      "topk_20",
+      "subtractive_global",
+      "subtractive_local"
+    ],
+    "mixture_ratios": [
+      0.0,
+      0.25,
+      1.0
+    ],
+    "calibration_boundary": "global/local feedback gains selected only from old_train hidden activity to approximate 2% mean active fraction",
+    "evaluation": "old training descriptive calibration check, old validation/calibration split, and reused 32-case confirmation set",
+    "local_groups": "32 groups by hidden index modulo 32; arbitrary engineering partition, not anatomical",
+    "global_proxy": "relu(hidden - gain*row_mean_hidden); gain frozen from training only; functional global-feedback proxy",
+    "local_proxy": "same subtractive rule using arbitrary group means; functional local competition proxy",
+    "native_readout_caveat": "all variants reuse the MBON weights/readout trained under native 2% top-k, so readout mismatch can disadvantage alternative hidden mechanisms",
+    "pairing_scope": "pattern-separation and discriminability metrics use deterministic next-class pairs only; no nearest-neighbor selection or similar-versus-dissimilar interaction is measured"
+  },
+  "parity": [
+    {
+      "seed": 601,
+      "rows": 8,
+      "max_absolute_probability_error": 2.9802322387695312e-08
+    },
+    {
+      "seed": 602,
+      "rows": 8,
+      "max_absolute_probability_error": 0.0
+    },
+    {
+      "seed": 603,
+      "rows": 8,
+      "max_absolute_probability_error": 2.9802322387695312e-08
+    }
+  ],
+  "calibration": {
+    "601": {
+      "global_gain": 3.424454689025879,
+      "local_gain": 3.412909746170044,
+      "global_train_active_fraction": 0.019998309831949005,
+      "local_train_active_fraction": 0.019998309831949005,
+      "target_active_fraction": 0.02
+    },
+    "602": {
+      "global_gain": 3.424454689025879,
+      "local_gain": 3.412909746170044,
+      "global_train_active_fraction": 0.019998309831949005,
+      "local_train_active_fraction": 0.019998309831949005,
+      "target_active_fraction": 0.02
+    },
+    "603": {
+      "global_gain": 3.424454689025879,
+      "local_gain": 3.412909746170044,
+      "global_train_active_fraction": 0.019998309831949005,
+      "local_train_active_fraction": 0.019998309831949005,
+      "target_active_fraction": 0.02
+    }
+  },
+  "parameter_scope": "same frozen checkpoint weights per seed; only hidden inhibition transform changes",
+  "provenance_sha256": {
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "examples/bio_bridge/sparsity_confirmation.json": "64d70f92afc5c0ddafd6bbc724dfab8e331032a3866a963e42a7e5b724f0ae63",
+    "results/bio-bridge/confirmation-features.safetensors": "6de2669ed3c46a6114fffe2ac6cb5de3387cb7e92aa57d9f06efa481aecc5fe4",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+    "results/bio-bridge/sparse-d128-f0.02-s602.safetensors": "81bc3c761b0999142784bc9337fbed0388caabd84eae17fe7c82aa67783cc42c",
+    "results/bio-bridge/sparse-d128-f0.02-s603.safetensors": "859c0d652d22d1fd39d3808172f7b62c874fd4f47a27cd8c815f361c0edbee46",
+    "examples/bio_bridge/inhibition_mechanism.py": "7b7c3d5d595c5f02853d05b83698325e9e125eb7e9a89e452abc9c97863a98fc"
+  },
+  "runs": [
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.75,
+      "mean_correct_probability": 0.2760268449783325,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000018626451,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": 0.03340967744588852,
+      "paired_class_correct_exceeds_distractor_fraction": 0.96875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.59375,
+      "mean_correct_probability": 0.2697974741458893,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 1.0000000186264515,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.025563646107912064,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.2573721408843994,
+      "mean_active_count": 103.53125,
+      "mean_active_fraction": 0.019998309831949005,
+      "mean_hidden_cosine_to_clean": 1.0000000223517418,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009201353415846825,
+      "paired_class_correct_exceeds_distractor_fraction": 0.78125
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.2574223279953003,
+      "mean_active_count": 103.53125,
+      "mean_active_fraction": 0.019998309831949005,
+      "mean_hidden_cosine_to_clean": 0.9999999925494194,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009225476533174515,
+      "paired_class_correct_exceeds_distractor_fraction": 0.78125
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.65625,
+      "mean_correct_probability": 0.2679874300956726,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.937079569324851,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01958368346095085,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26457464694976807,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.9678288921713829,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.015325566753745079,
+      "paired_class_correct_exceeds_distractor_fraction": 0.65625
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.254911869764328,
+      "mean_active_count": 90.625,
+      "mean_active_fraction": 0.0175053119567317,
+      "mean_hidden_cosine_to_clean": 0.9884578827768564,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005068414378911257,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5625
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2549341320991516,
+      "mean_active_count": 91.1875,
+      "mean_active_fraction": 0.01761396561715279,
+      "mean_hidden_cosine_to_clean": 0.9886614568531513,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005105087999254465,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5625
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.4375,
+      "mean_correct_probability": 0.25659117102622986,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.8315082900226116,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0016460907645523548,
+      "paired_class_correct_exceeds_distractor_fraction": 0.46875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2568645477294922,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.8942956607788801,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 1.0191928595304489e-05,
+      "paired_class_correct_exceeds_distractor_fraction": 0.46875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.25214487314224243,
+      "mean_active_count": 84.03125,
+      "mean_active_fraction": 0.01623164960401777,
+      "mean_hidden_cosine_to_clean": 0.9441333469003439,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": -4.8026442527770996e-05,
+      "paired_class_correct_exceeds_distractor_fraction": 0.46875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.2520732581615448,
+      "mean_active_count": 85.1875,
+      "mean_active_fraction": 0.016454993239327795,
+      "mean_hidden_cosine_to_clean": 0.9446166697889566,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00013724388554692268,
+      "paired_class_correct_exceeds_distractor_fraction": 0.46875
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.6666666666666666,
+      "mean_correct_probability": 0.2693645656108856,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000049670537,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02663957141339779,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.27308034896850586,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 1.0000000099341075,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.03189680352807045,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2586388885974884,
+      "mean_active_count": 104.83333333333333,
+      "mean_active_fraction": 0.02024982293477561,
+      "mean_hidden_cosine_to_clean": 0.9999999950329462,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0125571982935071,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.25849005579948425,
+      "mean_active_count": 105.16666666666667,
+      "mean_active_fraction": 0.020314210289099223,
+      "mean_hidden_cosine_to_clean": 1.0000000298023224,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.012217436917126179,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.6666666666666666,
+      "mean_correct_probability": 0.2642846405506134,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.942816416422526,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01735343225300312,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2674275040626526,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 0.9645367562770844,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02074153535068035,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.2561231553554535,
+      "mean_active_count": 90.91666666666667,
+      "mean_active_fraction": 0.017561650891764854,
+      "mean_hidden_cosine_to_clean": 0.9862985213597616,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.00779700418934226,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.2559567987918854,
+      "mean_active_count": 92.91666666666667,
+      "mean_active_fraction": 0.01794797501770652,
+      "mean_hidden_cosine_to_clean": 0.9866210122903188,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0075340657494962215,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.2547759711742401,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.8357390016317368,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0008914495701901615,
+      "paired_class_correct_exceeds_distractor_fraction": 0.4166666666666667
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.25728869438171387,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 0.8833595514297485,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0007702969014644623,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.2526896595954895,
+      "mean_active_count": 83.91666666666667,
+      "mean_active_fraction": 0.01620951645096903,
+      "mean_hidden_cosine_to_clean": 0.932154173652331,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0009997561573982239,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 601,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.2524726688861847,
+      "mean_active_count": 83.83333333333333,
+      "mean_active_fraction": 0.01619341961238813,
+      "mean_hidden_cosine_to_clean": 0.9341804732879003,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0006623801891691983,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26577574014663696,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000093132257,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02073102444410324,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6875
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.26821452379226685,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 1.0000000186264515,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02495221234858036,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2565237581729889,
+      "mean_active_count": 91.28125,
+      "mean_active_fraction": 0.017632074560556307,
+      "mean_hidden_cosine_to_clean": 1.0000000335276127,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": 0.008801750838756561,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6875
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2563849091529846,
+      "mean_active_count": 91.65625,
+      "mean_active_fraction": 0.017704510334170368,
+      "mean_hidden_cosine_to_clean": 0.9999999850988388,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 0.008516572415828705,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6875
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.2637256383895874,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.9225622303783894,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.015636511147022247,
+      "paired_class_correct_exceeds_distractor_fraction": 0.65625
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.2653946876525879,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.9615515135228634,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.017631037160754204,
+      "paired_class_correct_exceeds_distractor_fraction": 0.65625
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.4375,
+      "mean_correct_probability": 0.2545776069164276,
+      "mean_active_count": 77.46875,
+      "mean_active_fraction": 0.014964023565771683,
+      "mean_hidden_cosine_to_clean": 0.9730590265244246,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0051252334378659725,
+      "paired_class_correct_exceeds_distractor_fraction": 0.65625
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.4375,
+      "mean_correct_probability": 0.2545125484466553,
+      "mean_active_count": 77.59375,
+      "mean_active_fraction": 0.014988168823643037,
+      "mean_hidden_cosine_to_clean": 0.9740895666182041,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 0.004958950448781252,
+      "paired_class_correct_exceeds_distractor_fraction": 0.625
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.25720104575157166,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.782634662464261,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0028558247722685337,
+      "paired_class_correct_exceeds_distractor_fraction": 0.53125
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.25838279724121094,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.8689262866973877,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.002731588203459978,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5625
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.25155407190322876,
+      "mean_active_count": 68.71875,
+      "mean_active_fraction": 0.013273855514776898,
+      "mean_hidden_cosine_to_clean": 0.8633227311074734,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00019255327060818672,
+      "paired_class_correct_exceeds_distractor_fraction": 0.46875
+    },
+    {
+      "seed": 601,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.25158625841140747,
+      "mean_active_count": 68.40625,
+      "mean_active_fraction": 0.013213492370098513,
+      "mean_hidden_cosine_to_clean": 0.8700794726610184,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00015847478061914444,
+      "paired_class_correct_exceeds_distractor_fraction": 0.4375
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.90625,
+      "mean_correct_probability": 0.2766318917274475,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000018626451,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": 0.03475429117679596,
+      "paired_class_correct_exceeds_distractor_fraction": 0.96875
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.27002573013305664,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 1.0000000186264515,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.026589741930365562,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.78125,
+      "mean_correct_probability": 0.25768500566482544,
+      "mean_active_count": 103.53125,
+      "mean_active_fraction": 0.019998309831949005,
+      "mean_hidden_cosine_to_clean": 1.0000000223517418,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009669536724686623,
+      "paired_class_correct_exceeds_distractor_fraction": 0.84375
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.78125,
+      "mean_correct_probability": 0.2577187418937683,
+      "mean_active_count": 103.53125,
+      "mean_active_fraction": 0.019998309831949005,
+      "mean_hidden_cosine_to_clean": 0.9999999925494194,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009707316756248474,
+      "paired_class_correct_exceeds_distractor_fraction": 0.84375
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.78125,
+      "mean_correct_probability": 0.26837193965911865,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.937079569324851,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": 0.020398488268256187,
+      "paired_class_correct_exceeds_distractor_fraction": 0.90625
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2647078037261963,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.9678288921713829,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.016111070290207863,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6875
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.65625,
+      "mean_correct_probability": 0.25508108735084534,
+      "mean_active_count": 90.625,
+      "mean_active_fraction": 0.0175053119567317,
+      "mean_hidden_cosine_to_clean": 0.9884578827768564,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0052711451426148415,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.65625,
+      "mean_correct_probability": 0.2551027834415436,
+      "mean_active_count": 91.1875,
+      "mean_active_fraction": 0.01761396561715279,
+      "mean_hidden_cosine_to_clean": 0.9886614568531513,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005334334913641214,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.4375,
+      "mean_correct_probability": 0.2566657066345215,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.8315082900226116,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": -0.001552314031869173,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.25687575340270996,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.8942956607788801,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0003839479759335518,
+      "paired_class_correct_exceeds_distractor_fraction": 0.53125
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2521117329597473,
+      "mean_active_count": 84.03125,
+      "mean_active_fraction": 0.01623164960401777,
+      "mean_hidden_cosine_to_clean": 0.9441333469003439,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0001718667335808277,
+      "paired_class_correct_exceeds_distractor_fraction": 0.625
+    },
+    {
+      "seed": 602,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2520526051521301,
+      "mean_active_count": 85.1875,
+      "mean_active_fraction": 0.016454993239327795,
+      "mean_hidden_cosine_to_clean": 0.9446166697889566,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00023352168500423431,
+      "paired_class_correct_exceeds_distractor_fraction": 0.59375
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.8333333333333334,
+      "mean_correct_probability": 0.26978600025177,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000049670537,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02706676907837391,
+      "paired_class_correct_exceeds_distractor_fraction": 0.9166666666666666
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.5833333333333334,
+      "mean_correct_probability": 0.273507684469223,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 1.0000000099341075,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.03297937288880348,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.6666666666666666,
+      "mean_correct_probability": 0.2588053047657013,
+      "mean_active_count": 104.83333333333333,
+      "mean_active_fraction": 0.02024982293477561,
+      "mean_hidden_cosine_to_clean": 0.9999999950329462,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.012642263434827328,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.75,
+      "mean_correct_probability": 0.2586043179035187,
+      "mean_active_count": 105.16666666666667,
+      "mean_active_fraction": 0.020314210289099223,
+      "mean_hidden_cosine_to_clean": 1.0000000298023224,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.012287222780287266,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.75,
+      "mean_correct_probability": 0.26457536220550537,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.942816416422526,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01759517751634121,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.26765120029449463,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 0.9645367562770844,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02143245004117489,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.5833333333333334,
+      "mean_correct_probability": 0.2562353014945984,
+      "mean_active_count": 90.91666666666667,
+      "mean_active_fraction": 0.017561650891764854,
+      "mean_hidden_cosine_to_clean": 0.9862985213597616,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.007757009472697973,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8333333333333334
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.5833333333333334,
+      "mean_correct_probability": 0.2560378611087799,
+      "mean_active_count": 92.91666666666667,
+      "mean_active_fraction": 0.01794797501770652,
+      "mean_hidden_cosine_to_clean": 0.9866210122903188,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.007529091089963913,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.25478866696357727,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.8357390016317368,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0008644647896289825,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.2572626769542694,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 0.8833595514297485,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0009246344561688602,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.252651572227478,
+      "mean_active_count": 83.91666666666667,
+      "mean_active_fraction": 0.01620951645096903,
+      "mean_hidden_cosine_to_clean": 0.932154173652331,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0007711797952651978,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 602,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.2524614930152893,
+      "mean_active_count": 83.83333333333333,
+      "mean_active_fraction": 0.01619341961238813,
+      "mean_hidden_cosine_to_clean": 0.9341804732879003,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0004915148019790649,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.5625,
+      "mean_correct_probability": 0.26645249128341675,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000093132257,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.022244343534111977,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8125
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.26901769638061523,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 1.0000000186264515,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02691074088215828,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.25674760341644287,
+      "mean_active_count": 91.28125,
+      "mean_active_fraction": 0.017632074560556307,
+      "mean_hidden_cosine_to_clean": 1.0000000335276127,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009032584726810455,
+      "paired_class_correct_exceeds_distractor_fraction": 0.78125
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.25661125779151917,
+      "mean_active_count": 91.65625,
+      "mean_active_fraction": 0.017704510334170368,
+      "mean_hidden_cosine_to_clean": 0.9999999850988388,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 0.008770829066634178,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8125
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.26433220505714417,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.9225622303783894,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01695570908486843,
+      "paired_class_correct_exceeds_distractor_fraction": 0.78125
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.26605546474456787,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.9615515135228634,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01916935294866562,
+      "paired_class_correct_exceeds_distractor_fraction": 0.65625
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.25475549697875977,
+      "mean_active_count": 77.46875,
+      "mean_active_fraction": 0.014964023565771683,
+      "mean_hidden_cosine_to_clean": 0.9730590265244246,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005271868780255318,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2546994984149933,
+      "mean_active_count": 77.59375,
+      "mean_active_fraction": 0.014988168823643037,
+      "mean_hidden_cosine_to_clean": 0.9740895666182041,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005136168096214533,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.25754547119140625,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.782634662464261,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0032059159129858017,
+      "paired_class_correct_exceeds_distractor_fraction": 0.53125
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.2586885094642639,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.8689262866973877,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0031103589572012424,
+      "paired_class_correct_exceeds_distractor_fraction": 0.59375
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.2516394853591919,
+      "mean_active_count": 68.71875,
+      "mean_active_fraction": 0.013273855514776898,
+      "mean_hidden_cosine_to_clean": 0.8633227311074734,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0002750735729932785,
+      "paired_class_correct_exceeds_distractor_fraction": 0.59375
+    },
+    {
+      "seed": 602,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.2516968846321106,
+      "mean_active_count": 68.40625,
+      "mean_active_fraction": 0.013213492370098513,
+      "mean_hidden_cosine_to_clean": 0.8700794726610184,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00021185679361224174,
+      "paired_class_correct_exceeds_distractor_fraction": 0.59375
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.71875,
+      "mean_correct_probability": 0.2772059440612793,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000018626451,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": 0.03480841964483261,
+      "paired_class_correct_exceeds_distractor_fraction": 0.8125
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.27025043964385986,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 1.0000000186264515,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.026402683928608894,
+      "paired_class_correct_exceeds_distractor_fraction": 0.625
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.2581194043159485,
+      "mean_active_count": 103.53125,
+      "mean_active_fraction": 0.019998309831949005,
+      "mean_hidden_cosine_to_clean": 1.0000000223517418,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009652089327573776,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.53125,
+      "mean_correct_probability": 0.25808411836624146,
+      "mean_active_count": 103.53125,
+      "mean_active_fraction": 0.019998309831949005,
+      "mean_hidden_cosine_to_clean": 0.9999999925494194,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": 0.00973575096577406,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.59375,
+      "mean_correct_probability": 0.2687109410762787,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.937079569324851,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": 0.020173383876681328,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26480382680892944,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.9678288921713829,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": 0.015732571482658386,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.25540244579315186,
+      "mean_active_count": 90.625,
+      "mean_active_fraction": 0.0175053119567317,
+      "mean_hidden_cosine_to_clean": 0.9884578827768564,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005118708126246929,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.25537246465682983,
+      "mean_active_count": 91.1875,
+      "mean_active_fraction": 0.01761396561715279,
+      "mean_hidden_cosine_to_clean": 0.9886614568531513,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": 0.00524049112573266,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.2566145956516266,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.8315082900226116,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.646865819580853,
+      "mean_pattern_separation_delta": 0.1280132746323943,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0021811840124428272,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5625
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2567845284938812,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.8942956607788801,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.7391498126089573,
+      "mean_pattern_separation_delta": 0.03572928160429001,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00015273503959178925,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.25,
+      "mean_correct_probability": 0.2522168457508087,
+      "mean_active_count": 84.03125,
+      "mean_active_fraction": 0.01623164960401777,
+      "mean_hidden_cosine_to_clean": 0.9441333469003439,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.8213580138981342,
+      "mean_pattern_separation_delta": -0.04647891968488693,
+      "paired_class_mean_correct_minus_distractor_probability": -0.00056488998234272,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6875
+    },
+    {
+      "seed": 603,
+      "dataset": "old_train",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.25,
+      "mean_correct_probability": 0.25214648246765137,
+      "mean_active_count": 85.1875,
+      "mean_active_fraction": 0.016454993239327795,
+      "mean_hidden_cosine_to_clean": 0.9446166697889566,
+      "mean_input_next_class_cosine": 0.7748790942132473,
+      "mean_hidden_next_class_cosine": 0.824692465364933,
+      "mean_pattern_separation_delta": -0.049813371151685715,
+      "paired_class_mean_correct_minus_distractor_probability": -0.000536872074007988,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6875
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.6666666666666666,
+      "mean_correct_probability": 0.270586222410202,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000049670537,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": 0.027566036209464073,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2734687626361847,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 1.0000000099341075,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.03285534307360649,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.25943371653556824,
+      "mean_active_count": 104.83333333333333,
+      "mean_active_fraction": 0.02024982293477561,
+      "mean_hidden_cosine_to_clean": 0.9999999950329462,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.013103514909744263,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.25902554392814636,
+      "mean_active_count": 105.16666666666667,
+      "mean_active_fraction": 0.020314210289099223,
+      "mean_hidden_cosine_to_clean": 1.0000000298023224,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.012406636029481888,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.6666666666666666,
+      "mean_correct_probability": 0.2651912271976471,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.942816416422526,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01799814961850643,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.26778116822242737,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 0.9645367562770844,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.021599650382995605,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.25680115818977356,
+      "mean_active_count": 90.91666666666667,
+      "mean_active_fraction": 0.017561650891764854,
+      "mean_hidden_cosine_to_clean": 0.9862985213597616,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.008215664885938168,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.4166666666666667,
+      "mean_correct_probability": 0.2564180791378021,
+      "mean_active_count": 92.91666666666667,
+      "mean_active_fraction": 0.01794797501770652,
+      "mean_hidden_cosine_to_clean": 0.9866210122903188,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.00774541636928916,
+      "paired_class_correct_exceeds_distractor_fraction": 0.6666666666666666
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.2549210488796234,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.8357390016317368,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.6617926955223083,
+      "mean_pattern_separation_delta": 0.12233654161294301,
+      "paired_class_mean_correct_minus_distractor_probability": -0.0009139167959801853,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.25743862986564636,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.20011589723778253,
+      "mean_hidden_cosine_to_clean": 0.8833595514297485,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7158722331126531,
+      "mean_pattern_separation_delta": 0.06825700402259827,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0012536793947219849,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.25292977690696716,
+      "mean_active_count": 83.91666666666667,
+      "mean_active_fraction": 0.01620951645096903,
+      "mean_hidden_cosine_to_clean": 0.932154173652331,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.789665957291921,
+      "mean_pattern_separation_delta": -0.005536720156669617,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0008683875203132629,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 603,
+      "dataset": "old_calibration",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.3333333333333333,
+      "mean_correct_probability": 0.2526746690273285,
+      "mean_active_count": 83.83333333333333,
+      "mean_active_fraction": 0.01619341961238813,
+      "mean_hidden_cosine_to_clean": 0.9341804732879003,
+      "mean_input_next_class_cosine": 0.7841292371352514,
+      "mean_hidden_next_class_cosine": 0.7983097980419794,
+      "mean_pattern_separation_delta": -0.01418056090672811,
+      "paired_class_mean_correct_minus_distractor_probability": 0.0004619670507963747,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5833333333333334
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.5,
+      "mean_correct_probability": 0.2655392587184906,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 1.0000000093132257,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.021250909194350243,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "topk_20",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.26734602451324463,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 1.0000000186264515,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.02471032366156578,
+      "paired_class_correct_exceeds_distractor_fraction": 0.59375
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.25699424743652344,
+      "mean_active_count": 91.28125,
+      "mean_active_fraction": 0.017632074560556307,
+      "mean_hidden_cosine_to_clean": 1.0000000335276127,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": 0.009104033932089806,
+      "paired_class_correct_exceeds_distractor_fraction": 0.78125
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2568318843841553,
+      "mean_active_count": 91.65625,
+      "mean_active_fraction": 0.017704510334170368,
+      "mean_hidden_cosine_to_clean": 0.9999999850988388,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 0.008837494067847729,
+      "paired_class_correct_exceeds_distractor_fraction": 0.78125
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "native_topk_2",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2633792757987976,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.9225622303783894,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.01601632684469223,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "topk_20",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.26464757323265076,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.9615515135228634,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.017680790275335312,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_global",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.254977822303772,
+      "mean_active_count": 77.46875,
+      "mean_active_fraction": 0.014964023565771683,
+      "mean_hidden_cosine_to_clean": 0.9730590265244246,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005452525336295366,
+      "paired_class_correct_exceeds_distractor_fraction": 0.71875
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 0.25,
+      "variant": "subtractive_local",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.2548966407775879,
+      "mean_active_count": 77.59375,
+      "mean_active_fraction": 0.014988168823643037,
+      "mean_hidden_cosine_to_clean": 0.9740895666182041,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 0.005318090785294771,
+      "paired_class_correct_exceeds_distractor_fraction": 0.75
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "native_topk_2",
+      "accuracy": 0.40625,
+      "mean_correct_probability": 0.2573447525501251,
+      "mean_active_count": 104.0,
+      "mean_active_fraction": 0.020088854548966584,
+      "mean_hidden_cosine_to_clean": 0.782634662464261,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.5249805059283972,
+      "mean_pattern_separation_delta": 0.23680759966373444,
+      "paired_class_mean_correct_minus_distractor_probability": 0.003317085560411215,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "topk_20",
+      "accuracy": 0.46875,
+      "mean_correct_probability": 0.2583613991737366,
+      "mean_active_count": 1036.0,
+      "mean_active_fraction": 0.2001158972377825,
+      "mean_hidden_cosine_to_clean": 0.8689262866973877,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6783325914293528,
+      "mean_pattern_separation_delta": 0.08345551416277885,
+      "paired_class_mean_correct_minus_distractor_probability": 0.003463935572654009,
+      "paired_class_correct_exceeds_distractor_fraction": 0.5
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_global",
+      "accuracy": 0.375,
+      "mean_correct_probability": 0.2520027756690979,
+      "mean_active_count": 68.71875,
+      "mean_active_fraction": 0.013273855514776898,
+      "mean_hidden_cosine_to_clean": 0.8633227311074734,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6193217243999243,
+      "mean_pattern_separation_delta": 0.14246638119220734,
+      "paired_class_mean_correct_minus_distractor_probability": -3.604451194405556e-05,
+      "paired_class_correct_exceeds_distractor_fraction": 0.625
+    },
+    {
+      "seed": 603,
+      "dataset": "reused_confirmation_32",
+      "mixture_ratio": 1.0,
+      "variant": "subtractive_local",
+      "accuracy": 0.34375,
+      "mean_correct_probability": 0.2520338296890259,
+      "mean_active_count": 68.40625,
+      "mean_active_fraction": 0.013213492370098513,
+      "mean_hidden_cosine_to_clean": 0.8700794726610184,
+      "mean_input_next_class_cosine": 0.7617881055921316,
+      "mean_hidden_next_class_cosine": 0.6368171721696854,
+      "mean_pattern_separation_delta": 0.12497093342244625,
+      "paired_class_mean_correct_minus_distractor_probability": 4.9377791583538055e-05,
+      "paired_class_correct_exceeds_distractor_fraction": 0.625
+    }
+  ],
+  "aggregate": {
+    "old_train": {
+      "0.0": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.7916666666666666,
+            "values_by_seed": [
+              0.75,
+              0.90625,
+              0.71875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.27662156025568646,
+            "values_by_seed": [
+              0.2760268449783325,
+              0.2766318917274475,
+              0.2772059440612793
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000018626451,
+            "values_by_seed": [
+              1.0000000018626451,
+              1.0000000018626451,
+              1.0000000018626451
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.646865819580853,
+            "values_by_seed": [
+              0.646865819580853,
+              0.646865819580853,
+              0.646865819580853
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.1280132746323943,
+            "values_by_seed": [
+              0.1280132746323943,
+              0.1280132746323943,
+              0.1280132746323943
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0343241294225057,
+            "values_by_seed": [
+              0.03340967744588852,
+              0.03475429117679596,
+              0.03480841964483261
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.9166666666666666,
+            "values_by_seed": [
+              0.96875,
+              0.96875,
+              0.8125
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.5416666666666666,
+            "values_by_seed": [
+              0.59375,
+              0.5625,
+              0.46875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2700245479742686,
+            "values_by_seed": [
+              0.2697974741458893,
+              0.27002573013305664,
+              0.27025043964385986
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778248,
+            "values_by_seed": [
+              0.2001158972377825,
+              0.2001158972377825,
+              0.2001158972377825
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000186264515,
+            "values_by_seed": [
+              1.0000000186264515,
+              1.0000000186264515,
+              1.0000000186264515
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7391498126089573,
+            "values_by_seed": [
+              0.7391498126089573,
+              0.7391498126089573,
+              0.7391498126089573
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.03572928160429001,
+            "values_by_seed": [
+              0.03572928160429001,
+              0.03572928160429001,
+              0.03572928160429001
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.026185357322295506,
+            "values_by_seed": [
+              0.025563646107912064,
+              0.026589741930365562,
+              0.026402683928608894
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6875,
+            "values_by_seed": [
+              0.71875,
+              0.71875,
+              0.625
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.625,
+            "values_by_seed": [
+              0.5625,
+              0.78125,
+              0.53125
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2577255169550578,
+            "values_by_seed": [
+              0.2573721408843994,
+              0.25768500566482544,
+              0.2581194043159485
+            ]
+          },
+          "mean_active_count": {
+            "mean": 103.53125,
+            "values_by_seed": [
+              103.53125,
+              103.53125,
+              103.53125
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.019998309831949005,
+            "values_by_seed": [
+              0.019998309831949005,
+              0.019998309831949005,
+              0.019998309831949005
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000223517418,
+            "values_by_seed": [
+              1.0000000223517418,
+              1.0000000223517418,
+              1.0000000223517418
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.8213580138981342,
+            "values_by_seed": [
+              0.8213580138981342,
+              0.8213580138981342,
+              0.8213580138981342
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.04647891968488693,
+            "values_by_seed": [
+              -0.04647891968488693,
+              -0.04647891968488693,
+              -0.04647891968488693
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.009507659822702408,
+            "values_by_seed": [
+              0.009201353415846825,
+              0.009669536724686623,
+              0.009652089327573776
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7916666666666666,
+            "values_by_seed": [
+              0.78125,
+              0.84375,
+              0.75
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.625,
+            "values_by_seed": [
+              0.5625,
+              0.78125,
+              0.53125
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2577417294184367,
+            "values_by_seed": [
+              0.2574223279953003,
+              0.2577187418937683,
+              0.25808411836624146
+            ]
+          },
+          "mean_active_count": {
+            "mean": 103.53125,
+            "values_by_seed": [
+              103.53125,
+              103.53125,
+              103.53125
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.019998309831949005,
+            "values_by_seed": [
+              0.019998309831949005,
+              0.019998309831949005,
+              0.019998309831949005
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9999999925494194,
+            "values_by_seed": [
+              0.9999999925494194,
+              0.9999999925494194,
+              0.9999999925494194
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.824692465364933,
+            "values_by_seed": [
+              0.824692465364933,
+              0.824692465364933,
+              0.824692465364933
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.049813371151685715,
+            "values_by_seed": [
+              -0.049813371151685715,
+              -0.049813371151685715,
+              -0.049813371151685715
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.009556181418399015,
+            "values_by_seed": [
+              0.009225476533174515,
+              0.009707316756248474,
+              0.00973575096577406
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7916666666666666,
+            "values_by_seed": [
+              0.78125,
+              0.84375,
+              0.75
+            ]
+          }
+        }
+      },
+      "0.25": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.6770833333333334,
+            "values_by_seed": [
+              0.65625,
+              0.78125,
+              0.59375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2683567702770233,
+            "values_by_seed": [
+              0.2679874300956726,
+              0.26837193965911865,
+              0.2687109410762787
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.937079569324851,
+            "values_by_seed": [
+              0.937079569324851,
+              0.937079569324851,
+              0.937079569324851
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.646865819580853,
+            "values_by_seed": [
+              0.646865819580853,
+              0.646865819580853,
+              0.646865819580853
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.1280132746323943,
+            "values_by_seed": [
+              0.1280132746323943,
+              0.1280132746323943,
+              0.1280132746323943
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.020051851868629456,
+            "values_by_seed": [
+              0.01958368346095085,
+              0.020398488268256187,
+              0.020173383876681328
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7916666666666666,
+            "values_by_seed": [
+              0.71875,
+              0.90625,
+              0.75
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.5208333333333334,
+            "values_by_seed": [
+              0.5625,
+              0.5,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2646954258282979,
+            "values_by_seed": [
+              0.26457464694976807,
+              0.2647078037261963,
+              0.26480382680892944
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778248,
+            "values_by_seed": [
+              0.2001158972377825,
+              0.2001158972377825,
+              0.2001158972377825
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9678288921713829,
+            "values_by_seed": [
+              0.9678288921713829,
+              0.9678288921713829,
+              0.9678288921713829
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7391498126089573,
+            "values_by_seed": [
+              0.7391498126089573,
+              0.7391498126089573,
+              0.7391498126089573
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.03572928160429001,
+            "values_by_seed": [
+              0.03572928160429001,
+              0.03572928160429001,
+              0.03572928160429001
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.01572306950887044,
+            "values_by_seed": [
+              0.015325566753745079,
+              0.016111070290207863,
+              0.015732571482658386
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6145833333333334,
+            "values_by_seed": [
+              0.65625,
+              0.6875,
+              0.5
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.4895833333333333,
+            "values_by_seed": [
+              0.46875,
+              0.65625,
+              0.34375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2551318009694417,
+            "values_by_seed": [
+              0.254911869764328,
+              0.25508108735084534,
+              0.25540244579315186
+            ]
+          },
+          "mean_active_count": {
+            "mean": 90.625,
+            "values_by_seed": [
+              90.625,
+              90.625,
+              90.625
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.0175053119567317,
+            "values_by_seed": [
+              0.0175053119567317,
+              0.0175053119567317,
+              0.0175053119567317
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9884578827768564,
+            "values_by_seed": [
+              0.9884578827768564,
+              0.9884578827768564,
+              0.9884578827768564
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.8213580138981342,
+            "values_by_seed": [
+              0.8213580138981342,
+              0.8213580138981342,
+              0.8213580138981342
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.04647891968488693,
+            "values_by_seed": [
+              -0.04647891968488693,
+              -0.04647891968488693,
+              -0.04647891968488693
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.005152755882591009,
+            "values_by_seed": [
+              0.005068414378911257,
+              0.0052711451426148415,
+              0.005118708126246929
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6875,
+            "values_by_seed": [
+              0.5625,
+              0.75,
+              0.75
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.4895833333333333,
+            "values_by_seed": [
+              0.46875,
+              0.65625,
+              0.34375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2551364600658417,
+            "values_by_seed": [
+              0.2549341320991516,
+              0.2551027834415436,
+              0.25537246465682983
+            ]
+          },
+          "mean_active_count": {
+            "mean": 91.1875,
+            "values_by_seed": [
+              91.1875,
+              91.1875,
+              91.1875
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.01761396561715279,
+            "values_by_seed": [
+              0.01761396561715279,
+              0.01761396561715279,
+              0.01761396561715279
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9886614568531513,
+            "values_by_seed": [
+              0.9886614568531513,
+              0.9886614568531513,
+              0.9886614568531513
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.824692465364933,
+            "values_by_seed": [
+              0.824692465364933,
+              0.824692465364933,
+              0.824692465364933
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.049813371151685715,
+            "values_by_seed": [
+              -0.049813371151685715,
+              -0.049813371151685715,
+              -0.049813371151685715
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.005226638012876113,
+            "values_by_seed": [
+              0.005105087999254465,
+              0.005334334913641214,
+              0.00524049112573266
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6875,
+            "values_by_seed": [
+              0.5625,
+              0.75,
+              0.75
+            ]
+          }
+        }
+      },
+      "1.0": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.4270833333333333,
+            "values_by_seed": [
+              0.4375,
+              0.4375,
+              0.40625
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2566238244374593,
+            "values_by_seed": [
+              0.25659117102622986,
+              0.2566657066345215,
+              0.2566145956516266
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8315082900226116,
+            "values_by_seed": [
+              0.8315082900226116,
+              0.8315082900226116,
+              0.8315082900226116
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.646865819580853,
+            "values_by_seed": [
+              0.646865819580853,
+              0.646865819580853,
+              0.646865819580853
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.1280132746323943,
+            "values_by_seed": [
+              0.1280132746323943,
+              0.1280132746323943,
+              0.1280132746323943
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": -0.0017931962696214516,
+            "values_by_seed": [
+              -0.0016460907645523548,
+              -0.001552314031869173,
+              -0.0021811840124428272
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5104166666666666,
+            "values_by_seed": [
+              0.46875,
+              0.5,
+              0.5625
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.4375,
+            "values_by_seed": [
+              0.46875,
+              0.375,
+              0.46875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25684160987536114,
+            "values_by_seed": [
+              0.2568645477294922,
+              0.25687575340270996,
+              0.2567845284938812
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778248,
+            "values_by_seed": [
+              0.2001158972377825,
+              0.2001158972377825,
+              0.2001158972377825
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8942956607788801,
+            "values_by_seed": [
+              0.8942956607788801,
+              0.8942956607788801,
+              0.8942956607788801
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7391498126089573,
+            "values_by_seed": [
+              0.7391498126089573,
+              0.7391498126089573,
+              0.7391498126089573
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.03572928160429001,
+            "values_by_seed": [
+              0.03572928160429001,
+              0.03572928160429001,
+              0.03572928160429001
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 8.046828831235568e-05,
+            "values_by_seed": [
+              1.0191928595304489e-05,
+              0.0003839479759335518,
+              -0.00015273503959178925
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5,
+            "values_by_seed": [
+              0.46875,
+              0.53125,
+              0.5
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.3854166666666667,
+            "values_by_seed": [
+              0.40625,
+              0.5,
+              0.25
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2521578172842662,
+            "values_by_seed": [
+              0.25214487314224243,
+              0.2521117329597473,
+              0.2522168457508087
+            ]
+          },
+          "mean_active_count": {
+            "mean": 84.03125,
+            "values_by_seed": [
+              84.03125,
+              84.03125,
+              84.03125
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.01623164960401777,
+            "values_by_seed": [
+              0.01623164960401777,
+              0.01623164960401777,
+              0.01623164960401777
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9441333469003439,
+            "values_by_seed": [
+              0.9441333469003439,
+              0.9441333469003439,
+              0.9441333469003439
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.8213580138981342,
+            "values_by_seed": [
+              0.8213580138981342,
+              0.8213580138981342,
+              0.8213580138981342
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.04647891968488693,
+            "values_by_seed": [
+              -0.04647891968488693,
+              -0.04647891968488693,
+              -0.04647891968488693
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": -0.00026159438615043956,
+            "values_by_seed": [
+              -4.8026442527770996e-05,
+              -0.0001718667335808277,
+              -0.00056488998234272
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.59375,
+            "values_by_seed": [
+              0.46875,
+              0.625,
+              0.6875
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.375,
+            "values_by_seed": [
+              0.40625,
+              0.46875,
+              0.25
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25209078192710876,
+            "values_by_seed": [
+              0.2520732581615448,
+              0.2520526051521301,
+              0.25214648246765137
+            ]
+          },
+          "mean_active_count": {
+            "mean": 85.1875,
+            "values_by_seed": [
+              85.1875,
+              85.1875,
+              85.1875
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.016454993239327795,
+            "values_by_seed": [
+              0.016454993239327795,
+              0.016454993239327795,
+              0.016454993239327795
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9446166697889566,
+            "values_by_seed": [
+              0.9446166697889566,
+              0.9446166697889566,
+              0.9446166697889566
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7748790942132473,
+            "values_by_seed": [
+              0.7748790942132473,
+              0.7748790942132473,
+              0.7748790942132473
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.824692465364933,
+            "values_by_seed": [
+              0.824692465364933,
+              0.824692465364933,
+              0.824692465364933
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.049813371151685715,
+            "values_by_seed": [
+              -0.049813371151685715,
+              -0.049813371151685715,
+              -0.049813371151685715
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": -0.000302545881519715,
+            "values_by_seed": [
+              -0.00013724388554692268,
+              -0.00023352168500423431,
+              -0.000536872074007988
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5833333333333334,
+            "values_by_seed": [
+              0.46875,
+              0.59375,
+              0.6875
+            ]
+          }
+        }
+      }
+    },
+    "old_calibration": {
+      "0.0": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.7222222222222222,
+            "values_by_seed": [
+              0.6666666666666666,
+              0.8333333333333334,
+              0.6666666666666666
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2699122627576192,
+            "values_by_seed": [
+              0.2693645656108856,
+              0.26978600025177,
+              0.270586222410202
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000049670537,
+            "values_by_seed": [
+              1.0000000049670537,
+              1.0000000049670537,
+              1.0000000049670537
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6617926955223083,
+            "values_by_seed": [
+              0.6617926955223083,
+              0.6617926955223083,
+              0.6617926955223083
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.12233654161294301,
+            "values_by_seed": [
+              0.12233654161294301,
+              0.12233654161294301,
+              0.12233654161294301
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.027090792233745258,
+            "values_by_seed": [
+              0.02663957141339779,
+              0.02706676907837391,
+              0.027566036209464073
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.8055555555555555,
+            "values_by_seed": [
+              0.8333333333333334,
+              0.9166666666666666,
+              0.6666666666666666
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.5277777777777778,
+            "values_by_seed": [
+              0.5,
+              0.5833333333333334,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2733522653579712,
+            "values_by_seed": [
+              0.27308034896850586,
+              0.273507684469223,
+              0.2734687626361847
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778253,
+            "values_by_seed": [
+              0.20011589723778253,
+              0.20011589723778253,
+              0.20011589723778253
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000099341075,
+            "values_by_seed": [
+              1.0000000099341075,
+              1.0000000099341075,
+              1.0000000099341075
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7158722331126531,
+            "values_by_seed": [
+              0.7158722331126531,
+              0.7158722331126531,
+              0.7158722331126531
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.06825700402259827,
+            "values_by_seed": [
+              0.06825700402259827,
+              0.06825700402259827,
+              0.06825700402259827
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.03257717316349348,
+            "values_by_seed": [
+              0.03189680352807045,
+              0.03297937288880348,
+              0.03285534307360649
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6666666666666666,
+            "values_by_seed": [
+              0.6666666666666666,
+              0.75,
+              0.5833333333333334
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.5555555555555555,
+            "values_by_seed": [
+              0.5,
+              0.6666666666666666,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.258959303299586,
+            "values_by_seed": [
+              0.2586388885974884,
+              0.2588053047657013,
+              0.25943371653556824
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.83333333333333,
+            "values_by_seed": [
+              104.83333333333333,
+              104.83333333333333,
+              104.83333333333333
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.02024982293477561,
+            "values_by_seed": [
+              0.02024982293477561,
+              0.02024982293477561,
+              0.02024982293477561
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9999999950329462,
+            "values_by_seed": [
+              0.9999999950329462,
+              0.9999999950329462,
+              0.9999999950329462
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.789665957291921,
+            "values_by_seed": [
+              0.789665957291921,
+              0.789665957291921,
+              0.789665957291921
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.005536720156669617,
+            "values_by_seed": [
+              -0.005536720156669617,
+              -0.005536720156669617,
+              -0.005536720156669617
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.012767658879359564,
+            "values_by_seed": [
+              0.0125571982935071,
+              0.012642263434827328,
+              0.013103514909744263
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7777777777777778,
+            "values_by_seed": [
+              0.8333333333333334,
+              0.8333333333333334,
+              0.6666666666666666
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.5833333333333334,
+            "values_by_seed": [
+              0.5,
+              0.75,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2587066392103831,
+            "values_by_seed": [
+              0.25849005579948425,
+              0.2586043179035187,
+              0.25902554392814636
+            ]
+          },
+          "mean_active_count": {
+            "mean": 105.16666666666667,
+            "values_by_seed": [
+              105.16666666666667,
+              105.16666666666667,
+              105.16666666666667
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020314210289099223,
+            "values_by_seed": [
+              0.020314210289099223,
+              0.020314210289099223,
+              0.020314210289099223
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000298023224,
+            "values_by_seed": [
+              1.0000000298023224,
+              1.0000000298023224,
+              1.0000000298023224
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7983097980419794,
+            "values_by_seed": [
+              0.7983097980419794,
+              0.7983097980419794,
+              0.7983097980419794
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.01418056090672811,
+            "values_by_seed": [
+              -0.01418056090672811,
+              -0.01418056090672811,
+              -0.01418056090672811
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.012303765242298445,
+            "values_by_seed": [
+              0.012217436917126179,
+              0.012287222780287266,
+              0.012406636029481888
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.75,
+            "values_by_seed": [
+              0.75,
+              0.8333333333333334,
+              0.6666666666666666
+            ]
+          }
+        }
+      },
+      "0.25": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.6944444444444443,
+            "values_by_seed": [
+              0.6666666666666666,
+              0.75,
+              0.6666666666666666
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.26468374331792194,
+            "values_by_seed": [
+              0.2642846405506134,
+              0.26457536220550537,
+              0.2651912271976471
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.942816416422526,
+            "values_by_seed": [
+              0.942816416422526,
+              0.942816416422526,
+              0.942816416422526
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6617926955223083,
+            "values_by_seed": [
+              0.6617926955223083,
+              0.6617926955223083,
+              0.6617926955223083
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.12233654161294301,
+            "values_by_seed": [
+              0.12233654161294301,
+              0.12233654161294301,
+              0.12233654161294301
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.017648919795950253,
+            "values_by_seed": [
+              0.01735343225300312,
+              0.01759517751634121,
+              0.01799814961850643
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7777777777777778,
+            "values_by_seed": [
+              0.8333333333333334,
+              0.8333333333333334,
+              0.6666666666666666
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.47222222222222227,
+            "values_by_seed": [
+              0.5,
+              0.4166666666666667,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.26761995752652484,
+            "values_by_seed": [
+              0.2674275040626526,
+              0.26765120029449463,
+              0.26778116822242737
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778253,
+            "values_by_seed": [
+              0.20011589723778253,
+              0.20011589723778253,
+              0.20011589723778253
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9645367562770844,
+            "values_by_seed": [
+              0.9645367562770844,
+              0.9645367562770844,
+              0.9645367562770844
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7158722331126531,
+            "values_by_seed": [
+              0.7158722331126531,
+              0.7158722331126531,
+              0.7158722331126531
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.06825700402259827,
+            "values_by_seed": [
+              0.06825700402259827,
+              0.06825700402259827,
+              0.06825700402259827
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.021257878591616947,
+            "values_by_seed": [
+              0.02074153535068035,
+              0.02143245004117489,
+              0.021599650382995605
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6388888888888888,
+            "values_by_seed": [
+              0.6666666666666666,
+              0.6666666666666666,
+              0.5833333333333334
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.47222222222222227,
+            "values_by_seed": [
+              0.4166666666666667,
+              0.5833333333333334,
+              0.4166666666666667
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25638653834660846,
+            "values_by_seed": [
+              0.2561231553554535,
+              0.2562353014945984,
+              0.25680115818977356
+            ]
+          },
+          "mean_active_count": {
+            "mean": 90.91666666666667,
+            "values_by_seed": [
+              90.91666666666667,
+              90.91666666666667,
+              90.91666666666667
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.017561650891764854,
+            "values_by_seed": [
+              0.017561650891764854,
+              0.017561650891764854,
+              0.017561650891764854
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9862985213597616,
+            "values_by_seed": [
+              0.9862985213597616,
+              0.9862985213597616,
+              0.9862985213597616
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.789665957291921,
+            "values_by_seed": [
+              0.789665957291921,
+              0.789665957291921,
+              0.789665957291921
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.005536720156669617,
+            "values_by_seed": [
+              -0.005536720156669617,
+              -0.005536720156669617,
+              -0.005536720156669617
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.007923226182659468,
+            "values_by_seed": [
+              0.00779700418934226,
+              0.007757009472697973,
+              0.008215664885938168
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7222222222222222,
+            "values_by_seed": [
+              0.6666666666666666,
+              0.8333333333333334,
+              0.6666666666666666
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.47222222222222227,
+            "values_by_seed": [
+              0.4166666666666667,
+              0.5833333333333334,
+              0.4166666666666667
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25613757967948914,
+            "values_by_seed": [
+              0.2559567987918854,
+              0.2560378611087799,
+              0.2564180791378021
+            ]
+          },
+          "mean_active_count": {
+            "mean": 92.91666666666667,
+            "values_by_seed": [
+              92.91666666666667,
+              92.91666666666667,
+              92.91666666666667
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.01794797501770652,
+            "values_by_seed": [
+              0.01794797501770652,
+              0.01794797501770652,
+              0.01794797501770652
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9866210122903188,
+            "values_by_seed": [
+              0.9866210122903188,
+              0.9866210122903188,
+              0.9866210122903188
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7983097980419794,
+            "values_by_seed": [
+              0.7983097980419794,
+              0.7983097980419794,
+              0.7983097980419794
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.01418056090672811,
+            "values_by_seed": [
+              -0.01418056090672811,
+              -0.01418056090672811,
+              -0.01418056090672811
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0076028577362497645,
+            "values_by_seed": [
+              0.0075340657494962215,
+              0.007529091089963913,
+              0.00774541636928916
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6944444444444443,
+            "values_by_seed": [
+              0.6666666666666666,
+              0.75,
+              0.6666666666666666
+            ]
+          }
+        }
+      },
+      "1.0": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.3333333333333333,
+            "values_by_seed": [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2548285623391469,
+            "values_by_seed": [
+              0.2547759711742401,
+              0.25478866696357727,
+              0.2549210488796234
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8357390016317368,
+            "values_by_seed": [
+              0.8357390016317368,
+              0.8357390016317368,
+              0.8357390016317368
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6617926955223083,
+            "values_by_seed": [
+              0.6617926955223083,
+              0.6617926955223083,
+              0.6617926955223083
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.12233654161294301,
+            "values_by_seed": [
+              0.12233654161294301,
+              0.12233654161294301,
+              0.12233654161294301
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": -0.0008899437185997764,
+            "values_by_seed": [
+              -0.0008914495701901615,
+              -0.0008644647896289825,
+              -0.0009139167959801853
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5555555555555555,
+            "values_by_seed": [
+              0.4166666666666667,
+              0.6666666666666666,
+              0.5833333333333334
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.38888888888888884,
+            "values_by_seed": [
+              0.3333333333333333,
+              0.3333333333333333,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2573300004005432,
+            "values_by_seed": [
+              0.25728869438171387,
+              0.2572626769542694,
+              0.25743862986564636
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778253,
+            "values_by_seed": [
+              0.20011589723778253,
+              0.20011589723778253,
+              0.20011589723778253
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8833595514297485,
+            "values_by_seed": [
+              0.8833595514297485,
+              0.8833595514297485,
+              0.8833595514297485
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7158722331126531,
+            "values_by_seed": [
+              0.7158722331126531,
+              0.7158722331126531,
+              0.7158722331126531
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.06825700402259827,
+            "values_by_seed": [
+              0.06825700402259827,
+              0.06825700402259827,
+              0.06825700402259827
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0009828702507851024,
+            "values_by_seed": [
+              0.0007702969014644623,
+              0.0009246344561688602,
+              0.0012536793947219849
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5,
+            "values_by_seed": [
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.3888888888888889,
+            "values_by_seed": [
+              0.4166666666666667,
+              0.4166666666666667,
+              0.3333333333333333
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2527570029099782,
+            "values_by_seed": [
+              0.2526896595954895,
+              0.252651572227478,
+              0.25292977690696716
+            ]
+          },
+          "mean_active_count": {
+            "mean": 83.91666666666667,
+            "values_by_seed": [
+              83.91666666666667,
+              83.91666666666667,
+              83.91666666666667
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.01620951645096903,
+            "values_by_seed": [
+              0.01620951645096903,
+              0.01620951645096903,
+              0.01620951645096903
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.932154173652331,
+            "values_by_seed": [
+              0.932154173652331,
+              0.932154173652331,
+              0.932154173652331
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.789665957291921,
+            "values_by_seed": [
+              0.789665957291921,
+              0.789665957291921,
+              0.789665957291921
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.005536720156669617,
+            "values_by_seed": [
+              -0.005536720156669617,
+              -0.005536720156669617,
+              -0.005536720156669617
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0008797744909922282,
+            "values_by_seed": [
+              0.0009997561573982239,
+              0.0007711797952651978,
+              0.0008683875203132629
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6111111111111112,
+            "values_by_seed": [
+              0.5833333333333334,
+              0.6666666666666666,
+              0.5833333333333334
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.3611111111111111,
+            "values_by_seed": [
+              0.4166666666666667,
+              0.3333333333333333,
+              0.3333333333333333
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2525362769762675,
+            "values_by_seed": [
+              0.2524726688861847,
+              0.2524614930152893,
+              0.2526746690273285
+            ]
+          },
+          "mean_active_count": {
+            "mean": 83.83333333333333,
+            "values_by_seed": [
+              83.83333333333333,
+              83.83333333333333,
+              83.83333333333333
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.01619341961238813,
+            "values_by_seed": [
+              0.01619341961238813,
+              0.01619341961238813,
+              0.01619341961238813
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9341804732879003,
+            "values_by_seed": [
+              0.9341804732879003,
+              0.9341804732879003,
+              0.9341804732879003
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7841292371352514,
+            "values_by_seed": [
+              0.7841292371352514,
+              0.7841292371352514,
+              0.7841292371352514
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.7983097980419794,
+            "values_by_seed": [
+              0.7983097980419794,
+              0.7983097980419794,
+              0.7983097980419794
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": -0.01418056090672811,
+            "values_by_seed": [
+              -0.01418056090672811,
+              -0.01418056090672811,
+              -0.01418056090672811
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0005386206806482127,
+            "values_by_seed": [
+              0.0006623801891691983,
+              0.0004915148019790649,
+              0.0004619670507963747
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5833333333333334,
+            "values_by_seed": [
+              0.5833333333333334,
+              0.5833333333333334,
+              0.5833333333333334
+            ]
+          }
+        }
+      }
+    },
+    "reused_confirmation_32": {
+      "0.0": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.5208333333333334,
+            "values_by_seed": [
+              0.5,
+              0.5625,
+              0.5
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.26592249671618146,
+            "values_by_seed": [
+              0.26577574014663696,
+              0.26645249128341675,
+              0.2655392587184906
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000093132257,
+            "values_by_seed": [
+              1.0000000093132257,
+              1.0000000093132257,
+              1.0000000093132257
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.5249805059283972,
+            "values_by_seed": [
+              0.5249805059283972,
+              0.5249805059283972,
+              0.5249805059283972
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.23680759966373444,
+            "values_by_seed": [
+              0.23680759966373444,
+              0.23680759966373444,
+              0.23680759966373444
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.02140875905752182,
+            "values_by_seed": [
+              0.02073102444410324,
+              0.022244343534111977,
+              0.021250909194350243
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.75,
+            "values_by_seed": [
+              0.6875,
+              0.8125,
+              0.75
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.3854166666666667,
+            "values_by_seed": [
+              0.40625,
+              0.34375,
+              0.40625
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2681927482287089,
+            "values_by_seed": [
+              0.26821452379226685,
+              0.26901769638061523,
+              0.26734602451324463
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778248,
+            "values_by_seed": [
+              0.2001158972377825,
+              0.2001158972377825,
+              0.2001158972377825
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000186264515,
+            "values_by_seed": [
+              1.0000000186264515,
+              1.0000000186264515,
+              1.0000000186264515
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6783325914293528,
+            "values_by_seed": [
+              0.6783325914293528,
+              0.6783325914293528,
+              0.6783325914293528
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.08345551416277885,
+            "values_by_seed": [
+              0.08345551416277885,
+              0.08345551416277885,
+              0.08345551416277885
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.02552442563076814,
+            "values_by_seed": [
+              0.02495221234858036,
+              0.02691074088215828,
+              0.02471032366156578
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6875,
+            "values_by_seed": [
+              0.71875,
+              0.75,
+              0.59375
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.46875,
+            "values_by_seed": [
+              0.46875,
+              0.46875,
+              0.46875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25675520300865173,
+            "values_by_seed": [
+              0.2565237581729889,
+              0.25674760341644287,
+              0.25699424743652344
+            ]
+          },
+          "mean_active_count": {
+            "mean": 91.28125,
+            "values_by_seed": [
+              91.28125,
+              91.28125,
+              91.28125
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.017632074560556307,
+            "values_by_seed": [
+              0.017632074560556307,
+              0.017632074560556307,
+              0.017632074560556307
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 1.0000000335276127,
+            "values_by_seed": [
+              1.0000000335276127,
+              1.0000000335276127,
+              1.0000000335276127
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6193217243999243,
+            "values_by_seed": [
+              0.6193217243999243,
+              0.6193217243999243,
+              0.6193217243999243
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.14246638119220734,
+            "values_by_seed": [
+              0.14246638119220734,
+              0.14246638119220734,
+              0.14246638119220734
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.00897945649921894,
+            "values_by_seed": [
+              0.008801750838756561,
+              0.009032584726810455,
+              0.009104033932089806
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.75,
+            "values_by_seed": [
+              0.6875,
+              0.78125,
+              0.78125
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.4895833333333333,
+            "values_by_seed": [
+              0.46875,
+              0.53125,
+              0.46875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25660935044288635,
+            "values_by_seed": [
+              0.2563849091529846,
+              0.25661125779151917,
+              0.2568318843841553
+            ]
+          },
+          "mean_active_count": {
+            "mean": 91.65625,
+            "values_by_seed": [
+              91.65625,
+              91.65625,
+              91.65625
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.017704510334170368,
+            "values_by_seed": [
+              0.017704510334170368,
+              0.017704510334170368,
+              0.017704510334170368
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9999999850988388,
+            "values_by_seed": [
+              0.9999999850988388,
+              0.9999999850988388,
+              0.9999999850988388
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6368171721696854,
+            "values_by_seed": [
+              0.6368171721696854,
+              0.6368171721696854,
+              0.6368171721696854
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.12497093342244625,
+            "values_by_seed": [
+              0.12497093342244625,
+              0.12497093342244625,
+              0.12497093342244625
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.008708298516770204,
+            "values_by_seed": [
+              0.008516572415828705,
+              0.008770829066634178,
+              0.008837494067847729
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.7604166666666666,
+            "values_by_seed": [
+              0.6875,
+              0.8125,
+              0.78125
+            ]
+          }
+        }
+      },
+      "0.25": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.5208333333333334,
+            "values_by_seed": [
+              0.5625,
+              0.53125,
+              0.46875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2638123730818431,
+            "values_by_seed": [
+              0.2637256383895874,
+              0.26433220505714417,
+              0.2633792757987976
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9225622303783894,
+            "values_by_seed": [
+              0.9225622303783894,
+              0.9225622303783894,
+              0.9225622303783894
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.5249805059283972,
+            "values_by_seed": [
+              0.5249805059283972,
+              0.5249805059283972,
+              0.5249805059283972
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.23680759966373444,
+            "values_by_seed": [
+              0.23680759966373444,
+              0.23680759966373444,
+              0.23680759966373444
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.016202849025527637,
+            "values_by_seed": [
+              0.015636511147022247,
+              0.01695570908486843,
+              0.01601632684469223
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.71875,
+            "values_by_seed": [
+              0.65625,
+              0.78125,
+              0.71875
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.3854166666666667,
+            "values_by_seed": [
+              0.40625,
+              0.34375,
+              0.40625
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.26536590854326886,
+            "values_by_seed": [
+              0.2653946876525879,
+              0.26605546474456787,
+              0.26464757323265076
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778248,
+            "values_by_seed": [
+              0.2001158972377825,
+              0.2001158972377825,
+              0.2001158972377825
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9615515135228634,
+            "values_by_seed": [
+              0.9615515135228634,
+              0.9615515135228634,
+              0.9615515135228634
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6783325914293528,
+            "values_by_seed": [
+              0.6783325914293528,
+              0.6783325914293528,
+              0.6783325914293528
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.08345551416277885,
+            "values_by_seed": [
+              0.08345551416277885,
+              0.08345551416277885,
+              0.08345551416277885
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.018160393461585045,
+            "values_by_seed": [
+              0.017631037160754204,
+              0.01916935294866562,
+              0.017680790275335312
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6041666666666666,
+            "values_by_seed": [
+              0.65625,
+              0.65625,
+              0.5
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.4375,
+            "values_by_seed": [
+              0.4375,
+              0.5,
+              0.375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25477030873298645,
+            "values_by_seed": [
+              0.2545776069164276,
+              0.25475549697875977,
+              0.254977822303772
+            ]
+          },
+          "mean_active_count": {
+            "mean": 77.46875,
+            "values_by_seed": [
+              77.46875,
+              77.46875,
+              77.46875
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.014964023565771681,
+            "values_by_seed": [
+              0.014964023565771683,
+              0.014964023565771683,
+              0.014964023565771683
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9730590265244246,
+            "values_by_seed": [
+              0.9730590265244246,
+              0.9730590265244246,
+              0.9730590265244246
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6193217243999243,
+            "values_by_seed": [
+              0.6193217243999243,
+              0.6193217243999243,
+              0.6193217243999243
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.14246638119220734,
+            "values_by_seed": [
+              0.14246638119220734,
+              0.14246638119220734,
+              0.14246638119220734
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0052832091848055525,
+            "values_by_seed": [
+              0.0051252334378659725,
+              0.005271868780255318,
+              0.005452525336295366
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6979166666666666,
+            "values_by_seed": [
+              0.65625,
+              0.71875,
+              0.71875
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.4375,
+            "values_by_seed": [
+              0.4375,
+              0.5,
+              0.375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2547028958797455,
+            "values_by_seed": [
+              0.2545125484466553,
+              0.2546994984149933,
+              0.2548966407775879
+            ]
+          },
+          "mean_active_count": {
+            "mean": 77.59375,
+            "values_by_seed": [
+              77.59375,
+              77.59375,
+              77.59375
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.014988168823643037,
+            "values_by_seed": [
+              0.014988168823643037,
+              0.014988168823643037,
+              0.014988168823643037
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.9740895666182041,
+            "values_by_seed": [
+              0.9740895666182041,
+              0.9740895666182041,
+              0.9740895666182041
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6368171721696854,
+            "values_by_seed": [
+              0.6368171721696854,
+              0.6368171721696854,
+              0.6368171721696854
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.12497093342244625,
+            "values_by_seed": [
+              0.12497093342244625,
+              0.12497093342244625,
+              0.12497093342244625
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.005137736443430185,
+            "values_by_seed": [
+              0.004958950448781252,
+              0.005136168096214533,
+              0.005318090785294771
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.6979166666666666,
+            "values_by_seed": [
+              0.625,
+              0.71875,
+              0.75
+            ]
+          }
+        }
+      },
+      "1.0": {
+        "native_topk_2": {
+          "accuracy": {
+            "mean": 0.375,
+            "values_by_seed": [
+              0.375,
+              0.34375,
+              0.40625
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.257363756497701,
+            "values_by_seed": [
+              0.25720104575157166,
+              0.25754547119140625,
+              0.2573447525501251
+            ]
+          },
+          "mean_active_count": {
+            "mean": 104.0,
+            "values_by_seed": [
+              104.0,
+              104.0,
+              104.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.020088854548966584,
+            "values_by_seed": [
+              0.020088854548966584,
+              0.020088854548966584,
+              0.020088854548966584
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.782634662464261,
+            "values_by_seed": [
+              0.782634662464261,
+              0.782634662464261,
+              0.782634662464261
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.5249805059283972,
+            "values_by_seed": [
+              0.5249805059283972,
+              0.5249805059283972,
+              0.5249805059283972
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.23680759966373444,
+            "values_by_seed": [
+              0.23680759966373444,
+              0.23680759966373444,
+              0.23680759966373444
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.00312627541522185,
+            "values_by_seed": [
+              0.0028558247722685337,
+              0.0032059159129858017,
+              0.003317085560411215
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5208333333333334,
+            "values_by_seed": [
+              0.53125,
+              0.53125,
+              0.5
+            ]
+          }
+        },
+        "topk_20": {
+          "accuracy": {
+            "mean": 0.40625,
+            "values_by_seed": [
+              0.375,
+              0.375,
+              0.46875
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.2584775686264038,
+            "values_by_seed": [
+              0.25838279724121094,
+              0.2586885094642639,
+              0.2583613991737366
+            ]
+          },
+          "mean_active_count": {
+            "mean": 1036.0,
+            "values_by_seed": [
+              1036.0,
+              1036.0,
+              1036.0
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.20011589723778248,
+            "values_by_seed": [
+              0.2001158972377825,
+              0.2001158972377825,
+              0.2001158972377825
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8689262866973877,
+            "values_by_seed": [
+              0.8689262866973877,
+              0.8689262866973877,
+              0.8689262866973877
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6783325914293528,
+            "values_by_seed": [
+              0.6783325914293528,
+              0.6783325914293528,
+              0.6783325914293528
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.08345551416277885,
+            "values_by_seed": [
+              0.08345551416277885,
+              0.08345551416277885,
+              0.08345551416277885
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": 0.0031019609111050763,
+            "values_by_seed": [
+              0.002731588203459978,
+              0.0031103589572012424,
+              0.003463935572654009
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5520833333333334,
+            "values_by_seed": [
+              0.5625,
+              0.59375,
+              0.5
+            ]
+          }
+        },
+        "subtractive_global": {
+          "accuracy": {
+            "mean": 0.3854166666666667,
+            "values_by_seed": [
+              0.375,
+              0.40625,
+              0.375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25173211097717285,
+            "values_by_seed": [
+              0.25155407190322876,
+              0.2516394853591919,
+              0.2520027756690979
+            ]
+          },
+          "mean_active_count": {
+            "mean": 68.71875,
+            "values_by_seed": [
+              68.71875,
+              68.71875,
+              68.71875
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.013273855514776898,
+            "values_by_seed": [
+              0.013273855514776898,
+              0.013273855514776898,
+              0.013273855514776898
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8633227311074734,
+            "values_by_seed": [
+              0.8633227311074734,
+              0.8633227311074734,
+              0.8633227311074734
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6193217243999243,
+            "values_by_seed": [
+              0.6193217243999243,
+              0.6193217243999243,
+              0.6193217243999243
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.14246638119220734,
+            "values_by_seed": [
+              0.14246638119220734,
+              0.14246638119220734,
+              0.14246638119220734
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": -0.00016789045184850693,
+            "values_by_seed": [
+              -0.00019255327060818672,
+              -0.0002750735729932785,
+              -3.604451194405556e-05
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5625,
+            "values_by_seed": [
+              0.46875,
+              0.59375,
+              0.625
+            ]
+          }
+        },
+        "subtractive_local": {
+          "accuracy": {
+            "mean": 0.375,
+            "values_by_seed": [
+              0.375,
+              0.40625,
+              0.34375
+            ]
+          },
+          "mean_correct_probability": {
+            "mean": 0.25177232424418133,
+            "values_by_seed": [
+              0.25158625841140747,
+              0.2516968846321106,
+              0.2520338296890259
+            ]
+          },
+          "mean_active_count": {
+            "mean": 68.40625,
+            "values_by_seed": [
+              68.40625,
+              68.40625,
+              68.40625
+            ]
+          },
+          "mean_active_fraction": {
+            "mean": 0.013213492370098513,
+            "values_by_seed": [
+              0.013213492370098513,
+              0.013213492370098513,
+              0.013213492370098513
+            ]
+          },
+          "mean_hidden_cosine_to_clean": {
+            "mean": 0.8700794726610184,
+            "values_by_seed": [
+              0.8700794726610184,
+              0.8700794726610184,
+              0.8700794726610184
+            ]
+          },
+          "mean_input_next_class_cosine": {
+            "mean": 0.7617881055921316,
+            "values_by_seed": [
+              0.7617881055921316,
+              0.7617881055921316,
+              0.7617881055921316
+            ]
+          },
+          "mean_hidden_next_class_cosine": {
+            "mean": 0.6368171721696854,
+            "values_by_seed": [
+              0.6368171721696854,
+              0.6368171721696854,
+              0.6368171721696854
+            ]
+          },
+          "mean_pattern_separation_delta": {
+            "mean": 0.12497093342244625,
+            "values_by_seed": [
+              0.12497093342244625,
+              0.12497093342244625,
+              0.12497093342244625
+            ]
+          },
+          "paired_class_mean_correct_minus_distractor_probability": {
+            "mean": -0.00010698459421594937,
+            "values_by_seed": [
+              -0.00015847478061914444,
+              -0.00021185679361224174,
+              4.9377791583538055e-05
+            ]
+          },
+          "paired_class_correct_exceeds_distractor_fraction": {
+            "mean": 0.5520833333333334,
+            "values_by_seed": [
+              0.4375,
+              0.59375,
+              0.625
+            ]
+          }
+        }
+      }
+    }
+  },
+  "posthoc_matched_readout": {
+    "status": "added after inspecting the frozen-readout mechanism results; exploratory and not preregistered",
+    "purpose": "distinguish hidden representation effects from mismatch to MBON weights trained under native 2% top-k",
+    "method": "same supervised dual-kernel ridge linear head for every hidden variant; per-row hidden L2 normalization; lambda fixed at 0.1 without tuning",
+    "boundary": "supervised probe on the same 32 old training labels; not Novi reward learning, not a production policy, and coefficient scores are not probabilities or confidence",
+    "feature_count": 5177,
+    "training_labels": 32,
+    "ridge_lambda": 0.1,
+    "capacity_caveat": "all probes receive 5177 feature coordinates and 32 labels, but variants retain unequal effective active counts",
+    "encoder_replicates": "PN-to-KC tensors and hidden features are identical across seeds 601/602/603; computed once, not treated as three independent encoder results",
+    "shared_input_encoder_sha256": "5d3c8f20df14da60e76e5b88f58b3744460a199a6afd9637e406b09606bd5e2d",
+    "source_sha256": "43c9fbf4b5626e207211d92bfe19aaa578a1eeae07547abc49684c39f43e4080",
+    "probe_checkpoints": {
+      "native_topk_2": {
+        "path": "results/mechanism-bridge/inhibition-ridge-native_topk_2.safetensors",
+        "sha256": "b9cd282ec34cc3221b684d8557a7d8670b1471d890612e84aa3067f0e4bf2d0a",
+        "metadata": {
+          "variant": "native_topk_2",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      },
+      "topk_20": {
+        "path": "results/mechanism-bridge/inhibition-ridge-topk_20.safetensors",
+        "sha256": "f3a8a78a7ca6b981cfdee299fcf017a0173245f3c2db799ddef7e4530afb6086",
+        "metadata": {
+          "variant": "topk_20",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      },
+      "subtractive_global": {
+        "path": "results/mechanism-bridge/inhibition-ridge-subtractive_global.safetensors",
+        "sha256": "4ba1b6039659b0eb63c9c09618b9b48841271b6cc9185f87618c2810ad322d8a",
+        "metadata": {
+          "variant": "subtractive_global",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      },
+      "subtractive_local": {
+        "path": "results/mechanism-bridge/inhibition-ridge-subtractive_local.safetensors",
+        "sha256": "68d91411e5b066ee55ebb31e19bcc37d1ab3ac466148a31663015ab5344cf3c6",
+        "metadata": {
+          "variant": "subtractive_local",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      }
+    },
+    "variants": {
+      "native_topk_2": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8943324168125321,
+          "mean_correct_minus_next_class_score": 0.8604650455103273,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 104.0,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.65625,
+            "mean_correct_coefficient_score": 0.49171706328355963,
+            "mean_correct_minus_next_class_score": 0.3774009667564291,
+            "correct_exceeds_next_class_fraction": 0.78125,
+            "mean_effective_active_count": 104.0
+          },
+          "0.25": {
+            "accuracy": 0.59375,
+            "mean_correct_coefficient_score": 0.4523071831514417,
+            "mean_correct_minus_next_class_score": 0.27788219458842445,
+            "correct_exceeds_next_class_fraction": 0.75,
+            "mean_effective_active_count": 104.0
+          },
+          "1.0": {
+            "accuracy": 0.3125,
+            "mean_correct_coefficient_score": 0.33234171269677454,
+            "mean_correct_minus_next_class_score": 0.02995662691536545,
+            "correct_exceeds_next_class_fraction": 0.5625,
+            "mean_effective_active_count": 104.0
+          }
+        }
+      },
+      "topk_20": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8951761322838763,
+          "mean_correct_minus_next_class_score": 0.8604462084964686,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 1036.0,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.65625,
+            "mean_correct_coefficient_score": 0.5583201711273729,
+            "mean_correct_minus_next_class_score": 0.46281708713929903,
+            "correct_exceeds_next_class_fraction": 0.875,
+            "mean_effective_active_count": 1036.0
+          },
+          "0.25": {
+            "accuracy": 0.65625,
+            "mean_correct_coefficient_score": 0.5057799452995214,
+            "mean_correct_minus_next_class_score": 0.3241387337289815,
+            "correct_exceeds_next_class_fraction": 0.90625,
+            "mean_effective_active_count": 1036.0
+          },
+          "1.0": {
+            "accuracy": 0.4375,
+            "mean_correct_coefficient_score": 0.3720516671252454,
+            "mean_correct_minus_next_class_score": 0.027896924399373094,
+            "correct_exceeds_next_class_fraction": 0.5625,
+            "mean_effective_active_count": 1036.0
+          }
+        }
+      },
+      "subtractive_global": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8057629753427489,
+          "mean_correct_minus_next_class_score": 0.7402866867351602,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 103.53125,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.6875,
+            "mean_correct_coefficient_score": 0.5146371730548571,
+            "mean_correct_minus_next_class_score": 0.4484096220154643,
+            "correct_exceeds_next_class_fraction": 0.84375,
+            "mean_effective_active_count": 91.28125
+          },
+          "0.25": {
+            "accuracy": 0.53125,
+            "mean_correct_coefficient_score": 0.46107142572402393,
+            "mean_correct_minus_next_class_score": 0.293308926389031,
+            "correct_exceeds_next_class_fraction": 0.75,
+            "mean_effective_active_count": 77.46875
+          },
+          "1.0": {
+            "accuracy": 0.40625,
+            "mean_correct_coefficient_score": 0.3412171489237943,
+            "mean_correct_minus_next_class_score": 0.022361383064798467,
+            "correct_exceeds_next_class_fraction": 0.5625,
+            "mean_effective_active_count": 68.71875
+          }
+        }
+      },
+      "subtractive_local": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8057399501620814,
+          "mean_correct_minus_next_class_score": 0.7398768028670124,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 103.53125,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.53125,
+            "mean_correct_coefficient_score": 0.5096715254805446,
+            "mean_correct_minus_next_class_score": 0.4268559257454222,
+            "correct_exceeds_next_class_fraction": 0.84375,
+            "mean_effective_active_count": 91.65625
+          },
+          "0.25": {
+            "accuracy": 0.5,
+            "mean_correct_coefficient_score": 0.45357140920332784,
+            "mean_correct_minus_next_class_score": 0.27317276334699636,
+            "correct_exceeds_next_class_fraction": 0.6875,
+            "mean_effective_active_count": 77.59375
+          },
+          "1.0": {
+            "accuracy": 0.34375,
+            "mean_correct_coefficient_score": 0.33521642568415094,
+            "mean_correct_minus_next_class_score": 0.015026796651628052,
+            "correct_exceeds_next_class_fraction": 0.5,
+            "mean_effective_active_count": 68.40625
+          }
+        }
+      }
+    },
+    "pre_append_report_sha256": "ab871da871dc2a06014417bfe7fbb25756257737309150350dc28b05cc45bf24"
+  }
+}

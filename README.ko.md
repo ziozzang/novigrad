@@ -83,3 +83,5 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 생물학적 메커니즘 진단: [EmbeddingGemma 희소성, FunctionGemma 거절, 문맥 기억, 순차 지연 보상](examples/bio_bridge/README.ko.md)과 [일차 문헌 연구](examples/bio_bridge/RESEARCH.ko.md).
 
 신호 타이밍과 세기: [지속 입력·단발 입력, 외부 기억, 보상 크기, 반복·간격 학습 비교](examples/bio_bridge/SIGNAL_RESULTS.ko.md).
+
+초파리 메커니즘 추출·비교: [감각 적응, APL형 억제, 보상 흔적과 대조군 실험](examples/bio_bridge/MECHANISM_RESULTS.ko.md).

@@ -103,3 +103,5 @@ Further research: [grounded goals, sensor reliability and reward-learning mechan
 Biological mechanism diagnostics: [EmbeddingGemma sparsity, FunctionGemma abstention, context memory, and sequential delayed credit](examples/bio_bridge/README.md), with [primary-source research](examples/bio_bridge/RESEARCH.md).
 
 Signal timing and strength: [continuous versus one-shot input, host memory, reward magnitude, and spaced/repeated exposure](examples/bio_bridge/SIGNAL_RESULTS.md).
+
+Fly-inspired mechanism extraction: [adaptation, APL-style inhibition, and eligibility traces with matched controls](examples/bio_bridge/MECHANISM_RESULTS.md).

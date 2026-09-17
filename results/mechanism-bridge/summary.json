@@ -1,0 +1,2351 @@
+{
+  "scope": "Descriptive mechanism contrasts; reused datasets; independent module tasks are not directly comparable accuracy benchmarks",
+  "adaptation": [
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "direct",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.263812353524069,
+      "accuracy_by_seed": [
+        0.5625,
+        0.53125,
+        0.46875
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.4759114583333333,
+      "foreground_correct_probability": 0.26920400840269093,
+      "accuracy_by_seed": [
+        0.50390625,
+        0.5,
+        0.423828125
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.5260416666666666,
+      "foreground_correct_probability": 0.2655697960969216,
+      "accuracy_by_seed": [
+        0.515625,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.46875,
+      "foreground_correct_probability": 0.2636135066859424,
+      "accuracy_by_seed": [
+        0.46875,
+        0.5,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.4453125,
+      "foreground_correct_probability": 0.26149016721562174,
+      "accuracy_by_seed": [
+        0.453125,
+        0.4453125,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224953191976,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "direct",
+      "foreground_accuracy": 0.5052083333333334,
+      "foreground_correct_probability": 0.26325125658574206,
+      "accuracy_by_seed": [
+        0.53125,
+        0.53125,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.470703125,
+      "foreground_correct_probability": 0.2688673236601365,
+      "accuracy_by_seed": [
+        0.486328125,
+        0.4921875,
+        0.43359375
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2653282218573925,
+      "accuracy_by_seed": [
+        0.515625,
+        0.546875,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.5104166666666666,
+      "foreground_correct_probability": 0.26327324371474486,
+      "accuracy_by_seed": [
+        0.484375,
+        0.546875,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.44140625,
+      "foreground_correct_probability": 0.2612910235184245,
+      "accuracy_by_seed": [
+        0.466796875,
+        0.4609375,
+        0.396484375
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224944654852,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "direct",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.263812353524069,
+      "accuracy_by_seed": [
+        0.5625,
+        0.53125,
+        0.46875
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.27041745379877585,
+      "accuracy_by_seed": [
+        0.515625,
+        0.59375,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.5260416666666666,
+      "foreground_correct_probability": 0.2655785243647794,
+      "accuracy_by_seed": [
+        0.515625,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.46875,
+      "foreground_correct_probability": 0.2636135066859424,
+      "accuracy_by_seed": [
+        0.46875,
+        0.5,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2632468585701038,
+      "accuracy_by_seed": [
+        0.53125,
+        0.5625,
+        0.46875
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224953191976,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "direct",
+      "foreground_accuracy": 0.5052083333333334,
+      "foreground_correct_probability": 0.26325125658574206,
+      "accuracy_by_seed": [
+        0.53125,
+        0.53125,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.5260416666666666,
+      "foreground_correct_probability": 0.270469095169877,
+      "accuracy_by_seed": [
+        0.53125,
+        0.59375,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.26537758639703196,
+      "accuracy_by_seed": [
+        0.515625,
+        0.546875,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.5104166666666666,
+      "foreground_correct_probability": 0.26327324371474486,
+      "accuracy_by_seed": [
+        0.484375,
+        0.546875,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.5052083333333334,
+      "foreground_correct_probability": 0.2630188175632308,
+      "accuracy_by_seed": [
+        0.53125,
+        0.546875,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 0.25,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224944654852,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "direct",
+      "foreground_accuracy": 0.375,
+      "foreground_correct_probability": 0.257363754324615,
+      "accuracy_by_seed": [
+        0.375,
+        0.34375,
+        0.40625
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.4615885416666667,
+      "foreground_correct_probability": 0.2682067160203587,
+      "accuracy_by_seed": [
+        0.48046875,
+        0.474609375,
+        0.4296875
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2647743172225698,
+      "accuracy_by_seed": [
+        0.53125,
+        0.546875,
+        0.484375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.3541666666666667,
+      "foreground_correct_probability": 0.25706815409163636,
+      "accuracy_by_seed": [
+        0.375,
+        0.34375,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.369140625,
+      "foreground_correct_probability": 0.25611613278548856,
+      "accuracy_by_seed": [
+        0.345703125,
+        0.32421875,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224940774341,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "direct",
+      "foreground_accuracy": 0.3697916666666667,
+      "foreground_correct_probability": 0.25645505365294713,
+      "accuracy_by_seed": [
+        0.375,
+        0.390625,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.4329427083333333,
+      "foreground_correct_probability": 0.2662633860891219,
+      "accuracy_by_seed": [
+        0.466796875,
+        0.443359375,
+        0.388671875
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.4895833333333333,
+      "foreground_correct_probability": 0.2635206591318517,
+      "accuracy_by_seed": [
+        0.484375,
+        0.546875,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.3489583333333333,
+      "foreground_correct_probability": 0.25617374130524695,
+      "accuracy_by_seed": [
+        0.359375,
+        0.34375,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.3626302083333333,
+      "foreground_correct_probability": 0.25584015245355357,
+      "accuracy_by_seed": [
+        0.375,
+        0.37109375,
+        0.341796875
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224940774341,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "direct",
+      "foreground_accuracy": 0.375,
+      "foreground_correct_probability": 0.257363754324615,
+      "accuracy_by_seed": [
+        0.375,
+        0.34375,
+        0.40625
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.5364583333333334,
+      "foreground_correct_probability": 0.26972384184288484,
+      "accuracy_by_seed": [
+        0.53125,
+        0.59375,
+        0.484375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.5260416666666666,
+      "foreground_correct_probability": 0.2647653475869447,
+      "accuracy_by_seed": [
+        0.546875,
+        0.546875,
+        0.484375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.3541666666666667,
+      "foreground_correct_probability": 0.25706815409163636,
+      "accuracy_by_seed": [
+        0.375,
+        0.34375,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.421875,
+      "foreground_correct_probability": 0.25658864023474354,
+      "accuracy_by_seed": [
+        0.453125,
+        0.390625,
+        0.421875
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224940774341,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "direct",
+      "foreground_accuracy": 0.3697916666666667,
+      "foreground_correct_probability": 0.25645505365294713,
+      "accuracy_by_seed": [
+        0.375,
+        0.390625,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.5416666666666666,
+      "foreground_correct_probability": 0.27012629760429263,
+      "accuracy_by_seed": [
+        0.5625,
+        0.609375,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.4947916666666667,
+      "foreground_correct_probability": 0.26387151912786067,
+      "accuracy_by_seed": [
+        0.5,
+        0.546875,
+        0.4375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.3489583333333333,
+      "foreground_correct_probability": 0.25617374130524695,
+      "accuracy_by_seed": [
+        0.359375,
+        0.34375,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.390625,
+      "foreground_correct_probability": 0.25620974235547084,
+      "accuracy_by_seed": [
+        0.4375,
+        0.390625,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 1.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.2659224940774341,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "direct",
+      "foreground_accuracy": 0.2708333333333333,
+      "foreground_correct_probability": 0.24935691819215813,
+      "accuracy_by_seed": [
+        0.25,
+        0.1875,
+        0.375
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.4251302083333333,
+      "foreground_correct_probability": 0.26253184338565916,
+      "accuracy_by_seed": [
+        0.46484375,
+        0.404296875,
+        0.40625
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.4479166666666667,
+      "foreground_correct_probability": 0.2616543901967816,
+      "accuracy_by_seed": [
+        0.453125,
+        0.4375,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.21875,
+      "foreground_correct_probability": 0.24840475137655935,
+      "accuracy_by_seed": [
+        0.25,
+        0.15625,
+        0.25
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.3111979166666667,
+      "foreground_correct_probability": 0.25038818280639435,
+      "accuracy_by_seed": [
+        0.26171875,
+        0.265625,
+        0.40625
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": false,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.26592249423265457,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "direct",
+      "foreground_accuracy": 0.22916666666666666,
+      "foreground_correct_probability": 0.2486009125908216,
+      "accuracy_by_seed": [
+        0.21875,
+        0.203125,
+        0.265625
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.2936197916666667,
+      "foreground_correct_probability": 0.2579070638651804,
+      "accuracy_by_seed": [
+        0.333984375,
+        0.3046875,
+        0.2421875
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.3333333333333333,
+      "foreground_correct_probability": 0.2557407785983135,
+      "accuracy_by_seed": [
+        0.34375,
+        0.3125,
+        0.34375
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.203125,
+      "foreground_correct_probability": 0.24804010948476693,
+      "accuracy_by_seed": [
+        0.21875,
+        0.171875,
+        0.21875
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.2962239583333333,
+      "foreground_correct_probability": 0.25027722512216616,
+      "accuracy_by_seed": [
+        0.298828125,
+        0.30859375,
+        0.28125
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "sustained8",
+      "drift": true,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.26592249392221373,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "direct",
+      "foreground_accuracy": 0.2708333333333333,
+      "foreground_correct_probability": 0.24935691819215813,
+      "accuracy_by_seed": [
+        0.25,
+        0.1875,
+        0.375
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.5104166666666666,
+      "foreground_correct_probability": 0.2648097334895283,
+      "accuracy_by_seed": [
+        0.515625,
+        0.546875,
+        0.46875
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.453125,
+      "foreground_correct_probability": 0.26170365209691226,
+      "accuracy_by_seed": [
+        0.453125,
+        0.453125,
+        0.453125
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.21875,
+      "foreground_correct_probability": 0.24840475137655935,
+      "accuracy_by_seed": [
+        0.25,
+        0.15625,
+        0.25
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.296875,
+      "foreground_correct_probability": 0.2503261884363989,
+      "accuracy_by_seed": [
+        0.25,
+        0.234375,
+        0.40625
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": false,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.26592249423265457,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "direct",
+      "foreground_accuracy": 0.22916666666666666,
+      "foreground_correct_probability": 0.2486009125908216,
+      "accuracy_by_seed": [
+        0.21875,
+        0.203125,
+        0.265625
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "divisive_ema",
+      "foreground_accuracy": 0.3645833333333333,
+      "foreground_correct_probability": 0.26208146405406296,
+      "accuracy_by_seed": [
+        0.375,
+        0.390625,
+        0.328125
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "subtractive_ema",
+      "foreground_accuracy": 0.3541666666666667,
+      "foreground_correct_probability": 0.25619590988693136,
+      "accuracy_by_seed": [
+        0.359375,
+        0.34375,
+        0.359375
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "fixed_divisive",
+      "foreground_accuracy": 0.203125,
+      "foreground_correct_probability": 0.24804010948476693,
+      "accuracy_by_seed": [
+        0.21875,
+        0.171875,
+        0.21875
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "shuffled_subtractive",
+      "foreground_accuracy": 0.2864583333333333,
+      "foreground_correct_probability": 0.2501542817335576,
+      "accuracy_by_seed": [
+        0.296875,
+        0.28125,
+        0.28125
+      ]
+    },
+    {
+      "background_strength": 4.0,
+      "schedule": "pulse1",
+      "drift": true,
+      "mode": "oracle_background",
+      "foreground_accuracy": 0.5208333333333334,
+      "foreground_correct_probability": 0.26592249392221373,
+      "accuracy_by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    }
+  ],
+  "inhibition_frozen": {
+    "0.0": {
+      "native_topk_2": {
+        "accuracy": {
+          "mean": 0.5208333333333334,
+          "values_by_seed": [
+            0.5,
+            0.5625,
+            0.5
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.26592249671618146,
+          "values_by_seed": [
+            0.26577574014663696,
+            0.26645249128341675,
+            0.2655392587184906
+          ]
+        },
+        "mean_active_count": {
+          "mean": 104.0,
+          "values_by_seed": [
+            104.0,
+            104.0,
+            104.0
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.020088854548966584,
+          "values_by_seed": [
+            0.020088854548966584,
+            0.020088854548966584,
+            0.020088854548966584
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 1.0000000093132257,
+          "values_by_seed": [
+            1.0000000093132257,
+            1.0000000093132257,
+            1.0000000093132257
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.5249805059283972,
+          "values_by_seed": [
+            0.5249805059283972,
+            0.5249805059283972,
+            0.5249805059283972
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.23680759966373444,
+          "values_by_seed": [
+            0.23680759966373444,
+            0.23680759966373444,
+            0.23680759966373444
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.02140875905752182,
+          "values_by_seed": [
+            0.02073102444410324,
+            0.022244343534111977,
+            0.021250909194350243
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.75,
+          "values_by_seed": [
+            0.6875,
+            0.8125,
+            0.75
+          ]
+        }
+      },
+      "topk_20": {
+        "accuracy": {
+          "mean": 0.3854166666666667,
+          "values_by_seed": [
+            0.40625,
+            0.34375,
+            0.40625
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.2681927482287089,
+          "values_by_seed": [
+            0.26821452379226685,
+            0.26901769638061523,
+            0.26734602451324463
+          ]
+        },
+        "mean_active_count": {
+          "mean": 1036.0,
+          "values_by_seed": [
+            1036.0,
+            1036.0,
+            1036.0
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.20011589723778248,
+          "values_by_seed": [
+            0.2001158972377825,
+            0.2001158972377825,
+            0.2001158972377825
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 1.0000000186264515,
+          "values_by_seed": [
+            1.0000000186264515,
+            1.0000000186264515,
+            1.0000000186264515
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6783325914293528,
+          "values_by_seed": [
+            0.6783325914293528,
+            0.6783325914293528,
+            0.6783325914293528
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.08345551416277885,
+          "values_by_seed": [
+            0.08345551416277885,
+            0.08345551416277885,
+            0.08345551416277885
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.02552442563076814,
+          "values_by_seed": [
+            0.02495221234858036,
+            0.02691074088215828,
+            0.02471032366156578
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.6875,
+          "values_by_seed": [
+            0.71875,
+            0.75,
+            0.59375
+          ]
+        }
+      },
+      "subtractive_global": {
+        "accuracy": {
+          "mean": 0.46875,
+          "values_by_seed": [
+            0.46875,
+            0.46875,
+            0.46875
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.25675520300865173,
+          "values_by_seed": [
+            0.2565237581729889,
+            0.25674760341644287,
+            0.25699424743652344
+          ]
+        },
+        "mean_active_count": {
+          "mean": 91.28125,
+          "values_by_seed": [
+            91.28125,
+            91.28125,
+            91.28125
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.017632074560556307,
+          "values_by_seed": [
+            0.017632074560556307,
+            0.017632074560556307,
+            0.017632074560556307
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 1.0000000335276127,
+          "values_by_seed": [
+            1.0000000335276127,
+            1.0000000335276127,
+            1.0000000335276127
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6193217243999243,
+          "values_by_seed": [
+            0.6193217243999243,
+            0.6193217243999243,
+            0.6193217243999243
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.14246638119220734,
+          "values_by_seed": [
+            0.14246638119220734,
+            0.14246638119220734,
+            0.14246638119220734
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.00897945649921894,
+          "values_by_seed": [
+            0.008801750838756561,
+            0.009032584726810455,
+            0.009104033932089806
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.75,
+          "values_by_seed": [
+            0.6875,
+            0.78125,
+            0.78125
+          ]
+        }
+      },
+      "subtractive_local": {
+        "accuracy": {
+          "mean": 0.4895833333333333,
+          "values_by_seed": [
+            0.46875,
+            0.53125,
+            0.46875
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.25660935044288635,
+          "values_by_seed": [
+            0.2563849091529846,
+            0.25661125779151917,
+            0.2568318843841553
+          ]
+        },
+        "mean_active_count": {
+          "mean": 91.65625,
+          "values_by_seed": [
+            91.65625,
+            91.65625,
+            91.65625
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.017704510334170368,
+          "values_by_seed": [
+            0.017704510334170368,
+            0.017704510334170368,
+            0.017704510334170368
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.9999999850988388,
+          "values_by_seed": [
+            0.9999999850988388,
+            0.9999999850988388,
+            0.9999999850988388
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6368171721696854,
+          "values_by_seed": [
+            0.6368171721696854,
+            0.6368171721696854,
+            0.6368171721696854
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.12497093342244625,
+          "values_by_seed": [
+            0.12497093342244625,
+            0.12497093342244625,
+            0.12497093342244625
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.008708298516770204,
+          "values_by_seed": [
+            0.008516572415828705,
+            0.008770829066634178,
+            0.008837494067847729
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.7604166666666666,
+          "values_by_seed": [
+            0.6875,
+            0.8125,
+            0.78125
+          ]
+        }
+      }
+    },
+    "0.25": {
+      "native_topk_2": {
+        "accuracy": {
+          "mean": 0.5208333333333334,
+          "values_by_seed": [
+            0.5625,
+            0.53125,
+            0.46875
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.2638123730818431,
+          "values_by_seed": [
+            0.2637256383895874,
+            0.26433220505714417,
+            0.2633792757987976
+          ]
+        },
+        "mean_active_count": {
+          "mean": 104.0,
+          "values_by_seed": [
+            104.0,
+            104.0,
+            104.0
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.020088854548966584,
+          "values_by_seed": [
+            0.020088854548966584,
+            0.020088854548966584,
+            0.020088854548966584
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.9225622303783894,
+          "values_by_seed": [
+            0.9225622303783894,
+            0.9225622303783894,
+            0.9225622303783894
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.5249805059283972,
+          "values_by_seed": [
+            0.5249805059283972,
+            0.5249805059283972,
+            0.5249805059283972
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.23680759966373444,
+          "values_by_seed": [
+            0.23680759966373444,
+            0.23680759966373444,
+            0.23680759966373444
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.016202849025527637,
+          "values_by_seed": [
+            0.015636511147022247,
+            0.01695570908486843,
+            0.01601632684469223
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.71875,
+          "values_by_seed": [
+            0.65625,
+            0.78125,
+            0.71875
+          ]
+        }
+      },
+      "topk_20": {
+        "accuracy": {
+          "mean": 0.3854166666666667,
+          "values_by_seed": [
+            0.40625,
+            0.34375,
+            0.40625
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.26536590854326886,
+          "values_by_seed": [
+            0.2653946876525879,
+            0.26605546474456787,
+            0.26464757323265076
+          ]
+        },
+        "mean_active_count": {
+          "mean": 1036.0,
+          "values_by_seed": [
+            1036.0,
+            1036.0,
+            1036.0
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.20011589723778248,
+          "values_by_seed": [
+            0.2001158972377825,
+            0.2001158972377825,
+            0.2001158972377825
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.9615515135228634,
+          "values_by_seed": [
+            0.9615515135228634,
+            0.9615515135228634,
+            0.9615515135228634
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6783325914293528,
+          "values_by_seed": [
+            0.6783325914293528,
+            0.6783325914293528,
+            0.6783325914293528
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.08345551416277885,
+          "values_by_seed": [
+            0.08345551416277885,
+            0.08345551416277885,
+            0.08345551416277885
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.018160393461585045,
+          "values_by_seed": [
+            0.017631037160754204,
+            0.01916935294866562,
+            0.017680790275335312
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.6041666666666666,
+          "values_by_seed": [
+            0.65625,
+            0.65625,
+            0.5
+          ]
+        }
+      },
+      "subtractive_global": {
+        "accuracy": {
+          "mean": 0.4375,
+          "values_by_seed": [
+            0.4375,
+            0.5,
+            0.375
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.25477030873298645,
+          "values_by_seed": [
+            0.2545776069164276,
+            0.25475549697875977,
+            0.254977822303772
+          ]
+        },
+        "mean_active_count": {
+          "mean": 77.46875,
+          "values_by_seed": [
+            77.46875,
+            77.46875,
+            77.46875
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.014964023565771681,
+          "values_by_seed": [
+            0.014964023565771683,
+            0.014964023565771683,
+            0.014964023565771683
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.9730590265244246,
+          "values_by_seed": [
+            0.9730590265244246,
+            0.9730590265244246,
+            0.9730590265244246
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6193217243999243,
+          "values_by_seed": [
+            0.6193217243999243,
+            0.6193217243999243,
+            0.6193217243999243
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.14246638119220734,
+          "values_by_seed": [
+            0.14246638119220734,
+            0.14246638119220734,
+            0.14246638119220734
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.0052832091848055525,
+          "values_by_seed": [
+            0.0051252334378659725,
+            0.005271868780255318,
+            0.005452525336295366
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.6979166666666666,
+          "values_by_seed": [
+            0.65625,
+            0.71875,
+            0.71875
+          ]
+        }
+      },
+      "subtractive_local": {
+        "accuracy": {
+          "mean": 0.4375,
+          "values_by_seed": [
+            0.4375,
+            0.5,
+            0.375
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.2547028958797455,
+          "values_by_seed": [
+            0.2545125484466553,
+            0.2546994984149933,
+            0.2548966407775879
+          ]
+        },
+        "mean_active_count": {
+          "mean": 77.59375,
+          "values_by_seed": [
+            77.59375,
+            77.59375,
+            77.59375
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.014988168823643037,
+          "values_by_seed": [
+            0.014988168823643037,
+            0.014988168823643037,
+            0.014988168823643037
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.9740895666182041,
+          "values_by_seed": [
+            0.9740895666182041,
+            0.9740895666182041,
+            0.9740895666182041
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6368171721696854,
+          "values_by_seed": [
+            0.6368171721696854,
+            0.6368171721696854,
+            0.6368171721696854
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.12497093342244625,
+          "values_by_seed": [
+            0.12497093342244625,
+            0.12497093342244625,
+            0.12497093342244625
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.005137736443430185,
+          "values_by_seed": [
+            0.004958950448781252,
+            0.005136168096214533,
+            0.005318090785294771
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.6979166666666666,
+          "values_by_seed": [
+            0.625,
+            0.71875,
+            0.75
+          ]
+        }
+      }
+    },
+    "1.0": {
+      "native_topk_2": {
+        "accuracy": {
+          "mean": 0.375,
+          "values_by_seed": [
+            0.375,
+            0.34375,
+            0.40625
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.257363756497701,
+          "values_by_seed": [
+            0.25720104575157166,
+            0.25754547119140625,
+            0.2573447525501251
+          ]
+        },
+        "mean_active_count": {
+          "mean": 104.0,
+          "values_by_seed": [
+            104.0,
+            104.0,
+            104.0
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.020088854548966584,
+          "values_by_seed": [
+            0.020088854548966584,
+            0.020088854548966584,
+            0.020088854548966584
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.782634662464261,
+          "values_by_seed": [
+            0.782634662464261,
+            0.782634662464261,
+            0.782634662464261
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.5249805059283972,
+          "values_by_seed": [
+            0.5249805059283972,
+            0.5249805059283972,
+            0.5249805059283972
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.23680759966373444,
+          "values_by_seed": [
+            0.23680759966373444,
+            0.23680759966373444,
+            0.23680759966373444
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.00312627541522185,
+          "values_by_seed": [
+            0.0028558247722685337,
+            0.0032059159129858017,
+            0.003317085560411215
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.5208333333333334,
+          "values_by_seed": [
+            0.53125,
+            0.53125,
+            0.5
+          ]
+        }
+      },
+      "topk_20": {
+        "accuracy": {
+          "mean": 0.40625,
+          "values_by_seed": [
+            0.375,
+            0.375,
+            0.46875
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.2584775686264038,
+          "values_by_seed": [
+            0.25838279724121094,
+            0.2586885094642639,
+            0.2583613991737366
+          ]
+        },
+        "mean_active_count": {
+          "mean": 1036.0,
+          "values_by_seed": [
+            1036.0,
+            1036.0,
+            1036.0
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.20011589723778248,
+          "values_by_seed": [
+            0.2001158972377825,
+            0.2001158972377825,
+            0.2001158972377825
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.8689262866973877,
+          "values_by_seed": [
+            0.8689262866973877,
+            0.8689262866973877,
+            0.8689262866973877
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6783325914293528,
+          "values_by_seed": [
+            0.6783325914293528,
+            0.6783325914293528,
+            0.6783325914293528
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.08345551416277885,
+          "values_by_seed": [
+            0.08345551416277885,
+            0.08345551416277885,
+            0.08345551416277885
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": 0.0031019609111050763,
+          "values_by_seed": [
+            0.002731588203459978,
+            0.0031103589572012424,
+            0.003463935572654009
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.5520833333333334,
+          "values_by_seed": [
+            0.5625,
+            0.59375,
+            0.5
+          ]
+        }
+      },
+      "subtractive_global": {
+        "accuracy": {
+          "mean": 0.3854166666666667,
+          "values_by_seed": [
+            0.375,
+            0.40625,
+            0.375
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.25173211097717285,
+          "values_by_seed": [
+            0.25155407190322876,
+            0.2516394853591919,
+            0.2520027756690979
+          ]
+        },
+        "mean_active_count": {
+          "mean": 68.71875,
+          "values_by_seed": [
+            68.71875,
+            68.71875,
+            68.71875
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.013273855514776898,
+          "values_by_seed": [
+            0.013273855514776898,
+            0.013273855514776898,
+            0.013273855514776898
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.8633227311074734,
+          "values_by_seed": [
+            0.8633227311074734,
+            0.8633227311074734,
+            0.8633227311074734
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6193217243999243,
+          "values_by_seed": [
+            0.6193217243999243,
+            0.6193217243999243,
+            0.6193217243999243
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.14246638119220734,
+          "values_by_seed": [
+            0.14246638119220734,
+            0.14246638119220734,
+            0.14246638119220734
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": -0.00016789045184850693,
+          "values_by_seed": [
+            -0.00019255327060818672,
+            -0.0002750735729932785,
+            -3.604451194405556e-05
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.5625,
+          "values_by_seed": [
+            0.46875,
+            0.59375,
+            0.625
+          ]
+        }
+      },
+      "subtractive_local": {
+        "accuracy": {
+          "mean": 0.375,
+          "values_by_seed": [
+            0.375,
+            0.40625,
+            0.34375
+          ]
+        },
+        "mean_correct_probability": {
+          "mean": 0.25177232424418133,
+          "values_by_seed": [
+            0.25158625841140747,
+            0.2516968846321106,
+            0.2520338296890259
+          ]
+        },
+        "mean_active_count": {
+          "mean": 68.40625,
+          "values_by_seed": [
+            68.40625,
+            68.40625,
+            68.40625
+          ]
+        },
+        "mean_active_fraction": {
+          "mean": 0.013213492370098513,
+          "values_by_seed": [
+            0.013213492370098513,
+            0.013213492370098513,
+            0.013213492370098513
+          ]
+        },
+        "mean_hidden_cosine_to_clean": {
+          "mean": 0.8700794726610184,
+          "values_by_seed": [
+            0.8700794726610184,
+            0.8700794726610184,
+            0.8700794726610184
+          ]
+        },
+        "mean_input_next_class_cosine": {
+          "mean": 0.7617881055921316,
+          "values_by_seed": [
+            0.7617881055921316,
+            0.7617881055921316,
+            0.7617881055921316
+          ]
+        },
+        "mean_hidden_next_class_cosine": {
+          "mean": 0.6368171721696854,
+          "values_by_seed": [
+            0.6368171721696854,
+            0.6368171721696854,
+            0.6368171721696854
+          ]
+        },
+        "mean_pattern_separation_delta": {
+          "mean": 0.12497093342244625,
+          "values_by_seed": [
+            0.12497093342244625,
+            0.12497093342244625,
+            0.12497093342244625
+          ]
+        },
+        "paired_class_mean_correct_minus_distractor_probability": {
+          "mean": -0.00010698459421594937,
+          "values_by_seed": [
+            -0.00015847478061914444,
+            -0.00021185679361224174,
+            4.9377791583538055e-05
+          ]
+        },
+        "paired_class_correct_exceeds_distractor_fraction": {
+          "mean": 0.5520833333333334,
+          "values_by_seed": [
+            0.4375,
+            0.59375,
+            0.625
+          ]
+        }
+      }
+    }
+  },
+  "inhibition_matched_supervised_probe": {
+    "status": "added after inspecting the frozen-readout mechanism results; exploratory and not preregistered",
+    "purpose": "distinguish hidden representation effects from mismatch to MBON weights trained under native 2% top-k",
+    "method": "same supervised dual-kernel ridge linear head for every hidden variant; per-row hidden L2 normalization; lambda fixed at 0.1 without tuning",
+    "boundary": "supervised probe on the same 32 old training labels; not Novi reward learning, not a production policy, and coefficient scores are not probabilities or confidence",
+    "feature_count": 5177,
+    "training_labels": 32,
+    "ridge_lambda": 0.1,
+    "capacity_caveat": "all probes receive 5177 feature coordinates and 32 labels, but variants retain unequal effective active counts",
+    "encoder_replicates": "PN-to-KC tensors and hidden features are identical across seeds 601/602/603; computed once, not treated as three independent encoder results",
+    "shared_input_encoder_sha256": "5d3c8f20df14da60e76e5b88f58b3744460a199a6afd9637e406b09606bd5e2d",
+    "source_sha256": "43c9fbf4b5626e207211d92bfe19aaa578a1eeae07547abc49684c39f43e4080",
+    "probe_checkpoints": {
+      "native_topk_2": {
+        "path": "results/mechanism-bridge/inhibition-ridge-native_topk_2.safetensors",
+        "sha256": "b9cd282ec34cc3221b684d8557a7d8670b1471d890612e84aa3067f0e4bf2d0a",
+        "metadata": {
+          "variant": "native_topk_2",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      },
+      "topk_20": {
+        "path": "results/mechanism-bridge/inhibition-ridge-topk_20.safetensors",
+        "sha256": "f3a8a78a7ca6b981cfdee299fcf017a0173245f3c2db799ddef7e4530afb6086",
+        "metadata": {
+          "variant": "topk_20",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      },
+      "subtractive_global": {
+        "path": "results/mechanism-bridge/inhibition-ridge-subtractive_global.safetensors",
+        "sha256": "4ba1b6039659b0eb63c9c09618b9b48841271b6cc9185f87618c2810ad322d8a",
+        "metadata": {
+          "variant": "subtractive_global",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      },
+      "subtractive_local": {
+        "path": "results/mechanism-bridge/inhibition-ridge-subtractive_local.safetensors",
+        "sha256": "68d91411e5b066ee55ebb31e19bcc37d1ab3ac466148a31663015ab5344cf3c6",
+        "metadata": {
+          "variant": "subtractive_local",
+          "ridge_lambda": "0.1",
+          "format": "novi.supervised-ridge-probe",
+          "status": "posthoc_exploratory",
+          "score_semantics": "uncalibrated_coefficient_score"
+        },
+        "roundtrip_max_absolute_score_error": 0.0
+      }
+    },
+    "variants": {
+      "native_topk_2": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8943324168125321,
+          "mean_correct_minus_next_class_score": 0.8604650455103273,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 104.0,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.65625,
+            "mean_correct_coefficient_score": 0.49171706328355963,
+            "mean_correct_minus_next_class_score": 0.3774009667564291,
+            "correct_exceeds_next_class_fraction": 0.78125,
+            "mean_effective_active_count": 104.0
+          },
+          "0.25": {
+            "accuracy": 0.59375,
+            "mean_correct_coefficient_score": 0.4523071831514417,
+            "mean_correct_minus_next_class_score": 0.27788219458842445,
+            "correct_exceeds_next_class_fraction": 0.75,
+            "mean_effective_active_count": 104.0
+          },
+          "1.0": {
+            "accuracy": 0.3125,
+            "mean_correct_coefficient_score": 0.33234171269677454,
+            "mean_correct_minus_next_class_score": 0.02995662691536545,
+            "correct_exceeds_next_class_fraction": 0.5625,
+            "mean_effective_active_count": 104.0
+          }
+        }
+      },
+      "topk_20": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8951761322838763,
+          "mean_correct_minus_next_class_score": 0.8604462084964686,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 1036.0,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.65625,
+            "mean_correct_coefficient_score": 0.5583201711273729,
+            "mean_correct_minus_next_class_score": 0.46281708713929903,
+            "correct_exceeds_next_class_fraction": 0.875,
+            "mean_effective_active_count": 1036.0
+          },
+          "0.25": {
+            "accuracy": 0.65625,
+            "mean_correct_coefficient_score": 0.5057799452995214,
+            "mean_correct_minus_next_class_score": 0.3241387337289815,
+            "correct_exceeds_next_class_fraction": 0.90625,
+            "mean_effective_active_count": 1036.0
+          },
+          "1.0": {
+            "accuracy": 0.4375,
+            "mean_correct_coefficient_score": 0.3720516671252454,
+            "mean_correct_minus_next_class_score": 0.027896924399373094,
+            "correct_exceeds_next_class_fraction": 0.5625,
+            "mean_effective_active_count": 1036.0
+          }
+        }
+      },
+      "subtractive_global": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8057629753427489,
+          "mean_correct_minus_next_class_score": 0.7402866867351602,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 103.53125,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.6875,
+            "mean_correct_coefficient_score": 0.5146371730548571,
+            "mean_correct_minus_next_class_score": 0.4484096220154643,
+            "correct_exceeds_next_class_fraction": 0.84375,
+            "mean_effective_active_count": 91.28125
+          },
+          "0.25": {
+            "accuracy": 0.53125,
+            "mean_correct_coefficient_score": 0.46107142572402393,
+            "mean_correct_minus_next_class_score": 0.293308926389031,
+            "correct_exceeds_next_class_fraction": 0.75,
+            "mean_effective_active_count": 77.46875
+          },
+          "1.0": {
+            "accuracy": 0.40625,
+            "mean_correct_coefficient_score": 0.3412171489237943,
+            "mean_correct_minus_next_class_score": 0.022361383064798467,
+            "correct_exceeds_next_class_fraction": 0.5625,
+            "mean_effective_active_count": 68.71875
+          }
+        }
+      },
+      "subtractive_local": {
+        "train_resubstitution": {
+          "accuracy": 1.0,
+          "mean_correct_coefficient_score": 0.8057399501620814,
+          "mean_correct_minus_next_class_score": 0.7398768028670124,
+          "correct_exceeds_next_class_fraction": 1.0
+        },
+        "mean_train_effective_active_count": 103.53125,
+        "mixtures": {
+          "0.0": {
+            "accuracy": 0.53125,
+            "mean_correct_coefficient_score": 0.5096715254805446,
+            "mean_correct_minus_next_class_score": 0.4268559257454222,
+            "correct_exceeds_next_class_fraction": 0.84375,
+            "mean_effective_active_count": 91.65625
+          },
+          "0.25": {
+            "accuracy": 0.5,
+            "mean_correct_coefficient_score": 0.45357140920332784,
+            "mean_correct_minus_next_class_score": 0.27317276334699636,
+            "correct_exceeds_next_class_fraction": 0.6875,
+            "mean_effective_active_count": 77.59375
+          },
+          "1.0": {
+            "accuracy": 0.34375,
+            "mean_correct_coefficient_score": 0.33521642568415094,
+            "mean_correct_minus_next_class_score": 0.015026796651628052,
+            "correct_exceeds_next_class_fraction": 0.5,
+            "mean_effective_active_count": 68.40625
+          }
+        }
+      }
+    },
+    "pre_append_report_sha256": "ab871da871dc2a06014417bfe7fbb25756257737309150350dc28b05cc45bf24"
+  },
+  "eligibility": {
+    "0": {
+      "current_only": {
+        "test": {
+          "accuracy": 0.8194444444444445,
+          "mean_correct_probability": 0.40940173877640446,
+          "mean_entropy": 1.2785499313123088
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.44518516136689085,
+          "mean_entropy": 1.2436357618614309
+        }
+      },
+      "exact_cached_gradient": {
+        "test": {
+          "accuracy": 0.8194444444444445,
+          "mean_correct_probability": 0.40940173877640446,
+          "mean_entropy": 1.2785499313123088
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.44518516136689085,
+          "mean_entropy": 1.2436357618614309
+        }
+      },
+      "trace_tau8": {
+        "test": {
+          "accuracy": 0.5416666666666666,
+          "mean_correct_probability": 0.3839749250890445,
+          "mean_entropy": 1.0991014771514276
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.4131290669332878,
+          "mean_entropy": 1.0533405201963462
+        }
+      },
+      "trace_tau8_normmatched": {
+        "test": {
+          "accuracy": 0.4305555555555555,
+          "mean_correct_probability": 0.3130510229170563,
+          "mean_entropy": 1.2397273431244666
+        },
+        "korean": {
+          "accuracy": 0.47222222222222215,
+          "mean_correct_probability": 0.3308409338162219,
+          "mean_entropy": 1.2175423637890257
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25,
+          "mean_entropy": 1.3862943611198906
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25,
+          "mean_entropy": 1.3862943611198906
+        }
+      }
+    },
+    "4": {
+      "current_only": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24921392853515623,
+          "mean_entropy": 1.32503448693285
+        },
+        "korean": {
+          "accuracy": 0.27777777777777773,
+          "mean_correct_probability": 0.25072479885437704,
+          "mean_entropy": 1.3238266108856314
+        }
+      },
+      "exact_cached_gradient": {
+        "test": {
+          "accuracy": 0.7916666666666666,
+          "mean_correct_probability": 0.40908321597675035,
+          "mean_entropy": 1.2716658026298087
+        },
+        "korean": {
+          "accuracy": 0.861111111111111,
+          "mean_correct_probability": 0.4440030471084217,
+          "mean_entropy": 1.2386069537613198
+        }
+      },
+      "trace_tau8": {
+        "test": {
+          "accuracy": 0.3888888888888889,
+          "mean_correct_probability": 0.33040566598970705,
+          "mean_entropy": 0.9484700298793856
+        },
+        "korean": {
+          "accuracy": 0.4166666666666667,
+          "mean_correct_probability": 0.3510599755923875,
+          "mean_entropy": 0.9537367643420139
+        }
+      },
+      "trace_tau8_normmatched": {
+        "test": {
+          "accuracy": 0.3333333333333333,
+          "mean_correct_probability": 0.2898341844421668,
+          "mean_entropy": 1.237759545734017
+        },
+        "korean": {
+          "accuracy": 0.3333333333333333,
+          "mean_correct_probability": 0.3020920148608353,
+          "mean_entropy": 1.2313672928591275
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25,
+          "mean_entropy": 1.3862943611198906
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25,
+          "mean_entropy": 1.3862943611198906
+        }
+      }
+    },
+    "16": {
+      "current_only": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25146468512994796,
+          "mean_entropy": 1.3436769514034346
+        },
+        "korean": {
+          "accuracy": 0.19444444444444445,
+          "mean_correct_probability": 0.251190334992112,
+          "mean_entropy": 1.3433980193862458
+        }
+      },
+      "exact_cached_gradient": {
+        "test": {
+          "accuracy": 0.7916666666666666,
+          "mean_correct_probability": 0.4095622100195528,
+          "mean_entropy": 1.27750471687846
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.44545142959728484,
+          "mean_entropy": 1.2429014686261475
+        }
+      },
+      "trace_tau2": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2548140897437104,
+          "mean_entropy": 1.3120961248975214
+        },
+        "korean": {
+          "accuracy": 0.27777777777777773,
+          "mean_correct_probability": 0.25626780571114394,
+          "mean_entropy": 1.3100545907290286
+        }
+      },
+      "trace_tau32": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25186835651542916,
+          "mean_entropy": 0.07326558854071787
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2524049110897207,
+          "mean_entropy": 0.07379561531772243
+        }
+      },
+      "trace_tau32_normmatched": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.27727452857479234,
+          "mean_entropy": 0.9286567678015949
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2824614074111221,
+          "mean_entropy": 0.9134939454375823
+        }
+      },
+      "trace_tau8": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2610169450893541,
+          "mean_entropy": 0.4229929377199321
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.26317990676562375,
+          "mean_entropy": 0.41439221575908064
+        }
+      },
+      "trace_tau8_normmatched": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.26872229938364167,
+          "mean_entropy": 1.2730050167589575
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2733946113078667,
+          "mean_entropy": 1.2667644093663784
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25,
+          "mean_entropy": 1.3862943611198906
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25,
+          "mean_entropy": 1.3862943611198906
+        }
+      }
+    }
+  }
+}
