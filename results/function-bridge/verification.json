@@ -1,0 +1,43 @@
+{
+  "tests": {
+    "function_bridge": 10,
+    "gemma_bridge": 2,
+    "native_python_mlx": 5,
+    "all_passed": true
+  },
+  "base_unchanged_matches_evaluation": true,
+  "sha256": {
+    "/Users/a405394/models/google_functiongemma-270m-it/added_tokens.json": "52233b287bd11f2f03d19fb9823e15698d9d55a811e2cce8f02bae2551d97153",
+    "/Users/a405394/models/google_functiongemma-270m-it/tokenizer_config.json": "105f9a5740d9be1c455c4979f50ac0d60d9df8b2056498d8ab9a8cdfbdebb4a8",
+    "/Users/a405394/models/google_functiongemma-270m-it/special_tokens_map.json": "d39df6f8ddb132a622394f05a603b166ba5f22d485483e30d06c1821ef4ac9b4",
+    "/Users/a405394/models/google_functiongemma-270m-it/config.json": "a27aebbe2b4dd4be03e8907349eff4354f90ce265c980509218686be93a9abb6",
+    "/Users/a405394/models/google_functiongemma-270m-it/tokenizer.json": "cab06510581429a52484f103c9df074578506a025c40db1197d3625041566ca7",
+    "/Users/a405394/models/google_functiongemma-270m-it/generation_config.json": "f3f694d69c044000d84e777938fe314137af2ae06014c552332d1c82f5e1b13d",
+    "/Users/a405394/models/google_functiongemma-270m-it/chat_template.jinja": "db61fb01017bd82401d3ffca4f8e066cd56ff6d38d2a30c4058770c0bf7ab49b",
+    "/Users/a405394/models/google_functiongemma-270m-it/model.safetensors": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b",
+    "examples/function_bridge/test_navigation.py": "ce875c8e3699a7178d4772f83e25658a05777a7c0788e8289ffe731129e3bae3",
+    "examples/function_bridge/server.py": "757e34aebf70718fcfe2e72fb26e3cfb4b0574dc7597336efe363f1de6b88101",
+    "examples/function_bridge/test_protocol.py": "0f4eadf939264f8949abb5f55809c89492ca2176e2d956fa335573faf60c5bfd",
+    "examples/function_bridge/protocol.py": "ab64cf5ea32181cf38a4f602379ecbde47de051f6554a80c9198e383e96e5acc",
+    "examples/function_bridge/cases.py": "bc89372e20139f7367a4e89b769dd3c5078acc7b9664410af68fdaaea1a09e92",
+    "examples/function_bridge/runtime.py": "c4cf6628b0b4181e6779ef8c18b3a7c709f2c38e08b1765a5fff6ca49f3ce1ac",
+    "examples/function_bridge/test_server.py": "56190c9c6516e98ccb9a44951acb4c2807bb0a88f180778c0caae12a01224039",
+    "examples/function_bridge/live.py": "21b8178fd135026d61c0852366ada563b29ab35dfb844ac076ca6eba3caddace",
+    "examples/function_bridge/evaluate.py": "d9c6b52192457a420c2c78d9b53231064c6361d8e11f288cce3329fbabcfffd9",
+    "examples/function_bridge/navigation.py": "421cce242bdd36b210fb168cac0f1f427b4bd567ae1730e68194adb8a478fa34",
+    "examples/function_bridge/train_data.py": "6648e9525c882233ca9dba4d5dc8d42a2b72f96ad8f671389e69a31b56b110bf",
+    "examples/function_bridge/finetune.py": "d7597966d626bfc35ffb3081907c544f8f95b76c5b25929df28fd91510a1c71a",
+    "results/function-bridge/training-cases.json": "881e388b8156820f6ef46f11d8ab64da2d61079103639ea5ccf09f2ca1a4de30",
+    "results/function-bridge/fresh-cases.json": "f69c5df5ad8e32cbc7ff8a9fcb4f5f5edb1cf8b53b478c3d06e00a9003e9f1a9",
+    "results/function-bridge/lora/adapter_model.safetensors": "7ad19bbe1241af138abb992f04ab4371e6571d1e2747d64c221d028921efdb0e",
+    "results/function-bridge/lora/adapter_config.json": "8f16f8710fd190bc7cd5d2899d22ccec618b1bda86284f4871eca90a9aee5ab0"
+  },
+  "provenance_note": "Post-run manifest, not independently timestamped preregistration. Live runs used these local files; their original records did not capture hashes.",
+  "review_limits": [
+    "heading ignored by live backend",
+    "navigation separate from neural/LLM loop",
+    "single seed small authored fresh set",
+    "live reward is semantic consistency",
+    "learning callback failure not transactional"
+  ]
+}

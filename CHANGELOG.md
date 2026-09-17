@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add typed FunctionGemma/novi loopback API, fixed-budget LoRA routing experiment, and separately validated navigation-memory/goal-switch cases.
+
 - Add frozen EmbeddingGemma language-to-reward-policy examples, reversal controls, and a sourced MB/CX bridge design with local FlyWire candidate-port audit.
 
 - Add native PyO3 Python bindings, learning/checkpoint examples and optional ordered sparse MLX/Metal batch inference; document measured latency and numerical parity.

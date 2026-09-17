@@ -1,0 +1,164 @@
+{
+  "variant": "base",
+  "split": "development",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "do_sample": false,
+  "max_new_tokens": 80,
+  "cases": [
+    {
+      "prompt": "I am thirsty. Set my goal to water.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.41189458407461643,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "I am hungry. Set my goal to food.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.23659575171768665,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "I am cold. Set my goal to warmth.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.25163237378001213,
+      "generated_tokens": 16
+    },
+    {
+      "prompt": "I am tired. Set my goal to rest.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2383430413901806,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Record my heading as 45 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 45
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:45}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.22867370769381523,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "My measured heading is -90 degrees. Record it.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -90
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:-90}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -90.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.22611566819250584,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "Choose an action using the neural policy.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.17099112272262573,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "Show the current status.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.1590927504003048,
+      "generated_tokens": 9
+    }
+  ],
+  "accuracy": 1.0,
+  "model_sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b"
+}

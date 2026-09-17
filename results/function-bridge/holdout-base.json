@@ -1,0 +1,279 @@
+{
+  "variant": "base",
+  "split": "holdout",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "do_sample": false,
+  "max_new_tokens": 80,
+  "cases": [
+    {
+      "prompt": "Please make hydration my objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.4143128748983145,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Find a meal; that is my new goal.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "I would be happy to help with finding a meal. Could you please specify the type of meal you are looking for?<end_of_turn>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.37768929079174995,
+      "generated_tokens": 25
+    },
+    {
+      "prompt": "I am shivering. Prioritize getting warm.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.43910979107022285,
+      "generated_tokens": 30
+    },
+    {
+      "prompt": "I can barely keep my eyes open. Make sleep the objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.1680587511509657,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "목이 말라요. 목표를 물로 정해주세요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.1588351260870695,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "배고파요. 음식을 목표로 설정해요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.43086087331175804,
+      "generated_tokens": 29
+    },
+    {
+      "prompt": "너무 추워요. 따뜻해지는 것을 목표로 해요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.42676470801234245,
+      "generated_tokens": 29
+    },
+    {
+      "prompt": "피곤해요. 휴식을 목표로 설정해주세요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.427988501265645,
+      "generated_tokens": 29
+    },
+    {
+      "prompt": "The compass reads 120 degrees. Update the observation.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 120
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:120}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 120.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.24076979234814644,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Store a bearing of -35 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -35
+        }
+      ],
+      "raw": "I cannot assist with retrieving or storing bearing data. My current capabilities are limited to assisting with specific tool functions like setting goals and observing heading angles.<end_of_turn>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.4380102511495352,
+      "generated_tokens": 30
+    },
+    {
+      "prompt": "현재 방향은 60도입니다. 기록해주세요.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 60
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:60}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 60.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.22637700103223324,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "현재 방향을 -15도로 기록해주세요.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -15
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:-15}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -15.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.22642404213547707,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "Have novi pick what to do next.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.16203366592526436,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "신경 정책으로 다음 행동을 선택해주세요.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.15994120761752129,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "What goal and heading are currently stored?",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.5333200413733721,
+      "generated_tokens": 37
+    },
+    {
+      "prompt": "현재 상태를 보여주세요.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.16421358287334442,
+      "generated_tokens": 9
+    }
+  ],
+  "accuracy": 0.4375,
+  "model_sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b"
+}

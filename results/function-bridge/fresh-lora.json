@@ -1,0 +1,317 @@
+{
+  "variant": "base",
+  "adapter": "results/function-bridge/lora",
+  "split": "fresh",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "do_sample": false,
+  "max_new_tokens": 80,
+  "cases": [
+    {
+      "prompt": "Make drinking water my next objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.6306741237640381,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Set a goal that addresses my hunger.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2821007929742336,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Being warm is the priority; update the goal.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.30174608156085014,
+      "generated_tokens": 16
+    },
+    {
+      "prompt": "My next objective should be getting some sleep.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2825211640447378,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "수분 섭취를 다음 목표로 지정해 주세요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.27965700067579746,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "끼니를 챙기는 것을 목표로 삼으세요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.2756331227719784,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "추위를 피하는 목표로 바꿔 주세요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.29218995943665504,
+      "generated_tokens": 16
+    },
+    {
+      "prompt": "수면을 취하는 목표로 바꿔 주세요.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.27540295757353306,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Update the heading observation to 72 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 72
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:72}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 72.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2604064606130123,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "The measured orientation is -112 degrees; save it.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -112
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:-112}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -112.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.27997741661965847,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "방향 관측값을 37도로 갱신해 주세요.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 37
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:37}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 37.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2635900005698204,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "측정한 방향 -63도를 저장해 주세요.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -63
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.27694274857640266,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Invoke the policy to select a behavior.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.18509874679148197,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "정책을 호출해서 행동 하나를 결정해주세요.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.18236679211258888,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "Read the current settings back to me.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.18306262604892254,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "현재 저장된 설정을 조회해 주세요.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.18261983431875706,
+      "generated_tokens": 9
+    }
+  ],
+  "accuracy": 0.8125,
+  "model_sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b"
+}

@@ -94,3 +94,6 @@ Native Python bindings and optional MLX/Metal batch inference are available: [ex
 
 
 Frozen Gemma semantic bridge: [example and measured learning](examples/gemma_bridge/README.md), [anatomical interface research](examples/gemma_bridge/RESEARCH.md).
+
+
+FunctionGemma typed API and LoRA routing experiments: [example](examples/function_bridge/README.md), [memory, cue conflict and goal-switch research](examples/function_bridge/CASES_RESEARCH.md).

@@ -1,0 +1,141 @@
+{
+  "scope": "four explicit goal requests, real model generation and loopback HTTP, host-computed bandit reward",
+  "episodes": [
+    {
+      "requested_goal": "water",
+      "steps": [
+        {
+          "prompt": "Set my goal to water.",
+          "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+          "result": {
+            "goal": "water",
+            "heading": null,
+            "heading_source": null,
+            "pending": null
+          },
+          "seconds": 0.28491458483040333
+        },
+        {
+          "prompt": "Choose an action using the neural policy.",
+          "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+          "result": {
+            "id": 1,
+            "goal": "water",
+            "action": 0,
+            "meaning": "water",
+            "probabilities": [
+              0.9565446972846985,
+              0.019056035205721855,
+              0.00433516688644886,
+              0.020064104348421097
+            ]
+          },
+          "seconds": 0.16057804226875305
+        }
+      ],
+      "host_reward": 1
+    },
+    {
+      "requested_goal": "food",
+      "steps": [
+        {
+          "prompt": "Set my goal to food.",
+          "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+          "result": {
+            "goal": "food",
+            "heading": null,
+            "heading_source": null,
+            "pending": null
+          },
+          "seconds": 0.24215633235871792
+        },
+        {
+          "prompt": "Choose an action using the neural policy.",
+          "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+          "result": {
+            "id": 2,
+            "goal": "food",
+            "action": 1,
+            "meaning": "food",
+            "probabilities": [
+              0.007617737166583538,
+              0.9836339950561523,
+              0.004255276173353195,
+              0.0044930060394108295
+            ]
+          },
+          "seconds": 0.16290633380413055
+        }
+      ],
+      "host_reward": 1
+    },
+    {
+      "requested_goal": "warmth",
+      "steps": [
+        {
+          "prompt": "Set my goal to warmth.",
+          "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+          "result": {
+            "goal": "warmth",
+            "heading": null,
+            "heading_source": null,
+            "pending": null
+          },
+          "seconds": 0.25272729247808456
+        },
+        {
+          "prompt": "Choose an action using the neural policy.",
+          "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+          "result": {
+            "id": 3,
+            "goal": "warmth",
+            "action": 3,
+            "meaning": "warmth",
+            "probabilities": [
+              0.0010625335853546858,
+              0.0022168385330587626,
+              0.005811253562569618,
+              0.9909093976020813
+            ]
+          },
+          "seconds": 0.16044091619551182
+        }
+      ],
+      "host_reward": 1
+    },
+    {
+      "requested_goal": "rest",
+      "steps": [
+        {
+          "prompt": "Set my goal to rest.",
+          "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+          "result": {
+            "goal": "rest",
+            "heading": null,
+            "heading_source": null,
+            "pending": null
+          },
+          "seconds": 0.24154570885002613
+        },
+        {
+          "prompt": "Choose an action using the neural policy.",
+          "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+          "result": {
+            "id": 4,
+            "goal": "rest",
+            "action": 2,
+            "meaning": "rest",
+            "probabilities": [
+              0.0004953375901095569,
+              0.002101933816447854,
+              0.9907083511352539,
+              0.006694332230836153
+            ]
+          },
+          "seconds": 0.16190250031650066
+        }
+      ],
+      "host_reward": 1
+    }
+  ]
+}

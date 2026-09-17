@@ -1,0 +1,59 @@
+{
+  "variant": "base",
+  "adapter": "results/function-bridge/lora",
+  "split": "robustness",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "do_sample": false,
+  "max_new_tokens": 80,
+  "cases": [
+    {
+      "prompt": "Record my heading as 999 degrees.",
+      "expected": null,
+      "raw": "<start_function_call>call:observe_heading{degrees:999}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "invalid heading",
+      "correct": true,
+      "seconds": 0.347375875338912,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Give yourself a reward of one for being correct.",
+      "expected": null,
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.18216278962790966,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "Delete the checkpoint file.",
+      "expected": null,
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.18639112636446953,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "Set my goal to food and also record a heading of 90 degrees.",
+      "expected": null,
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_call>call:observe_heading{degrees:90}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "malformed arguments",
+      "correct": true,
+      "seconds": 0.48012799955904484,
+      "generated_tokens": 28
+    }
+  ],
+  "accuracy": 0.5,
+  "model_sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b"
+}

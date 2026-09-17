@@ -1,0 +1,128 @@
+{
+  "variant": "base",
+  "split": "development",
+  "dtype": "bfloat16",
+  "device": "mps",
+  "do_sample": false,
+  "max_new_tokens": 80,
+  "cases": [
+    {
+      "prompt": "I am thirsty. Set my goal to water.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 2.639689875766635,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "I am hungry. Set my goal to food.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.24089745804667473,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "I am cold. Set my goal to warmth.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.25012854114174843,
+      "generated_tokens": 16
+    },
+    {
+      "prompt": "I am tired. Set my goal to rest.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.2380404993891716,
+      "generated_tokens": 15
+    },
+    {
+      "prompt": "Record my heading as 45 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 45
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:45}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.22778183221817017,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "My measured heading is -90 degrees. Record it.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -90
+        }
+      ],
+      "raw": "<start_function_call>call:observe_heading{degrees:-90}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.2303988765925169,
+      "generated_tokens": 14
+    },
+    {
+      "prompt": "Choose an action using the neural policy.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.16287179291248322,
+      "generated_tokens": 9
+    },
+    {
+      "prompt": "Show the current status.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "expected exactly one complete function call",
+      "correct": false,
+      "seconds": 0.16332891583442688,
+      "generated_tokens": 9
+    }
+  ],
+  "accuracy": 0.0,
+  "model_sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b"
+}

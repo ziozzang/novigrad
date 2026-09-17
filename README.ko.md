@@ -74,3 +74,6 @@ Python 네이티브 바인딩과 선택적인 MLX/Metal 배치 추론: [예제](
 
 
 Gemma 의미 연결: [실행 예제와 학습 결과](examples/gemma_bridge/README.ko.md), [뇌 영역·연결 위치 연구](examples/gemma_bridge/RESEARCH.ko.md).
+
+
+FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.ko.md), [기억·단서 충돌·목표 변경 사례 연구](examples/function_bridge/CASES_RESEARCH.ko.md).

@@ -1,0 +1,106 @@
+[
+  [
+    "Make drinking water my next objective.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "Set a goal that addresses my hunger.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "Being warm is the priority; update the goal.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "My next objective should be getting some sleep.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "수분 섭취를 다음 목표로 지정해 주세요.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "끼니를 챙기는 것을 목표로 삼으세요.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "추위를 피하는 목표로 바꿔 주세요.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "수면을 취하는 목표로 바꿔 주세요.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "Update the heading observation to 72 degrees.",
+    "observe_heading",
+    {
+      "degrees": 72
+    }
+  ],
+  [
+    "The measured orientation is -112 degrees; save it.",
+    "observe_heading",
+    {
+      "degrees": -112
+    }
+  ],
+  [
+    "방향 관측값을 37도로 갱신해 주세요.",
+    "observe_heading",
+    {
+      "degrees": 37
+    }
+  ],
+  [
+    "측정한 방향 -63도를 저장해 주세요.",
+    "observe_heading",
+    {
+      "degrees": -63
+    }
+  ],
+  [
+    "Invoke the policy to select a behavior.",
+    "choose_action",
+    {}
+  ],
+  [
+    "정책을 호출해서 행동 하나를 결정해주세요.",
+    "choose_action",
+    {}
+  ],
+  [
+    "Read the current settings back to me.",
+    "get_status",
+    {}
+  ],
+  [
+    "현재 저장된 설정을 조회해 주세요.",
+    "get_status",
+    {}
+  ]
+]
