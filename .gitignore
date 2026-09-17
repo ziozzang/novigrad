@@ -17,6 +17,7 @@ __pycache__/
 # Local experiment runtime state
 /autoresearch-*
 /research-results.tsv
+/research-results.prev.tsv
 /results/improvement/**/*.log
 
 /results/steering/**/*.log

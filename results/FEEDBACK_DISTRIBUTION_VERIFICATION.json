@@ -1,0 +1,93 @@
+{
+  "archive": "novigrad-feedback-20260918.tar.gz",
+  "archive_sha256": "bb83a6b8c68a8f244fb5b27e36b6828b129b04ad75ec8658077b671e9c23bfe7",
+  "archive_bytes": 38561636,
+  "safe_unpacked_files": 229,
+  "safetensors_count": 54,
+  "post_replay_all_manifest_contents_unchanged": true,
+  "portable_actual_replay_exit_code": 0,
+  "runtime": "Original shared Python3.11 environment and Mac MPS; not clean-room dependency installation or independent hardware",
+  "model_relocation": "New model directories with hard links of protocol-listed files plus supplementary locked chat_template.jinja; no model-directory symlink alias",
+  "replay_result": {
+    "bilateral_protocol_sha256": "9514f08a9b6bc753e137ddbd4bd2cbaa45794cddb0b0131154c005ed9c4c4854",
+    "causal_feedback_protocol_sha256": "37abda56991323f8639de7421ee64b956008e0e8bc53cd52589e6148764b58cf",
+    "causal_feedback_evaluation_sha256": "875817d6ad9a9c8b0d6bbf31391092becf726706c7df8335a7285e780440af9c",
+    "model_runtime_dependencies": {
+      "lock_sha256": "27e7a15a53cd2a7022b302cb73dd27a3aa03ba6f65a19ef3762b428e87055646",
+      "jinja_files": {
+        "embedding": 0,
+        "function": 1
+      },
+      "status": "posthoc_dependency_lock_added_after_outcomes"
+    },
+    "verified_locked_files": {
+      "bilateral_files": 16,
+      "causal_feedback_files": 6,
+      "hard_feedback_routing_files": 6
+    },
+    "model_paths": {
+      "embedding": "/private/tmp/novigrad-feedback-models-nk40s0ez/embedding",
+      "function": "/private/tmp/novigrad-feedback-models-nk40s0ez/function"
+    },
+    "check_only": false,
+    "include_hard_routing": true,
+    "boundary": "Lookup-only model relocation; original model contents, frozen files, runtime precision, and replay tolerances are unchanged. The post-outcome supplementary lock discloses the formerly omitted runtime Jinja dependency.",
+    "hard_feedback_protocol_sha256": "5e4ac7c6d2c6fb369afd24339059b29ed0265132830ab8c77590ed8e85d27391",
+    "hard_feedback_evaluation_sha256": "36583e0f3911e49be86f15fb92979808bb754d5475b5587459f4d02229b518f5"
+  },
+  "main_verification": {
+    "full_environment_host_prefix_replay_exact": true,
+    "selected_actual_generation_exact": true,
+    "unique_actual_generation_replayed": {
+      "circuit_pooled_mlp_long": 108,
+      "circuit_learned_long": 95,
+      "circuit_fixed_queries_long": 155
+    },
+    "case_indices": [
+      0,
+      1,
+      16,
+      17,
+      32,
+      33,
+      48,
+      49
+    ],
+    "all_hashes_pass": true,
+    "boundary": "Full dynamics replay uses saved LM outputs; actual LM rerun covers all prefixes encountered by eight prespecified cases across every condition, not all64 cases"
+  },
+  "hard_verification": {
+    "selected_actual_generation_exact": true,
+    "case_indices": [
+      0,
+      1,
+      16,
+      17,
+      32,
+      33,
+      48,
+      49
+    ],
+    "replayed_new_prefixes": {
+      "circuit_pooled_mlp_long": 5,
+      "circuit_learned_long": 4,
+      "circuit_fixed_queries_long": 7
+    },
+    "complete_environment_host_hard_prefix_cache_replay_exact": true,
+    "same_case_first_raw_command_identity_reasserted": true,
+    "all_evaluation_hashes_pass": true,
+    "boundary": "Only new hard-routing prefixes reached by eight prespecified cases are rerun through the actual LM"
+  },
+  "initial_failed_attempt": "causal-feedback/portable-template-audit.json",
+  "artifact_boundary": "This external distribution record is not inside the archive it hashes; native count-noise strict replay retains the original shared-library fingerprint requirement.",
+  "remote_download": {
+    "url": "https://github.com/ziozzang/novigrad/releases/download/v0.1.1/novigrad-feedback-20260918.tar.gz",
+    "http_status": 200,
+    "bytes": 38561636,
+    "sha256": "bb83a6b8c68a8f244fb5b27e36b6828b129b04ad75ec8658077b671e9c23bfe7",
+    "matches_local_archive": true,
+    "checksum_file_http_status": 200,
+    "checksum_file_matches": true
+  },
+  "portable_replay_log_sha256": "bbb86e1a204acb12b8cc997d3c25682eae6ccf7006a76bd67b5be47462542b04"
+}

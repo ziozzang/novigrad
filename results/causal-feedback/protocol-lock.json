@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "models": [
+    "circuit_pooled_mlp_long",
+    "circuit_learned_long",
+    "circuit_fixed_queries_long"
+  ],
+  "modes": [
+    "original",
+    "self_writeback",
+    "belief_half",
+    "belief_full",
+    "static_prior_prefix",
+    "flipped_feedback",
+    "permuted_prototypes",
+    "uniform_prefix",
+    "analytic_fixed_model",
+    "prior_ranked_no_repeat"
+  ],
+  "maps": {
+    "native601": {
+      "actions": [
+        0,
+        3,
+        3,
+        3
+      ],
+      "probabilities": [
+        [
+          0.25184041261672974,
+          0.24737370014190674,
+          0.2506628930568695,
+          0.25012296438217163
+        ],
+        [
+          0.24922004342079163,
+          0.24576130509376526,
+          0.25107643008232117,
+          0.2539422810077667
+        ],
+        [
+          0.2569957673549652,
+          0.23851801455020905,
+          0.24506311118602753,
+          0.25942307710647583
+        ],
+        [
+          0.25706779956817627,
+          0.23727424442768097,
+          0.24469758570194244,
+          0.2609604001045227
+        ]
+      ],
+      "checkpoint_sha256": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa"
+    },
+    "native701": {
+      "actions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "probabilities": [
+        [
+          0.2959068715572357,
+          0.2184755802154541,
+          0.2579149901866913,
+          0.22770263254642487
+        ],
+        [
+          0.24917404353618622,
+          0.26867595314979553,
+          0.24402111768722534,
+          0.2381289154291153
+        ],
+        [
+          0.24672313034534454,
+          0.2114078253507614,
+          0.2836953103542328,
+          0.25817373394966125
+        ],
+        [
+          0.22992898523807526,
+          0.21708926558494568,
+          0.25786590576171875,
+          0.2951158285140991
+        ]
+      ],
+      "checkpoint_sha256": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7"
+    }
+  },
+  "scenarios": {
+    "immediate": {
+      "actions": 4,
+      "max_steps": 4,
+      "action_cost": 0.05,
+      "reward_flip_probability": 0.0,
+      "delay": 0
+    },
+    "delayed": {
+      "actions": 4,
+      "max_steps": 4,
+      "action_cost": 0.05,
+      "reward_flip_probability": 0.0,
+      "delay": 1
+    },
+    "noisy": {
+      "actions": 4,
+      "max_steps": 4,
+      "action_cost": 0.05,
+      "reward_flip_probability": 0.25,
+      "delay": 0
+    }
+  },
+  "frozen": {
+    "examples/bio_bridge/causal_feedback.py": "e529daaaa3d4c0a5f78308becc499718268c6fd4c284f72cad9c598bec3f6aae",
+    "examples/bio_bridge/feedback_environment.py": "fc2b5ce5e470cbb1b313ca36088688a357e21024aeb39f62497b790bf0c7895b",
+    "examples/bio_bridge/test_causal_feedback.py": "469b688581b60359af456d5d944ae0c59d21e4a1a931a658d2ae5af75a18e21d",
+    "examples/bio_bridge/test_feedback_environment.py": "57e481904cb913c21466312f5d5b431055f763955fb44f4aacacda038f41efc3",
+    "results/causal-feedback/inputs.safetensors": "2a1982331d14f4075605c03a4d7c29fdc5fe37f4d5ed4fac473fdc0fce4913a0",
+    "results/causal-feedback/cases.json": "a116d99a5b8ead63965bb3efe834dc9e4f99e80ee3ea26f1d07e2fe1d3eb84a9",
+    "results/bilateral-bridge/protocol-lock.json": "9514f08a9b6bc753e137ddbd4bd2cbaa45794cddb0b0131154c005ed9c4c4854",
+    "results/bilateral-bridge/evaluation-lock.json": "08aa3006fcefeeeec7145805a6165fdbbb835a383d88131e0d4046d7c6342996",
+    "results/bilateral-bridge/verification.json": "b3c3596dbab3cb643fca4b4a9d87671fa4f91321e8ebc88750fb1ad4cbc14f07",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+    "results/precise-bridge/native-checkpoints/pca-seed-701.safetensors": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7",
+    "examples/bio_bridge/bilateral_lm.py": "7ff5b88e908ee189440d9ca72913421bbb6c9553dd84a66ebb0eb921a31513fa",
+    "examples/bio_bridge/bilateral_study.py": "d114ffea329029a5d619385f5fd1092c49edd84d7c97830001368a1b1c557528",
+    "examples/bio_bridge/bilateral_temporal.py": "4d089ef7dacd993dfa606d40b75bf242299e0de1d0a40bfbf3c26ec314925267",
+    "examples/bio_bridge/bilateral_closed_loop.py": "12cb332b7fb059b033220bdb9aabbde4e9e6c5b96a02b43758a33fd1b4faf259",
+    "examples/bio_bridge/bilateral_policy_swap.py": "1f1cf603b0bb7989fcb076a088ca4011b46e4b05f0b691b1a84c208ad2718eea",
+    "results/bilateral-bridge/circuit_pooled_mlp_long-final.json": "410c150e24d183d0510864377d9d0e2d59aee88110ffebc1f0934c00909ba8f0",
+    "results/bilateral-bridge/circuit_learned_long-final.json": "a22bfb1327b3f5d03c647fb510683909a1a76fe07233cfa3987ac2ac242faec0",
+    "results/bilateral-bridge/circuit_fixed_queries_long-final.json": "f94b758735c435c28c0af4c62de685630d141e8792f7d206ef85c2063242841d"
+  },
+  "prior": "softmax(sum response loglikelihood / response token count), temperature1; not calibrated",
+  "prior_study_chain": {
+    "protocol-lock.json": "9514f08a9b6bc753e137ddbd4bd2cbaa45794cddb0b0131154c005ed9c4c4854",
+    "evaluation-lock.json": "08aa3006fcefeeeec7145805a6165fdbbb835a383d88131e0d4046d7c6342996",
+    "verification.json": "b3c3596dbab3cb643fca4b4a9d87671fa4f91321e8ebc88750fb1ad4cbc14f07"
+  },
+  "runtime_versions": {
+    "torch": "2.14.0",
+    "numpy": "2.4.6",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.0.1",
+    "safetensors": "0.8.0"
+  },
+  "belief_reliability": 0.9,
+  "max_decisions": 4,
+  "action_cost": 0.05,
+  "base_generation_replay_cases": [
+    0,
+    1,
+    16,
+    17,
+    32,
+    33,
+    48,
+    49
+  ],
+  "scope": "Reused64 authored cases, post-hoc mechanistic diagnosis; no training or fresh generalization claim",
+  "factorial": "All modes on immediate feedback and both native executors; belief_full and analytic_fixed_model additionally delayed/noisy",
+  "boundaries": [
+    "Host computes Bayesian belief and labeled prototype mixtures; LM learns nothing",
+    "Codec601 fixed; only native command-to-executed-action map varies",
+    "Native maps measured on four old-train prototypes and cached, not online dynamics",
+    "Real success terminates even when scalar reward is flipped; termination is informative",
+    "Prefix interventions are norm-matched; no gain selection",
+    "Common host reliability.9 is deliberately misspecified for noise.25; not an optimal Bayesian policy",
+    "Labeled old-train prototypes and candidate functions provide supervised host calibration",
+    "Four-choice deterministic search admits a no-feedback no-repeat solution"
+  ]
+}

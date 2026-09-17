@@ -1,0 +1,10 @@
+{
+  "bio_bridge_unit_tests": 159,
+  "packaging_unit_tests": 6,
+  "unit_tests_passed": true,
+  "main_actual_replayed_prefixes": 358,
+  "hard_actual_replayed_new_prefixes": 16,
+  "actuator_exact_replayed_tensors": 80,
+  "independent_review": "Result claims checked against stored artifacts; wrong hard-prefix filename and missing hard replay flag corrected before packaging. Supplementary post-outcome Jinja provenance disclosures reviewed; template missing/tampered/extra guards pass.",
+  "boundary": "This records the original measured runs and unit tests. Archive relocation/remote download checks are recorded separately after archive construction."
+}

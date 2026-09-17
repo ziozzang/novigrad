@@ -1,0 +1,9 @@
+{
+  "exact_replay": true,
+  "tensors": 80,
+  "artifact_sha256": "bc1ec49e5c116a02b8c861d9581ad605ca3d03313a538e35787563a4cbf6978d",
+  "source_lock_sha256": "5de9a145ff129f55f88b4e32ba176105248da5ba2e85419e31f7db8dd3188951",
+  "numpy": "2.4.6",
+  "python": "3.11.15",
+  "scope": "All saved raw counts, normalized PN inputs, native probabilities and report statistics replayed exactly; original installed native binary hash is part of strict source identity."
+}

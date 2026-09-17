@@ -1,0 +1,10 @@
+{
+  "status": "first portable actual-regeneration attempt failed; supplementary dependency lock required",
+  "failed_archive_sha256": "6932bc62083fe60849ca92bbd503c18d6899b854294d2470ea0bc01853d4d96a",
+  "model_relocation_method": "New directories with hard links containing only original protocol-listed files; no directory symlink alias",
+  "failure": "ValueError: Cannot use chat template functions because tokenizer.chat_template is not set and no template argument was passed!",
+  "missing_dependency": "function/chat_template.jinja",
+  "observed_original_dependency_sha256": "db61fb01017bd82401d3ffca4f8e066cd56ff6d38d2a30c4058770c0bf7ab49b",
+  "discovery_stage": "After numeric results and original in-place replay; before publication of this dated feedback bundle",
+  "boundary": "Original model inventory suffix filter omitted .jinja. Supplementary pinning is post-outcome and cannot retroactively establish pre-run template identity. Later exact output replay can establish consistency with the now-pinned template. No frozen source, model weights, numeric outputs, or original locks are changed."
+}

@@ -1,0 +1,8 @@
+{
+  "protocol-lock.json": "5e4ac7c6d2c6fb369afd24339059b29ed0265132830ab8c77590ed8e85d27391",
+  "started.json": "b5cf49f0a87e2a4841d254022be17ba2a78ec9764ae2c7565fb8a1e9e179e721",
+  "new-prefixes.safetensors": "c15edc765a46b7560cc36892d2ac992acacdb0caf5f6e845e0b962deaa54bb26",
+  "generation-cache.json": "ec1a4bd7208c5c70cfa691ed70fc74dfb7176b13ce142a8423df21432945726a",
+  "results.json": "f5a44cb9f8b81473d0bcb22fe99f622e7c8ac72ccc1ba110e32c974a5a074de6",
+  "run-manifest.json": "7835a45dae954a59e053b3938e0869c5f8033f2ad8db89f41ec061490c14e2c7"
+}

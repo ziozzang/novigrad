@@ -1,0 +1,18 @@
+{
+  "method": "For each case trace excluding the first call, compare command with first-index argmax of the recorded pre-decision host belief. Descriptive post-hoc audit, not new model evaluation.",
+  "input_sha256": "f5a44cb9f8b81473d0bcb22fe99f622e7c8ac72ccc1ba110e32c974a5a074de6",
+  "models": {
+    "circuit_pooled_mlp_long": {
+      "followup_calls": 53,
+      "mismatches": []
+    },
+    "circuit_learned_long": {
+      "followup_calls": 55,
+      "mismatches": []
+    },
+    "circuit_fixed_queries_long": {
+      "followup_calls": 49,
+      "mismatches": []
+    }
+  }
+}

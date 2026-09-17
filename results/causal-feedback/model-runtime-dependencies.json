@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "posthoc_dependency_lock_added_after_outcomes",
+  "reason": "The original model inventory suffix allowlist omitted Jinja templates, while the actual FunctionGemma tokenizer/runtime loads chat_template.jinja.",
+  "boundary": "This supplements but does not alter the frozen original protocol or outcome artifacts. The omission was found during portable replay after outcomes.",
+  "original_bilateral_protocol_sha256": "9514f08a9b6bc753e137ddbd4bd2cbaa45794cddb0b0131154c005ed9c4c4854",
+  "models": {
+    "embedding": {"jinja_files": {}},
+    "function": {
+      "jinja_files": {
+        "chat_template.jinja": {
+          "sha256": "db61fb01017bd82401d3ffca4f8e066cd56ff6d38d2a30c4058770c0bf7ab49b",
+          "bytes": 13792,
+          "runtime_role": "FunctionGemma tokenizer chat serialization"
+        }
+      }
+    }
+  },
+  "excluded_nonruntime_examples": {
+    "function": ["tiny_garden.litertlm"],
+    "embedding": ["notebook.ipynb", "README.md"]
+  }
+}

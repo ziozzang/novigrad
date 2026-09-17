@@ -1,0 +1,31 @@
+{
+  "base_memory_before_sha256": "f005fa7a8c7bf2bd2a2f032e0af52f66b2e06141d588219e02e56af9c9686be6",
+  "base_memory_after_sha256": "f005fa7a8c7bf2bd2a2f032e0af52f66b2e06141d588219e02e56af9c9686be6",
+  "old_generation_cache_sha256": "eea2838c720ca1210defdf133f8972338c204cef5394bd03bf6021787ad67dd2",
+  "new_unique_generations": 156,
+  "selected_replay_keys": {
+    "circuit_pooled_mlp_long": [
+      "0a29aad19b03ba60b238c10047520a9e9a80152e692e18093160bdeea21247e0",
+      "52bb971d379abc8e858d06d770ea0843f60690e7a0ec5c2250c7765ce6ab20de",
+      "9466c257595947c101f3e1be4a0b240af0a420b1c582db79c53f0175c93b48a6",
+      "c74178c2720e8643837ef8f2fbdef406e3182f1909040c8c11b843063688ba54",
+      "d714acd7505f60993eab6fc511d58ddc80db7365f5e9af7fa0087cef0e792389"
+    ],
+    "circuit_learned_long": [
+      "520c3a20908a8ba3f5f64f92d3133eefaac43439dcac969c08d836578606ceff",
+      "6d2bc1006ad01f5cb5ed902d191521b45ce98adfb2e0fe0eb8d118119c92b24d",
+      "8647ca1049072ceff2140d2374d497715c4704aeecac8db167f99981b7d07b32",
+      "f98d2029c55f9caec1a54e13a6694d1d263bbd35344c8c15e7e9e73f255b4132"
+    ],
+    "circuit_fixed_queries_long": [
+      "2bb801da8809f3403a8757c42472e7cfc26ba43b1bbae33da33301c3dc42cf34",
+      "3e5e6bf7299f711bdd33f89b95c1974ef0566ea937d965d1c6fc12b510ec4762",
+      "41403ce0c15710bda49f4027af498e013570a34084be1ed221ebd9163a12cae2",
+      "8ac9c729217ebec7d6eda64b5e0dce06e8ca9071fcc18844239da4cd920fc6bd",
+      "8f79943802165c16adc0e85727696ab88481aaffb486bba52489b81a816d63c2",
+      "bd43aa4310ead8238adaca7bba9816bed2a145b31c4d57e641d9c70c855c485b",
+      "f14889cb71d507ee7fddd06f09116183395f28c3034556d78980de81f60a73b5"
+    ]
+  },
+  "cached_existing_generations_are_not_independent_passes": true
+}

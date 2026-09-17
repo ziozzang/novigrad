@@ -1,0 +1,22 @@
+{
+  "selected_actual_generation_exact": true,
+  "case_indices": [
+    0,
+    1,
+    16,
+    17,
+    32,
+    33,
+    48,
+    49
+  ],
+  "replayed_new_prefixes": {
+    "circuit_pooled_mlp_long": 5,
+    "circuit_learned_long": 4,
+    "circuit_fixed_queries_long": 7
+  },
+  "complete_environment_host_hard_prefix_cache_replay_exact": true,
+  "same_case_first_raw_command_identity_reasserted": true,
+  "all_evaluation_hashes_pass": true,
+  "boundary": "Only new hard-routing prefixes reached by eight prespecified cases are rerun through the actual LM"
+}

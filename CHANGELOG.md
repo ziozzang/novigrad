@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add 84-condition causal-feedback diagnostics, observation-matched host references, paired actuator count-noise measurements, and post-hoc one-prototype routing; preserve harmed cases and host-reasoning limits, publish bilingual HTML and content-verified portable replay.
+
 - Add frozen embedding–circuit–FunctionGemma soft-prefix experiments, temporal query comparisons, 120/480-update controls, 64-case final evaluation, native-policy compatibility diagnostics, bilingual HTML, exact saved replay, and a portable Safetensors replay bundle. Retain negative findings and real ORN data access failures.
 - Add frozen, load-only architecture comparisons with 128 authored ordinary/adversarial texts, context and channel ablations, PN/KC/MBON site probes, fixed landmark pooling, and low-rank/full direct bridge updates; publish bilingual HTML, negative findings, source locks and exact saved-inference replay.
 

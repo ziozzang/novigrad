@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "status": "post_hoc_hypothesis_selected_after_continuous_mixture_results",
+  "scope": "Reused64 interface diagnostic; no fresh-generalization or model-selection claim",
+  "models": [
+    "circuit_pooled_mlp_long",
+    "circuit_learned_long",
+    "circuit_fixed_queries_long"
+  ],
+  "policy": "native701",
+  "scenario": "immediate",
+  "mode": "belief_full",
+  "cases_per_model": 64,
+  "selected_actual_generation_replay_indices": [
+    0,
+    1,
+    16,
+    17,
+    32,
+    33,
+    48,
+    49
+  ],
+  "executor_actions": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "executor_checkpoint_sha256": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7",
+  "change_contract": "Inside an exception-safe context, replace only causal_feedback.next_prefix for belief_full. It chooses argmax(host posterior), routes one old-train labeled prototype, and rescales it to the initial prefix norm. causal_feedback.rollout, environment, prior, executor, first raw generation, and four-step budget remain unchanged.",
+  "predecode_revision": {
+    "from": "results/hard-feedback-routing-predecode-v0",
+    "reason": "Before any hard-routing decoding or outcomes, review found that v0 verification lacked complete cached environment/host/hard-prefix replay. V1 adds that guard and reasserts first-command identity.",
+    "v0_protocol_sha256": "5839b3d1490571c7122c6bec32086852daeb999a6180251e86deaef9829c2fdf",
+    "v0_notes_sha256": "95edcdc4e34cf22d9f5f5671f5dbbe6f4271d6852d11c1304db23557b6150c90"
+  },
+  "boundaries": [
+    "The external host already selects a labeled class prototype; this is not LM or biological reasoning",
+    "No base, adapter, circuit, prior, or prototype training",
+    "First decision is the exact saved original generation for the same case",
+    "Existing prefix generations are reused by digest; only unseen hard-routing prefixes require LM decoding"
+  ],
+  "frozen": {
+    "examples/bio_bridge/hard_feedback_routing.py": "18f521482d4790305c9a376c6049df39cece97b47cc349afeb43245ee443b084",
+    "examples/bio_bridge/causal_feedback.py": "e529daaaa3d4c0a5f78308becc499718268c6fd4c284f72cad9c598bec3f6aae",
+    "examples/bio_bridge/feedback_environment.py": "fc2b5ce5e470cbb1b313ca36088688a357e21024aeb39f62497b790bf0c7895b",
+    "examples/bio_bridge/bilateral_lm.py": "7ff5b88e908ee189440d9ca72913421bbb6c9553dd84a66ebb0eb921a31513fa",
+    "examples/bio_bridge/bilateral_closed_loop.py": "12cb332b7fb059b033220bdb9aabbde4e9e6c5b96a02b43758a33fd1b4faf259",
+    "examples/bio_bridge/test_hard_feedback_routing.py": "3a5ddae030ad4198d6c7032e24a40ad1695b3a593b31c097b468837c5aad4ac0",
+    "results/causal-feedback/protocol-lock.json": "37abda56991323f8639de7421ee64b956008e0e8bc53cd52589e6148764b58cf",
+    "results/causal-feedback/evaluation-lock.json": "875817d6ad9a9c8b0d6bbf31391092becf726706c7df8335a7285e780440af9c",
+    "results/causal-feedback/results.json": "c95083f1840d07141d70aca429772ad73bfa34ed49e4b5a0ccd1ee1a57c9f035",
+    "results/causal-feedback/inputs.safetensors": "2a1982331d14f4075605c03a4d7c29fdc5fe37f4d5ed4fac473fdc0fce4913a0",
+    "results/causal-feedback/cases.json": "a116d99a5b8ead63965bb3efe834dc9e4f99e80ee3ea26f1d07e2fe1d3eb84a9",
+    "results/causal-feedback/generation-cache.json": "eea2838c720ca1210defdf133f8972338c204cef5394bd03bf6021787ad67dd2",
+    "results/causal-feedback/generation-prefixes.safetensors": "a3a275d3c448e50c6db12a249e2c0e4ad04795cf192cb0ac0b21816036e7f677"
+  },
+  "causal_feedback_evaluation_lock_sha256": "875817d6ad9a9c8b0d6bbf31391092becf726706c7df8335a7285e780440af9c"
+}

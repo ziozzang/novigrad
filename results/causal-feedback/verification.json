@@ -1,0 +1,21 @@
+{
+  "full_environment_host_prefix_replay_exact": true,
+  "selected_actual_generation_exact": true,
+  "unique_actual_generation_replayed": {
+    "circuit_pooled_mlp_long": 108,
+    "circuit_learned_long": 95,
+    "circuit_fixed_queries_long": 155
+  },
+  "case_indices": [
+    0,
+    1,
+    16,
+    17,
+    32,
+    33,
+    48,
+    49
+  ],
+  "all_hashes_pass": true,
+  "boundary": "Full dynamics replay uses saved LM outputs; actual LM rerun covers all prefixes encountered by eight prespecified cases across every condition, not all64 cases"
+}

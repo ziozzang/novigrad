@@ -1,0 +1,20 @@
+{
+  "feedback.html": {
+    "sha256": "80c692bce701c686c5f2dd87ecba299325b8b7bf0e711a7fba159f95eff8763a",
+    "offline": true,
+    "desktop_mobile_no_page_overflow": true,
+    "failure_disclosures_work": true,
+    "no_browser_errors": true,
+    "sections": 14,
+    "print_media_checked_with_details_open": true
+  },
+  "feedback.ko.html": {
+    "sha256": "a98b58aa1511975353d7ece0df28af89f8f379dece7aad00c26e4578b8ea5aa6",
+    "offline": true,
+    "desktop_mobile_no_page_overflow": true,
+    "failure_disclosures_work": true,
+    "no_browser_errors": true,
+    "sections": 14,
+    "print_media_checked_with_details_open": true
+  }
+}

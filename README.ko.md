@@ -94,4 +94,6 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 
 [양방향 연결 연구 보고서](reports/neural-link/bilateral.ko.html)는 임베딩과 모의 신경 회로를 고정 BF16 FunctionGemma에 연속 prefix로 연결합니다. 새 적대적 문장 64개에서 480회 학습 쿼리·고정 쿼리·풀링이 각각 32·33·35개, 직접 임베딩 연결이 19개를 맞혔습니다. 대표 예시를 다시 넣는 구조는 오답도 반복해서 유지했습니다. [방법·실패·재현](results/bilateral-bridge/README.ko.md).
 
+[인과 피드백 추가 보고서](reports/neural-link/feedback.ko.html)는 호스트의 믿음 갱신, 고정 언어모델의 명령 전달, 실행부 보정을 분리합니다. 기존 사례 64개에서 연속 피드백의 세 어댑터 성공 수는 52/52/45개, 호스트가 선택한 대표 신호 하나를 전달하면 64/62/64개였습니다. 악화된 사례 1개도 보존했습니다. 첫 출력을 맞춘 호스트 탐색은 64/63/64개이므로 언어모델의 추가 추론 능력보다 인터페이스 개선을 뒷받침합니다. 별도 잡음 입력 15,360개 실험은 실행부의 명령 대응 오류를 드러냈습니다. [방법과 이동 가능한 재현 자료](results/causal-feedback/README.ko.md). [검증된 재현 번들 다운로드](https://github.com/ziozzang/novigrad/releases/download/v0.1.1/novigrad-feedback-20260918.tar.gz) · [배포 검증 기록](results/FEEDBACK_DISTRIBUTION_VERIFICATION.json).
+
 [구조·적대적 검증 보충 보고서](reports/neural-link/architecture.ko.html)는 문맥 결합, PN/KC/MBON 읽기 위치, 고정 그룹 풀링, 저랭크·전체 브리지 갱신을 비교합니다. 직접 작성한 적대적64문장에서 직접 임베딩76.56%, KC 문맥 결합67.19%로 구조적 비약은 입증되지 않았습니다. 브리지 갱신과 본체 LoRA는 구분합니다. [방법과 재현](results/architecture-bridge/README.ko.md).
