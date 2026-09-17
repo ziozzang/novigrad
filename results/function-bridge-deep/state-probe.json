@@ -1,0 +1,138 @@
+{
+  "design": {
+    "source": "results/function-bridge-deep/internal-state-long.json",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "test_context_seed_rule": "100000 + seed; exactly matches long experiment",
+    "shuffle_seed_rule": "900000 + seed",
+    "evaluation": "frozen greedy actions; utility always computed from original contexts",
+    "purpose": "matched-policy causal input sensitivity; no retraining and no parameter selection"
+  },
+  "runs": [
+    {
+      "seed": 0,
+      "checkpoint": "results/function-bridge-deep/internal-state-long-checkpoints/seed-0-state_conditioned.safetensors",
+      "checkpoint_sha256": "ffee508fbfde555518bb184743c160031059f1f6d738d7ad50c234f07dc857ec",
+      "checkpoint_hash_unchanged": true,
+      "weights_unchanged": true,
+      "metrics": {
+        "original": {
+          "utility": 0.0362410694360733,
+          "regret": 0.018623359501361847,
+          "approach_rate": 0.08447265625,
+          "action_change_fraction_vs_original": 0.0
+        },
+        "hunger_clamped_0.5": {
+          "utility": 0.022390110418200493,
+          "regret": 0.03247431665658951,
+          "approach_rate": 0.07421875,
+          "action_change_fraction_vs_original": 0.07373046875
+        },
+        "hunger_shuffled": {
+          "utility": 0.015562664717435837,
+          "regret": 0.039301760494709015,
+          "approach_rate": 0.08544921875,
+          "action_change_fraction_vs_original": 0.09765625
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "checkpoint": "results/function-bridge-deep/internal-state-long-checkpoints/seed-1-state_conditioned.safetensors",
+      "checkpoint_sha256": "67824bf7abe2dc8dcdfeac8c45b31651dbd69b1aa3e9ee0db9de52657848bb78",
+      "checkpoint_hash_unchanged": true,
+      "weights_unchanged": true,
+      "metrics": {
+        "original": {
+          "utility": 0.03997547924518585,
+          "regret": 0.017271149903535843,
+          "approach_rate": 0.1044921875,
+          "action_change_fraction_vs_original": 0.0
+        },
+        "hunger_clamped_0.5": {
+          "utility": 0.02357923425734043,
+          "regret": 0.033667393028736115,
+          "approach_rate": 0.08349609375,
+          "action_change_fraction_vs_original": 0.08544921875
+        },
+        "hunger_shuffled": {
+          "utility": 0.017728717997670174,
+          "regret": 0.03951790928840637,
+          "approach_rate": 0.09423828125,
+          "action_change_fraction_vs_original": 0.10205078125
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "checkpoint": "results/function-bridge-deep/internal-state-long-checkpoints/seed-2-state_conditioned.safetensors",
+      "checkpoint_sha256": "202d8286e0a55c14e3e1b270cffb8c41fe7a5ea6c6e1960689f3f6f387c3f3f8",
+      "checkpoint_hash_unchanged": true,
+      "weights_unchanged": true,
+      "metrics": {
+        "original": {
+          "utility": 0.037884533405303955,
+          "regret": 0.022152770310640335,
+          "approach_rate": 0.0869140625,
+          "action_change_fraction_vs_original": 0.0
+        },
+        "hunger_clamped_0.5": {
+          "utility": 0.01427322719246149,
+          "regret": 0.045764077454805374,
+          "approach_rate": 0.04345703125,
+          "action_change_fraction_vs_original": 0.08447265625
+        },
+        "hunger_shuffled": {
+          "utility": 0.021274384111166,
+          "regret": 0.03876291960477829,
+          "approach_rate": 0.0849609375,
+          "action_change_fraction_vs_original": 0.0869140625
+        }
+      }
+    }
+  ],
+  "mean": {
+    "original": {
+      "utility": 0.03803369402885437,
+      "regret": 0.019349093238512676,
+      "approach_rate": 0.09195963541666667,
+      "action_change_fraction_vs_original": 0.0
+    },
+    "hunger_clamped_0.5": {
+      "utility": 0.020080857289334137,
+      "regret": 0.037301929046710335,
+      "approach_rate": 0.06705729166666667,
+      "action_change_fraction_vs_original": 0.08121744791666667
+    },
+    "hunger_shuffled": {
+      "utility": 0.01818858894209067,
+      "regret": 0.039194196462631226,
+      "approach_rate": 0.08821614583333333,
+      "action_change_fraction_vs_original": 0.09554036458333333
+    }
+  },
+  "population_std_across_seeds": {
+    "original": {
+      "utility": 0.0015282104620137605,
+      "regret": 0.0020579231509289387,
+      "approach_rate": 0.008917726257684066,
+      "action_change_fraction_vs_original": 0.0
+    },
+    "hunger_clamped_0.5": {
+      "utility": 0.004135208933276808,
+      "regret": 0.006003433715683756,
+      "approach_rate": 0.017112305427474866,
+      "action_change_fraction_vs_original": 0.0053090841244466435
+    },
+    "hunger_shuffled": {
+      "utility": 0.0023543641140542906,
+      "regret": 0.0003174690235218041,
+      "approach_rate": 0.004262956007066665,
+      "action_change_fraction_vs_original": 0.0063580810496824906
+    }
+  },
+  "runtime_seconds": 2.0739524606615305
+}

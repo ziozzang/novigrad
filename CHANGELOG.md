@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add independently authored multi-seed FunctionGemma evaluations, physical goal grounding, non-oracle sensor-fusion ablations, internal-state reward learning and conditioning/exploration diagnostics with English/Korean reports.
+
 - Add typed FunctionGemma/novi loopback API, fixed-budget LoRA routing experiment, and separately validated navigation-memory/goal-switch cases.
 
 - Add frozen EmbeddingGemma language-to-reward-policy examples, reversal controls, and a sourced MB/CX bridge design with local FlyWire candidate-port audit.

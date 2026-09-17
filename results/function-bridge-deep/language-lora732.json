@@ -1,0 +1,1645 @@
+{
+  "model": "/Users/a405394/models/google_functiongemma-270m-it",
+  "adapter": "results/function-bridge-deep/seed732/lora",
+  "sha256": {
+    "/Users/a405394/fly/nobi/examples/function_bridge/deep_holdout.json": "8b54089bb9ed7832b613070e7946a992a322b4fcd5ba63c1d98920990dd1d19c",
+    "/Users/a405394/fly/nobi/examples/function_bridge/deep_evaluate.py": "48945d61eec2f92b966542ee4081fe316f725be75810acd9f5fabd7e4d42f141",
+    "/Users/a405394/fly/nobi/examples/function_bridge/protocol.py": "ab64cf5ea32181cf38a4f602379ecbde47de051f6554a80c9198e383e96e5acc",
+    "/Users/a405394/models/google_functiongemma-270m-it/added_tokens.json": "52233b287bd11f2f03d19fb9823e15698d9d55a811e2cce8f02bae2551d97153",
+    "/Users/a405394/models/google_functiongemma-270m-it/tokenizer_config.json": "105f9a5740d9be1c455c4979f50ac0d60d9df8b2056498d8ab9a8cdfbdebb4a8",
+    "/Users/a405394/models/google_functiongemma-270m-it/special_tokens_map.json": "d39df6f8ddb132a622394f05a603b166ba5f22d485483e30d06c1821ef4ac9b4",
+    "/Users/a405394/models/google_functiongemma-270m-it/config.json": "a27aebbe2b4dd4be03e8907349eff4354f90ce265c980509218686be93a9abb6",
+    "/Users/a405394/models/google_functiongemma-270m-it/tokenizer.json": "cab06510581429a52484f103c9df074578506a025c40db1197d3625041566ca7",
+    "/Users/a405394/models/google_functiongemma-270m-it/generation_config.json": "f3f694d69c044000d84e777938fe314137af2ae06014c552332d1c82f5e1b13d",
+    "/Users/a405394/models/google_functiongemma-270m-it/model.safetensors": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b",
+    "/Users/a405394/models/google_functiongemma-270m-it/chat_template.jinja": "db61fb01017bd82401d3ffca4f8e066cd56ff6d38d2a30c4058770c0bf7ab49b",
+    "results/function-bridge-deep/seed732/lora/adapter_model.safetensors": "11be54cc59462d1f609e250cf2853326d3f8c599593ae61f0c538611218ba0c2",
+    "results/function-bridge-deep/seed732/lora/adapter_config.json": "0e514145a5882c9c5db4d98f923f5da1c69c37fc0ef5896e405b9b6b8a96652a"
+  },
+  "groups": {
+    "valid": {
+      "correct": 48,
+      "count": 64,
+      "accuracy": 0.75
+    },
+    "unsupported": {
+      "correct": 5,
+      "count": 16,
+      "accuracy": 0.3125
+    },
+    "en": {
+      "correct": 27,
+      "count": 32,
+      "accuracy": 0.84375
+    },
+    "ko": {
+      "correct": 21,
+      "count": 32,
+      "accuracy": 0.65625
+    }
+  },
+  "latency_seconds": {
+    "p50": 0.300666687078774,
+    "p95": 0.3279437432065606
+  },
+  "cases": [
+    {
+      "id": "deep-001",
+      "prompt": "Set the current goal to water.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 2.685494666919112
+    },
+    {
+      "id": "deep-002",
+      "prompt": "I am thirsty; make finding water the objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.33004325069487095
+    },
+    {
+      "id": "deep-003",
+      "prompt": "Focus on getting something to drink, please.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20830662548542023
+    },
+    {
+      "id": "deep-004",
+      "prompt": "Our priority should be reaching a water source.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.30742462538182735
+    },
+    {
+      "id": "deep-005",
+      "prompt": "Choose hydration as the goal for now.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.307455250993371
+    },
+    {
+      "id": "deep-006",
+      "prompt": "현재 목표를 물로 설정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2969572078436613
+    },
+    {
+      "id": "deep-007",
+      "prompt": "목이 마르니 물을 찾는 것을 목표로 삼아 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3019599989056587
+    },
+    {
+      "id": "deep-008",
+      "prompt": "지금은 마실 물을 구하는 데 집중해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3101460002362728
+    },
+    {
+      "id": "deep-009",
+      "prompt": "수분 보충을 우선 목표로 정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.30457920767366886
+    },
+    {
+      "id": "deep-010",
+      "prompt": "물 있는 곳에 도달하는 것을 목표로 선택해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.21038191579282284
+    },
+    {
+      "id": "deep-011",
+      "prompt": "Set the goal to food.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.29847733303904533
+    },
+    {
+      "id": "deep-012",
+      "prompt": "I am hungry; make obtaining food the objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.30622145906090736
+    },
+    {
+      "id": "deep-013",
+      "prompt": "Focus on finding a meal, please.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.19840816780924797
+    },
+    {
+      "id": "deep-014",
+      "prompt": "Our priority is getting something to eat.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.308402918279171
+    },
+    {
+      "id": "deep-015",
+      "prompt": "Choose nourishment as the current goal.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.21112758293747902
+    },
+    {
+      "id": "deep-016",
+      "prompt": "목표를 음식으로 설정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3029984999448061
+    },
+    {
+      "id": "deep-017",
+      "prompt": "배가 고프니 먹을 것을 찾는 목표로 정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.30652387626469135
+    },
+    {
+      "id": "deep-018",
+      "prompt": "지금은 식량을 구하는 데 집중해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3060672916471958
+    },
+    {
+      "id": "deep-019",
+      "prompt": "식사를 마련하는 것을 우선 목표로 삼아 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3056421671062708
+    },
+    {
+      "id": "deep-020",
+      "prompt": "음식을 얻는 것을 현재 목표로 선택해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.1960934605449438
+    },
+    {
+      "id": "deep-021",
+      "prompt": "Set the current goal to warmth.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3163128327578306
+    },
+    {
+      "id": "deep-022",
+      "prompt": "I am cold; make getting warm the objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3281771242618561
+    },
+    {
+      "id": "deep-023",
+      "prompt": "Focus on finding a place to warm up.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.3093171250075102
+    },
+    {
+      "id": "deep-024",
+      "prompt": "Choose warmth as our priority.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.322203291580081
+    },
+    {
+      "id": "deep-025",
+      "prompt": "Our goal should be to get out of the cold and warm up.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.32427604123950005
+    },
+    {
+      "id": "deep-026",
+      "prompt": "현재 목표를 따뜻함으로 설정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.32002529315650463
+    },
+    {
+      "id": "deep-027",
+      "prompt": "몸이 추우니 따뜻해지는 것을 목표로 삼아 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.437262998893857
+    },
+    {
+      "id": "deep-028",
+      "prompt": "온기를 얻을 곳을 찾는 데 집중해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20313937589526176
+    },
+    {
+      "id": "deep-029",
+      "prompt": "지금은 몸을 데우는 것을 우선 목표로 정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.30390425212681293
+    },
+    {
+      "id": "deep-030",
+      "prompt": "추위를 피해 따뜻해지는 목표를 선택해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20329241827130318
+    },
+    {
+      "id": "deep-031",
+      "prompt": "Set the goal to rest.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.28997400030493736
+    },
+    {
+      "id": "deep-032",
+      "prompt": "I am exhausted; make resting the objective.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.30720966681838036
+    },
+    {
+      "id": "deep-033",
+      "prompt": "Focus on finding a place to take a break.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:observe_heading{degrees:0}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.26342858374118805
+    },
+    {
+      "id": "deep-034",
+      "prompt": "Choose recuperation through rest as the priority.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2947104163467884
+    },
+    {
+      "id": "deep-035",
+      "prompt": "Our current goal should be getting some sleep.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "en",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3013782072812319
+    },
+    {
+      "id": "deep-036",
+      "prompt": "목표를 휴식으로 설정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3046784568578005
+    },
+    {
+      "id": "deep-037",
+      "prompt": "지쳤으니 쉬는 것을 목표로 삼아 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.2979213763028383
+    },
+    {
+      "id": "deep-038",
+      "prompt": "잠시 쉴 곳을 찾는 데 집중해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.30630925111472607
+    },
+    {
+      "id": "deep-039",
+      "prompt": "지금은 휴식을 취하는 것을 우선 목표로 정해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3038132507354021
+    },
+    {
+      "id": "deep-040",
+      "prompt": "잠을 자는 것을 현재 목표로 선택해 줘.",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "language": "ko",
+      "category": "goal",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20261449925601482
+    },
+    {
+      "id": "deep-041",
+      "prompt": "The observed heading is zero degrees; record it.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 0
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:0}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2780464608222246
+    },
+    {
+      "id": "deep-042",
+      "prompt": "Observe a heading of positive 180 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 180
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.28990016505122185
+    },
+    {
+      "id": "deep-043",
+      "prompt": "Record the heading as minus 180 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -180
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:-180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -180.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3055891655385494
+    },
+    {
+      "id": "deep-044",
+      "prompt": "My heading reading is 45 degrees. Register that observation.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 45
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:45}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.28581375256180763
+    },
+    {
+      "id": "deep-045",
+      "prompt": "The measured heading is negative ninety degrees; observe it.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -90
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:-90}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -90.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.28353825211524963
+    },
+    {
+      "id": "deep-046",
+      "prompt": "Record an observed heading of 12.5 degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:12.5}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3225816674530506
+    },
+    {
+      "id": "deep-047",
+      "prompt": "The heading sensor reads -37.5 degrees; register this heading.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:-37.5}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3167642932385206
+    },
+    {
+      "id": "deep-048",
+      "prompt": "Observe the heading: one hundred thirty-five degrees.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 135
+        }
+      ],
+      "language": "en",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:135}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 135.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.29995516687631607
+    },
+    {
+      "id": "deep-049",
+      "prompt": "관측한 방향은 0도야. 이 방향을 기록해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 0
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:0}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.26511624827980995
+    },
+    {
+      "id": "deep-050",
+      "prompt": "관측 방향을 양의 180도로 입력해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 180
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2910710424184799
+    },
+    {
+      "id": "deep-051",
+      "prompt": "관측한 방향은 마이너스 180도야. 기록해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -180
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.29723249934613705
+    },
+    {
+      "id": "deep-052",
+      "prompt": "방향 측정값이 45도야. 관측값으로 등록해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 45
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:45}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.29217783734202385
+    },
+    {
+      "id": "deep-053",
+      "prompt": "관측 방향을 음의 구십 도로 기록해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -90
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:-30}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -30.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.2829322926700115
+    },
+    {
+      "id": "deep-054",
+      "prompt": "관측한 방향 12.5도를 입력해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:12.5}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.31167279183864594
+    },
+    {
+      "id": "deep-055",
+      "prompt": "방향 센서가 -37.5도를 가리켜. 이 관측값을 등록해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:-37.5}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.3207251690328121
+    },
+    {
+      "id": "deep-056",
+      "prompt": "관측 방향을 백삼십오 도로 기록해 줘.",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 135
+        }
+      ],
+      "language": "ko",
+      "category": "heading",
+      "raw": "<start_function_call>call:observe_heading{degrees:36}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 36.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.27911412715911865
+    },
+    {
+      "id": "deep-057",
+      "prompt": "Choose the next action for me.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "language": "en",
+      "category": "action",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2015829998999834
+    },
+    {
+      "id": "deep-058",
+      "prompt": "Decide which action to take now.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "language": "en",
+      "category": "action",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.19442837312817574
+    },
+    {
+      "id": "deep-059",
+      "prompt": "Tell me the current status.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "language": "en",
+      "category": "status",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.2008037082850933
+    },
+    {
+      "id": "deep-060",
+      "prompt": "Show the system status as it stands.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "language": "en",
+      "category": "status",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.1927516646683216
+    },
+    {
+      "id": "deep-061",
+      "prompt": "다음에 취할 행동을 골라 줘.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "language": "ko",
+      "category": "action",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.19760133139789104
+    },
+    {
+      "id": "deep-062",
+      "prompt": "지금 어떤 행동을 할지 결정해 줘.",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "language": "ko",
+      "category": "action",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.1994197517633438
+    },
+    {
+      "id": "deep-063",
+      "prompt": "현재 상태를 알려 줘.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "language": "ko",
+      "category": "status",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.19642216712236404
+    },
+    {
+      "id": "deep-064",
+      "prompt": "지금 시스템 상태를 보여 줘.",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "language": "ko",
+      "category": "status",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": true,
+      "seconds": 0.19801337644457817
+    },
+    {
+      "id": "deep-065",
+      "prompt": "Set the goal to entertainment.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>entertainment<escape>}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "unknown goal",
+      "correct": true,
+      "seconds": 0.30507950112223625
+    },
+    {
+      "id": "deep-066",
+      "prompt": "Translate this sentence into French.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.19259953871369362
+    },
+    {
+      "id": "deep-067",
+      "prompt": "Observe a heading of 181 degrees.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:observe_heading{degrees:181}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "invalid heading",
+      "correct": true,
+      "seconds": 0.30518754199147224
+    },
+    {
+      "id": "deep-068",
+      "prompt": "Record the heading as -200 degrees.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:observe_heading{degrees:-200}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "invalid heading",
+      "correct": true,
+      "seconds": 0.2951114997267723
+    },
+    {
+      "id": "deep-069",
+      "prompt": "Set a goal, but I have not decided which one.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.30589087307453156
+    },
+    {
+      "id": "deep-070",
+      "prompt": "Make food or water the goal; either could work.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.3055223748087883
+    },
+    {
+      "id": "deep-071",
+      "prompt": "Set the goal to food and then choose an action.",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.3185568302869797
+    },
+    {
+      "id": "deep-072",
+      "prompt": "What is the capital of Canada?",
+      "expected": null,
+      "language": "en",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20005966536700726
+    },
+    {
+      "id": "deep-073",
+      "prompt": "목표를 쇼핑으로 설정해 줘.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.3105153739452362
+    },
+    {
+      "id": "deep-074",
+      "prompt": "내일 서울 날씨를 알려 줘.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.19989383406937122
+    },
+    {
+      "id": "deep-075",
+      "prompt": "관측 방향을 181도로 기록해 줘.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:observe_heading{degrees:181}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "invalid heading",
+      "correct": true,
+      "seconds": 0.3204451687633991
+    },
+    {
+      "id": "deep-076",
+      "prompt": "관측한 방향은 마이너스 200도야. 입력해 줘.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:observe_heading{degrees:200}<end_function_call><start_function_response>",
+      "parsed": null,
+      "error": "invalid heading",
+      "correct": true,
+      "seconds": 0.2988807111978531
+    },
+    {
+      "id": "deep-077",
+      "prompt": "목표를 정해 줘. 어떤 목표인지는 아직 말하지 않을게.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20736725069582462
+    },
+    {
+      "id": "deep-078",
+      "prompt": "물이나 휴식 중 하나를 목표로 해 줘. 어느 쪽이든 괜찮아.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:observe_heading{degrees:180}<end_function_call><start_function_response>",
+      "parsed": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.3067540843039751
+    },
+    {
+      "id": "deep-079",
+      "prompt": "목표를 따뜻함으로 설정한 뒤 현재 상태도 알려 줘.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.327931459993124
+    },
+    {
+      "id": "deep-080",
+      "prompt": "이 문장을 일본어로 번역해 줘.",
+      "expected": null,
+      "language": "ko",
+      "category": "unsupported",
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "error": null,
+      "correct": false,
+      "seconds": 0.20132729224860668
+    }
+  ],
+  "scope": "Single greedy generation per prompt, no retries. Unsupported rejection means parser refusal, not semantic model refusal. Independent author had schema access only; not population-representative."
+}

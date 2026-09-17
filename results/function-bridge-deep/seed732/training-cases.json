@@ -1,0 +1,506 @@
+[
+  [
+    "I feel thirsty; update my objective.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "My current need is thirsty. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "I feel dehydrated; update my objective.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "My current need is dehydrated. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "I feel in need of fluids; update my objective.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "My current need is in need of fluids. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "Change the target need to water.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "Use water as the objective.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "I feel hungry; update my objective.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "My current need is hungry. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "I feel in need of calories; update my objective.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "My current need is in need of calories. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "I feel ready for dinner; update my objective.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "My current need is ready for dinner. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "Change the target need to food.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "Use food as the objective.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "I feel cold; update my objective.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "My current need is cold. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "I feel freezing; update my objective.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "My current need is freezing. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "I feel in need of heat; update my objective.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "My current need is in need of heat. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "Change the target need to warmth.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "Use warmth as the objective.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "I feel tired; update my objective.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "My current need is tired. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "I feel exhausted; update my objective.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "My current need is exhausted. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "I feel sleepy; update my objective.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "My current need is sleepy. Set a suitable goal.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "Change the target need to rest.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "Use rest as the objective.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "갈증을 해소하고 싶습니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "마실 물이 필요합니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "water"
+    }
+  ],
+  [
+    "먹을 게 필요합니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "허기를 달래고 싶습니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "food"
+    }
+  ],
+  [
+    "몸을 따뜻하게 하고 싶습니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "보온이 필요합니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "warmth"
+    }
+  ],
+  [
+    "잠을 청하고 싶습니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "쉬는 게 필요합니다. 목표로 지정하세요.",
+    "set_goal",
+    {
+      "goal": "rest"
+    }
+  ],
+  [
+    "Log a heading measurement of -175 degrees.",
+    "observe_heading",
+    {
+      "degrees": -175
+    }
+  ],
+  [
+    "관측된 방향 -175도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": -175
+    }
+  ],
+  [
+    "Log a heading measurement of -130 degrees.",
+    "observe_heading",
+    {
+      "degrees": -130
+    }
+  ],
+  [
+    "관측된 방향 -130도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": -130
+    }
+  ],
+  [
+    "Log a heading measurement of -80 degrees.",
+    "observe_heading",
+    {
+      "degrees": -80
+    }
+  ],
+  [
+    "관측된 방향 -80도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": -80
+    }
+  ],
+  [
+    "Log a heading measurement of -20 degrees.",
+    "observe_heading",
+    {
+      "degrees": -20
+    }
+  ],
+  [
+    "관측된 방향 -20도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": -20
+    }
+  ],
+  [
+    "Log a heading measurement of 0 degrees.",
+    "observe_heading",
+    {
+      "degrees": 0
+    }
+  ],
+  [
+    "관측된 방향 0도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 0
+    }
+  ],
+  [
+    "Log a heading measurement of 10 degrees.",
+    "observe_heading",
+    {
+      "degrees": 10
+    }
+  ],
+  [
+    "관측된 방향 10도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 10
+    }
+  ],
+  [
+    "Log a heading measurement of 55 degrees.",
+    "observe_heading",
+    {
+      "degrees": 55
+    }
+  ],
+  [
+    "관측된 방향 55도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 55
+    }
+  ],
+  [
+    "Log a heading measurement of 85 degrees.",
+    "observe_heading",
+    {
+      "degrees": 85
+    }
+  ],
+  [
+    "관측된 방향 85도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 85
+    }
+  ],
+  [
+    "Log a heading measurement of 100 degrees.",
+    "observe_heading",
+    {
+      "degrees": 100
+    }
+  ],
+  [
+    "관측된 방향 100도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 100
+    }
+  ],
+  [
+    "Log a heading measurement of 145 degrees.",
+    "observe_heading",
+    {
+      "degrees": 145
+    }
+  ],
+  [
+    "관측된 방향 145도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 145
+    }
+  ],
+  [
+    "Log a heading measurement of 175 degrees.",
+    "observe_heading",
+    {
+      "degrees": 175
+    }
+  ],
+  [
+    "관측된 방향 175도를 입력하세요.",
+    "observe_heading",
+    {
+      "degrees": 175
+    }
+  ],
+  [
+    "Run the action selector.",
+    "choose_action",
+    {}
+  ],
+  [
+    "Let the policy decide.",
+    "choose_action",
+    {}
+  ],
+  [
+    "Request a neural action.",
+    "choose_action",
+    {}
+  ],
+  [
+    "Pick a behavior now.",
+    "choose_action",
+    {}
+  ],
+  [
+    "정책의 행동을 결정하세요.",
+    "choose_action",
+    {}
+  ],
+  [
+    "다음 동작을 골라주세요.",
+    "choose_action",
+    {}
+  ],
+  [
+    "행동 선택을 실행하세요.",
+    "choose_action",
+    {}
+  ],
+  [
+    "Read back the saved state.",
+    "get_status",
+    {}
+  ],
+  [
+    "Return status information.",
+    "get_status",
+    {}
+  ],
+  [
+    "Tell me the stored settings.",
+    "get_status",
+    {}
+  ],
+  [
+    "Check the state without changing it.",
+    "get_status",
+    {}
+  ],
+  [
+    "저장된 상태를 알려주세요.",
+    "get_status",
+    {}
+  ],
+  [
+    "설정 상태를 확인하세요.",
+    "get_status",
+    {}
+  ],
+  [
+    "지금 설정을 조회하세요.",
+    "get_status",
+    {}
+  ]
+]

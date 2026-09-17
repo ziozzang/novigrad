@@ -1,0 +1,2749 @@
+{
+  "scope": "Post-hoc reused holdout; three independently sampled LoRA training seeds, same base/data. Correlated errors expected. No new inference or production routing change.",
+  "all_three_agreement": 0.7625,
+  "summary": {
+    "majority": {
+      "valid_correct": 48,
+      "valid_count": 64,
+      "unsupported_rejected": 6,
+      "unsupported_count": 16,
+      "valid_abstentions": 0,
+      "unsupported_state_mutation_calls": 7
+    },
+    "unanimous": {
+      "valid_correct": 40,
+      "valid_count": 64,
+      "unsupported_rejected": 7,
+      "unsupported_count": 16,
+      "valid_abstentions": 17,
+      "unsupported_state_mutation_calls": 6
+    }
+  },
+  "cases": [
+    {
+      "id": "deep-001",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-002",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-003",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-004",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-005",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-006",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-007",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-008",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-009",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ]
+    },
+    {
+      "id": "deep-010",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-011",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-012",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-013",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-014",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-015",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-016",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-017",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-018",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-019",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-020",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-021",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ]
+    },
+    {
+      "id": "deep-022",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ]
+    },
+    {
+      "id": "deep-023",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 30.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-024",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-025",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ]
+    },
+    {
+      "id": "deep-026",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ]
+    },
+    {
+      "id": "deep-027",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ]
+    },
+    {
+      "id": "deep-028",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 36.0
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-029",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-030",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-031",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ]
+    },
+    {
+      "id": "deep-032",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ]
+    },
+    {
+      "id": "deep-033",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-034",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-035",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-036",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ]
+    },
+    {
+      "id": "deep-037",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "water"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-038",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 30.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-039",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ]
+    },
+    {
+      "id": "deep-040",
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-041",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 0
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ]
+    },
+    {
+      "id": "deep-042",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 180
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ]
+    },
+    {
+      "id": "deep-043",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -180
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": -180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": -180.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": -180.0
+        }
+      ]
+    },
+    {
+      "id": "deep-044",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 45
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 45.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 45.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 45.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ]
+    },
+    {
+      "id": "deep-045",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -90
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": -90.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -90.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -90.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": -90.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": -90.0
+        }
+      ]
+    },
+    {
+      "id": "deep-046",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 12.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 12.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 12.5
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ]
+    },
+    {
+      "id": "deep-047",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": -37.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -37.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -37.5
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ]
+    },
+    {
+      "id": "deep-048",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 135
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 135.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 135.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 135.0
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-049",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 0
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 0.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 0.0
+        }
+      ]
+    },
+    {
+      "id": "deep-050",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 180
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ]
+    },
+    {
+      "id": "deep-051",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -180
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 180.0
+        }
+      ]
+    },
+    {
+      "id": "deep-052",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 45
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 45.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 45.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 45.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 45.0
+        }
+      ]
+    },
+    {
+      "id": "deep-053",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -90
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 36.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -30.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 36.0
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 36.0
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-054",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 12.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 12.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 12.5
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": 12.5
+        }
+      ]
+    },
+    {
+      "id": "deep-055",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": -37.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -37.5
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": -37.5
+          }
+        ]
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ],
+      "unanimous": [
+        "observe_heading",
+        {
+          "degrees": -37.5
+        }
+      ]
+    },
+    {
+      "id": "deep-056",
+      "expected": [
+        "observe_heading",
+        {
+          "degrees": 135
+        }
+      ],
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 36.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 36.0
+          }
+        ],
+        null
+      ],
+      "majority": [
+        "observe_heading",
+        {
+          "degrees": 36.0
+        }
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-057",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-058",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-059",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-060",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-061",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-062",
+      "expected": [
+        "choose_action",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-063",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-064",
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-065",
+      "expected": null,
+      "individual_calls": [
+        null,
+        null,
+        null
+      ],
+      "majority": null,
+      "unanimous": null
+    },
+    {
+      "id": "deep-066",
+      "expected": null,
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        null
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": null
+    },
+    {
+      "id": "deep-067",
+      "expected": null,
+      "individual_calls": [
+        null,
+        null,
+        null
+      ],
+      "majority": null,
+      "unanimous": null
+    },
+    {
+      "id": "deep-068",
+      "expected": null,
+      "individual_calls": [
+        null,
+        null,
+        null
+      ],
+      "majority": null,
+      "unanimous": null
+    },
+    {
+      "id": "deep-069",
+      "expected": null,
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "rest"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ]
+    },
+    {
+      "id": "deep-070",
+      "expected": null,
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-071",
+      "expected": null,
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-072",
+      "expected": null,
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-073",
+      "expected": null,
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "food"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ]
+    },
+    {
+      "id": "deep-074",
+      "expected": null,
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    },
+    {
+      "id": "deep-075",
+      "expected": null,
+      "individual_calls": [
+        null,
+        null,
+        null
+      ],
+      "majority": null,
+      "unanimous": null
+    },
+    {
+      "id": "deep-076",
+      "expected": null,
+      "individual_calls": [
+        null,
+        null,
+        null
+      ],
+      "majority": null,
+      "unanimous": null
+    },
+    {
+      "id": "deep-077",
+      "expected": null,
+      "individual_calls": [
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": [
+        "choose_action",
+        {}
+      ],
+      "unanimous": [
+        "choose_action",
+        {}
+      ]
+    },
+    {
+      "id": "deep-078",
+      "expected": null,
+      "individual_calls": [
+        [
+          "observe_heading",
+          {
+            "degrees": 36.0
+          }
+        ],
+        [
+          "observe_heading",
+          {
+            "degrees": 180.0
+          }
+        ],
+        [
+          "choose_action",
+          {}
+        ]
+      ],
+      "majority": null,
+      "unanimous": null
+    },
+    {
+      "id": "deep-079",
+      "expected": null,
+      "individual_calls": [
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ],
+        [
+          "set_goal",
+          {
+            "goal": "warmth"
+          }
+        ]
+      ],
+      "majority": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "unanimous": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ]
+    },
+    {
+      "id": "deep-080",
+      "expected": null,
+      "individual_calls": [
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ],
+        [
+          "get_status",
+          {}
+        ]
+      ],
+      "majority": [
+        "get_status",
+        {}
+      ],
+      "unanimous": [
+        "get_status",
+        {}
+      ]
+    }
+  ]
+}

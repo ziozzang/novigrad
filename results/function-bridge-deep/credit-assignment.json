@@ -1,0 +1,1417 @@
+{
+  "design": {
+    "preset": "fixed_credit_assignment_diagnostic",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "train_interactions": 8192,
+    "batch_size": 32,
+    "optimizer_updates": 256,
+    "test_n_per_seed": 2048,
+    "test_seed_rule": "100000 + seed; reused from internal-state exploratory run",
+    "feedback": "sampled action's actual utility only; no target action, full utility vector, or counterfactual reward",
+    "features": "[hunger, benefit, cost, hunger*benefit, intercept]",
+    "centered_transform": "first four features mapped by 2*x-1 using declared [0,1] ranges",
+    "actor_learning_rate": 0.2,
+    "critic_learning_rate": 0.1,
+    "entropy_coefficient": 0.02,
+    "selection": "all settings fixed before this measurement; no test-based tuning",
+    "variants": {
+      "original_reinforce": "raw features, sampled-return REINFORCE",
+      "centered_scaled_reinforce": "preset centered features, sampled-return REINFORCE",
+      "actor_critic": "centered features, learned linear state-value advantage",
+      "actor_critic_entropy": "actor-critic plus entropy gradient coefficient 0.02"
+    }
+  },
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "original_reinforce": {
+          "utility": 0.0,
+          "regret": 0.05486442893743515,
+          "greedy_approach_rate": 0.0,
+          "mean_approach_probability": 0.031918490712464054,
+          "mean_policy_entropy": 0.13719853289719838
+        },
+        "centered_scaled_reinforce": {
+          "utility": 0.038813356310129166,
+          "regret": 0.016051072627305984,
+          "greedy_approach_rate": 0.091796875,
+          "mean_approach_probability": 0.1651160428242509,
+          "mean_policy_entropy": 0.31034143101860956
+        },
+        "actor_critic": {
+          "utility": 0.03871961310505867,
+          "regret": 0.01614481396973133,
+          "greedy_approach_rate": 0.09130859375,
+          "mean_approach_probability": 0.16520930535598288,
+          "mean_policy_entropy": 0.31141918806978075
+        },
+        "actor_critic_entropy": {
+          "utility": 0.0415940061211586,
+          "regret": 0.013270421884953976,
+          "greedy_approach_rate": 0.1025390625,
+          "mean_approach_probability": 0.18150035035637196,
+          "mean_policy_entropy": 0.33406738234923283
+        }
+      },
+      "learning_curves": {
+        "original_reinforce": [
+          {
+            "interaction": 1024,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.2140942410345229,
+            "mean_policy_entropy": 0.515958835781784
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.11076639211270929,
+            "mean_policy_entropy": 0.3431526286111174
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.07676717745288027,
+            "mean_policy_entropy": 0.2657182662145747
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.0626057593425138,
+            "mean_policy_entropy": 0.22909934142137334
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.04809770163942928,
+            "mean_policy_entropy": 0.18815193468086128
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.04190424379712471,
+            "mean_policy_entropy": 0.1693646857429374
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.038146264133436,
+            "mean_policy_entropy": 0.1575637596453025
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.031918490712464054,
+            "mean_policy_entropy": 0.13719853289719838
+          }
+        ],
+        "centered_scaled_reinforce": [
+          {
+            "interaction": 1024,
+            "utility": 0.02032111957669258,
+            "regret": 0.03454330563545227,
+            "greedy_approach_rate": 0.037109375,
+            "mean_approach_probability": 0.27106592575811417,
+            "mean_policy_entropy": 0.5579079962038784
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.026081252843141556,
+            "regret": 0.028783176094293594,
+            "greedy_approach_rate": 0.0517578125,
+            "mean_approach_probability": 0.1948233951627249,
+            "mean_policy_entropy": 0.43757163377414066
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.03007415682077408,
+            "regret": 0.024790270254015923,
+            "greedy_approach_rate": 0.06298828125,
+            "mean_approach_probability": 0.17756094460233823,
+            "mean_policy_entropy": 0.3946018585305653
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.03335930034518242,
+            "regret": 0.021505124866962433,
+            "greedy_approach_rate": 0.07275390625,
+            "mean_approach_probability": 0.17638242431420778,
+            "mean_policy_entropy": 0.3762466437694326
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.035045526921749115,
+            "regret": 0.019818902015686035,
+            "greedy_approach_rate": 0.07763671875,
+            "mean_approach_probability": 0.16713470434581373,
+            "mean_policy_entropy": 0.3471908113459977
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.03611673042178154,
+            "regret": 0.01874769665300846,
+            "greedy_approach_rate": 0.08203125,
+            "mean_approach_probability": 0.1655436622283888,
+            "mean_policy_entropy": 0.33311075691441777
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.038178980350494385,
+            "regret": 0.016685448586940765,
+            "greedy_approach_rate": 0.08935546875,
+            "mean_approach_probability": 0.16773796739586047,
+            "mean_policy_entropy": 0.32297242812723687
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.038813356310129166,
+            "regret": 0.016051072627305984,
+            "greedy_approach_rate": 0.091796875,
+            "mean_approach_probability": 0.1651160428242509,
+            "mean_policy_entropy": 0.31034143101860956
+          }
+        ],
+        "actor_critic": [
+          {
+            "interaction": 1024,
+            "utility": 0.021634086966514587,
+            "regret": 0.03323034197092056,
+            "greedy_approach_rate": 0.0400390625,
+            "mean_approach_probability": 0.2756963894435297,
+            "mean_policy_entropy": 0.562669927227537
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.02864428237080574,
+            "regret": 0.02622014656662941,
+            "greedy_approach_rate": 0.05810546875,
+            "mean_approach_probability": 0.20065266068388693,
+            "mean_policy_entropy": 0.4450777551512677
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.03061060979962349,
+            "regret": 0.024253815412521362,
+            "greedy_approach_rate": 0.064453125,
+            "mean_approach_probability": 0.18161977788088374,
+            "mean_policy_entropy": 0.3993253084017824
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.034185994416475296,
+            "regret": 0.020678432658314705,
+            "greedy_approach_rate": 0.0751953125,
+            "mean_approach_probability": 0.17839978768629494,
+            "mean_policy_entropy": 0.3787056924343809
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.03518516942858696,
+            "regret": 0.01967925764620304,
+            "greedy_approach_rate": 0.078125,
+            "mean_approach_probability": 0.1687454439441136,
+            "mean_policy_entropy": 0.3492064967769451
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.03611673042178154,
+            "regret": 0.01874769665300846,
+            "greedy_approach_rate": 0.08203125,
+            "mean_approach_probability": 0.16768113871063567,
+            "mean_policy_entropy": 0.33581216984430196
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.03832241892814636,
+            "regret": 0.016542010009288788,
+            "greedy_approach_rate": 0.08984375,
+            "mean_approach_probability": 0.16829440405556179,
+            "mean_policy_entropy": 0.32415280511022326
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.03871961310505867,
+            "regret": 0.01614481396973133,
+            "greedy_approach_rate": 0.09130859375,
+            "mean_approach_probability": 0.16520930535598288,
+            "mean_policy_entropy": 0.31141918806978075
+          }
+        ],
+        "actor_critic_entropy": [
+          {
+            "interaction": 1024,
+            "utility": 0.022382501512765884,
+            "regret": 0.03248192369937897,
+            "greedy_approach_rate": 0.0419921875,
+            "mean_approach_probability": 0.2813989342652682,
+            "mean_policy_entropy": 0.5687877469115824
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.029465315863490105,
+            "regret": 0.025399111211299896,
+            "greedy_approach_rate": 0.060546875,
+            "mean_approach_probability": 0.20949491839859535,
+            "mean_policy_entropy": 0.45731498562587436
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.032907839864492416,
+            "regret": 0.021956585347652435,
+            "greedy_approach_rate": 0.0712890625,
+            "mean_approach_probability": 0.19068890058221952,
+            "mean_policy_entropy": 0.4112762838285735
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.03562156856060028,
+            "regret": 0.01924286037683487,
+            "greedy_approach_rate": 0.08056640625,
+            "mean_approach_probability": 0.19142169320678476,
+            "mean_policy_entropy": 0.39646475213835125
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.03643213212490082,
+            "regret": 0.018432296812534332,
+            "greedy_approach_rate": 0.08349609375,
+            "mean_approach_probability": 0.18244639992637202,
+            "mean_policy_entropy": 0.3685171754656721
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.03871961310505867,
+            "regret": 0.01614481396973133,
+            "greedy_approach_rate": 0.09130859375,
+            "mean_approach_probability": 0.18384002774435965,
+            "mean_policy_entropy": 0.3582147759831929
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.040984489023685455,
+            "regret": 0.01387994084507227,
+            "greedy_approach_rate": 0.1005859375,
+            "mean_approach_probability": 0.18549715140322706,
+            "mean_policy_entropy": 0.34800973924601664
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.0415940061211586,
+            "regret": 0.013270421884953976,
+            "greedy_approach_rate": 0.1025390625,
+            "mean_approach_probability": 0.18150035035637196,
+            "mean_policy_entropy": 0.33406738234923283
+          }
+        ]
+      },
+      "sampled_training_outcomes": {
+        "original_reinforce": {
+          "approach": 910,
+          "positive_reward": 224,
+          "negative_reward": 686
+        },
+        "centered_scaled_reinforce": {
+          "approach": 1760,
+          "positive_reward": 840,
+          "negative_reward": 920
+        },
+        "actor_critic": {
+          "approach": 1776,
+          "positive_reward": 847,
+          "negative_reward": 929
+        },
+        "actor_critic_entropy": {
+          "approach": 1870,
+          "positive_reward": 887,
+          "negative_reward": 983
+        }
+      },
+      "final_parameters": {
+        "original_reinforce": {
+          "actor": [
+            [
+              -0.34263423791027714,
+              0.34263423791027714
+            ],
+            [
+              -0.32880416368983484,
+              0.32880416368983484
+            ],
+            [
+              -0.7999093890618153,
+              0.7999093890618153
+            ],
+            [
+              -0.05319376220414054,
+              0.053193762204140536
+            ],
+            [
+              -1.0243038028122462,
+              1.024303802812246
+            ]
+          ],
+          "critic": null
+        },
+        "centered_scaled_reinforce": {
+          "actor": [
+            [
+              0.3597666002281689,
+              -0.35976660022816886
+            ],
+            [
+              0.4114706230099396,
+              -0.41147062300993964
+            ],
+            [
+              -0.8701833381339481,
+              0.8701833381339482
+            ],
+            [
+              0.8878269816361644,
+              -0.8878269816361644
+            ],
+            [
+              -0.7415495374232856,
+              0.7415495374232856
+            ]
+          ],
+          "critic": null
+        },
+        "actor_critic": {
+          "actor": [
+            [
+              0.353461186868762,
+              -0.35346118686876205
+            ],
+            [
+              0.40763651272870666,
+              -0.4076365127287067
+            ],
+            [
+              -0.8727438644895881,
+              0.8727438644895881
+            ],
+            [
+              0.8827542862211696,
+              -0.8827542862211696
+            ],
+            [
+              -0.7406197756685106,
+              0.7406197756685106
+            ]
+          ],
+          "critic": [
+            0.014872558637357813,
+            0.004913908701547646,
+            -0.07567640421465087,
+            0.08810573057373029,
+            0.061521062054587176
+          ]
+        },
+        "actor_critic_entropy": {
+          "actor": [
+            [
+              0.34730375205645825,
+              -0.34730375205645825
+            ],
+            [
+              0.3958415838386903,
+              -0.3958415838386903
+            ],
+            [
+              -0.8856234938349756,
+              0.8856234938349756
+            ],
+            [
+              0.8363108122175763,
+              -0.8363108122175763
+            ],
+            [
+              -0.6697463858556948,
+              0.6697463858556949
+            ]
+          ],
+          "critic": [
+            0.01309549562661568,
+            0.005090542541456158,
+            -0.0786186465940387,
+            0.0913683152061723,
+            0.06269500901180618
+          ]
+        }
+      },
+      "analytic_hunger_blind_reference": {
+        "utility": 0.03999597579240799,
+        "regret": 0.014868451282382011,
+        "decision_rule": "approach iff 0.5*benefit > cost"
+      }
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "original_reinforce": {
+          "utility": 0.0,
+          "regret": 0.057246629148721695,
+          "greedy_approach_rate": 0.0,
+          "mean_approach_probability": 0.04074687004998461,
+          "mean_policy_entropy": 0.16546443168344777
+        },
+        "centered_scaled_reinforce": {
+          "utility": 0.044625990092754364,
+          "regret": 0.01262064278125763,
+          "greedy_approach_rate": 0.123046875,
+          "mean_approach_probability": 0.19066013873120125,
+          "mean_policy_entropy": 0.3411428582020605
+        },
+        "actor_critic": {
+          "utility": 0.04500608518719673,
+          "regret": 0.012240546755492687,
+          "greedy_approach_rate": 0.12548828125,
+          "mean_approach_probability": 0.19408728882482051,
+          "mean_policy_entropy": 0.34252110648329537
+        },
+        "actor_critic_entropy": {
+          "utility": 0.04705452173948288,
+          "regret": 0.010192105546593666,
+          "greedy_approach_rate": 0.1357421875,
+          "mean_approach_probability": 0.2111333357598062,
+          "mean_policy_entropy": 0.3644666944432903
+        }
+      },
+      "learning_curves": {
+        "original_reinforce": [
+          {
+            "interaction": 1024,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.23720636538730158,
+            "mean_policy_entropy": 0.5447583027752567
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.1261179574553583,
+            "mean_policy_entropy": 0.3738074153542452
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.09269309436929066,
+            "mean_policy_entropy": 0.3033586189707552
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.06958168477719412,
+            "mean_policy_entropy": 0.24720812075581192
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.058084131784935676,
+            "mean_policy_entropy": 0.2163666412253902
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.05373120008614984,
+            "mean_policy_entropy": 0.20408019867484667
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.04573745419966087,
+            "mean_policy_entropy": 0.18071674766474038
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.04074687004998461,
+            "mean_policy_entropy": 0.16546443168344777
+          }
+        ],
+        "centered_scaled_reinforce": [
+          {
+            "interaction": 1024,
+            "utility": 0.028409067541360855,
+            "regret": 0.02883756160736084,
+            "greedy_approach_rate": 0.06005859375,
+            "mean_approach_probability": 0.2959272920865531,
+            "mean_policy_entropy": 0.5774007835813673
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.027726229280233383,
+            "regret": 0.029520399868488312,
+            "greedy_approach_rate": 0.056640625,
+            "mean_approach_probability": 0.21941199314977422,
+            "mean_policy_entropy": 0.4702703807862664
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.028675539419054985,
+            "regret": 0.02857108786702156,
+            "greedy_approach_rate": 0.05908203125,
+            "mean_approach_probability": 0.19247865567211747,
+            "mean_policy_entropy": 0.41848298847199344
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.0322541669011116,
+            "regret": 0.024992460384964943,
+            "greedy_approach_rate": 0.07080078125,
+            "mean_approach_probability": 0.18987362625367915,
+            "mean_policy_entropy": 0.39760087002491645
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.03488803282380104,
+            "regret": 0.022358596324920654,
+            "greedy_approach_rate": 0.08056640625,
+            "mean_approach_probability": 0.17971316351255162,
+            "mean_policy_entropy": 0.3669590053272769
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.03884339705109596,
+            "regret": 0.018403232097625732,
+            "greedy_approach_rate": 0.09619140625,
+            "mean_approach_probability": 0.18320131063414646,
+            "mean_policy_entropy": 0.358305077756011
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.04239049553871155,
+            "regret": 0.014856137335300446,
+            "greedy_approach_rate": 0.11181640625,
+            "mean_approach_probability": 0.1860325999381836,
+            "mean_policy_entropy": 0.34798839914986324
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.044625990092754364,
+            "regret": 0.01262064278125763,
+            "greedy_approach_rate": 0.123046875,
+            "mean_approach_probability": 0.19066013873120125,
+            "mean_policy_entropy": 0.3411428582020605
+          }
+        ],
+        "actor_critic": [
+          {
+            "interaction": 1024,
+            "utility": 0.027357304468750954,
+            "regret": 0.02988932654261589,
+            "greedy_approach_rate": 0.056640625,
+            "mean_approach_probability": 0.2930100321123771,
+            "mean_policy_entropy": 0.5756145041071588
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.028300544247031212,
+            "regret": 0.028946086764335632,
+            "greedy_approach_rate": 0.05810546875,
+            "mean_approach_probability": 0.22044752035135765,
+            "mean_policy_entropy": 0.4706207803548642
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.029308442026376724,
+            "regret": 0.02793818525969982,
+            "greedy_approach_rate": 0.06103515625,
+            "mean_approach_probability": 0.19430983502121724,
+            "mean_policy_entropy": 0.4190195025689
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.03282814472913742,
+            "regret": 0.024418486282229424,
+            "greedy_approach_rate": 0.07275390625,
+            "mean_approach_probability": 0.19060825982706275,
+            "mean_policy_entropy": 0.397131894646404
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.03577273339033127,
+            "regret": 0.021473897621035576,
+            "greedy_approach_rate": 0.083984375,
+            "mean_approach_probability": 0.18163667103241565,
+            "mean_policy_entropy": 0.36755294823834384
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.0395280085504055,
+            "regret": 0.017718620598316193,
+            "greedy_approach_rate": 0.0986328125,
+            "mean_approach_probability": 0.1846742906293094,
+            "mean_policy_entropy": 0.3579856386940442
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.04307206720113754,
+            "regret": 0.014174560084939003,
+            "greedy_approach_rate": 0.11572265625,
+            "mean_approach_probability": 0.18881912483715668,
+            "mean_policy_entropy": 0.3488905307668391
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.04500608518719673,
+            "regret": 0.012240546755492687,
+            "greedy_approach_rate": 0.12548828125,
+            "mean_approach_probability": 0.19408728882482051,
+            "mean_policy_entropy": 0.34252110648329537
+          }
+        ],
+        "actor_critic_entropy": [
+          {
+            "interaction": 1024,
+            "utility": 0.027995452284812927,
+            "regret": 0.029251176863908768,
+            "greedy_approach_rate": 0.05859375,
+            "mean_approach_probability": 0.29854031144866827,
+            "mean_policy_entropy": 0.5810884146714804
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.029326364398002625,
+            "regret": 0.02792026661336422,
+            "greedy_approach_rate": 0.06103515625,
+            "mean_approach_probability": 0.22823401898271584,
+            "mean_policy_entropy": 0.4808436548532472
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.03076276183128357,
+            "regret": 0.026483867317438126,
+            "greedy_approach_rate": 0.06591796875,
+            "mean_approach_probability": 0.20638547433842008,
+            "mean_policy_entropy": 0.43589811463289463
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.0362078920006752,
+            "regret": 0.021038737148046494,
+            "greedy_approach_rate": 0.08447265625,
+            "mean_approach_probability": 0.2034489738792858,
+            "mean_policy_entropy": 0.4150826450311637
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.03892446309328079,
+            "regret": 0.018322166055440903,
+            "greedy_approach_rate": 0.09619140625,
+            "mean_approach_probability": 0.19596166209715415,
+            "mean_policy_entropy": 0.38793329073520155
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.042906567454338074,
+            "regret": 0.014340061694383621,
+            "greedy_approach_rate": 0.11328125,
+            "mean_approach_probability": 0.19946909484423253,
+            "mean_policy_entropy": 0.3785962274932227
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.045281924307346344,
+            "regret": 0.011964705772697926,
+            "greedy_approach_rate": 0.1259765625,
+            "mean_approach_probability": 0.20480806907955987,
+            "mean_policy_entropy": 0.37066096531607945
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.04705452173948288,
+            "regret": 0.010192105546593666,
+            "greedy_approach_rate": 0.1357421875,
+            "mean_approach_probability": 0.2111333357598062,
+            "mean_policy_entropy": 0.3644666944432903
+          }
+        ]
+      },
+      "sampled_training_outcomes": {
+        "original_reinforce": {
+          "approach": 922,
+          "positive_reward": 261,
+          "negative_reward": 661
+        },
+        "centered_scaled_reinforce": {
+          "approach": 1737,
+          "positive_reward": 887,
+          "negative_reward": 850
+        },
+        "actor_critic": {
+          "approach": 1737,
+          "positive_reward": 890,
+          "negative_reward": 847
+        },
+        "actor_critic_entropy": {
+          "approach": 1841,
+          "positive_reward": 933,
+          "negative_reward": 908
+        }
+      },
+      "final_parameters": {
+        "original_reinforce": {
+          "actor": [
+            [
+              -0.2794999605196418,
+              0.2794999605196418
+            ],
+            [
+              -0.2627133212978305,
+              0.2627133212978304
+            ],
+            [
+              -0.8135580326641196,
+              0.8135580326641196
+            ],
+            [
+              -0.02167773591623894,
+              0.021677735916238918
+            ],
+            [
+              -0.9639193889947515,
+              0.9639193889947515
+            ]
+          ],
+          "critic": null
+        },
+        "centered_scaled_reinforce": {
+          "actor": [
+            [
+              0.37305612187577303,
+              -0.3730561218757732
+            ],
+            [
+              0.43661634731288584,
+              -0.4366163473128859
+            ],
+            [
+              -0.875869109410498,
+              0.875869109410498
+            ],
+            [
+              0.8376890479885195,
+              -0.8376890479885195
+            ],
+            [
+              -0.6636116885308846,
+              0.6636116885308846
+            ]
+          ],
+          "critic": null
+        },
+        "actor_critic": {
+          "actor": [
+            [
+              0.3830837810962402,
+              -0.3830837810962402
+            ],
+            [
+              0.4432638919744879,
+              -0.44326389197448796
+            ],
+            [
+              -0.8773968333247644,
+              0.8773968333247644
+            ],
+            [
+              0.8467287011200275,
+              -0.8467287011200275
+            ],
+            [
+              -0.6486971478236201,
+              0.6486971478236201
+            ]
+          ],
+          "critic": [
+            0.015376249158569857,
+            0.02329661492431914,
+            -0.07366500880735737,
+            0.08680653392124796,
+            0.06350620216997617
+          ]
+        },
+        "actor_critic_entropy": {
+          "actor": [
+            [
+              0.38318062857568874,
+              -0.38318062857568874
+            ],
+            [
+              0.4273525589695599,
+              -0.4273525589695599
+            ],
+            [
+              -0.8756776737694555,
+              0.8756776737694555
+            ],
+            [
+              0.8006491743383469,
+              -0.8006491743383469
+            ],
+            [
+              -0.5816919062296997,
+              0.5816919062296996
+            ]
+          ],
+          "critic": [
+            0.019215708935410965,
+            0.023487086330666478,
+            -0.07661638869705255,
+            0.09070930936795066,
+            0.0630271795656656
+          ]
+        }
+      },
+      "analytic_hunger_blind_reference": {
+        "utility": 0.04227306693792343,
+        "regret": 0.014973560348153114,
+        "decision_rule": "approach iff 0.5*benefit > cost"
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "original_reinforce": {
+          "utility": 0.0,
+          "regret": 0.06003730744123459,
+          "greedy_approach_rate": 0.0,
+          "mean_approach_probability": 0.0391540757788154,
+          "mean_policy_entropy": 0.16039546181711103
+        },
+        "centered_scaled_reinforce": {
+          "utility": 0.046401023864746094,
+          "regret": 0.013636283576488495,
+          "greedy_approach_rate": 0.126953125,
+          "mean_approach_probability": 0.19594735270493524,
+          "mean_policy_entropy": 0.33625544033293747
+        },
+        "actor_critic": {
+          "utility": 0.04623975604772568,
+          "regret": 0.01379755325615406,
+          "greedy_approach_rate": 0.1259765625,
+          "mean_approach_probability": 0.19472134589562107,
+          "mean_policy_entropy": 0.3356031990512244
+        },
+        "actor_critic_entropy": {
+          "utility": 0.04825194925069809,
+          "regret": 0.011785358190536499,
+          "greedy_approach_rate": 0.1357421875,
+          "mean_approach_probability": 0.20756801552801168,
+          "mean_policy_entropy": 0.35235415064969217
+        }
+      },
+      "learning_curves": {
+        "original_reinforce": [
+          {
+            "interaction": 1024,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.22649572296931586,
+            "mean_policy_entropy": 0.531628762288864
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.11536870715158856,
+            "mean_policy_entropy": 0.35223749083898104
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.08993715186650836,
+            "mean_policy_entropy": 0.29687885601246655
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.07471588130218433,
+            "mean_policy_entropy": 0.2601551474788887
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.0608695719103243,
+            "mean_policy_entropy": 0.22388286983016853
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.04826503048165243,
+            "mean_policy_entropy": 0.1882036898991699
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.04226816098556709,
+            "mean_policy_entropy": 0.1701021721672517
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "greedy_approach_rate": 0.0,
+            "mean_approach_probability": 0.0391540757788154,
+            "mean_policy_entropy": 0.16039546181711103
+          }
+        ],
+        "centered_scaled_reinforce": [
+          {
+            "interaction": 1024,
+            "utility": 0.027329515665769577,
+            "regret": 0.03270778805017471,
+            "greedy_approach_rate": 0.0546875,
+            "mean_approach_probability": 0.2954348021836149,
+            "mean_policy_entropy": 0.5791377180986997
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.03258746117353439,
+            "regret": 0.027449844405055046,
+            "greedy_approach_rate": 0.0693359375,
+            "mean_approach_probability": 0.2244179851108576,
+            "mean_policy_entropy": 0.473263215972823
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.03741408884525299,
+            "regret": 0.0226232148706913,
+            "greedy_approach_rate": 0.0869140625,
+            "mean_approach_probability": 0.21066630601967962,
+            "mean_policy_entropy": 0.4337440850684651
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.04100434109568596,
+            "regret": 0.01903296448290348,
+            "greedy_approach_rate": 0.099609375,
+            "mean_approach_probability": 0.20335119171148247,
+            "mean_policy_entropy": 0.4078973331648238
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.04338167607784271,
+            "regret": 0.016655631363391876,
+            "greedy_approach_rate": 0.111328125,
+            "mean_approach_probability": 0.19762028264332068,
+            "mean_policy_entropy": 0.3760718859479945
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.0446445606648922,
+            "regret": 0.015392744913697243,
+            "greedy_approach_rate": 0.1171875,
+            "mean_approach_probability": 0.19474854849013623,
+            "mean_policy_entropy": 0.35862347163731356
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.045632872730493546,
+            "regret": 0.014404432848095894,
+            "greedy_approach_rate": 0.12255859375,
+            "mean_approach_probability": 0.19326752948202391,
+            "mean_policy_entropy": 0.34278511481613927
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.046401023864746094,
+            "regret": 0.013636283576488495,
+            "greedy_approach_rate": 0.126953125,
+            "mean_approach_probability": 0.19594735270493524,
+            "mean_policy_entropy": 0.33625544033293747
+          }
+        ],
+        "actor_critic": [
+          {
+            "interaction": 1024,
+            "utility": 0.02710510790348053,
+            "regret": 0.03293219953775406,
+            "greedy_approach_rate": 0.05419921875,
+            "mean_approach_probability": 0.29111667689855525,
+            "mean_policy_entropy": 0.5742517923668068
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.030816860496997833,
+            "regret": 0.029220443218946457,
+            "greedy_approach_rate": 0.064453125,
+            "mean_approach_probability": 0.2208002280580036,
+            "mean_policy_entropy": 0.4692913558811487
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.03646364435553551,
+            "regret": 0.02357366308569908,
+            "greedy_approach_rate": 0.08349609375,
+            "mean_approach_probability": 0.20783292721528726,
+            "mean_policy_entropy": 0.43061889691663996
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.040364883840084076,
+            "regret": 0.019672419875860214,
+            "greedy_approach_rate": 0.09716796875,
+            "mean_approach_probability": 0.20133521799882356,
+            "mean_policy_entropy": 0.4055060658222326
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.04309437423944473,
+            "regret": 0.016942933201789856,
+            "greedy_approach_rate": 0.1103515625,
+            "mean_approach_probability": 0.1953202996091509,
+            "mean_policy_entropy": 0.37436867316634725
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.043817564845085144,
+            "regret": 0.016219740733504295,
+            "greedy_approach_rate": 0.11328125,
+            "mean_approach_probability": 0.19232971441449068,
+            "mean_policy_entropy": 0.35698394027904934
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.045260846614837646,
+            "regret": 0.014776459895074368,
+            "greedy_approach_rate": 0.12060546875,
+            "mean_approach_probability": 0.19128602551423202,
+            "mean_policy_entropy": 0.3418447933637616
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.04623975604772568,
+            "regret": 0.01379755325615406,
+            "greedy_approach_rate": 0.1259765625,
+            "mean_approach_probability": 0.19472134589562107,
+            "mean_policy_entropy": 0.3356031990512244
+          }
+        ],
+        "actor_critic_entropy": [
+          {
+            "interaction": 1024,
+            "utility": 0.028163496404886246,
+            "regret": 0.031873807311058044,
+            "greedy_approach_rate": 0.056640625,
+            "mean_approach_probability": 0.29635945457465096,
+            "mean_policy_entropy": 0.5795654959078955
+          },
+          {
+            "interaction": 2048,
+            "utility": 0.0336548388004303,
+            "regret": 0.026382464915513992,
+            "greedy_approach_rate": 0.07275390625,
+            "mean_approach_probability": 0.23044153945279722,
+            "mean_policy_entropy": 0.4819317277618037
+          },
+          {
+            "interaction": 3072,
+            "utility": 0.03973230719566345,
+            "regret": 0.020305000245571136,
+            "greedy_approach_rate": 0.0947265625,
+            "mean_approach_probability": 0.2200815989805328,
+            "mean_policy_entropy": 0.44644014748148464
+          },
+          {
+            "interaction": 4096,
+            "utility": 0.042642317712306976,
+            "regret": 0.017394986003637314,
+            "greedy_approach_rate": 0.1064453125,
+            "mean_approach_probability": 0.21566486400194196,
+            "mean_policy_entropy": 0.42326280261501614
+          },
+          {
+            "interaction": 5120,
+            "utility": 0.0446445606648922,
+            "regret": 0.015392744913697243,
+            "greedy_approach_rate": 0.1171875,
+            "mean_approach_probability": 0.20863040877578787,
+            "mean_policy_entropy": 0.39115771625750123
+          },
+          {
+            "interaction": 6144,
+            "utility": 0.045555658638477325,
+            "regret": 0.014481647871434689,
+            "greedy_approach_rate": 0.12109375,
+            "mean_approach_probability": 0.2060434036151622,
+            "mean_policy_entropy": 0.37440368611642716
+          },
+          {
+            "interaction": 7168,
+            "utility": 0.04632536321878433,
+            "regret": 0.013711944222450256,
+            "greedy_approach_rate": 0.12646484375,
+            "mean_approach_probability": 0.20383883768338087,
+            "mean_policy_entropy": 0.3581885001458181
+          },
+          {
+            "interaction": 8192,
+            "utility": 0.04825194925069809,
+            "regret": 0.011785358190536499,
+            "greedy_approach_rate": 0.1357421875,
+            "mean_approach_probability": 0.20756801552801168,
+            "mean_policy_entropy": 0.35235415064969217
+          }
+        ]
+      },
+      "sampled_training_outcomes": {
+        "original_reinforce": {
+          "approach": 908,
+          "positive_reward": 259,
+          "negative_reward": 649
+        },
+        "centered_scaled_reinforce": {
+          "approach": 1790,
+          "positive_reward": 925,
+          "negative_reward": 865
+        },
+        "actor_critic": {
+          "approach": 1770,
+          "positive_reward": 915,
+          "negative_reward": 855
+        },
+        "actor_critic_entropy": {
+          "approach": 1863,
+          "positive_reward": 948,
+          "negative_reward": 915
+        }
+      },
+      "final_parameters": {
+        "original_reinforce": {
+          "actor": [
+            [
+              -0.27601206303580916,
+              0.2760120630358093
+            ],
+            [
+              -0.2850058366652365,
+              0.2850058366652365
+            ],
+            [
+              -0.8062746654664681,
+              0.8062746654664683
+            ],
+            [
+              -0.018769641330522807,
+              0.018769641330522807
+            ],
+            [
+              -0.9627794575208058,
+              0.9627794575208058
+            ]
+          ],
+          "critic": null
+        },
+        "centered_scaled_reinforce": {
+          "actor": [
+            [
+              0.40295750214827775,
+              -0.4029575021482777
+            ],
+            [
+              0.41758046014890854,
+              -0.4175804601489085
+            ],
+            [
+              -0.9171273687820005,
+              0.9171273687820005
+            ],
+            [
+              0.8622242526393729,
+              -0.862224252639373
+            ],
+            [
+              -0.676204561292813,
+              0.676204561292813
+            ]
+          ],
+          "critic": null
+        },
+        "actor_critic": {
+          "actor": [
+            [
+              0.401625664866274,
+              -0.4016256648662739
+            ],
+            [
+              0.4175809732546178,
+              -0.4175809732546178
+            ],
+            [
+              -0.9069620386164303,
+              0.9069620386164303
+            ],
+            [
+              0.8633437238595312,
+              -0.8633437238595314
+            ],
+            [
+              -0.679229648005909,
+              0.6792296480059091
+            ]
+          ],
+          "critic": [
+            0.010723038097347364,
+            0.009442668500673731,
+            -0.07716339435198763,
+            0.08970752838487737,
+            0.06916142253527452
+          ]
+        },
+        "actor_critic_entropy": {
+          "actor": [
+            [
+              0.39320186727853007,
+              -0.39320186727853
+            ],
+            [
+              0.4031294433304647,
+              -0.4031294433304647
+            ],
+            [
+              -0.92153975109684,
+              0.9215397510968402
+            ],
+            [
+              0.8225097208351154,
+              -0.8225097208351154
+            ],
+            [
+              -0.6272818282924351,
+              0.6272818282924351
+            ]
+          ],
+          "critic": [
+            0.010507305028938593,
+            0.011453167690238195,
+            -0.08124591860678625,
+            0.0923369058494069,
+            0.07179032621740912
+          ]
+        }
+      },
+      "analytic_hunger_blind_reference": {
+        "utility": 0.04502261430025101,
+        "regret": 0.015014690347015858,
+        "decision_rule": "approach iff 0.5*benefit > cost"
+      }
+    }
+  ],
+  "mean": {
+    "original_reinforce": {
+      "utility": 0.0,
+      "regret": 0.05738278850913048,
+      "greedy_approach_rate": 0.0,
+      "mean_approach_probability": 0.03727314551375469,
+      "mean_policy_entropy": 0.1543528087992524
+    },
+    "centered_scaled_reinforce": {
+      "utility": 0.043280123422543205,
+      "regret": 0.014102666328350702,
+      "greedy_approach_rate": 0.11393229166666667,
+      "mean_approach_probability": 0.18390784475346247,
+      "mean_policy_entropy": 0.32924657651786915
+    },
+    "actor_critic": {
+      "utility": 0.043321818113327026,
+      "regret": 0.014060971327126026,
+      "greedy_approach_rate": 0.1142578125,
+      "mean_approach_probability": 0.18467264669214148,
+      "mean_policy_entropy": 0.3298478312014335
+    },
+    "actor_critic_entropy": {
+      "utility": 0.045633492370446525,
+      "regret": 0.01174929520736138,
+      "greedy_approach_rate": 0.12467447916666667,
+      "mean_approach_probability": 0.2000672338813966,
+      "mean_policy_entropy": 0.3502960758140718
+    }
+  },
+  "population_std_across_seeds": {
+    "original_reinforce": {
+      "utility": 0.0,
+      "regret": 0.002114012382861522,
+      "greedy_approach_rate": 0.0,
+      "mean_approach_probability": 0.0038417439120192963,
+      "mean_policy_entropy": 0.012305161523233538
+    },
+    "centered_scaled_reinforce": {
+      "utility": 0.003240544455317713,
+      "regret": 0.001438771903532259,
+      "greedy_approach_rate": 0.01573313277811793,
+      "mean_approach_probability": 0.013461984071477017,
+      "mean_policy_entropy": 0.013516042520353055
+    },
+    "actor_critic": {
+      "utility": 0.003292992980215953,
+      "regret": 0.0016047569764361287,
+      "greedy_approach_rate": 0.01622877250587752,
+      "mean_approach_probability": 0.013765094722234285,
+      "mean_policy_entropy": 0.013333554828952774
+    },
+    "actor_critic_entropy": {
+      "utility": 0.0028978779626700896,
+      "regret": 0.001256976073445214,
+      "greedy_approach_rate": 0.015652103229389723,
+      "mean_approach_probability": 0.013209207646251525,
+      "mean_policy_entropy": 0.012495500469361953
+    }
+  },
+  "runtime_seconds": 0.17643104121088982,
+  "interpretation": [
+    "The raw-feature policy collapsed to greedy avoidance in every seed while retaining low approach probability.",
+    "Preset centering/scaling recovered most hunger-blind optimal utility; the learned value baseline changed little at this budget.",
+    "Entropy regularization produced the highest utility and lowest regret, consistent with an additional exploration benefit.",
+    "Because actor-critic and centered REINFORCE were nearly tied, these results primarily implicate feature conditioning, with exploration secondary, rather than a linear architecture limit."
+  ]
+}

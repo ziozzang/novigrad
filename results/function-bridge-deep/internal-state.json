@@ -1,0 +1,1022 @@
+{
+  "design": {
+    "seeds": 3,
+    "train_interactions": 2048,
+    "optimizer_updates": 64,
+    "batch_size": 32,
+    "test_n_per_seed": 2048,
+    "actions": {
+      "0": "approach",
+      "1": "avoid"
+    },
+    "reward": "approach: hunger*benefit-cost; avoid: 0; range [-1,1]",
+    "evaluation": "frozen greedy policy on independent continuous draws",
+    "port_encoding": "engineered 319-port nonnegative RBF/scalar expansion; not a biological PN-state claim",
+    "connectivity_sha256": {
+      "pn_kc.tsv": "c824900604e71579cdfca93fe67b200ae792818f534d8a056e8805a4b49e427c",
+      "kc_mbon.tsv": "b28a3c6abe944f74a55aa4907b9479039499713ec507b4614ca0dabf69c617b1"
+    },
+    "preset": "original_fixed_budget",
+    "test_seed_rule": "100000 + seed; intentionally reused by the labeled 4x exploratory comparison",
+    "checkpoint_scope": "real Engine variants only; the conventional NumPy linear baseline has no Engine checkpoint"
+  },
+  "runs": [
+    {
+      "seed": 0,
+      "metrics": {
+        "state_conditioned": {
+          "utility": 0.02523825503885746,
+          "regret": 0.02962617576122284,
+          "random_utility": -0.1275748759508133,
+          "best_possible_utility": 0.05486442893743515
+        },
+        "no_hunger": {
+          "utility": 0.0,
+          "regret": 0.05486442893743515,
+          "random_utility": -0.1275748759508133,
+          "best_possible_utility": 0.05486442893743515
+        },
+        "linear": {
+          "utility": 0.0,
+          "regret": 0.05486442893743515,
+          "random_utility": -0.1275748759508133,
+          "best_possible_utility": 0.05486442893743515
+        },
+        "zero_reward": {
+          "utility": -0.25153645873069763,
+          "regret": 0.3064008951187134,
+          "random_utility": -0.1275748759508133,
+          "best_possible_utility": 0.05486442893743515
+        }
+      },
+      "analytic_references": {
+        "full_information_optimal": {
+          "utility": 0.05486442893743515,
+          "regret": 0.0
+        },
+        "hunger_blind_optimal": {
+          "utility": 0.03999597579240799,
+          "regret": 0.014868451282382011,
+          "decision_rule": "approach iff 0.5*benefit > cost"
+        }
+      },
+      "learning_curves": {
+        "state_conditioned": [
+          {
+            "step": 256,
+            "utility": 0.04603288695216179,
+            "regret": 0.008831541985273361,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 512,
+            "utility": 0.02944474294781685,
+            "regret": 0.0254196859896183,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 768,
+            "utility": 0.026484766975045204,
+            "regret": 0.028379661962389946,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1024,
+            "utility": 0.022749070078134537,
+            "regret": 0.03211535885930061,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1280,
+            "utility": 0.02455754391849041,
+            "regret": 0.03030688688158989,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1536,
+            "utility": 0.02595721371471882,
+            "regret": 0.02890721708536148,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1792,
+            "utility": 0.02518237754702568,
+            "regret": 0.02968205139040947,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 2048,
+            "utility": 0.02523825503885746,
+            "regret": 0.02962617576122284,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          }
+        ],
+        "no_hunger": [
+          {
+            "step": 256,
+            "utility": 0.021748708561062813,
+            "regret": 0.03311572223901749,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 512,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 768,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1024,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1280,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1536,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1792,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 2048,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          }
+        ],
+        "linear": [
+          {
+            "step": 256,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 512,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 768,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1024,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1280,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1536,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1792,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 2048,
+            "utility": 0.0,
+            "regret": 0.05486442893743515,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          }
+        ],
+        "zero_reward": [
+          {
+            "step": 256,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 512,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 768,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1024,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1280,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1536,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 1792,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          },
+          {
+            "step": 2048,
+            "utility": -0.25153645873069763,
+            "regret": 0.3064008951187134,
+            "random_utility": -0.1275748759508133,
+            "best_possible_utility": 0.05486442893743515
+          }
+        ]
+      },
+      "zero_reward_weights_unchanged": true,
+      "checkpoints": {
+        "state_conditioned": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-0-state_conditioned.safetensors",
+          "sha256": "25c46ffdf123dc0651d1a7d5ab469665c4f1460bd99978fdf7d1b21ff95f3f7c",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        },
+        "no_hunger": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-0-no_hunger.safetensors",
+          "sha256": "92d3304408641572a286f89a67b8ec52a1fb079081ecf50fd7e2c25f6edc6538",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        },
+        "zero_reward": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-0-zero_reward.safetensors",
+          "sha256": "defee1fc73deffca87284b3eaa0f44ef58b631ef48b2d956369167da87879c06",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "metrics": {
+        "state_conditioned": {
+          "utility": 0.023849304765462875,
+          "regret": 0.03339732438325882,
+          "random_utility": -0.12029483914375305,
+          "best_possible_utility": 0.057246629148721695
+        },
+        "no_hunger": {
+          "utility": 0.0,
+          "regret": 0.057246629148721695,
+          "random_utility": -0.12029483914375305,
+          "best_possible_utility": 0.057246629148721695
+        },
+        "linear": {
+          "utility": 0.0,
+          "regret": 0.057246629148721695,
+          "random_utility": -0.12029483914375305,
+          "best_possible_utility": 0.057246629148721695
+        },
+        "zero_reward": {
+          "utility": -0.2376466989517212,
+          "regret": 0.2948933243751526,
+          "random_utility": -0.12029483914375305,
+          "best_possible_utility": 0.057246629148721695
+        }
+      },
+      "analytic_references": {
+        "full_information_optimal": {
+          "utility": 0.057246629148721695,
+          "regret": 0.0
+        },
+        "hunger_blind_optimal": {
+          "utility": 0.04227306693792343,
+          "regret": 0.014973560348153114,
+          "decision_rule": "approach iff 0.5*benefit > cost"
+        }
+      },
+      "learning_curves": {
+        "state_conditioned": [
+          {
+            "step": 256,
+            "utility": 0.049522191286087036,
+            "regret": 0.007724438793957233,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 512,
+            "utility": 0.04279698431491852,
+            "regret": 0.014449642039835453,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 768,
+            "utility": 0.03310580551624298,
+            "regret": 0.024140827357769012,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1024,
+            "utility": 0.032569341361522675,
+            "regret": 0.02467728778719902,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1280,
+            "utility": 0.025369994342327118,
+            "regret": 0.031876638531684875,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1536,
+            "utility": 0.025353122502565384,
+            "regret": 0.03189350664615631,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1792,
+            "utility": 0.024135228246450424,
+            "regret": 0.03311140090227127,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 2048,
+            "utility": 0.023849304765462875,
+            "regret": 0.03339732438325882,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          }
+        ],
+        "no_hunger": [
+          {
+            "step": 256,
+            "utility": 0.006632937118411064,
+            "regret": 0.05061369389295578,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 512,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 768,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1024,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1280,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1536,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1792,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 2048,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          }
+        ],
+        "linear": [
+          {
+            "step": 256,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 512,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 768,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1024,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1280,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1536,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1792,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 2048,
+            "utility": 0.0,
+            "regret": 0.057246629148721695,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          }
+        ],
+        "zero_reward": [
+          {
+            "step": 256,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 512,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 768,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1024,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1280,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1536,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 1792,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          },
+          {
+            "step": 2048,
+            "utility": -0.2376466989517212,
+            "regret": 0.2948933243751526,
+            "random_utility": -0.12029483914375305,
+            "best_possible_utility": 0.057246629148721695
+          }
+        ]
+      },
+      "zero_reward_weights_unchanged": true,
+      "checkpoints": {
+        "state_conditioned": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-1-state_conditioned.safetensors",
+          "sha256": "aa71dc2437fa5925fb6042b65de29100060222d76d290cbb65eccaff64645320",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        },
+        "no_hunger": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-1-no_hunger.safetensors",
+          "sha256": "9be54271bebc377a4a63c994cc49876ce6ff7c6e98131642f44d90775a689880",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        },
+        "zero_reward": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-1-zero_reward.safetensors",
+          "sha256": "41e08a096315e4a38b7ce82eda921b85e5558647037057abd21357b4cf19f89a",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "metrics": {
+        "state_conditioned": {
+          "utility": 0.02275066077709198,
+          "regret": 0.03728664293885231,
+          "random_utility": -0.12155361473560333,
+          "best_possible_utility": 0.06003730744123459
+        },
+        "no_hunger": {
+          "utility": 0.0,
+          "regret": 0.06003730744123459,
+          "random_utility": -0.12155361473560333,
+          "best_possible_utility": 0.06003730744123459
+        },
+        "linear": {
+          "utility": 0.0,
+          "regret": 0.06003730744123459,
+          "random_utility": -0.12155361473560333,
+          "best_possible_utility": 0.06003730744123459
+        },
+        "zero_reward": {
+          "utility": -0.23950347304344177,
+          "regret": 0.29954078793525696,
+          "random_utility": -0.12155361473560333,
+          "best_possible_utility": 0.06003730744123459
+        }
+      },
+      "analytic_references": {
+        "full_information_optimal": {
+          "utility": 0.06003730744123459,
+          "regret": 0.0
+        },
+        "hunger_blind_optimal": {
+          "utility": 0.04502261430025101,
+          "regret": 0.015014690347015858,
+          "decision_rule": "approach iff 0.5*benefit > cost"
+        }
+      },
+      "learning_curves": {
+        "state_conditioned": [
+          {
+            "step": 256,
+            "utility": 0.0454624779522419,
+            "regret": 0.014574827626347542,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 512,
+            "utility": 0.04253709316253662,
+            "regret": 0.01750021241605282,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 768,
+            "utility": 0.03651110455393791,
+            "regret": 0.023526199162006378,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1024,
+            "utility": 0.029285797849297523,
+            "regret": 0.030751507729291916,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1280,
+            "utility": 0.020274609327316284,
+            "regret": 0.039762698113918304,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1536,
+            "utility": 0.02442917600274086,
+            "regret": 0.03560812771320343,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1792,
+            "utility": 0.026010848581790924,
+            "regret": 0.034026458859443665,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 2048,
+            "utility": 0.02275066077709198,
+            "regret": 0.03728664293885231,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          }
+        ],
+        "no_hunger": [
+          {
+            "step": 256,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 512,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 768,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1024,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1280,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1536,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1792,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 2048,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          }
+        ],
+        "linear": [
+          {
+            "step": 256,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 512,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 768,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1024,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1280,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1536,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1792,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 2048,
+            "utility": 0.0,
+            "regret": 0.06003730744123459,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          }
+        ],
+        "zero_reward": [
+          {
+            "step": 256,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 512,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 768,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1024,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1280,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1536,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 1792,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          },
+          {
+            "step": 2048,
+            "utility": -0.23950347304344177,
+            "regret": 0.29954078793525696,
+            "random_utility": -0.12155361473560333,
+            "best_possible_utility": 0.06003730744123459
+          }
+        ]
+      },
+      "zero_reward_weights_unchanged": true,
+      "checkpoints": {
+        "state_conditioned": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-2-state_conditioned.safetensors",
+          "sha256": "65c1daa01b98351fc2eb0978ae9f31366ea331054b9ace00983bbcf6f99de247",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        },
+        "no_hunger": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-2-no_hunger.safetensors",
+          "sha256": "a28df292e1235bd1327b5f7652c56197837c0eb381afd125940857f295d44119",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        },
+        "zero_reward": {
+          "path": "results/function-bridge-deep/internal-state-checkpoints/seed-2-zero_reward.safetensors",
+          "sha256": "f2020796daafb43c6b2e50b5516833555752ddc0430ef6705bcd763d6b213ba7",
+          "config": {
+            "actions": 2,
+            "learning_rate": 0.029999999329447746,
+            "logit_gain": 6.0,
+            "active_fraction": 0.20000000298023224,
+            "weight_limit": 1.0,
+            "homeostasis": false
+          }
+        }
+      }
+    }
+  ],
+  "mean": {
+    "state_conditioned": {
+      "utility": 0.02394607352713744,
+      "regret": 0.03343671436111132,
+      "random_utility": -0.12314110994338989,
+      "best_possible_utility": 0.05738278850913048
+    },
+    "no_hunger": {
+      "utility": 0.0,
+      "regret": 0.05738278850913048,
+      "random_utility": -0.12314110994338989,
+      "best_possible_utility": 0.05738278850913048
+    },
+    "linear": {
+      "utility": 0.0,
+      "regret": 0.05738278850913048,
+      "random_utility": -0.12314110994338989,
+      "best_possible_utility": 0.05738278850913048
+    },
+    "zero_reward": {
+      "utility": -0.24289554357528687,
+      "regret": 0.30027833580970764,
+      "random_utility": -0.12314110994338989,
+      "best_possible_utility": 0.05738278850913048
+    }
+  },
+  "interpretation": [
+    "The state-conditioned connectome policy improved over its zero-reward control but retained nonzero regret.",
+    "A learned baseline that reaches greedy avoidance is reported as a failed training outcome under this budget, not evidence that its policy class cannot solve the task; the analytic references separate policy-class information limits from learning failure.",
+    "No held-out examples or metrics were used for learning, model selection, or hyperparameter adjustment."
+  ],
+  "runtime_seconds": 24.51670075021684,
+  "population_std_across_seeds": {
+    "state_conditioned": {
+      "utility": 0.0010178586829611654,
+      "regret": 0.003127496658420919,
+      "random_utility": 0.003176983868818237,
+      "best_possible_utility": 0.002114012382861522
+    },
+    "no_hunger": {
+      "utility": 0.0,
+      "regret": 0.002114012382861522,
+      "random_utility": 0.003176983868818237,
+      "best_possible_utility": 0.002114012382861522
+    },
+    "linear": {
+      "utility": 0.0,
+      "regret": 0.002114012382861522,
+      "random_utility": 0.003176983868818237,
+      "best_possible_utility": 0.002114012382861522
+    },
+    "zero_reward": {
+      "utility": 0.006156891182470625,
+      "regret": 0.004726805034752622,
+      "random_utility": 0.003176983868818237,
+      "best_possible_utility": 0.002114012382861522
+    }
+  }
+}

@@ -77,3 +77,5 @@ Gemma 의미 연결: [실행 예제와 학습 결과](examples/gemma_bridge/READ
 
 
 FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.ko.md), [기억·단서 충돌·목표 변경 사례 연구](examples/function_bridge/CASES_RESEARCH.ko.md).
+
+추가 연구: [목표 공간 연결·센서 신뢰도·보상 학습 메커니즘](examples/function_bridge/DEEP_RESULTS.ko.md). 실패 사례와 개선된 일반 정책 비교도 포함합니다.

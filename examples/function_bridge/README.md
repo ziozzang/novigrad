@@ -63,3 +63,5 @@ The adapted model plus validator rejected an out-of-range angle and a compound r
 [English research catalog](CASES_RESEARCH.md) / [한국어](CASES_RESEARCH.ko.md) connects goal switching, cue dropout, cue conflict, hunger/aversion and reversal to primary studies. Six software navigation conditions ran across three seeds, with an analytic true-heading control and ablations. The estimator is a persistent circular state variable, not reconstructed FC2/EPG/PFL neurons; the LLM and novi are not in that simulation loop. Actual anatomy and candidate IDs remain in the [earlier audit](../gemma_bridge/RESEARCH.md).
 
 Raw evaluation outputs, training settings, fresh/training cases, live HTTP episodes, model hashes and navigation trajectories are under [`results/function-bridge`](../../results/function-bridge). The run stops at its four-iteration research cap; it does not certify general tool-use reliability or biological fidelity.
+
+See the [deeper multi-seed research](DEEP_RESULTS.md): independent language cases, grounded target contact, non-oracle sensor tests and reward-learning controls.

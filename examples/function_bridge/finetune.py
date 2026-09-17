@@ -9,8 +9,8 @@ from protocol import tools
 from evaluate import BASE
 from train_data import training_records,FRESH,call
 
-p=argparse.ArgumentParser();p.add_argument('--steps',type=int,default=80);p.add_argument('--out',type=Path,default=Path('results/function-bridge/lora'));a=p.parse_args()
-torch.manual_seed(731);rng=np.random.default_rng(731)
+p=argparse.ArgumentParser();p.add_argument('--steps',type=int,default=80);p.add_argument('--seed',type=int,default=731);p.add_argument('--out',type=Path,default=Path('results/function-bridge/lora'));a=p.parse_args()
+torch.manual_seed(a.seed);rng=np.random.default_rng(a.seed)
 model_path='/Users/a405394/models/google_functiongemma-270m-it'
 tok=AutoTokenizer.from_pretrained(model_path,local_files_only=True)
 base=AutoModelForCausalLM.from_pretrained(model_path,local_files_only=True,dtype=torch.bfloat16)
@@ -41,5 +41,5 @@ for step in range(a.steps):
  losses.append(float(loss.detach().cpu()))
  if step%10==0: print(step,losses[-1],time.perf_counter()-start,flush=True)
 model.save_pretrained(a.out,safe_serialization=True)
-report={'seed':731,'steps':a.steps,'batch_size':2,'learning_rate':2e-4,'rank':8,'alpha':16,'modules':['q_proj','v_proj'],'train_examples':len(examples),'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),'base_dtype':'bfloat16','base_weights_modified':False,'losses':losses,'seconds':time.perf_counter()-start}
+report={'seed':a.seed,'steps':a.steps,'batch_size':2,'learning_rate':2e-4,'rank':8,'alpha':16,'modules':['q_proj','v_proj'],'train_examples':len(examples),'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),'base_dtype':'bfloat16','base_weights_modified':False,'losses':losses,'seconds':time.perf_counter()-start}
 (a.out.parent/'finetune.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report),flush=True)

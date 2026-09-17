@@ -97,3 +97,5 @@ Frozen Gemma semantic bridge: [example and measured learning](examples/gemma_bri
 
 
 FunctionGemma typed API and LoRA routing experiments: [example](examples/function_bridge/README.md), [memory, cue conflict and goal-switch research](examples/function_bridge/CASES_RESEARCH.md).
+
+Further research: [grounded goals, sensor reliability and reward-learning mechanisms](examples/function_bridge/DEEP_RESULTS.md), including negative results and stronger conventional baselines.
