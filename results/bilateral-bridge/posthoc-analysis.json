@@ -1,0 +1,2898 @@
+{
+  "status": "post-hoc descriptive analysis of all nine frozen final reports; no model selection or superiority claim",
+  "models": {
+    "circuit_learned": {
+      "overall": {
+        "n": 64,
+        "correct": 15,
+        "valid": 45,
+        "accuracy": 0.234375
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 8,
+          "valid": 21,
+          "accuracy": 0.25
+        },
+        "ko": {
+          "n": 32,
+          "correct": 7,
+          "valid": 24,
+          "accuracy": 0.21875
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 14,
+          "valid": 16,
+          "accuracy": 0.875
+        },
+        "rest": {
+          "n": 16,
+          "correct": 0,
+          "valid": 8,
+          "accuracy": 0.0
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 0,
+          "valid": 10,
+          "accuracy": 0.0
+        },
+        "water": {
+          "n": 16,
+          "correct": 1,
+          "valid": 11,
+          "accuracy": 0.0625
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 2,
+          "valid": 5,
+          "accuracy": 0.25
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 2,
+          "valid": 4,
+          "accuracy": 0.25
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 2,
+          "valid": 6,
+          "accuracy": 0.25
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 1,
+          "valid": 5,
+          "accuracy": 0.125
+        },
+        "museum": {
+          "n": 8,
+          "correct": 2,
+          "valid": 6,
+          "accuracy": 0.25
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 2,
+          "valid": 4,
+          "accuracy": 0.25
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 2,
+          "valid": 7,
+          "accuracy": 0.25
+        }
+      }
+    },
+    "circuit_fixed_queries": {
+      "overall": {
+        "n": 64,
+        "correct": 31,
+        "valid": 64,
+        "accuracy": 0.484375
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 16,
+          "valid": 32,
+          "accuracy": 0.5
+        },
+        "ko": {
+          "n": 32,
+          "correct": 15,
+          "valid": 32,
+          "accuracy": 0.46875
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 8,
+          "valid": 16,
+          "accuracy": 0.5
+        },
+        "rest": {
+          "n": 16,
+          "correct": 7,
+          "valid": 16,
+          "accuracy": 0.4375
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 7,
+          "valid": 16,
+          "accuracy": 0.4375
+        },
+        "water": {
+          "n": 16,
+          "correct": 9,
+          "valid": 16,
+          "accuracy": 0.5625
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "museum": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        }
+      }
+    },
+    "circuit_pooled_mlp": {
+      "overall": {
+        "n": 64,
+        "correct": 29,
+        "valid": 64,
+        "accuracy": 0.453125
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 14,
+          "valid": 32,
+          "accuracy": 0.4375
+        },
+        "ko": {
+          "n": 32,
+          "correct": 15,
+          "valid": 32,
+          "accuracy": 0.46875
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 8,
+          "valid": 16,
+          "accuracy": 0.5
+        },
+        "rest": {
+          "n": 16,
+          "correct": 5,
+          "valid": 16,
+          "accuracy": 0.3125
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 4,
+          "valid": 16,
+          "accuracy": 0.25
+        },
+        "water": {
+          "n": 16,
+          "correct": 12,
+          "valid": 16,
+          "accuracy": 0.75
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "museum": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        }
+      }
+    },
+    "embedding_learned": {
+      "overall": {
+        "n": 64,
+        "correct": 14,
+        "valid": 64,
+        "accuracy": 0.21875
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 7,
+          "valid": 32,
+          "accuracy": 0.21875
+        },
+        "ko": {
+          "n": 32,
+          "correct": 7,
+          "valid": 32,
+          "accuracy": 0.21875
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 0,
+          "valid": 16,
+          "accuracy": 0.0
+        },
+        "rest": {
+          "n": 16,
+          "correct": 0,
+          "valid": 16,
+          "accuracy": 0.0
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 0,
+          "valid": 16,
+          "accuracy": 0.0
+        },
+        "water": {
+          "n": 16,
+          "correct": 14,
+          "valid": 16,
+          "accuracy": 0.875
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "museum": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 0,
+          "valid": 8,
+          "accuracy": 0.0
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        }
+      }
+    },
+    "label_oracle": {
+      "overall": {
+        "n": 64,
+        "correct": 64,
+        "valid": 64,
+        "accuracy": 1.0
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 32,
+          "valid": 32,
+          "accuracy": 1.0
+        },
+        "ko": {
+          "n": 32,
+          "correct": 32,
+          "valid": 32,
+          "accuracy": 1.0
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 16,
+          "valid": 16,
+          "accuracy": 1.0
+        },
+        "rest": {
+          "n": 16,
+          "correct": 16,
+          "valid": 16,
+          "accuracy": 1.0
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 16,
+          "valid": 16,
+          "accuracy": 1.0
+        },
+        "water": {
+          "n": 16,
+          "correct": 16,
+          "valid": 16,
+          "accuracy": 1.0
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "museum": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 8,
+          "valid": 8,
+          "accuracy": 1.0
+        }
+      }
+    },
+    "circuit_learned_long": {
+      "overall": {
+        "n": 64,
+        "correct": 32,
+        "valid": 63,
+        "accuracy": 0.5
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 19,
+          "valid": 32,
+          "accuracy": 0.59375
+        },
+        "ko": {
+          "n": 32,
+          "correct": 13,
+          "valid": 31,
+          "accuracy": 0.40625
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 8,
+          "valid": 15,
+          "accuracy": 0.5
+        },
+        "rest": {
+          "n": 16,
+          "correct": 10,
+          "valid": 16,
+          "accuracy": 0.625
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 8,
+          "valid": 16,
+          "accuracy": 0.5
+        },
+        "water": {
+          "n": 16,
+          "correct": 6,
+          "valid": 16,
+          "accuracy": 0.375
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 4,
+          "valid": 7,
+          "accuracy": 0.5
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "museum": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        }
+      }
+    },
+    "circuit_fixed_queries_long": {
+      "overall": {
+        "n": 64,
+        "correct": 33,
+        "valid": 64,
+        "accuracy": 0.515625
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 20,
+          "valid": 32,
+          "accuracy": 0.625
+        },
+        "ko": {
+          "n": 32,
+          "correct": 13,
+          "valid": 32,
+          "accuracy": 0.40625
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 9,
+          "valid": 16,
+          "accuracy": 0.5625
+        },
+        "rest": {
+          "n": 16,
+          "correct": 11,
+          "valid": 16,
+          "accuracy": 0.6875
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 11,
+          "valid": 16,
+          "accuracy": 0.6875
+        },
+        "water": {
+          "n": 16,
+          "correct": 2,
+          "valid": 16,
+          "accuracy": 0.125
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "museum": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        }
+      }
+    },
+    "circuit_pooled_mlp_long": {
+      "overall": {
+        "n": 64,
+        "correct": 35,
+        "valid": 64,
+        "accuracy": 0.546875
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 19,
+          "valid": 32,
+          "accuracy": 0.59375
+        },
+        "ko": {
+          "n": 32,
+          "correct": 16,
+          "valid": 32,
+          "accuracy": 0.5
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 4,
+          "valid": 16,
+          "accuracy": 0.25
+        },
+        "rest": {
+          "n": 16,
+          "correct": 13,
+          "valid": 16,
+          "accuracy": 0.8125
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 11,
+          "valid": 16,
+          "accuracy": 0.6875
+        },
+        "water": {
+          "n": 16,
+          "correct": 7,
+          "valid": 16,
+          "accuracy": 0.4375
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 6,
+          "valid": 8,
+          "accuracy": 0.75
+        },
+        "museum": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 4,
+          "valid": 8,
+          "accuracy": 0.5
+        }
+      }
+    },
+    "embedding_learned_long": {
+      "overall": {
+        "n": 64,
+        "correct": 19,
+        "valid": 64,
+        "accuracy": 0.296875
+      },
+      "by_language": {
+        "en": {
+          "n": 32,
+          "correct": 11,
+          "valid": 32,
+          "accuracy": 0.34375
+        },
+        "ko": {
+          "n": 32,
+          "correct": 8,
+          "valid": 32,
+          "accuracy": 0.25
+        }
+      },
+      "by_class": {
+        "food": {
+          "n": 16,
+          "correct": 4,
+          "valid": 16,
+          "accuracy": 0.25
+        },
+        "rest": {
+          "n": 16,
+          "correct": 13,
+          "valid": 16,
+          "accuracy": 0.8125
+        },
+        "warmth": {
+          "n": 16,
+          "correct": 2,
+          "valid": 16,
+          "accuracy": 0.125
+        },
+        "water": {
+          "n": 16,
+          "correct": 0,
+          "valid": 16,
+          "accuracy": 0.0
+        }
+      },
+      "by_family": {
+        "archive_visit": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "greenhouse": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "language_class": {
+          "n": 8,
+          "correct": 5,
+          "valid": 8,
+          "accuracy": 0.625
+        },
+        "market_setup": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "museum": {
+          "n": 8,
+          "correct": 3,
+          "valid": 8,
+          "accuracy": 0.375
+        },
+        "night_shift": {
+          "n": 8,
+          "correct": 1,
+          "valid": 8,
+          "accuracy": 0.125
+        },
+        "radio_rehearsal": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        },
+        "rowing": {
+          "n": 8,
+          "correct": 2,
+          "valid": 8,
+          "accuracy": 0.25
+        }
+      }
+    }
+  },
+  "shuffle_control_diagnostics": {
+    "circuit_learned": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "circuit_fixed_queries": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "circuit_pooled_mlp": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "embedding_learned": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "label_oracle": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "circuit_learned_long": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "circuit_fixed_queries_long": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "circuit_pooled_mlp_long": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    },
+    "embedding_learned_long": {
+      "same_label_count": 20,
+      "same_label_fraction": 0.3125,
+      "fixed_point_count": 0,
+      "fixed_point_fraction": 0.0,
+      "boundary": "row shuffle is a partial disruption: same-label assignments preserve class information and fixed points preserve the exact row"
+    }
+  },
+  "paired_long_comparisons": {
+    "circuit_learned_long_minus_circuit_fixed_queries_long": {
+      "paired_32_enko_clusters": {
+        "left_accuracy": 0.5,
+        "right_accuracy": 0.515625,
+        "paired_accuracy_difference_left_minus_right": -0.015625,
+        "cluster_count": 32,
+        "draws": 10000,
+        "seed": 2719,
+        "percentile_95_ci": [
+          -0.1875,
+          0.140625
+        ],
+        "cluster_unit": "EN/KO pair"
+      },
+      "optional_8_family_clusters": {
+        "left_accuracy": 0.5,
+        "right_accuracy": 0.515625,
+        "paired_accuracy_difference_left_minus_right": -0.015625,
+        "cluster_count": 8,
+        "draws": 10000,
+        "seed": 2819,
+        "percentile_95_ci": [
+          -0.234375,
+          0.203125
+        ],
+        "cluster_unit": "scenario family"
+      }
+    },
+    "circuit_learned_long_minus_circuit_pooled_mlp_long": {
+      "paired_32_enko_clusters": {
+        "left_accuracy": 0.5,
+        "right_accuracy": 0.546875,
+        "paired_accuracy_difference_left_minus_right": -0.046875,
+        "cluster_count": 32,
+        "draws": 10000,
+        "seed": 2720,
+        "percentile_95_ci": [
+          -0.171875,
+          0.078125
+        ],
+        "cluster_unit": "EN/KO pair"
+      },
+      "optional_8_family_clusters": {
+        "left_accuracy": 0.5,
+        "right_accuracy": 0.546875,
+        "paired_accuracy_difference_left_minus_right": -0.046875,
+        "cluster_count": 8,
+        "draws": 10000,
+        "seed": 2820,
+        "percentile_95_ci": [
+          -0.140625,
+          0.046875
+        ],
+        "cluster_unit": "scenario family"
+      }
+    },
+    "circuit_learned_long_minus_embedding_learned_long": {
+      "paired_32_enko_clusters": {
+        "left_accuracy": 0.5,
+        "right_accuracy": 0.296875,
+        "paired_accuracy_difference_left_minus_right": 0.203125,
+        "cluster_count": 32,
+        "draws": 10000,
+        "seed": 2721,
+        "percentile_95_ci": [
+          0.0625,
+          0.34375
+        ],
+        "cluster_unit": "EN/KO pair"
+      },
+      "optional_8_family_clusters": {
+        "left_accuracy": 0.5,
+        "right_accuracy": 0.296875,
+        "paired_accuracy_difference_left_minus_right": 0.203125,
+        "cluster_count": 8,
+        "draws": 10000,
+        "seed": 2821,
+        "percentile_95_ci": [
+          0.09375,
+          0.3125
+        ],
+        "cluster_unit": "scenario family"
+      }
+    }
+  },
+  "step_120_to_480_transitions": {
+    "learned": {
+      "n": 64,
+      "help": 23,
+      "hurt": 6,
+      "both_correct": 9,
+      "both_wrong": 26,
+      "net_help_minus_hurt": 17,
+      "cases": [
+        {
+          "id": "bilateral-water-museum-en",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-water-museum-ko",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-water-night_shift-en",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-night_shift-ko",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-rowing-en",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-rowing-ko",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-language_class-en",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-language_class-ko",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-market_setup-en",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-market_setup-ko",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-en",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-ko",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-archive_visit-en",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-archive_visit-ko",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-greenhouse-en",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-water-greenhouse-ko",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-museum-en",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-museum-ko",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-night_shift-en",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-night_shift-ko",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-rowing-en",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-rowing-ko",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-language_class-en",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-language_class-ko",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-market_setup-en",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-market_setup-ko",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-en",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-ko",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-archive_visit-en",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-archive_visit-ko",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-greenhouse-en",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-greenhouse-ko",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-warmth-museum-en",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-museum-ko",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-en",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-ko",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-en",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-ko",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-language_class-en",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-language_class-ko",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-en",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-ko",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-en",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-ko",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-en",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-ko",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-en",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-ko",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-museum-en",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-museum-ko",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-night_shift-en",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-night_shift-ko",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-rowing-en",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-rowing-ko",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-language_class-en",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-ko",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-market_setup-en",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-market_setup-ko",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-en",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-ko",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-en",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-ko",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-en",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-ko",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "help"
+        }
+      ]
+    },
+    "fixed_queries": {
+      "n": 64,
+      "help": 18,
+      "hurt": 16,
+      "both_correct": 15,
+      "both_wrong": 15,
+      "net_help_minus_hurt": 2,
+      "cases": [
+        {
+          "id": "bilateral-water-museum-en",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-museum-ko",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-night_shift-en",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-night_shift-ko",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-rowing-en",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-rowing-ko",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-language_class-en",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-language_class-ko",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-market_setup-en",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-market_setup-ko",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-en",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-ko",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-archive_visit-en",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-archive_visit-ko",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-greenhouse-en",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-greenhouse-ko",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-museum-en",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-museum-ko",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-night_shift-en",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-night_shift-ko",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-rowing-en",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-rowing-ko",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-language_class-en",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-language_class-ko",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-market_setup-en",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-market_setup-ko",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-en",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-ko",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-archive_visit-en",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-archive_visit-ko",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-greenhouse-en",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-greenhouse-ko",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-museum-en",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-warmth-museum-ko",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-en",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-ko",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-rowing-en",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-ko",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-language_class-en",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-language_class-ko",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-en",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-ko",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-en",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-ko",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-en",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-ko",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-en",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-ko",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-museum-en",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-museum-ko",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-night_shift-en",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-night_shift-ko",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-rest-rowing-en",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-rowing-ko",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-en",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-ko",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-market_setup-en",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-rest-market_setup-ko",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-en",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-ko",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-en",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-ko",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-en",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-ko",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_correct"
+        }
+      ]
+    },
+    "pooled_mlp": {
+      "n": 64,
+      "help": 17,
+      "hurt": 11,
+      "both_correct": 18,
+      "both_wrong": 18,
+      "net_help_minus_hurt": 6,
+      "cases": [
+        {
+          "id": "bilateral-water-museum-en",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-museum-ko",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-night_shift-en",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-night_shift-ko",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-rowing-en",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-rowing-ko",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-language_class-en",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-language_class-ko",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-market_setup-en",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-market_setup-ko",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-en",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-ko",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-archive_visit-en",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-archive_visit-ko",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-greenhouse-en",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-water-greenhouse-ko",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-museum-en",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-museum-ko",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-night_shift-en",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-night_shift-ko",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-rowing-en",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-rowing-ko",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-language_class-en",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-language_class-ko",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-market_setup-en",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-market_setup-ko",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-en",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-ko",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-food-archive_visit-en",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-archive_visit-ko",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-greenhouse-en",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-greenhouse-ko",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-museum-en",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-museum-ko",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-en",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-ko",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-en",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-ko",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-language_class-en",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-language_class-ko",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-en",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-ko",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-en",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-ko",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-en",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-ko",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-en",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-ko",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-museum-en",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-museum-ko",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-night_shift-en",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-night_shift-ko",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-rowing-en",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-rowing-ko",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-en",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-ko",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-market_setup-en",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-market_setup-ko",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_correct"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-en",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-ko",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-en",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-ko",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-en",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-ko",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_correct"
+        }
+      ]
+    },
+    "direct_embedding": {
+      "n": 64,
+      "help": 19,
+      "hurt": 14,
+      "both_correct": 0,
+      "both_wrong": 31,
+      "net_help_minus_hurt": 5,
+      "cases": [
+        {
+          "id": "bilateral-water-museum-en",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-museum-ko",
+          "pair_id": "bilateral-water-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-night_shift-en",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-night_shift-ko",
+          "pair_id": "bilateral-water-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-water-rowing-en",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-rowing-ko",
+          "pair_id": "bilateral-water-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-language_class-en",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-language_class-ko",
+          "pair_id": "bilateral-water-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-market_setup-en",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-market_setup-ko",
+          "pair_id": "bilateral-water-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-en",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-radio_rehearsal-ko",
+          "pair_id": "bilateral-water-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-archive_visit-en",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-archive_visit-ko",
+          "pair_id": "bilateral-water-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-greenhouse-en",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-water-greenhouse-ko",
+          "pair_id": "bilateral-water-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "hurt"
+        },
+        {
+          "id": "bilateral-food-museum-en",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-museum-ko",
+          "pair_id": "bilateral-food-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-night_shift-en",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-night_shift-ko",
+          "pair_id": "bilateral-food-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-rowing-en",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-rowing-ko",
+          "pair_id": "bilateral-food-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-language_class-en",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-language_class-ko",
+          "pair_id": "bilateral-food-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-market_setup-en",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-market_setup-ko",
+          "pair_id": "bilateral-food-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-en",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-food-radio_rehearsal-ko",
+          "pair_id": "bilateral-food-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-archive_visit-en",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-archive_visit-ko",
+          "pair_id": "bilateral-food-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-greenhouse-en",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-food-greenhouse-ko",
+          "pair_id": "bilateral-food-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-museum-en",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-museum-ko",
+          "pair_id": "bilateral-warmth-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-en",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-night_shift-ko",
+          "pair_id": "bilateral-warmth-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-en",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-rowing-ko",
+          "pair_id": "bilateral-warmth-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-language_class-en",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-language_class-ko",
+          "pair_id": "bilateral-warmth-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-en",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-market_setup-ko",
+          "pair_id": "bilateral-warmth-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-en",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-radio_rehearsal-ko",
+          "pair_id": "bilateral-warmth-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-en",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-archive_visit-ko",
+          "pair_id": "bilateral-warmth-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-en",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-warmth-greenhouse-ko",
+          "pair_id": "bilateral-warmth-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-museum-en",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-museum-ko",
+          "pair_id": "bilateral-rest-museum",
+          "family": "museum",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-night_shift-en",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-night_shift-ko",
+          "pair_id": "bilateral-rest-night_shift",
+          "family": "night_shift",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-rowing-en",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-rowing-ko",
+          "pair_id": "bilateral-rest-rowing",
+          "family": "rowing",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-en",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-language_class-ko",
+          "pair_id": "bilateral-rest-language_class",
+          "family": "language_class",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-market_setup-en",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-market_setup-ko",
+          "pair_id": "bilateral-rest-market_setup",
+          "family": "market_setup",
+          "language": "ko",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-en",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-radio_rehearsal-ko",
+          "pair_id": "bilateral-rest-radio_rehearsal",
+          "family": "radio_rehearsal",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-en",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-archive_visit-ko",
+          "pair_id": "bilateral-rest-archive_visit",
+          "family": "archive_visit",
+          "language": "ko",
+          "transition": "both_wrong"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-en",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "en",
+          "transition": "help"
+        },
+        {
+          "id": "bilateral-rest-greenhouse-ko",
+          "pair_id": "bilateral-rest-greenhouse",
+          "family": "greenhouse",
+          "language": "ko",
+          "transition": "help"
+        }
+      ]
+    }
+  },
+  "uncertainty": {
+    "bootstrap": "paired accuracy differences; percentile interval; 10,000 fixed-seed draws",
+    "primary_cluster_unit": "32 bilingual EN/KO pairs",
+    "optional_family_cluster_unit": "8 authored scenario families",
+    "development_informed_design": "The 480-update follow-up was added after development results; it was not part of the original 120-update design. The 120/480 comparison reuses the same deterministic stream prefix and a single training seed, so it is a within-run duration contrast, not independent replication.",
+    "shuffle_limitation": "Row shuffle does not remove all class information: approximately one quarter of rows can retain the same class by chance, separately reported for every saved permutation; exact permutation fixed points are also reported.",
+    "limitations": "There are no repeated training seeds. The 32 bilingual pairs remain authored and the optional family analysis has only 8 clusters. Intervals describe this case set and do not establish model superiority or population-level uncertainty."
+  },
+  "provenance": {
+    "source_sha256": "02d5608639a456cf4bf7b25bb91006e992b2786a679126ee8688f12ebafa6c45",
+    "input_sha256": {
+      "examples/bio_bridge/bilateral_holdout.json": "a116d99a5b8ead63965bb3efe834dc9e4f99e80ee3ea26f1d07e2fe1d3eb84a9",
+      "results/bilateral-bridge/circuit_learned-final.json": "4408b637ff563a8a3c7f1fbdfd6b3d84d3339d5c9d435816557f8126ccfae763",
+      "results/bilateral-bridge/circuit_fixed_queries-final.json": "c2819598074cca3fb2defb6f4abb830f0834c3575144c49cf7ace8046b1bdd69",
+      "results/bilateral-bridge/circuit_pooled_mlp-final.json": "620834a35a0cbc427eeb3bc1d2f743360d7be03ef79cb9bea9e5c63ad3fc97da",
+      "results/bilateral-bridge/embedding_learned-final.json": "c983f5477b8372486f7fc0c9a5c498b9ad58804bd51c99b62d457f198dcf7259",
+      "results/bilateral-bridge/label_oracle-final.json": "6f35d07f26e1f5db7496044415b20fad4b8c7db78f331247e1c8258630c475bc",
+      "results/bilateral-bridge/circuit_learned_long-final.json": "a22bfb1327b3f5d03c647fb510683909a1a76fe07233cfa3987ac2ac242faec0",
+      "results/bilateral-bridge/circuit_fixed_queries_long-final.json": "f94b758735c435c28c0af4c62de685630d141e8792f7d206ef85c2063242841d",
+      "results/bilateral-bridge/circuit_pooled_mlp_long-final.json": "410c150e24d183d0510864377d9d0e2d59aee88110ffebc1f0934c00909ba8f0",
+      "results/bilateral-bridge/embedding_learned_long-final.json": "6f768a93d6e23e646b937fe0b94cbfc78eb018dd0f02c083ccb9c1dcdf069f93"
+    },
+    "labels_source": "unchanged bilateral_holdout.json; analysis performs no relabeling",
+    "bootstrap_seed": 2719,
+    "bootstrap_draws": 10000
+  }
+}

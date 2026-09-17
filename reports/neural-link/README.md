@@ -1,5 +1,7 @@
 # Neural interface research report
 
+The [bilateral interface supplement](bilateral.html) ([한국어](bilateral.ko.html)) tests typed site/time pooling and actual frozen FunctionGemma soft-prefix conditioning, including 120/480-update comparisons, held-out generated calls, constant/shuffled controls, wrong fixed points, and checkpoint compatibility. [Full methods and replay](../../results/bilateral-bridge/README.md). Rebuild with `.venv/bin/python reports/neural-link/build_bilateral_report.py`.
+
 The new [architecture supplement](architecture.html) ([한국어](architecture.ko.html)) covers context routing, readout sites, fixed landmark pooling, low-rank/full direct bridge updates and adversarial counterexamples. It is a separate frozen study; it does not revise the earlier manuscript's measurements. Rebuild with `.venv/bin/python reports/neural-link/build_architecture_report.py`. [Methods, limitations and replay](../../results/architecture-bridge/README.md).
 
 Open **[report.html](report.html)** for the English manuscript draft or **[report.ko.html](report.ko.html)** for Korean. Each file embeds its figures, styles, JavaScript, and case data and works offline. Source-paper/code links need a network connection; the language switch needs the neighboring HTML file.

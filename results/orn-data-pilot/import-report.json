@@ -1,0 +1,87 @@
+{
+  "doi": "10.5061/dryad.9p8cz8x0j",
+  "dryad_version_id": 452144,
+  "license": "https://spdx.org/licenses/CC0-1.0.html",
+  "attribution": "Xiao Y, Wu ST, Xuan Y, Rifkin SA, Su CY. Dataset published 2026-07-10. DOI: 10.5061/dryad.9p8cz8x0j",
+  "dataset_title": "Data from: Simultaneous recording of spikes and calcium signals in odor-evoked responses of <em>Drosophila</em> antennal neurons",
+  "source_metadata_url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.9p8cz8x0j",
+  "source_version_files_url": "https://datadryad.org/api/v2/versions/452144/files",
+  "metadata_sha256": "4579e08990495b41be3161b45db8d3adb80eeb53adeaa36006c19f09fd5855b2",
+  "version_files_sha256": "a6413bd777df51bb7f15856238e0045a1cab24becb3161f6d6811f7544516d6e",
+  "generator_sha256": "defbdd2e9e9f916f8176a001862b4a9022eba5ae9610e3e9e68e5aecca6b2560",
+  "files": [
+    {
+      "name": "README.md",
+      "file_id": 4856149,
+      "expected_bytes": 27257,
+      "expected_sha256": "637e7806f1a46d1442c35bc8d14e31a2d23f5072b90563cf9b26d0d1495b8335",
+      "source_urls": [
+        "https://datadryad.org/downloads/file_stream/4856149",
+        "https://datadryad.org/api/v2/files/4856149/download"
+      ],
+      "attempts": [
+        {
+          "url": "https://datadryad.org/downloads/file_stream/4856149",
+          "status": "unavailable",
+          "http_status": 403,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://datadryad.org/api/v2/files/4856149/download",
+          "status": "unavailable",
+          "http_status": 401,
+          "error": "HTTP Error 401: Unauthorized"
+        }
+      ],
+      "downloaded": false
+    },
+    {
+      "name": "Source_data_table_for_Figure_2_non_formatted.xlsx",
+      "file_id": 4856086,
+      "expected_bytes": 35321,
+      "expected_sha256": "eaff9022e0b29f09b506507fd188b6258ee7fbae2b712b707fbaedc80272a25f",
+      "source_urls": [
+        "https://datadryad.org/downloads/file_stream/4856086",
+        "https://datadryad.org/api/v2/files/4856086/download"
+      ],
+      "attempts": [
+        {
+          "url": "https://datadryad.org/downloads/file_stream/4856086",
+          "status": "unavailable",
+          "http_status": 403,
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://datadryad.org/api/v2/files/4856086/download",
+          "status": "unavailable",
+          "http_status": 401,
+          "error": "HTTP Error 401: Unauthorized"
+        }
+      ],
+      "downloaded": false
+    }
+  ],
+  "status": "blocked_original_file_access",
+  "fit_executed": false,
+  "prediction_rows": 0,
+  "reason": "Metadata verified, but original files unavailable via public and API download paths. Workbook schema and paired fly identities cannot be validated from documentation alone.",
+  "predeclared_design": {
+    "split": "leave-one-biological-fly-out; all repeats/ROIs together",
+    "models": [
+      "training_mean",
+      "calcium_only_OLS",
+      "calcium_only_ridge_alpha_1",
+      "training_pair_shuffle_ridge_alpha_1"
+    ],
+    "normalization": "training-fold mean/std only",
+    "shuffle_seed": 20260917,
+    "selection": "none; no held-out tuning",
+    "optional_concentration": "only if explicit paired-row metadata validates it",
+    "metrics": [
+      "per-fly MAE",
+      "macro-fly MAE",
+      "all grouped raw predictions"
+    ]
+  },
+  "boundary": "No fabricated joins, no behavior or goal inference, no model fit without verified individual pairing."
+}

@@ -1,0 +1,20 @@
+{
+  "hashes": {
+    "results/bilateral-bridge/protocol-lock.json": "9514f08a9b6bc753e137ddbd4bd2cbaa45794cddb0b0131154c005ed9c4c4854",
+    "results/bilateral-bridge/final-started.json": "7097405395cb6fa1229ecf9c95efa8235b0615513ebf035891a67064f8e3ceec",
+    "results/bilateral-bridge/temporal-final.json": "9efdf7e0dd1eddf41a521be88d126f987930e3f73d86f68814d8416b63c66afd",
+    "results/bilateral-bridge/circuit_learned-final.json": "4408b637ff563a8a3c7f1fbdfd6b3d84d3339d5c9d435816557f8126ccfae763",
+    "results/bilateral-bridge/circuit_fixed_queries-final.json": "c2819598074cca3fb2defb6f4abb830f0834c3575144c49cf7ace8046b1bdd69",
+    "results/bilateral-bridge/circuit_pooled_mlp-final.json": "620834a35a0cbc427eeb3bc1d2f743360d7be03ef79cb9bea9e5c63ad3fc97da",
+    "results/bilateral-bridge/embedding_learned-final.json": "c983f5477b8372486f7fc0c9a5c498b9ad58804bd51c99b62d457f198dcf7259",
+    "results/bilateral-bridge/label_oracle-final.json": "6f35d07f26e1f5db7496044415b20fad4b8c7db78f331247e1c8258630c475bc",
+    "results/bilateral-bridge/circuit_learned_long-final.json": "a22bfb1327b3f5d03c647fb510683909a1a76fe07233cfa3987ac2ac242faec0",
+    "results/bilateral-bridge/circuit_fixed_queries_long-final.json": "f94b758735c435c28c0af4c62de685630d141e8792f7d206ef85c2063242841d",
+    "results/bilateral-bridge/circuit_pooled_mlp_long-final.json": "410c150e24d183d0510864377d9d0e2d59aee88110ffebc1f0934c00909ba8f0",
+    "results/bilateral-bridge/embedding_learned_long-final.json": "6f768a93d6e23e646b937fe0b94cbfc78eb018dd0f02c083ccb9c1dcdf069f93",
+    "results/bilateral-bridge/closed-loop-final.json": "62f2e24314df811b2bd1e3e000258c2d5ac4603d5e112dc635f7f293b089ed6a",
+    "results/bilateral-bridge/policy-swap-final.json": "2f3076d22a160d0b6899fa1169ece5bbd15c1bc6353a8799d3a41ae5938d5d9b",
+    "results/bilateral-bridge/holdout/provenance.json": "0041bac4cf9cbe35000fd8e0357ea85485017e8927439ccde4bfad48036b8952",
+    "results/bilateral-bridge/holdout/holdout-embeddings.safetensors": "511dad824fc0036afc0fbea617918defe175b547be982f6b8e109cd60b7e4503"
+  }
+}

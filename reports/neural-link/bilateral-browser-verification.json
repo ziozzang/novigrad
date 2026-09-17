@@ -1,0 +1,20 @@
+{
+  "bilateral.html": {
+    "sha256": "661444b7cba0ad14d179eab3c0362169252fe15c457fa0ddc92b542d87da1817",
+    "offline": true,
+    "desktop_mobile_no_page_overflow": true,
+    "failure_disclosures_work": true,
+    "no_browser_errors": true,
+    "sections": 11,
+    "print_media_checked_with_details_open": true
+  },
+  "bilateral.ko.html": {
+    "sha256": "6e49b93c9303b25a6714d2f7f2f2dd664e50d181c037f8317c209b02be4c4fec",
+    "offline": true,
+    "desktop_mobile_no_page_overflow": true,
+    "failure_disclosures_work": true,
+    "no_browser_errors": true,
+    "sections": 11,
+    "print_media_checked_with_details_open": true
+  }
+}

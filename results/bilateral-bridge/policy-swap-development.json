@@ -1,0 +1,75 @@
+{
+  "stage": "development_only_old_train_prototypes",
+  "actions": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "probabilities": [
+    [
+      0.2959068715572357,
+      0.2184755802154541,
+      0.2579149901866913,
+      0.22770263254642487
+    ],
+    [
+      0.24917404353618622,
+      0.26867595314979553,
+      0.24402111768722534,
+      0.2381289154291153
+    ],
+    [
+      0.24672313034534454,
+      0.2114078253507614,
+      0.2836953103542328,
+      0.25817373394966125
+    ],
+    [
+      0.22992898523807526,
+      0.21708926558494568,
+      0.25786590576171875,
+      0.2951158285140991
+    ]
+  ],
+  "external_labels": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "accuracy": 1.0,
+  "active_kcs": [
+    104,
+    104,
+    104,
+    104
+  ],
+  "native_shadow_max_abs_error": 0.0,
+  "compatibility": {
+    "compatible": true,
+    "frozen_tensor_keys": [
+      "hidden_ids",
+      "input_count",
+      "input_ids",
+      "input_post",
+      "input_pre",
+      "input_sign",
+      "output_actions",
+      "output_gains",
+      "output_ids",
+      "plastic_count",
+      "plastic_post",
+      "plastic_pre",
+      "plastic_sign"
+    ],
+    "all_frozen_tensors_exact": true,
+    "plastic_weight_changed_count": 15127,
+    "plastic_weight_count": 62261,
+    "plastic_weight_max_abs_delta": 0.2894889712333679,
+    "base_sha256": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+    "swap_sha256": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7",
+    "scope": "only saved plastic_weight values differ; ordered input/hidden/output IDs, PN-KC topology, plastic slots, signs, action routing, and gains are exact"
+  },
+  "boundary": "four train-derived class means only; not final evidence or an improvement claim"
+}

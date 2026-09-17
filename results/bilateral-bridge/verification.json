@@ -1,0 +1,82 @@
+{
+  "all_frozen_hashes_pass": true,
+  "temporal_full_saved_replay_exact": true,
+  "lm_replay": {
+    "circuit_learned": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "circuit_fixed_queries": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "circuit_pooled_mlp": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "embedding_learned": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "label_oracle": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "circuit_learned_long": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "circuit_fixed_queries_long": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "circuit_pooled_mlp_long": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    },
+    "embedding_learned_long": {
+      "max_absolute_candidate_loglikelihood_error": 0.0,
+      "likelihood_tolerance": 1e-05,
+      "all_rank_predictions_exact": true,
+      "checked_free_generation_rows": 32,
+      "checked_free_generation_exact": true
+    }
+  },
+  "closed_loop_full_replay_exact": true,
+  "policy_swap_full_replay_exact": true,
+  "generation_replay_indices_per_condition": [
+    0,
+    1,
+    16,
+    17,
+    32,
+    33,
+    48,
+    49
+  ],
+  "boundary": "All candidate likelihood rows and ranks replayed; free generation replayed on eight predeclared indices per condition. Timings excluded; no bitwise training claim."
+}

@@ -1,0 +1,263 @@
+{
+  "rows": [
+    {
+      "index": 0,
+      "target": 0,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 1,
+      "target": 0,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 2,
+      "target": 0,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 3,
+      "target": 1,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 4,
+      "target": 1,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 5,
+      "target": 1,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 6,
+      "target": 2,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 7,
+      "target": 2,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 8,
+      "target": 2,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 9,
+      "target": 3,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 10,
+      "target": 3,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    },
+    {
+      "index": 11,
+      "target": 3,
+      "candidate_loglikelihoods": [
+        -7.438706398010254,
+        -21.358139038085938,
+        -22.654184341430664,
+        -26.219608306884766
+      ],
+      "candidate_probabilities": [
+        0.9999988079071045,
+        9.012943564812304e-07,
+        2.4660468511683575e-07,
+        6.975204858150619e-09
+      ],
+      "rank_prediction": 0,
+      "free_output": "I need a specific goal to set the current need. Could you please specify the goal you would like to set?<end_of_turn>",
+      "parsed_goal": null,
+      "valid": false,
+      "correct": false
+    }
+  ],
+  "rank_accuracy": 0.25,
+  "generated_count": 12,
+  "valid_count": 0,
+  "correct_count": 0,
+  "seconds": 0.778713833540678,
+  "likelihood_batch_size": 8,
+  "generation_cache": "shared by source-prefix identity; cached outputs are not independent generation passes"
+}

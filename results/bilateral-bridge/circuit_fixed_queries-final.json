@@ -1,0 +1,5564 @@
+{
+  "actual": {
+    "rows": [
+      {
+        "index": 0,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.01941005140542984,
+          -4.142971038818359,
+          -8.518034934997559,
+          -9.58039379119873
+        ],
+        "candidate_probabilities": [
+          0.9838056564331055,
+          0.015924636274576187,
+          0.00020044877601321787,
+          6.928302173037082e-05
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 1,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -2.610016107559204,
+          -0.2283109873533249,
+          -2.2283542156219482,
+          -4.665806293487549
+        ],
+        "candidate_probabilities": [
+          0.07453758269548416,
+          0.806745707988739,
+          0.10917644202709198,
+          0.009540188126266003
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 2,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.745231628417969,
+          -3.134148120880127,
+          -0.3846922218799591,
+          -1.3841475248336792
+        ],
+        "candidate_probabilities": [
+          0.008839542977511883,
+          0.044270504266023636,
+          0.6921306252479553,
+          0.2547593414783478
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 3,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -10.073101043701172,
+          -5.998698711395264,
+          -2.9363386631011963,
+          -0.0611950047314167
+        ],
+        "candidate_probabilities": [
+          4.2359526560176164e-05,
+          0.0024913877714425325,
+          0.053260769695043564,
+          0.9442055225372314
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 4,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.006004024296998978,
+          -6.066609859466553,
+          -8.816608428955078,
+          -10.816483497619629
+        ],
+        "candidate_probabilities": [
+          0.997503936290741,
+          0.002327163005247712,
+          0.00014877085050102323,
+          2.0136460079811513e-05
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 5,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.08500432968139648,
+          -3.0818846225738525,
+          -3.706876277923584,
+          -5.831826686859131
+        ],
+        "candidate_probabilities": [
+          0.9260390400886536,
+          0.046248823404312134,
+          0.024755416437983513,
+          0.00295675965026021
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 6,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.3082429766654968,
+          -2.6175928115844727,
+          -1.8050899505615234,
+          -4.2425642013549805
+        ],
+        "candidate_probabilities": [
+          0.7447571754455566,
+          0.07397360354661942,
+          0.16670256853103638,
+          0.01456668321043253
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 7,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -2.1111998558044434,
+          -2.2251577377319336,
+          -0.35020288825035095,
+          -3.1001532077789307
+        ],
+        "candidate_probabilities": [
+          0.12372414022684097,
+          0.11039850860834122,
+          0.7198562026023865,
+          0.04602114483714104
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 8,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -2.9153358936309814,
+          -0.7167965173721313,
+          -0.9668436050415039,
+          -2.904292345046997
+        ],
+        "candidate_probabilities": [
+          0.05542917549610138,
+          0.49951887130737305,
+          0.3890073597431183,
+          0.056044697761535645
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 9,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.47440817952156067,
+          -1.0969537496566772,
+          -3.6594903469085693,
+          -5.159432411193848
+        ],
+        "candidate_probabilities": [
+          0.6300466656684875,
+          0.3380683958530426,
+          0.026068080216646194,
+          0.005816911347210407
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 10,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.005185383837670088,
+          -7.627457141876221,
+          -11.939982414245605,
+          -14.096112251281738
+        ],
+        "candidate_probabilities": [
+          0.999503493309021,
+          0.0004891857388429344,
+          6.554924311785726e-06,
+          7.588786843371054e-07
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 11,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.8864402770996094,
+          -2.5441949367523193,
+          -0.16961237788200378,
+          -3.106691837310791
+        ],
+        "candidate_probabilities": [
+          0.020771769806742668,
+          0.07950661331415176,
+          0.8544199466705322,
+          0.0453016422688961
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 12,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.8656986951828003,
+          -2.2965047359466553,
+          -0.8590133190155029,
+          -3.4839839935302734
+        ],
+        "candidate_probabilities": [
+          0.43126654624938965,
+          0.1031227633357048,
+          0.43415939807891846,
+          0.03145132213830948
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 13,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.487016499042511,
+          -1.9829493761062622,
+          -1.5454672574996948,
+          -4.170440673828125
+        ],
+        "candidate_probabilities": [
+          0.6265000104904175,
+          0.1403607428073883,
+          0.21739110350608826,
+          0.015748174861073494
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 14,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.022318759933114052,
+          -4.081723690032959,
+          -8.456765174865723,
+          -9.956616401672363
+        ],
+        "candidate_probabilities": [
+          0.9827768802642822,
+          0.016962025314569473,
+          0.00021351156465243548,
+          4.7647958126617596e-05
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 15,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.141854286193848,
+          -0.26738303899765015,
+          -1.6424328088760376,
+          -4.392388343811035
+        ],
+        "candidate_probabilities": [
+          0.016100192442536354,
+          0.7753406763076782,
+          0.19602705538272858,
+          0.012532148510217667
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 16,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.815814256668091,
+          -0.7466064691543579,
+          -0.7466408014297485,
+          -4.059111595153809
+        ],
+        "candidate_probabilities": [
+          0.02230500802397728,
+          0.4801117777824402,
+          0.4800952672958374,
+          0.01748797670006752
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 17,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.1185457706451416,
+          -0.6743349432945251,
+          -0.92438143491745,
+          -3.5493335723876953
+        ],
+        "candidate_probabilities": [
+          0.04515905678272247,
+          0.5202980041503906,
+          0.4051896333694458,
+          0.029353242367506027
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 18,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -2.8788883686065674,
+          -0.2982434332370758,
+          -1.7982808351516724,
+          -3.8607401847839355
+        ],
+        "candidate_probabilities": [
+          0.05705569311976433,
+          0.7534576058387756,
+          0.16811279952526093,
+          0.021374017000198364
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 19,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -2.7451493740081787,
+          -0.24108165502548218,
+          -2.116105794906616,
+          -4.1785783767700195
+        ],
+        "candidate_probabilities": [
+          0.06516163051128387,
+          0.797066867351532,
+          0.12223120778799057,
+          0.015540380962193012
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 20,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.08121395111084,
+          -1.3130656480789185,
+          -0.438214510679245,
+          -2.9380671977996826
+        ],
+        "candidate_probabilities": [
+          0.017160899937152863,
+          0.2733578681945801,
+          0.6556538939476013,
+          0.05382727086544037
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 21,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.590463638305664,
+          -0.8652496933937073,
+          -0.615398108959198,
+          -4.177746772766113
+        ],
+        "candidate_probabilities": [
+          0.010283343493938446,
+          0.42655420303344727,
+          0.5476251840591431,
+          0.015537281520664692
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 22,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -0.49043840169906616,
+          -0.981856107711792,
+          -6.044442653656006,
+          -7.544327735900879
+        ],
+        "candidate_probabilities": [
+          0.6186226010322571,
+          0.37844759225845337,
+          0.002395258517935872,
+          0.0005345158278942108
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 23,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.3975882530212402,
+          -0.11783985793590546,
+          -2.80538272857666,
+          -5.430339336395264
+        ],
+        "candidate_probabilities": [
+          0.03388907387852669,
+          0.9004019498825073,
+          0.06127048656344414,
+          0.0044386121444404125
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 24,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -6.945828437805176,
+          -2.621443033218384,
+          -0.12175852060317993,
+          -3.496441602706909
+        ],
+        "candidate_probabilities": [
+          0.0009730267920531332,
+          0.07348209619522095,
+          0.8949129581451416,
+          0.030631938949227333
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 25,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -6.33237361907959,
+          -2.6934430599212646,
+          -0.31886693835258484,
+          -1.693453311920166
+        ],
+        "candidate_probabilities": [
+          0.0018135699210688472,
+          0.06900838762521744,
+          0.7415956854820251,
+          0.187582328915596
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 26,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -5.808632850646973,
+          -2.2709217071533203,
+          -0.14633923768997192,
+          -3.8959267139434814
+        ],
+        "candidate_probabilities": [
+          0.0030306014232337475,
+          0.10421666502952576,
+          0.8722313046455383,
+          0.02052137441933155
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 27,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -5.138295650482178,
+          -0.12437260150909424,
+          -2.3744254112243652,
+          -4.8743767738342285
+        ],
+        "candidate_probabilities": [
+          0.005929189268499613,
+          0.8923074007034302,
+          0.09404351562261581,
+          0.007719937711954117
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 28,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -2.150378942489624,
+          -0.2667709290981293,
+          -2.4543044567108154,
+          -4.141775131225586
+        ],
+        "candidate_probabilities": [
+          0.11832059919834137,
+          0.7782174348831177,
+          0.08731063455343246,
+          0.016151318326592445
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 29,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -1.218494176864624,
+          -0.5903441905975342,
+          -2.277845859527588,
+          -3.5903210639953613
+        ],
+        "candidate_probabilities": [
+          0.3017382323741913,
+          0.5654997825622559,
+          0.1046067625284195,
+          0.02815522439777851
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 30,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -7.726296424865723,
+          -2.525324821472168,
+          -0.15058563649654388,
+          -3.025341749191284
+        ],
+        "candidate_probabilities": [
+          0.0004458818584680557,
+          0.08090456575155258,
+          0.8695793151855469,
+          0.04907027259469032
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 31,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -6.384768486022949,
+          -1.9338085651397705,
+          -0.18422846496105194,
+          -4.746313571929932
+        ],
+        "candidate_probabilities": [
+          0.0017097766976803541,
+          0.14654356241226196,
+          0.8429460525512695,
+          0.008800581097602844
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 32,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.514607906341553,
+          -1.5538603067398071,
+          -0.304113507270813,
+          -3.616361141204834
+        ],
+        "candidate_probabilities": [
+          0.011091692373156548,
+          0.214207261800766,
+          0.7474676370620728,
+          0.027233373373746872
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 33,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.5077803134918213,
+          -0.09473740309476852,
+          -3.09478497505188,
+          -5.407245635986328
+        ],
+        "candidate_probabilities": [
+          0.03028607740998268,
+          0.9194091558456421,
+          0.0457725003361702,
+          0.004532270599156618
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 34,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.14620304107666,
+          -3.2226130962371826,
+          -0.16081972420215607,
+          -2.410118341445923
+        ],
+        "candidate_probabilities": [
+          0.005898604169487953,
+          0.040378838777542114,
+          0.8627278804779053,
+          0.09099464863538742
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 35,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -9.237252235412598,
+          -5.848324298858643,
+          -2.4735066890716553,
+          -0.09832701832056046
+        ],
+        "candidate_probabilities": [
+          9.796938684303313e-05,
+          0.00290324236266315,
+          0.08482968062162399,
+          0.9121690988540649
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 36,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.010306959971785545,
+          -8.441705703735352,
+          -12.56663703918457,
+          -14.941532135009766
+        ],
+        "candidate_probabilities": [
+          0.9997782111167908,
+          0.00021786820434499532,
+          3.521753114910098e-06,
+          3.27608461248019e-07
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 37,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.014187547378242016,
+          -4.886756896972656,
+          -6.386794090270996,
+          -8.699213027954102
+        ],
+        "candidate_probabilities": [
+          0.9905595183372498,
+          0.007581418380141258,
+          0.0016915801679715514,
+          0.00016750278882682323
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 38,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.3399457931518555,
+          -0.7082372307777405,
+          -0.8332863450050354,
+          -3.833235502243042
+        ],
+        "candidate_probabilities": [
+          0.03600749000906944,
+          0.5004138946533203,
+          0.4415920376777649,
+          0.021986685693264008
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 39,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.167498588562012,
+          -2.7761058807373047,
+          -0.21402688324451447,
+          -2.213608503341675
+        ],
+        "candidate_probabilities": [
+          0.005787872243672609,
+          0.06325394660234451,
+          0.8199443817138672,
+          0.11101384460926056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 40,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -6.308494567871094,
+          -3.729595422744751,
+          -0.35514575242996216,
+          -1.3546041250228882
+        ],
+        "candidate_probabilities": [
+          0.001848605228587985,
+          0.02436945028603077,
+          0.7117879986763,
+          0.26199400424957275
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 41,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -6.075592041015625,
+          -3.4966931343078613,
+          -0.24740184843540192,
+          -1.746706485748291
+        ],
+        "candidate_probabilities": [
+          0.002326741348952055,
+          0.03067254088819027,
+          0.7904948592185974,
+          0.1765059232711792
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 42,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.008110389113426208,
+          -6.3799238204956055,
+          -10.629898071289062,
+          -12.504762649536133
+        ],
+        "candidate_probabilities": [
+          0.99826580286026,
+          0.0017060934333130717,
+          2.4336730348295532e-05,
+          3.732664026756538e-06
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 43,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.15291057527065277,
+          -2.3352251052856445,
+          -3.5227136611938477,
+          -5.77268123626709
+        ],
+        "candidate_probabilities": [
+          0.8689591884613037,
+          0.09800136834383011,
+          0.029889069497585297,
+          0.003150387667119503
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 44,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.537060260772705,
+          -2.4884703159332275,
+          -0.17639687657356262,
+          -2.8009748458862305
+        ],
+        "candidate_probabilities": [
+          0.003993958234786987,
+          0.0842149630188942,
+          0.8501783609390259,
+          0.06161270663142204
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 45,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.265495777130127,
+          -1.355262041091919,
+          -0.35551169514656067,
+          -3.730271816253662
+        ],
+        "candidate_probabilities": [
+          0.00523039186373353,
+          0.26105210185050964,
+          0.7094361186027527,
+          0.024281388148665428
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 46,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -8.462467193603516,
+          -4.989715099334717,
+          -1.6149704456329346,
+          -0.2397194802761078
+        ],
+        "candidate_probabilities": [
+          0.00021278996428009123,
+          0.006857221946120262,
+          0.20034627616405487,
+          0.7925837635993958
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 47,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -7.1680378913879395,
+          -3.91609525680542,
+          -0.6668020486831665,
+          -0.7910962104797363
+        ],
+        "candidate_probabilities": [
+          0.0007806820794939995,
+          0.02017320692539215,
+          0.5199064016342163,
+          0.45913970470428467
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 48,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.106151580810547,
+          -2.5575597286224365,
+          -0.18281260132789612,
+          -2.807565689086914
+        ],
+        "candidate_probabilities": [
+          0.016683919355273247,
+          0.07849517464637756,
+          0.8436892628669739,
+          0.06113174185156822
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 49,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -0.01391211524605751,
+          -5.136494159698486,
+          -6.261497974395752,
+          -8.511428833007812
+        ],
+        "candidate_probabilities": [
+          0.9919654130935669,
+          0.005912721157073975,
+          0.00191957235801965,
+          0.0002023354172706604
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 50,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -7.178893089294434,
+          -4.206153869628906,
+          -1.0818599462509155,
+          -0.4561529755592346
+        ],
+        "candidate_probabilities": [
+          0.0007715013343840837,
+          0.01507929153740406,
+          0.3429608643054962,
+          0.6411884427070618
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 51,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -7.835669994354248,
+          -4.737924575805664,
+          -1.4258440732955933,
+          -0.30042070150375366
+        ],
+        "candidate_probabilities": [
+          0.0003993854043073952,
+          0.008845572359859943,
+          0.24274156987667084,
+          0.748013436794281
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 52,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.837887763977051,
+          -2.99014949798584,
+          -0.17855124175548553,
+          -2.302657127380371
+        ],
+        "candidate_probabilities": [
+          0.0010855814907699823,
+          0.05089955031871796,
+          0.8467897772789001,
+          0.10122507065534592
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 53,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.043763637542725,
+          -2.717336416244507,
+          -0.09266428649425507,
+          -4.404839992523193
+        ],
+        "candidate_probabilities": [
+          0.0023914072662591934,
+          0.06657367199659348,
+          0.9187200665473938,
+          0.012314846739172935
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 54,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.881002902984619,
+          -3.217958450317383,
+          -0.343292772769928,
+          -1.467955231666565
+        ],
+        "candidate_probabilities": [
+          0.00768583407625556,
+          0.04054544121026993,
+          0.7184450030326843,
+          0.23332366347312927
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 55,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -13.483294486999512,
+          -8.884442329406738,
+          -5.134244441986084,
+          -0.009091510437428951
+        ],
+        "candidate_probabilities": [
+          1.3982747759655467e-06,
+          0.00013894683797843754,
+          0.0059093390591442585,
+          0.9939502477645874
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 56,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -7.154131889343262,
+          -4.3277082443237305,
+          -1.0781220197677612,
+          -0.4527077376842499
+        ],
+        "candidate_probabilities": [
+          0.0007894294103607535,
+          0.013329489156603813,
+          0.3436298668384552,
+          0.6422511339187622
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 57,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -8.249390602111816,
+          -5.11046028137207,
+          -1.4231512546539307,
+          -0.29796266555786133
+        ],
+        "candidate_probabilities": [
+          0.00026417116168886423,
+          0.00609684968367219,
+          0.24349132180213928,
+          0.7501475811004639
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 58,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.155363082885742,
+          -1.8309712409973145,
+          -0.20629529654979706,
+          -4.3309760093688965
+        ],
+        "candidate_probabilities": [
+          0.0021453965455293655,
+          0.16201938688755035,
+          0.8225358724594116,
+          0.013299301266670227
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 59,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -5.2211480140686035,
+          -0.45927369594573975,
+          -1.0845164060592651,
+          -4.459277153015137
+        ],
+        "candidate_probabilities": [
+          0.005473488010466099,
+          0.6402062177658081,
+          0.34259453415870667,
+          0.011725746095180511
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 60,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.287420749664307,
+          -2.249376058578491,
+          -0.18702439963817596,
+          -3.311878204345703
+        ],
+        "candidate_probabilities": [
+          0.013948481529951096,
+          0.10706274956464767,
+          0.8419889807701111,
+          0.036999817937612534
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 61,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -1.664200782775879,
+          -0.9000467658042908,
+          -1.0250760316848755,
+          -3.775042772293091
+        ],
+        "candidate_probabilities": [
+          0.1936807930469513,
+          0.41586700081825256,
+          0.3669905662536621,
+          0.023461703211069107
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 62,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -8.783726692199707,
+          -5.498481750488281,
+          -2.2487435340881348,
+          -0.12348595261573792
+        ],
+        "candidate_probabilities": [
+          0.00015419097326230258,
+          0.004119295161217451,
+          0.10621021687984467,
+          0.8895163536071777
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 63,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -7.862648010253906,
+          -4.536206245422363,
+          -1.1617568731307983,
+          -0.41120460629463196
+        ],
+        "candidate_probabilities": [
+          0.00038996749208308756,
+          0.01085634808987379,
+          0.31709426641464233,
+          0.6716594696044922
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      }
+    ],
+    "rank_accuracy": 0.484375,
+    "generated_count": 64,
+    "valid_count": 64,
+    "correct_count": 31,
+    "seconds": 18.349701376631856,
+    "likelihood_batch_size": 8,
+    "generation_cache": "shared by source-prefix identity; cached outputs are not independent generation passes"
+  },
+  "zero_prefix": {
+    "rows": [
+      {
+        "index": 0,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 1,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 2,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 3,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 4,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 5,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 6,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 7,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 8,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 9,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 10,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 11,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 12,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 13,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 14,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 15,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 16,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 17,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 18,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 19,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 20,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 21,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 22,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 23,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 24,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 25,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 26,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 27,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 28,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 29,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 30,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 31,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 32,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 33,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 34,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 35,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 36,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 37,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 38,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 39,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 40,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 41,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 42,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 43,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 44,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 45,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 46,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 47,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 48,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 49,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 50,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 51,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 52,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 53,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 54,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 55,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 56,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 57,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 58,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 59,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 60,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 61,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 62,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      },
+      {
+        "index": 63,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.925693511962891,
+          -17.887662887573242,
+          -19.012514114379883,
+          -23.02813148498535
+        ],
+        "candidate_probabilities": [
+          0.9999969005584717,
+          2.3479392439185176e-06,
+          7.623776241416635e-07,
+          1.3747055049861956e-08
+        ],
+        "rank_prediction": 0,
+        "free_output": "I need a specific goal to set the goal. Could you please specify the goal you would like to set?<end_of_turn>",
+        "parsed_goal": null,
+        "valid": false,
+        "correct": false
+      }
+    ],
+    "rank_accuracy": 0.25,
+    "generated_count": 64,
+    "valid_count": 0,
+    "correct_count": 0,
+    "seconds": 0.5116337928920984,
+    "likelihood_batch_size": 8,
+    "generation_cache": "shared by source-prefix identity; cached outputs are not independent generation passes"
+  },
+  "row_shuffled_prefix": {
+    "rows": [
+      {
+        "index": 0,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.022318759933114052,
+          -4.081723690032959,
+          -8.456765174865723,
+          -9.956616401672363
+        ],
+        "candidate_probabilities": [
+          0.9827768802642822,
+          0.016962025314569473,
+          0.00021351156465243548,
+          4.7647958126617596e-05
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 1,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -9.237252235412598,
+          -5.848324298858643,
+          -2.4735066890716553,
+          -0.09832701832056046
+        ],
+        "candidate_probabilities": [
+          9.796938684303313e-05,
+          0.00290324236266315,
+          0.08482968062162399,
+          0.9121690988540649
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 2,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -7.862648010253906,
+          -4.536206245422363,
+          -1.1617568731307983,
+          -0.41120460629463196
+        ],
+        "candidate_probabilities": [
+          0.00038996749208308756,
+          0.01085634808987379,
+          0.31709426641464233,
+          0.6716594696044922
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 3,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.815814256668091,
+          -0.7466064691543579,
+          -0.7466408014297485,
+          -4.059111595153809
+        ],
+        "candidate_probabilities": [
+          0.02230500802397728,
+          0.4801117777824402,
+          0.4800952672958374,
+          0.01748797670006752
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 4,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -4.514607906341553,
+          -1.5538603067398071,
+          -0.304113507270813,
+          -3.616361141204834
+        ],
+        "candidate_probabilities": [
+          0.011091692373156548,
+          0.214207261800766,
+          0.7474676370620728,
+          0.027233373373746872
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 5,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.014187547378242016,
+          -4.886756896972656,
+          -6.386794090270996,
+          -8.699213027954102
+        ],
+        "candidate_probabilities": [
+          0.9905595183372498,
+          0.007581418380141258,
+          0.0016915801679715514,
+          0.00016750278882682323
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 6,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -2.150378942489624,
+          -0.2667709290981293,
+          -2.4543044567108154,
+          -4.141775131225586
+        ],
+        "candidate_probabilities": [
+          0.11832059919834137,
+          0.7782174348831177,
+          0.08731063455343246,
+          0.016151318326592445
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 7,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.3975882530212402,
+          -0.11783985793590546,
+          -2.80538272857666,
+          -5.430339336395264
+        ],
+        "candidate_probabilities": [
+          0.03388907387852669,
+          0.9004019498825073,
+          0.06127048656344414,
+          0.0044386121444404125
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 8,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.15291057527065277,
+          -2.3352251052856445,
+          -3.5227136611938477,
+          -5.77268123626709
+        ],
+        "candidate_probabilities": [
+          0.8689591884613037,
+          0.09800136834383011,
+          0.029889069497585297,
+          0.003150387667119503
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 9,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -5.808632850646973,
+          -2.2709217071533203,
+          -0.14633923768997192,
+          -3.8959267139434814
+        ],
+        "candidate_probabilities": [
+          0.0030306014232337475,
+          0.10421666502952576,
+          0.8722313046455383,
+          0.02052137441933155
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 10,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.08500432968139648,
+          -3.0818846225738525,
+          -3.706876277923584,
+          -5.831826686859131
+        ],
+        "candidate_probabilities": [
+          0.9260390400886536,
+          0.046248823404312134,
+          0.024755416437983513,
+          0.00295675965026021
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 11,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -6.384768486022949,
+          -1.9338085651397705,
+          -0.18422846496105194,
+          -4.746313571929932
+        ],
+        "candidate_probabilities": [
+          0.0017097766976803541,
+          0.14654356241226196,
+          0.8429460525512695,
+          0.008800581097602844
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 12,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -6.33237361907959,
+          -2.6934430599212646,
+          -0.31886693835258484,
+          -1.693453311920166
+        ],
+        "candidate_probabilities": [
+          0.0018135699210688472,
+          0.06900838762521744,
+          0.7415956854820251,
+          0.187582328915596
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 13,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.49043840169906616,
+          -0.981856107711792,
+          -6.044442653656006,
+          -7.544327735900879
+        ],
+        "candidate_probabilities": [
+          0.6186226010322571,
+          0.37844759225845337,
+          0.002395258517935872,
+          0.0005345158278942108
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 14,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -0.47440817952156067,
+          -1.0969537496566772,
+          -3.6594903469085693,
+          -5.159432411193848
+        ],
+        "candidate_probabilities": [
+          0.6300466656684875,
+          0.3380683958530426,
+          0.026068080216646194,
+          0.005816911347210407
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 15,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -1.664200782775879,
+          -0.9000467658042908,
+          -1.0250760316848755,
+          -3.775042772293091
+        ],
+        "candidate_probabilities": [
+          0.1936807930469513,
+          0.41586700081825256,
+          0.3669905662536621,
+          0.023461703211069107
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 16,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.141854286193848,
+          -0.26738303899765015,
+          -1.6424328088760376,
+          -4.392388343811035
+        ],
+        "candidate_probabilities": [
+          0.016100192442536354,
+          0.7753406763076782,
+          0.19602705538272858,
+          0.012532148510217667
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 17,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.3399457931518555,
+          -0.7082372307777405,
+          -0.8332863450050354,
+          -3.833235502243042
+        ],
+        "candidate_probabilities": [
+          0.03600749000906944,
+          0.5004138946533203,
+          0.4415920376777649,
+          0.021986685693264008
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 18,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -8.462467193603516,
+          -4.989715099334717,
+          -1.6149704456329346,
+          -0.2397194802761078
+        ],
+        "candidate_probabilities": [
+          0.00021278996428009123,
+          0.006857221946120262,
+          0.20034627616405487,
+          0.7925837635993958
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 19,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -0.487016499042511,
+          -1.9829493761062622,
+          -1.5454672574996948,
+          -4.170440673828125
+        ],
+        "candidate_probabilities": [
+          0.6265000104904175,
+          0.1403607428073883,
+          0.21739110350608826,
+          0.015748174861073494
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 20,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.881002902984619,
+          -3.217958450317383,
+          -0.343292772769928,
+          -1.467955231666565
+        ],
+        "candidate_probabilities": [
+          0.00768583407625556,
+          0.04054544121026993,
+          0.7184450030326843,
+          0.23332366347312927
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 21,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -2.8788883686065674,
+          -0.2982434332370758,
+          -1.7982808351516724,
+          -3.8607401847839355
+        ],
+        "candidate_probabilities": [
+          0.05705569311976433,
+          0.7534576058387756,
+          0.16811279952526093,
+          0.021374017000198364
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 22,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -4.106151580810547,
+          -2.5575597286224365,
+          -0.18281260132789612,
+          -2.807565689086914
+        ],
+        "candidate_probabilities": [
+          0.016683919355273247,
+          0.07849517464637756,
+          0.8436892628669739,
+          0.06113174185156822
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 23,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.8864402770996094,
+          -2.5441949367523193,
+          -0.16961237788200378,
+          -3.106691837310791
+        ],
+        "candidate_probabilities": [
+          0.020771769806742668,
+          0.07950661331415176,
+          0.8544199466705322,
+          0.0453016422688961
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 24,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -13.483294486999512,
+          -8.884442329406738,
+          -5.134244441986084,
+          -0.009091510437428951
+        ],
+        "candidate_probabilities": [
+          1.3982747759655467e-06,
+          0.00013894683797843754,
+          0.0059093390591442585,
+          0.9939502477645874
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 25,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -7.835669994354248,
+          -4.737924575805664,
+          -1.4258440732955933,
+          -0.30042070150375366
+        ],
+        "candidate_probabilities": [
+          0.0003993854043073952,
+          0.008845572359859943,
+          0.24274156987667084,
+          0.748013436794281
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 26,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -0.3082429766654968,
+          -2.6175928115844727,
+          -1.8050899505615234,
+          -4.2425642013549805
+        ],
+        "candidate_probabilities": [
+          0.7447571754455566,
+          0.07397360354661942,
+          0.16670256853103638,
+          0.01456668321043253
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 27,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.1185457706451416,
+          -0.6743349432945251,
+          -0.92438143491745,
+          -3.5493335723876953
+        ],
+        "candidate_probabilities": [
+          0.04515905678272247,
+          0.5202980041503906,
+          0.4051896333694458,
+          0.029353242367506027
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 28,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -5.2211480140686035,
+          -0.45927369594573975,
+          -1.0845164060592651,
+          -4.459277153015137
+        ],
+        "candidate_probabilities": [
+          0.005473488010466099,
+          0.6402062177658081,
+          0.34259453415870667,
+          0.011725746095180511
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 29,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -2.7451493740081787,
+          -0.24108165502548218,
+          -2.116105794906616,
+          -4.1785783767700195
+        ],
+        "candidate_probabilities": [
+          0.06516163051128387,
+          0.797066867351532,
+          0.12223120778799057,
+          0.015540380962193012
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 30,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -5.138295650482178,
+          -0.12437260150909424,
+          -2.3744254112243652,
+          -4.8743767738342285
+        ],
+        "candidate_probabilities": [
+          0.005929189268499613,
+          0.8923074007034302,
+          0.09404351562261581,
+          0.007719937711954117
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 31,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -2.610016107559204,
+          -0.2283109873533249,
+          -2.2283542156219482,
+          -4.665806293487549
+        ],
+        "candidate_probabilities": [
+          0.07453758269548416,
+          0.806745707988739,
+          0.10917644202709198,
+          0.009540188126266003
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 32,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.537060260772705,
+          -2.4884703159332275,
+          -0.17639687657356262,
+          -2.8009748458862305
+        ],
+        "candidate_probabilities": [
+          0.003993958234786987,
+          0.0842149630188942,
+          0.8501783609390259,
+          0.06161270663142204
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 33,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -7.178893089294434,
+          -4.206153869628906,
+          -1.0818599462509155,
+          -0.4561529755592346
+        ],
+        "candidate_probabilities": [
+          0.0007715013343840837,
+          0.01507929153740406,
+          0.3429608643054962,
+          0.6411884427070618
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 34,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -8.783726692199707,
+          -5.498481750488281,
+          -2.2487435340881348,
+          -0.12348595261573792
+        ],
+        "candidate_probabilities": [
+          0.00015419097326230258,
+          0.004119295161217451,
+          0.10621021687984467,
+          0.8895163536071777
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 35,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -2.9153358936309814,
+          -0.7167965173721313,
+          -0.9668436050415039,
+          -2.904292345046997
+        ],
+        "candidate_probabilities": [
+          0.05542917549610138,
+          0.49951887130737305,
+          0.3890073597431183,
+          0.056044697761535645
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 36,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -6.945828437805176,
+          -2.621443033218384,
+          -0.12175852060317993,
+          -3.496441602706909
+        ],
+        "candidate_probabilities": [
+          0.0009730267920531332,
+          0.07348209619522095,
+          0.8949129581451416,
+          0.030631938949227333
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 37,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.01941005140542984,
+          -4.142971038818359,
+          -8.518034934997559,
+          -9.58039379119873
+        ],
+        "candidate_probabilities": [
+          0.9838056564331055,
+          0.015924636274576187,
+          0.00020044877601321787,
+          6.928302173037082e-05
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 38,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.08121395111084,
+          -1.3130656480789185,
+          -0.438214510679245,
+          -2.9380671977996826
+        ],
+        "candidate_probabilities": [
+          0.017160899937152863,
+          0.2733578681945801,
+          0.6556538939476013,
+          0.05382727086544037
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 39,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.010306959971785545,
+          -8.441705703735352,
+          -12.56663703918457,
+          -14.941532135009766
+        ],
+        "candidate_probabilities": [
+          0.9997782111167908,
+          0.00021786820434499532,
+          3.521753114910098e-06,
+          3.27608461248019e-07
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 40,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -7.154131889343262,
+          -4.3277082443237305,
+          -1.0781220197677612,
+          -0.4527077376842499
+        ],
+        "candidate_probabilities": [
+          0.0007894294103607535,
+          0.013329489156603813,
+          0.3436298668384552,
+          0.6422511339187622
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 41,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.265495777130127,
+          -1.355262041091919,
+          -0.35551169514656067,
+          -3.730271816253662
+        ],
+        "candidate_probabilities": [
+          0.00523039186373353,
+          0.26105210185050964,
+          0.7094361186027527,
+          0.024281388148665428
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 42,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -4.590463638305664,
+          -0.8652496933937073,
+          -0.615398108959198,
+          -4.177746772766113
+        ],
+        "candidate_probabilities": [
+          0.010283343493938446,
+          0.42655420303344727,
+          0.5476251840591431,
+          0.015537281520664692
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 43,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -6.308494567871094,
+          -3.729595422744751,
+          -0.35514575242996216,
+          -1.3546041250228882
+        ],
+        "candidate_probabilities": [
+          0.001848605228587985,
+          0.02436945028603077,
+          0.7117879986763,
+          0.26199400424957275
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 44,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -0.008110389113426208,
+          -6.3799238204956055,
+          -10.629898071289062,
+          -12.504762649536133
+        ],
+        "candidate_probabilities": [
+          0.99826580286026,
+          0.0017060934333130717,
+          2.4336730348295532e-05,
+          3.732664026756538e-06
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 45,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -1.218494176864624,
+          -0.5903441905975342,
+          -2.277845859527588,
+          -3.5903210639953613
+        ],
+        "candidate_probabilities": [
+          0.3017382323741913,
+          0.5654997825622559,
+          0.1046067625284195,
+          0.02815522439777851
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 46,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -7.1680378913879395,
+          -3.91609525680542,
+          -0.6668020486831665,
+          -0.7910962104797363
+        ],
+        "candidate_probabilities": [
+          0.0007806820794939995,
+          0.02017320692539215,
+          0.5199064016342163,
+          0.45913970470428467
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 47,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -5.14620304107666,
+          -3.2226130962371826,
+          -0.16081972420215607,
+          -2.410118341445923
+        ],
+        "candidate_probabilities": [
+          0.005898604169487953,
+          0.040378838777542114,
+          0.8627278804779053,
+          0.09099464863538742
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 48,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -0.8656986951828003,
+          -2.2965047359466553,
+          -0.8590133190155029,
+          -3.4839839935302734
+        ],
+        "candidate_probabilities": [
+          0.43126654624938965,
+          0.1031227633357048,
+          0.43415939807891846,
+          0.03145132213830948
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 49,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -2.1111998558044434,
+          -2.2251577377319336,
+          -0.35020288825035095,
+          -3.1001532077789307
+        ],
+        "candidate_probabilities": [
+          0.12372414022684097,
+          0.11039850860834122,
+          0.7198562026023865,
+          0.04602114483714104
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 50,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -5.167498588562012,
+          -2.7761058807373047,
+          -0.21402688324451447,
+          -2.213608503341675
+        ],
+        "candidate_probabilities": [
+          0.005787872243672609,
+          0.06325394660234451,
+          0.8199443817138672,
+          0.11101384460926056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 51,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.837887763977051,
+          -2.99014949798584,
+          -0.17855124175548553,
+          -2.302657127380371
+        ],
+        "candidate_probabilities": [
+          0.0010855814907699823,
+          0.05089955031871796,
+          0.8467897772789001,
+          0.10122507065534592
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 52,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -0.006004024296998978,
+          -6.066609859466553,
+          -8.816608428955078,
+          -10.816483497619629
+        ],
+        "candidate_probabilities": [
+          0.997503936290741,
+          0.002327163005247712,
+          0.00014877085050102323,
+          2.0136460079811513e-05
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 53,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.745231628417969,
+          -3.134148120880127,
+          -0.3846922218799591,
+          -1.3841475248336792
+        ],
+        "candidate_probabilities": [
+          0.008839542977511883,
+          0.044270504266023636,
+          0.6921306252479553,
+          0.2547593414783478
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 54,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -8.249390602111816,
+          -5.11046028137207,
+          -1.4231512546539307,
+          -0.29796266555786133
+        ],
+        "candidate_probabilities": [
+          0.00026417116168886423,
+          0.00609684968367219,
+          0.24349132180213928,
+          0.7501475811004639
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 55,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.043763637542725,
+          -2.717336416244507,
+          -0.09266428649425507,
+          -4.404839992523193
+        ],
+        "candidate_probabilities": [
+          0.0023914072662591934,
+          0.06657367199659348,
+          0.9187200665473938,
+          0.012314846739172935
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 56,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -10.073101043701172,
+          -5.998698711395264,
+          -2.9363386631011963,
+          -0.0611950047314167
+        ],
+        "candidate_probabilities": [
+          4.2359526560176164e-05,
+          0.0024913877714425325,
+          0.053260769695043564,
+          0.9442055225372314
+        ],
+        "rank_prediction": 3,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "rest",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 57,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.075592041015625,
+          -3.4966931343078613,
+          -0.24740184843540192,
+          -1.746706485748291
+        ],
+        "candidate_probabilities": [
+          0.002326741348952055,
+          0.03067254088819027,
+          0.7904948592185974,
+          0.1765059232711792
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 58,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -4.287420749664307,
+          -2.249376058578491,
+          -0.18702439963817596,
+          -3.311878204345703
+        ],
+        "candidate_probabilities": [
+          0.013948481529951096,
+          0.10706274956464767,
+          0.8419889807701111,
+          0.036999817937612534
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 59,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -0.01391211524605751,
+          -5.136494159698486,
+          -6.261497974395752,
+          -8.511428833007812
+        ],
+        "candidate_probabilities": [
+          0.9919654130935669,
+          0.005912721157073975,
+          0.00191957235801965,
+          0.0002023354172706604
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 60,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -6.155363082885742,
+          -1.8309712409973145,
+          -0.20629529654979706,
+          -4.3309760093688965
+        ],
+        "candidate_probabilities": [
+          0.0021453965455293655,
+          0.16201938688755035,
+          0.8225358724594116,
+          0.013299301266670227
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 61,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -7.726296424865723,
+          -2.525324821472168,
+          -0.15058563649654388,
+          -3.025341749191284
+        ],
+        "candidate_probabilities": [
+          0.0004458818584680557,
+          0.08090456575155258,
+          0.8695793151855469,
+          0.04907027259469032
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 62,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -0.005185383837670088,
+          -7.627457141876221,
+          -11.939982414245605,
+          -14.096112251281738
+        ],
+        "candidate_probabilities": [
+          0.999503493309021,
+          0.0004891857388429344,
+          6.554924311785726e-06,
+          7.588786843371054e-07
+        ],
+        "rank_prediction": 0,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "water",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 63,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.5077803134918213,
+          -0.09473740309476852,
+          -3.09478497505188,
+          -5.407245635986328
+        ],
+        "candidate_probabilities": [
+          0.03028607740998268,
+          0.9194091558456421,
+          0.0457725003361702,
+          0.004532270599156618
+        ],
+        "rank_prediction": 1,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "food",
+        "valid": true,
+        "correct": false
+      }
+    ],
+    "rank_accuracy": 0.375,
+    "generated_count": 64,
+    "valid_count": 64,
+    "correct_count": 23,
+    "seconds": 2.0220160000026226,
+    "likelihood_batch_size": 8,
+    "generation_cache": "shared by source-prefix identity; cached outputs are not independent generation passes"
+  },
+  "shuffle_order": [
+    14,
+    35,
+    63,
+    16,
+    32,
+    37,
+    28,
+    23,
+    43,
+    26,
+    5,
+    31,
+    25,
+    22,
+    9,
+    61,
+    15,
+    38,
+    46,
+    13,
+    54,
+    18,
+    48,
+    11,
+    55,
+    51,
+    6,
+    17,
+    59,
+    19,
+    27,
+    1,
+    44,
+    50,
+    62,
+    8,
+    24,
+    0,
+    20,
+    36,
+    56,
+    45,
+    21,
+    40,
+    42,
+    29,
+    47,
+    34,
+    12,
+    7,
+    39,
+    52,
+    4,
+    2,
+    57,
+    53,
+    3,
+    41,
+    60,
+    49,
+    58,
+    30,
+    10,
+    33
+  ],
+  "adapter_mode": "fixed",
+  "base_checkpoint_sha256": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b",
+  "base_all_parameters_frozen": true,
+  "response_token_counts": [
+    15,
+    15,
+    16,
+    15
+  ],
+  "candidate_ranking_boundary": "Sum of full-response token log-likelihoods; lengths differ. Actual parsed generation is primary, not closed-set ranking.",
+  "training_mean_prefix": {
+    "rows": [
+      {
+        "index": 0,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 1,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 2,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 3,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 4,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 5,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 6,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 7,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 8,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 9,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 10,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 11,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 12,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 13,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 14,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 15,
+        "target": 0,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 16,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 17,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 18,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 19,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 20,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 21,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 22,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 23,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 24,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 25,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 26,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 27,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 28,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 29,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 30,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 31,
+        "target": 1,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 32,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 33,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 34,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 35,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 36,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 37,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 38,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 39,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 40,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 41,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 42,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 43,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 44,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 45,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 46,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 47,
+        "target": 2,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": true
+      },
+      {
+        "index": 48,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 49,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 50,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 51,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 52,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 53,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 54,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 55,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 56,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 57,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 58,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 59,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 60,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 61,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 62,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      },
+      {
+        "index": 63,
+        "target": 3,
+        "candidate_loglikelihoods": [
+          -3.745600938796997,
+          -1.1064413785934448,
+          -0.4815896451473236,
+          -4.231444835662842
+        ],
+        "candidate_probabilities": [
+          0.023940136656165123,
+          0.33519622683525085,
+          0.6261361837387085,
+          0.014727440662682056
+        ],
+        "rank_prediction": 2,
+        "free_output": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+        "parsed_goal": "warmth",
+        "valid": true,
+        "correct": false
+      }
+    ],
+    "rank_accuracy": 0.25,
+    "generated_count": 64,
+    "valid_count": 64,
+    "correct_count": 16,
+    "seconds": 0.4058487918227911,
+    "likelihood_batch_size": 8,
+    "generation_cache": "shared by source-prefix identity; cached outputs are not independent generation passes"
+  },
+  "case_ids": [
+    "bilateral-water-museum-en",
+    "bilateral-water-museum-ko",
+    "bilateral-water-night_shift-en",
+    "bilateral-water-night_shift-ko",
+    "bilateral-water-rowing-en",
+    "bilateral-water-rowing-ko",
+    "bilateral-water-language_class-en",
+    "bilateral-water-language_class-ko",
+    "bilateral-water-market_setup-en",
+    "bilateral-water-market_setup-ko",
+    "bilateral-water-radio_rehearsal-en",
+    "bilateral-water-radio_rehearsal-ko",
+    "bilateral-water-archive_visit-en",
+    "bilateral-water-archive_visit-ko",
+    "bilateral-water-greenhouse-en",
+    "bilateral-water-greenhouse-ko",
+    "bilateral-food-museum-en",
+    "bilateral-food-museum-ko",
+    "bilateral-food-night_shift-en",
+    "bilateral-food-night_shift-ko",
+    "bilateral-food-rowing-en",
+    "bilateral-food-rowing-ko",
+    "bilateral-food-language_class-en",
+    "bilateral-food-language_class-ko",
+    "bilateral-food-market_setup-en",
+    "bilateral-food-market_setup-ko",
+    "bilateral-food-radio_rehearsal-en",
+    "bilateral-food-radio_rehearsal-ko",
+    "bilateral-food-archive_visit-en",
+    "bilateral-food-archive_visit-ko",
+    "bilateral-food-greenhouse-en",
+    "bilateral-food-greenhouse-ko",
+    "bilateral-warmth-museum-en",
+    "bilateral-warmth-museum-ko",
+    "bilateral-warmth-night_shift-en",
+    "bilateral-warmth-night_shift-ko",
+    "bilateral-warmth-rowing-en",
+    "bilateral-warmth-rowing-ko",
+    "bilateral-warmth-language_class-en",
+    "bilateral-warmth-language_class-ko",
+    "bilateral-warmth-market_setup-en",
+    "bilateral-warmth-market_setup-ko",
+    "bilateral-warmth-radio_rehearsal-en",
+    "bilateral-warmth-radio_rehearsal-ko",
+    "bilateral-warmth-archive_visit-en",
+    "bilateral-warmth-archive_visit-ko",
+    "bilateral-warmth-greenhouse-en",
+    "bilateral-warmth-greenhouse-ko",
+    "bilateral-rest-museum-en",
+    "bilateral-rest-museum-ko",
+    "bilateral-rest-night_shift-en",
+    "bilateral-rest-night_shift-ko",
+    "bilateral-rest-rowing-en",
+    "bilateral-rest-rowing-ko",
+    "bilateral-rest-language_class-en",
+    "bilateral-rest-language_class-ko",
+    "bilateral-rest-market_setup-en",
+    "bilateral-rest-market_setup-ko",
+    "bilateral-rest-radio_rehearsal-en",
+    "bilateral-rest-radio_rehearsal-ko",
+    "bilateral-rest-archive_visit-en",
+    "bilateral-rest-archive_visit-ko",
+    "bilateral-rest-greenhouse-en",
+    "bilateral-rest-greenhouse-ko"
+  ]
+}

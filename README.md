@@ -112,4 +112,6 @@ Precise neural interface fitting: [train-only PCA calibration, native reward lea
 
 Detailed HTML research report: [English manuscript draft](reports/neural-link/report.html) · [한국어 보고서](reports/neural-link/report.ko.html). Includes methods, measured results, negative controls, all 64 cases, and reproducibility evidence; works offline.
 
+The [bilateral interface study](reports/neural-link/bilateral.html) connects frozen EmbeddingGemma features and simulated neural sites to actual frozen BF16 FunctionGemma through Safetensors soft-prefix adapters. On 64 new distractor texts, 480-step learned/fixed/pooled circuit bridges generated 32/33/35 correct calls; direct embedding generated 19. Prototype writeback preserved wrong answers rather than correcting them. [Methods, failures and replay](results/bilateral-bridge/README.md) · [한국어](reports/neural-link/bilateral.ko.html).
+
 The [architecture/adversarial supplement](reports/neural-link/architecture.html) compares context routing, PN/KC/MBON readout sites, fixed landmark pooling, and low-rank/full bridge updates. On 64 authored adversarial texts, direct embedding reached 76.56% versus KC interaction 67.19%; no architectural leap was established. Larger bridge ranks are distinct from transformer LoRA. [Methods and replay](results/architecture-bridge/README.md) · [한국어](reports/neural-link/architecture.ko.html).

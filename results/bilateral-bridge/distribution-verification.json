@@ -1,0 +1,15 @@
+{
+  "archive": "novigrad-bilateral-20260917.tar.gz",
+  "archive_sha256": "c7b4bf783d1f456b55f2774c0532d72b3ffc3a96def1073011c1f524bfc2d839",
+  "archive_bytes": 2887988,
+  "files": 166,
+  "small_safetensors": 50,
+  "relocated_verification_equal": true,
+  "verification_sha256": "b3c3596dbab3cb643fca4b4a9d87671fa4f91321e8ebc88750fb1ad4cbc14f07",
+  "all_model_candidate_likelihood_errors_zero": true,
+  "runtime_boundary": "Fresh unpacked source and artifact tree with content-verified relocated model directories; shared existing venv and native module. No fresh native wheel or dependency installation was tested.",
+  "unit_tests": {
+    "bio_bridge": 119,
+    "bundle_safety": 3
+  }
+}

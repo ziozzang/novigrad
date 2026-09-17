@@ -92,4 +92,6 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 
 상세 HTML 연구 보고서: [한국어판](reports/neural-link/report.ko.html) · [영문 논문 초안](reports/neural-link/report.html). 방법·측정 결과·음성 대조군·64개 전체 사례·재현 검증을 포함하며 오프라인으로 열 수 있습니다.
 
+[양방향 연결 연구 보고서](reports/neural-link/bilateral.ko.html)는 임베딩과 모의 신경 회로를 고정 BF16 FunctionGemma에 연속 prefix로 연결합니다. 새 적대적 문장 64개에서 480회 학습 쿼리·고정 쿼리·풀링이 각각 32·33·35개, 직접 임베딩 연결이 19개를 맞혔습니다. 대표 예시를 다시 넣는 구조는 오답도 반복해서 유지했습니다. [방법·실패·재현](results/bilateral-bridge/README.ko.md).
+
 [구조·적대적 검증 보충 보고서](reports/neural-link/architecture.ko.html)는 문맥 결합, PN/KC/MBON 읽기 위치, 고정 그룹 풀링, 저랭크·전체 브리지 갱신을 비교합니다. 직접 작성한 적대적64문장에서 직접 임베딩76.56%, KC 문맥 결합67.19%로 구조적 비약은 입증되지 않았습니다. 브리지 갱신과 본체 LoRA는 구분합니다. [방법과 재현](results/architecture-bridge/README.ko.md).
