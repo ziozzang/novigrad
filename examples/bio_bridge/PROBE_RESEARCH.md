@@ -1,0 +1,53 @@
+# Layer probes and learned interfaces: a proposed experiment
+
+Research note, 2026-09-17. This document proposes work; it reports no new experiment or measured advantage. Start with matched read-only probes across existing simulated sites, then test explicit interventions. Larger adapters and learned tokens are separate factors, not evidence of biological alignment.
+
+## What the repository currently exposes
+
+| Site | Existing implementation | Meaning and missing capability |
+|---|---|---|
+| Text representation | `encode_precise_holdout.py`: frozen local FP32 encoder, Classification prompt, normalized pooled 768-vector | Current saved features are pooled vectors, not transformer token sequences or intermediate block activations. New extraction is needed for layerwise transformer probes. |
+| PN input ports | `precise_bridge.PortBridge`, `context_memory.encode_context`, native `Engine.infer[_batch]` | Engine receives nonnegative engineered rates at ordered input IDs. Signed embedding coordinates and context codes are not measured PN tuning. |
+| KC before sparsification | `inhibition_mechanism.ShadowEngine.raw_hidden` | Reconstructed fixed projection **after ReLU**; this function is not a preactivation readout. A distinct hook is required to compare pre-ReLU activity. |
+| KC after sparsification | `ShadowEngine.inhibit`; Rust `Engine::hidden_activity` | Inhibition and normalization can be inspected. The inspected Python binding exposes hidden IDs, not a public hidden-activity getter or arbitrary hidden-write API. |
+| MBON and actions | `thought_embedding.mbon_for`, `ShadowEngine.probabilities`; native probability outputs | Shadow MBON vectors precede action grouping/gains. MBON features and externally assigned action labels are different objects. |
+| Simulated intervention | `thought_interventions.intervene` and shadow downstream computation | Altering KC activity then recomputing downstream outputs is a causal intervention **within that simulation**. It is neither native runtime injection nor stimulation of an animal. |
+
+`context_memory.encode_context` appends context ports, normalizes a variant, or routes features into different input blocks; its modular policy can choose separate engines. These change simulated inputs/routing. Concatenating a KC vector with context for an external decoder would only change that decoder: it would not write context into KC or MBON dynamics. An electrode-style analogy must specify recording versus stimulation, locations, amplitude, timing, and downstream path. Anatomical IDs are addresses, not learned token meanings. No electrode recording or stimulation hardware is present in these interfaces.
+
+## Relevant primary research
+
+- **Prompt versus prefix tuning:** learned input embeddings adapt a frozen model in prompt tuning; prefix tuning provides continuous task-specific conditioning attended to as virtual tokens, including internal-layer activations. Neither is a biological neuron identifier. A prompt built from a neural signal must actually be consumed by the downstream transformer, not merely flattened into classifier features. [Prompt tuning](https://arxiv.org/abs/2104.08691), [prefix tuning](https://arxiv.org/abs/2101.00190).
+- **Resampling:** Flamingo's Perceiver Resampler compresses visual features into a fixed latent-token budget for downstream cross-attention. Here the analogous proposal is to query a set of site/time vectors. It is an architectural analogy, not a reproduction of Flamingo training. [Flamingo](https://arxiv.org/abs/2204.14198).
+- **Q-Former:** BLIP-2 trains query vectors and a transformer bridge between frozen encoders and language models. Its original Q-Former is 188M parameters, so calling any small query attention module “the Q-Former” is misleading. Use “query-resampler baseline” for a smaller implementation and document its differences. [BLIP-2](https://arxiv.org/html/2301.12597v3).
+- **LoRA:** actual transformer LoRA adds trainable low-rank updates to named transformer weight matrices while freezing their originals. A low-rank matrix between embedding and PN ports is a **bridge adapter**, even if it uses the same factorization. Record exact target modules and changed parameter hashes. [LoRA](https://arxiv.org/abs/2106.09685).
+- **mHC is Manifold-Constrained Hyper-Connections.** It expands residual streams and constrains residual mixing to doubly stochastic matrices using Sinkhorn-Knopp. This controls residual-stream mixing; it does not establish biological connectivity or bound the whole network regardless of its other transformations. Introducing constrained fusion between PN/KC/MBON branches would be an mHC-inspired bridge, not transformer mHC. [Original paper](https://arxiv.org/html/2512.24880v2). A later PEFT study reports task-dependent results and no consistent standalone superiority over LoRA; it is motivation for a controlled comparison, not a guarantee. [PEFT study](https://arxiv.org/abs/2607.18130).
+
+## Factorial design, with separate adaptation regimes
+
+The primary comparison is **site × bridge capacity × token interface**. Freeze encoder, topology, downstream task, and training examples first. A proposed manageable screening grid is three sites (PN, sparse KC, MBON), three bridge capacities (linear, rank-8, rank-32), and two interfaces (pooled vector, four learned queries): 18 conditions with three paired seeds. Query projections count toward the same trainable-parameter budget; match budgets within a stated tolerance or report unmatched cells separately. A rank label alone does not equal parameter matching across site dimensions.
+
+After development-only screening, expand predefined finalists to KC pre-inhibition and transformer early/middle/late block reads, token counts 1/4/16, and full-rank bridge or two-layer MLP controls. Full-rank **bridge** training is not full-model fine-tuning. Do not treat a transformer layer read and a circuit site read as the same intervention axis. Use a fixed training-only projection/normalization protocol for unequal dimensions, and report both native dimensionality and matched bottleneck dimensionality.
+
+Keep transformer adaptation as a second, explicitly named regime: frozen encoder; actual LoRA ranks 8/32/64 on registered attention projections; optional full encoder fine-tuning. Publish updated parameter counts, optimizer state memory, source/tokenizer revisions, early stopping rule, and wall-clock/peak memory. Full tuning needs a larger independent development corpus; the old 32 training examples cannot establish general superiority for a 300M-parameter encoder. A differentiable surrogate through hard top-k needs its own validation; otherwise train the bridge with supervised/reconstruction objectives or the native policy with sampled reward, and do not claim end-to-end backpropagation.
+
+For tokens, construct site/time vectors with explicit masks and metadata, then compare pooled projection, fixed random queries, learned queries, and shuffled channel/ID metadata. A single scalar per neuron needs an embedding before attention. Preserve identity separately from activity; do not encode targets in token names. Prefix/prompt injection into a frozen transformer is a separate downstream path from native PN rate injection.
+
+For mHC, first compare equal-width identity routing, unconstrained mixing, row-stochastic mixing, and doubly stochastic mixing at matched parameter and compute budgets. Report row/column residual errors after finite Sinkhorn iterations, gradient/activation norms, throughput, and loss. Do not replace signed synaptic weights with a nonnegative stochastic matrix and call the result the original biological circuit.
+
+## Causal tests and strongest falsifiers
+
+1. **Direct bypass wins:** compare the same-capacity direct embedding→action model. If the circuit adds no out-of-family benefit or resilience at equal budget, evidence favors the simpler bridge, not circuit necessity.
+2. **Random structure matches anatomy:** compare degree/sign/budget-matched rewiring and fixed random expansions. If matching controls recover the effect, claims of anatomy-specific computation fail.
+3. **Decoder shortcut survives ablation:** zero, permute, or swap the claimed causal site while holding the decoder/context fixed. If decisions are unaffected, that path is not necessary. Match intervention energy and active count; a large perturbation alone is weak evidence.
+4. **Context-only predicts actions:** cross each semantic cue with every context rule in balanced development data. Test same cue/different context and same context/different cue. Keep semantic labels separate from rule-derived action labels. Reject an architecture explanation if cue-shuffled or context-only baselines match it.
+5. **Tokens are redundant parameters:** learned queries must beat fixed/random queries and an equal-budget MLP, not just a smaller linear baseline. Token shuffling and count sweeps test whether position/identity matters.
+6. **mHC constraint does no work:** if identity or unconstrained routing matches held-out performance and stability at equal compute, extra machinery is unsupported for this task.
+
+A read-only probe establishes decodability under its fitted decoder, not that a circuit uses that variable. Write experiments must specify additive versus replacement input, site before/after nonlinearity, matched amplitude, intervention timing, and recomputation of the downstream policy. Perturbation-and-rescue with the original state is stronger than inspecting a saliency map.
+
+## Data and reporting boundary
+
+Use development groups split by scenario family/source/session. Keep bilingual translation pairs in the same group and bootstrap/report at pair or family level. The new architecture final and adversarial sets each contain 64 texts but only 32 underlying bilingual scenario pairs; they are authored, not external validation. The adversarial set covers negation, quoted distractors, resolved needs, corrections, hypothetical needs, other people, temporal changes, and lexical decoys. Template reuse also creates within-family dependence.
+
+Select all sites, capacities, ranks, token counts, stopping rules, and candidate definitions on development data. Freeze hashes before either final set is encoded or scored; existing opened final sets cannot become fresh evidence by renaming them. Report every preregistered condition, accuracy and worst-family/language performance, calibration, paired uncertainty, forgetting on unrelated language tasks after transformer tuning, and transfer-inclusive latency. No model predictions or new experiments were run to prepare this research note.

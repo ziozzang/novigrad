@@ -1,0 +1,514 @@
+[
+  {
+    "id": "architecture-water-repair-en",
+    "class": "water",
+    "family": "repair",
+    "pair_id": "architecture-water-repair",
+    "language": "en",
+    "text": "The bicycle puncture is fixed. My tongue feels sticky, so I want several sips from the bottle beside the pump."
+  },
+  {
+    "id": "architecture-water-repair-ko",
+    "class": "water",
+    "family": "repair",
+    "pair_id": "architecture-water-repair",
+    "language": "ko",
+    "text": "자전거 펑크는 고쳤어. 혀가 끈적해서 펌프 옆 병에서 몇 모금 마시고 싶어."
+  },
+  {
+    "id": "architecture-water-field_science-en",
+    "class": "water",
+    "family": "field_science",
+    "pair_id": "architecture-water-field_science",
+    "language": "en",
+    "text": "We have finished counting insects in the meadow. My mouth feels tacky, and I want to fill my flask at the potable tap."
+  },
+  {
+    "id": "architecture-water-field_science-ko",
+    "class": "water",
+    "family": "field_science",
+    "pair_id": "architecture-water-field_science",
+    "language": "ko",
+    "text": "초원에서 곤충 수를 다 셌어. 입안이 끈적해서 식수용 수도꼭지에서 물통을 채우고 싶어."
+  },
+  {
+    "id": "architecture-water-visual_arts-en",
+    "class": "water",
+    "family": "visual_arts",
+    "pair_id": "architecture-water-visual_arts",
+    "language": "en",
+    "text": "During the long portrait sitting I could not reach my cup. Now I want a few swallows to moisten my mouth."
+  },
+  {
+    "id": "architecture-water-visual_arts-ko",
+    "class": "water",
+    "family": "visual_arts",
+    "pair_id": "architecture-water-visual_arts",
+    "language": "ko",
+    "text": "오랫동안 초상화 모델로 앉아 있어 컵에 손이 닿지 않았어. 이제 몇 모금 삼켜 입안을 축이고 싶어."
+  },
+  {
+    "id": "architecture-water-examination-en",
+    "class": "water",
+    "family": "examination",
+    "pair_id": "architecture-water-examination",
+    "language": "en",
+    "text": "The oral examination is over. All that speaking has left my tongue sticking to my palate; may I use the dispenser?"
+  },
+  {
+    "id": "architecture-water-examination-ko",
+    "class": "water",
+    "family": "examination",
+    "pair_id": "architecture-water-examination",
+    "language": "ko",
+    "text": "구술시험이 끝났어. 계속 말했더니 혀가 입천장에 달라붙네. 정수기를 써도 될까?"
+  },
+  {
+    "id": "architecture-water-transit_delay-en",
+    "class": "water",
+    "family": "transit_delay",
+    "pair_id": "architecture-water-transit_delay",
+    "language": "en",
+    "text": "Our flight is delayed again. My mouth feels parched, so I am heading to the refill station with my empty bottle."
+  },
+  {
+    "id": "architecture-water-transit_delay-ko",
+    "class": "water",
+    "family": "transit_delay",
+    "pair_id": "architecture-water-transit_delay",
+    "language": "ko",
+    "text": "항공편이 또 지연됐어. 입안이 바짝 말라서 빈 병을 들고 급수대로 가려고 해."
+  },
+  {
+    "id": "architecture-water-domestic_chores-en",
+    "class": "water",
+    "family": "domestic_chores",
+    "pair_id": "architecture-water-domestic_chores",
+    "language": "en",
+    "text": "I have finished vacuuming the apartment. Before putting the machine away, I want to take a long sip to ease this dry feeling in my mouth."
+  },
+  {
+    "id": "architecture-water-domestic_chores-ko",
+    "class": "water",
+    "family": "domestic_chores",
+    "pair_id": "architecture-water-domestic_chores",
+    "language": "ko",
+    "text": "집 안 청소기를 다 돌렸어. 기계를 넣기 전에 길게 한 모금 마셔 입안의 마른 느낌을 가시게 하고 싶어."
+  },
+  {
+    "id": "architecture-water-orchard_work-en",
+    "class": "water",
+    "family": "orchard_work",
+    "pair_id": "architecture-water-orchard_work",
+    "language": "en",
+    "text": "The pruning is done and I have washed my hands. My mouth is dry, so please pass my flask for a few gulps."
+  },
+  {
+    "id": "architecture-water-orchard_work-ko",
+    "class": "water",
+    "family": "orchard_work",
+    "pair_id": "architecture-water-orchard_work",
+    "language": "ko",
+    "text": "가지치기를 끝내고 손도 씻었어. 입안이 말라서 몇 모금 들이켜게 내 물통을 건네줘."
+  },
+  {
+    "id": "architecture-water-parcel_logistics-en",
+    "class": "water",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-water-parcel_logistics",
+    "language": "en",
+    "text": "After sorting the parcel labels, I notice how dry my mouth feels. I want to pause at the bottle-filling tap before continuing."
+  },
+  {
+    "id": "architecture-water-parcel_logistics-ko",
+    "class": "water",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-water-parcel_logistics",
+    "language": "ko",
+    "text": "소포 라벨을 분류하고 나니 입안이 많이 말랐다는 걸 알겠어. 계속하기 전에 병을 채우는 수도 앞에 잠깐 들르고 싶어."
+  },
+  {
+    "id": "architecture-food-repair-en",
+    "class": "food",
+    "family": "repair",
+    "pair_id": "architecture-food-repair",
+    "language": "en",
+    "text": "The clock repair took longer than expected, and my stomach is growling. Please hand me the oat bar from my bag."
+  },
+  {
+    "id": "architecture-food-repair-ko",
+    "class": "food",
+    "family": "repair",
+    "pair_id": "architecture-food-repair",
+    "language": "ko",
+    "text": "시계 수리에 예상보다 시간이 걸렸고 배에서 소리가 나. 가방에 있는 귀리 바를 건네줘."
+  },
+  {
+    "id": "architecture-food-field_science-en",
+    "class": "food",
+    "family": "field_science",
+    "pair_id": "architecture-food-field_science",
+    "language": "en",
+    "text": "We have packed the rock samples. My stomach is rumbling, and I want to open my lunch box and finish the rice inside."
+  },
+  {
+    "id": "architecture-food-field_science-ko",
+    "class": "food",
+    "family": "field_science",
+    "pair_id": "architecture-food-field_science",
+    "language": "ko",
+    "text": "암석 표본을 다 포장했어. 배에서 소리가 나니 도시락을 열어 안에 있는 밥을 먹고 싶어."
+  },
+  {
+    "id": "architecture-food-visual_arts-en",
+    "class": "food",
+    "family": "visual_arts",
+    "pair_id": "architecture-food-visual_arts",
+    "language": "en",
+    "text": "The printmaking session is over. I want to satisfy this empty feeling in my belly with the baked potato I brought."
+  },
+  {
+    "id": "architecture-food-visual_arts-ko",
+    "class": "food",
+    "family": "visual_arts",
+    "pair_id": "architecture-food-visual_arts",
+    "language": "ko",
+    "text": "판화 작업 시간이 끝났어. 가져온 구운 감자로 속이 빈 느낌을 채우고 싶어."
+  },
+  {
+    "id": "architecture-food-examination-en",
+    "class": "food",
+    "family": "examination",
+    "pair_id": "architecture-food-examination",
+    "language": "en",
+    "text": "I handed in the test paper, and now my belly is growling. Please help me find the counter selling filled rolls."
+  },
+  {
+    "id": "architecture-food-examination-ko",
+    "class": "food",
+    "family": "examination",
+    "pair_id": "architecture-food-examination",
+    "language": "ko",
+    "text": "시험지를 냈더니 이제 배에서 꼬르륵 소리가 나. 속을 채운 빵을 파는 매대를 찾게 도와줘."
+  },
+  {
+    "id": "architecture-food-transit_delay-en",
+    "class": "food",
+    "family": "transit_delay",
+    "pair_id": "architecture-food-transit_delay",
+    "language": "en",
+    "text": "The departure board says another two hours. My belly is rumbling, so I want a plate of pasta before boarding."
+  },
+  {
+    "id": "architecture-food-transit_delay-ko",
+    "class": "food",
+    "family": "transit_delay",
+    "pair_id": "architecture-food-transit_delay",
+    "language": "ko",
+    "text": "출발 안내판에 두 시간 더 기다리라고 나오네. 배에서 소리가 나니 탑승 전에 파스타 한 접시를 먹고 싶어."
+  },
+  {
+    "id": "architecture-food-domestic_chores-en",
+    "class": "food",
+    "family": "domestic_chores",
+    "pair_id": "architecture-food-domestic_chores",
+    "language": "en",
+    "text": "I have finished folding the laundry, and my belly feels empty. I am going to peel two boiled eggs and eat them."
+  },
+  {
+    "id": "architecture-food-domestic_chores-ko",
+    "class": "food",
+    "family": "domestic_chores",
+    "pair_id": "architecture-food-domestic_chores",
+    "language": "ko",
+    "text": "빨래를 다 개었고 속이 허해. 삶은 달걀 두 개를 까서 먹으려고 해."
+  },
+  {
+    "id": "architecture-food-orchard_work-en",
+    "class": "food",
+    "family": "orchard_work",
+    "pair_id": "architecture-food-orchard_work",
+    "language": "en",
+    "text": "The fruit grading is finished. My stomach is growling, and I would like a serving of the bean dish in my lunch tin."
+  },
+  {
+    "id": "architecture-food-orchard_work-ko",
+    "class": "food",
+    "family": "orchard_work",
+    "pair_id": "architecture-food-orchard_work",
+    "language": "ko",
+    "text": "과일 등급 분류가 끝났어. 배에서 소리가 나서 도시락 통의 콩 요리를 덜어 먹고 싶어."
+  },
+  {
+    "id": "architecture-food-parcel_logistics-en",
+    "class": "food",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-food-parcel_logistics",
+    "language": "en",
+    "text": "The delivery manifest is complete, and my belly is rumbling. Please point me to the kiosk selling filled flatbreads."
+  },
+  {
+    "id": "architecture-food-parcel_logistics-ko",
+    "class": "food",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-food-parcel_logistics",
+    "language": "ko",
+    "text": "배송 명세서를 다 작성했고 배에서 소리가 나. 속을 넣은 납작빵을 파는 매점이 어디인지 알려줘."
+  },
+  {
+    "id": "architecture-warmth-repair-en",
+    "class": "warmth",
+    "family": "repair",
+    "pair_id": "architecture-warmth-repair",
+    "language": "en",
+    "text": "The metalwork shed has no heating, and my hands are stiff from the low temperature. I want to put on insulated gloves before continuing the repair."
+  },
+  {
+    "id": "architecture-warmth-repair-ko",
+    "class": "warmth",
+    "family": "repair",
+    "pair_id": "architecture-warmth-repair",
+    "language": "ko",
+    "text": "금속 작업장에 난방이 없어서 낮은 온도에 손이 뻣뻣해졌어. 수리를 계속하기 전에 보온 장갑을 끼고 싶어."
+  },
+  {
+    "id": "architecture-warmth-field_science-en",
+    "class": "warmth",
+    "family": "field_science",
+    "pair_id": "architecture-warmth-field_science",
+    "language": "en",
+    "text": "I have been recording stream temperatures with my sleeves rolled up. The air has chilled my arms, so please pass my padded vest and jacket."
+  },
+  {
+    "id": "architecture-warmth-field_science-ko",
+    "class": "warmth",
+    "family": "field_science",
+    "pair_id": "architecture-warmth-field_science",
+    "language": "ko",
+    "text": "소매를 걷고 하천 온도를 기록했어. 찬 공기에 팔이 식었으니 누빔 조끼와 재킷을 건네줘."
+  },
+  {
+    "id": "architecture-warmth-visual_arts-en",
+    "class": "warmth",
+    "family": "visual_arts",
+    "pair_id": "architecture-warmth-visual_arts",
+    "language": "en",
+    "text": "The sculpture studio is kept at a low temperature, and my teeth have begun to chatter. I want to move into the heated anteroom."
+  },
+  {
+    "id": "architecture-warmth-visual_arts-ko",
+    "class": "warmth",
+    "family": "visual_arts",
+    "pair_id": "architecture-warmth-visual_arts",
+    "language": "ko",
+    "text": "조각 작업실 온도가 낮게 유지돼서 이가 딱딱 부딪치기 시작했어. 난방이 되는 앞방으로 옮겨가고 싶어."
+  },
+  {
+    "id": "architecture-warmth-examination-en",
+    "class": "warmth",
+    "family": "examination",
+    "pair_id": "architecture-warmth-examination",
+    "language": "en",
+    "text": "The examination room vent is making my neck icy. Please let me put on my knitted scarf."
+  },
+  {
+    "id": "architecture-warmth-examination-ko",
+    "class": "warmth",
+    "family": "examination",
+    "pair_id": "architecture-warmth-examination",
+    "language": "ko",
+    "text": "시험실 환기구 바람 때문에 목덜미가 얼음장 같아. 뜨개 목도리를 두르게 해줘."
+  },
+  {
+    "id": "architecture-warmth-transit_delay-en",
+    "class": "warmth",
+    "family": "transit_delay",
+    "pair_id": "architecture-warmth-transit_delay",
+    "language": "en",
+    "text": "The delayed cable car has left us in this unheated shelter. My fingers are losing their feeling from the chill; I want my mittens."
+  },
+  {
+    "id": "architecture-warmth-transit_delay-ko",
+    "class": "warmth",
+    "family": "transit_delay",
+    "pair_id": "architecture-warmth-transit_delay",
+    "language": "ko",
+    "text": "케이블카가 지연돼 난방 없는 대피소에 남아 있어. 한기에 손가락 감각이 둔해져서 벙어리장갑을 끼고 싶어."
+  },
+  {
+    "id": "architecture-warmth-domestic_chores-en",
+    "class": "warmth",
+    "family": "domestic_chores",
+    "pair_id": "architecture-warmth-domestic_chores",
+    "language": "en",
+    "text": "I opened every window to air the house, and now the draft is making me shudder. I want to close them and put on a fleece robe."
+  },
+  {
+    "id": "architecture-warmth-domestic_chores-ko",
+    "class": "warmth",
+    "family": "domestic_chores",
+    "pair_id": "architecture-warmth-domestic_chores",
+    "language": "ko",
+    "text": "집을 환기하려고 창문을 모두 열었더니 외풍에 몸이 떨려. 창문을 닫고 플리스 가운을 입고 싶어."
+  },
+  {
+    "id": "architecture-warmth-orchard_work-en",
+    "class": "warmth",
+    "family": "orchard_work",
+    "pair_id": "architecture-warmth-orchard_work",
+    "language": "en",
+    "text": "At the orchard packing table, the dawn air is biting through my thin shirt. Please fetch the quilted overcoat."
+  },
+  {
+    "id": "architecture-warmth-orchard_work-ko",
+    "class": "warmth",
+    "family": "orchard_work",
+    "pair_id": "architecture-warmth-orchard_work",
+    "language": "ko",
+    "text": "과수원 포장대에서 새벽 공기가 얇은 셔츠를 파고들어. 누빔 외투를 가져다줘."
+  },
+  {
+    "id": "architecture-warmth-parcel_logistics-en",
+    "class": "warmth",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-warmth-parcel_logistics",
+    "language": "en",
+    "text": "The loading bay shutter is open, and the icy draft has reached my back. I want to zip up an insulated body warmer."
+  },
+  {
+    "id": "architecture-warmth-parcel_logistics-ko",
+    "class": "warmth",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-warmth-parcel_logistics",
+    "language": "ko",
+    "text": "하역장 셔터가 열려 있어 얼음 같은 외풍이 등에 닿아. 보온 조끼의 지퍼를 올려 입고 싶어."
+  },
+  {
+    "id": "architecture-rest-repair-en",
+    "class": "rest",
+    "family": "repair",
+    "pair_id": "architecture-rest-repair",
+    "language": "en",
+    "text": "I have spent hours restoring the radio and keep dozing over the circuit diagram. I want to leave the bench and close my eyes for a while."
+  },
+  {
+    "id": "architecture-rest-repair-ko",
+    "class": "rest",
+    "family": "repair",
+    "pair_id": "architecture-rest-repair",
+    "language": "ko",
+    "text": "라디오를 복원하느라 몇 시간을 보냈고 회로도 위로 자꾸 졸고 있어. 작업대를 떠나 잠시 눈을 감고 싶어."
+  },
+  {
+    "id": "architecture-rest-field_science-en",
+    "class": "rest",
+    "family": "field_science",
+    "pair_id": "architecture-rest-field_science",
+    "language": "en",
+    "text": "The dawn bird survey followed a very short night. I keep nodding off over the tally sheet, so I want to lie down now that the count is finished."
+  },
+  {
+    "id": "architecture-rest-field_science-ko",
+    "class": "rest",
+    "family": "field_science",
+    "pair_id": "architecture-rest-field_science",
+    "language": "ko",
+    "text": "아주 짧게 자고 새벽 조류 조사를 했어. 집계표 위로 자꾸 졸고 있으니 조사를 마친 지금 눕고 싶어."
+  },
+  {
+    "id": "architecture-rest-visual_arts-en",
+    "class": "rest",
+    "family": "visual_arts",
+    "pair_id": "architecture-rest-visual_arts",
+    "language": "en",
+    "text": "After editing the animation frame by frame, I can no longer hold my eyelids up. I want to darken the room and drift off."
+  },
+  {
+    "id": "architecture-rest-visual_arts-ko",
+    "class": "rest",
+    "family": "visual_arts",
+    "pair_id": "architecture-rest-visual_arts",
+    "language": "ko",
+    "text": "애니메이션을 한 프레임씩 편집하고 나니 눈꺼풀을 더는 들고 있기 힘들어. 방을 어둡게 하고 잠에 들고 싶어."
+  },
+  {
+    "id": "architecture-rest-examination-en",
+    "class": "rest",
+    "family": "examination",
+    "pair_id": "architecture-rest-examination",
+    "language": "en",
+    "text": "The final exam is behind me after days of late revision. My head keeps drooping, and I want to lie undisturbed until I wake naturally."
+  },
+  {
+    "id": "architecture-rest-examination-ko",
+    "class": "rest",
+    "family": "examination",
+    "pair_id": "architecture-rest-examination",
+    "language": "ko",
+    "text": "며칠간 늦게까지 복습한 뒤 기말시험이 끝났어. 자꾸 고개가 떨어져서 저절로 깰 때까지 방해받지 않고 눕고 싶어."
+  },
+  {
+    "id": "architecture-rest-transit_delay-en",
+    "class": "rest",
+    "family": "transit_delay",
+    "pair_id": "architecture-rest-transit_delay",
+    "language": "en",
+    "text": "The cancelled connection kept me awake in the terminal. Now I can barely keep my eyes open and want to use the sleeping pod."
+  },
+  {
+    "id": "architecture-rest-transit_delay-ko",
+    "class": "rest",
+    "family": "transit_delay",
+    "pair_id": "architecture-rest-transit_delay",
+    "language": "ko",
+    "text": "연결편이 취소돼 터미널에서 계속 깨어 있었어. 이제 눈을 겨우 뜨고 있어서 수면 캡슐을 이용하고 싶어."
+  },
+  {
+    "id": "architecture-rest-domestic_chores-en",
+    "class": "rest",
+    "family": "domestic_chores",
+    "pair_id": "architecture-rest-domestic_chores",
+    "language": "en",
+    "text": "The spring cleaning is finally done. I keep yawning and want to stretch out on the daybed with the door closed."
+  },
+  {
+    "id": "architecture-rest-domestic_chores-ko",
+    "class": "rest",
+    "family": "domestic_chores",
+    "pair_id": "architecture-rest-domestic_chores",
+    "language": "ko",
+    "text": "봄맞이 대청소를 드디어 끝냈어. 자꾸 하품이 나서 문을 닫고 긴 소파에 쭉 눕고 싶어."
+  },
+  {
+    "id": "architecture-rest-orchard_work-en",
+    "class": "rest",
+    "family": "orchard_work",
+    "pair_id": "architecture-rest-orchard_work",
+    "language": "en",
+    "text": "The orchard records are filed after a very early start. I am nodding off and want an hour with my eyes closed before doing anything else."
+  },
+  {
+    "id": "architecture-rest-orchard_work-ko",
+    "class": "rest",
+    "family": "orchard_work",
+    "pair_id": "architecture-rest-orchard_work",
+    "language": "ko",
+    "text": "아주 일찍 일을 시작해서 과수원 기록 정리까지 마쳤어. 꾸벅꾸벅 졸고 있으니 다른 일을 하기 전에 한 시간 눈을 붙이고 싶어."
+  },
+  {
+    "id": "architecture-rest-parcel_logistics-en",
+    "class": "rest",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-rest-parcel_logistics",
+    "language": "en",
+    "text": "The parcel inventory is complete, but I have been fighting sleep through the last pages. I want to switch off the desk lamp and lie down."
+  },
+  {
+    "id": "architecture-rest-parcel_logistics-ko",
+    "class": "rest",
+    "family": "parcel_logistics",
+    "pair_id": "architecture-rest-parcel_logistics",
+    "language": "ko",
+    "text": "소포 재고 조사는 끝났지만 마지막 몇 장을 보는 내내 졸음을 참았어. 책상 등을 끄고 눕고 싶어."
+  }
+]

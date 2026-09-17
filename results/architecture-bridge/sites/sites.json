@@ -1,0 +1,152 @@
+{
+  "s1201_embedding": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_pn": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_raw_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_mbon": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_multi_site": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_repeated_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1201_landmarks_4": {
+    "train_accuracy": 0.71875,
+    "parameters": 132,
+    "train_design_rank": 5
+  },
+  "s1201_landmarks_16": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 17
+  },
+  "s1201_landmarks_64": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_embedding": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_pn": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_raw_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_mbon": {
+    "train_accuracy": 0.96875,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_multi_site": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_repeated_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1202_landmarks_4": {
+    "train_accuracy": 0.59375,
+    "parameters": 132,
+    "train_design_rank": 5
+  },
+  "s1202_landmarks_16": {
+    "train_accuracy": 0.90625,
+    "parameters": 132,
+    "train_design_rank": 17
+  },
+  "s1202_landmarks_64": {
+    "train_accuracy": 0.96875,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_embedding": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_pn": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_raw_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_mbon": {
+    "train_accuracy": 0.96875,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_multi_site": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_repeated_kc": {
+    "train_accuracy": 1.0,
+    "parameters": 132,
+    "train_design_rank": 32
+  },
+  "s1203_landmarks_4": {
+    "train_accuracy": 0.59375,
+    "parameters": 132,
+    "train_design_rank": 5
+  },
+  "s1203_landmarks_16": {
+    "train_accuracy": 0.9375,
+    "parameters": 132,
+    "train_design_rank": 17
+  },
+  "s1203_landmarks_64": {
+    "train_accuracy": 0.96875,
+    "parameters": 132,
+    "train_design_rank": 32
+  }
+}

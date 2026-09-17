@@ -91,3 +91,5 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 정밀 신경 인터페이스: [학습 데이터 전용 PCA 보정, 보상 학습, 고정된 평가와 정확한 재실행](examples/bio_bridge/PRECISE_RESULTS.ko.md). [BCI 원리 기반 기록 가져오기·신호 변화 보정](examples/bio_bridge/NEURAL_LINK_RESEARCH.ko.md)에는 실패한 대조 실험도 기록했습니다.
 
 상세 HTML 연구 보고서: [한국어판](reports/neural-link/report.ko.html) · [영문 논문 초안](reports/neural-link/report.html). 방법·측정 결과·음성 대조군·64개 전체 사례·재현 검증을 포함하며 오프라인으로 열 수 있습니다.
+
+[구조·적대적 검증 보충 보고서](reports/neural-link/architecture.ko.html)는 문맥 결합, PN/KC/MBON 읽기 위치, 고정 그룹 풀링, 저랭크·전체 브리지 갱신을 비교합니다. 직접 작성한 적대적64문장에서 직접 임베딩76.56%, KC 문맥 결합67.19%로 구조적 비약은 입증되지 않았습니다. 브리지 갱신과 본체 LoRA는 구분합니다. [방법과 재현](results/architecture-bridge/README.ko.md).

@@ -1,0 +1,235 @@
+{
+  "scope": "Direct 768-to-128 embedding adapter capacity control; no connectome path and no EmbeddingGemma fine-tuning. PCA is fit on train only. The complete model is linear with four outputs, so its effective input-to-logit rank is at most 4; rank-64 adds parameter capacity but cannot add output rank.",
+  "fixed_hyperparameters": {
+    "epochs": 300,
+    "learning_rate": 0.03,
+    "optimizer": "Adam full-batch",
+    "seeds": [
+      11,
+      23,
+      47
+    ]
+  },
+  "models": {
+    "frozen": [
+      {
+        "seed": 11,
+        "parameters": 516,
+        "train_loss": 0.053937409073114395,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 0.9475372433662415,
+        "validation_loss": 0.21755020320415497,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.8123636841773987,
+        "effective_linear_rank": 4,
+        "seconds": 0.6746899578720331,
+        "weights": "frozen-seed11.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 23,
+        "parameters": 516,
+        "train_loss": 0.054084666073322296,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 0.9473977088928223,
+        "validation_loss": 0.21771429479122162,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.8121904730796814,
+        "effective_linear_rank": 4,
+        "seconds": 0.13305612467229366,
+        "weights": "frozen-seed23.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 47,
+        "parameters": 516,
+        "train_loss": 0.053940143436193466,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 0.9475346803665161,
+        "validation_loss": 0.21746093034744263,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.812370240688324,
+        "effective_linear_rank": 4,
+        "seconds": 0.14487658441066742,
+        "weights": "frozen-seed47.safetensors",
+        "cpu_roundtrip_exact": true
+      }
+    ],
+    "rank4": [
+      {
+        "seed": 11,
+        "parameters": 4100,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.0,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 1.0,
+        "effective_linear_rank": 4,
+        "seconds": 0.3934452496469021,
+        "weights": "rank4-seed11.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 23,
+        "parameters": 4100,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.0,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 1.0,
+        "effective_linear_rank": 4,
+        "seconds": 0.2200865838676691,
+        "weights": "rank4-seed23.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 47,
+        "parameters": 4100,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.0003107053053099662,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9996898770332336,
+        "effective_linear_rank": 4,
+        "seconds": 0.22247508354485035,
+        "weights": "rank4-seed47.safetensors",
+        "cpu_roundtrip_exact": true
+      }
+    ],
+    "rank16": [
+      {
+        "seed": 11,
+        "parameters": 14852,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 2.4636221951368498e-06,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9999975562095642,
+        "effective_linear_rank": 4,
+        "seconds": 0.23169895634055138,
+        "weights": "rank16-seed11.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 23,
+        "parameters": 14852,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 1.3907633729104418e-06,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9999985694885254,
+        "effective_linear_rank": 4,
+        "seconds": 0.18761258386075497,
+        "weights": "rank16-seed23.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 47,
+        "parameters": 14852,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 1.276612639427185,
+        "validation_accuracy": 0.9166666666666666,
+        "validation_correct_probability": 0.9166666865348816,
+        "effective_linear_rank": 4,
+        "seconds": 0.18717891536653042,
+        "weights": "rank16-seed47.safetensors",
+        "cpu_roundtrip_exact": true
+      }
+    ],
+    "rank64": [
+      {
+        "seed": 11,
+        "parameters": 57860,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 6.232314626686275e-05,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9999377131462097,
+        "effective_linear_rank": 4,
+        "seconds": 0.20701658353209496,
+        "weights": "rank64-seed11.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 23,
+        "parameters": 57860,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.0,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 1.0,
+        "effective_linear_rank": 4,
+        "seconds": 0.18538879230618477,
+        "weights": "rank64-seed23.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 47,
+        "parameters": 57860,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 2.114698648452759,
+        "validation_accuracy": 0.9166666666666666,
+        "validation_correct_probability": 0.9166666865348816,
+        "effective_linear_rank": 4,
+        "seconds": 0.18461516685783863,
+        "weights": "rank64-seed47.safetensors",
+        "cpu_roundtrip_exact": true
+      }
+    ],
+    "full": [
+      {
+        "seed": 11,
+        "parameters": 98820,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.004383771680295467,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9957296252250671,
+        "effective_linear_rank": 4,
+        "seconds": 0.15669224970042706,
+        "weights": "full-seed11.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 23,
+        "parameters": 98820,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.008405239321291447,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9920046925544739,
+        "effective_linear_rank": 4,
+        "seconds": 0.14475012570619583,
+        "weights": "full-seed23.safetensors",
+        "cpu_roundtrip_exact": true
+      },
+      {
+        "seed": 47,
+        "parameters": 98820,
+        "train_loss": 0.0,
+        "train_accuracy": 1.0,
+        "train_correct_probability": 1.0,
+        "validation_loss": 0.054565493017435074,
+        "validation_accuracy": 1.0,
+        "validation_correct_probability": 0.9599628448486328,
+        "effective_linear_rank": 4,
+        "seconds": 0.1435841266065836,
+        "weights": "full-seed47.safetensors",
+        "cpu_roundtrip_exact": true
+      }
+    ]
+  }
+}

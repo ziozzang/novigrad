@@ -1,5 +1,7 @@
 # Neural interface research report
 
+The new [architecture supplement](architecture.html) ([한국어](architecture.ko.html)) covers context routing, readout sites, fixed landmark pooling, low-rank/full direct bridge updates and adversarial counterexamples. It is a separate frozen study; it does not revise the earlier manuscript's measurements. Rebuild with `.venv/bin/python reports/neural-link/build_architecture_report.py`. [Methods, limitations and replay](../../results/architecture-bridge/README.md).
+
 Open **[report.html](report.html)** for the English manuscript draft or **[report.ko.html](report.ko.html)** for Korean. Each file embeds its figures, styles, JavaScript, and case data and works offline. Source-paper/code links need a network connection; the language switch needs the neighboring HTML file.
 
 The report covers train-only embedding calibration, independent native reward learning, port-placement controls, the separate recording-drift study, schema-validated recording import, and exact experiment reproduction. It distinguishes task accuracy from information preservation and explicitly reports negative results and missing controls. It is a pre-peer-review draft, not evidence of biological neural decoding or a submission-ready clinical study.

@@ -1,0 +1,3 @@
+timestamp	iteration	decision	metric_value	verify_status	guard_status	hypothesis	change_summary	labels	note
+2026-09-17T12:45:12Z	1	keep	1.0	pass	pass	Context interaction and site probes may improve generalization beyond direct embedding	Retain frozen probe and adversarial comparison harness; reject architectural superiority claim	verified	Saved inference exact on two64textsets; KC adversarial67.19 versus direct76.56; no runtime default changed
+2026-09-17T12:45:12Z	2	keep	1.0	pass	pass	Larger low-rank bridge updates or a full matrix improve robustness	Retain parameterization comparison and negative evidence; no larger-rank default	verified	Full bridge adversarial73.96 below direct76.56; four-output linear saturation prevents rank-capacity claim; actual encoder unchanged

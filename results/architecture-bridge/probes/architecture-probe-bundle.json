@@ -1,0 +1,290 @@
+{
+  "format": "novi.architecture-probe-manifest",
+  "version": 1,
+  "frozen_spec": {
+    "architecture_probe_frozen": true,
+    "architecture_probe_source_sha256": "5fb389e2d76d86979d335f566f346222254246d50344ef18e9b99a3fa6bb7946",
+    "ridge": 0.1,
+    "seed": 9901,
+    "cyclic_rules": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3,
+        0
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        2
+      ]
+    ],
+    "alternate_rules": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        1,
+        0,
+        3,
+        2
+      ],
+      [
+        2,
+        3,
+        0,
+        1
+      ],
+      [
+        3,
+        2,
+        1,
+        0
+      ]
+    ],
+    "checkpoint_sha256": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+    "train_dataset_sha256": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "train_embeddings_sha256": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc"
+  },
+  "weights": {
+    "path": "architecture-probes.safetensors",
+    "sha256": "3d29a29f9c890d0c8820a0243a37b01ea9adff1aaba334f38fd12fe136b3aa42",
+    "tensor_keys": [
+      "alternate.normal.additive_kc.coef",
+      "alternate.normal.blind_kc.coef",
+      "alternate.normal.interaction_embedding.coef",
+      "alternate.normal.interaction_kc.coef",
+      "alternate.normal.interaction_pca_z.coef",
+      "alternate.normal.matched_interaction_kc.coef",
+      "alternate.normal.matched_interaction_kc.projection",
+      "alternate.shuffled.additive_kc.coef",
+      "alternate.shuffled.blind_kc.coef",
+      "alternate.shuffled.interaction_embedding.coef",
+      "alternate.shuffled.interaction_kc.coef",
+      "alternate.shuffled.interaction_pca_z.coef",
+      "alternate.shuffled.matched_interaction_kc.coef",
+      "alternate.shuffled.matched_interaction_kc.projection",
+      "bridge.mean",
+      "bridge.projection",
+      "cyclic.normal.additive_kc.coef",
+      "cyclic.normal.blind_kc.coef",
+      "cyclic.normal.interaction_embedding.coef",
+      "cyclic.normal.interaction_kc.coef",
+      "cyclic.normal.interaction_pca_z.coef",
+      "cyclic.normal.matched_interaction_kc.coef",
+      "cyclic.normal.matched_interaction_kc.projection",
+      "cyclic.shuffled.additive_kc.coef",
+      "cyclic.shuffled.blind_kc.coef",
+      "cyclic.shuffled.interaction_embedding.coef",
+      "cyclic.shuffled.interaction_kc.coef",
+      "cyclic.shuffled.interaction_pca_z.coef",
+      "cyclic.shuffled.matched_interaction_kc.coef",
+      "cyclic.shuffled.matched_interaction_kc.projection"
+    ]
+  },
+  "fit": {
+    "train_rows": 32,
+    "pca_projection_rank": 31,
+    "kc_width": 5177,
+    "mean_active_kcs": 104.0,
+    "details": {
+      "cyclic": {
+        "normal": {
+          "blind_kc": {
+            "design_width_with_intercept": 5178,
+            "coefficient_count": 20712,
+            "train_design_rank": 32,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "additive_kc": {
+            "design_width_with_intercept": 5182,
+            "coefficient_count": 20728,
+            "train_design_rank": 35,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_kc": {
+            "design_width_with_intercept": 20709,
+            "coefficient_count": 82836,
+            "train_design_rank": 128,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "matched_interaction_kc": {
+            "design_width_with_intercept": 5181,
+            "coefficient_count": 20724,
+            "train_design_rank": 128,
+            "projected_kc_width": 1295,
+            "capacity_matching_scope": "coefficient-count only; effective rank and representation geometry remain unequal"
+          },
+          "interaction_embedding": {
+            "design_width_with_intercept": 3073,
+            "coefficient_count": 12292,
+            "train_design_rank": 128,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_pca_z": {
+            "design_width_with_intercept": 513,
+            "coefficient_count": 2052,
+            "train_design_rank": 125,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          }
+        },
+        "shuffled": {
+          "blind_kc": {
+            "design_width_with_intercept": 5178,
+            "coefficient_count": 20712,
+            "train_design_rank": 32,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "additive_kc": {
+            "design_width_with_intercept": 5182,
+            "coefficient_count": 20728,
+            "train_design_rank": 35,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_kc": {
+            "design_width_with_intercept": 20709,
+            "coefficient_count": 82836,
+            "train_design_rank": 95,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "matched_interaction_kc": {
+            "design_width_with_intercept": 5181,
+            "coefficient_count": 20724,
+            "train_design_rank": 95,
+            "projected_kc_width": 1295,
+            "capacity_matching_scope": "coefficient-count only; effective rank and representation geometry remain unequal"
+          },
+          "interaction_embedding": {
+            "design_width_with_intercept": 3073,
+            "coefficient_count": 12292,
+            "train_design_rank": 95,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_pca_z": {
+            "design_width_with_intercept": 513,
+            "coefficient_count": 2052,
+            "train_design_rank": 95,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          }
+        }
+      },
+      "alternate": {
+        "normal": {
+          "blind_kc": {
+            "design_width_with_intercept": 5178,
+            "coefficient_count": 20712,
+            "train_design_rank": 32,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "additive_kc": {
+            "design_width_with_intercept": 5182,
+            "coefficient_count": 20728,
+            "train_design_rank": 35,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_kc": {
+            "design_width_with_intercept": 20709,
+            "coefficient_count": 82836,
+            "train_design_rank": 128,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "matched_interaction_kc": {
+            "design_width_with_intercept": 5181,
+            "coefficient_count": 20724,
+            "train_design_rank": 128,
+            "projected_kc_width": 1295,
+            "capacity_matching_scope": "coefficient-count only; effective rank and representation geometry remain unequal"
+          },
+          "interaction_embedding": {
+            "design_width_with_intercept": 3073,
+            "coefficient_count": 12292,
+            "train_design_rank": 128,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_pca_z": {
+            "design_width_with_intercept": 513,
+            "coefficient_count": 2052,
+            "train_design_rank": 125,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          }
+        },
+        "shuffled": {
+          "blind_kc": {
+            "design_width_with_intercept": 5178,
+            "coefficient_count": 20712,
+            "train_design_rank": 32,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "additive_kc": {
+            "design_width_with_intercept": 5182,
+            "coefficient_count": 20728,
+            "train_design_rank": 35,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_kc": {
+            "design_width_with_intercept": 20709,
+            "coefficient_count": 82836,
+            "train_design_rank": 95,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "matched_interaction_kc": {
+            "design_width_with_intercept": 5181,
+            "coefficient_count": 20724,
+            "train_design_rank": 95,
+            "projected_kc_width": 1295,
+            "capacity_matching_scope": "coefficient-count only; effective rank and representation geometry remain unequal"
+          },
+          "interaction_embedding": {
+            "design_width_with_intercept": 3073,
+            "coefficient_count": 12292,
+            "train_design_rank": 95,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          },
+          "interaction_pca_z": {
+            "design_width_with_intercept": 513,
+            "coefficient_count": 2052,
+            "train_design_rank": 95,
+            "projected_kc_width": null,
+            "capacity_matching_scope": null
+          }
+        }
+      }
+    }
+  },
+  "boundary": "all supervised probes, including shuffled-context controls, fitted once on old train32; evaluation must load only"
+}

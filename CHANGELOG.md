@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add frozen, load-only architecture comparisons with 128 authored ordinary/adversarial texts, context and channel ablations, PN/KC/MBON site probes, fixed landmark pooling, and low-rank/full direct bridge updates; publish bilingual HTML, negative findings, source locks and exact saved-inference replay.
+
 - Add self-contained English/Korean HTML manuscript drafts with data-derived vector figures, full case exploration, source hashes, and desktop/mobile/offline browser verification.
 
 - Add train-only PCA neural-port calibration, fresh native reward training, held-out bilingual cases, permutation controls, frozen manifests and exact replay; add schema-validated neural recording import and paired drift-calibration diagnostics grounded in BCI research.

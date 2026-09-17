@@ -1,0 +1,979 @@
+{
+  "boundary": "Saved read-only supervised probes, 32 features plus bias each; no learned tokens or causal write-in. Multi-site has raw/PN bypasses and previously trained MBON.",
+  "width": 32,
+  "ridge": 0.1,
+  "runs": [
+    {
+      "seed": 1201,
+      "models": {
+        "embedding": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            3,
+            2
+          ]
+        },
+        "pn": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2
+          ]
+        },
+        "raw_kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            1,
+            3,
+            3
+          ]
+        },
+        "kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.08333333333333333,
+            "predictions": [
+              1,
+              2,
+              0,
+              2,
+              2,
+              0,
+              1,
+              3,
+              3,
+              0,
+              2,
+              0
+            ]
+          }
+        },
+        "mbon": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3
+          ]
+        },
+        "multi_site": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.5833333333333334,
+            "predictions": [
+              3,
+              0,
+              3,
+              1,
+              1,
+              1,
+              3,
+              3,
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          "zero_kc_branch": {
+            "accuracy": 0.8333333333333334,
+            "predictions": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ]
+          }
+        },
+        "repeated_kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.5,
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2,
+              3,
+              2,
+              0
+            ]
+          }
+        },
+        "landmarks_4": {
+          "train_accuracy": 0.71875,
+          "parameters": 132,
+          "train_design_rank": 5,
+          "accuracy": 0.4166666666666667,
+          "predictions": [
+            0,
+            0,
+            2,
+            1,
+            2,
+            1,
+            1,
+            0,
+            2,
+            2,
+            1,
+            1
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.3333333333333333,
+            "predictions": [
+              1,
+              1,
+              2,
+              3,
+              3,
+              1,
+              2,
+              2,
+              2,
+              1,
+              2,
+              2
+            ]
+          }
+        },
+        "landmarks_16": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 17,
+          "accuracy": 0.75,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            2,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            1
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.3333333333333333,
+            "predictions": [
+              2,
+              3,
+              2,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              3,
+              2,
+              3
+            ]
+          }
+        },
+        "landmarks_64": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.16666666666666666,
+            "predictions": [
+              2,
+              0,
+              3,
+              2,
+              0,
+              0,
+              2,
+              0,
+              0,
+              0,
+              0,
+              1
+            ]
+          }
+        }
+      }
+    },
+    {
+      "seed": 1202,
+      "models": {
+        "embedding": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        "pn": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 1.0,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        "raw_kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            1
+          ]
+        },
+        "kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.3333333333333333,
+            "predictions": [
+              1,
+              0,
+              1,
+              1,
+              1,
+              1,
+              1,
+              0,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "mbon": {
+          "train_accuracy": 0.96875,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 1.0,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        "multi_site": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.6666666666666666,
+            "predictions": [
+              0,
+              0,
+              3,
+              1,
+              2,
+              1,
+              2,
+              2,
+              2,
+              2,
+              3,
+              1
+            ]
+          },
+          "zero_kc_branch": {
+            "accuracy": 0.75,
+            "predictions": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              3,
+              1
+            ]
+          }
+        },
+        "repeated_kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            1
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.3333333333333333,
+            "predictions": [
+              3,
+              0,
+              3,
+              0,
+              1,
+              1,
+              0,
+              2,
+              1,
+              2,
+              2,
+              1
+            ]
+          }
+        },
+        "landmarks_4": {
+          "train_accuracy": 0.59375,
+          "parameters": 132,
+          "train_design_rank": 5,
+          "accuracy": 0.5,
+          "predictions": [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            2,
+            1,
+            3,
+            2,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.3333333333333333,
+            "predictions": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              3,
+              1,
+              1,
+              3
+            ]
+          }
+        },
+        "landmarks_16": {
+          "train_accuracy": 0.90625,
+          "parameters": 132,
+          "train_design_rank": 17,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.25,
+            "predictions": [
+              1,
+              2,
+              1,
+              2,
+              2,
+              1,
+              1,
+              2,
+              2,
+              1,
+              2,
+              2
+            ]
+          }
+        },
+        "landmarks_64": {
+          "train_accuracy": 0.96875,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.3333333333333333,
+            "predictions": [
+              2,
+              2,
+              0,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        }
+      }
+    },
+    {
+      "seed": 1203,
+      "models": {
+        "embedding": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2
+          ]
+        },
+        "pn": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3
+          ]
+        },
+        "raw_kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            3
+          ]
+        },
+        "kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 1.0,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.08333333333333333,
+            "predictions": [
+              2,
+              3,
+              2,
+              0,
+              0,
+              2,
+              3,
+              3,
+              1,
+              2,
+              3,
+              2
+            ]
+          }
+        },
+        "mbon": {
+          "train_accuracy": 0.96875,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 1.0,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3
+          ]
+        },
+        "multi_site": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.8333333333333334,
+            "predictions": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              3,
+              2
+            ]
+          },
+          "zero_kc_branch": {
+            "accuracy": 0.9166666666666666,
+            "predictions": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              2,
+              3,
+              3
+            ]
+          }
+        },
+        "repeated_kc": {
+          "train_accuracy": 1.0,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            3,
+            1
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.4166666666666667,
+            "predictions": [
+              0,
+              0,
+              1,
+              1,
+              2,
+              2,
+              2,
+              0,
+              2,
+              2,
+              2,
+              2
+            ]
+          }
+        },
+        "landmarks_4": {
+          "train_accuracy": 0.59375,
+          "parameters": 132,
+          "train_design_rank": 5,
+          "accuracy": 0.5833333333333334,
+          "predictions": [
+            0,
+            0,
+            2,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            3,
+            0,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.0,
+            "predictions": [
+              1,
+              1,
+              1,
+              2,
+              2,
+              2,
+              1,
+              1,
+              3,
+              0,
+              1,
+              0
+            ]
+          }
+        },
+        "landmarks_16": {
+          "train_accuracy": 0.9375,
+          "parameters": 132,
+          "train_design_rank": 17,
+          "accuracy": 0.8333333333333334,
+          "predictions": [
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.4166666666666667,
+            "predictions": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              3,
+              1,
+              3
+            ]
+          }
+        },
+        "landmarks_64": {
+          "train_accuracy": 0.96875,
+          "parameters": 132,
+          "train_design_rank": 32,
+          "accuracy": 0.9166666666666666,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3
+          ],
+          "shuffled_kc_identity": {
+            "accuracy": 0.16666666666666666,
+            "predictions": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "architecture.html": {
+    "sha256": "782d88d020a72acc0988d0725f457a1d7a2794d229f0b595ab73bb088321b0ca",
+    "offline": true,
+    "desktop_mobile_no_page_overflow": true,
+    "failure_disclosures_work": true,
+    "svg_figures": 1,
+    "sections": 11,
+    "print_media_checked_with_details_open": true
+  },
+  "architecture.ko.html": {
+    "sha256": "c1223dc560937f460bcb81fd522c5edcbdcf55da1af978fc81a954f6bf22cce6",
+    "offline": true,
+    "desktop_mobile_no_page_overflow": true,
+    "failure_disclosures_work": true,
+    "svg_figures": 1,
+    "sections": 11,
+    "print_media_checked_with_details_open": true
+  }
+}

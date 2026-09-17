@@ -1,0 +1,514 @@
+[
+  {
+    "id": "adversarial-water-negation-en",
+    "class": "water",
+    "family": "negation",
+    "pair_id": "adversarial-water-negation",
+    "language": "en",
+    "text": "I am not hungry; my throat is parched and I want to take a long drink."
+  },
+  {
+    "id": "adversarial-water-negation-ko",
+    "class": "water",
+    "family": "negation",
+    "pair_id": "adversarial-water-negation",
+    "language": "ko",
+    "text": "배고픈 게 아니야. 목이 바짝 말라서 길게 한 모금 마시고 싶어."
+  },
+  {
+    "id": "adversarial-water-quoted_distractor-en",
+    "class": "water",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-water-quoted_distractor",
+    "language": "en",
+    "text": "The poster says “get some sleep,” but I am only reporting its words. My own mouth is dry and I want a glass to sip from."
+  },
+  {
+    "id": "adversarial-water-quoted_distractor-ko",
+    "class": "water",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-water-quoted_distractor",
+    "language": "ko",
+    "text": "포스터에 “잠을 좀 자라”라고 쓰여 있지만 그 문구를 전하는 것뿐이야. 내 입안은 말라서 컵으로 조금씩 마시고 싶어."
+  },
+  {
+    "id": "adversarial-water-resolved_need-en",
+    "class": "water",
+    "family": "resolved_need",
+    "pair_id": "adversarial-water-resolved_need",
+    "language": "en",
+    "text": "A full meal has settled my hunger. What remains is thirst, so I want to fill my cup."
+  },
+  {
+    "id": "adversarial-water-resolved_need-ko",
+    "class": "water",
+    "family": "resolved_need",
+    "pair_id": "adversarial-water-resolved_need",
+    "language": "ko",
+    "text": "든든하게 먹어서 배고픔은 해결됐어. 남은 건 갈증이라 컵을 채우고 싶어."
+  },
+  {
+    "id": "adversarial-water-contrast_correction-en",
+    "class": "water",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-water-contrast_correction",
+    "language": "en",
+    "text": "When I said I wanted food, I misspoke. I meant that I am thirsty and want something to drink."
+  },
+  {
+    "id": "adversarial-water-contrast_correction-ko",
+    "class": "water",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-water-contrast_correction",
+    "language": "ko",
+    "text": "음식이 필요하다고 한 건 잘못 말한 거야. 목이 말라서 마실 것이 필요하다는 뜻이었어."
+  },
+  {
+    "id": "adversarial-water-hypothetical-en",
+    "class": "water",
+    "family": "hypothetical",
+    "pair_id": "adversarial-water-hypothetical",
+    "language": "en",
+    "text": "If I were cold I would ask for a coat, but I am comfortable. My current problem is thirst."
+  },
+  {
+    "id": "adversarial-water-hypothetical-ko",
+    "class": "water",
+    "family": "hypothetical",
+    "pair_id": "adversarial-water-hypothetical",
+    "language": "ko",
+    "text": "추웠다면 외투를 부탁했겠지만 몸은 쾌적해. 지금 문제는 갈증이야."
+  },
+  {
+    "id": "adversarial-water-third_party-en",
+    "class": "water",
+    "family": "third_party",
+    "pair_id": "adversarial-water-third_party",
+    "language": "en",
+    "text": "My colleague is hungry; I am not. For myself, I want several gulps from my flask because my mouth is dry."
+  },
+  {
+    "id": "adversarial-water-third_party-ko",
+    "class": "water",
+    "family": "third_party",
+    "pair_id": "adversarial-water-third_party",
+    "language": "ko",
+    "text": "동료는 배가 고프지만 나는 아니야. 나는 입안이 말라서 물통으로 몇 모금 들이켜고 싶어."
+  },
+  {
+    "id": "adversarial-water-temporal_change-en",
+    "class": "water",
+    "family": "temporal_change",
+    "pair_id": "adversarial-water-temporal_change",
+    "language": "en",
+    "text": "This morning I was tired, but a long nap fixed that. Right now I am thirsty."
+  },
+  {
+    "id": "adversarial-water-temporal_change-ko",
+    "class": "water",
+    "family": "temporal_change",
+    "pair_id": "adversarial-water-temporal_change",
+    "language": "ko",
+    "text": "오늘 아침에는 피곤했지만 길게 낮잠을 자서 해결됐어. 지금은 목이 말라."
+  },
+  {
+    "id": "adversarial-water-lexical_decoy-en",
+    "class": "water",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-water-lexical_decoy",
+    "language": "en",
+    "text": "The project is named “Warmth,” but that name says nothing about my condition. My throat is dry and I want a drink."
+  },
+  {
+    "id": "adversarial-water-lexical_decoy-ko",
+    "class": "water",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-water-lexical_decoy",
+    "language": "ko",
+    "text": "프로젝트 이름은 “따뜻함”이지만 그 이름이 내 상태를 말해 주는 건 아니야. 내 목이 말라서 마실 것이 필요해."
+  },
+  {
+    "id": "adversarial-food-negation-en",
+    "class": "food",
+    "family": "negation",
+    "pair_id": "adversarial-food-negation",
+    "language": "en",
+    "text": "I am not thirsty; my belly is rumbling and I want a bowl of rice."
+  },
+  {
+    "id": "adversarial-food-negation-ko",
+    "class": "food",
+    "family": "negation",
+    "pair_id": "adversarial-food-negation",
+    "language": "ko",
+    "text": "목마른 게 아니야. 배에서 소리가 나서 밥 한 그릇을 먹고 싶어."
+  },
+  {
+    "id": "adversarial-food-quoted_distractor-en",
+    "class": "food",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-food-quoted_distractor",
+    "language": "en",
+    "text": "The note reads “keep warm,” but I am only quoting it. My own belly is empty and I want to eat a portion of lentils."
+  },
+  {
+    "id": "adversarial-food-quoted_distractor-ko",
+    "class": "food",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-food-quoted_distractor",
+    "language": "ko",
+    "text": "쪽지에 “따뜻하게 지내라”라고 적혀 있지만 인용할 뿐이야. 내 속은 비어 있어서 렌틸콩 요리를 덜어 먹고 싶어."
+  },
+  {
+    "id": "adversarial-food-resolved_need-en",
+    "class": "food",
+    "family": "resolved_need",
+    "pair_id": "adversarial-food-resolved_need",
+    "language": "en",
+    "text": "A good sleep has cleared my tiredness. What remains is hunger, so I want breakfast."
+  },
+  {
+    "id": "adversarial-food-resolved_need-ko",
+    "class": "food",
+    "family": "resolved_need",
+    "pair_id": "adversarial-food-resolved_need",
+    "language": "ko",
+    "text": "푹 자서 피로는 풀렸어. 남은 건 배고픔이라 아침을 먹고 싶어."
+  },
+  {
+    "id": "adversarial-food-contrast_correction-en",
+    "class": "food",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-food-contrast_correction",
+    "language": "en",
+    "text": "I said I wanted a blanket, but that was a mistake. I meant I am hungry and want a meal."
+  },
+  {
+    "id": "adversarial-food-contrast_correction-ko",
+    "class": "food",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-food-contrast_correction",
+    "language": "ko",
+    "text": "담요가 필요하다고 말한 건 실수였어. 배가 고파서 식사가 필요하다는 뜻이었어."
+  },
+  {
+    "id": "adversarial-food-hypothetical-en",
+    "class": "food",
+    "family": "hypothetical",
+    "pair_id": "adversarial-food-hypothetical",
+    "language": "en",
+    "text": "If I were thirsty I would refill my bottle, but I am not. Right now I want something to chew because my belly is empty."
+  },
+  {
+    "id": "adversarial-food-hypothetical-ko",
+    "class": "food",
+    "family": "hypothetical",
+    "pair_id": "adversarial-food-hypothetical",
+    "language": "ko",
+    "text": "목이 말랐다면 물통을 채웠겠지만 그렇지 않아. 지금은 속이 비어서 씹어 먹을 것이 필요해."
+  },
+  {
+    "id": "adversarial-food-third_party-en",
+    "class": "food",
+    "family": "third_party",
+    "pair_id": "adversarial-food-third_party",
+    "language": "en",
+    "text": "My sister wants a nap; I am fully awake. For myself, I want to eat because my stomach is growling."
+  },
+  {
+    "id": "adversarial-food-third_party-ko",
+    "class": "food",
+    "family": "third_party",
+    "pair_id": "adversarial-food-third_party",
+    "language": "ko",
+    "text": "언니는 낮잠을 원하지만 나는 또렷이 깨어 있어. 나는 배에서 소리가 나서 먹고 싶어."
+  },
+  {
+    "id": "adversarial-food-temporal_change-en",
+    "class": "food",
+    "family": "temporal_change",
+    "pair_id": "adversarial-food-temporal_change",
+    "language": "en",
+    "text": "Earlier I was cold, but the jacket solved that. Now the problem is hunger."
+  },
+  {
+    "id": "adversarial-food-temporal_change-ko",
+    "class": "food",
+    "family": "temporal_change",
+    "pair_id": "adversarial-food-temporal_change",
+    "language": "ko",
+    "text": "아까는 추웠지만 재킷으로 해결했어. 이제 문제는 배고픔이야."
+  },
+  {
+    "id": "adversarial-food-lexical_decoy-en",
+    "class": "food",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-food-lexical_decoy",
+    "language": "en",
+    "text": "The shop is called “Sleep,” but I am not looking for a bed. I am hungry and want the filled pastries it sells."
+  },
+  {
+    "id": "adversarial-food-lexical_decoy-ko",
+    "class": "food",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-food-lexical_decoy",
+    "language": "ko",
+    "text": "가게 이름이 “잠”이지만 침대를 찾는 건 아니야. 배가 고파서 그 가게의 속을 넣은 빵을 먹고 싶어."
+  },
+  {
+    "id": "adversarial-warmth-negation-en",
+    "class": "warmth",
+    "family": "negation",
+    "pair_id": "adversarial-warmth-negation",
+    "language": "en",
+    "text": "I am not hungry; the low temperature is making me shiver and I want an insulated wrap."
+  },
+  {
+    "id": "adversarial-warmth-negation-ko",
+    "class": "warmth",
+    "family": "negation",
+    "pair_id": "adversarial-warmth-negation",
+    "language": "ko",
+    "text": "배고픈 게 아니야. 낮은 온도 때문에 몸이 떨려서 보온 덮개를 두르고 싶어."
+  },
+  {
+    "id": "adversarial-warmth-quoted_distractor-en",
+    "class": "warmth",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-warmth-quoted_distractor",
+    "language": "en",
+    "text": "The sign says “take a drink,” but those are the sign’s words, not my request. I am shivering and want to put on a thick cardigan."
+  },
+  {
+    "id": "adversarial-warmth-quoted_distractor-ko",
+    "class": "warmth",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-warmth-quoted_distractor",
+    "language": "ko",
+    "text": "표지판에 “한 모금 마셔라”라고 쓰여 있지만 내 요청이 아니라 표지판 문구야. 나는 몸이 떨려서 두꺼운 카디건을 입고 싶어."
+  },
+  {
+    "id": "adversarial-warmth-resolved_need-en",
+    "class": "warmth",
+    "family": "resolved_need",
+    "pair_id": "adversarial-warmth-resolved_need",
+    "language": "en",
+    "text": "I have had enough to drink and my thirst is gone. What remains is the chill, so I want my padded coat."
+  },
+  {
+    "id": "adversarial-warmth-resolved_need-ko",
+    "class": "warmth",
+    "family": "resolved_need",
+    "pair_id": "adversarial-warmth-resolved_need",
+    "language": "ko",
+    "text": "충분히 마셔서 갈증은 사라졌어. 남은 건 한기라 누빔 외투를 입고 싶어."
+  },
+  {
+    "id": "adversarial-warmth-contrast_correction-en",
+    "class": "warmth",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-warmth-contrast_correction",
+    "language": "en",
+    "text": "When I asked for a bed, I used the wrong word. I meant a blanket to stop the cold from making me shake."
+  },
+  {
+    "id": "adversarial-warmth-contrast_correction-ko",
+    "class": "warmth",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-warmth-contrast_correction",
+    "language": "ko",
+    "text": "침대를 부탁했을 때 단어를 잘못 썼어. 추위에 떨리지 않게 담요가 필요하다는 뜻이었어."
+  },
+  {
+    "id": "adversarial-warmth-hypothetical-en",
+    "class": "warmth",
+    "family": "hypothetical",
+    "pair_id": "adversarial-warmth-hypothetical",
+    "language": "en",
+    "text": "If I were hungry I would open the lunch box, but I am full. Right now I want a wool layer against this chill."
+  },
+  {
+    "id": "adversarial-warmth-hypothetical-ko",
+    "class": "warmth",
+    "family": "hypothetical",
+    "pair_id": "adversarial-warmth-hypothetical",
+    "language": "ko",
+    "text": "배가 고팠다면 도시락을 열었겠지만 배는 불러. 지금은 한기를 막을 모직 옷이 필요해."
+  },
+  {
+    "id": "adversarial-warmth-third_party-en",
+    "class": "warmth",
+    "family": "third_party",
+    "pair_id": "adversarial-warmth-third_party",
+    "language": "en",
+    "text": "My friend needs dinner; I have already eaten. My own problem is the cold, and I want to sit near the heater."
+  },
+  {
+    "id": "adversarial-warmth-third_party-ko",
+    "class": "warmth",
+    "family": "third_party",
+    "pair_id": "adversarial-warmth-third_party",
+    "language": "ko",
+    "text": "친구는 저녁밥이 필요하지만 나는 이미 먹었어. 내 문제는 추위라 난방기 가까이 앉고 싶어."
+  },
+  {
+    "id": "adversarial-warmth-temporal_change-en",
+    "class": "warmth",
+    "family": "temporal_change",
+    "pair_id": "adversarial-warmth-temporal_change",
+    "language": "en",
+    "text": "I was tired earlier, but I have since slept well. Now I am shivering in this low temperature."
+  },
+  {
+    "id": "adversarial-warmth-temporal_change-ko",
+    "class": "warmth",
+    "family": "temporal_change",
+    "pair_id": "adversarial-warmth-temporal_change",
+    "language": "ko",
+    "text": "아까는 피곤했지만 그 뒤로 푹 잤어. 지금은 낮은 온도에 몸이 떨려."
+  },
+  {
+    "id": "adversarial-warmth-lexical_decoy-en",
+    "class": "warmth",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-warmth-lexical_decoy",
+    "language": "en",
+    "text": "The book is titled “Thirst,” but I am not thirsty. I am chilled and want to put on thermal clothing."
+  },
+  {
+    "id": "adversarial-warmth-lexical_decoy-ko",
+    "class": "warmth",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-warmth-lexical_decoy",
+    "language": "ko",
+    "text": "책 제목이 “갈증”이지만 나는 목마르지 않아. 몸에 한기가 들어서 보온 내의를 입고 싶어."
+  },
+  {
+    "id": "adversarial-rest-negation-en",
+    "class": "rest",
+    "family": "negation",
+    "pair_id": "adversarial-rest-negation",
+    "language": "en",
+    "text": "I am not cold; I keep nodding off and want to lie down with my eyes closed."
+  },
+  {
+    "id": "adversarial-rest-negation-ko",
+    "class": "rest",
+    "family": "negation",
+    "pair_id": "adversarial-rest-negation",
+    "language": "ko",
+    "text": "추운 게 아니야. 자꾸 꾸벅꾸벅 졸아서 눈을 감고 눕고 싶어."
+  },
+  {
+    "id": "adversarial-rest-quoted_distractor-en",
+    "class": "rest",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-rest-quoted_distractor",
+    "language": "en",
+    "text": "The label says “fresh food,” but I am only reading it aloud. My own eyelids are drooping and I want to sleep."
+  },
+  {
+    "id": "adversarial-rest-quoted_distractor-ko",
+    "class": "rest",
+    "family": "quoted_distractor",
+    "pair_id": "adversarial-rest-quoted_distractor",
+    "language": "ko",
+    "text": "라벨에 “신선한 음식”이라고 적혀 있어서 소리 내어 읽은 것뿐이야. 내 눈꺼풀이 내려와서 자고 싶어."
+  },
+  {
+    "id": "adversarial-rest-resolved_need-en",
+    "class": "rest",
+    "family": "resolved_need",
+    "pair_id": "adversarial-rest-resolved_need",
+    "language": "en",
+    "text": "The heater has removed the chill completely. What remains is exhaustion, so I want an uninterrupted nap."
+  },
+  {
+    "id": "adversarial-rest-resolved_need-ko",
+    "class": "rest",
+    "family": "resolved_need",
+    "pair_id": "adversarial-rest-resolved_need",
+    "language": "ko",
+    "text": "난방기로 한기는 완전히 가셨어. 남은 건 탈진한 느낌이라 방해받지 않고 낮잠을 자고 싶어."
+  },
+  {
+    "id": "adversarial-rest-contrast_correction-en",
+    "class": "rest",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-rest-contrast_correction",
+    "language": "en",
+    "text": "I said I wanted a drink, but I need to correct that. I meant I am sleepy and want to go to bed."
+  },
+  {
+    "id": "adversarial-rest-contrast_correction-ko",
+    "class": "rest",
+    "family": "contrast_correction",
+    "pair_id": "adversarial-rest-contrast_correction",
+    "language": "ko",
+    "text": "마실 것이 필요하다고 했지만 정정할게. 졸려서 잠자리에 들고 싶다는 뜻이었어."
+  },
+  {
+    "id": "adversarial-rest-hypothetical-en",
+    "class": "rest",
+    "family": "hypothetical",
+    "pair_id": "adversarial-rest-hypothetical",
+    "language": "en",
+    "text": "If I were cold I would add a layer, but the temperature is fine. Right now I cannot keep my eyes open."
+  },
+  {
+    "id": "adversarial-rest-hypothetical-ko",
+    "class": "rest",
+    "family": "hypothetical",
+    "pair_id": "adversarial-rest-hypothetical",
+    "language": "ko",
+    "text": "추웠다면 옷을 더 입었겠지만 온도는 괜찮아. 지금은 눈을 뜨고 있기 힘들어."
+  },
+  {
+    "id": "adversarial-rest-third_party-en",
+    "class": "rest",
+    "family": "third_party",
+    "pair_id": "adversarial-rest-third_party",
+    "language": "en",
+    "text": "My brother is thirsty; I am not. For myself, I want to sleep because I keep dozing in this chair."
+  },
+  {
+    "id": "adversarial-rest-third_party-ko",
+    "class": "rest",
+    "family": "third_party",
+    "pair_id": "adversarial-rest-third_party",
+    "language": "ko",
+    "text": "남동생은 목이 마르지만 나는 아니야. 나는 의자에서 자꾸 졸아서 잠을 자고 싶어."
+  },
+  {
+    "id": "adversarial-rest-temporal_change-en",
+    "class": "rest",
+    "family": "temporal_change",
+    "pair_id": "adversarial-rest-temporal_change",
+    "language": "en",
+    "text": "Hunger was the problem earlier, but dinner settled it. Now I am exhausted and want to lie down."
+  },
+  {
+    "id": "adversarial-rest-temporal_change-ko",
+    "class": "rest",
+    "family": "temporal_change",
+    "pair_id": "adversarial-rest-temporal_change",
+    "language": "ko",
+    "text": "아까는 배고픔이 문제였지만 저녁 식사로 해결됐어. 지금은 지쳐서 눕고 싶어."
+  },
+  {
+    "id": "adversarial-rest-lexical_decoy-en",
+    "class": "rest",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-rest-lexical_decoy",
+    "language": "en",
+    "text": "The app is named “Water,” but I am not asking for a beverage. I want to turn it off and sleep because I can barely stay awake."
+  },
+  {
+    "id": "adversarial-rest-lexical_decoy-ko",
+    "class": "rest",
+    "family": "lexical_decoy",
+    "pair_id": "adversarial-rest-lexical_decoy",
+    "language": "ko",
+    "text": "앱 이름이 “물”이지만 음료를 요청하는 건 아니야. 겨우 깨어 있을 정도라 앱을 끄고 자고 싶어."
+  }
+]

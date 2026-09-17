@@ -1,0 +1,10 @@
+{
+  "boundary": "Algebraic stress test only; not trained mHC, no semantic accuracy claim.",
+  "row_sum_error": 0.0,
+  "column_sum_error": 0.0,
+  "norm_ratio_after_100": 0.46516391047349953,
+  "uniform_stream_rank": 1,
+  "identity_stream_rank": 4,
+  "permutation_is_doubly_stochastic": true,
+  "counterexample": "Uniform mixing is stable but rank 1; permutation mixing is stable but changes stream identity. Stability does not establish semantic correspondence."
+}

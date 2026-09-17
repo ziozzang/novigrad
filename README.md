@@ -111,3 +111,5 @@ Embedding-based neural state readout: [KC/MBON semantic reconstruction and causa
 Precise neural interface fitting: [train-only PCA calibration, native reward learning, locked evaluation and exact replay](examples/bio_bridge/PRECISE_RESULTS.md). [BCI-inspired recording import and drift calibration](examples/bio_bridge/NEURAL_LINK_RESEARCH.md) documents both successful and unsuccessful controls.
 
 Detailed HTML research report: [English manuscript draft](reports/neural-link/report.html) · [한국어 보고서](reports/neural-link/report.ko.html). Includes methods, measured results, negative controls, all 64 cases, and reproducibility evidence; works offline.
+
+The [architecture/adversarial supplement](reports/neural-link/architecture.html) compares context routing, PN/KC/MBON readout sites, fixed landmark pooling, and low-rank/full bridge updates. On 64 authored adversarial texts, direct embedding reached 76.56% versus KC interaction 67.19%; no architectural leap was established. Larger bridge ranks are distinct from transformer LoRA. [Methods and replay](results/architecture-bridge/README.md) · [한국어](reports/neural-link/architecture.ko.html).

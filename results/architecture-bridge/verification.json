@@ -1,0 +1,9 @@
+{
+  "protocol_sha256": "b2ae8f1a9088cc1d9ae3d9af89a5fd727518b3b41565837453fde3860021705f",
+  "evaluation_sha256": "60886522942a8e400cc11851e53ceb078260eb237c0fa29cfac098e5d35e16b6",
+  "saved_inference_exact": {
+    "holdout": true,
+    "adversarial": true
+  },
+  "boundary": "Inference replay of saved models, not bitwise retraining on MPS or biological replay."
+}

@@ -1,0 +1,11 @@
+{
+  "hashes": {
+    "results/architecture-bridge/protocol-lock.json": "b2ae8f1a9088cc1d9ae3d9af89a5fd727518b3b41565837453fde3860021705f",
+    "results/architecture-bridge/holdout/provenance.json": "6266b26fc149fd9e385e91173c5fe4f32b934fff01dba466245917feb6f26b6f",
+    "results/architecture-bridge/holdout/holdout-embeddings.safetensors": "f67a4035f4da2d8b319bd6618ded18e35e7ef059362fdc2ed76062c4e96f2ea0",
+    "results/architecture-bridge/adversarial/provenance.json": "be9da8b1f3184799547f58300c94ebaf09ad796f69fde7b8b49fed0c66b61bb5",
+    "results/architecture-bridge/adversarial/holdout-embeddings.safetensors": "0fdf398f41be93b72433644923b09bb13dadcbe23ece4ebd34908363537ac5a0",
+    "results/architecture-bridge/holdout-final.json": "17ef3c294170c9b1063719870dd21685ab58338ab16b0f105e0603076f35f432",
+    "results/architecture-bridge/adversarial-final.json": "4b17e3f30e8ff2ca7776d7abe46b1be02f975cbb0e1505b208dc232d1197d1a2"
+  }
+}
