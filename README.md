@@ -109,3 +109,5 @@ Fly-inspired mechanism extraction: [adaptation, APL-style inhibition, and eligib
 Embedding-based neural state readout: [KC/MBON semantic reconstruction and causal controls](examples/bio_bridge/THOUGHT_RESULTS.md), with [biological decoding research](examples/bio_bridge/THOUGHT_RESEARCH.md).
 
 Precise neural interface fitting: [train-only PCA calibration, native reward learning, locked evaluation and exact replay](examples/bio_bridge/PRECISE_RESULTS.md). [BCI-inspired recording import and drift calibration](examples/bio_bridge/NEURAL_LINK_RESEARCH.md) documents both successful and unsuccessful controls.
+
+Detailed HTML research report: [English manuscript draft](reports/neural-link/report.html) · [한국어 보고서](reports/neural-link/report.ko.html). Includes methods, measured results, negative controls, all 64 cases, and reproducibility evidence; works offline.

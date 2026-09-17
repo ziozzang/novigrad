@@ -1,0 +1,42 @@
+{
+  "browser_executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "checks": {
+    "report.html": {
+      "sha256": "ea9113196d6e0b4c2efd51a28f259c9efa1a3d565878f2d381961d2275477479",
+      "sections": 15,
+      "figures": 4,
+      "case_rows": 64,
+      "offline_no_external_requests": true,
+      "unique_ids_and_valid_anchors": true,
+      "desktop_no_page_overflow": true,
+      "mobile390_no_page_overflow": true,
+      "filter_expected_counts": [
+        4,
+        16,
+        0
+      ],
+      "json_download_matches": true,
+      "print_controls_hidden_all_cases_visible": true,
+      "javascript_errors": []
+    },
+    "report.ko.html": {
+      "sha256": "8b708700434f2e033b228249b2d436086422103649176c4b330c9319f99ed2d9",
+      "sections": 15,
+      "figures": 4,
+      "case_rows": 64,
+      "offline_no_external_requests": true,
+      "unique_ids_and_valid_anchors": true,
+      "desktop_no_page_overflow": true,
+      "mobile390_no_page_overflow": true,
+      "filter_expected_counts": [
+        4,
+        16,
+        0
+      ],
+      "json_download_matches": true,
+      "print_controls_hidden_all_cases_visible": true,
+      "javascript_errors": []
+    }
+  },
+  "scope": "Static report data and browser interactions; no model retraining. Print media checked; pagination review remains journal-specific."
+}

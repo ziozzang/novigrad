@@ -1,0 +1,2312 @@
+{
+  "source_commit": "2d05f48a9c0dbc8c1928d52cbeaf72182dc677b1",
+  "cases": [
+    {
+      "id": "water-performance-en",
+      "class": "water",
+      "family": "performance",
+      "pair_id": "water-performance",
+      "language": "en",
+      "text": "I have just finished the choir solo; could someone pass me the pitcher so I can wet my throat before the next verse?",
+      "semantic": {
+        "fixed": "food",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-performance-ko",
+      "class": "water",
+      "family": "performance",
+      "pair_id": "water-performance",
+      "language": "ko",
+      "text": "합창 독창을 막 끝냈어. 다음 절을 부르기 전에 목을 축이게 누가 주전자를 건네줄래?",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "water-travel-en",
+      "class": "water",
+      "family": "travel",
+      "pair_id": "water-travel",
+      "language": "en",
+      "text": "The ferry has finally docked. My flask is empty, and I want to refill it and take several gulps before we continue.",
+      "semantic": {
+        "fixed": "water",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "water",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-travel-ko",
+      "class": "water",
+      "family": "travel",
+      "pair_id": "water-travel",
+      "language": "ko",
+      "text": "배가 드디어 부두에 도착했어. 휴대용 물통이 비어서 다시 채운 다음 몇 모금 마시고 출발하고 싶어.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-home-en",
+      "class": "water",
+      "family": "home",
+      "pair_id": "water-home",
+      "language": "en",
+      "text": "While assembling the wardrobe I kept putting off taking a sip. Please pass me the jug and a cup now.",
+      "semantic": {
+        "fixed": "water",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "water",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-home-ko",
+      "class": "water",
+      "family": "home",
+      "pair_id": "water-home",
+      "language": "ko",
+      "text": "옷장을 조립하는 동안 한 모금 마시는 걸 계속 미뤘어. 이제 주전자와 컵을 건네줘.",
+      "semantic": {
+        "fixed": "water",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-workplace-en",
+      "class": "water",
+      "family": "workplace",
+      "pair_id": "water-workplace",
+      "language": "en",
+      "text": "After explaining the exhibit to six groups in a row, I want a long swallow from the dispenser by the desk.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-workplace-ko",
+      "class": "water",
+      "family": "workplace",
+      "pair_id": "water-workplace",
+      "language": "ko",
+      "text": "여섯 팀에게 연달아 전시를 설명하고 나니 안내대 옆 정수기에서 길게 한 모금 마시고 싶어.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "food",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-outdoors-en",
+      "class": "water",
+      "family": "outdoors",
+      "pair_id": "water-outdoors",
+      "language": "en",
+      "text": "I have finished tending the greenhouse. Please open that sealed bottle so I can take a few mouthfuls.",
+      "semantic": {
+        "fixed": "food",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-outdoors-ko",
+      "class": "water",
+      "family": "outdoors",
+      "pair_id": "water-outdoors",
+      "language": "ko",
+      "text": "온실을 돌보는 일을 끝냈어. 몇 모금 마시게 저 밀봉된 병 좀 열어줘.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-hobby-en",
+      "class": "water",
+      "family": "hobby",
+      "pair_id": "water-hobby",
+      "language": "en",
+      "text": "I kept talking throughout our board game, and now swallowing feels scratchy. Let me take a sip from that carafe.",
+      "semantic": {
+        "fixed": "water",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-hobby-ko",
+      "class": "water",
+      "family": "hobby",
+      "pair_id": "water-hobby",
+      "language": "ko",
+      "text": "보드게임 내내 말을 했더니 이제 삼킬 때 목이 까끌해. 저 유리병에서 한 모금 마실게.",
+      "semantic": {
+        "fixed": "food",
+        "centered": "food",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-community-en",
+      "class": "water",
+      "family": "community",
+      "pair_id": "water-community",
+      "language": "en",
+      "text": "The queue at the public fountain is moving. Save my place so I can fill a cup and gulp it down.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-community-ko",
+      "class": "water",
+      "family": "community",
+      "pair_id": "water-community",
+      "language": "ko",
+      "text": "공원 음수대 줄이 줄어들고 있어. 컵을 채워 들이켜게 내 자리 좀 맡아줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-caregiving-en",
+      "class": "water",
+      "family": "caregiving",
+      "pair_id": "water-caregiving",
+      "language": "en",
+      "text": "After reading aloud to the children for an hour, I want to rinse down this sticky feeling in my throat with several sips.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "water",
+        "pca": "water"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "water",
+          "water",
+          "water"
+        ]
+      }
+    },
+    {
+      "id": "water-caregiving-ko",
+      "class": "water",
+      "family": "caregiving",
+      "pair_id": "water-caregiving",
+      "language": "ko",
+      "text": "아이들에게 한 시간 동안 소리 내어 책을 읽어줬더니 목에 끈적한 느낌이 있어. 몇 모금 마셔서 넘기고 싶어.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "food-performance-en",
+      "class": "food",
+      "family": "performance",
+      "pair_id": "food-performance",
+      "language": "en",
+      "text": "The rehearsal has ended and my belly has started growling. Could you serve me a portion of the rice in that pot?",
+      "semantic": {
+        "fixed": "food",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "food"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-performance-ko",
+      "class": "food",
+      "family": "performance",
+      "pair_id": "food-performance",
+      "language": "ko",
+      "text": "연습이 끝나자 배에서 꼬르륵 소리가 나. 저 냄비의 밥을 한 그릇 덜어줄래?",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "food-travel-en",
+      "class": "food",
+      "family": "travel",
+      "pair_id": "food-travel",
+      "language": "en",
+      "text": "We have reached the station, and I want to use this stop to buy dumplings and fill my belly.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "food"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-travel-ko",
+      "class": "food",
+      "family": "travel",
+      "pair_id": "food-travel",
+      "language": "ko",
+      "text": "역에 도착했으니 이번 정차 시간에 만두를 사서 배를 채우고 싶어.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "food"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-home-en",
+      "class": "food",
+      "family": "home",
+      "pair_id": "food-home",
+      "language": "en",
+      "text": "The casserole has finished baking. My belly is growling, so please cut me a generous slice.",
+      "semantic": {
+        "fixed": "food",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "food",
+          "water"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "food"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-home-ko",
+      "class": "food",
+      "family": "home",
+      "pair_id": "food-home",
+      "language": "ko",
+      "text": "오븐 요리가 다 구워졌어. 배에서 꼬르륵거리니 넉넉하게 한 조각 잘라줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-workplace-en",
+      "class": "food",
+      "family": "workplace",
+      "pair_id": "food-workplace",
+      "language": "en",
+      "text": "The archive is closing and I can finally address this gnawing feeling in my belly. Point me toward the cafeteria counter.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "water"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "food-workplace-ko",
+      "class": "food",
+      "family": "workplace",
+      "pair_id": "food-workplace",
+      "language": "ko",
+      "text": "자료실이 문을 닫아서 이제 속이 허한 느낌을 해결할 수 있겠어. 구내식당 배식대가 어디인지 알려줘.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "food",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-outdoors-en",
+      "class": "food",
+      "family": "outdoors",
+      "pair_id": "food-outdoors",
+      "language": "en",
+      "text": "The picnic baskets are open. My belly is rumbling, and I would like a serving of those rice balls.",
+      "semantic": {
+        "fixed": "food",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "water"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-outdoors-ko",
+      "class": "food",
+      "family": "outdoors",
+      "pair_id": "food-outdoors",
+      "language": "ko",
+      "text": "소풍 바구니를 열었네. 배에서 꼬르륵 소리가 나니 저 주먹밥을 좀 덜어줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-hobby-en",
+      "class": "food",
+      "family": "hobby",
+      "pair_id": "food-hobby",
+      "language": "en",
+      "text": "I have put down the pottery tools because my belly keeps growling. Please pass me a banana to chew on.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "rest",
+          "food",
+          "water"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-hobby-ko",
+      "class": "food",
+      "family": "hobby",
+      "pair_id": "food-hobby",
+      "language": "ko",
+      "text": "배에서 계속 꼬르륵 소리가 나서 도예 도구를 내려놨어. 씹어 먹게 바나나를 건네줘.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-community-en",
+      "class": "food",
+      "family": "community",
+      "pair_id": "food-community",
+      "language": "en",
+      "text": "At the neighborhood gathering I am looking for a plate of noodles to settle the emptiness in my belly.",
+      "semantic": {
+        "fixed": "food",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "food",
+          "food",
+          "water"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "food"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-community-ko",
+      "class": "food",
+      "family": "community",
+      "pair_id": "food-community",
+      "language": "ko",
+      "text": "동네 모임에서 속이 빈 느낌을 채울 국수 한 접시를 찾고 있어.",
+      "semantic": {
+        "fixed": "food",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "food",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-caregiving-en",
+      "class": "food",
+      "family": "caregiving",
+      "pair_id": "food-caregiving",
+      "language": "en",
+      "text": "The children have finished their portions. My own belly is growling now, so please serve me some of the remaining stew.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "food",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "food",
+          "food",
+          "food"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "food-caregiving-ko",
+      "class": "food",
+      "family": "caregiving",
+      "pair_id": "food-caregiving",
+      "language": "ko",
+      "text": "아이들은 자기 몫을 다 먹었어. 이제 내 배에서 꼬르륵거리니 남은 스튜를 좀 떠줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "food"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "food",
+          "food",
+          "food"
+        ]
+      }
+    },
+    {
+      "id": "warmth-performance-en",
+      "class": "warmth",
+      "family": "performance",
+      "pair_id": "warmth-performance",
+      "language": "en",
+      "text": "The stage air conditioner is blowing straight onto my bare arms. Please lend me a lined jacket before I go back on.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-performance-ko",
+      "class": "warmth",
+      "family": "performance",
+      "pair_id": "warmth-performance",
+      "language": "ko",
+      "text": "무대 에어컨 바람이 맨팔에 바로 닿고 있어. 다시 올라가기 전에 안감 있는 재킷을 빌려줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-travel-en",
+      "class": "warmth",
+      "family": "travel",
+      "pair_id": "warmth-travel",
+      "language": "en",
+      "text": "The train carriage ventilation is making my fingers stiff. I want to wrap them in a fleece until the chill passes.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-travel-ko",
+      "class": "warmth",
+      "family": "travel",
+      "pair_id": "warmth-travel",
+      "language": "ko",
+      "text": "열차 객실 환기 바람 때문에 손가락이 뻣뻣해져. 한기가 가실 때까지 플리스로 감싸고 싶어.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-home-en",
+      "class": "warmth",
+      "family": "home",
+      "pair_id": "warmth-home",
+      "language": "en",
+      "text": "The floor tiles are icy against my feet. Please bring my insulated slippers so I can stop curling my toes.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-home-ko",
+      "class": "warmth",
+      "family": "home",
+      "pair_id": "warmth-home",
+      "language": "ko",
+      "text": "바닥 타일이 발에 얼음처럼 차가워. 발가락을 움츠리지 않게 보온 슬리퍼를 가져다줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "rest",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-workplace-en",
+      "class": "warmth",
+      "family": "workplace",
+      "pair_id": "warmth-workplace",
+      "language": "en",
+      "text": "I have stepped out of the refrigerated storeroom and my fingers are numb from the low temperature. Let me hold a reusable heating pack.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-workplace-ko",
+      "class": "warmth",
+      "family": "workplace",
+      "pair_id": "warmth-workplace",
+      "language": "ko",
+      "text": "냉장 창고에서 나왔는데 낮은 온도 때문에 손가락이 얼얼해. 재사용 손난로를 쥐게 해줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-outdoors-en",
+      "class": "warmth",
+      "family": "outdoors",
+      "pair_id": "warmth-outdoors",
+      "language": "en",
+      "text": "The campsite temperature has dropped sharply. I want the insulated layer from my pack to stop this chill.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "rest",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-outdoors-ko",
+      "class": "warmth",
+      "family": "outdoors",
+      "pair_id": "warmth-outdoors",
+      "language": "ko",
+      "text": "야영지 기온이 뚝 떨어졌어. 이 한기를 막게 배낭 속 보온 내피를 꺼내 입고 싶어.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-hobby-en",
+      "class": "warmth",
+      "family": "hobby",
+      "pair_id": "warmth-hobby",
+      "language": "en",
+      "text": "Sitting still at the telescope has left my knees icy. Please spread the wool throw over them.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-hobby-ko",
+      "class": "warmth",
+      "family": "hobby",
+      "pair_id": "warmth-hobby",
+      "language": "ko",
+      "text": "망원경 앞에 가만히 앉아 있었더니 무릎이 얼음장 같아. 모직 덮개를 무릎에 펼쳐줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-community-en",
+      "class": "warmth",
+      "family": "community",
+      "pair_id": "warmth-community",
+      "language": "en",
+      "text": "The community hall door is stuck open and the draft is cutting through my sleeves. Help me move behind the windscreen.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-community-ko",
+      "class": "warmth",
+      "family": "community",
+      "pair_id": "warmth-community",
+      "language": "ko",
+      "text": "주민회관 문이 열린 채 고장 나서 외풍이 소매를 파고들어. 바람막이 뒤로 옮겨가게 도와줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-caregiving-en",
+      "class": "warmth",
+      "family": "caregiving",
+      "pair_id": "warmth-caregiving",
+      "language": "en",
+      "text": "After sitting beside the open nursery window, my shoulders are chilled. Please put that padded shawl around them.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "warmth-caregiving-ko",
+      "class": "warmth",
+      "family": "caregiving",
+      "pair_id": "warmth-caregiving",
+      "language": "ko",
+      "text": "아이 방의 열린 창가에 앉아 있었더니 어깨에 한기가 들어. 저 누빔 숄을 어깨에 둘러줘.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "food",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "water",
+          "water",
+          "water"
+        ],
+        "pca": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "rest-performance-en",
+      "class": "rest",
+      "family": "performance",
+      "pair_id": "rest-performance",
+      "language": "en",
+      "text": "After three back-to-back performances, I keep nodding off in the dressing room. Please leave me undisturbed on the couch for a while.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-performance-ko",
+      "class": "rest",
+      "family": "performance",
+      "pair_id": "rest-performance",
+      "language": "ko",
+      "text": "세 차례 연속 공연을 마치고 분장실에서 자꾸 꾸벅꾸벅 졸고 있어. 잠시 소파에 누워 방해받지 않게 해줘.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-travel-en",
+      "class": "rest",
+      "family": "travel",
+      "pair_id": "rest-travel",
+      "language": "en",
+      "text": "The coach journey is over, but I cannot keep my eyes open. I want to close the hotel curtains and lie down until I recover.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-travel-ko",
+      "class": "rest",
+      "family": "travel",
+      "pair_id": "rest-travel",
+      "language": "ko",
+      "text": "장거리 버스 이동은 끝났지만 눈을 뜨고 있기 힘들어. 호텔 커튼을 치고 기운이 돌아올 때까지 눕고 싶어.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-home-en",
+      "class": "rest",
+      "family": "home",
+      "pair_id": "rest-home",
+      "language": "en",
+      "text": "The baby alarm woke me every hour yesterday. Now that someone else is watching it, let me switch off my phone and drift off.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "rest",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-home-ko",
+      "class": "rest",
+      "family": "home",
+      "pair_id": "rest-home",
+      "language": "ko",
+      "text": "어제 아기 알림음에 한 시간마다 깼어. 이제 다른 사람이 지켜보니 휴대전화를 끄고 잠에 들게 해줘.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-workplace-en",
+      "class": "rest",
+      "family": "workplace",
+      "pair_id": "rest-workplace",
+      "language": "en",
+      "text": "I am rereading the same line because my eyelids keep drooping. I want to pause this shift and lie in the quiet room.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-workplace-ko",
+      "class": "rest",
+      "family": "workplace",
+      "pair_id": "rest-workplace",
+      "language": "ko",
+      "text": "눈꺼풀이 자꾸 내려와서 같은 줄을 반복해 읽고 있어. 일을 잠시 멈추고 조용한 방에 눕고 싶어.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-outdoors-en",
+      "class": "rest",
+      "family": "outdoors",
+      "pair_id": "rest-outdoors",
+      "language": "en",
+      "text": "We have finished setting up camp. I keep yawning and want to crawl into my sleeping bag with my eyes closed.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-outdoors-ko",
+      "class": "rest",
+      "family": "outdoors",
+      "pair_id": "rest-outdoors",
+      "language": "ko",
+      "text": "야영 준비를 끝냈어. 계속 하품이 나서 침낭에 들어가 눈을 감고 싶어.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "warmth",
+          "warmth"
+        ]
+      }
+    },
+    {
+      "id": "rest-hobby-en",
+      "class": "rest",
+      "family": "hobby",
+      "pair_id": "rest-hobby",
+      "language": "en",
+      "text": "I stayed up finishing the model railway, and now my head keeps dropping. Please put the tools away while I lie down.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "rest",
+          "rest",
+          "water"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-hobby-ko",
+      "class": "rest",
+      "family": "hobby",
+      "pair_id": "rest-hobby",
+      "language": "ko",
+      "text": "모형 철도를 완성하느라 늦게까지 깨어 있었더니 자꾸 고개가 떨어져. 내가 눕는 동안 도구를 치워줘.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "rest",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "rest",
+          "warmth",
+          "water"
+        ],
+        "centered": [
+          "rest",
+          "rest",
+          "rest"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-community-en",
+      "class": "rest",
+      "family": "community",
+      "pair_id": "rest-community",
+      "language": "en",
+      "text": "The festival cleanup is done and I can barely keep my eyes open. I want an uninterrupted hour on that reclining chair.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "water",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-community-ko",
+      "class": "rest",
+      "family": "community",
+      "pair_id": "rest-community",
+      "language": "ko",
+      "text": "축제 정리가 끝났고 눈을 겨우 뜨고 있어. 저 안락의자에서 한 시간만 방해받지 않고 눈을 붙이고 싶어.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "water"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-caregiving-en",
+      "class": "rest",
+      "family": "caregiving",
+      "pair_id": "rest-caregiving",
+      "language": "en",
+      "text": "Someone has taken over watching the patient. After all those interrupted nights, I want to close my eyes in the spare room.",
+      "semantic": {
+        "fixed": "rest",
+        "centered": "warmth",
+        "pca": "rest"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "rest",
+          "rest"
+        ]
+      }
+    },
+    {
+      "id": "rest-caregiving-ko",
+      "class": "rest",
+      "family": "caregiving",
+      "pair_id": "rest-caregiving",
+      "language": "ko",
+      "text": "다른 사람이 환자를 지켜보기로 했어. 여러 날 밤마다 깨었으니 이제 빈방에서 눈을 붙이고 싶어.",
+      "semantic": {
+        "fixed": "warmth",
+        "centered": "warmth",
+        "pca": "warmth"
+      },
+      "native": {
+        "fixed": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "centered": [
+          "warmth",
+          "warmth",
+          "warmth"
+        ],
+        "pca": [
+          "rest",
+          "warmth",
+          "warmth"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "scope": "Authored64 translated32 scenarios in8families. Resampling interval is descriptive for this small authored sample, not population validity.",
+    "modes": {
+      "fixed": {
+        "semantic_accuracy": 0.59375,
+        "native_accuracy": 0.4114583333333333,
+        "native_mean_correct_probability": 0.25544620646784705,
+        "semantic_language_accuracy": {
+          "en": 0.6875,
+          "ko": 0.5
+        }
+      },
+      "centered": {
+        "semantic_accuracy": 0.640625,
+        "native_accuracy": 0.5885416666666666,
+        "native_mean_correct_probability": 0.2626694654269765,
+        "semantic_language_accuracy": {
+          "en": 0.875,
+          "ko": 0.40625
+        }
+      },
+      "pca": {
+        "semantic_accuracy": 0.9375,
+        "native_accuracy": 0.921875,
+        "native_mean_correct_probability": 0.2771911398352434,
+        "semantic_language_accuracy": {
+          "en": 1.0,
+          "ko": 0.875
+        }
+      }
+    },
+    "raw_semantic_accuracy": 0.90625,
+    "pca_minus_fixed_family_cluster_bootstrap": {
+      "families": 8,
+      "mean_difference": 0.34375,
+      "percentile95": [
+        0.25,
+        0.421875
+      ],
+      "seed": 917,
+      "replicates": 10000
+    }
+  },
+  "stability": {
+    "status": "simplified paired-anchor affine ridge calibration on simulated KC drift; not Neuralink, Degenhart, or NoMAD reproduction",
+    "protocol": {
+      "ridge": 0.1,
+      "seed": 4401,
+      "anchors": [
+        8,
+        16,
+        32
+      ],
+      "conditions": [
+        "clean",
+        "gain_offset",
+        "dropout25",
+        "dropout50"
+      ],
+      "calibration": "old train only; validation evaluation only; settings frozen before results",
+      "decoder": "fixed supervised class probe trained on clean old train",
+      "sham": "clean anchor pairing shuffled deterministically"
+    },
+    "runs": [
+      {
+        "condition": "clean",
+        "anchors": 8,
+        "uncorrected": {
+          "cosine": 1.0,
+          "rmse": 0.0,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.7221688750733821,
+          "rmse": 0.05268430195046387,
+          "accuracy": 0.75
+        },
+        "sham_shuffled": {
+          "cosine": 0.670207610851845,
+          "rmse": 0.057594525444688544,
+          "accuracy": 0.5833333333333334
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-clean-n8.safetensors",
+          "sha256": "48231815229c10e0ec8f6395a11250b24303ae46ae8857ed501957415a49d077",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "clean",
+        "anchors": 16,
+        "uncorrected": {
+          "cosine": 1.0,
+          "rmse": 0.0,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.781351164443533,
+          "rmse": 0.04786526777103935,
+          "accuracy": 0.9166666666666666
+        },
+        "sham_shuffled": {
+          "cosine": 0.5852943447113025,
+          "rmse": 0.0647232062614549,
+          "accuracy": 0.25
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-clean-n16.safetensors",
+          "sha256": "59e2384e91fe4b0bc77ab618f12233a85c8ed7809a7e0a3cdad15a8b0026acaf",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "clean",
+        "anchors": 32,
+        "uncorrected": {
+          "cosine": 1.0,
+          "rmse": 0.0,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.8152551619180864,
+          "rmse": 0.04409844720382395,
+          "accuracy": 0.8333333333333334
+        },
+        "sham_shuffled": {
+          "cosine": 0.6742351003402272,
+          "rmse": 0.057924792246422996,
+          "accuracy": 0.3333333333333333
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-clean-n32.safetensors",
+          "sha256": "a04452d7fe5c7a0479f5cab4625484a45a2ec9c7e0a0d4871ad31e4f8ae5ff24",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "gain_offset",
+        "anchors": 8,
+        "uncorrected": {
+          "cosine": 0.6925631165504456,
+          "rmse": 0.08544006198644638,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.7184853369236383,
+          "rmse": 0.053113871629657985,
+          "accuracy": 0.9166666666666666
+        },
+        "sham_shuffled": {
+          "cosine": 0.6690774294772454,
+          "rmse": 0.05774817531452926,
+          "accuracy": 0.5833333333333334
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-gain_offset-n8.safetensors",
+          "sha256": "28e0250bc97bddeabde6c29b3bb866a9d653143ac8988a702d3b2a266b587a80",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "gain_offset",
+        "anchors": 16,
+        "uncorrected": {
+          "cosine": 0.6925631165504456,
+          "rmse": 0.08544006198644638,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.777911650805729,
+          "rmse": 0.04834005825623968,
+          "accuracy": 0.9166666666666666
+        },
+        "sham_shuffled": {
+          "cosine": 0.5795673060509848,
+          "rmse": 0.06547524093873452,
+          "accuracy": 0.25
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-gain_offset-n16.safetensors",
+          "sha256": "2aa9e3c84ad111c3cf50d8b6d83695091db356254419d40df189256643ac0643",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "gain_offset",
+        "anchors": 32,
+        "uncorrected": {
+          "cosine": 0.6925631165504456,
+          "rmse": 0.08544006198644638,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.809972030882402,
+          "rmse": 0.04481772155311482,
+          "accuracy": 0.8333333333333334
+        },
+        "sham_shuffled": {
+          "cosine": 0.654114412869248,
+          "rmse": 0.060231487424031456,
+          "accuracy": 0.3333333333333333
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-gain_offset-n32.safetensors",
+          "sha256": "12588826b10fa48ee05e5c0087fe3c262e5ca5c51dd0fdfe6964bf6cc7e76a04",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "dropout25",
+        "anchors": 8,
+        "uncorrected": {
+          "cosine": 0.8398501873016357,
+          "rmse": 0.04059048742055893,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.7206319038452773,
+          "rmse": 0.05281978549929226,
+          "accuracy": 0.75
+        },
+        "sham_shuffled": {
+          "cosine": 0.6662465885738562,
+          "rmse": 0.057871479716120326,
+          "accuracy": 0.5
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-dropout25-n8.safetensors",
+          "sha256": "ebbc7962ed58d96cec13297346e04dadef4dfe872b9c1f80a7c79a714edf8c24",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "dropout25",
+        "anchors": 16,
+        "uncorrected": {
+          "cosine": 0.8398501873016357,
+          "rmse": 0.04059048742055893,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.7794563147822761,
+          "rmse": 0.048084559964830444,
+          "accuracy": 0.8333333333333334
+        },
+        "sham_shuffled": {
+          "cosine": 0.5960151060442241,
+          "rmse": 0.0637741444546457,
+          "accuracy": 0.25
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-dropout25-n16.safetensors",
+          "sha256": "3cbe8575eaacf5093363ab05e9a4e1a66f1f93553c9db6ceaf0f9e14c440b603",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "dropout25",
+        "anchors": 32,
+        "uncorrected": {
+          "cosine": 0.8398501873016357,
+          "rmse": 0.04059048742055893,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.810869931452502,
+          "rmse": 0.0445843434738169,
+          "accuracy": 0.8333333333333334
+        },
+        "sham_shuffled": {
+          "cosine": 0.6638579405025637,
+          "rmse": 0.05864520738104003,
+          "accuracy": 0.3333333333333333
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-dropout25-n32.safetensors",
+          "sha256": "3f1fbfe17f1b3d6c86d88fed245b62bc4155678d26825b502d112128965ed196",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "dropout50",
+        "anchors": 8,
+        "uncorrected": {
+          "cosine": 0.6812669634819031,
+          "rmse": 0.05597538501024246,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.7182592536943225,
+          "rmse": 0.05302174213962798,
+          "accuracy": 0.75
+        },
+        "sham_shuffled": {
+          "cosine": 0.666293948063521,
+          "rmse": 0.05786992762328774,
+          "accuracy": 0.5833333333333334
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-dropout50-n8.safetensors",
+          "sha256": "fb3c2451accde0a272ef253c42f08826c0a293330b69a11dd4c08bb506f4e71b",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "dropout50",
+        "anchors": 16,
+        "uncorrected": {
+          "cosine": 0.6812669634819031,
+          "rmse": 0.05597538501024246,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.7744335487452307,
+          "rmse": 0.04862148305706204,
+          "accuracy": 0.75
+        },
+        "sham_shuffled": {
+          "cosine": 0.5989466268242377,
+          "rmse": 0.06359923957547815,
+          "accuracy": 0.3333333333333333
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-dropout50-n16.safetensors",
+          "sha256": "e208cf622d82a449078b4cbee25934949aa5573e322f0c6e29c28efcfb3b607c",
+          "roundtrip_max_error": 0.0
+        }
+      },
+      {
+        "condition": "dropout50",
+        "anchors": 32,
+        "uncorrected": {
+          "cosine": 0.6812669634819031,
+          "rmse": 0.05597538501024246,
+          "accuracy": 0.8333333333333334
+        },
+        "corrected": {
+          "cosine": 0.8018953472448646,
+          "rmse": 0.0455446023562092,
+          "accuracy": 0.75
+        },
+        "sham_shuffled": {
+          "cosine": 0.6495079927965481,
+          "rmse": 0.060140495192005684,
+          "accuracy": 0.4166666666666667
+        },
+        "artifact": {
+          "path": "results/neural-link-bridge/calibrator-dropout50-n32.safetensors",
+          "sha256": "97b648a8d3cd1af68925356d0459ce278630107bcc2e62c296c87786ad29a672",
+          "roundtrip_max_error": 0.0
+        }
+      }
+    ],
+    "provenance": {
+      "examples/bio_bridge/neural_link_stability.py": "fe23d1135b745383033a55ea9f7024293e6d4953ee56122d9812bdd9ce035ca8",
+      "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+      "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+      "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa"
+    }
+  },
+  "verification": {
+    "tests": {
+      "bio_bridge": 67,
+      "function_bridge": 23,
+      "gemma_bridge": 2,
+      "native_python": 5,
+      "total": 97,
+      "all_passed": true,
+      "pip_check": "pass"
+    },
+    "full_reproduction": {
+      "scope": "Entire import/embedding/development/freeze/evaluation/replay pipeline executed again in a fresh isolated directory using run_neural_bridge.py all. No retuning.",
+      "all_final_predictions_exact": {
+        "final.json": true,
+        "native-final.json": true,
+        "permutation-final.json": true
+      },
+      "all_tensor_artifact_count": 34,
+      "all_tensor_arrays_exact": true,
+      "encoder_features_exact": true,
+      "runner_sha256": "903b109b9792d4642aa1ead1440f1384e535cc0658025e3165dda68883cf68f5",
+      "original_protocol_sha256": "4e017b48c4aea4e017bc85bd0155c222d87ef08b9618f595b7be47d3956f1c50",
+      "reproduced_protocol_sha256": "9dd96bee85d0f04839cce3d444dc405a0952393176a71f258b8b51236c742a5d",
+      "reproduced_directory": "results/precise-reproduction-verified",
+      "duplicate_artifacts": "Preserved locally and git-ignored; concise comparison tracked here."
+    }
+  }
+}

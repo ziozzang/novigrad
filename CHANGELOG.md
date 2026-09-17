@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add self-contained English/Korean HTML manuscript drafts with data-derived vector figures, full case exploration, source hashes, and desktop/mobile/offline browser verification.
+
 - Add train-only PCA neural-port calibration, fresh native reward training, held-out bilingual cases, permutation controls, frozen manifests and exact replay; add schema-validated neural recording import and paired drift-calibration diagnostics grounded in BCI research.
 
 - Add frozen EmbeddingGemma reconstruction from KC/MBON activities, shuffled and untrained controls, independent causal class-probe silencing, Safetensors readouts, and bilingual research; distinguish input semantics from subjective thoughts.
