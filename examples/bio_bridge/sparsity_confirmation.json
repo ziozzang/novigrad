@@ -1,0 +1,226 @@
+[
+  {
+    "id": "sparsity-confirm-001",
+    "text": "After cycling uphill in the sun, I need water to replace what I lost sweating.",
+    "class": "water",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-002",
+    "text": "The salty crackers have left me needing a glass of water.",
+    "class": "water",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-003",
+    "text": "My legs are not tired after the walk; I just need water for this dry throat.",
+    "class": "water",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-004",
+    "text": "I was cold when I left home, but the run warmed me up. Now I only need a drink.",
+    "class": "water",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-005",
+    "text": "햇볕 아래 자전거를 타고 땀을 많이 흘려서 물을 마셔야겠어.",
+    "class": "water",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-006",
+    "text": "짭짤한 과자를 먹었더니 물 한 잔이 꼭 필요해.",
+    "class": "water",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-007",
+    "text": "산책 후 다리가 피곤한 건 아니고 목이 말라서 물만 필요해.",
+    "class": "water",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-008",
+    "text": "집을 나설 땐 추웠지만 달리고 나니 따뜻해졌어. 이제 필요한 건 마실 물뿐이야.",
+    "class": "water",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-009",
+    "text": "I missed lunch while working and now need a proper meal.",
+    "class": "food",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-010",
+    "text": "After the long swim, my empty stomach is telling me I need something to eat.",
+    "class": "food",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-011",
+    "text": "I am not looking for a bed; I need dinner because I have not eaten since morning.",
+    "class": "food",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-012",
+    "text": "My thirst is taken care of after that bottle of water. Now I need a sandwich to satisfy my hunger.",
+    "class": "food",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-013",
+    "text": "일하느라 점심을 건너뛰어서 이제 제대로 된 식사를 해야겠어.",
+    "class": "food",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-014",
+    "text": "오래 수영하고 나오니 속이 비어서 먹을 것이 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-015",
+    "text": "잠자리가 필요한 게 아니라 아침 이후로 못 먹어서 저녁밥이 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-016",
+    "text": "물 한 병을 마셔서 갈증은 해결됐어. 이제 배고픔을 채울 샌드위치가 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-017",
+    "text": "My clothes are soaked from the rain and I need to get warm.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-018",
+    "text": "Waiting outside in the winter wind has left me needing heat.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-019",
+    "text": "I do not need food after that big dinner; I need warmth because this room is freezing.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-020",
+    "text": "I finished my nap and feel rested, but the damp clothes are making me cold. Getting warm is my remaining need.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-021",
+    "text": "비를 맞아 옷이 흠뻑 젖어서 몸을 따뜻하게 해야겠어.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-022",
+    "text": "겨울바람 속에서 밖에 기다렸더니 몸을 데울 온기가 필요해.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-023",
+    "text": "저녁을 많이 먹어서 음식은 필요 없고 방이 너무 추워서 온기가 필요해.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-024",
+    "text": "낮잠을 마쳐 피로는 풀렸지만 축축한 옷 때문에 추워. 지금 남은 필요는 몸을 데우는 거야.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-025",
+    "text": "My night shift has ended and I need several hours of sleep.",
+    "class": "rest",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-026",
+    "text": "After carrying boxes all afternoon, I need to stop and rest.",
+    "class": "rest",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-027",
+    "text": "I am not thirsty or hungry after my meal; I need a nap because I have been awake all night.",
+    "class": "rest",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-028",
+    "text": "The heater has made me comfortably warm. After the overnight journey, all I need now is sleep.",
+    "class": "rest",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "sparsity-confirm-029",
+    "text": "야간 근무가 끝나서 이제 몇 시간 잠을 자야겠어.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-030",
+    "text": "오후 내내 상자를 날랐더니 일을 멈추고 쉬어야겠어.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "sparsity-confirm-031",
+    "text": "식사를 마쳐 목마르거나 배고픈 건 아니고 밤을 새워서 낮잠이 필요해.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "sparsity-confirm-032",
+    "text": "난방 덕분에 몸은 따뜻해졌어. 밤새 이동한 뒤라 이제 필요한 건 잠뿐이야.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "context"
+  }
+]

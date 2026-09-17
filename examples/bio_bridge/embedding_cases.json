@@ -1,0 +1,422 @@
+[
+  {
+    "id": "emb-001",
+    "text": "My mouth is dry and I need a drink.",
+    "class": "water",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-002",
+    "text": "I need some water right now.",
+    "class": "water",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-003",
+    "text": "I am not hungry; what I need is water.",
+    "class": "water",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-004",
+    "text": "I do not need sleep, just something to drink.",
+    "class": "water",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-005",
+    "text": "Yesterday I needed a meal; today my only need is hydration.",
+    "class": "water",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-006",
+    "text": "After finishing lunch, thirst is the remaining problem.",
+    "class": "water",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-007",
+    "text": "입이 말라서 마실 물이 필요해.",
+    "class": "water",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-008",
+    "text": "지금 내게 필요한 건 물이야.",
+    "class": "water",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-009",
+    "text": "배고픈 게 아니라 물이 필요한 거야.",
+    "class": "water",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-010",
+    "text": "잠은 필요 없고 마실 것만 필요해.",
+    "class": "water",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-011",
+    "text": "어제는 식사가 필요했지만 오늘 필요한 건 수분 보충뿐이야.",
+    "class": "water",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-012",
+    "text": "점심을 다 먹고 나니 이제 갈증만 남았어.",
+    "class": "water",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-013",
+    "text": "My stomach is empty and I need to eat.",
+    "class": "food",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-014",
+    "text": "A meal is what I need at the moment.",
+    "class": "food",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-015",
+    "text": "I am not thirsty; I need something to eat.",
+    "class": "food",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-016",
+    "text": "I do not need warmth, but I do need food.",
+    "class": "food",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-017",
+    "text": "Earlier I needed a drink; now hunger is the only problem.",
+    "class": "food",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-018",
+    "text": "I have rested enough and now need breakfast.",
+    "class": "food",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-019",
+    "text": "속이 비어서 먹을 것이 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-020",
+    "text": "지금 필요한 것은 한 끼 식사야.",
+    "class": "food",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-021",
+    "text": "목마른 게 아니라 먹을 것이 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-022",
+    "text": "온기는 필요 없지만 음식은 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-023",
+    "text": "아까는 마실 것이 필요했는데 이제 배고픔만 문제야.",
+    "class": "food",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-024",
+    "text": "충분히 쉬었고 이제 아침밥이 필요해.",
+    "class": "food",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-025",
+    "text": "I am shivering and need to get warm.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-026",
+    "text": "I need a warmer place right now.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-027",
+    "text": "I am not hungry; I need warmth.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-028",
+    "text": "I do not need a nap, but I need to warm up.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-029",
+    "text": "The thirst has passed; cold is now my only unmet need.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-030",
+    "text": "After eating, I am still chilled and need heat.",
+    "class": "warmth",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-031",
+    "text": "몸이 떨려서 따뜻해질 필요가 있어.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-032",
+    "text": "지금은 더 따뜻한 곳이 필요해.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-033",
+    "text": "배고픈 것이 아니라 온기가 필요해.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-034",
+    "text": "낮잠은 필요 없지만 몸을 데워야 해.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-035",
+    "text": "갈증은 사라졌고 이제 해결해야 할 것은 추위뿐이야.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-036",
+    "text": "먹고 난 뒤에도 몸이 차가워서 열기가 필요해.",
+    "class": "warmth",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-037",
+    "text": "I am worn out and need to rest.",
+    "class": "rest",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-038",
+    "text": "I need sleep at the moment.",
+    "class": "rest",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-039",
+    "text": "I am not cold; I need a break.",
+    "class": "rest",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-040",
+    "text": "I do not need a meal, just some rest.",
+    "class": "rest",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-041",
+    "text": "I was thirsty earlier, but now fatigue is my only problem.",
+    "class": "rest",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-042",
+    "text": "After getting warm, I still need to lie down and recover.",
+    "class": "rest",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-043",
+    "text": "기운이 다 빠져서 쉬어야 해.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-044",
+    "text": "지금은 잠이 필요해.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-045",
+    "text": "추운 게 아니라 휴식이 필요해.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-046",
+    "text": "식사는 필요 없고 쉬기만 하면 돼.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-047",
+    "text": "아까는 목이 말랐지만 지금은 피로만 문제야.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-048",
+    "text": "몸은 따뜻해졌지만 아직 누워서 회복할 필요가 있어.",
+    "class": "rest",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-049",
+    "text": "I have no unmet physical needs right now.",
+    "class": "none",
+    "language": "en",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-050",
+    "text": "I am neither thirsty nor hungry nor cold nor tired.",
+    "class": "none",
+    "language": "en",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-051",
+    "text": "I needed water this morning, but all my needs are satisfied now.",
+    "class": "none",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-052",
+    "text": "The story describes a hungry traveler; that is not how I feel.",
+    "class": "none",
+    "language": "en",
+    "kind": "context"
+  },
+  {
+    "id": "emb-053",
+    "text": "I need both food and warmth equally, with no single priority.",
+    "class": "none",
+    "language": "en",
+    "kind": "ambiguous"
+  },
+  {
+    "id": "emb-054",
+    "text": "Something feels wrong, but I cannot say what I need.",
+    "class": "none",
+    "language": "en",
+    "kind": "ambiguous"
+  },
+  {
+    "id": "emb-055",
+    "text": "지금은 충족되지 않은 신체적 필요가 없어.",
+    "class": "none",
+    "language": "ko",
+    "kind": "plain"
+  },
+  {
+    "id": "emb-056",
+    "text": "목마르지도 배고프지도 춥지도 피곤하지도 않아.",
+    "class": "none",
+    "language": "ko",
+    "kind": "negation"
+  },
+  {
+    "id": "emb-057",
+    "text": "아침에는 물이 필요했지만 지금은 필요한 것이 모두 충족됐어.",
+    "class": "none",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-058",
+    "text": "이야기에는 배고픈 여행자가 나오지만 내 상태는 그렇지 않아.",
+    "class": "none",
+    "language": "ko",
+    "kind": "context"
+  },
+  {
+    "id": "emb-059",
+    "text": "음식과 온기가 똑같이 필요해서 한 가지 우선순위를 정할 수 없어.",
+    "class": "none",
+    "language": "ko",
+    "kind": "ambiguous"
+  },
+  {
+    "id": "emb-060",
+    "text": "뭔가 불편하지만 무엇이 필요한지는 모르겠어.",
+    "class": "none",
+    "language": "ko",
+    "kind": "ambiguous"
+  }
+]

@@ -1,0 +1,597 @@
+{
+  "history_ablation": true,
+  "model": "/Users/a405394/models/google_functiongemma-270m-it",
+  "adapter": null,
+  "intent_policy": null,
+  "sha256": {
+    "/Users/a405394/fly/nobi/examples/bio_bridge/cases.json": "dde5ff49a8348f7d140686adf9c716e8ee8421c396e74153a994be0048b715a5",
+    "/Users/a405394/fly/nobi/examples/bio_bridge/function_scenarios.py": "9044848274b752061a81d1abaa2f584169dfd0771b88ef8ab410beaefe6fea31",
+    "/Users/a405394/models/google_functiongemma-270m-it/model.safetensors": "af4f8a7c4c5eb82291759fd828720c7bcfcb92a5274556d13dde3caccf5f427b",
+    "/Users/a405394/models/google_functiongemma-270m-it/tokenizer_config.json": "105f9a5740d9be1c455c4979f50ac0d60d9df8b2056498d8ab9a8cdfbdebb4a8",
+    "/Users/a405394/models/google_functiongemma-270m-it/chat_template.jinja": "db61fb01017bd82401d3ffca4f8e066cd56ff6d38d2a30c4058770c0bf7ab49b"
+  },
+  "overall": {
+    "count": 16,
+    "valid_correct": 9,
+    "valid_count": 16,
+    "valid_accuracy": 0.5625,
+    "rejected": 0,
+    "negative_count": 0,
+    "rejection_rate": null,
+    "balanced_accuracy": null,
+    "unsupported_state_calls": 0
+  },
+  "by_scenario": {
+    "multi_turn_correction": {
+      "count": 8,
+      "valid_correct": 5,
+      "valid_count": 8,
+      "valid_accuracy": 0.625,
+      "rejected": 0,
+      "negative_count": 0,
+      "rejection_rate": null,
+      "balanced_accuracy": null,
+      "unsupported_state_calls": 0
+    },
+    "multi_turn_status": {
+      "count": 8,
+      "valid_correct": 4,
+      "valid_count": 8,
+      "valid_accuracy": 0.5,
+      "rejected": 0,
+      "negative_count": 0,
+      "rejection_rate": null,
+      "balanced_accuracy": null,
+      "unsupported_state_calls": 0
+    }
+  },
+  "by_language": {
+    "en": {
+      "count": 8,
+      "valid_correct": 8,
+      "valid_count": 8,
+      "valid_accuracy": 1.0,
+      "rejected": 0,
+      "negative_count": 0,
+      "rejection_rate": null,
+      "balanced_accuracy": null,
+      "unsupported_state_calls": 0
+    },
+    "ko": {
+      "count": 8,
+      "valid_correct": 1,
+      "valid_count": 8,
+      "valid_accuracy": 0.125,
+      "rejected": 0,
+      "negative_count": 0,
+      "rejection_rate": null,
+      "balanced_accuracy": null,
+      "unsupported_state_calls": 0
+    }
+  },
+  "latency_seconds": {
+    "p50": 0.21818481292575598,
+    "p95": 0.8739806869998574
+  },
+  "cases": [
+    {
+      "id": "bio-065",
+      "scenario": "multi_turn_correction",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to food."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Correction: replace that goal with water."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.412000959739089
+    },
+    {
+      "id": "bio-066",
+      "scenario": "multi_turn_correction",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to water."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Correction: replace that goal with food."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.2577870823442936
+    },
+    {
+      "id": "bio-067",
+      "scenario": "multi_turn_correction",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to rest."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Correction: replace that goal with warmth."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.267660291865468
+    },
+    {
+      "id": "bio-068",
+      "scenario": "multi_turn_correction",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to warmth."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Correction: replace that goal with rest."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.25646633096039295
+    },
+    {
+      "id": "bio-069",
+      "scenario": "multi_turn_status",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to water."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Now show the current status without changing that goal."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.1813594587147236
+    },
+    {
+      "id": "bio-070",
+      "scenario": "multi_turn_status",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to food."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Now show the current status without changing that goal."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.17198104225099087
+    },
+    {
+      "id": "bio-071",
+      "scenario": "multi_turn_status",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to warmth."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Now show the current status without changing that goal."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.16733450070023537
+    },
+    {
+      "id": "bio-072",
+      "scenario": "multi_turn_status",
+      "language": "en",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Set the goal to rest."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "Now show the current status without changing that goal."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "get_status",
+        {}
+      ],
+      "raw": "<start_function_call>call:get_status{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.17410033382475376
+    },
+    {
+      "id": "bio-073",
+      "scenario": "multi_turn_correction",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 음식으로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "정정할게. 그 목표를 물로 바꿔 줘."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "water"
+        }
+      ],
+      "parsed": null,
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.8826656267046928
+    },
+    {
+      "id": "bio-074",
+      "scenario": "multi_turn_correction",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 물로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "정정할게. 그 목표를 음식으로 바꿔 줘."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "food"
+        }
+      ],
+      "parsed": null,
+      "raw": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_response>",
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.4495827928185463
+    },
+    {
+      "id": "bio-075",
+      "scenario": "multi_turn_correction",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 휴식으로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "정정할게. 그 목표를 따뜻함으로 바꿔 줘."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "warmth"
+        }
+      ],
+      "parsed": null,
+      "raw": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call><start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "error": "malformed arguments",
+      "correct": false,
+      "seconds": 0.8710857070982456
+    },
+    {
+      "id": "bio-076",
+      "scenario": "multi_turn_correction",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 따뜻함으로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "정정할게. 그 목표를 휴식으로 바꿔 줘."
+        }
+      ],
+      "expected": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "parsed": [
+        "set_goal",
+        {
+          "goal": "rest"
+        }
+      ],
+      "raw": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": true,
+      "seconds": 0.25501016713678837
+    },
+    {
+      "id": "bio-077",
+      "scenario": "multi_turn_status",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 물로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>water<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "그 목표는 바꾸지 말고 이제 현재 상태를 보여 줘."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": false,
+      "seconds": 0.17230108380317688
+    },
+    {
+      "id": "bio-078",
+      "scenario": "multi_turn_status",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 음식으로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>food<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "그 목표는 바꾸지 말고 이제 현재 상태를 보여 줘."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": false,
+      "seconds": 0.17983191646635532
+    },
+    {
+      "id": "bio-079",
+      "scenario": "multi_turn_status",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 따뜻함으로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>warmth<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "그 목표는 바꾸지 말고 이제 현재 상태를 보여 줘."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": false,
+      "seconds": 0.17535800114274025
+    },
+    {
+      "id": "bio-080",
+      "scenario": "multi_turn_status",
+      "language": "ko",
+      "messages": [
+        {
+          "role": "user",
+          "content": "목표를 휴식으로 정해 줘."
+        },
+        {
+          "role": "assistant",
+          "content": "<start_function_call>call:set_goal{goal:<escape>rest<escape>}<end_function_call>"
+        },
+        {
+          "role": "user",
+          "content": "그 목표는 바꾸지 말고 이제 현재 상태를 보여 줘."
+        }
+      ],
+      "expected": [
+        "get_status",
+        {}
+      ],
+      "parsed": [
+        "choose_action",
+        {}
+      ],
+      "raw": "<start_function_call>call:choose_action{}<end_function_call><start_function_response>",
+      "error": null,
+      "correct": false,
+      "seconds": 0.17182329297065735
+    }
+  ],
+  "limits": [
+    "hand-authored protocol-specific cases, not deployment benchmark",
+    "multi-turn histories contain supplied assistant calls, not self-generated rollouts",
+    "parser nonexecution is not necessarily semantic refusal",
+    "no adapter retraining or prompt search on these cases"
+  ]
+}

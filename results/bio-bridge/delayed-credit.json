@@ -1,0 +1,3059 @@
+{
+  "design": {
+    "seeds": [
+      501,
+      502,
+      503
+    ],
+    "lags_logical_trials": [
+      0,
+      4,
+      16
+    ],
+    "scheduled_trials": 4096,
+    "rollout": 32,
+    "engine": {
+      "actions": 4,
+      "learning_rate": 0.3,
+      "logit_gain": 1.0,
+      "active_fraction": 0.2,
+      "homeostasis": false,
+      "readout": "opponent"
+    },
+    "reward": "+1 iff sampled action matches mapped class, otherwise -1",
+    "decay": "exp(-lag/8), tau fixed before measurement",
+    "features": "frozen Gemma embeddings, first 128 dimensions signed-split over 256 of 319 nonnegative ports",
+    "label_access": "labels only compute environment reward; learner receives observation, sampled action, scalar delivered reward",
+    "terminal_drain": "all 4096 scheduled rewards delivered; wrong-credit terminal rewards use last current-trial proxy",
+    "limitation": "Engine.learn recomputes eligibility at current weights between rollout batches; this is not an exact biological or off-policy neural trace. Trial-ID queuing is software tagging, not a neural trace.",
+    "dataset_sha256": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "embeddings_sha256": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "amplitude_controls": "immediate lag-0 delivery with reward multiplied by exp(-4/8) or exp(-16/8); constants fixed analytically, not tuned"
+  },
+  "runs": [
+    {
+      "seed": 501,
+      "lag": 0,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1081,
+        "negative_rewards": 3015
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.26716677534083527,
+        "predictions": [
+          0,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.27094202240308124,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-0-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "de0dd21838fa9d4045ed98da3d7b33b94568628e7eeb979e0c47620abfa48513"
+    },
+    {
+      "seed": 501,
+      "lag": 0,
+      "condition": "exact_queued",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1081,
+        "negative_rewards": 3015
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.26716677534083527,
+        "predictions": [
+          0,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.27094202240308124,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-0-exact_queued.safetensors",
+      "checkpoint_sha256": "cf56e709cd0391ba53af57e0e0da57f00a0b296f552c0269bb81ea5b1ffdb1f3"
+    },
+    {
+      "seed": 501,
+      "lag": 0,
+      "condition": "decayed_queued",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1081,
+        "negative_rewards": 3015
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.26716677534083527,
+        "predictions": [
+          0,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.27094202240308124,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-0-decayed_queued.safetensors",
+      "checkpoint_sha256": "60297671b0cc4292e40dae0fb96617ca16d462efd7dc2e754e3951c541c628f2"
+    },
+    {
+      "seed": 501,
+      "lag": 0,
+      "condition": "zero_reward",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1025,
+        "negative_rewards": 3071
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2501073442399502,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.24997103959321976,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-0-zero_reward.safetensors",
+      "checkpoint_sha256": "e8feb9ef34cde52592d4ceb3dfc3a2d9c1d929ce3cc5ca308affd25d639f0363"
+    },
+    {
+      "seed": 501,
+      "lag": 4,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1023,
+        "negative_rewards": 3073
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2506055999547243,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.24973023061951002,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-4-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "5bf87db7b598e7164d5fa3ad4d389d58ed1ab132605644bdb395c29a790d340b"
+    },
+    {
+      "seed": 501,
+      "lag": 4,
+      "condition": "exact_queued",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1082,
+        "negative_rewards": 3014
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2671512657155593,
+        "predictions": [
+          0,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.2709076292812824,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-4-exact_queued.safetensors",
+      "checkpoint_sha256": "05a2ca670044445765ecbf4f044b51a655aebfe3e571291c134ca819c0413e3b"
+    },
+    {
+      "seed": 501,
+      "lag": 4,
+      "condition": "decayed_queued",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1061,
+        "negative_rewards": 3035
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.260847765331467,
+        "predictions": [
+          0,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.2630593267579873,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-4-decayed_queued.safetensors",
+      "checkpoint_sha256": "37cddb1142800ea1dd12e3d9d21bc8213c3b740b1d75876accabf5cb32bafcc9"
+    },
+    {
+      "seed": 501,
+      "lag": 4,
+      "condition": "zero_reward",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1025,
+        "negative_rewards": 3071
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2501073442399502,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.24997103959321976,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-4-zero_reward.safetensors",
+      "checkpoint_sha256": "af124fe515dd1fc01e9ea4ea1c091e95c604038363e0d4122a88e775e0f51ed9"
+    },
+    {
+      "seed": 501,
+      "lag": 16,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1027,
+        "negative_rewards": 3069
+      },
+      "test": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.2506613867978255,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2501414865255356,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-16-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "6d83d1ca5656e5b22d11a196365b0923191d834a571fe8c2cfc9266cd0abf4c7"
+    },
+    {
+      "seed": 501,
+      "lag": 16,
+      "condition": "exact_queued",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1082,
+        "negative_rewards": 3014
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2671512657155593,
+        "predictions": [
+          0,
+          3,
+          2,
+          2,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.2709076292812824,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-16-exact_queued.safetensors",
+      "checkpoint_sha256": "48164ec13d09931fa189cf9cd15cd5c3dbf50f880723bf0f24b3228c63d56cc0"
+    },
+    {
+      "seed": 501,
+      "lag": 16,
+      "condition": "decayed_queued",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1037,
+        "negative_rewards": 3059
+      },
+      "test": {
+        "accuracy": 0.7916666666666666,
+        "mean_correct_probability": 0.25303324436148006,
+        "predictions": [
+          0,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.25357258319854736,
+        "predictions": [
+          2,
+          3,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-16-decayed_queued.safetensors",
+      "checkpoint_sha256": "421b12855d385e89ff426b864947e59d8d1cdaafdd074eef1fab0b3e26be4a15"
+    },
+    {
+      "seed": 501,
+      "lag": 16,
+      "condition": "zero_reward",
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1025,
+        "negative_rewards": 3071
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2501073442399502,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.24997103959321976,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-lag-16-zero_reward.safetensors",
+      "checkpoint_sha256": "a4dd7f54d51654d11180e64f7ceb4de19680b64cd821783070969431cea7fbed"
+    },
+    {
+      "seed": 502,
+      "lag": 0,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1066,
+        "negative_rewards": 3030
+      },
+      "test": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.2653662742425998,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2709617925186952,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-0-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "0d9630bb33dce102d529360e2df17d98acb1abfa6e5b7d7e580e0bec4b924121"
+    },
+    {
+      "seed": 502,
+      "lag": 0,
+      "condition": "exact_queued",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1066,
+        "negative_rewards": 3030
+      },
+      "test": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.2653662742425998,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2709617925186952,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-0-exact_queued.safetensors",
+      "checkpoint_sha256": "c18cb3f646af86ba9d580613b616027121f9aee06733bfc356eff81ab6a22673"
+    },
+    {
+      "seed": 502,
+      "lag": 0,
+      "condition": "decayed_queued",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1066,
+        "negative_rewards": 3030
+      },
+      "test": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.2653662742425998,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2709617925186952,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-0-decayed_queued.safetensors",
+      "checkpoint_sha256": "c732361bcdb89f5b51b035982cd108641808c9ad4aca8d4c8f00113f488b0f14"
+    },
+    {
+      "seed": 502,
+      "lag": 0,
+      "condition": "zero_reward",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1029,
+        "negative_rewards": 3067
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2500542476773262,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24985566114385924,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-0-zero_reward.safetensors",
+      "checkpoint_sha256": "4cc8a52bfd50a2b8270fe0eff5142865bf28f6ff411fdf15c00e8a6ad2cc410f"
+    },
+    {
+      "seed": 502,
+      "lag": 4,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1023,
+        "negative_rewards": 3073
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2504836190491915,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.24968410531679788,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-4-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "03ac9288ba83ba1733f564e53bae4b0a2fab9aa943148ed7dd88205c3839ad8a"
+    },
+    {
+      "seed": 502,
+      "lag": 4,
+      "condition": "exact_queued",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1067,
+        "negative_rewards": 3029
+      },
+      "test": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.26536846347153187,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27093505859375,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-4-exact_queued.safetensors",
+      "checkpoint_sha256": "486273daebf997528b897627f411cecc4765ad2e30e0e6e1edab403c71db61f1"
+    },
+    {
+      "seed": 502,
+      "lag": 4,
+      "condition": "decayed_queued",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1052,
+        "negative_rewards": 3044
+      },
+      "test": {
+        "accuracy": 0.625,
+        "mean_correct_probability": 0.25965553025404614,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.75,
+        "mean_correct_probability": 0.2629240043461323,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-4-decayed_queued.safetensors",
+      "checkpoint_sha256": "5161dff10b504d4e7056636ad76792bd2afbb72641e1cdf908df5161223492aa"
+    },
+    {
+      "seed": 502,
+      "lag": 4,
+      "condition": "zero_reward",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1029,
+        "negative_rewards": 3067
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2500542476773262,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24985566114385924,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-4-zero_reward.safetensors",
+      "checkpoint_sha256": "2eceb001be0a70e32c8bad51bb65e3cf3baeb8b9d97eedd3aac51e883e0ee3a0"
+    },
+    {
+      "seed": 502,
+      "lag": 16,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1010,
+        "negative_rewards": 3086
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.25026053252319497,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2500015509625276,
+        "predictions": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-16-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "ec11ce3ad18b7da68c386222e077b0abfa17214f2c84ad6426d785aa8de47e1a"
+    },
+    {
+      "seed": 502,
+      "lag": 16,
+      "condition": "exact_queued",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1067,
+        "negative_rewards": 3029
+      },
+      "test": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.26536846347153187,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27093505859375,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-16-exact_queued.safetensors",
+      "checkpoint_sha256": "565d751a4051717ae046af6989798ae9a58a3bffbb0f81f04072fcf93ae50601"
+    },
+    {
+      "seed": 502,
+      "lag": 16,
+      "condition": "decayed_queued",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1036,
+        "negative_rewards": 3060
+      },
+      "test": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.252740607286493,
+        "predictions": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2534860347708066,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-16-decayed_queued.safetensors",
+      "checkpoint_sha256": "ba205e16272d6f98a487663363147783cb03e8fa71ceeb228616e6f5cc93ae79"
+    },
+    {
+      "seed": 502,
+      "lag": 16,
+      "condition": "zero_reward",
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1029,
+        "negative_rewards": 3067
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2500542476773262,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24985566114385924,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-lag-16-zero_reward.safetensors",
+      "checkpoint_sha256": "bad7c0af49ffaae2afee1e62c5fe3cc377239ca95586a5245ce0939519c07354"
+    },
+    {
+      "seed": 503,
+      "lag": 0,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1102,
+        "negative_rewards": 2994
+      },
+      "test": {
+        "accuracy": 0.625,
+        "mean_correct_probability": 0.266144131620725,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27045296753446263,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-0-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "687da17213275ed1c6e9fc3d9956d8b4f924f1c936a1edbbf4e2fca22bbeb4e5"
+    },
+    {
+      "seed": 503,
+      "lag": 0,
+      "condition": "exact_queued",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1102,
+        "negative_rewards": 2994
+      },
+      "test": {
+        "accuracy": 0.625,
+        "mean_correct_probability": 0.266144131620725,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27045296753446263,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-0-exact_queued.safetensors",
+      "checkpoint_sha256": "713ace68051f3ac401dd66ae495d6eef8b021b4b3e5d53a1e357e07c22649770"
+    },
+    {
+      "seed": 503,
+      "lag": 0,
+      "condition": "decayed_queued",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1102,
+        "negative_rewards": 2994
+      },
+      "test": {
+        "accuracy": 0.625,
+        "mean_correct_probability": 0.266144131620725,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27045296753446263,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-0-decayed_queued.safetensors",
+      "checkpoint_sha256": "56a8ef2d88476fbe242433becd64330a363f9101c6682a4563fe7631df8b8f7f"
+    },
+    {
+      "seed": 503,
+      "lag": 0,
+      "condition": "zero_reward",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1043,
+        "negative_rewards": 3053
+      },
+      "test": {
+        "accuracy": 0.20833333333333334,
+        "mean_correct_probability": 0.24989684174458185,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24981402109066644,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-0-zero_reward.safetensors",
+      "checkpoint_sha256": "74c9783fe357d37fb6bf9ff6b0f85e6738558016d4a00ba62c1263dfb25ef495"
+    },
+    {
+      "seed": 503,
+      "lag": 4,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1037,
+        "negative_rewards": 3059
+      },
+      "test": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2494282517582178,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2486443594098091,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-4-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "3a5879ef2c6ac5411747ee7e51a324a4fffbef72e7808fe318143fbabca68628"
+    },
+    {
+      "seed": 503,
+      "lag": 4,
+      "condition": "exact_queued",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1102,
+        "negative_rewards": 2994
+      },
+      "test": {
+        "accuracy": 0.5416666666666666,
+        "mean_correct_probability": 0.2661351754019658,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27058690413832664,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-4-exact_queued.safetensors",
+      "checkpoint_sha256": "94339b4c567697960933d515b9f41dd6bc40760c2c3322c4f50c88f482f3fa7c"
+    },
+    {
+      "seed": 503,
+      "lag": 4,
+      "condition": "decayed_queued",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1079,
+        "negative_rewards": 3017
+      },
+      "test": {
+        "accuracy": 0.625,
+        "mean_correct_probability": 0.2601093805084626,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          0,
+          3,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2626493436594804,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-4-decayed_queued.safetensors",
+      "checkpoint_sha256": "ebd708b406f5071d0a4c36fea2e91f64dd3e3ce58f566967c3acc54431c74c99"
+    },
+    {
+      "seed": 503,
+      "lag": 4,
+      "condition": "zero_reward",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1043,
+        "negative_rewards": 3053
+      },
+      "test": {
+        "accuracy": 0.20833333333333334,
+        "mean_correct_probability": 0.24989684174458185,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24981402109066644,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-4-zero_reward.safetensors",
+      "checkpoint_sha256": "bb6b589e6f5ba0ada790f42f8a92800bafa730060041c4edaf07d7ab355c025c"
+    },
+    {
+      "seed": 503,
+      "lag": 16,
+      "condition": "wrong_current_trial",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1044,
+        "negative_rewards": 3052
+      },
+      "test": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.2491161854316791,
+        "predictions": [
+          0,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.24900579328338304,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-16-wrong_current_trial.safetensors",
+      "checkpoint_sha256": "6b464ec32e46236e752907a470f794a6f99b2cf7c4a1b53f1052ef85a3edc730"
+    },
+    {
+      "seed": 503,
+      "lag": 16,
+      "condition": "exact_queued",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1102,
+        "negative_rewards": 2994
+      },
+      "test": {
+        "accuracy": 0.5416666666666666,
+        "mean_correct_probability": 0.2661351754019658,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          2,
+          2,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.27058690413832664,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-16-exact_queued.safetensors",
+      "checkpoint_sha256": "d5b579846e88e8f7a066b06ce21de3b1bba253502766fb3dd16aa3c0ccccdb0b"
+    },
+    {
+      "seed": 503,
+      "lag": 16,
+      "condition": "decayed_queued",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1052,
+        "negative_rewards": 3044
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2527717147022486,
+        "predictions": [
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          1,
+          3,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.25339261442422867,
+        "predictions": [
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-16-decayed_queued.safetensors",
+      "checkpoint_sha256": "4ba2370b0ef9fd0e3201d360d2ab3aa72c0f95ff25ccaf86cb0415b0f669d7a4"
+    },
+    {
+      "seed": 503,
+      "lag": 16,
+      "condition": "zero_reward",
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1043,
+        "negative_rewards": 3053
+      },
+      "test": {
+        "accuracy": 0.20833333333333334,
+        "mean_correct_probability": 0.24989684174458185,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24981402109066644,
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-lag-16-zero_reward.safetensors",
+      "checkpoint_sha256": "41ddc52227b9177a6fb7c103837b019f48106a282e3c02613ce901163c6b1b15"
+    }
+  ],
+  "runtime_seconds": 40.13355024904013,
+  "mean_across_seeds": {
+    "0": {
+      "wrong_current_trial": {
+        "test": {
+          "accuracy": 0.625,
+          "mean_correct_probability": 0.2662257270680533
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.27078559415207965
+        }
+      },
+      "exact_queued": {
+        "test": {
+          "accuracy": 0.625,
+          "mean_correct_probability": 0.2662257270680533
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.27078559415207965
+        }
+      },
+      "decayed_queued": {
+        "test": {
+          "accuracy": 0.625,
+          "mean_correct_probability": 0.2662257270680533
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.27078559415207965
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.23611111111111113,
+          "mean_correct_probability": 0.25001947788728607
+        },
+        "korean": {
+          "accuracy": 0.19444444444444442,
+          "mean_correct_probability": 0.2498802406092485
+        }
+      }
+    },
+    "4": {
+      "wrong_current_trial": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25017249025404453
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24935289844870567
+        }
+      },
+      "exact_queued": {
+        "test": {
+          "accuracy": 0.5972222222222222,
+          "mean_correct_probability": 0.2662183015296857
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.270809864004453
+        }
+      },
+      "decayed_queued": {
+        "test": {
+          "accuracy": 0.6388888888888888,
+          "mean_correct_probability": 0.2602042253646586
+        },
+        "korean": {
+          "accuracy": 0.6111111111111112,
+          "mean_correct_probability": 0.2628775582545333
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.23611111111111113,
+          "mean_correct_probability": 0.25001947788728607
+        },
+        "korean": {
+          "accuracy": 0.19444444444444442,
+          "mean_correct_probability": 0.2498802406092485
+        }
+      }
+    },
+    "16": {
+      "wrong_current_trial": {
+        "test": {
+          "accuracy": 0.27777777777777773,
+          "mean_correct_probability": 0.2500127015842332
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24971627692381537
+        }
+      },
+      "exact_queued": {
+        "test": {
+          "accuracy": 0.5972222222222222,
+          "mean_correct_probability": 0.2662183015296857
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.270809864004453
+        }
+      },
+      "decayed_queued": {
+        "test": {
+          "accuracy": 0.6527777777777777,
+          "mean_correct_probability": 0.2528485221167405
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.2534837441311942
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.23611111111111113,
+          "mean_correct_probability": 0.25001947788728607
+        },
+        "korean": {
+          "accuracy": 0.19444444444444442,
+          "mean_correct_probability": 0.2498802406092485
+        }
+      }
+    }
+  },
+  "interpretation": [
+    "At lag zero, current-trial and exact queued credit are chronologically identical and produced identical results.",
+    "At lags 4 and 16, current-trial credit fell near chance while exact action-ID credit retained substantial test and Korean accuracy.",
+    "Decayed queued reward did not fail under these settings, but its sometimes higher accuracy is not evidence of superiority from only three seeds and one frozen parameter choice.",
+    "Because fixed-lag exponential decay multiplies every reward by one constant, delayed decayed rows confound delay with update amplitude; immediate scaled-reward controls quantify that amplitude effect separately.",
+    "Immediate scaled controls matched or exceeded delayed-decayed mean accuracy, so this study provides no evidence that delay itself improves eligibility; reward amplitude explains the apparent gain adequately.",
+    "The terminal current-trial condition is intrinsically ambiguous because no new trial exists during drain; the declared last-trial proxy preserves reward counts but adds repeated stale eligibility."
+  ],
+  "amplitude_controls": [
+    {
+      "seed": 501,
+      "delivery_lag": 0,
+      "scale_equivalent_lag": 4,
+      "reward_scale": 0.6065306597126334,
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1056,
+        "negative_rewards": 3040
+      },
+      "test": {
+        "accuracy": 0.7083333333333334,
+        "mean_correct_probability": 0.2608109439412753,
+        "predictions": [
+          0,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.4166666666666667,
+        "mean_correct_probability": 0.26304735243320465,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-amplitude-equivalent-4.safetensors",
+      "checkpoint_sha256": "59879b00e92dfd183d9da59bfa06b56ee2da1124dafa183261708567e819bf6d"
+    },
+    {
+      "seed": 501,
+      "delivery_lag": 0,
+      "scale_equivalent_lag": 16,
+      "reward_scale": 0.1353352832366127,
+      "mapping": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1037,
+        "negative_rewards": 3059
+      },
+      "test": {
+        "accuracy": 0.7916666666666666,
+        "mean_correct_probability": 0.2530317194759846,
+        "predictions": [
+          0,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      "korean": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.25357004006703693,
+        "predictions": [
+          2,
+          3,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-501-amplitude-equivalent-16.safetensors",
+      "checkpoint_sha256": "4a8161caa06671dd14caab0ec98426062f50a5dc62bd6653d8c259b4aa54098a"
+    },
+    {
+      "seed": 502,
+      "delivery_lag": 0,
+      "scale_equivalent_lag": 4,
+      "reward_scale": 0.6065306597126334,
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1055,
+        "negative_rewards": 3041
+      },
+      "test": {
+        "accuracy": 0.625,
+        "mean_correct_probability": 0.2596472942580779,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2630474617083867,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-amplitude-equivalent-4.safetensors",
+      "checkpoint_sha256": "0962d36ddc59148e3d5f374c6b4d6ee20aa5e44f761cfcbd3224d3eff0d24dd5"
+    },
+    {
+      "seed": 502,
+      "delivery_lag": 0,
+      "scale_equivalent_lag": 16,
+      "reward_scale": 0.1353352832366127,
+      "mapping": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1036,
+        "negative_rewards": 3060
+      },
+      "test": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.252740607286493,
+        "predictions": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2534860347708066,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-502-amplitude-equivalent-16.safetensors",
+      "checkpoint_sha256": "2904e274f522f2649f07d49af55f8495e4456587c3c5f80627f0e8b0eb888ae0"
+    },
+    {
+      "seed": 503,
+      "delivery_lag": 0,
+      "scale_equivalent_lag": 4,
+      "reward_scale": 0.6065306597126334,
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1082,
+        "negative_rewards": 3014
+      },
+      "test": {
+        "accuracy": 0.7083333333333334,
+        "mean_correct_probability": 0.26011499638358754,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          1,
+          2,
+          2,
+          1,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          0,
+          3,
+          0,
+          0,
+          0,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.26263020063440007,
+        "predictions": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          3,
+          3,
+          3,
+          0,
+          3,
+          0
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-amplitude-equivalent-4.safetensors",
+      "checkpoint_sha256": "d65a806d2fc8d5407561f5dc39c2f606bdf237c73a9494c96bff1845e0318ae6"
+    },
+    {
+      "seed": 503,
+      "delivery_lag": 0,
+      "scale_equivalent_lag": 16,
+      "reward_scale": 0.1353352832366127,
+      "mapping": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "training": {
+        "training_actions": 4096,
+        "optimizer_updates": 128,
+        "rewards_delivered": 4096,
+        "positive_rewards": 1052,
+        "negative_rewards": 3044
+      },
+      "test": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2527729707459609,
+        "predictions": [
+          3,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          1,
+          3,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3
+        ]
+      },
+      "korean": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.2533899061381817,
+        "predictions": [
+          3,
+          2,
+          3,
+          3,
+          1,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3
+        ]
+      },
+      "checkpoint": "results/bio-bridge/delayed-credit-checkpoints/seed-503-amplitude-equivalent-16.safetensors",
+      "checkpoint_sha256": "622350eaaa6a9e6b1afc78215f4f8972137880ff487d534e7febff858a336a4e"
+    }
+  ],
+  "amplitude_control_mean_across_seeds": {
+    "4": {
+      "test": {
+        "accuracy": 0.6805555555555557,
+        "mean_correct_probability": 0.2601910781943136
+      },
+      "korean": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.26290833825866383
+      }
+    },
+    "16": {
+      "test": {
+        "accuracy": 0.6527777777777777,
+        "mean_correct_probability": 0.25284843250281286
+      },
+      "korean": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.2534819936586751
+      }
+    }
+  },
+  "amplitude_control_runtime_seconds": 7.038692124187946
+}

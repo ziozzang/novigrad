@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add 172 bilingual biological/Gemma diagnostic cases, sparsity confirmation, context interference controls, and bounded sequential delayed-credit experiments; retain negative results and primary-source English/Korean research.
+
 - Add independently authored multi-seed FunctionGemma evaluations, physical goal grounding, non-oracle sensor-fusion ablations, internal-state reward learning and conditioning/exploration diagnostics with English/Korean reports.
 
 - Add typed FunctionGemma/novi loopback API, fixed-budget LoRA routing experiment, and separately validated navigation-memory/goal-switch cases.

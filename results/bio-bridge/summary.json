@@ -1,0 +1,2194 @@
+{
+  "function": {
+    "base": {
+      "count": 80,
+      "valid_correct": 29,
+      "valid_count": 64,
+      "valid_accuracy": 0.453125,
+      "rejected": 10,
+      "negative_count": 16,
+      "rejection_rate": 0.625,
+      "balanced_accuracy": 0.5390625,
+      "unsupported_state_calls": 6
+    },
+    "policy": {
+      "count": 80,
+      "valid_correct": 25,
+      "valid_count": 64,
+      "valid_accuracy": 0.390625,
+      "rejected": 7,
+      "negative_count": 16,
+      "rejection_rate": 0.4375,
+      "balanced_accuracy": 0.4140625,
+      "unsupported_state_calls": 9
+    },
+    "adapter": {
+      "count": 80,
+      "valid_correct": 50,
+      "valid_count": 64,
+      "valid_accuracy": 0.78125,
+      "rejected": 0,
+      "negative_count": 16,
+      "rejection_rate": 0.0,
+      "balanced_accuracy": 0.390625,
+      "unsupported_state_calls": 13
+    },
+    "adapter-policy": {
+      "count": 80,
+      "valid_correct": 36,
+      "valid_count": 64,
+      "valid_accuracy": 0.5625,
+      "rejected": 0,
+      "negative_count": 16,
+      "rejection_rate": 0.0,
+      "balanced_accuracy": 0.28125,
+      "unsupported_state_calls": 10
+    }
+  },
+  "embedding_prototype": {
+    "64": {
+      "threshold": 0.08,
+      "forced": {
+        "known_accuracy": 0.7708333333333334,
+        "unknown_rejection": 0.0,
+        "balanced_accuracy": 0.3854166666666667,
+        "overall_accuracy": 0.6166666666666667,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          3,
+          2,
+          2,
+          2,
+          3,
+          0,
+          1,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          0,
+          3,
+          3,
+          0,
+          1,
+          1,
+          3
+        ]
+      },
+      "calibrated": {
+        "known_accuracy": 0.4791666666666667,
+        "unknown_rejection": 0.75,
+        "balanced_accuracy": 0.6145833333333334,
+        "overall_accuracy": 0.5333333333333333,
+        "predictions": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          -1,
+          3,
+          2,
+          -1,
+          3,
+          3,
+          -1,
+          3,
+          -1,
+          -1,
+          3,
+          3,
+          -1,
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    },
+    "128": {
+      "threshold": 0.06,
+      "forced": {
+        "known_accuracy": 0.8125,
+        "unknown_rejection": 0.0,
+        "balanced_accuracy": 0.40625,
+        "overall_accuracy": 0.65,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          2,
+          2,
+          3,
+          0,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3,
+          3,
+          2,
+          1,
+          3,
+          2,
+          3,
+          0,
+          0,
+          1,
+          1,
+          3,
+          2,
+          3,
+          0,
+          1,
+          1,
+          3
+        ]
+      },
+      "calibrated": {
+        "known_accuracy": 0.5,
+        "unknown_rejection": 0.8333333333333334,
+        "balanced_accuracy": 0.6666666666666667,
+        "overall_accuracy": 0.5666666666666667,
+        "predictions": [
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          0,
+          -1,
+          2,
+          2,
+          -1,
+          3,
+          2,
+          -1,
+          3,
+          3,
+          -1,
+          3,
+          -1,
+          -1,
+          3,
+          3,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    },
+    "768": {
+      "threshold": 0.06,
+      "forced": {
+        "known_accuracy": 0.7916666666666666,
+        "unknown_rejection": 0.0,
+        "balanced_accuracy": 0.3958333333333333,
+        "overall_accuracy": 0.6333333333333333,
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          2,
+          2,
+          2,
+          3,
+          0,
+          2,
+          2,
+          2,
+          1,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          0,
+          3,
+          3,
+          3,
+          2,
+          1,
+          3,
+          2,
+          1,
+          0,
+          0,
+          1,
+          1,
+          3,
+          3,
+          3,
+          0,
+          1,
+          1,
+          3
+        ]
+      },
+      "calibrated": {
+        "known_accuracy": 0.5625,
+        "unknown_rejection": 0.75,
+        "balanced_accuracy": 0.65625,
+        "overall_accuracy": 0.6,
+        "predictions": [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          -1,
+          -1,
+          2,
+          2,
+          2,
+          -1,
+          0,
+          -1,
+          2,
+          2,
+          1,
+          3,
+          2,
+          -1,
+          3,
+          3,
+          -1,
+          3,
+          -1,
+          3,
+          3,
+          3,
+          -1,
+          -1,
+          3,
+          -1,
+          -1,
+          -1,
+          0,
+          1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    }
+  },
+  "sparsity": {
+    "64": {
+      "0.02": {
+        "mean": 0.46527777777777773,
+        "by_training_seed": [
+          0.4583333333333333,
+          0.5,
+          0.4375
+        ]
+      },
+      "0.1": {
+        "mean": 0.4444444444444444,
+        "by_training_seed": [
+          0.4791666666666667,
+          0.4583333333333333,
+          0.3958333333333333
+        ]
+      },
+      "0.2": {
+        "mean": 0.40972222222222215,
+        "by_training_seed": [
+          0.4583333333333333,
+          0.4375,
+          0.3333333333333333
+        ]
+      },
+      "0.5": {
+        "mean": 0.3194444444444445,
+        "by_training_seed": [
+          0.3541666666666667,
+          0.3541666666666667,
+          0.25
+        ]
+      }
+    },
+    "128": {
+      "0.02": {
+        "mean": 0.576388888888889,
+        "by_training_seed": [
+          0.5833333333333334,
+          0.6666666666666666,
+          0.4791666666666667
+        ]
+      },
+      "0.1": {
+        "mean": 0.5000000000000001,
+        "by_training_seed": [
+          0.5208333333333334,
+          0.5,
+          0.4791666666666667
+        ]
+      },
+      "0.2": {
+        "mean": 0.46527777777777773,
+        "by_training_seed": [
+          0.4583333333333333,
+          0.4583333333333333,
+          0.4791666666666667
+        ]
+      },
+      "0.5": {
+        "mean": 0.45138888888888884,
+        "by_training_seed": [
+          0.4583333333333333,
+          0.4375,
+          0.4583333333333333
+        ]
+      }
+    }
+  },
+  "sparsity_confirmation": {
+    "0.02": {
+      "mean_accuracy": 0.5208333333333334,
+      "by_seed": [
+        0.5,
+        0.5625,
+        0.5
+      ]
+    },
+    "0.2": {
+      "mean_accuracy": 0.375,
+      "by_seed": [
+        0.375,
+        0.375,
+        0.375
+      ]
+    }
+  },
+  "context": {
+    "blind": {
+      "A_after_A": 0.5138888888888888,
+      "A_after_B": 0.34722222222222227,
+      "B_after_B": 0.5,
+      "A_after_refresh": 0.5
+    },
+    "concat": {
+      "A_after_A": 0.4305555555555555,
+      "A_after_B": 0.16666666666666666,
+      "B_after_B": 0.7222222222222222,
+      "A_after_refresh": 0.3194444444444444
+    },
+    "concat_normalized": {
+      "A_after_A": 0.4305555555555555,
+      "A_after_B": 0.16666666666666666,
+      "B_after_B": 0.7222222222222222,
+      "A_after_refresh": 0.3194444444444444
+    },
+    "conjunctive": {
+      "A_after_A": 0.5138888888888888,
+      "A_after_B": 0.5138888888888888,
+      "B_after_B": 0.5555555555555555,
+      "A_after_refresh": 0.5416666666666666
+    },
+    "modular": {
+      "A_after_A": 0.5138888888888888,
+      "A_after_B": 0.5138888888888888,
+      "B_after_B": 0.5555555555555555,
+      "A_after_refresh": 0.5416666666666666
+    }
+  },
+  "batched_credit": {
+    "0": {
+      "wrong_current_trial": {
+        "test": {
+          "accuracy": 0.625,
+          "mean_correct_probability": 0.2662257270680533
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.27078559415207965
+        }
+      },
+      "exact_queued": {
+        "test": {
+          "accuracy": 0.625,
+          "mean_correct_probability": 0.2662257270680533
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.27078559415207965
+        }
+      },
+      "decayed_queued": {
+        "test": {
+          "accuracy": 0.625,
+          "mean_correct_probability": 0.2662257270680533
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.27078559415207965
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.23611111111111113,
+          "mean_correct_probability": 0.25001947788728607
+        },
+        "korean": {
+          "accuracy": 0.19444444444444442,
+          "mean_correct_probability": 0.2498802406092485
+        }
+      }
+    },
+    "4": {
+      "wrong_current_trial": {
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.25017249025404453
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24935289844870567
+        }
+      },
+      "exact_queued": {
+        "test": {
+          "accuracy": 0.5972222222222222,
+          "mean_correct_probability": 0.2662183015296857
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.270809864004453
+        }
+      },
+      "decayed_queued": {
+        "test": {
+          "accuracy": 0.6388888888888888,
+          "mean_correct_probability": 0.2602042253646586
+        },
+        "korean": {
+          "accuracy": 0.6111111111111112,
+          "mean_correct_probability": 0.2628775582545333
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.23611111111111113,
+          "mean_correct_probability": 0.25001947788728607
+        },
+        "korean": {
+          "accuracy": 0.19444444444444442,
+          "mean_correct_probability": 0.2498802406092485
+        }
+      }
+    },
+    "16": {
+      "wrong_current_trial": {
+        "test": {
+          "accuracy": 0.27777777777777773,
+          "mean_correct_probability": 0.2500127015842332
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24971627692381537
+        }
+      },
+      "exact_queued": {
+        "test": {
+          "accuracy": 0.5972222222222222,
+          "mean_correct_probability": 0.2662183015296857
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.270809864004453
+        }
+      },
+      "decayed_queued": {
+        "test": {
+          "accuracy": 0.6527777777777777,
+          "mean_correct_probability": 0.2528485221167405
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.2534837441311942
+        }
+      },
+      "zero_reward": {
+        "test": {
+          "accuracy": 0.23611111111111113,
+          "mean_correct_probability": 0.25001947788728607
+        },
+        "korean": {
+          "accuracy": 0.19444444444444442,
+          "mean_correct_probability": 0.2498802406092485
+        }
+      }
+    }
+  },
+  "amplitude_controls": {
+    "4": {
+      "test": {
+        "accuracy": 0.6805555555555557,
+        "mean_correct_probability": 0.2601910781943136
+      },
+      "korean": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.26290833825866383
+      }
+    },
+    "16": {
+      "test": {
+        "accuracy": 0.6527777777777777,
+        "mean_correct_probability": 0.25284843250281286
+      },
+      "korean": {
+        "accuracy": 0.5833333333333334,
+        "mean_correct_probability": 0.2534819936586751
+      }
+    }
+  },
+  "semantic_gate": {
+    "base": {
+      "count": 80,
+      "valid_correct": 26,
+      "valid_count": 64,
+      "valid_accuracy": 0.40625,
+      "rejected": 10,
+      "negative_count": 16,
+      "rejection_rate": 0.625,
+      "balanced_accuracy": 0.515625,
+      "unsupported_state_calls": 6
+    },
+    "policy": {
+      "count": 80,
+      "valid_correct": 23,
+      "valid_count": 64,
+      "valid_accuracy": 0.359375,
+      "rejected": 8,
+      "negative_count": 16,
+      "rejection_rate": 0.5,
+      "balanced_accuracy": 0.4296875,
+      "unsupported_state_calls": 8
+    },
+    "adapter": {
+      "count": 80,
+      "valid_correct": 39,
+      "valid_count": 64,
+      "valid_accuracy": 0.609375,
+      "rejected": 7,
+      "negative_count": 16,
+      "rejection_rate": 0.4375,
+      "balanced_accuracy": 0.5234375,
+      "unsupported_state_calls": 6
+    },
+    "adapter-policy": {
+      "count": 80,
+      "valid_correct": 31,
+      "valid_count": 64,
+      "valid_accuracy": 0.484375,
+      "rejected": 3,
+      "negative_count": 16,
+      "rejection_rate": 0.1875,
+      "balanced_accuracy": 0.3359375,
+      "unsupported_state_calls": 7
+    }
+  },
+  "inference_scope": "Descriptive means. Shared authored items, related translations and fixedinitialization; no claim of independent biological replicates.",
+  "streaming_credit": {
+    "design": {
+      "seeds": [
+        501,
+        502,
+        503
+      ],
+      "lags_logical_trials": [
+        0,
+        16
+      ],
+      "rewarded_actions": 4096,
+      "warmdown": "lag fresh contexts/actions with no scheduled outcome",
+      "stream": "one infer, schedule, deliver due, batch-1 learn before next action",
+      "shared_stream": "context indices and sampling uniforms fixed per seed across all conditions",
+      "engine": {
+        "actions": 4,
+        "learning_rate": 0.009375,
+        "logit_gain": 1.0,
+        "active_fraction": 0.2,
+        "homeostasis": false,
+        "readout": "opponent"
+      },
+      "decay": "exp(-lag/8), tau fixed before measurement",
+      "feedback": "learner receives observation, sampled action, and actual +/-1 outcome only",
+      "bounded_storage": "pending rows only; insertion enforces capacity delay+1 atomically; monotonic scalar rejects stale/duplicate IDs",
+      "limitation": "Updates recompute gradients at current weights, so exact_tagged is software action-ID credit, not a biological neural trace. Original delayed-credit batched-rollout results are not a biological online delay curve.",
+      "dataset_sha256": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+      "embeddings_sha256": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+      "selection": "all settings predeclared; no result-based tuning"
+    },
+    "runs": [
+      {
+        "seed": 501,
+        "lag": 0,
+        "condition": "wrong_current",
+        "mapping": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1016,
+          "negative_rewards": 3080,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.875,
+          "mean_correct_probability": 0.26604267085591954,
+          "predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.2702421968181928,
+          "predictions": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-501-lag-0-wrong_current.safetensors",
+        "checkpoint_sha256": "d7840b2b8349e1fb63f7afb35c50335e8c7378bf422d064fafc736a0598e09a1"
+      },
+      {
+        "seed": 501,
+        "lag": 0,
+        "condition": "exact_tagged",
+        "mapping": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1016,
+          "negative_rewards": 3080,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.875,
+          "mean_correct_probability": 0.26604267085591954,
+          "predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.2702421968181928,
+          "predictions": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-501-lag-0-exact_tagged.safetensors",
+        "checkpoint_sha256": "1dcb8b3c11bbe333e4c0367fe064700dd124e52d1ff48047eb121f71bc90db96"
+      },
+      {
+        "seed": 501,
+        "lag": 0,
+        "condition": "decayed_tagged",
+        "mapping": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1016,
+          "negative_rewards": 3080,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.875,
+          "mean_correct_probability": 0.26604267085591954,
+          "predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.2702421968181928,
+          "predictions": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-501-lag-0-decayed_tagged.safetensors",
+        "checkpoint_sha256": "8ac8b49bc0a5987e39e26b731ae7080414d3d5399859963a15593f008c4cbbda"
+      },
+      {
+        "seed": 501,
+        "lag": 16,
+        "condition": "wrong_current",
+        "mapping": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 952,
+          "negative_rewards": 3144,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.2916666666666667,
+          "mean_correct_probability": 0.25142736608783406,
+          "predictions": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2504551572104295,
+          "predictions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-501-lag-16-wrong_current.safetensors",
+        "checkpoint_sha256": "4d6c207aeed0dced1d5074a6acd65cc7e5b15065c9f2a443c05a2d9ae3553019"
+      },
+      {
+        "seed": 501,
+        "lag": 16,
+        "condition": "exact_tagged",
+        "mapping": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1016,
+          "negative_rewards": 3080,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.875,
+          "mean_correct_probability": 0.26597662704686326,
+          "predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            0,
+            0,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.8333333333333334,
+          "mean_correct_probability": 0.27022961527109146,
+          "predictions": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-501-lag-16-exact_tagged.safetensors",
+        "checkpoint_sha256": "c09d1375881bd95ecde61568f62bae5810eeca915843ccde1373359ccd7a283f"
+      },
+      {
+        "seed": 501,
+        "lag": 16,
+        "condition": "decayed_tagged",
+        "mapping": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 968,
+          "negative_rewards": 3128,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.25283224880695343,
+          "predictions": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            3,
+            3,
+            2,
+            3,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.75,
+          "mean_correct_probability": 0.25348934282859165,
+          "predictions": [
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-501-lag-16-decayed_tagged.safetensors",
+        "checkpoint_sha256": "e01a215d80e623d322a1c4dba2b6a172df235646ff588fc59d2fcf5e272098ad"
+      },
+      {
+        "seed": 502,
+        "lag": 0,
+        "condition": "wrong_current",
+        "mapping": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1019,
+          "negative_rewards": 3077,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2658189367502928,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2720147954920928,
+          "predictions": [
+            2,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-502-lag-0-wrong_current.safetensors",
+        "checkpoint_sha256": "1b767f1d605e923158174dcfb581940622adccbac442a33c3b2b1dec70f240da"
+      },
+      {
+        "seed": 502,
+        "lag": 0,
+        "condition": "exact_tagged",
+        "mapping": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1019,
+          "negative_rewards": 3077,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2658189367502928,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2720147954920928,
+          "predictions": [
+            2,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-502-lag-0-exact_tagged.safetensors",
+        "checkpoint_sha256": "5b5e4a91b8810952fefad2f5fbd7d2b9389becfd964754258a65f64cfbf62c0e"
+      },
+      {
+        "seed": 502,
+        "lag": 0,
+        "condition": "decayed_tagged",
+        "mapping": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1019,
+          "negative_rewards": 3077,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2658189367502928,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2720147954920928,
+          "predictions": [
+            2,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-502-lag-0-decayed_tagged.safetensors",
+        "checkpoint_sha256": "180ce09ae828425f531115d69133ff7e4f05a29f6fd31dcd5ae2ee8bb66f486b"
+      },
+      {
+        "seed": 502,
+        "lag": 16,
+        "condition": "wrong_current",
+        "mapping": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 995,
+          "negative_rewards": 3101,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24975818147261938,
+          "predictions": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.24895422160625458,
+          "predictions": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-502-lag-16-wrong_current.safetensors",
+        "checkpoint_sha256": "b5aa5e0e094690669b5373cbb426aabe7c92316ae30978cd96cc37ed61a6a45e"
+      },
+      {
+        "seed": 502,
+        "lag": 16,
+        "condition": "exact_tagged",
+        "mapping": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1022,
+          "negative_rewards": 3074,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2658440178881089,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2720245147744815,
+          "predictions": [
+            2,
+            2,
+            2,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-502-lag-16-exact_tagged.safetensors",
+        "checkpoint_sha256": "c3949d3ff8d404881bc8de29cc5592cd1c1d01da2210a9c2969d983c39212a74"
+      },
+      {
+        "seed": 502,
+        "lag": 16,
+        "condition": "decayed_tagged",
+        "mapping": [
+          2,
+          3,
+          0,
+          1
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 999,
+          "negative_rewards": 3097,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.5416666666666666,
+          "mean_correct_probability": 0.2528035839398702,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            3,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.2536119657258193,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-502-lag-16-decayed_tagged.safetensors",
+        "checkpoint_sha256": "8e81969658e87c9715f1a43ad51c666154d45ec3d2fe99378b417a02fadead19"
+      },
+      {
+        "seed": 503,
+        "lag": 0,
+        "condition": "wrong_current",
+        "mapping": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1098,
+          "negative_rewards": 2998,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2655229829251766,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.4166666666666667,
+          "mean_correct_probability": 0.27091553310553235,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-503-lag-0-wrong_current.safetensors",
+        "checkpoint_sha256": "fdfd423ce4d2284628d5153560c3105641d904153c9ffc2a5c0ff0e4138a002f"
+      },
+      {
+        "seed": 503,
+        "lag": 0,
+        "condition": "exact_tagged",
+        "mapping": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1098,
+          "negative_rewards": 2998,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2655229829251766,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.4166666666666667,
+          "mean_correct_probability": 0.27091553310553235,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-503-lag-0-exact_tagged.safetensors",
+        "checkpoint_sha256": "a691923d7667274cf0e631227d5b0f9203c4885e3d1e3139467166edb7129eb3"
+      },
+      {
+        "seed": 503,
+        "lag": 0,
+        "condition": "decayed_tagged",
+        "mapping": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 0,
+          "total_actions": 4096,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1098,
+          "negative_rewards": 2998,
+          "max_pending_rows": 1
+        },
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2655229829251766,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.4166666666666667,
+          "mean_correct_probability": 0.27091553310553235,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2,
+            2,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-503-lag-0-decayed_tagged.safetensors",
+        "checkpoint_sha256": "f8809b316a91a9d15d952a56e51089b346bfe2f540126000365c7523778ced0b"
+      },
+      {
+        "seed": 503,
+        "lag": 16,
+        "condition": "wrong_current",
+        "mapping": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1035,
+          "negative_rewards": 3061,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2501665744930506,
+          "predictions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "korean": {
+          "accuracy": 0.25,
+          "mean_correct_probability": 0.2488019069035848,
+          "predictions": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-503-lag-16-wrong_current.safetensors",
+        "checkpoint_sha256": "01788a48001c5cac2cf1048f55dfe729e79bfa663568cb0cf87d5fccedb3668f"
+      },
+      {
+        "seed": 503,
+        "lag": 16,
+        "condition": "exact_tagged",
+        "mapping": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1096,
+          "negative_rewards": 3000,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.2916666666666667,
+          "mean_correct_probability": 0.2655091329167287,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "korean": {
+          "accuracy": 0.4166666666666667,
+          "mean_correct_probability": 0.27084698776404065,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            2,
+            3,
+            2
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-503-lag-16-exact_tagged.safetensors",
+        "checkpoint_sha256": "eaffaf71ade5086aa34cdbf46b9e97f91972e5bcec5135178086d5bd7a893b83"
+      },
+      {
+        "seed": 503,
+        "lag": 16,
+        "condition": "decayed_tagged",
+        "mapping": [
+          2,
+          1,
+          3,
+          0
+        ],
+        "training": {
+          "rewarded_actions": 4096,
+          "warmdown_unrewarded_actions": 16,
+          "total_actions": 4112,
+          "rewards_delivered": 4096,
+          "optimizer_updates": 4096,
+          "positive_rewards": 1048,
+          "negative_rewards": 3048,
+          "max_pending_rows": 17
+        },
+        "test": {
+          "accuracy": 0.5833333333333334,
+          "mean_correct_probability": 0.25269528664648533,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2,
+            2,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            2,
+            3,
+            3
+          ]
+        },
+        "korean": {
+          "accuracy": 0.5,
+          "mean_correct_probability": 0.2534748762845993,
+          "predictions": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "checkpoint": "results/bio-bridge/streaming-credit-checkpoints/seed-503-lag-16-decayed_tagged.safetensors",
+        "checkpoint_sha256": "1d8bf3eae319fae582d129729ea55cb73f8f63123741e56d960f3efe858d3907"
+      }
+    ],
+    "mean_across_seeds": {
+      "0": {
+        "wrong_current": {
+          "test": {
+            "accuracy": 0.5416666666666666,
+            "mean_correct_probability": 0.265794863510463
+          },
+          "korean": {
+            "accuracy": 0.5833333333333334,
+            "mean_correct_probability": 0.2710575084719393
+          }
+        },
+        "exact_tagged": {
+          "test": {
+            "accuracy": 0.5416666666666666,
+            "mean_correct_probability": 0.265794863510463
+          },
+          "korean": {
+            "accuracy": 0.5833333333333334,
+            "mean_correct_probability": 0.2710575084719393
+          }
+        },
+        "decayed_tagged": {
+          "test": {
+            "accuracy": 0.5416666666666666,
+            "mean_correct_probability": 0.265794863510463
+          },
+          "korean": {
+            "accuracy": 0.5833333333333334,
+            "mean_correct_probability": 0.2710575084719393
+          }
+        }
+      },
+      "16": {
+        "wrong_current": {
+          "test": {
+            "accuracy": 0.2638888888888889,
+            "mean_correct_probability": 0.250450707351168
+          },
+          "korean": {
+            "accuracy": 0.25,
+            "mean_correct_probability": 0.24940376190675628
+          }
+        },
+        "exact_tagged": {
+          "test": {
+            "accuracy": 0.5555555555555556,
+            "mean_correct_probability": 0.2657765926172336
+          },
+          "korean": {
+            "accuracy": 0.5833333333333334,
+            "mean_correct_probability": 0.2710337059365379
+          }
+        },
+        "decayed_tagged": {
+          "test": {
+            "accuracy": 0.5694444444444445,
+            "mean_correct_probability": 0.2527770397977696
+          },
+          "korean": {
+            "accuracy": 0.6111111111111112,
+            "mean_correct_probability": 0.25352539494633675
+          }
+        }
+      }
+    },
+    "interpretation": [
+      "At lag zero all three credit rules are identical and produced identical checkpoints and metrics.",
+      "At lag 16, wrong-current credit fell near chance while exact action-ID tagging retained its lag-zero test and Korean performance.",
+      "Decayed tagging retained accuracy but reduced mean correct probability; its constant exp(-2) reward scaling remains an amplitude confound rather than evidence for a special eligibility mechanism.",
+      "This online result replaces neither the preserved batched study nor a biological trace experiment; it isolates chronological software credit assignment under current-weight updates."
+    ],
+    "runtime_seconds": 27.12832079268992,
+    "guard_rerun_verification": {
+      "metrics_and_training_counts_unchanged": true,
+      "raw_checkpoint_sha256_unchanged": false,
+      "previous_checkpoint_sha256": {
+        "501/lag0/wrong_current": "7b27f874b986a697ddd632edd754590721b88e16c4fbc0ffd1c9e0da52f0c794",
+        "501/lag0/exact_tagged": "db668dd7a5a26700c04ee923863bb90a5aaf8894cb858f29f004c223efa91b83",
+        "501/lag0/decayed_tagged": "fef0b69dd815402b5533f326f1f3f163a41721bdca12c4c3b639d68068cea292",
+        "501/lag16/wrong_current": "293728c9633eefbf15e2c0682387b1e29f6bcc405d84845187bf59e2aa059924",
+        "501/lag16/exact_tagged": "0087651b9aa25dc23b93569290581746ddb5755cab58aafedc182878ad2325cd",
+        "501/lag16/decayed_tagged": "0f1cced709c006a5f355d7d425c229e580fd66683fc1322cc90efcf6a28da65f",
+        "502/lag0/wrong_current": "a46a96aadbcaf1d7087ad7d520458b93b72ff92e3a9523bc34e6d26806b9178f",
+        "502/lag0/exact_tagged": "5f9dad9c64d725d49ae466a5a18205997be4efd8e75443390439bae9d99d3619",
+        "502/lag0/decayed_tagged": "135e54dc765dfb75f5d02b243af6ab0c0b1663c226aa0db3f95af02521c3a986",
+        "502/lag16/wrong_current": "792f6968e4dfa0028dd083d084fbdec7c5b13f7a78419a108c6c9f38e3d8d87d",
+        "502/lag16/exact_tagged": "82b1569003197b5b98084026ac6b2a556c08be233a904266709b861487f2d463",
+        "502/lag16/decayed_tagged": "d74714a99069c6ee8034fdf448c8a57d38a0bb7d2eca26513c1de93a1628e6d6",
+        "503/lag0/wrong_current": "3fa071677f6b93c33b514160895932cf2102158c7fec3864a9eb81c6e8d11452",
+        "503/lag0/exact_tagged": "3485135cf85c3d26912f873860bd1ff792734904637236ae79e992d21148e218",
+        "503/lag0/decayed_tagged": "55a7cc6838005810e993aa936958fe4d8a7305222c2948979ee66d27253ad6a6",
+        "503/lag16/wrong_current": "ddb6e3f7c741b46c5a6ce607fe401451f17a1225b0996cbe986f082524e60e22",
+        "503/lag16/exact_tagged": "15ace1fc561f293041123a76e7fbe059a7bd84e650f59e154da7139f23ad5921",
+        "503/lag16/decayed_tagged": "89b8bd47f21265096e8e6b252de5f93977ec102108658a5ea97e9d9e7985df42"
+      },
+      "note": "Raw file SHA changed on reserialization although metrics/counts were identical. Engine.save builds safetensors metadata from a Rust HashMap whose serialization order is process-randomized; current checkpoint hashes are recorded per run."
+    }
+  }
+}
