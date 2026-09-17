@@ -137,3 +137,5 @@ python -m unittest discover -s examples/bio_bridge -p 'test_*.py' -q
 메커니즘 추출: [감각 적응·숨은층 억제·보상 흔적 비교 실험](MECHANISM_RESULTS.ko.md) 및 [일차 문헌과 계산 규칙](MECHANISM_RESEARCH.ko.md).
 
 임베딩 기반 상태 판독: [KC/MBON 복원 및 인과 대조 결과](THOUGHT_RESULTS.ko.md), [연구와 실제 초파리 측정 조건](THOUGHT_RESEARCH.ko.md).
+
+정밀 브리지: [측정 결과와 재실행](PRECISE_RESULTS.ko.md), [생물학적 연결 연구](PRECISE_RESEARCH.ko.md), [기록 가져오기와 BCI 원리 기반 안정화](NEURAL_LINK_RESEARCH.ko.md).

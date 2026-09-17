@@ -1,0 +1,6 @@
+{
+  "semantic_refit_exact": true,
+  "six_tensor_artifacts_exact": true,
+  "saved_final_predictions_exact": true,
+  "protocol_sha256": "4e017b48c4aea4e017bc85bd0155c222d87ef08b9618f595b7be47d3956f1c50"
+}

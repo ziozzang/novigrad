@@ -1,0 +1,32 @@
+{
+  "status": "exact isolated CPU retraining replay",
+  "passed": true,
+  "mapping_tensors_exact": {
+    "fixed": true,
+    "centered": true,
+    "pca": true
+  },
+  "checkpoint_tensors_exact": {
+    "fixed-seed-701": true,
+    "fixed-seed-702": true,
+    "fixed-seed-703": true,
+    "centered-seed-701": true,
+    "centered-seed-702": true,
+    "centered-seed-703": true,
+    "pca-seed-701": true,
+    "pca-seed-702": true,
+    "pca-seed-703": true
+  },
+  "metrics_and_predictions_exact": {
+    "fixed-seed-701": true,
+    "fixed-seed-702": true,
+    "fixed-seed-703": true,
+    "centered-seed-701": true,
+    "centered-seed-702": true,
+    "centered-seed-703": true,
+    "pca-seed-701": true,
+    "pca-seed-702": true,
+    "pca-seed-703": true
+  },
+  "original_development_sha256": "06a018b76345f3a2c5af73b11687b2284da6ba781d1844f4086ceedc65d8ba92"
+}

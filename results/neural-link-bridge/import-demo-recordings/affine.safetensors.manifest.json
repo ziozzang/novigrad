@@ -1,0 +1,23 @@
+{
+  "operation": "fit",
+  "schema_version": 1,
+  "inputs": {
+    "observed": {
+      "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/train-observed-shuffled.safetensors",
+      "sha256": "57d5f975985b509c4e616f51b65c169bc1160382d739f39c1ba5fe676ace53df"
+    },
+    "reference": {
+      "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/train-reference.safetensors",
+      "sha256": "73da8212544d03f8ab946cd6dcf72f15c7d2e1f6d1f88d1402b8ccecd4086ed8"
+    }
+  },
+  "calibration": {
+    "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/affine.safetensors",
+    "sha256": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b"
+  },
+  "paired_rows": 32,
+  "features": 5177,
+  "ridge": 0.1,
+  "time_tolerance_seconds": 0.0,
+  "alignment": "sample_id with identical channel_ids/order"
+}

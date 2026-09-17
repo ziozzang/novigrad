@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "4e017b48c4aea4e017bc85bd0155c222d87ef08b9618f595b7be47d3956f1c50",
+  "sha256": {
+    "results/precise-bridge/final.json": "3a4860210d1191ab6fe620869b589c75b05fb5be976de0c46120c538e7ad8c0c",
+    "results/precise-bridge/native-final.json": "d77d2f51e268727feac698d32f60fad9db8cd6508503196ab6d7b70deac74b31",
+    "results/precise-bridge/permutation-final.json": "35346790b1a530ff55e6950de20e3693a213fe3ea650b9bf5c4faf6a403ed36f",
+    "results/precise-bridge/holdout-embeddings.safetensors": "6028ee8cbbd91f3e51bde31ff502cda3ee94688f43cf793e3467df4be4871926",
+    "results/precise-bridge/provenance.json": "cab4ba835e953d44ec6133485f1489bc302f4fce2576e248d109a57b846094a6"
+  }
+}

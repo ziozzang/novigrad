@@ -1,0 +1,43 @@
+{
+  "scope": "Authored64 translated32 scenarios in8families. Resampling interval is descriptive for this small authored sample, not population validity.",
+  "modes": {
+    "fixed": {
+      "semantic_accuracy": 0.59375,
+      "native_accuracy": 0.4114583333333333,
+      "native_mean_correct_probability": 0.25544620646784705,
+      "semantic_language_accuracy": {
+        "en": 0.6875,
+        "ko": 0.5
+      }
+    },
+    "centered": {
+      "semantic_accuracy": 0.640625,
+      "native_accuracy": 0.5885416666666666,
+      "native_mean_correct_probability": 0.2626694654269765,
+      "semantic_language_accuracy": {
+        "en": 0.875,
+        "ko": 0.40625
+      }
+    },
+    "pca": {
+      "semantic_accuracy": 0.9375,
+      "native_accuracy": 0.921875,
+      "native_mean_correct_probability": 0.2771911398352434,
+      "semantic_language_accuracy": {
+        "en": 1.0,
+        "ko": 0.875
+      }
+    }
+  },
+  "raw_semantic_accuracy": 0.90625,
+  "pca_minus_fixed_family_cluster_bootstrap": {
+    "families": 8,
+    "mean_difference": 0.34375,
+    "percentile95": [
+      0.25,
+      0.421875
+    ],
+    "seed": 917,
+    "replicates": 10000
+  }
+}

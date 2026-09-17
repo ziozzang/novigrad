@@ -1,0 +1,341 @@
+{
+  "base_commit": "6a2e62566d867f43c477fe12bc254d8f014f126c",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "python": "3.11.15",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "safetensors": "0.8.0",
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.0.1"
+  },
+  "tests": {
+    "bio_bridge": 67,
+    "function_bridge": 23,
+    "gemma_bridge": 2,
+    "native_python": 5,
+    "total": 97,
+    "all_passed": true,
+    "pip_check": "pass"
+  },
+  "protocol_lock_verified": true,
+  "evaluation_lock_verified": true,
+  "full_pipeline_reproduction": "34 Safetensors arrays and all final semantic/native/permutation predictions exact; see full-reproduction.json",
+  "recording_import": "ID-aligned fit/apply/verify on5177 graph-root-ID channels; synthetic timestamps; exact saved vs direct f32 output",
+  "local_safetensors": {
+    "results/precise-bridge/perm-centered-812.safetensors": {
+      "sha256": "10644d2d4196220c58742ab10f8c2150f4d1267061fd8eb1ff1304227c6856bb",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/decoder-fixed.safetensors": {
+      "sha256": "10925fdd3bb67570299fca0204fed018045873e6c7b0961278056aa0d8b8fed0",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/perm-pca-814.safetensors": {
+      "sha256": "2d44823f979217943e47c8ffb3de216fe38685df0be053b2009a0f0330853f34",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-fixed-815.safetensors": {
+      "sha256": "306c7daeb5c6b95f504508633232c7777866680b77d2254588472809fb7d675d",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/native-ports-fixed.safetensors": {
+      "sha256": "70870f9759ff02859709e79914dd5f0d97dbf51d5f7163f4334ad555fc0d3dbd",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/perm-pca-811.safetensors": {
+      "sha256": "16ce5059679d3f395f2806d46d57c6bac8f0fc6cbe29090b9995cdf1e40121cc",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/decoder-centered.safetensors": {
+      "sha256": "06a552978667f3f96e7708e88f083317343dff0873ab476d0bc157a72cfeb3b5",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/perm-centered-814.safetensors": {
+      "sha256": "432a7b1f47acc59c37c052ba7e47dd223e555b95b788a6b35bb2357e38ed38cc",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-pca-812.safetensors": {
+      "sha256": "ec50e6864d5b04eda1c5aced0a2d55eb17903908d050ffb106c94961d08f0f81",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-fixed-813.safetensors": {
+      "sha256": "9b3dd215da2e18c0751cd2251412306a64f565fdc0a7dc5b2f3942dcc28885c0",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/decoder-pca.safetensors": {
+      "sha256": "7c24c9a6212f1dc906c6eac89e7bb803fb7864b62d155e520ff7c4558f40260f",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/native-ports-pca.safetensors": {
+      "sha256": "26b9c7acbe79d0176d06da2d62eeaaf862d0b711ee4a1fc696f8440cd8b0e868",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/perm-centered-811.safetensors": {
+      "sha256": "85e10bd8bfe0499cbbdeab009dbcedfc9ed9793f5a950fba9e2792e1b5330717",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/ports-fixed.safetensors": {
+      "sha256": "11ba1b44af6433f15a4a6810a6469644a4252b69dce1ea8a0b25abbf1b04cf23",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/perm-fixed-811.safetensors": {
+      "sha256": "9efaccff6ba06cb62e12f5e9c63b2c9a556ee1b84d4f3a5f9c4b3f06d64705ac",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-pca-815.safetensors": {
+      "sha256": "b6e12c05335b5479ac1dd0f12bd89d4a07bdde844b338707d93a3532abdd4360",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/holdout-embeddings.safetensors": {
+      "sha256": "6028ee8cbbd91f3e51bde31ff502cda3ee94688f43cf793e3467df4be4871926",
+      "tensor_count": 1
+    },
+    "results/precise-bridge/perm-fixed-814.safetensors": {
+      "sha256": "75f735504a21e9a3eecbf4018ffe914f2195b3d69a2f86780070c954259a7403",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-centered-813.safetensors": {
+      "sha256": "0f6371a5f6402063187a827d07ac86e84d3816adc009ec4173b4672049a3b24c",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/ports-pca.safetensors": {
+      "sha256": "7b94c8965ff581009502bad756cd0dd37471c308bf682bbaed65e5625da916a3",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/ports-centered.safetensors": {
+      "sha256": "4fa6eb187913a7264589fd678146d46aadb0db18a40648c51c6aa602126befa4",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/perm-pca-813.safetensors": {
+      "sha256": "795adc8e097b33c5dc553a6a2f31dc0a0b4dd2a30f2f26b435c36437d0993119",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-fixed-812.safetensors": {
+      "sha256": "7e4f80e74795ec359b2b1a9620f618b0ca2022e393c5b4528e8a08b1b94cae76",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/perm-centered-815.safetensors": {
+      "sha256": "62c4273f945e61d0874e65a72b4fa226220353ef8e47d214eeefe816a3268e20",
+      "tensor_count": 3
+    },
+    "results/precise-bridge/native-ports-centered.safetensors": {
+      "sha256": "58753c9d95fb65a79896cc69ff7649df32a67e751485516647bf2b3f757eb704",
+      "tensor_count": 2
+    },
+    "results/precise-bridge/native-checkpoints/fixed-seed-703.safetensors": {
+      "sha256": "700a706ebdb066ab3c79e4afa01aa39f8646afc5eb529c96fc0ff43a56d1e5dc",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/centered-seed-701.safetensors": {
+      "sha256": "cce0a2671acbfffae422407bfadd3daabd4a065c3109d8c4ebf485cf719addc0",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/pca-seed-703.safetensors": {
+      "sha256": "9bfda51bc8edaac3292a8319ab480f8ebbbaf9e8c29f079e4c6a99ce9987ab91",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/centered-seed-702.safetensors": {
+      "sha256": "2b078990f26e41b89358c4d753a19516f9e0bf15cc589329754fd177629505ea",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/pca-seed-702.safetensors": {
+      "sha256": "3ce918a19b934fa447c77cd439dc609905aaa3ec9c36733d40569189ba655f4a",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/fixed-seed-702.safetensors": {
+      "sha256": "1151d7cebc9e6105daed10afc0a31075763e4bf1f54f49aaba4104f4cf6ab5bb",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/fixed-seed-701.safetensors": {
+      "sha256": "2c90a303a6b04ef91d2774e38d4c8206a83bfc79287ede9d0e1b50001d39b98a",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/centered-seed-703.safetensors": {
+      "sha256": "c23273865201468c958ce8c3011ecfd5f3a028842931762b3b4e4283eb0eb9f6",
+      "tensor_count": 14
+    },
+    "results/precise-bridge/native-checkpoints/pca-seed-701.safetensors": {
+      "sha256": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7",
+      "tensor_count": 14
+    },
+    "results/neural-link-bridge/calibrator-gain_offset-n8.safetensors": {
+      "sha256": "28e0250bc97bddeabde6c29b3bb866a9d653143ac8988a702d3b2a266b587a80",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-dropout25-n16.safetensors": {
+      "sha256": "3cbe8575eaacf5093363ab05e9a4e1a66f1f93553c9db6ceaf0f9e14c440b603",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-dropout50-n16.safetensors": {
+      "sha256": "e208cf622d82a449078b4cbee25934949aa5573e322f0c6e29c28efcfb3b607c",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-clean-n16.safetensors": {
+      "sha256": "59e2384e91fe4b0bc77ab618f12233a85c8ed7809a7e0a3cdad15a8b0026acaf",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-clean-n8.safetensors": {
+      "sha256": "48231815229c10e0ec8f6395a11250b24303ae46ae8857ed501957415a49d077",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-gain_offset-n16.safetensors": {
+      "sha256": "2aa9e3c84ad111c3cf50d8b6d83695091db356254419d40df189256643ac0643",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-dropout25-n8.safetensors": {
+      "sha256": "ebbc7962ed58d96cec13297346e04dadef4dfe872b9c1f80a7c79a714edf8c24",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-gain_offset-n32.safetensors": {
+      "sha256": "12588826b10fa48ee05e5c0087fe3c262e5ca5c51dd0fdfe6964bf6cc7e76a04",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-dropout50-n8.safetensors": {
+      "sha256": "fb3c2451accde0a272ef253c42f08826c0a293330b69a11dd4c08bb506f4e71b",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-dropout25-n32.safetensors": {
+      "sha256": "3f1fbfe17f1b3d6c86d88fed245b62bc4155678d26825b502d112128965ed196",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-clean-n32.safetensors": {
+      "sha256": "a04452d7fe5c7a0479f5cab4625484a45a2ec9c7e0a0d4871ad31e4f8ae5ff24",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/calibrator-dropout50-n32.safetensors": {
+      "sha256": "97b648a8d3cd1af68925356d0459ce278630107bcc2e62c296c87786ad29a672",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/import-demo-recordings/affine.safetensors": {
+      "sha256": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b",
+      "tensor_count": 3
+    },
+    "results/neural-link-bridge/import-demo-recordings/validation-corrected.safetensors": {
+      "sha256": "81e8732718da22de81aabcaab491f2c8cb1fad77dc214ce91f5789ea4ae99eb0",
+      "tensor_count": 5
+    },
+    "results/neural-link-bridge/import-demo-recordings/train-reference.safetensors": {
+      "sha256": "73da8212544d03f8ab946cd6dcf72f15c7d2e1f6d1f88d1402b8ccecd4086ed8",
+      "tensor_count": 5
+    },
+    "results/neural-link-bridge/import-demo-recordings/train-observed-shuffled.safetensors": {
+      "sha256": "57d5f975985b509c4e616f51b65c169bc1160382d739f39c1ba5fe676ace53df",
+      "tensor_count": 5
+    },
+    "results/neural-link-bridge/import-demo-recordings/validation-observed.safetensors": {
+      "sha256": "f42ea47a1b572f71a1a76e7ea67a5b631f6f6100dd7db6c36030a19cf0e9c6a2",
+      "tensor_count": 5
+    }
+  },
+  "local_safetensors_count": 51,
+  "artifact_sha256": {
+    ".gitignore": "f8cdcd5464dea750a21602294e31844684f97cbd5afcbf6e8fcfbc59e5838350",
+    "CHANGELOG.md": "9d187ea0b2b79cb4c4809625cb6ea4a6b05383468631c304919bb09634fac49c",
+    "README.ko.md": "bc24d84dbaab74f6cdd54b14ce19be30c718442efaa06c6ccdd81e529a2bea7d",
+    "README.md": "e952a6a4cbd7fbf74e0da5a305cf13af3ca56064f568ea1c8ea67a603f23403a",
+    "examples/bio_bridge/NEURAL_LINK_RESEARCH.ko.md": "7c2d7efa9f49f224314ea590885411b7188258ea79839b0efcac1dcd4e95098d",
+    "examples/bio_bridge/NEURAL_LINK_RESEARCH.md": "7c7a1ac99026131f1830634eb2e1e3ef2e1d4d4dc36f39dfcd7a2f1fce028c67",
+    "examples/bio_bridge/PRECISE_RESEARCH.ko.md": "ec4ef1354a09f9f89f533719f7428b89dde1463574e3825fe9bcbb4b1eb9e0b3",
+    "examples/bio_bridge/PRECISE_RESEARCH.md": "6fa74460e7b0ef873171c4be2aaa69513576c19e8ba82d0cf49b665672af687e",
+    "examples/bio_bridge/PRECISE_RESULTS.ko.md": "95cb0688c2c49f4498194b0004de8b2a8542e911da1b3efb9013660ec4164893",
+    "examples/bio_bridge/PRECISE_RESULTS.md": "f06e65db9162339dbe5d0b95279824bf0dda9e271a4c9fa3434a1535cc166969",
+    "examples/bio_bridge/README.ko.md": "f0ec6a80a4636b937e3d1e4b2fba9bf1a6e41e3269e9cc25ffa3db1bdac5f6bf",
+    "examples/bio_bridge/README.md": "16e97d2c99314713e88d461bebbeb969d4a07031bae1bdfc6f011de6b3a03549",
+    "examples/bio_bridge/check_precise_untrained.py": "f3b832471711b318440a4030207aefd3371839a266ad0738c178263ff1a2f117",
+    "examples/bio_bridge/demo_neural_recordings.py": "ef8a31c29bd85512cf724d25c0ac801b362af379812844ddff88d87e224ffd70",
+    "examples/bio_bridge/encode_precise_holdout.py": "54bedb9a225ecbe56d9eac888b451c8af2e1c0a91714154ab6e5a85267cb37fa",
+    "examples/bio_bridge/export_precise_wiring.py": "612ecee50d6baf499701c8fe84c7cda88237fc72d8ef83f4f3a58758b9443daa",
+    "examples/bio_bridge/neural_link_stability.py": "fe23d1135b745383033a55ea9f7024293e6d4953ee56122d9812bdd9ce035ca8",
+    "examples/bio_bridge/precise_bridge.py": "664daea3834b361d2d800ea681feb8ddb3888bcd2d5d108a0321c5e28f51e02e",
+    "examples/bio_bridge/precise_holdout.json": "1dccc40f6e621fb8f14862ae91808415f5fadce8f9c93126c6234ece1b8e67ca",
+    "examples/bio_bridge/precise_native.py": "a02f2183effb682b144136426e734bb674b17be37bc0ce36642abde73b0fe328",
+    "examples/bio_bridge/precise_permutation.py": "b1de5c36e7e89ec1791b45abeb60cc3c67d6347ec9c96be95a73471e9a72a014",
+    "examples/bio_bridge/precise_pipeline.py": "ad5e14a3776c0e10e516ca350310a2b4550b4db0075ed34d6614bb863926c758",
+    "examples/bio_bridge/replay_precise_artifacts.py": "0c4fca43219e59b1311f059b5633c2e156778945082b09969ec33eabe82ec6b0",
+    "examples/bio_bridge/run_neural_bridge.py": "903b109b9792d4642aa1ead1440f1384e535cc0658025e3165dda68883cf68f5",
+    "examples/bio_bridge/summarize_precise.py": "17b0cce236340f4d7a7035dba9f509fe03ef59b6bcbffd6b77a273f01f93720e",
+    "examples/bio_bridge/test_neural_link_stability.py": "aa4c141f475e0e17b74664c81f5c4a209532c42baa2097ec63c150b2f5ebb663",
+    "examples/bio_bridge/test_neural_runner.py": "a417047bdbad522da0c49557199af5fc12243cdcfe209fc6bbb1aa8805435f39",
+    "examples/bio_bridge/test_precise_bridge.py": "94ede2c7541a03fbf8994fa4ab410bc46a6ea6bbf085ea07110d7c97b91ab630",
+    "examples/bio_bridge/test_precise_native.py": "6bed278bdc8d4c0361c9ad3a0d251c65fe71b37e6a7c30fbc8d31494491a93a6",
+    "examples/bio_bridge/test_precise_permutation.py": "f1f991b4c0325324e8d3957b301af2323d453234cc9891ae7b52a83a2f1ffa2d",
+    "examples/bio_bridge/test_precise_pipeline.py": "b41a8e949c22c899bdc5544f972eaf9141da7c9e8fe43c57d6ef8ad39aed867b",
+    "results/neural-link-bridge/calibrator-clean-n16.safetensors": "59e2384e91fe4b0bc77ab618f12233a85c8ed7809a7e0a3cdad15a8b0026acaf",
+    "results/neural-link-bridge/calibrator-clean-n32.safetensors": "a04452d7fe5c7a0479f5cab4625484a45a2ec9c7e0a0d4871ad31e4f8ae5ff24",
+    "results/neural-link-bridge/calibrator-clean-n8.safetensors": "48231815229c10e0ec8f6395a11250b24303ae46ae8857ed501957415a49d077",
+    "results/neural-link-bridge/calibrator-dropout25-n16.safetensors": "3cbe8575eaacf5093363ab05e9a4e1a66f1f93553c9db6ceaf0f9e14c440b603",
+    "results/neural-link-bridge/calibrator-dropout25-n32.safetensors": "3f1fbfe17f1b3d6c86d88fed245b62bc4155678d26825b502d112128965ed196",
+    "results/neural-link-bridge/calibrator-dropout25-n8.safetensors": "ebbc7962ed58d96cec13297346e04dadef4dfe872b9c1f80a7c79a714edf8c24",
+    "results/neural-link-bridge/calibrator-dropout50-n16.safetensors": "e208cf622d82a449078b4cbee25934949aa5573e322f0c6e29c28efcfb3b607c",
+    "results/neural-link-bridge/calibrator-dropout50-n32.safetensors": "97b648a8d3cd1af68925356d0459ce278630107bcc2e62c296c87786ad29a672",
+    "results/neural-link-bridge/calibrator-dropout50-n8.safetensors": "fb3c2451accde0a272ef253c42f08826c0a293330b69a11dd4c08bb506f4e71b",
+    "results/neural-link-bridge/calibrator-gain_offset-n16.safetensors": "2aa9e3c84ad111c3cf50d8b6d83695091db356254419d40df189256643ac0643",
+    "results/neural-link-bridge/calibrator-gain_offset-n32.safetensors": "12588826b10fa48ee05e5c0087fe3c262e5ca5c51dd0fdfe6964bf6cc7e76a04",
+    "results/neural-link-bridge/calibrator-gain_offset-n8.safetensors": "28e0250bc97bddeabde6c29b3bb866a9d653143ac8988a702d3b2a266b587a80",
+    "results/neural-link-bridge/import-demo-recordings/affine.safetensors": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b",
+    "results/neural-link-bridge/import-demo-recordings/affine.safetensors.manifest.json": "335430c8a3f4c05c8d360791cae6c959d6341665ddd1f92f94ae46bc382e1cff",
+    "results/neural-link-bridge/import-demo-recordings/train-observed-shuffled.safetensors": "57d5f975985b509c4e616f51b65c169bc1160382d739f39c1ba5fe676ace53df",
+    "results/neural-link-bridge/import-demo-recordings/train-reference.safetensors": "73da8212544d03f8ab946cd6dcf72f15c7d2e1f6d1f88d1402b8ccecd4086ed8",
+    "results/neural-link-bridge/import-demo-recordings/validation-corrected.safetensors": "81e8732718da22de81aabcaab491f2c8cb1fad77dc214ce91f5789ea4ae99eb0",
+    "results/neural-link-bridge/import-demo-recordings/validation-corrected.safetensors.manifest.json": "dd1fe0aa33cc1af6202e36d77819fc743d4c5fbd16a81ae2ae67872cc825b7f1",
+    "results/neural-link-bridge/import-demo-recordings/validation-observed.safetensors": "f42ea47a1b572f71a1a76e7ea67a5b631f6f6100dd7db6c36030a19cf0e9c6a2",
+    "results/neural-link-bridge/import-demo.json": "f00afa0d6ac438fb03a548c1489f6dad461a553f95875cf6e6e2c31eada526db",
+    "results/neural-link-bridge/stability.json": "ea94203affa34b1d53bc1009738d01fd37e505ae1d0a1bd3da5495b982b5f72a",
+    "results/precise-bridge/baseline.json": "2e90695b6346f19d4d8d2f5e2b5f8606568ab2990b75d7ecaf382ec44cda9881",
+    "results/precise-bridge/comparison.png": "1d99d65a9c328ce07512fbfec254974e4a86b5a7d4c7f4f1d0171163e2b427a5",
+    "results/precise-bridge/comparison.svg": "2df45a9b3bc3c594777d735e87ff0b913bade763a5c4362b683cd8a64997c350",
+    "results/precise-bridge/decoder-centered.safetensors": "06a552978667f3f96e7708e88f083317343dff0873ab476d0bc157a72cfeb3b5",
+    "results/precise-bridge/decoder-fixed.safetensors": "10925fdd3bb67570299fca0204fed018045873e6c7b0961278056aa0d8b8fed0",
+    "results/precise-bridge/decoder-pca.safetensors": "7c24c9a6212f1dc906c6eac89e7bb803fb7864b62d155e520ff7c4558f40260f",
+    "results/precise-bridge/development.json": "a4b1e20fee948cb01b7de463a9e9947086f6b80ad4c562422b2249afdeac9469",
+    "results/precise-bridge/evaluation-lock.json": "14c5b2794cf585ba0d234720c629a9573636df9226cf26d8fa943d3f40b5e34f",
+    "results/precise-bridge/extended-replay.json": "9d936ef14226e320336e80cb5986979dc6422b6a5e198b9e89114936e5846ff2",
+    "results/precise-bridge/final.json": "3a4860210d1191ab6fe620869b589c75b05fb5be976de0c46120c538e7ad8c0c",
+    "results/precise-bridge/full-reproduction.json": "aa9a0b48a95a44af263ab404017dd44414660fe05174d313519dc9d9c7fc5a06",
+    "results/precise-bridge/holdout-embeddings.safetensors": "6028ee8cbbd91f3e51bde31ff502cda3ee94688f43cf793e3467df4be4871926",
+    "results/precise-bridge/native-checkpoints/centered-seed-701.safetensors": "cce0a2671acbfffae422407bfadd3daabd4a065c3109d8c4ebf485cf719addc0",
+    "results/precise-bridge/native-checkpoints/centered-seed-702.safetensors": "2b078990f26e41b89358c4d753a19516f9e0bf15cc589329754fd177629505ea",
+    "results/precise-bridge/native-checkpoints/centered-seed-703.safetensors": "c23273865201468c958ce8c3011ecfd5f3a028842931762b3b4e4283eb0eb9f6",
+    "results/precise-bridge/native-checkpoints/fixed-seed-701.safetensors": "2c90a303a6b04ef91d2774e38d4c8206a83bfc79287ede9d0e1b50001d39b98a",
+    "results/precise-bridge/native-checkpoints/fixed-seed-702.safetensors": "1151d7cebc9e6105daed10afc0a31075763e4bf1f54f49aaba4104f4cf6ab5bb",
+    "results/precise-bridge/native-checkpoints/fixed-seed-703.safetensors": "700a706ebdb066ab3c79e4afa01aa39f8646afc5eb529c96fc0ff43a56d1e5dc",
+    "results/precise-bridge/native-checkpoints/pca-seed-701.safetensors": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7",
+    "results/precise-bridge/native-checkpoints/pca-seed-702.safetensors": "3ce918a19b934fa447c77cd439dc609905aaa3ec9c36733d40569189ba655f4a",
+    "results/precise-bridge/native-checkpoints/pca-seed-703.safetensors": "9bfda51bc8edaac3292a8319ab480f8ebbbaf9e8c29f079e4c6a99ce9987ab91",
+    "results/precise-bridge/native-development.json": "06a018b76345f3a2c5af73b11687b2284da6ba781d1844f4086ceedc65d8ba92",
+    "results/precise-bridge/native-final.json": "d77d2f51e268727feac698d32f60fad9db8cd6508503196ab6d7b70deac74b31",
+    "results/precise-bridge/native-ports-centered.safetensors": "58753c9d95fb65a79896cc69ff7649df32a67e751485516647bf2b3f757eb704",
+    "results/precise-bridge/native-ports-fixed.safetensors": "70870f9759ff02859709e79914dd5f0d97dbf51d5f7163f4334ad555fc0d3dbd",
+    "results/precise-bridge/native-ports-pca.safetensors": "26b9c7acbe79d0176d06da2d62eeaaf862d0b711ee4a1fc696f8440cd8b0e868",
+    "results/precise-bridge/native-replay.json": "ac188e786079bd7970428808d3e61fdf2412429e0abaed8f6e3aea590c829793",
+    "results/precise-bridge/perm-centered-811.safetensors": "85e10bd8bfe0499cbbdeab009dbcedfc9ed9793f5a950fba9e2792e1b5330717",
+    "results/precise-bridge/perm-centered-812.safetensors": "10644d2d4196220c58742ab10f8c2150f4d1267061fd8eb1ff1304227c6856bb",
+    "results/precise-bridge/perm-centered-813.safetensors": "0f6371a5f6402063187a827d07ac86e84d3816adc009ec4173b4672049a3b24c",
+    "results/precise-bridge/perm-centered-814.safetensors": "432a7b1f47acc59c37c052ba7e47dd223e555b95b788a6b35bb2357e38ed38cc",
+    "results/precise-bridge/perm-centered-815.safetensors": "62c4273f945e61d0874e65a72b4fa226220353ef8e47d214eeefe816a3268e20",
+    "results/precise-bridge/perm-fixed-811.safetensors": "9efaccff6ba06cb62e12f5e9c63b2c9a556ee1b84d4f3a5f9c4b3f06d64705ac",
+    "results/precise-bridge/perm-fixed-812.safetensors": "7e4f80e74795ec359b2b1a9620f618b0ca2022e393c5b4528e8a08b1b94cae76",
+    "results/precise-bridge/perm-fixed-813.safetensors": "9b3dd215da2e18c0751cd2251412306a64f565fdc0a7dc5b2f3942dcc28885c0",
+    "results/precise-bridge/perm-fixed-814.safetensors": "75f735504a21e9a3eecbf4018ffe914f2195b3d69a2f86780070c954259a7403",
+    "results/precise-bridge/perm-fixed-815.safetensors": "306c7daeb5c6b95f504508633232c7777866680b77d2254588472809fb7d675d",
+    "results/precise-bridge/perm-pca-811.safetensors": "16ce5059679d3f395f2806d46d57c6bac8f0fc6cbe29090b9995cdf1e40121cc",
+    "results/precise-bridge/perm-pca-812.safetensors": "ec50e6864d5b04eda1c5aced0a2d55eb17903908d050ffb106c94961d08f0f81",
+    "results/precise-bridge/perm-pca-813.safetensors": "795adc8e097b33c5dc553a6a2f31dc0a0b4dd2a30f2f26b435c36437d0993119",
+    "results/precise-bridge/perm-pca-814.safetensors": "2d44823f979217943e47c8ffb3de216fe38685df0be053b2009a0f0330853f34",
+    "results/precise-bridge/perm-pca-815.safetensors": "b6e12c05335b5479ac1dd0f12bd89d4a07bdde844b338707d93a3532abdd4360",
+    "results/precise-bridge/permutation-development.json": "949171dc60b9927cb263090b48fd58461a2e51757979a2b5ccd51b7a9de5ed45",
+    "results/precise-bridge/permutation-final.json": "35346790b1a530ff55e6950de20e3693a213fe3ea650b9bf5c4faf6a403ed36f",
+    "results/precise-bridge/ports-centered.safetensors": "4fa6eb187913a7264589fd678146d46aadb0db18a40648c51c6aa602126befa4",
+    "results/precise-bridge/ports-fixed.safetensors": "11ba1b44af6433f15a4a6810a6469644a4252b69dce1ea8a0b25abbf1b04cf23",
+    "results/precise-bridge/ports-pca.safetensors": "7b94c8965ff581009502bad756cd0dd37471c308bf682bbaed65e5625da916a3",
+    "results/precise-bridge/protocol-lock.json": "4e017b48c4aea4e017bc85bd0155c222d87ef08b9618f595b7be47d3956f1c50",
+    "results/precise-bridge/provenance.json": "cab4ba835e953d44ec6133485f1489bc302f4fce2576e248d109a57b846094a6",
+    "results/precise-bridge/semantic-replay.json": "377943abdfbf0e1fe6f5472680dafe07d795869bf1935f4da4f7d8574832eb7e",
+    "results/precise-bridge/summary.json": "568136e4af41a6748784471fbe46a4422126e9292a5aa8416588a347136f27ab",
+    "results/precise-bridge/untrained-final-posthoc.json": "31de0231fac3ab3b43993d4f66c33e71a945bb2f32451cb3c65a5438c7e0fc28",
+    "results/precise-bridge/wiring.json": "6eb1d25de695b230a3eeec540fff15235f428a908f331b18c2ca39d60ef63a3b"
+  },
+  "distribution": "Generated Safetensors and duplicate full reproduction directories remain git-ignored locally; scripts and provenance reports tracked."
+}

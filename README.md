@@ -107,3 +107,5 @@ Signal timing and strength: [continuous versus one-shot input, host memory, rewa
 Fly-inspired mechanism extraction: [adaptation, APL-style inhibition, and eligibility traces with matched controls](examples/bio_bridge/MECHANISM_RESULTS.md).
 
 Embedding-based neural state readout: [KC/MBON semantic reconstruction and causal controls](examples/bio_bridge/THOUGHT_RESULTS.md), with [biological decoding research](examples/bio_bridge/THOUGHT_RESEARCH.md).
+
+Precise neural interface fitting: [train-only PCA calibration, native reward learning, locked evaluation and exact replay](examples/bio_bridge/PRECISE_RESULTS.md). [BCI-inspired recording import and drift calibration](examples/bio_bridge/NEURAL_LINK_RESEARCH.md) documents both successful and unsuccessful controls.

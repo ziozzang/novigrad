@@ -87,3 +87,5 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 초파리 메커니즘 추출·비교: [감각 적응, APL형 억제, 보상 흔적과 대조군 실험](examples/bio_bridge/MECHANISM_RESULTS.ko.md).
 
 임베딩 기반 신경 상태 판독: [KC/MBON 의미 복원과 인과 대조 실험](examples/bio_bridge/THOUGHT_RESULTS.ko.md), [생물학적 판독 연구](examples/bio_bridge/THOUGHT_RESEARCH.ko.md).
+
+정밀 신경 인터페이스: [학습 데이터 전용 PCA 보정, 보상 학습, 고정된 평가와 정확한 재실행](examples/bio_bridge/PRECISE_RESULTS.ko.md). [BCI 원리 기반 기록 가져오기·신호 변화 보정](examples/bio_bridge/NEURAL_LINK_RESEARCH.ko.md)에는 실패한 대조 실험도 기록했습니다.

@@ -1,0 +1,22 @@
+{
+  "operation": "apply",
+  "schema_version": 1,
+  "inputs": {
+    "calibration": {
+      "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/affine.safetensors",
+      "sha256": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b"
+    },
+    "recording": {
+      "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/validation-observed.safetensors",
+      "sha256": "f42ea47a1b572f71a1a76e7ea67a5b631f6f6100dd7db6c36030a19cf0e9c6a2"
+    }
+  },
+  "output": {
+    "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/validation-corrected.safetensors",
+    "sha256": "81e8732718da22de81aabcaab491f2c8cb1fad77dc214ce91f5789ea4ae99eb0"
+  },
+  "rows": 12,
+  "input_features": 5177,
+  "output_features": 5177,
+  "channel_policy": "exact identity and order required"
+}

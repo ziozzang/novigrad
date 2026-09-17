@@ -1,0 +1,1147 @@
+{
+  "stage": "development",
+  "protocol": {
+    "status": "all mappings, parameters, seeds, and exposure budgets fixed before validation results",
+    "modes": [
+      "fixed",
+      "centered",
+      "pca"
+    ],
+    "seeds": [
+      701,
+      702,
+      703
+    ],
+    "epochs": 64,
+    "batch_size": 8,
+    "interactions_per_run": 2048,
+    "optimizer_updates_per_run": 256,
+    "engine": {
+      "learning_rate": 0.3,
+      "logit_gain": 1.0,
+      "active_fraction": 0.02,
+      "homeostasis": false,
+      "readout": "opponent"
+    },
+    "feedback": "+1 only when the sampled action equals the label, otherwise -1; no teacher-action update",
+    "mapping_boundary": "PortBridge.fit receives training embeddings only and no feature/class labels",
+    "stream_pairing": "epoch permutations and action uniforms are identical across mappings within seed; sampled actions can diverge",
+    "model_boundary": "this trains native KC-to-MBON policy weights, unlike the separate supervised semantic ridge probes",
+    "validation": "12-item development split; no final holdout read"
+  },
+  "mappings": {
+    "fixed": {
+      "kind": "embedding_to_port_mapping",
+      "path": "results/precise-bridge/native-ports-fixed.safetensors",
+      "sha256": "70870f9759ff02859709e79914dd5f0d97dbf51d5f7163f4334ad555fc0d3dbd",
+      "mode": "fixed"
+    },
+    "centered": {
+      "kind": "embedding_to_port_mapping",
+      "path": "results/precise-bridge/native-ports-centered.safetensors",
+      "sha256": "58753c9d95fb65a79896cc69ff7649df32a67e751485516647bf2b3f757eb704",
+      "mode": "centered"
+    },
+    "pca": {
+      "kind": "embedding_to_port_mapping",
+      "path": "results/precise-bridge/native-ports-pca.safetensors",
+      "sha256": "26b9c7acbe79d0176d06da2d62eeaaf862d0b711ee4a1fc696f8440cd8b0e868",
+      "mode": "pca"
+    }
+  },
+  "runs": [
+    {
+      "mode": "fixed",
+      "seed": 701,
+      "initial_validation": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2498761514822642,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 527,
+        "sampled_correct_fraction": 0.25732421875,
+        "mean_reward": -0.4853515625
+      },
+      "trained_validation": {
+        "accuracy": 0.3333333333333333,
+        "mean_correct_probability": 0.25969381133715314,
+        "confusion": [
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "predictions": [
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "da88df087604ed94f571660b8ab02a67e34c64b7c36e0bd7da920cf13d9f207c",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/fixed-seed-701.safetensors",
+        "sha256": "2c90a303a6b04ef91d2774e38d4c8206a83bfc79287ede9d0e1b50001d39b98a",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "fixed",
+      "seed": 702,
+      "initial_validation": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2498761514822642,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 528,
+        "sampled_correct_fraction": 0.2578125,
+        "mean_reward": -0.484375
+      },
+      "trained_validation": {
+        "accuracy": 0.6666666666666666,
+        "mean_correct_probability": 0.2603512580196063,
+        "confusion": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            0
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          1
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "eb4c363f5c4ddd360a1ae55e2ac9ad38a787ab9882b17a7c6749183877c89b11",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/fixed-seed-702.safetensors",
+        "sha256": "1151d7cebc9e6105daed10afc0a31075763e4bf1f54f49aaba4104f4cf6ab5bb",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "fixed",
+      "seed": 703,
+      "initial_validation": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2498761514822642,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 519,
+        "sampled_correct_fraction": 0.25341796875,
+        "mean_reward": -0.4931640625
+      },
+      "trained_validation": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.26024503509203595,
+        "confusion": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            0
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "dbc9bba50dd0c6c08473e136c88a417b45a2f79b0e8205062129b4c97dee1d1f",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/fixed-seed-703.safetensors",
+        "sha256": "700a706ebdb066ab3c79e4afa01aa39f8646afc5eb529c96fc0ff43a56d1e5dc",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "centered",
+      "seed": 701,
+      "initial_validation": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24965094650785127,
+        "confusion": [
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "predictions": [
+          3,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 571,
+        "sampled_correct_fraction": 0.27880859375,
+        "mean_reward": -0.4423828125
+      },
+      "trained_validation": {
+        "accuracy": 0.75,
+        "mean_correct_probability": 0.27886101727684337,
+        "confusion": [
+          [
+            2,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "da88df087604ed94f571660b8ab02a67e34c64b7c36e0bd7da920cf13d9f207c",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/centered-seed-701.safetensors",
+        "sha256": "cce0a2671acbfffae422407bfadd3daabd4a065c3109d8c4ebf485cf719addc0",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "centered",
+      "seed": 702,
+      "initial_validation": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24965094650785127,
+        "confusion": [
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "predictions": [
+          3,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 573,
+        "sampled_correct_fraction": 0.27978515625,
+        "mean_reward": -0.4404296875
+      },
+      "trained_validation": {
+        "accuracy": 0.75,
+        "mean_correct_probability": 0.2794160470366478,
+        "confusion": [
+          [
+            2,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "eb4c363f5c4ddd360a1ae55e2ac9ad38a787ab9882b17a7c6749183877c89b11",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/centered-seed-702.safetensors",
+        "sha256": "2b078990f26e41b89358c4d753a19516f9e0bf15cc589329754fd177629505ea",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "centered",
+      "seed": 703,
+      "initial_validation": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24965094650785127,
+        "confusion": [
+          [
+            0,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "predictions": [
+          3,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2,
+          3,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 563,
+        "sampled_correct_fraction": 0.27490234375,
+        "mean_reward": -0.4501953125
+      },
+      "trained_validation": {
+        "accuracy": 0.75,
+        "mean_correct_probability": 0.2787331851820151,
+        "confusion": [
+          [
+            2,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          2,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "dbc9bba50dd0c6c08473e136c88a417b45a2f79b0e8205062129b4c97dee1d1f",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/centered-seed-703.safetensors",
+        "sha256": "c23273865201468c958ce8c3011ecfd5f3a028842931762b3b4e4283eb0eb9f6",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "pca",
+      "seed": 701,
+      "initial_validation": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.2504164973894755,
+        "confusion": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          0,
+          2,
+          3,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 553,
+        "sampled_correct_fraction": 0.27001953125,
+        "mean_reward": -0.4599609375
+      },
+      "trained_validation": {
+        "accuracy": 1.0,
+        "mean_correct_probability": 0.27927349756161374,
+        "confusion": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "da88df087604ed94f571660b8ab02a67e34c64b7c36e0bd7da920cf13d9f207c",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/pca-seed-701.safetensors",
+        "sha256": "30051cfa6b8eafa9f7b9821bd96661afa3c985ce26e8cb9cd82ab3659beadee7",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "pca",
+      "seed": 702,
+      "initial_validation": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.2504164973894755,
+        "confusion": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          0,
+          2,
+          3,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 552,
+        "sampled_correct_fraction": 0.26953125,
+        "mean_reward": -0.4609375
+      },
+      "trained_validation": {
+        "accuracy": 0.8333333333333334,
+        "mean_correct_probability": 0.28002025187015533,
+        "confusion": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          2
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "eb4c363f5c4ddd360a1ae55e2ac9ad38a787ab9882b17a7c6749183877c89b11",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/pca-seed-702.safetensors",
+        "sha256": "3ce918a19b934fa447c77cd439dc609905aaa3ec9c36733d40569189ba655f4a",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    },
+    {
+      "mode": "pca",
+      "seed": 703,
+      "initial_validation": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.2504164973894755,
+        "confusion": [
+          [
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            3
+          ]
+        ],
+        "predictions": [
+          0,
+          2,
+          3,
+          2,
+          2,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      "training": {
+        "epochs": 64,
+        "batch_size": 8,
+        "optimizer_updates": 256,
+        "interactions": 2048,
+        "sampled_correct_actions": 545,
+        "sampled_correct_fraction": 0.26611328125,
+        "mean_reward": -0.4677734375
+      },
+      "trained_validation": {
+        "accuracy": 0.9166666666666666,
+        "mean_correct_probability": 0.2793574358026187,
+        "confusion": [
+          [
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            2
+          ]
+        ],
+        "predictions": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3
+        ]
+      },
+      "weights_changed": true,
+      "stream_sha256": "dbc9bba50dd0c6c08473e136c88a417b45a2f79b0e8205062129b4c97dee1d1f",
+      "checkpoint": {
+        "kind": "native_engine_checkpoint",
+        "path": "results/precise-bridge/native-checkpoints/pca-seed-703.safetensors",
+        "sha256": "9bfda51bc8edaac3292a8319ab480f8ebbbaf9e8c29f079e4c6a99ce9987ab91",
+        "config": {
+          "actions": 4,
+          "learning_rate": 0.30000001192092896,
+          "logit_gain": 1.0,
+          "active_fraction": 0.019999999552965164,
+          "weight_limit": 1.0,
+          "homeostasis": false
+        },
+        "roundtrip_inference_exact": true
+      }
+    }
+  ],
+  "aggregate": {
+    "fixed": {
+      "initial_validation": {
+        "accuracy": 0.25,
+        "mean_correct_probability": 0.2498761514822642
+      },
+      "trained_validation": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.2600967014829318
+      }
+    },
+    "centered": {
+      "initial_validation": {
+        "accuracy": 0.16666666666666666,
+        "mean_correct_probability": 0.24965094650785127
+      },
+      "trained_validation": {
+        "accuracy": 0.75,
+        "mean_correct_probability": 0.2790034164985021
+      }
+    },
+    "pca": {
+      "initial_validation": {
+        "accuracy": 0.5,
+        "mean_correct_probability": 0.2504164973894755
+      },
+      "trained_validation": {
+        "accuracy": 0.9166666666666666,
+        "mean_correct_probability": 0.2795503950781293
+      }
+    }
+  },
+  "input_sha256": {
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "data/pn_kc.tsv": "c824900604e71579cdfca93fe67b200ae792818f534d8a056e8805a4b49e427c",
+    "data/kc_mbon.tsv": "b28a3c6abe944f74a55aa4907b9479039499713ec507b4614ca0dabf69c617b1",
+    "examples/bio_bridge/precise_native.py": "a02f2183effb682b144136426e734bb674b17be37bc0ce36642abde73b0fe328",
+    "examples/bio_bridge/precise_bridge.py": "664daea3834b361d2d800ea681feb8ddb3888bcd2d5d108a0321c5e28f51e02e"
+  }
+}

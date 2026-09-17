@@ -1,0 +1,317 @@
+{
+  "status": "simplified paired-anchor affine ridge calibration on simulated KC drift; not Neuralink, Degenhart, or NoMAD reproduction",
+  "protocol": {
+    "ridge": 0.1,
+    "seed": 4401,
+    "anchors": [
+      8,
+      16,
+      32
+    ],
+    "conditions": [
+      "clean",
+      "gain_offset",
+      "dropout25",
+      "dropout50"
+    ],
+    "calibration": "old train only; validation evaluation only; settings frozen before results",
+    "decoder": "fixed supervised class probe trained on clean old train",
+    "sham": "clean anchor pairing shuffled deterministically"
+  },
+  "runs": [
+    {
+      "condition": "clean",
+      "anchors": 8,
+      "uncorrected": {
+        "cosine": 1.0,
+        "rmse": 0.0,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.7221688750733821,
+        "rmse": 0.05268430195046387,
+        "accuracy": 0.75
+      },
+      "sham_shuffled": {
+        "cosine": 0.670207610851845,
+        "rmse": 0.057594525444688544,
+        "accuracy": 0.5833333333333334
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-clean-n8.safetensors",
+        "sha256": "48231815229c10e0ec8f6395a11250b24303ae46ae8857ed501957415a49d077",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "clean",
+      "anchors": 16,
+      "uncorrected": {
+        "cosine": 1.0,
+        "rmse": 0.0,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.781351164443533,
+        "rmse": 0.04786526777103935,
+        "accuracy": 0.9166666666666666
+      },
+      "sham_shuffled": {
+        "cosine": 0.5852943447113025,
+        "rmse": 0.0647232062614549,
+        "accuracy": 0.25
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-clean-n16.safetensors",
+        "sha256": "59e2384e91fe4b0bc77ab618f12233a85c8ed7809a7e0a3cdad15a8b0026acaf",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "clean",
+      "anchors": 32,
+      "uncorrected": {
+        "cosine": 1.0,
+        "rmse": 0.0,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.8152551619180864,
+        "rmse": 0.04409844720382395,
+        "accuracy": 0.8333333333333334
+      },
+      "sham_shuffled": {
+        "cosine": 0.6742351003402272,
+        "rmse": 0.057924792246422996,
+        "accuracy": 0.3333333333333333
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-clean-n32.safetensors",
+        "sha256": "a04452d7fe5c7a0479f5cab4625484a45a2ec9c7e0a0d4871ad31e4f8ae5ff24",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "gain_offset",
+      "anchors": 8,
+      "uncorrected": {
+        "cosine": 0.6925631165504456,
+        "rmse": 0.08544006198644638,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.7184853369236383,
+        "rmse": 0.053113871629657985,
+        "accuracy": 0.9166666666666666
+      },
+      "sham_shuffled": {
+        "cosine": 0.6690774294772454,
+        "rmse": 0.05774817531452926,
+        "accuracy": 0.5833333333333334
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-gain_offset-n8.safetensors",
+        "sha256": "28e0250bc97bddeabde6c29b3bb866a9d653143ac8988a702d3b2a266b587a80",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "gain_offset",
+      "anchors": 16,
+      "uncorrected": {
+        "cosine": 0.6925631165504456,
+        "rmse": 0.08544006198644638,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.777911650805729,
+        "rmse": 0.04834005825623968,
+        "accuracy": 0.9166666666666666
+      },
+      "sham_shuffled": {
+        "cosine": 0.5795673060509848,
+        "rmse": 0.06547524093873452,
+        "accuracy": 0.25
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-gain_offset-n16.safetensors",
+        "sha256": "2aa9e3c84ad111c3cf50d8b6d83695091db356254419d40df189256643ac0643",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "gain_offset",
+      "anchors": 32,
+      "uncorrected": {
+        "cosine": 0.6925631165504456,
+        "rmse": 0.08544006198644638,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.809972030882402,
+        "rmse": 0.04481772155311482,
+        "accuracy": 0.8333333333333334
+      },
+      "sham_shuffled": {
+        "cosine": 0.654114412869248,
+        "rmse": 0.060231487424031456,
+        "accuracy": 0.3333333333333333
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-gain_offset-n32.safetensors",
+        "sha256": "12588826b10fa48ee05e5c0087fe3c262e5ca5c51dd0fdfe6964bf6cc7e76a04",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "dropout25",
+      "anchors": 8,
+      "uncorrected": {
+        "cosine": 0.8398501873016357,
+        "rmse": 0.04059048742055893,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.7206319038452773,
+        "rmse": 0.05281978549929226,
+        "accuracy": 0.75
+      },
+      "sham_shuffled": {
+        "cosine": 0.6662465885738562,
+        "rmse": 0.057871479716120326,
+        "accuracy": 0.5
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-dropout25-n8.safetensors",
+        "sha256": "ebbc7962ed58d96cec13297346e04dadef4dfe872b9c1f80a7c79a714edf8c24",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "dropout25",
+      "anchors": 16,
+      "uncorrected": {
+        "cosine": 0.8398501873016357,
+        "rmse": 0.04059048742055893,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.7794563147822761,
+        "rmse": 0.048084559964830444,
+        "accuracy": 0.8333333333333334
+      },
+      "sham_shuffled": {
+        "cosine": 0.5960151060442241,
+        "rmse": 0.0637741444546457,
+        "accuracy": 0.25
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-dropout25-n16.safetensors",
+        "sha256": "3cbe8575eaacf5093363ab05e9a4e1a66f1f93553c9db6ceaf0f9e14c440b603",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "dropout25",
+      "anchors": 32,
+      "uncorrected": {
+        "cosine": 0.8398501873016357,
+        "rmse": 0.04059048742055893,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.810869931452502,
+        "rmse": 0.0445843434738169,
+        "accuracy": 0.8333333333333334
+      },
+      "sham_shuffled": {
+        "cosine": 0.6638579405025637,
+        "rmse": 0.05864520738104003,
+        "accuracy": 0.3333333333333333
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-dropout25-n32.safetensors",
+        "sha256": "3f1fbfe17f1b3d6c86d88fed245b62bc4155678d26825b502d112128965ed196",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "dropout50",
+      "anchors": 8,
+      "uncorrected": {
+        "cosine": 0.6812669634819031,
+        "rmse": 0.05597538501024246,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.7182592536943225,
+        "rmse": 0.05302174213962798,
+        "accuracy": 0.75
+      },
+      "sham_shuffled": {
+        "cosine": 0.666293948063521,
+        "rmse": 0.05786992762328774,
+        "accuracy": 0.5833333333333334
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-dropout50-n8.safetensors",
+        "sha256": "fb3c2451accde0a272ef253c42f08826c0a293330b69a11dd4c08bb506f4e71b",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "dropout50",
+      "anchors": 16,
+      "uncorrected": {
+        "cosine": 0.6812669634819031,
+        "rmse": 0.05597538501024246,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.7744335487452307,
+        "rmse": 0.04862148305706204,
+        "accuracy": 0.75
+      },
+      "sham_shuffled": {
+        "cosine": 0.5989466268242377,
+        "rmse": 0.06359923957547815,
+        "accuracy": 0.3333333333333333
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-dropout50-n16.safetensors",
+        "sha256": "e208cf622d82a449078b4cbee25934949aa5573e322f0c6e29c28efcfb3b607c",
+        "roundtrip_max_error": 0.0
+      }
+    },
+    {
+      "condition": "dropout50",
+      "anchors": 32,
+      "uncorrected": {
+        "cosine": 0.6812669634819031,
+        "rmse": 0.05597538501024246,
+        "accuracy": 0.8333333333333334
+      },
+      "corrected": {
+        "cosine": 0.8018953472448646,
+        "rmse": 0.0455446023562092,
+        "accuracy": 0.75
+      },
+      "sham_shuffled": {
+        "cosine": 0.6495079927965481,
+        "rmse": 0.060140495192005684,
+        "accuracy": 0.4166666666666667
+      },
+      "artifact": {
+        "path": "results/neural-link-bridge/calibrator-dropout50-n32.safetensors",
+        "sha256": "97b648a8d3cd1af68925356d0459ce278630107bcc2e62c296c87786ad29a672",
+        "roundtrip_max_error": 0.0
+      }
+    }
+  ],
+  "provenance": {
+    "examples/bio_bridge/neural_link_stability.py": "fe23d1135b745383033a55ea9f7024293e6d4953ee56122d9812bdd9ce035ca8",
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa"
+  }
+}

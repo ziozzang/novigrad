@@ -1,0 +1,100 @@
+{
+  "status": "complete external import -> ID-aligned fit -> save/load -> apply -> verify on simulated KC recordings",
+  "scope": "engineering demo; not implanted data or reproduction of cited BCI methods",
+  "data": {
+    "train_anchors": 32,
+    "validation_rows": 12,
+    "features": 5177,
+    "drift": "gain_offset",
+    "train_observed_rows_shuffled": true
+  },
+  "checks": {
+    "serialized_vs_direct_max_error": 0.0,
+    "verified": true,
+    "channel_order_negative_control": {
+      "rejected": true,
+      "reason": "channel identity/order mismatch"
+    }
+  },
+  "metrics": {
+    "uncorrected": {
+      "cosine_to_clean_mean": 0.6925631165504456,
+      "fixed_probe_accuracy": 0.8333333333333334
+    },
+    "corrected": {
+      "cosine_to_clean_mean": 0.8099719882011414,
+      "fixed_probe_accuracy": 0.8333333333333334
+    }
+  },
+  "artifacts": {
+    "results/neural-link-bridge/import-demo-recordings/train-reference.safetensors": {
+      "sha256": "73da8212544d03f8ab946cd6dcf72f15c7d2e1f6d1f88d1402b8ccecd4086ed8"
+    },
+    "results/neural-link-bridge/import-demo-recordings/train-observed-shuffled.safetensors": {
+      "sha256": "57d5f975985b509c4e616f51b65c169bc1160382d739f39c1ba5fe676ace53df"
+    },
+    "results/neural-link-bridge/import-demo-recordings/validation-observed.safetensors": {
+      "sha256": "f42ea47a1b572f71a1a76e7ea67a5b631f6f6100dd7db6c36030a19cf0e9c6a2"
+    },
+    "results/neural-link-bridge/import-demo-recordings/affine.safetensors": {
+      "sha256": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b"
+    },
+    "results/neural-link-bridge/import-demo-recordings/validation-corrected.safetensors": {
+      "sha256": "81e8732718da22de81aabcaab491f2c8cb1fad77dc214ce91f5789ea4ae99eb0"
+    }
+  },
+  "manifests": {
+    "fit": {
+      "operation": "fit",
+      "schema_version": 1,
+      "inputs": {
+        "observed": {
+          "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/train-observed-shuffled.safetensors",
+          "sha256": "57d5f975985b509c4e616f51b65c169bc1160382d739f39c1ba5fe676ace53df"
+        },
+        "reference": {
+          "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/train-reference.safetensors",
+          "sha256": "73da8212544d03f8ab946cd6dcf72f15c7d2e1f6d1f88d1402b8ccecd4086ed8"
+        }
+      },
+      "calibration": {
+        "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/affine.safetensors",
+        "sha256": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b"
+      },
+      "paired_rows": 32,
+      "features": 5177,
+      "ridge": 0.1,
+      "time_tolerance_seconds": 0.0,
+      "alignment": "sample_id with identical channel_ids/order"
+    },
+    "apply": {
+      "operation": "apply",
+      "schema_version": 1,
+      "inputs": {
+        "calibration": {
+          "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/affine.safetensors",
+          "sha256": "d7af5de2103e048ff8ace4cab7afbee85e9d0005204181a480058495ffa39e5b"
+        },
+        "recording": {
+          "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/validation-observed.safetensors",
+          "sha256": "f42ea47a1b572f71a1a76e7ea67a5b631f6f6100dd7db6c36030a19cf0e9c6a2"
+        }
+      },
+      "output": {
+        "path": "/Users/a405394/fly/nobi/results/neural-link-bridge/import-demo-recordings/validation-corrected.safetensors",
+        "sha256": "81e8732718da22de81aabcaab491f2c8cb1fad77dc214ce91f5789ea4ae99eb0"
+      },
+      "rows": 12,
+      "input_features": 5177,
+      "output_features": 5177,
+      "channel_policy": "exact identity and order required"
+    }
+  },
+  "provenance": {
+    "examples/bio_bridge/demo_neural_recordings.py": "ef8a31c29bd85512cf724d25c0ac801b362af379812844ddff88d87e224ffd70",
+    "examples/bio_bridge/neural_link_stability.py": "fe23d1135b745383033a55ea9f7024293e6d4953ee56122d9812bdd9ce035ca8",
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa"
+  }
+}

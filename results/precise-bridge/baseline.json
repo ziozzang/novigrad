@@ -1,0 +1,1156 @@
+{
+  "protocol": "All transforms fit train32 only; ridge selected validation12 accuracy then cosine then larger regularization. No final test read here.",
+  "modes": {
+    "fixed": {
+      "selected": {
+        "ridge": 0.01,
+        "accuracy": 0.8333333333333334,
+        "cosine": 0.8526364093454073
+      },
+      "trials": [
+        {
+          "ridge": 0.01,
+          "accuracy": 0.8333333333333334,
+          "cosine": 0.8526364093454073
+        },
+        {
+          "ridge": 0.1,
+          "accuracy": 0.8333333333333334,
+          "cosine": 0.8518348658020596
+        },
+        {
+          "ridge": 1.0,
+          "accuracy": 0.5833333333333334,
+          "cosine": 0.8338614649027383
+        }
+      ],
+      "train": {
+        "semantic_category_accuracy": 1.0,
+        "mean_cosine_to_input_embedding": 0.9998730535513727,
+        "catalog_identity_retrieval_accuracy": 1.0,
+        "catalog_boundary": "posthoc diagnostic: recover matching row from this known input catalog, not free-text reconstruction",
+        "unsupported_candidate_rate": 0.0,
+        "cases": [
+          {
+            "text": "I am thirsty.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.8551647629239301
+              },
+              {
+                "description": "\ubab8\uc758 \uac08\uc99d\uc744 \ud574\uc18c\ud558\uae30 \uc704\ud574 \ub9c8\uc2e4 \uac83\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.8106713261337023
+              },
+              {
+                "description": "Prioritizing a drink because the body lacks water.",
+                "category": "water",
+                "cosine": 0.8093640352227197
+              }
+            ],
+            "top2_margin": 0.04449343679022777,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please bring me water.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-1",
+            "top3": [
+              {
+                "description": "Seeking a safe source of water for hydration.",
+                "category": "water",
+                "cosine": 0.790008706186425
+              },
+              {
+                "description": "\uc218\ubd84\uc744 \ubcf4\ucda9\ud560 \uc548\uc804\ud55c \ubb3c\uc744 \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.788297778946731
+              },
+              {
+                "description": "Moving toward available fluid to restore hydration.",
+                "category": "water",
+                "cosine": 0.7608307743218157
+              }
+            ],
+            "top2_margin": 0.0017109272396940156,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need something to drink.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.8314473691918544
+              },
+              {
+                "description": "Seeking a safe source of water for hydration.",
+                "category": "water",
+                "cosine": 0.8033127049503939
+              },
+              {
+                "description": "Prioritizing a drink because the body lacks water.",
+                "category": "water",
+                "cosine": 0.7868161477431042
+              }
+            ],
+            "top2_margin": 0.028134664241460494,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My mouth is dry.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.7501014263500193
+              },
+              {
+                "description": "\ubab8\uc758 \uac08\uc99d\uc744 \ud574\uc18c\ud558\uae30 \uc704\ud574 \ub9c8\uc2e4 \uac83\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.7224053427920467
+              },
+              {
+                "description": "Prioritizing a drink because the body lacks water.",
+                "category": "water",
+                "cosine": 0.7202504070791301
+              }
+            ],
+            "top2_margin": 0.027696083557972595,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a glass of water.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.7655782031015391
+              },
+              {
+                "description": "Moving toward available fluid to restore hydration.",
+                "category": "water",
+                "cosine": 0.7504044281864585
+              },
+              {
+                "description": "\ubab8\uc758 \uac08\uc99d\uc744 \ud574\uc18c\ud558\uae30 \uc704\ud574 \ub9c8\uc2e4 \uac83\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.7415393176844319
+              }
+            ],
+            "top2_margin": 0.015173774915080651,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to quench my thirst.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.8663120465937235
+              },
+              {
+                "description": "Prioritizing a drink because the body lacks water.",
+                "category": "water",
+                "cosine": 0.8031174284541807
+              },
+              {
+                "description": "\ubab8\uc758 \uac08\uc99d\uc744 \ud574\uc18c\ud558\uae30 \uc704\ud574 \ub9c8\uc2e4 \uac83\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.7923290120244607
+              }
+            ],
+            "top2_margin": 0.06319461813954286,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need to hydrate.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-3",
+            "top3": [
+              {
+                "description": "Moving toward available fluid to restore hydration.",
+                "category": "water",
+                "cosine": 0.8551384786848832
+              },
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.8510856802486957
+              },
+              {
+                "description": "\ubab8\uc758 \uac08\uc99d\uc744 \ud574\uc18c\ud558\uae30 \uc704\ud574 \ub9c8\uc2e4 \uac83\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.837816780120069
+              }
+            ],
+            "top2_margin": 0.004052798436187555,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A drink would help me.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.7866283677710136
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.7844506093792378
+              },
+              {
+                "description": "\ubab8\uc758 \uac08\uc99d\uc744 \ud574\uc18c\ud558\uae30 \uc704\ud574 \ub9c8\uc2e4 \uac83\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "water",
+                "cosine": 0.7788837521214903
+              }
+            ],
+            "top2_margin": 0.002177758391775808,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am hungry.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8108218417004827
+              },
+              {
+                "description": "A need to eat because the body is hungry.",
+                "category": "food",
+                "cosine": 0.8005580234377709
+              },
+              {
+                "description": "Moving toward a meal that can supply calories.",
+                "category": "food",
+                "cosine": 0.7918342113349655
+              }
+            ],
+            "top2_margin": 0.010263818262711721,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please bring me food.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.733493266987686
+              },
+              {
+                "description": "Prioritizing food after a period without nourishment.",
+                "category": "food",
+                "cosine": 0.7129210756621792
+              },
+              {
+                "description": "Moving toward a meal that can supply calories.",
+                "category": "food",
+                "cosine": 0.6868014687342665
+              }
+            ],
+            "top2_margin": 0.020572191325506806,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need something to eat.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.782830084802883
+              },
+              {
+                "description": "Prioritizing food after a period without nourishment.",
+                "category": "food",
+                "cosine": 0.7723712336867544
+              },
+              {
+                "description": "Moving toward a meal that can supply calories.",
+                "category": "food",
+                "cosine": 0.7693335532438508
+              }
+            ],
+            "top2_margin": 0.010458851116128542,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My stomach is empty.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-ko-2",
+            "top3": [
+              {
+                "description": "\ubab8\uc774 \ud5c8\uae30\uc838 \uc74c\uc2dd\uc744 \uba39\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "food",
+                "cosine": 0.7524857931520752
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.7400374908483429
+              },
+              {
+                "description": "A need to eat because the body is hungry.",
+                "category": "food",
+                "cosine": 0.7255870579692933
+              }
+            ],
+            "top2_margin": 0.012448302303732284,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a meal.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-4",
+            "top3": [
+              {
+                "description": "Prioritizing food after a period without nourishment.",
+                "category": "food",
+                "cosine": 0.727728686442209
+              },
+              {
+                "description": "Moving toward a meal that can supply calories.",
+                "category": "food",
+                "cosine": 0.7273317523804891
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.7190786340225155
+              }
+            ],
+            "top2_margin": 0.0003969340617199224,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to satisfy my hunger.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8152160782898203
+              },
+              {
+                "description": "A need to eat because the body is hungry.",
+                "category": "food",
+                "cosine": 0.8122537123598952
+              },
+              {
+                "description": "Moving toward a meal that can supply calories.",
+                "category": "food",
+                "cosine": 0.804388651199784
+              }
+            ],
+            "top2_margin": 0.0029623659299251592,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need nourishment.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.861372859534177
+              },
+              {
+                "description": "Moving toward a meal that can supply calories.",
+                "category": "food",
+                "cosine": 0.8189745662461502
+              },
+              {
+                "description": "A need to eat because the body is hungry.",
+                "category": "food",
+                "cosine": 0.8086357274769448
+              }
+            ],
+            "top2_margin": 0.0423982932880268,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A snack would help me.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8473293349239692
+              },
+              {
+                "description": "\uc5d0\ub108\uc9c0\ub97c \ud68c\ubcf5\ud560 \uba39\uc744\uac70\ub9ac\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "food",
+                "cosine": 0.7590707196926081
+              },
+              {
+                "description": "Prioritizing food after a period without nourishment.",
+                "category": "food",
+                "cosine": 0.7525137470446535
+              }
+            ],
+            "top2_margin": 0.08825861523136114,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am cold.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-ko-2",
+            "top3": [
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.8327996341472134
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.7847656269173084
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7802463237062369
+              }
+            ],
+            "top2_margin": 0.04803400722990492,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please bring me a blanket.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-en-1",
+            "top3": [
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7471665283828829
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.7175856010654531
+              },
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.699230229857643
+              }
+            ],
+            "top2_margin": 0.029580927317429784,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need to get warm.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-ko-2",
+            "top3": [
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.868606363049704
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8527106135472755
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8389095649374063
+              }
+            ],
+            "top2_margin": 0.015895749502428447,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am shivering.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-ko-2",
+            "top3": [
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.7708203969681083
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.7266862313126147
+              },
+              {
+                "description": "\uccb4\uc628\uc744 \uc9c0\ud0ac \ub354 \ub530\ub73b\ud55c \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.7256041292128041
+              }
+            ],
+            "top2_margin": 0.04413416565549366,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a warm coat.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-ko-2",
+            "top3": [
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.7811062427959269
+              },
+              {
+                "description": "\uccb4\uc628\uc744 \uc9c0\ud0ac \ub354 \ub530\ub73b\ud55c \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.7625714050776887
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7497249741659597
+              }
+            ],
+            "top2_margin": 0.018534837718238162,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to escape this chill.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-en-1",
+            "top3": [
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8354034754711734
+              },
+              {
+                "description": "Moving toward heat to stop losing warmth.",
+                "category": "warmth",
+                "cosine": 0.7954441034579595
+              },
+              {
+                "description": "Prioritizing shelter from a cold environment.",
+                "category": "warmth",
+                "cosine": 0.789096020624716
+              }
+            ],
+            "top2_margin": 0.03995937201321398,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need insulation.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-en-2",
+            "top3": [
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8491405121605092
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7308221273826675
+              },
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.7250787623017346
+              }
+            ],
+            "top2_margin": 0.11831838477784173,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A heater would help me.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-ko-2",
+            "top3": [
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.82357055717094
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8173844770818678
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.7931443397568019
+              }
+            ],
+            "top2_margin": 0.006186080089072177,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am tired.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-2",
+            "top3": [
+              {
+                "description": "A need to pause activity because of fatigue.",
+                "category": "rest",
+                "cosine": 0.774419971984732
+              },
+              {
+                "description": "\ud53c\ub85c \ub54c\ubb38\uc5d0 \ud65c\ub3d9\uc744 \uba48\ucd94\uace0 \uc26c\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7713922764104619
+              },
+              {
+                "description": "\ud68c\ubcf5\uc744 \uc704\ud574 \uc870\uc6a9\ud788 \uc7a0\ub4e4 \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7528845702349062
+              }
+            ],
+            "top2_margin": 0.003027695574270073,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please let me sleep.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.7556532607639957
+              },
+              {
+                "description": "\ud68c\ubcf5\uc744 \uc704\ud574 \uc870\uc6a9\ud788 \uc7a0\ub4e4 \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.6845979748705888
+              },
+              {
+                "description": "Prioritizing recovery after prolonged wakefulness.",
+                "category": "rest",
+                "cosine": 0.6641438278346116
+              }
+            ],
+            "top2_margin": 0.07105528589340693,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need to rest.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.7978372659469599
+              },
+              {
+                "description": "\ud53c\ub85c \ub54c\ubb38\uc5d0 \ud65c\ub3d9\uc744 \uba48\ucd94\uace0 \uc26c\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7953994967244045
+              },
+              {
+                "description": "Moving toward safety where uninterrupted rest is possible.",
+                "category": "rest",
+                "cosine": 0.7917868328800687
+              }
+            ],
+            "top2_margin": 0.0024377692225554526,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I can barely stay awake.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.7199235447465355
+              },
+              {
+                "description": "A need to pause activity because of fatigue.",
+                "category": "rest",
+                "cosine": 0.7166819588704135
+              },
+              {
+                "description": "\ud53c\ub85c \ub54c\ubb38\uc5d0 \ud65c\ub3d9\uc744 \uba48\ucd94\uace0 \uc26c\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7123050591280399
+              }
+            ],
+            "top2_margin": 0.0032415858761219996,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a quiet bed.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.8198657640770557
+              },
+              {
+                "description": "Moving toward safety where uninterrupted rest is possible.",
+                "category": "rest",
+                "cosine": 0.704305131893657
+              },
+              {
+                "description": "Prioritizing recovery after prolonged wakefulness.",
+                "category": "rest",
+                "cosine": 0.669083414580606
+              }
+            ],
+            "top2_margin": 0.11556063218339874,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to recover from exhaustion.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-2",
+            "top3": [
+              {
+                "description": "A need to pause activity because of fatigue.",
+                "category": "rest",
+                "cosine": 0.824485423303426
+              },
+              {
+                "description": "Prioritizing recovery after prolonged wakefulness.",
+                "category": "rest",
+                "cosine": 0.7997039823389465
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.7886818491258136
+              }
+            ],
+            "top2_margin": 0.02478144096447954,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need a nap.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.743473461509308
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.716081281955903
+              },
+              {
+                "description": "\ud68c\ubcf5\uc744 \uc704\ud574 \uc870\uc6a9\ud788 \uc7a0\ub4e4 \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7034004036213594
+              }
+            ],
+            "top2_margin": 0.027392179553405005,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A break would help me.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-2",
+            "top3": [
+              {
+                "description": "A need to pause activity because of fatigue.",
+                "category": "rest",
+                "cosine": 0.8000064094871161
+              },
+              {
+                "description": "\ud53c\ub85c \ub54c\ubb38\uc5d0 \ud65c\ub3d9\uc744 \uba48\ucd94\uace0 \uc26c\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7905016073405234
+              },
+              {
+                "description": "Moving toward safety where uninterrupted rest is possible.",
+                "category": "rest",
+                "cosine": 0.7872476868425782
+              }
+            ],
+            "top2_margin": 0.009504802146592661,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          }
+        ]
+      },
+      "validation": {
+        "semantic_category_accuracy": 0.8333333333333334,
+        "mean_cosine_to_input_embedding": 0.8526364093454073,
+        "catalog_identity_retrieval_accuracy": 0.6666666666666666,
+        "catalog_boundary": "posthoc diagnostic: recover matching row from this known input catalog, not free-text reconstruction",
+        "unsupported_candidate_rate": 0.0,
+        "cases": [
+          {
+            "text": "Could I have a refreshing beverage?",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.8263963958672211
+              },
+              {
+                "description": "Seeking a safe source of water for hydration.",
+                "category": "water",
+                "cosine": 0.8031630740442813
+              },
+              {
+                "description": "Prioritizing a drink because the body lacks water.",
+                "category": "water",
+                "cosine": 0.7939163242333653
+              }
+            ],
+            "top2_margin": 0.0232333218229398,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My body needs fluids.",
+            "expected_category": "water",
+            "category": "water",
+            "description_id": "water-en-2",
+            "top3": [
+              {
+                "description": "A need to drink and relieve bodily thirst.",
+                "category": "water",
+                "cosine": 0.8454212962950871
+              },
+              {
+                "description": "Moving toward available fluid to restore hydration.",
+                "category": "water",
+                "cosine": 0.841708090344494
+              },
+              {
+                "description": "Prioritizing a drink because the body lacks water.",
+                "category": "water",
+                "cosine": 0.8331877768004534
+              }
+            ],
+            "top2_margin": 0.0037132059505931014,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Find a drinking fountain for me.",
+            "expected_category": "water",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.8263434476655338
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7995510736746759
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.7903283601935575
+              }
+            ],
+            "top2_margin": 0.026792373990857876,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Could I have a bite to eat?",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8650535083556403
+              },
+              {
+                "description": "Prioritizing food after a period without nourishment.",
+                "category": "food",
+                "cosine": 0.774745925354819
+              },
+              {
+                "description": "\ubab8\uc774 \ud5c8\uae30\uc838 \uc74c\uc2dd\uc744 \uba39\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "food",
+                "cosine": 0.7704236225083719
+              }
+            ],
+            "top2_margin": 0.09030758300082131,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My body needs calories.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-2",
+            "top3": [
+              {
+                "description": "A need to eat because the body is hungry.",
+                "category": "food",
+                "cosine": 0.8243446407831475
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8140173456844979
+              },
+              {
+                "description": "\ubab8\uc774 \ud5c8\uae30\uc838 \uc74c\uc2dd\uc744 \uba39\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "food",
+                "cosine": 0.8050157891242385
+              }
+            ],
+            "top2_margin": 0.010327295098649603,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Find a restaurant for me.",
+            "expected_category": "food",
+            "category": "warmth",
+            "description_id": "warmth-en-1",
+            "top3": [
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.792938576026618
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.783526737625572
+              },
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.7757325878448794
+              }
+            ],
+            "top2_margin": 0.00941183840104598,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Could I have something warm to wear?",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-en-1",
+            "top3": [
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8601821109689572
+              },
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.849721225976609
+              },
+              {
+                "description": "\uccb4\uc628\uc744 \uc9c0\ud0ac \ub354 \ub530\ub73b\ud55c \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.8291530332663771
+              }
+            ],
+            "top2_margin": 0.010460884992348207,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My body is losing heat.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-ko-2",
+            "top3": [
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.8098714943173106
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.7814803202910534
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7507021428654663
+              }
+            ],
+            "top2_margin": 0.028391174026257238,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Find a heated room for me.",
+            "expected_category": "warmth",
+            "category": "warmth",
+            "description_id": "warmth-en-1",
+            "top3": [
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8391125510250048
+              },
+              {
+                "description": "\ubd88\ud3b8\ud55c \ucd94\uc704\ub97c \ub9c9\uc744 \ubcf4\uc628\uc774 \ud544\uc694\ud55c \uc0c1\ud0dc.",
+                "category": "warmth",
+                "cosine": 0.8298819663787037
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.821940837495495
+              }
+            ],
+            "top2_margin": 0.00923058464630111,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Could I have somewhere to lie down?",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.8372579551975653
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8323197011449945
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8274394395531453
+              }
+            ],
+            "top2_margin": 0.004938254052570756,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My body needs sleep.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-2",
+            "top3": [
+              {
+                "description": "A need to pause activity because of fatigue.",
+                "category": "rest",
+                "cosine": 0.78860199828168
+              },
+              {
+                "description": "\ud53c\ub85c \ub54c\ubb38\uc5d0 \ud65c\ub3d9\uc744 \uba48\ucd94\uace0 \uc26c\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7752324719234519
+              },
+              {
+                "description": "\ud68c\ubcf5\uc744 \uc704\ud574 \uc870\uc6a9\ud788 \uc7a0\ub4e4 \uc7a5\uc18c\ub97c \ucc3e\ub294 \uc0c1\ud0dc.",
+                "category": "rest",
+                "cosine": 0.7635680084393226
+              }
+            ],
+            "top2_margin": 0.013369526358228079,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Find a bedroom for me.",
+            "expected_category": "rest",
+            "category": "rest",
+            "description_id": "rest-en-1",
+            "top3": [
+              {
+                "description": "Seeking a quiet place for restorative sleep.",
+                "category": "rest",
+                "cosine": 0.8653936702812507
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.7897316705510391
+              },
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.7818642970052184
+              }
+            ],
+            "top2_margin": 0.0756619997302116,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          }
+        ]
+      },
+      "projection_rank": 128,
+      "train_active_kcs": 104.0,
+      "roundtrip_exact": true
+    }
+  },
+  "source_sha256": "f1282b25fd4040a16fe7eb8a2d54398975ca70ef2d83aa22f6031e0059871bc5",
+  "input_sha256": {
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa"
+  }
+}

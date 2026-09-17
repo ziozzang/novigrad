@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add train-only PCA neural-port calibration, fresh native reward training, held-out bilingual cases, permutation controls, frozen manifests and exact replay; add schema-validated neural recording import and paired drift-calibration diagnostics grounded in BCI research.
+
 - Add frozen EmbeddingGemma reconstruction from KC/MBON activities, shuffled and untrained controls, independent causal class-probe silencing, Safetensors readouts, and bilingual research; distinguish input semantics from subjective thoughts.
 
 - Extract fly-inspired adaptation, inhibitory competition, and eligibility rules into controlled diagnostics, including native-forward parity, matched supervised readouts, and trace magnitude controls.

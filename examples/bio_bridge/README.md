@@ -159,3 +159,5 @@ Follow-up: [continuous input, one-shot cues, signal strength, and repeated learn
 Mechanism extraction: [measured adaptation, hidden inhibition, and eligibility comparisons](MECHANISM_RESULTS.md), with [primary-source derivations](MECHANISM_RESEARCH.md).
 
 Embedding-based state readout: [measured KC/MBON reconstruction and causal controls](THOUGHT_RESULTS.md), [research and actual-fly measurement requirements](THOUGHT_RESEARCH.md).
+
+Precise bridge: [measured results and replay](PRECISE_RESULTS.md), [biological alignment research](PRECISE_RESEARCH.md), [recording import and BCI-inspired stabilization](NEURAL_LINK_RESEARCH.md).

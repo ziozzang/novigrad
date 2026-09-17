@@ -24,3 +24,6 @@ __pycache__/
 
 /bindings/python/target/
 /bindings/python/python/novigrad/*.so
+
+# Duplicate generated end-to-end reproducibility runs.
+/results/precise-reproduction*/

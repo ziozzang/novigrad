@@ -1,0 +1,16 @@
+{
+  "scope": "Entire import/embedding/development/freeze/evaluation/replay pipeline executed again in a fresh isolated directory using run_neural_bridge.py all. No retuning.",
+  "all_final_predictions_exact": {
+    "final.json": true,
+    "native-final.json": true,
+    "permutation-final.json": true
+  },
+  "all_tensor_artifact_count": 34,
+  "all_tensor_arrays_exact": true,
+  "encoder_features_exact": true,
+  "runner_sha256": "903b109b9792d4642aa1ead1440f1384e535cc0658025e3165dda68883cf68f5",
+  "original_protocol_sha256": "4e017b48c4aea4e017bc85bd0155c222d87ef08b9618f595b7be47d3956f1c50",
+  "reproduced_protocol_sha256": "9dd96bee85d0f04839cce3d444dc405a0952393176a71f258b8b51236c742a5d",
+  "reproduced_directory": "results/precise-reproduction-verified",
+  "duplicate_artifacts": "Preserved locally and git-ignored; concise comparison tracked here."
+}

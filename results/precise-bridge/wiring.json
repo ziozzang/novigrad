@@ -1,0 +1,2549 @@
+{
+  "boundary": "Real graph root IDs with engineered embedding coordinates; PCA axes are not biological odor/glomerulus identities. Input identity order comes from the native checkpoint, not TSV sorting.",
+  "graph_checkpoint_sha256": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+  "input_ports": [
+    {
+      "index": 0,
+      "pn_root_id": "720575940603231916",
+      "kc_edge_count": 61,
+      "coordinate": 0,
+      "sign": "positive"
+    },
+    {
+      "index": 1,
+      "pn_root_id": "720575940603464672",
+      "kc_edge_count": 238,
+      "coordinate": 1,
+      "sign": "positive"
+    },
+    {
+      "index": 2,
+      "pn_root_id": "720575940603985952",
+      "kc_edge_count": 69,
+      "coordinate": 2,
+      "sign": "positive"
+    },
+    {
+      "index": 3,
+      "pn_root_id": "720575940604352172",
+      "kc_edge_count": 43,
+      "coordinate": 3,
+      "sign": "positive"
+    },
+    {
+      "index": 4,
+      "pn_root_id": "720575940604407468",
+      "kc_edge_count": 57,
+      "coordinate": 4,
+      "sign": "positive"
+    },
+    {
+      "index": 5,
+      "pn_root_id": "720575940604431584",
+      "kc_edge_count": 150,
+      "coordinate": 5,
+      "sign": "positive"
+    },
+    {
+      "index": 6,
+      "pn_root_id": "720575940604911793",
+      "kc_edge_count": 6,
+      "coordinate": 6,
+      "sign": "positive"
+    },
+    {
+      "index": 7,
+      "pn_root_id": "720575940605102694",
+      "kc_edge_count": 66,
+      "coordinate": 7,
+      "sign": "positive"
+    },
+    {
+      "index": 8,
+      "pn_root_id": "720575940605309361",
+      "kc_edge_count": 98,
+      "coordinate": 8,
+      "sign": "positive"
+    },
+    {
+      "index": 9,
+      "pn_root_id": "720575940605400096",
+      "kc_edge_count": 35,
+      "coordinate": 9,
+      "sign": "positive"
+    },
+    {
+      "index": 10,
+      "pn_root_id": "720575940605421442",
+      "kc_edge_count": 4,
+      "coordinate": 10,
+      "sign": "positive"
+    },
+    {
+      "index": 11,
+      "pn_root_id": "720575940606590338",
+      "kc_edge_count": 73,
+      "coordinate": 11,
+      "sign": "positive"
+    },
+    {
+      "index": 12,
+      "pn_root_id": "720575940606649865",
+      "kc_edge_count": 86,
+      "coordinate": 12,
+      "sign": "positive"
+    },
+    {
+      "index": 13,
+      "pn_root_id": "720575940607439964",
+      "kc_edge_count": 86,
+      "coordinate": 13,
+      "sign": "positive"
+    },
+    {
+      "index": 14,
+      "pn_root_id": "720575940607687260",
+      "kc_edge_count": 112,
+      "coordinate": 14,
+      "sign": "positive"
+    },
+    {
+      "index": 15,
+      "pn_root_id": "720575940608199748",
+      "kc_edge_count": 129,
+      "coordinate": 15,
+      "sign": "positive"
+    },
+    {
+      "index": 16,
+      "pn_root_id": "720575940608293129",
+      "kc_edge_count": 96,
+      "coordinate": 16,
+      "sign": "positive"
+    },
+    {
+      "index": 17,
+      "pn_root_id": "720575940608628419",
+      "kc_edge_count": 57,
+      "coordinate": 17,
+      "sign": "positive"
+    },
+    {
+      "index": 18,
+      "pn_root_id": "720575940608845525",
+      "kc_edge_count": 129,
+      "coordinate": 18,
+      "sign": "positive"
+    },
+    {
+      "index": 19,
+      "pn_root_id": "720575940608898005",
+      "kc_edge_count": 94,
+      "coordinate": 19,
+      "sign": "positive"
+    },
+    {
+      "index": 20,
+      "pn_root_id": "720575940608970197",
+      "kc_edge_count": 175,
+      "coordinate": 20,
+      "sign": "positive"
+    },
+    {
+      "index": 21,
+      "pn_root_id": "720575940609447179",
+      "kc_edge_count": 98,
+      "coordinate": 21,
+      "sign": "positive"
+    },
+    {
+      "index": 22,
+      "pn_root_id": "720575940609454603",
+      "kc_edge_count": 99,
+      "coordinate": 22,
+      "sign": "positive"
+    },
+    {
+      "index": 23,
+      "pn_root_id": "720575940609460491",
+      "kc_edge_count": 370,
+      "coordinate": 23,
+      "sign": "positive"
+    },
+    {
+      "index": 24,
+      "pn_root_id": "720575940609891886",
+      "kc_edge_count": 88,
+      "coordinate": 24,
+      "sign": "positive"
+    },
+    {
+      "index": 25,
+      "pn_root_id": "720575940609903077",
+      "kc_edge_count": 43,
+      "coordinate": 25,
+      "sign": "positive"
+    },
+    {
+      "index": 26,
+      "pn_root_id": "720575940610048981",
+      "kc_edge_count": 133,
+      "coordinate": 26,
+      "sign": "positive"
+    },
+    {
+      "index": 27,
+      "pn_root_id": "720575940610052266",
+      "kc_edge_count": 28,
+      "coordinate": 27,
+      "sign": "positive"
+    },
+    {
+      "index": 28,
+      "pn_root_id": "720575940610070442",
+      "kc_edge_count": 1,
+      "coordinate": 28,
+      "sign": "positive"
+    },
+    {
+      "index": 29,
+      "pn_root_id": "720575940610100437",
+      "kc_edge_count": 81,
+      "coordinate": 29,
+      "sign": "positive"
+    },
+    {
+      "index": 30,
+      "pn_root_id": "720575940610505170",
+      "kc_edge_count": 71,
+      "coordinate": 30,
+      "sign": "positive"
+    },
+    {
+      "index": 31,
+      "pn_root_id": "720575940610511043",
+      "kc_edge_count": 1,
+      "coordinate": 31,
+      "sign": "positive"
+    },
+    {
+      "index": 32,
+      "pn_root_id": "720575940610752068",
+      "kc_edge_count": 67,
+      "coordinate": 32,
+      "sign": "positive"
+    },
+    {
+      "index": 33,
+      "pn_root_id": "720575940611022515",
+      "kc_edge_count": 71,
+      "coordinate": 33,
+      "sign": "positive"
+    },
+    {
+      "index": 34,
+      "pn_root_id": "720575940611079236",
+      "kc_edge_count": 351,
+      "coordinate": 34,
+      "sign": "positive"
+    },
+    {
+      "index": 35,
+      "pn_root_id": "720575940611352014",
+      "kc_edge_count": 117,
+      "coordinate": 35,
+      "sign": "positive"
+    },
+    {
+      "index": 36,
+      "pn_root_id": "720575940611372714",
+      "kc_edge_count": 105,
+      "coordinate": 36,
+      "sign": "positive"
+    },
+    {
+      "index": 37,
+      "pn_root_id": "720575940611703080",
+      "kc_edge_count": 68,
+      "coordinate": 37,
+      "sign": "positive"
+    },
+    {
+      "index": 38,
+      "pn_root_id": "720575940611849187",
+      "kc_edge_count": 40,
+      "coordinate": 38,
+      "sign": "positive"
+    },
+    {
+      "index": 39,
+      "pn_root_id": "720575940612031986",
+      "kc_edge_count": 2,
+      "coordinate": 39,
+      "sign": "positive"
+    },
+    {
+      "index": 40,
+      "pn_root_id": "720575940612197374",
+      "kc_edge_count": 78,
+      "coordinate": 40,
+      "sign": "positive"
+    },
+    {
+      "index": 41,
+      "pn_root_id": "720575940612284569",
+      "kc_edge_count": 285,
+      "coordinate": 41,
+      "sign": "positive"
+    },
+    {
+      "index": 42,
+      "pn_root_id": "720575940612433614",
+      "kc_edge_count": 5,
+      "coordinate": 42,
+      "sign": "positive"
+    },
+    {
+      "index": 43,
+      "pn_root_id": "720575940612468594",
+      "kc_edge_count": 1,
+      "coordinate": 43,
+      "sign": "positive"
+    },
+    {
+      "index": 44,
+      "pn_root_id": "720575940612699761",
+      "kc_edge_count": 107,
+      "coordinate": 44,
+      "sign": "positive"
+    },
+    {
+      "index": 45,
+      "pn_root_id": "720575940612856342",
+      "kc_edge_count": 1,
+      "coordinate": 45,
+      "sign": "positive"
+    },
+    {
+      "index": 46,
+      "pn_root_id": "720575940613050577",
+      "kc_edge_count": 8,
+      "coordinate": 46,
+      "sign": "positive"
+    },
+    {
+      "index": 47,
+      "pn_root_id": "720575940613058802",
+      "kc_edge_count": 1,
+      "coordinate": 47,
+      "sign": "positive"
+    },
+    {
+      "index": 48,
+      "pn_root_id": "720575940613167007",
+      "kc_edge_count": 85,
+      "coordinate": 48,
+      "sign": "positive"
+    },
+    {
+      "index": 49,
+      "pn_root_id": "720575940613203119",
+      "kc_edge_count": 112,
+      "coordinate": 49,
+      "sign": "positive"
+    },
+    {
+      "index": 50,
+      "pn_root_id": "720575940613345442",
+      "kc_edge_count": 48,
+      "coordinate": 50,
+      "sign": "positive"
+    },
+    {
+      "index": 51,
+      "pn_root_id": "720575940613347793",
+      "kc_edge_count": 2,
+      "coordinate": 51,
+      "sign": "positive"
+    },
+    {
+      "index": 52,
+      "pn_root_id": "720575940613419695",
+      "kc_edge_count": 105,
+      "coordinate": 52,
+      "sign": "positive"
+    },
+    {
+      "index": 53,
+      "pn_root_id": "720575940613579943",
+      "kc_edge_count": 80,
+      "coordinate": 53,
+      "sign": "positive"
+    },
+    {
+      "index": 54,
+      "pn_root_id": "720575940613613619",
+      "kc_edge_count": 1,
+      "coordinate": 54,
+      "sign": "positive"
+    },
+    {
+      "index": 55,
+      "pn_root_id": "720575940613655483",
+      "kc_edge_count": 18,
+      "coordinate": 55,
+      "sign": "positive"
+    },
+    {
+      "index": 56,
+      "pn_root_id": "720575940613809554",
+      "kc_edge_count": 13,
+      "coordinate": 56,
+      "sign": "positive"
+    },
+    {
+      "index": 57,
+      "pn_root_id": "720575940613864401",
+      "kc_edge_count": 110,
+      "coordinate": 57,
+      "sign": "positive"
+    },
+    {
+      "index": 58,
+      "pn_root_id": "720575940614009827",
+      "kc_edge_count": 9,
+      "coordinate": 58,
+      "sign": "positive"
+    },
+    {
+      "index": 59,
+      "pn_root_id": "720575940614309535",
+      "kc_edge_count": 59,
+      "coordinate": 59,
+      "sign": "positive"
+    },
+    {
+      "index": 60,
+      "pn_root_id": "720575940614316731",
+      "kc_edge_count": 3,
+      "coordinate": 60,
+      "sign": "positive"
+    },
+    {
+      "index": 61,
+      "pn_root_id": "720575940614714178",
+      "kc_edge_count": 70,
+      "coordinate": 61,
+      "sign": "positive"
+    },
+    {
+      "index": 62,
+      "pn_root_id": "720575940614727903",
+      "kc_edge_count": 287,
+      "coordinate": 62,
+      "sign": "positive"
+    },
+    {
+      "index": 63,
+      "pn_root_id": "720575940614871106",
+      "kc_edge_count": 2,
+      "coordinate": 63,
+      "sign": "positive"
+    },
+    {
+      "index": 64,
+      "pn_root_id": "720575940615160386",
+      "kc_edge_count": 63,
+      "coordinate": 64,
+      "sign": "positive"
+    },
+    {
+      "index": 65,
+      "pn_root_id": "720575940615366055",
+      "kc_edge_count": 384,
+      "coordinate": 65,
+      "sign": "positive"
+    },
+    {
+      "index": 66,
+      "pn_root_id": "720575940615394719",
+      "kc_edge_count": 119,
+      "coordinate": 66,
+      "sign": "positive"
+    },
+    {
+      "index": 67,
+      "pn_root_id": "720575940615594658",
+      "kc_edge_count": 2,
+      "coordinate": 67,
+      "sign": "positive"
+    },
+    {
+      "index": 68,
+      "pn_root_id": "720575940616020795",
+      "kc_edge_count": 86,
+      "coordinate": 68,
+      "sign": "positive"
+    },
+    {
+      "index": 69,
+      "pn_root_id": "720575940616079035",
+      "kc_edge_count": 182,
+      "coordinate": 69,
+      "sign": "positive"
+    },
+    {
+      "index": 70,
+      "pn_root_id": "720575940616566133",
+      "kc_edge_count": 123,
+      "coordinate": 70,
+      "sign": "positive"
+    },
+    {
+      "index": 71,
+      "pn_root_id": "720575940616824588",
+      "kc_edge_count": 95,
+      "coordinate": 71,
+      "sign": "positive"
+    },
+    {
+      "index": 72,
+      "pn_root_id": "720575940617179451",
+      "kc_edge_count": 94,
+      "coordinate": 72,
+      "sign": "positive"
+    },
+    {
+      "index": 73,
+      "pn_root_id": "720575940617207185",
+      "kc_edge_count": 174,
+      "coordinate": 73,
+      "sign": "positive"
+    },
+    {
+      "index": 74,
+      "pn_root_id": "720575940617229632",
+      "kc_edge_count": 56,
+      "coordinate": 74,
+      "sign": "positive"
+    },
+    {
+      "index": 75,
+      "pn_root_id": "720575940617343316",
+      "kc_edge_count": 44,
+      "coordinate": 75,
+      "sign": "positive"
+    },
+    {
+      "index": 76,
+      "pn_root_id": "720575940617381681",
+      "kc_edge_count": 3,
+      "coordinate": 76,
+      "sign": "positive"
+    },
+    {
+      "index": 77,
+      "pn_root_id": "720575940617642832",
+      "kc_edge_count": 68,
+      "coordinate": 77,
+      "sign": "positive"
+    },
+    {
+      "index": 78,
+      "pn_root_id": "720575940617668747",
+      "kc_edge_count": 314,
+      "coordinate": 78,
+      "sign": "positive"
+    },
+    {
+      "index": 79,
+      "pn_root_id": "720575940617781383",
+      "kc_edge_count": 120,
+      "coordinate": 79,
+      "sign": "positive"
+    },
+    {
+      "index": 80,
+      "pn_root_id": "720575940617903168",
+      "kc_edge_count": 74,
+      "coordinate": 80,
+      "sign": "positive"
+    },
+    {
+      "index": 81,
+      "pn_root_id": "720575940617917760",
+      "kc_edge_count": 124,
+      "coordinate": 81,
+      "sign": "positive"
+    },
+    {
+      "index": 82,
+      "pn_root_id": "720575940618277184",
+      "kc_edge_count": 175,
+      "coordinate": 82,
+      "sign": "positive"
+    },
+    {
+      "index": 83,
+      "pn_root_id": "720575940618295454",
+      "kc_edge_count": 254,
+      "coordinate": 83,
+      "sign": "positive"
+    },
+    {
+      "index": 84,
+      "pn_root_id": "720575940618308825",
+      "kc_edge_count": 590,
+      "coordinate": 84,
+      "sign": "positive"
+    },
+    {
+      "index": 85,
+      "pn_root_id": "720575940618461121",
+      "kc_edge_count": 15,
+      "coordinate": 85,
+      "sign": "positive"
+    },
+    {
+      "index": 86,
+      "pn_root_id": "720575940618499238",
+      "kc_edge_count": 68,
+      "coordinate": 86,
+      "sign": "positive"
+    },
+    {
+      "index": 87,
+      "pn_root_id": "720575940618800225",
+      "kc_edge_count": 1,
+      "coordinate": 87,
+      "sign": "positive"
+    },
+    {
+      "index": 88,
+      "pn_root_id": "720575940618865112",
+      "kc_edge_count": 284,
+      "coordinate": 88,
+      "sign": "positive"
+    },
+    {
+      "index": 89,
+      "pn_root_id": "720575940619071005",
+      "kc_edge_count": 441,
+      "coordinate": 89,
+      "sign": "positive"
+    },
+    {
+      "index": 90,
+      "pn_root_id": "720575940619280705",
+      "kc_edge_count": 91,
+      "coordinate": 90,
+      "sign": "positive"
+    },
+    {
+      "index": 91,
+      "pn_root_id": "720575940619337536",
+      "kc_edge_count": 81,
+      "coordinate": 91,
+      "sign": "positive"
+    },
+    {
+      "index": 92,
+      "pn_root_id": "720575940619385765",
+      "kc_edge_count": 53,
+      "coordinate": 92,
+      "sign": "positive"
+    },
+    {
+      "index": 93,
+      "pn_root_id": "720575940619411147",
+      "kc_edge_count": 167,
+      "coordinate": 93,
+      "sign": "positive"
+    },
+    {
+      "index": 94,
+      "pn_root_id": "720575940619456728",
+      "kc_edge_count": 162,
+      "coordinate": 94,
+      "sign": "positive"
+    },
+    {
+      "index": 95,
+      "pn_root_id": "720575940619531373",
+      "kc_edge_count": 90,
+      "coordinate": 95,
+      "sign": "positive"
+    },
+    {
+      "index": 96,
+      "pn_root_id": "720575940619620852",
+      "kc_edge_count": 1,
+      "coordinate": 96,
+      "sign": "positive"
+    },
+    {
+      "index": 97,
+      "pn_root_id": "720575940619637780",
+      "kc_edge_count": 89,
+      "coordinate": 97,
+      "sign": "positive"
+    },
+    {
+      "index": 98,
+      "pn_root_id": "720575940619766219",
+      "kc_edge_count": 1,
+      "coordinate": 98,
+      "sign": "positive"
+    },
+    {
+      "index": 99,
+      "pn_root_id": "720575940619807397",
+      "kc_edge_count": 33,
+      "coordinate": 99,
+      "sign": "positive"
+    },
+    {
+      "index": 100,
+      "pn_root_id": "720575940619838912",
+      "kc_edge_count": 70,
+      "coordinate": 100,
+      "sign": "positive"
+    },
+    {
+      "index": 101,
+      "pn_root_id": "720575940619895125",
+      "kc_edge_count": 101,
+      "coordinate": 101,
+      "sign": "positive"
+    },
+    {
+      "index": 102,
+      "pn_root_id": "720575940619902598",
+      "kc_edge_count": 144,
+      "coordinate": 102,
+      "sign": "positive"
+    },
+    {
+      "index": 103,
+      "pn_root_id": "720575940619928429",
+      "kc_edge_count": 77,
+      "coordinate": 103,
+      "sign": "positive"
+    },
+    {
+      "index": 104,
+      "pn_root_id": "720575940620068518",
+      "kc_edge_count": 86,
+      "coordinate": 104,
+      "sign": "positive"
+    },
+    {
+      "index": 105,
+      "pn_root_id": "720575940620103590",
+      "kc_edge_count": 25,
+      "coordinate": 105,
+      "sign": "positive"
+    },
+    {
+      "index": 106,
+      "pn_root_id": "720575940620189790",
+      "kc_edge_count": 61,
+      "coordinate": 106,
+      "sign": "positive"
+    },
+    {
+      "index": 107,
+      "pn_root_id": "720575940620199962",
+      "kc_edge_count": 46,
+      "coordinate": 107,
+      "sign": "positive"
+    },
+    {
+      "index": 108,
+      "pn_root_id": "720575940620233307",
+      "kc_edge_count": 2,
+      "coordinate": 108,
+      "sign": "positive"
+    },
+    {
+      "index": 109,
+      "pn_root_id": "720575940620266406",
+      "kc_edge_count": 30,
+      "coordinate": 109,
+      "sign": "positive"
+    },
+    {
+      "index": 110,
+      "pn_root_id": "720575940620437339",
+      "kc_edge_count": 100,
+      "coordinate": 110,
+      "sign": "positive"
+    },
+    {
+      "index": 111,
+      "pn_root_id": "720575940620445062",
+      "kc_edge_count": 47,
+      "coordinate": 111,
+      "sign": "positive"
+    },
+    {
+      "index": 112,
+      "pn_root_id": "720575940620465904",
+      "kc_edge_count": 71,
+      "coordinate": 112,
+      "sign": "positive"
+    },
+    {
+      "index": 113,
+      "pn_root_id": "720575940620467438",
+      "kc_edge_count": 43,
+      "coordinate": 113,
+      "sign": "positive"
+    },
+    {
+      "index": 114,
+      "pn_root_id": "720575940620551259",
+      "kc_edge_count": 39,
+      "coordinate": 114,
+      "sign": "positive"
+    },
+    {
+      "index": 115,
+      "pn_root_id": "720575940620595053",
+      "kc_edge_count": 62,
+      "coordinate": 115,
+      "sign": "positive"
+    },
+    {
+      "index": 116,
+      "pn_root_id": "720575940620638335",
+      "kc_edge_count": 3,
+      "coordinate": 116,
+      "sign": "positive"
+    },
+    {
+      "index": 117,
+      "pn_root_id": "720575940621103743",
+      "kc_edge_count": 47,
+      "coordinate": 117,
+      "sign": "positive"
+    },
+    {
+      "index": 118,
+      "pn_root_id": "720575940621123113",
+      "kc_edge_count": 89,
+      "coordinate": 118,
+      "sign": "positive"
+    },
+    {
+      "index": 119,
+      "pn_root_id": "720575940621185050",
+      "kc_edge_count": 52,
+      "coordinate": 119,
+      "sign": "positive"
+    },
+    {
+      "index": 120,
+      "pn_root_id": "720575940621203632",
+      "kc_edge_count": 7,
+      "coordinate": 120,
+      "sign": "positive"
+    },
+    {
+      "index": 121,
+      "pn_root_id": "720575940621239679",
+      "kc_edge_count": 62,
+      "coordinate": 121,
+      "sign": "positive"
+    },
+    {
+      "index": 122,
+      "pn_root_id": "720575940621256212",
+      "kc_edge_count": 77,
+      "coordinate": 122,
+      "sign": "positive"
+    },
+    {
+      "index": 123,
+      "pn_root_id": "720575940621316033",
+      "kc_edge_count": 141,
+      "coordinate": 123,
+      "sign": "positive"
+    },
+    {
+      "index": 124,
+      "pn_root_id": "720575940621333696",
+      "kc_edge_count": 84,
+      "coordinate": 124,
+      "sign": "positive"
+    },
+    {
+      "index": 125,
+      "pn_root_id": "720575940621529435",
+      "kc_edge_count": 453,
+      "coordinate": 125,
+      "sign": "positive"
+    },
+    {
+      "index": 126,
+      "pn_root_id": "720575940621533985",
+      "kc_edge_count": 117,
+      "coordinate": 126,
+      "sign": "positive"
+    },
+    {
+      "index": 127,
+      "pn_root_id": "720575940621696747",
+      "kc_edge_count": 27,
+      "coordinate": 127,
+      "sign": "positive"
+    },
+    {
+      "index": 128,
+      "pn_root_id": "720575940621753377",
+      "kc_edge_count": 106,
+      "coordinate": 0,
+      "sign": "negative"
+    },
+    {
+      "index": 129,
+      "pn_root_id": "720575940621817046",
+      "kc_edge_count": 11,
+      "coordinate": 1,
+      "sign": "negative"
+    },
+    {
+      "index": 130,
+      "pn_root_id": "720575940622070554",
+      "kc_edge_count": 27,
+      "coordinate": 2,
+      "sign": "negative"
+    },
+    {
+      "index": 131,
+      "pn_root_id": "720575940622287142",
+      "kc_edge_count": 69,
+      "coordinate": 3,
+      "sign": "negative"
+    },
+    {
+      "index": 132,
+      "pn_root_id": "720575940622311704",
+      "kc_edge_count": 24,
+      "coordinate": 4,
+      "sign": "negative"
+    },
+    {
+      "index": 133,
+      "pn_root_id": "720575940622364184",
+      "kc_edge_count": 37,
+      "coordinate": 5,
+      "sign": "negative"
+    },
+    {
+      "index": 134,
+      "pn_root_id": "720575940622368792",
+      "kc_edge_count": 169,
+      "coordinate": 6,
+      "sign": "negative"
+    },
+    {
+      "index": 135,
+      "pn_root_id": "720575940622448589",
+      "kc_edge_count": 78,
+      "coordinate": 7,
+      "sign": "negative"
+    },
+    {
+      "index": 136,
+      "pn_root_id": "720575940622574532",
+      "kc_edge_count": 91,
+      "coordinate": 8,
+      "sign": "negative"
+    },
+    {
+      "index": 137,
+      "pn_root_id": "720575940622726271",
+      "kc_edge_count": 564,
+      "coordinate": 9,
+      "sign": "negative"
+    },
+    {
+      "index": 138,
+      "pn_root_id": "720575940622734835",
+      "kc_edge_count": 36,
+      "coordinate": 10,
+      "sign": "negative"
+    },
+    {
+      "index": 139,
+      "pn_root_id": "720575940622762995",
+      "kc_edge_count": 29,
+      "coordinate": 11,
+      "sign": "negative"
+    },
+    {
+      "index": 140,
+      "pn_root_id": "720575940622785062",
+      "kc_edge_count": 103,
+      "coordinate": 12,
+      "sign": "negative"
+    },
+    {
+      "index": 141,
+      "pn_root_id": "720575940622811430",
+      "kc_edge_count": 89,
+      "coordinate": 13,
+      "sign": "negative"
+    },
+    {
+      "index": 142,
+      "pn_root_id": "720575940623137741",
+      "kc_edge_count": 5,
+      "coordinate": 14,
+      "sign": "negative"
+    },
+    {
+      "index": 143,
+      "pn_root_id": "720575940623237161",
+      "kc_edge_count": 2,
+      "coordinate": 15,
+      "sign": "negative"
+    },
+    {
+      "index": 144,
+      "pn_root_id": "720575940623264906",
+      "kc_edge_count": 20,
+      "coordinate": 16,
+      "sign": "negative"
+    },
+    {
+      "index": 145,
+      "pn_root_id": "720575940623287228",
+      "kc_edge_count": 6,
+      "coordinate": 17,
+      "sign": "negative"
+    },
+    {
+      "index": 146,
+      "pn_root_id": "720575940623303108",
+      "kc_edge_count": 53,
+      "coordinate": 18,
+      "sign": "negative"
+    },
+    {
+      "index": 147,
+      "pn_root_id": "720575940623307447",
+      "kc_edge_count": 8,
+      "coordinate": 19,
+      "sign": "negative"
+    },
+    {
+      "index": 148,
+      "pn_root_id": "720575940623444715",
+      "kc_edge_count": 84,
+      "coordinate": 20,
+      "sign": "negative"
+    },
+    {
+      "index": 149,
+      "pn_root_id": "720575940623465909",
+      "kc_edge_count": 14,
+      "coordinate": 21,
+      "sign": "negative"
+    },
+    {
+      "index": 150,
+      "pn_root_id": "720575940623528925",
+      "kc_edge_count": 360,
+      "coordinate": 22,
+      "sign": "negative"
+    },
+    {
+      "index": 151,
+      "pn_root_id": "720575940623543881",
+      "kc_edge_count": 22,
+      "coordinate": 23,
+      "sign": "negative"
+    },
+    {
+      "index": 152,
+      "pn_root_id": "720575940623617973",
+      "kc_edge_count": 42,
+      "coordinate": 24,
+      "sign": "negative"
+    },
+    {
+      "index": 153,
+      "pn_root_id": "720575940623673802",
+      "kc_edge_count": 2,
+      "coordinate": 25,
+      "sign": "negative"
+    },
+    {
+      "index": 154,
+      "pn_root_id": "720575940623739076",
+      "kc_edge_count": 43,
+      "coordinate": 26,
+      "sign": "negative"
+    },
+    {
+      "index": 155,
+      "pn_root_id": "720575940623902471",
+      "kc_edge_count": 103,
+      "coordinate": 27,
+      "sign": "negative"
+    },
+    {
+      "index": 156,
+      "pn_root_id": "720575940623913364",
+      "kc_edge_count": 67,
+      "coordinate": 28,
+      "sign": "negative"
+    },
+    {
+      "index": 157,
+      "pn_root_id": "720575940623945404",
+      "kc_edge_count": 92,
+      "coordinate": 29,
+      "sign": "negative"
+    },
+    {
+      "index": 158,
+      "pn_root_id": "720575940624001321",
+      "kc_edge_count": 79,
+      "coordinate": 30,
+      "sign": "negative"
+    },
+    {
+      "index": 159,
+      "pn_root_id": "720575940624039560",
+      "kc_edge_count": 9,
+      "coordinate": 31,
+      "sign": "negative"
+    },
+    {
+      "index": 160,
+      "pn_root_id": "720575940624057853",
+      "kc_edge_count": 190,
+      "coordinate": 32,
+      "sign": "negative"
+    },
+    {
+      "index": 161,
+      "pn_root_id": "720575940624106442",
+      "kc_edge_count": 30,
+      "coordinate": 33,
+      "sign": "negative"
+    },
+    {
+      "index": 162,
+      "pn_root_id": "720575940624515571",
+      "kc_edge_count": 111,
+      "coordinate": 34,
+      "sign": "negative"
+    },
+    {
+      "index": 163,
+      "pn_root_id": "720575940624661552",
+      "kc_edge_count": 71,
+      "coordinate": 35,
+      "sign": "negative"
+    },
+    {
+      "index": 164,
+      "pn_root_id": "720575940624770791",
+      "kc_edge_count": 92,
+      "coordinate": 36,
+      "sign": "negative"
+    },
+    {
+      "index": 165,
+      "pn_root_id": "720575940624789125",
+      "kc_edge_count": 23,
+      "coordinate": 37,
+      "sign": "negative"
+    },
+    {
+      "index": 166,
+      "pn_root_id": "720575940624834697",
+      "kc_edge_count": 1,
+      "coordinate": 38,
+      "sign": "negative"
+    },
+    {
+      "index": 167,
+      "pn_root_id": "720575940624863015",
+      "kc_edge_count": 6,
+      "coordinate": 39,
+      "sign": "negative"
+    },
+    {
+      "index": 168,
+      "pn_root_id": "720575940624879911",
+      "kc_edge_count": 303,
+      "coordinate": 40,
+      "sign": "negative"
+    },
+    {
+      "index": 169,
+      "pn_root_id": "720575940624941244",
+      "kc_edge_count": 29,
+      "coordinate": 41,
+      "sign": "negative"
+    },
+    {
+      "index": 170,
+      "pn_root_id": "720575940625007949",
+      "kc_edge_count": 20,
+      "coordinate": 42,
+      "sign": "negative"
+    },
+    {
+      "index": 171,
+      "pn_root_id": "720575940625014928",
+      "kc_edge_count": 41,
+      "coordinate": 43,
+      "sign": "negative"
+    },
+    {
+      "index": 172,
+      "pn_root_id": "720575940625022270",
+      "kc_edge_count": 5,
+      "coordinate": 44,
+      "sign": "negative"
+    },
+    {
+      "index": 173,
+      "pn_root_id": "720575940625040053",
+      "kc_edge_count": 1,
+      "coordinate": 45,
+      "sign": "negative"
+    },
+    {
+      "index": 174,
+      "pn_root_id": "720575940625056509",
+      "kc_edge_count": 4,
+      "coordinate": 46,
+      "sign": "negative"
+    },
+    {
+      "index": 175,
+      "pn_root_id": "720575940625368976",
+      "kc_edge_count": 6,
+      "coordinate": 47,
+      "sign": "negative"
+    },
+    {
+      "index": 176,
+      "pn_root_id": "720575940625431866",
+      "kc_edge_count": 72,
+      "coordinate": 48,
+      "sign": "negative"
+    },
+    {
+      "index": 177,
+      "pn_root_id": "720575940625431870",
+      "kc_edge_count": 43,
+      "coordinate": 49,
+      "sign": "negative"
+    },
+    {
+      "index": 178,
+      "pn_root_id": "720575940625493400",
+      "kc_edge_count": 131,
+      "coordinate": 50,
+      "sign": "negative"
+    },
+    {
+      "index": 179,
+      "pn_root_id": "720575940625564676",
+      "kc_edge_count": 66,
+      "coordinate": 51,
+      "sign": "negative"
+    },
+    {
+      "index": 180,
+      "pn_root_id": "720575940625586122",
+      "kc_edge_count": 1,
+      "coordinate": 52,
+      "sign": "negative"
+    },
+    {
+      "index": 181,
+      "pn_root_id": "720575940625784153",
+      "kc_edge_count": 149,
+      "coordinate": 53,
+      "sign": "negative"
+    },
+    {
+      "index": 182,
+      "pn_root_id": "720575940625819138",
+      "kc_edge_count": 1,
+      "coordinate": 54,
+      "sign": "negative"
+    },
+    {
+      "index": 183,
+      "pn_root_id": "720575940625924618",
+      "kc_edge_count": 27,
+      "coordinate": 55,
+      "sign": "negative"
+    },
+    {
+      "index": 184,
+      "pn_root_id": "720575940626034819",
+      "kc_edge_count": 23,
+      "coordinate": 56,
+      "sign": "negative"
+    },
+    {
+      "index": 185,
+      "pn_root_id": "720575940626043218",
+      "kc_edge_count": 14,
+      "coordinate": 57,
+      "sign": "negative"
+    },
+    {
+      "index": 186,
+      "pn_root_id": "720575940626143806",
+      "kc_edge_count": 241,
+      "coordinate": 58,
+      "sign": "negative"
+    },
+    {
+      "index": 187,
+      "pn_root_id": "720575940626768656",
+      "kc_edge_count": 4,
+      "coordinate": 59,
+      "sign": "negative"
+    },
+    {
+      "index": 188,
+      "pn_root_id": "720575940626937617",
+      "kc_edge_count": 43,
+      "coordinate": 60,
+      "sign": "negative"
+    },
+    {
+      "index": 189,
+      "pn_root_id": "720575940626986885",
+      "kc_edge_count": 87,
+      "coordinate": 61,
+      "sign": "negative"
+    },
+    {
+      "index": 190,
+      "pn_root_id": "720575940627035388",
+      "kc_edge_count": 75,
+      "coordinate": 62,
+      "sign": "negative"
+    },
+    {
+      "index": 191,
+      "pn_root_id": "720575940627042064",
+      "kc_edge_count": 172,
+      "coordinate": 63,
+      "sign": "negative"
+    },
+    {
+      "index": 192,
+      "pn_root_id": "720575940627160322",
+      "kc_edge_count": 122,
+      "coordinate": 64,
+      "sign": "negative"
+    },
+    {
+      "index": 193,
+      "pn_root_id": "720575940627244986",
+      "kc_edge_count": 1,
+      "coordinate": 65,
+      "sign": "negative"
+    },
+    {
+      "index": 194,
+      "pn_root_id": "720575940627245585",
+      "kc_edge_count": 23,
+      "coordinate": 66,
+      "sign": "negative"
+    },
+    {
+      "index": 195,
+      "pn_root_id": "720575940627480586",
+      "kc_edge_count": 153,
+      "coordinate": 67,
+      "sign": "negative"
+    },
+    {
+      "index": 196,
+      "pn_root_id": "720575940627708688",
+      "kc_edge_count": 67,
+      "coordinate": 68,
+      "sign": "negative"
+    },
+    {
+      "index": 197,
+      "pn_root_id": "720575940627772009",
+      "kc_edge_count": 104,
+      "coordinate": 69,
+      "sign": "negative"
+    },
+    {
+      "index": 198,
+      "pn_root_id": "720575940627844734",
+      "kc_edge_count": 56,
+      "coordinate": 70,
+      "sign": "negative"
+    },
+    {
+      "index": 199,
+      "pn_root_id": "720575940627949929",
+      "kc_edge_count": 2,
+      "coordinate": 71,
+      "sign": "negative"
+    },
+    {
+      "index": 200,
+      "pn_root_id": "720575940628035543",
+      "kc_edge_count": 101,
+      "coordinate": 72,
+      "sign": "negative"
+    },
+    {
+      "index": 201,
+      "pn_root_id": "720575940628077568",
+      "kc_edge_count": 73,
+      "coordinate": 73,
+      "sign": "negative"
+    },
+    {
+      "index": 202,
+      "pn_root_id": "720575940628181520",
+      "kc_edge_count": 97,
+      "coordinate": 74,
+      "sign": "negative"
+    },
+    {
+      "index": 203,
+      "pn_root_id": "720575940628259407",
+      "kc_edge_count": 24,
+      "coordinate": 75,
+      "sign": "negative"
+    },
+    {
+      "index": 204,
+      "pn_root_id": "720575940628283560",
+      "kc_edge_count": 46,
+      "coordinate": 76,
+      "sign": "negative"
+    },
+    {
+      "index": 205,
+      "pn_root_id": "720575940628316047",
+      "kc_edge_count": 92,
+      "coordinate": 77,
+      "sign": "negative"
+    },
+    {
+      "index": 206,
+      "pn_root_id": "720575940628338028",
+      "kc_edge_count": 3,
+      "coordinate": 78,
+      "sign": "negative"
+    },
+    {
+      "index": 207,
+      "pn_root_id": "720575940628467611",
+      "kc_edge_count": 302,
+      "coordinate": 79,
+      "sign": "negative"
+    },
+    {
+      "index": 208,
+      "pn_root_id": "720575940628524292",
+      "kc_edge_count": 69,
+      "coordinate": 80,
+      "sign": "negative"
+    },
+    {
+      "index": 209,
+      "pn_root_id": "720575940628739560",
+      "kc_edge_count": 194,
+      "coordinate": 81,
+      "sign": "negative"
+    },
+    {
+      "index": 210,
+      "pn_root_id": "720575940628750248",
+      "kc_edge_count": 1,
+      "coordinate": 82,
+      "sign": "negative"
+    },
+    {
+      "index": 211,
+      "pn_root_id": "720575940628882450",
+      "kc_edge_count": 5,
+      "coordinate": 83,
+      "sign": "negative"
+    },
+    {
+      "index": 212,
+      "pn_root_id": "720575940628954112",
+      "kc_edge_count": 21,
+      "coordinate": 84,
+      "sign": "negative"
+    },
+    {
+      "index": 213,
+      "pn_root_id": "720575940629009513",
+      "kc_edge_count": 159,
+      "coordinate": 85,
+      "sign": "negative"
+    },
+    {
+      "index": 214,
+      "pn_root_id": "720575940629011655",
+      "kc_edge_count": 75,
+      "coordinate": 86,
+      "sign": "negative"
+    },
+    {
+      "index": 215,
+      "pn_root_id": "720575940629097922",
+      "kc_edge_count": 39,
+      "coordinate": 87,
+      "sign": "negative"
+    },
+    {
+      "index": 216,
+      "pn_root_id": "720575940629279544",
+      "kc_edge_count": 65,
+      "coordinate": 88,
+      "sign": "negative"
+    },
+    {
+      "index": 217,
+      "pn_root_id": "720575940629346103",
+      "kc_edge_count": 12,
+      "coordinate": 89,
+      "sign": "negative"
+    },
+    {
+      "index": 218,
+      "pn_root_id": "720575940629587671",
+      "kc_edge_count": 7,
+      "coordinate": 90,
+      "sign": "negative"
+    },
+    {
+      "index": 219,
+      "pn_root_id": "720575940629733626",
+      "kc_edge_count": 42,
+      "coordinate": 91,
+      "sign": "negative"
+    },
+    {
+      "index": 220,
+      "pn_root_id": "720575940629752219",
+      "kc_edge_count": 5,
+      "coordinate": 92,
+      "sign": "negative"
+    },
+    {
+      "index": 221,
+      "pn_root_id": "720575940629926159",
+      "kc_edge_count": 100,
+      "coordinate": 93,
+      "sign": "negative"
+    },
+    {
+      "index": 222,
+      "pn_root_id": "720575940629963855",
+      "kc_edge_count": 5,
+      "coordinate": 94,
+      "sign": "negative"
+    },
+    {
+      "index": 223,
+      "pn_root_id": "720575940630003472",
+      "kc_edge_count": 48,
+      "coordinate": 95,
+      "sign": "negative"
+    },
+    {
+      "index": 224,
+      "pn_root_id": "720575940630024566",
+      "kc_edge_count": 195,
+      "coordinate": 96,
+      "sign": "negative"
+    },
+    {
+      "index": 225,
+      "pn_root_id": "720575940630066007",
+      "kc_edge_count": 67,
+      "coordinate": 97,
+      "sign": "negative"
+    },
+    {
+      "index": 226,
+      "pn_root_id": "720575940630093051",
+      "kc_edge_count": 19,
+      "coordinate": 98,
+      "sign": "negative"
+    },
+    {
+      "index": 227,
+      "pn_root_id": "720575940630097103",
+      "kc_edge_count": 221,
+      "coordinate": 99,
+      "sign": "negative"
+    },
+    {
+      "index": 228,
+      "pn_root_id": "720575940630131663",
+      "kc_edge_count": 96,
+      "coordinate": 100,
+      "sign": "negative"
+    },
+    {
+      "index": 229,
+      "pn_root_id": "720575940630155083",
+      "kc_edge_count": 27,
+      "coordinate": 101,
+      "sign": "negative"
+    },
+    {
+      "index": 230,
+      "pn_root_id": "720575940630217086",
+      "kc_edge_count": 26,
+      "coordinate": 102,
+      "sign": "negative"
+    },
+    {
+      "index": 231,
+      "pn_root_id": "720575940630493818",
+      "kc_edge_count": 118,
+      "coordinate": 103,
+      "sign": "negative"
+    },
+    {
+      "index": 232,
+      "pn_root_id": "720575940630546540",
+      "kc_edge_count": 235,
+      "coordinate": 104,
+      "sign": "negative"
+    },
+    {
+      "index": 233,
+      "pn_root_id": "720575940630547909",
+      "kc_edge_count": 82,
+      "coordinate": 105,
+      "sign": "negative"
+    },
+    {
+      "index": 234,
+      "pn_root_id": "720575940630549370",
+      "kc_edge_count": 248,
+      "coordinate": 106,
+      "sign": "negative"
+    },
+    {
+      "index": 235,
+      "pn_root_id": "720575940630770042",
+      "kc_edge_count": 456,
+      "coordinate": 107,
+      "sign": "negative"
+    },
+    {
+      "index": 236,
+      "pn_root_id": "720575940630778428",
+      "kc_edge_count": 53,
+      "coordinate": 108,
+      "sign": "negative"
+    },
+    {
+      "index": 237,
+      "pn_root_id": "720575940630895055",
+      "kc_edge_count": 87,
+      "coordinate": 109,
+      "sign": "negative"
+    },
+    {
+      "index": 238,
+      "pn_root_id": "720575940630914858",
+      "kc_edge_count": 88,
+      "coordinate": 110,
+      "sign": "negative"
+    },
+    {
+      "index": 239,
+      "pn_root_id": "720575940630928715",
+      "kc_edge_count": 37,
+      "coordinate": 111,
+      "sign": "negative"
+    },
+    {
+      "index": 240,
+      "pn_root_id": "720575940630989354",
+      "kc_edge_count": 44,
+      "coordinate": 112,
+      "sign": "negative"
+    },
+    {
+      "index": 241,
+      "pn_root_id": "720575940631054634",
+      "kc_edge_count": 92,
+      "coordinate": 113,
+      "sign": "negative"
+    },
+    {
+      "index": 242,
+      "pn_root_id": "720575940631161570",
+      "kc_edge_count": 17,
+      "coordinate": 114,
+      "sign": "negative"
+    },
+    {
+      "index": 243,
+      "pn_root_id": "720575940631193052",
+      "kc_edge_count": 114,
+      "coordinate": 115,
+      "sign": "negative"
+    },
+    {
+      "index": 244,
+      "pn_root_id": "720575940631274770",
+      "kc_edge_count": 2,
+      "coordinate": 116,
+      "sign": "negative"
+    },
+    {
+      "index": 245,
+      "pn_root_id": "720575940631301715",
+      "kc_edge_count": 3,
+      "coordinate": 117,
+      "sign": "negative"
+    },
+    {
+      "index": 246,
+      "pn_root_id": "720575940631328104",
+      "kc_edge_count": 93,
+      "coordinate": 118,
+      "sign": "negative"
+    },
+    {
+      "index": 247,
+      "pn_root_id": "720575940631462200",
+      "kc_edge_count": 73,
+      "coordinate": 119,
+      "sign": "negative"
+    },
+    {
+      "index": 248,
+      "pn_root_id": "720575940631469964",
+      "kc_edge_count": 13,
+      "coordinate": 120,
+      "sign": "negative"
+    },
+    {
+      "index": 249,
+      "pn_root_id": "720575940631633401",
+      "kc_edge_count": 1,
+      "coordinate": 121,
+      "sign": "negative"
+    },
+    {
+      "index": 250,
+      "pn_root_id": "720575940631742156",
+      "kc_edge_count": 89,
+      "coordinate": 122,
+      "sign": "negative"
+    },
+    {
+      "index": 251,
+      "pn_root_id": "720575940631801671",
+      "kc_edge_count": 2,
+      "coordinate": 123,
+      "sign": "negative"
+    },
+    {
+      "index": 252,
+      "pn_root_id": "720575940631930828",
+      "kc_edge_count": 65,
+      "coordinate": 124,
+      "sign": "negative"
+    },
+    {
+      "index": 253,
+      "pn_root_id": "720575940632128908",
+      "kc_edge_count": 5,
+      "coordinate": 125,
+      "sign": "negative"
+    },
+    {
+      "index": 254,
+      "pn_root_id": "720575940632167085",
+      "kc_edge_count": 185,
+      "coordinate": 126,
+      "sign": "negative"
+    },
+    {
+      "index": 255,
+      "pn_root_id": "720575940632698797",
+      "kc_edge_count": 190,
+      "coordinate": 127,
+      "sign": "negative"
+    },
+    {
+      "index": 256,
+      "pn_root_id": "720575940632868563",
+      "kc_edge_count": 65,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 257,
+      "pn_root_id": "720575940633165025",
+      "kc_edge_count": 46,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 258,
+      "pn_root_id": "720575940633190847",
+      "kc_edge_count": 142,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 259,
+      "pn_root_id": "720575940633356883",
+      "kc_edge_count": 2,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 260,
+      "pn_root_id": "720575940633499548",
+      "kc_edge_count": 73,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 261,
+      "pn_root_id": "720575940633552028",
+      "kc_edge_count": 4,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 262,
+      "pn_root_id": "720575940633804212",
+      "kc_edge_count": 71,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 263,
+      "pn_root_id": "720575940633884333",
+      "kc_edge_count": 2,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 264,
+      "pn_root_id": "720575940634035863",
+      "kc_edge_count": 3,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 265,
+      "pn_root_id": "720575940634325087",
+      "kc_edge_count": 78,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 266,
+      "pn_root_id": "720575940634710629",
+      "kc_edge_count": 39,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 267,
+      "pn_root_id": "720575940634939327",
+      "kc_edge_count": 93,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 268,
+      "pn_root_id": "720575940635066975",
+      "kc_edge_count": 174,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 269,
+      "pn_root_id": "720575940635082871",
+      "kc_edge_count": 95,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 270,
+      "pn_root_id": "720575940635604581",
+      "kc_edge_count": 51,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 271,
+      "pn_root_id": "720575940635838606",
+      "kc_edge_count": 5,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 272,
+      "pn_root_id": "720575940635933119",
+      "kc_edge_count": 78,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 273,
+      "pn_root_id": "720575940635983770",
+      "kc_edge_count": 301,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 274,
+      "pn_root_id": "720575940636873791",
+      "kc_edge_count": 310,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 275,
+      "pn_root_id": "720575940637009636",
+      "kc_edge_count": 72,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 276,
+      "pn_root_id": "720575940637056887",
+      "kc_edge_count": 489,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 277,
+      "pn_root_id": "720575940637185252",
+      "kc_edge_count": 1,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 278,
+      "pn_root_id": "720575940637208718",
+      "kc_edge_count": 69,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 279,
+      "pn_root_id": "720575940637231593",
+      "kc_edge_count": 56,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 280,
+      "pn_root_id": "720575940637469254",
+      "kc_edge_count": 50,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 281,
+      "pn_root_id": "720575940637526190",
+      "kc_edge_count": 154,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 282,
+      "pn_root_id": "720575940637594334",
+      "kc_edge_count": 269,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 283,
+      "pn_root_id": "720575940637628762",
+      "kc_edge_count": 217,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 284,
+      "pn_root_id": "720575940637864355",
+      "kc_edge_count": 62,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 285,
+      "pn_root_id": "720575940637943374",
+      "kc_edge_count": 110,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 286,
+      "pn_root_id": "720575940638149744",
+      "kc_edge_count": 4,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 287,
+      "pn_root_id": "720575940638624189",
+      "kc_edge_count": 232,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 288,
+      "pn_root_id": "720575940638633535",
+      "kc_edge_count": 232,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 289,
+      "pn_root_id": "720575940638719104",
+      "kc_edge_count": 34,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 290,
+      "pn_root_id": "720575940638778165",
+      "kc_edge_count": 12,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 291,
+      "pn_root_id": "720575940639017050",
+      "kc_edge_count": 32,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 292,
+      "pn_root_id": "720575940639080765",
+      "kc_edge_count": 189,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 293,
+      "pn_root_id": "720575940639121571",
+      "kc_edge_count": 91,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 294,
+      "pn_root_id": "720575940639202467",
+      "kc_edge_count": 5,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 295,
+      "pn_root_id": "720575940639337461",
+      "kc_edge_count": 30,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 296,
+      "pn_root_id": "720575940639669592",
+      "kc_edge_count": 3,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 297,
+      "pn_root_id": "720575940639680957",
+      "kc_edge_count": 89,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 298,
+      "pn_root_id": "720575940640032896",
+      "kc_edge_count": 75,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 299,
+      "pn_root_id": "720575940640398477",
+      "kc_edge_count": 98,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 300,
+      "pn_root_id": "720575940640697808",
+      "kc_edge_count": 100,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 301,
+      "pn_root_id": "720575940640804853",
+      "kc_edge_count": 99,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 302,
+      "pn_root_id": "720575940640971995",
+      "kc_edge_count": 87,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 303,
+      "pn_root_id": "720575940642046453",
+      "kc_edge_count": 24,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 304,
+      "pn_root_id": "720575940642086389",
+      "kc_edge_count": 278,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 305,
+      "pn_root_id": "720575940642492576",
+      "kc_edge_count": 121,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 306,
+      "pn_root_id": "720575940644004768",
+      "kc_edge_count": 75,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 307,
+      "pn_root_id": "720575940644238871",
+      "kc_edge_count": 7,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 308,
+      "pn_root_id": "720575940644258327",
+      "kc_edge_count": 113,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 309,
+      "pn_root_id": "720575940644961588",
+      "kc_edge_count": 121,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 310,
+      "pn_root_id": "720575940646122804",
+      "kc_edge_count": 20,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 311,
+      "pn_root_id": "720575940646661252",
+      "kc_edge_count": 15,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 312,
+      "pn_root_id": "720575940648206468",
+      "kc_edge_count": 4,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 313,
+      "pn_root_id": "720575940648650884",
+      "kc_edge_count": 339,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 314,
+      "pn_root_id": "720575940649045369",
+      "kc_edge_count": 173,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 315,
+      "pn_root_id": "720575940649133945",
+      "kc_edge_count": 25,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 316,
+      "pn_root_id": "720575940652941217",
+      "kc_edge_count": 2,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 317,
+      "pn_root_id": "720575940656090017",
+      "kc_edge_count": 151,
+      "coordinate": null,
+      "sign": "unused"
+    },
+    {
+      "index": 318,
+      "pn_root_id": "720575940659400577",
+      "kc_edge_count": 33,
+      "coordinate": null,
+      "sign": "unused"
+    }
+  ],
+  "mappings": {
+    "fixed": {
+      "artifact_sha256": "11ba1b44af6433f15a4a6810a6469644a4252b69dce1ea8a0b25abbf1b04cf23",
+      "rank": 128,
+      "active_coordinate_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "formula": "z = normalize((embedding768 - train_mean768) @ projection768x128); ports[j]=max(z[j],0), ports[j+128]=max(-z[j],0)"
+    },
+    "centered": {
+      "artifact_sha256": "4fa6eb187913a7264589fd678146d46aadb0db18a40648c51c6aa602126befa4",
+      "rank": 128,
+      "active_coordinate_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127
+      ],
+      "formula": "z = normalize((embedding768 - train_mean768) @ projection768x128); ports[j]=max(z[j],0), ports[j+128]=max(-z[j],0)"
+    },
+    "pca": {
+      "artifact_sha256": "7b94c8965ff581009502bad756cd0dd37471c308bf682bbaed65e5625da916a3",
+      "rank": 31,
+      "active_coordinate_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "formula": "z = normalize((embedding768 - train_mean768) @ projection768x128); ports[j]=max(z[j],0), ports[j+128]=max(-z[j],0)"
+    }
+  }
+}
