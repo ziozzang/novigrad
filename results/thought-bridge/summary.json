@@ -1,0 +1,1216 @@
+{
+  "scope": "Input-semantic reconstruction, not subjective thoughts. Independent class probe interventions are distinct from the embedding decoder.",
+  "decoding": {
+    "raw_embedding": {
+      "train": {
+        "semantic_category_accuracy": 1.0,
+        "mean_cosine_to_input_embedding": 1.0,
+        "catalog_identity_retrieval_accuracy": 1.0
+      },
+      "test": {
+        "semantic_category_accuracy": 0.9166666666666666,
+        "mean_cosine_to_input_embedding": 1.0,
+        "catalog_identity_retrieval_accuracy": 1.0
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.9166666666666666,
+        "mean_cosine_to_input_embedding": 1.0,
+        "catalog_identity_retrieval_accuracy": 1.0
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.78125,
+        "mean_cosine_to_input_embedding": 1.0,
+        "catalog_identity_retrieval_accuracy": 1.0
+      }
+    },
+    "mean_embedding": {
+      "train": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.8350049017271155,
+        "catalog_identity_retrieval_accuracy": 0.03125
+      },
+      "test": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7606100706896246,
+        "catalog_identity_retrieval_accuracy": 0.041666666666666664
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7632324801874112,
+        "catalog_identity_retrieval_accuracy": 0.08333333333333333
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7488687745706062,
+        "catalog_identity_retrieval_accuracy": 0.03125
+      }
+    },
+    "aligned": {
+      "train": {
+        "semantic_category_accuracy": 1.0,
+        "mean_cosine_to_input_embedding": 0.9941264194612303,
+        "catalog_identity_retrieval_accuracy": 1.0
+      },
+      "test": {
+        "semantic_category_accuracy": 0.7083333333333334,
+        "mean_cosine_to_input_embedding": 0.8213995076764201,
+        "catalog_identity_retrieval_accuracy": 0.375
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.6666666666666666,
+        "mean_cosine_to_input_embedding": 0.8370068127209827,
+        "catalog_identity_retrieval_accuracy": 0.5833333333333334
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.5625,
+        "mean_cosine_to_input_embedding": 0.8091008191529152,
+        "catalog_identity_retrieval_accuracy": 0.40625
+      }
+    },
+    "shuffled_11": {
+      "train": {
+        "semantic_category_accuracy": 0.34375,
+        "mean_cosine_to_input_embedding": 0.7801910528083029,
+        "catalog_identity_retrieval_accuracy": 0.03125
+      },
+      "test": {
+        "semantic_category_accuracy": 0.2916666666666667,
+        "mean_cosine_to_input_embedding": 0.743444007270709,
+        "catalog_identity_retrieval_accuracy": 0.08333333333333333
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7376618479073845,
+        "catalog_identity_retrieval_accuracy": 0.16666666666666666
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.4375,
+        "mean_cosine_to_input_embedding": 0.7195823742252586,
+        "catalog_identity_retrieval_accuracy": 0.09375
+      }
+    },
+    "shuffled_12": {
+      "train": {
+        "semantic_category_accuracy": 0.375,
+        "mean_cosine_to_input_embedding": 0.7713277817668437,
+        "catalog_identity_retrieval_accuracy": 0.0625
+      },
+      "test": {
+        "semantic_category_accuracy": 0.3333333333333333,
+        "mean_cosine_to_input_embedding": 0.7555229729853922,
+        "catalog_identity_retrieval_accuracy": 0.125
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.3333333333333333,
+        "mean_cosine_to_input_embedding": 0.7097144941473656,
+        "catalog_identity_retrieval_accuracy": 0.16666666666666666
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.5,
+        "mean_cosine_to_input_embedding": 0.7257179449200495,
+        "catalog_identity_retrieval_accuracy": 0.09375
+      }
+    },
+    "shuffled_13": {
+      "train": {
+        "semantic_category_accuracy": 0.4375,
+        "mean_cosine_to_input_embedding": 0.798302803138285,
+        "catalog_identity_retrieval_accuracy": 0.0625
+      },
+      "test": {
+        "semantic_category_accuracy": 0.4166666666666667,
+        "mean_cosine_to_input_embedding": 0.7385242579434598,
+        "catalog_identity_retrieval_accuracy": 0.041666666666666664
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.5833333333333334,
+        "mean_cosine_to_input_embedding": 0.7681075520246238,
+        "catalog_identity_retrieval_accuracy": 0.08333333333333333
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.28125,
+        "mean_cosine_to_input_embedding": 0.73046932954578,
+        "catalog_identity_retrieval_accuracy": 0.03125
+      }
+    },
+    "shuffled_14": {
+      "train": {
+        "semantic_category_accuracy": 0.1875,
+        "mean_cosine_to_input_embedding": 0.7592890087596453,
+        "catalog_identity_retrieval_accuracy": 0.0
+      },
+      "test": {
+        "semantic_category_accuracy": 0.2916666666666667,
+        "mean_cosine_to_input_embedding": 0.7072460543173845,
+        "catalog_identity_retrieval_accuracy": 0.041666666666666664
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.3333333333333333,
+        "mean_cosine_to_input_embedding": 0.7057131904421078,
+        "catalog_identity_retrieval_accuracy": 0.08333333333333333
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.34375,
+        "mean_cosine_to_input_embedding": 0.6643300921981077,
+        "catalog_identity_retrieval_accuracy": 0.03125
+      }
+    },
+    "shuffled_15": {
+      "train": {
+        "semantic_category_accuracy": 0.28125,
+        "mean_cosine_to_input_embedding": 0.7587894244886122,
+        "catalog_identity_retrieval_accuracy": 0.03125
+      },
+      "test": {
+        "semantic_category_accuracy": 0.375,
+        "mean_cosine_to_input_embedding": 0.7235805800963072,
+        "catalog_identity_retrieval_accuracy": 0.08333333333333333
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7240246363607629,
+        "catalog_identity_retrieval_accuracy": 0.08333333333333333
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.21875,
+        "mean_cosine_to_input_embedding": 0.6995015096108681,
+        "catalog_identity_retrieval_accuracy": 0.0
+      }
+    },
+    "mbon_aligned": {
+      "train": {
+        "semantic_category_accuracy": 0.9375,
+        "mean_cosine_to_input_embedding": 0.9464124780871352,
+        "catalog_identity_retrieval_accuracy": 0.71875
+      },
+      "test": {
+        "semantic_category_accuracy": 0.75,
+        "mean_cosine_to_input_embedding": 0.8011054773386571,
+        "catalog_identity_retrieval_accuracy": 0.20833333333333334
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.4166666666666667,
+        "mean_cosine_to_input_embedding": 0.8192788123078508,
+        "catalog_identity_retrieval_accuracy": 0.4166666666666667
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.59375,
+        "mean_cosine_to_input_embedding": 0.7874031589588835,
+        "catalog_identity_retrieval_accuracy": 0.3125
+      }
+    }
+  },
+  "posthoc_mbon_control": {
+    "status": "added after KC readout results, fixed same ridge0.1; no hyperparameter tuning",
+    "stage": "96 MBON-like rates after plastic KC-MBON weights, before output gains/action aggregation",
+    "policy_seed": 601,
+    "trained_alignment_applied_to_untrained_mbon": {
+      "semantic_category_accuracy": 0.25,
+      "mean_cosine_to_input_embedding": 0.6352534138400867,
+      "catalog_identity_retrieval_accuracy": 0.03125,
+      "catalog_boundary": "posthoc diagnostic: recover matching row from this known input catalog, not free-text reconstruction",
+      "unsupported_candidate_rate": 0.0,
+      "cases": [
+        {
+          "text": "After cycling uphill in the sun, I need water to replace what I lost sweating.",
+          "expected_category": "water",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7576217678484407
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7558557906105963
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7383650962229278
+            }
+          ],
+          "top2_margin": 0.0017659772378444405,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "The salty crackers have left me needing a glass of water.",
+          "expected_category": "water",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7798406289767976
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7625489380192323
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7551023195414786
+            }
+          ],
+          "top2_margin": 0.01729169095756533,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "My legs are not tired after the walk; I just need water for this dry throat.",
+          "expected_category": "water",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7752157081347083
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7703624779802817
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7439163739447587
+            }
+          ],
+          "top2_margin": 0.004853230154426624,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "I was cold when I left home, but the run warmed me up. Now I only need a drink.",
+          "expected_category": "water",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7637943541855096
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7600093153548867
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7345783968825432
+            }
+          ],
+          "top2_margin": 0.0037850388306228666,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\ud587\ubcd5 \uc544\ub798 \uc790\uc804\uac70\ub97c \ud0c0\uace0 \ub540\uc744 \ub9ce\uc774 \ud758\ub824\uc11c \ubb3c\uc744 \ub9c8\uc154\uc57c\uaca0\uc5b4.",
+          "expected_category": "water",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7211749200094616
+            },
+            {
+              "description": "A need to drink and relieve bodily thirst.",
+              "category": "water",
+              "cosine": 0.6763906052878956
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.6737654012716046
+            }
+          ],
+          "top2_margin": 0.044784314721565965,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc9ed\uc9e4\ud55c \uacfc\uc790\ub97c \uba39\uc5c8\ub354\ub2c8 \ubb3c \ud55c \uc794\uc774 \uaf2d \ud544\uc694\ud574.",
+          "expected_category": "water",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.6851141258448414
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.647986281833426
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.6331603610524982
+            }
+          ],
+          "top2_margin": 0.037127844011415445,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc0b0\ucc45 \ud6c4 \ub2e4\ub9ac\uac00 \ud53c\uace4\ud55c \uac74 \uc544\ub2c8\uace0 \ubaa9\uc774 \ub9d0\ub77c\uc11c \ubb3c\ub9cc \ud544\uc694\ud574.",
+          "expected_category": "water",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7600932283491141
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7452505223825671
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7213411881159687
+            }
+          ],
+          "top2_margin": 0.01484270596654702,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc9d1\uc744 \ub098\uc124 \ub550 \ucd94\uc6e0\uc9c0\ub9cc \ub2ec\ub9ac\uace0 \ub098\ub2c8 \ub530\ub73b\ud574\uc84c\uc5b4. \uc774\uc81c \ud544\uc694\ud55c \uac74 \ub9c8\uc2e4 \ubb3c\ubfd0\uc774\uc57c.",
+          "expected_category": "water",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7143453718241295
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.6822788900021142
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.6596606156259884
+            }
+          ],
+          "top2_margin": 0.032066481822015325,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "I missed lunch while working and now need a proper meal.",
+          "expected_category": "food",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7600023570315533
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7575468420695881
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.75411959009632
+            }
+          ],
+          "top2_margin": 0.002455514961965166,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "After the long swim, my empty stomach is telling me I need something to eat.",
+          "expected_category": "food",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.760526185686526
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7496340173994513
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7453077473770607
+            }
+          ],
+          "top2_margin": 0.010892168287074622,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "I am not looking for a bed; I need dinner because I have not eaten since morning.",
+          "expected_category": "food",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7831971398906717
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7573174990336873
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7540878427099591
+            }
+          ],
+          "top2_margin": 0.025879640856984465,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "My thirst is taken care of after that bottle of water. Now I need a sandwich to satisfy my hunger.",
+          "expected_category": "food",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7012396499773704
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.6765694866361075
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.66080300493684
+            }
+          ],
+          "top2_margin": 0.02467016334126293,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc77c\ud558\ub290\ub77c \uc810\uc2ec\uc744 \uac74\ub108\ub6f0\uc5b4\uc11c \uc774\uc81c \uc81c\ub300\ub85c \ub41c \uc2dd\uc0ac\ub97c \ud574\uc57c\uaca0\uc5b4.",
+          "expected_category": "food",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7724456409157827
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7458458773835618
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7374033876981132
+            }
+          ],
+          "top2_margin": 0.026599763532220932,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc624\ub798 \uc218\uc601\ud558\uace0 \ub098\uc624\ub2c8 \uc18d\uc774 \ube44\uc5b4\uc11c \uba39\uc744 \uac83\uc774 \ud544\uc694\ud574.",
+          "expected_category": "food",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7697457747948974
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7577097731464137
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7417449763478706
+            }
+          ],
+          "top2_margin": 0.012036001648483619,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc7a0\uc790\ub9ac\uac00 \ud544\uc694\ud55c \uac8c \uc544\ub2c8\ub77c \uc544\uce68 \uc774\ud6c4\ub85c \ubabb \uba39\uc5b4\uc11c \uc800\ub141\ubc25\uc774 \ud544\uc694\ud574.",
+          "expected_category": "food",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7508513314709366
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7291244134294613
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7227966398175195
+            }
+          ],
+          "top2_margin": 0.021726918041475307,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\ubb3c \ud55c \ubcd1\uc744 \ub9c8\uc154\uc11c \uac08\uc99d\uc740 \ud574\uacb0\ub410\uc5b4. \uc774\uc81c \ubc30\uace0\ud514\uc744 \ucc44\uc6b8 \uc0cc\ub4dc\uc704\uce58\uac00 \ud544\uc694\ud574.",
+          "expected_category": "food",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.6894663651853157
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.6568063503526931
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.645266528884371
+            }
+          ],
+          "top2_margin": 0.0326600148326226,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "My clothes are soaked from the rain and I need to get warm.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7436098272644474
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.725074256041384
+            },
+            {
+              "description": "Moving toward a meal that can supply calories.",
+              "category": "food",
+              "cosine": 0.713227248906502
+            }
+          ],
+          "top2_margin": 0.018535571223063374,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "Waiting outside in the winter wind has left me needing heat.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7896391728733902
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.768086799591165
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7539048168542659
+            }
+          ],
+          "top2_margin": 0.021552373282225257,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "I do not need food after that big dinner; I need warmth because this room is freezing.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7736662941757108
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7516552005600099
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7456662193796236
+            }
+          ],
+          "top2_margin": 0.02201109361570086,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "I finished my nap and feel rested, but the damp clothes are making me cold. Getting warm is my remaining need.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7674872116517295
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7427827438820455
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7381055132416463
+            }
+          ],
+          "top2_margin": 0.024704467769684046,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\ube44\ub97c \ub9de\uc544 \uc637\uc774 \ud760\ubed1 \uc816\uc5b4\uc11c \ubab8\uc744 \ub530\ub73b\ud558\uac8c \ud574\uc57c\uaca0\uc5b4.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7284575031024084
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.6925099366192913
+            },
+            {
+              "description": "Moving toward a meal that can supply calories.",
+              "category": "food",
+              "cosine": 0.6873842270431871
+            }
+          ],
+          "top2_margin": 0.035947566483117144,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uaca8\uc6b8\ubc14\ub78c \uc18d\uc5d0\uc11c \ubc16\uc5d0 \uae30\ub2e4\ub838\ub354\ub2c8 \ubab8\uc744 \ub370\uc6b8 \uc628\uae30\uac00 \ud544\uc694\ud574.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7609724766987348
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7395581942016033
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7243314021105515
+            }
+          ],
+          "top2_margin": 0.02141428249713151,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc800\ub141\uc744 \ub9ce\uc774 \uba39\uc5b4\uc11c \uc74c\uc2dd\uc740 \ud544\uc694 \uc5c6\uace0 \ubc29\uc774 \ub108\ubb34 \ucd94\uc6cc\uc11c \uc628\uae30\uac00 \ud544\uc694\ud574.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7696086422205892
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.739492834990043
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7355354679572365
+            }
+          ],
+          "top2_margin": 0.030115807230546188,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\ub0ae\uc7a0\uc744 \ub9c8\uccd0 \ud53c\ub85c\ub294 \ud480\ub838\uc9c0\ub9cc \ucd95\ucd95\ud55c \uc637 \ub54c\ubb38\uc5d0 \ucd94\uc6cc. \uc9c0\uae08 \ub0a8\uc740 \ud544\uc694\ub294 \ubab8\uc744 \ub370\uc6b0\ub294 \uac70\uc57c.",
+          "expected_category": "warmth",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7800158976627242
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7508889446607153
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7401372411156198
+            }
+          ],
+          "top2_margin": 0.02912695300200885,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "My night shift has ended and I need several hours of sleep.",
+          "expected_category": "rest",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7463272159140298
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7430844370572862
+            },
+            {
+              "description": "Moving toward a meal that can supply calories.",
+              "category": "food",
+              "cosine": 0.7201107617298903
+            }
+          ],
+          "top2_margin": 0.003242778856743622,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "After carrying boxes all afternoon, I need to stop and rest.",
+          "expected_category": "rest",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7689277496745373
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7637512922568209
+            },
+            {
+              "description": "Moving toward a meal that can supply calories.",
+              "category": "food",
+              "cosine": 0.7477826388031763
+            }
+          ],
+          "top2_margin": 0.005176457417716329,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "I am not thirsty or hungry after my meal; I need a nap because I have been awake all night.",
+          "expected_category": "rest",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7631870454643642
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7438741797145882
+            },
+            {
+              "description": "Moving toward a meal that can supply calories.",
+              "category": "food",
+              "cosine": 0.7334170629207619
+            }
+          ],
+          "top2_margin": 0.019312865749775976,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "The heater has made me comfortably warm. After the overnight journey, all I need now is sleep.",
+          "expected_category": "rest",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7701117821640656
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7585050859436285
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7570028172642262
+            }
+          ],
+          "top2_margin": 0.011606696220437085,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc57c\uac04 \uadfc\ubb34\uac00 \ub05d\ub098\uc11c \uc774\uc81c \uba87 \uc2dc\uac04 \uc7a0\uc744 \uc790\uc57c\uaca0\uc5b4.",
+          "expected_category": "rest",
+          "category": "food",
+          "description_id": "food-en-2",
+          "top3": [
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7378400378327848
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7134693727710991
+            },
+            {
+              "description": "\ubab8\uc774 \ud5c8\uae30\uc838 \uc74c\uc2dd\uc744 \uba39\uc5b4\uc57c \ud558\ub294 \uc0c1\ud0dc.",
+              "category": "food",
+              "cosine": 0.7029485936493289
+            }
+          ],
+          "top2_margin": 0.024370665061685726,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc624\ud6c4 \ub0b4\ub0b4 \uc0c1\uc790\ub97c \ub0a0\ub790\ub354\ub2c8 \uc77c\uc744 \uba48\ucd94\uace0 \uc26c\uc5b4\uc57c\uaca0\uc5b4.",
+          "expected_category": "rest",
+          "category": "rest",
+          "description_id": "rest-en-1",
+          "top3": [
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7567846307338943
+            },
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7547154233587886
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7457093770193882
+            }
+          ],
+          "top2_margin": 0.0020692073751057416,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\uc2dd\uc0ac\ub97c \ub9c8\uccd0 \ubaa9\ub9c8\ub974\uac70\ub098 \ubc30\uace0\ud508 \uac74 \uc544\ub2c8\uace0 \ubc24\uc744 \uc0c8\uc6cc\uc11c \ub0ae\uc7a0\uc774 \ud544\uc694\ud574.",
+          "expected_category": "rest",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7679875522016759
+            },
+            {
+              "description": "Prioritizing food after a period without nourishment.",
+              "category": "food",
+              "cosine": 0.7324289608525216
+            },
+            {
+              "description": "Seeking a quiet place for restorative sleep.",
+              "category": "rest",
+              "cosine": 0.7318292155383054
+            }
+          ],
+          "top2_margin": 0.03555859134915429,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        },
+        {
+          "text": "\ub09c\ubc29 \ub355\ubd84\uc5d0 \ubab8\uc740 \ub530\ub73b\ud574\uc84c\uc5b4. \ubc24\uc0c8 \uc774\ub3d9\ud55c \ub4a4\ub77c \uc774\uc81c \ud544\uc694\ud55c \uac74 \uc7a0\ubfd0\uc774\uc57c.",
+          "expected_category": "rest",
+          "category": "food",
+          "description_id": "food-en-1",
+          "top3": [
+            {
+              "description": "Seeking edible nourishment to restore energy.",
+              "category": "food",
+              "cosine": 0.7431999117840539
+            },
+            {
+              "description": "A need to eat because the body is hungry.",
+              "category": "food",
+              "cosine": 0.7427321398613017
+            },
+            {
+              "description": "Moving toward a meal that can supply calories.",
+              "category": "food",
+              "cosine": 0.7186039726030999
+            }
+          ],
+          "top2_margin": 0.0004677719227521582,
+          "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+        }
+      ]
+    },
+    "max_decoded_embedding_change": 0.22666304125154396,
+    "boundary": "still paired to input semantics, not trained on independent reward expectations or actual neural recordings"
+  },
+  "untrained_control": {
+    "status": "posthoc after initial semantic decoding; no tuning",
+    "hidden_max_difference": 0.0,
+    "native_untrained_accuracy": 0.21875,
+    "native_trained_accuracy": 0.5,
+    "semantic_decode_max_difference": 0.0,
+    "interpretation": "PN-KC representation is fixed before plastic learning; semantic decodability is not evidence for learned internal thought",
+    "checkpoint": {
+      "path": "results/thought-bridge/untrained-native.safetensors",
+      "sha256": "fa0c7bbeaece0acfc94b59c4ef3477563eca51dee5fb38dd0528b6016797d34f"
+    }
+  },
+  "interventions": {
+    "none": {
+      "removed_count": 0.0,
+      "removed_activity_l1_fraction": 0.0,
+      "decoder_flip": 0.0,
+      "native_policy_flip": 0.0,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.6041666666666666,
+      "decoder_correct": 0.65625,
+      "native_correct": 0.5208333333333334,
+      "decoded_target_score_change": 0.0,
+      "decoded_target_native_probability_change": 3.104408582051595e-10,
+      "native_max_probability_change": 7.140139738718669e-09,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "top_contribution_5pct": {
+      "removed_count": 6.0,
+      "removed_activity_l1_fraction": 0.07016434032213924,
+      "decoder_flip": 0.5,
+      "native_policy_flip": 0.2604166666666667,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.6354166666666666,
+      "decoder_correct": 0.59375,
+      "native_correct": 0.4375,
+      "decoded_target_score_change": -0.20522091734441303,
+      "decoded_target_native_probability_change": -0.009576611531277498,
+      "native_max_probability_change": 0.009611829028775295,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "random_active_5pct": {
+      "removed_count": 6.0,
+      "removed_activity_l1_fraction": 0.05749117526518008,
+      "decoder_flip": 0.09375,
+      "native_policy_flip": 0.041666666666666664,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.5625,
+      "decoder_correct": 0.6875,
+      "native_correct": 0.5104166666666666,
+      "decoded_target_score_change": -0.021833813880296645,
+      "decoded_target_native_probability_change": -0.0014482545666396618,
+      "native_max_probability_change": 0.0028689525400598845,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "bottom_contribution_5pct": {
+      "removed_count": 6.0,
+      "removed_activity_l1_fraction": 0.05665312276934705,
+      "decoder_flip": 0.0,
+      "native_policy_flip": 0.08333333333333333,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.6770833333333334,
+      "decoder_correct": 0.65625,
+      "native_correct": 0.4895833333333333,
+      "decoded_target_score_change": 0.13618529503727825,
+      "decoded_target_native_probability_change": 0.004695899318903685,
+      "native_max_probability_change": 0.005386561620980501,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "top_contribution_25pct": {
+      "removed_count": 26.0,
+      "removed_activity_l1_fraction": 0.27467541356391645,
+      "decoder_flip": 0.875,
+      "native_policy_flip": 0.5104166666666666,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.7395833333333334,
+      "decoder_correct": 0.375,
+      "native_correct": 0.3541666666666667,
+      "decoded_target_score_change": -0.5747326509276731,
+      "decoded_target_native_probability_change": -0.022711317986249924,
+      "native_max_probability_change": 0.02289636650433143,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "random_active_25pct": {
+      "removed_count": 26.0,
+      "removed_activity_l1_fraction": 0.2496324622511161,
+      "decoder_flip": 0.15625,
+      "native_policy_flip": 0.09375,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.6145833333333334,
+      "decoder_correct": 0.6875,
+      "native_correct": 0.5104166666666666,
+      "decoded_target_score_change": -0.06924737684290205,
+      "decoded_target_native_probability_change": -0.00445202241341273,
+      "native_max_probability_change": 0.008571352654447159,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "bottom_contribution_25pct": {
+      "removed_count": 26.0,
+      "removed_activity_l1_fraction": 0.23997163862885582,
+      "decoder_flip": 0.0,
+      "native_policy_flip": 0.3125,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.9166666666666666,
+      "decoder_correct": 0.65625,
+      "native_correct": 0.59375,
+      "decoded_target_score_change": 0.33353088331388897,
+      "decoded_target_native_probability_change": 0.009275367949157953,
+      "native_max_probability_change": 0.011862744111567736,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "top_contribution_50pct": {
+      "removed_count": 52.0,
+      "removed_activity_l1_fraction": 0.5279585231827577,
+      "decoder_flip": 1.0,
+      "native_policy_flip": 0.5729166666666666,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.7083333333333334,
+      "decoder_correct": 0.25,
+      "native_correct": 0.3125,
+      "decoded_target_score_change": -0.8772344035571736,
+      "decoded_target_native_probability_change": -0.027152754366397858,
+      "native_max_probability_change": 0.028225817407170933,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "random_active_50pct": {
+      "removed_count": 52.0,
+      "removed_activity_l1_fraction": 0.5032079317844622,
+      "decoder_flip": 0.21875,
+      "native_policy_flip": 0.125,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.7083333333333334,
+      "decoder_correct": 0.625,
+      "native_correct": 0.5208333333333334,
+      "decoded_target_score_change": -0.1925561979466133,
+      "decoded_target_native_probability_change": -0.010014804856230816,
+      "native_max_probability_change": 0.015052170803149542,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "bottom_contribution_50pct": {
+      "removed_count": 52.0,
+      "removed_activity_l1_fraction": 0.4721041971735869,
+      "decoder_flip": 0.0,
+      "native_policy_flip": 0.3645833333333333,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.96875,
+      "decoder_correct": 0.65625,
+      "native_correct": 0.625,
+      "decoded_target_score_change": 0.4568594457914723,
+      "decoded_target_native_probability_change": 0.008848310603449741,
+      "native_max_probability_change": 0.014163830783218145,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "all_active": {
+      "removed_count": 104.0,
+      "removed_activity_l1_fraction": 0.9999999869553337,
+      "decoder_flip": 0.875,
+      "native_policy_flip": 0.6354166666666666,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 1.0,
+      "decoder_correct": 0.25,
+      "native_correct": 0.25,
+      "decoded_target_score_change": -0.576812445763101,
+      "decoded_target_native_probability_change": -0.01895988282437126,
+      "native_max_probability_change": 0.02832922153174877,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    },
+    "random_l1matched25": {
+      "removed_count": 28.21875,
+      "changed_count": 29.21875,
+      "partially_attenuated_count": 1.0,
+      "removed_activity_l1_fraction": 0.27467541356391645,
+      "top25_target_removed_activity_l1_fraction": 0.27467541356391645,
+      "decoder_flip": 0.0625,
+      "native_policy_flip": 0.13541666666666666,
+      "baseline_decoder_native_agreement": 0.6041666666666666,
+      "intervened_decoder_native_agreement": 0.59375,
+      "decoder_correct": 0.6875,
+      "native_correct": 0.4895833333333333,
+      "decoded_target_score_change": -0.07298032259700887,
+      "decoded_target_native_probability_change": -0.004542995399485032,
+      "native_max_probability_change": 0.008813612318287293,
+      "case_count": 96,
+      "unique_input_case_count": 32
+    }
+  }
+}

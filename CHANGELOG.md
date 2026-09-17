@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add frozen EmbeddingGemma reconstruction from KC/MBON activities, shuffled and untrained controls, independent causal class-probe silencing, Safetensors readouts, and bilingual research; distinguish input semantics from subjective thoughts.
+
 - Extract fly-inspired adaptation, inhibitory competition, and eligibility rules into controlled diagnostics, including native-forward parity, matched supervised readouts, and trace magnitude controls.
 
 - Compare continuous/one-shot cue schedules, explicit host memory, global versus relative signal amplitude, reward strength, and repeated/spaced learning with measured controls and bilingual biological research.

@@ -157,3 +157,5 @@ The queue enforces capacity `delay + 1`; overflow leaves the next ID unchanged. 
 Follow-up: [continuous input, one-shot cues, signal strength, and repeated learning](SIGNAL_RESULTS.md), with [primary-source research](SIGNAL_RESEARCH.md).
 
 Mechanism extraction: [measured adaptation, hidden inhibition, and eligibility comparisons](MECHANISM_RESULTS.md), with [primary-source derivations](MECHANISM_RESEARCH.md).
+
+Embedding-based state readout: [measured KC/MBON reconstruction and causal controls](THOUGHT_RESULTS.md), [research and actual-fly measurement requirements](THOUGHT_RESEARCH.md).

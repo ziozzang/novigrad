@@ -1,0 +1,32 @@
+{
+  "category": "warmth",
+  "description_id": "warmth-ko-2",
+  "top3": [
+    {
+      "description": "불편한 추위를 막을 보온이 필요한 상태.",
+      "category": "warmth",
+      "cosine": 0.860770747784656
+    },
+    {
+      "description": "A need for insulation against uncomfortable cold.",
+      "category": "warmth",
+      "cosine": 0.8542661097260474
+    },
+    {
+      "description": "Seeking a warmer place to protect body temperature.",
+      "category": "warmth",
+      "cosine": 0.8412896960461492
+    }
+  ],
+  "top2_margin": 0.0065046380586085695,
+  "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought",
+  "input": "목이 마르지만 지금은 따뜻한 곳이 더 필요해요.",
+  "native_action_probabilities": {
+    "water": 0.2568970322608948,
+    "food": 0.21954059600830078,
+    "warmth": 0.27682849764823914,
+    "rest": 0.2467338591814041
+  },
+  "readout_stage": "kc",
+  "boundary": "Readout of a text-driven simulated circuit, not a biological fly recording."
+}

@@ -1,0 +1,2563 @@
+{
+  "design": {
+    "task": "decode engineered semantic input from frozen KC rate activity into authored text candidates",
+    "not_fly_thought": "no biological neural recordings, subjective reports, or autonomous internal state",
+    "training": "32 paired language embeddings and simulated KC vectors; no test alignment fitting",
+    "dimensions": 128,
+    "ridge": 0.1,
+    "model": "frozen original EmbeddingGemma-300m; documented128MRL truncate+normalize",
+    "candidates": "32 bilingual need descriptions plus8 unsupported-state distractors, authored before embedding/evaluation",
+    "readout": "candidatecosine scores are similarity, not confidence; no calibrated rejection",
+    "shared_encoder": "PN-KC layers precede plastic readout; decoder success need not reflect learned policy or causal action use",
+    "settings": "fixed before measurement; reused evaluation sets, not independent externalbenchmark"
+  },
+  "variants": {
+    "mean_embedding": {
+      "train": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.8350049017271155,
+        "unsupported_candidate_rate": 0.0,
+        "cases": [
+          {
+            "text": "I am thirsty.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please bring me water.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need something to drink.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My mouth is dry.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a glass of water.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to quench my thirst.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need to hydrate.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A drink would help me.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am hungry.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please bring me food.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need something to eat.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My stomach is empty.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a meal.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to satisfy my hunger.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need nourishment.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A snack would help me.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am cold.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please bring me a blanket.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need to get warm.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am shivering.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a warm coat.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to escape this chill.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need insulation.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A heater would help me.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am tired.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Please let me sleep.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need to rest.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I can barely stay awake.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Give me a quiet bed.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I want to recover from exhaustion.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need a nap.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "A break would help me.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          }
+        ]
+      },
+      "test": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7606100706896246,
+        "unsupported_candidate_rate": 0.0,
+        "cases": [
+          {
+            "text": "After the hike my throat feels parched.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Fill my bottle so I can rehydrate.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The most useful thing now is a cup of plain water.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I have not had any liquids all day.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Help me get a sip from the tap.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Fetch a beverage rather than a meal.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "After missing lunch my belly is rumbling.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Prepare a sandwich so I can refuel.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The most useful thing now is a bowl of soup to eat.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I have not eaten anything all day.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Help me get some bread and fruit.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Fetch a meal rather than a beverage.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The icy wind is making my teeth chatter.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Wrap me in something that retains heat.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The most useful thing now is a thick sweater.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "This freezing room is unbearable.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Help me sit beside a radiator.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need a coat rather than a bed.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "After working through the night my eyelids keep closing.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Arrange a place where I can take a snooze.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The most useful thing now is uninterrupted sleep.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I have been awake for two days.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Help me lie down and recuperate.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I need a bed rather than a coat.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          }
+        ]
+      },
+      "korean": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7632324801874112,
+        "unsupported_candidate_rate": 0.0,
+        "cases": [
+          {
+            "text": "목이 말라요. 물을 주세요.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "입이 바짝 말라서 마실 것이 필요해요.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "운동을 해서 수분을 보충하고 싶어요.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "배가 고파요. 먹을 것을 주세요.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "점심을 못 먹었어요. 식사가 필요해요.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "허기를 달랠 간식을 찾고 있어요.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "너무 추워요. 담요를 주세요.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "몸이 떨려서 따뜻한 곳으로 가고 싶어요.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "찬바람을 막아줄 두꺼운 옷이 필요해요.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "너무 졸려요. 잠을 자고 싶어요.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "밤을 새워서 누워 쉴 곳이 필요해요.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "피곤해서 잠깐 낮잠을 자고 싶어요.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          }
+        ]
+      },
+      "reused_confirmation": {
+        "semantic_category_accuracy": 0.25,
+        "mean_cosine_to_input_embedding": 0.7488687745706062,
+        "unsupported_candidate_rate": 0.0,
+        "cases": [
+          {
+            "text": "After cycling uphill in the sun, I need water to replace what I lost sweating.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The salty crackers have left me needing a glass of water.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My legs are not tired after the walk; I just need water for this dry throat.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I was cold when I left home, but the run warmed me up. Now I only need a drink.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "햇볕 아래 자전거를 타고 땀을 많이 흘려서 물을 마셔야겠어.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "짭짤한 과자를 먹었더니 물 한 잔이 꼭 필요해.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "산책 후 다리가 피곤한 건 아니고 목이 말라서 물만 필요해.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "집을 나설 땐 추웠지만 달리고 나니 따뜻해졌어. 이제 필요한 건 마실 물뿐이야.",
+            "expected_category": "water",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I missed lunch while working and now need a proper meal.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "After the long swim, my empty stomach is telling me I need something to eat.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am not looking for a bed; I need dinner because I have not eaten since morning.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My thirst is taken care of after that bottle of water. Now I need a sandwich to satisfy my hunger.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "일하느라 점심을 건너뛰어서 이제 제대로 된 식사를 해야겠어.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "오래 수영하고 나오니 속이 비어서 먹을 것이 필요해.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "잠자리가 필요한 게 아니라 아침 이후로 못 먹어서 저녁밥이 필요해.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "물 한 병을 마셔서 갈증은 해결됐어. 이제 배고픔을 채울 샌드위치가 필요해.",
+            "expected_category": "food",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My clothes are soaked from the rain and I need to get warm.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "Waiting outside in the winter wind has left me needing heat.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I do not need food after that big dinner; I need warmth because this room is freezing.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I finished my nap and feel rested, but the damp clothes are making me cold. Getting warm is my remaining need.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "비를 맞아 옷이 흠뻑 젖어서 몸을 따뜻하게 해야겠어.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "겨울바람 속에서 밖에 기다렸더니 몸을 데울 온기가 필요해.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "저녁을 많이 먹어서 음식은 필요 없고 방이 너무 추워서 온기가 필요해.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "낮잠을 마쳐 피로는 풀렸지만 축축한 옷 때문에 추워. 지금 남은 필요는 몸을 데우는 거야.",
+            "expected_category": "warmth",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "My night shift has ended and I need several hours of sleep.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "After carrying boxes all afternoon, I need to stop and rest.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "I am not thirsty or hungry after my meal; I need a nap because I have been awake all night.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "The heater has made me comfortably warm. After the overnight journey, all I need now is sleep.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "야간 근무가 끝나서 이제 몇 시간 잠을 자야겠어.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "오후 내내 상자를 날랐더니 일을 멈추고 쉬어야겠어.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "식사를 마쳐 목마르거나 배고픈 건 아니고 밤을 새워서 낮잠이 필요해.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          },
+          {
+            "text": "난방 덕분에 몸은 따뜻해졌어. 밤새 이동한 뒤라 이제 필요한 건 잠뿐이야.",
+            "expected_category": "rest",
+            "category": "food",
+            "description_id": "food-en-1",
+            "top3": [
+              {
+                "description": "Seeking edible nourishment to restore energy.",
+                "category": "food",
+                "cosine": 0.8378174992056869
+              },
+              {
+                "description": "A need for insulation against uncomfortable cold.",
+                "category": "warmth",
+                "cosine": 0.8240431329843485
+              },
+              {
+                "description": "Seeking a warmer place to protect body temperature.",
+                "category": "warmth",
+                "cosine": 0.8205691207773429
+              }
+            ],
+            "top2_margin": 0.01377436622133843,
+            "interpretation": "nearest authored semantic candidate, not a confidence or a biological thought"
+          }
+        ]
+      }
+    }
+  },
+  "hidden_max_difference_across_policy_seeds": {
+    "602": 0.0,
+    "603": 0.0
+  },
+  "provenance_sha256": {
+    "examples/bio_bridge/thought_embedding.py": "39975059d333678ad553c3c76f0d9af474125baad55f93ffb6bbde367a30e957",
+    "examples/bio_bridge/thought_descriptions.json": "5915ed43eb97f37c8de1b81dacb44f7836f44922efed669db59f65fb81a9dde1",
+    "results/thought-bridge/description-embeddings.safetensors": "4cd307acf6fedd3cd67e6c3bfb65feff3b432551aa31ac6d805b6317ec9a1dc9",
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "examples/bio_bridge/sparsity_confirmation.json": "64d70f92afc5c0ddafd6bbc724dfab8e331032a3866a963e42a7e5b724f0ae63",
+    "results/bio-bridge/confirmation-features.safetensors": "6de2669ed3c46a6114fffe2ac6cb5de3387cb7e92aa57d9f06efa481aecc5fe4",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+    "results/bio-bridge/sparse-d128-f0.02-s602.safetensors": "81bc3c761b0999142784bc9337fbed0388caabd84eae17fe7c82aa67783cc42c",
+    "results/bio-bridge/sparse-d128-f0.02-s603.safetensors": "859c0d652d22d1fd39d3808172f7b62c874fd4f47a27cd8c815f361c0edbee46"
+  },
+  "runtime_seconds": 0.04483312368392944
+}

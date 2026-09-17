@@ -1,0 +1,346 @@
+{
+  "timestamp_utc": "2026-09-17T11:26:58.167068+00:00",
+  "base_commit": "341ea1d6d03c33456765b3f351fe9b842d4b902a",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "python": "3.11.15",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "safetensors": "0.8.0",
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.0.1"
+  },
+  "tests": {
+    "bio_bridge": 44,
+    "function_bridge": 23,
+    "gemma_bridge": 2,
+    "native_python": 5,
+    "total": 74,
+    "all_passed": true,
+    "pip_check": "No broken requirements found."
+  },
+  "scope": "Simulated input-semantic reconstruction; no biological recordings or subjective thought extraction. MBON, untrained, catalog identity and L1 controls are post hoc.",
+  "verified_input_hashes": {
+    "examples/bio_bridge/thought_embedding.py": "06dc62d024d2b33fa3662dfe33a3cbdb69b6488adabb557cab381cea3b763b1e",
+    "examples/bio_bridge/thought_descriptions.json": "5915ed43eb97f37c8de1b81dacb44f7836f44922efed669db59f65fb81a9dde1",
+    "results/thought-bridge/description-embeddings.safetensors": "4cd307acf6fedd3cd67e6c3bfb65feff3b432551aa31ac6d805b6317ec9a1dc9",
+    "results/gemma-bridge/dataset.json": "c02331848abe627acf68fce01ac2d5b675e97d8123efdfcb5deb4f81d5b9391b",
+    "results/gemma-bridge/embeddings.safetensors": "ee4f1be85f69141fc82222b3c15009522e2b9fcd8063807d9c7717d93f424ccc",
+    "examples/bio_bridge/sparsity_confirmation.json": "64d70f92afc5c0ddafd6bbc724dfab8e331032a3866a963e42a7e5b724f0ae63",
+    "results/bio-bridge/confirmation-features.safetensors": "6de2669ed3c46a6114fffe2ac6cb5de3387cb7e92aa57d9f06efa481aecc5fe4",
+    "results/bio-bridge/sparse-d128-f0.02-s601.safetensors": "3eb26eeb839f1fc7ac0aea9ed7d212628cfa05c4a8afd3eb7012a4eeabaefcfa",
+    "results/bio-bridge/sparse-d128-f0.02-s602.safetensors": "81bc3c761b0999142784bc9337fbed0388caabd84eae17fe7c82aa67783cc42c",
+    "results/bio-bridge/sparse-d128-f0.02-s603.safetensors": "859c0d652d22d1fd39d3808172f7b62c874fd4f47a27cd8c815f361c0edbee46",
+    "examples/bio_bridge/thought_interventions.py": "7fc5ea59b31955ee4fa8ffc038640a242b4b320c4790f33598e141cbddce9f0d",
+    "/Users/a405394/models/google_embeddinggemma-300m/2_Dense/model.safetensors": "c327f2acb00149676ade24a75e11eb6ebbd367f9ee050267ba56829d2979f702",
+    "/Users/a405394/models/google_embeddinggemma-300m/3_Dense/model.safetensors": "ffb6cc5162e11e2ce6bc2367e121ee3bbbc4e82e1ee26826bd7573d4948d81b8",
+    "/Users/a405394/models/google_embeddinggemma-300m/model.safetensors": "cbf5a78393b6a033e0b8a63a57549964f7ed5c6fbeb4ba0694214f36123f2fd2"
+  },
+  "local_safetensors": {
+    "results/thought-bridge/description-embeddings.safetensors": {
+      "sha256": "4cd307acf6fedd3cd67e6c3bfb65feff3b432551aa31ac6d805b6317ec9a1dc9",
+      "tensors": {
+        "embeddings": {
+          "shape": [
+            40,
+            768
+          ],
+          "dtype": "float32"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-aligned.safetensors": {
+      "sha256": "b73a54f4fb149c0b43b4e243ec6db1374fcd782f3330842aeea8d6a28bbd4532",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-mbon_aligned.safetensors": {
+      "sha256": "fdc88f6158c70b81d6defef0daf65810653ee881bbf5e85b6ba27b780b463371",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            96
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-shuffled_11.safetensors": {
+      "sha256": "656effee032399e20f0a8153fe1f1a74d81f2cb9327795333c1159ea5af01842",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-shuffled_12.safetensors": {
+      "sha256": "49f4878070f120947254041fe1fba292d1b6bb38cda56a70f163a28f43ca8b22",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-shuffled_13.safetensors": {
+      "sha256": "1e6604f67207e97d1ea3898c81d9af71f6778f8c5ed4a9aa73414aa1ef7f258e",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-shuffled_14.safetensors": {
+      "sha256": "c9d18b0b311306d6e0cdd3d31a1aa5c0d0ae45da539e27f992b42b7d190763b1",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/semantic-decoder-shuffled_15.safetensors": {
+      "sha256": "4ccbb8e5c9cfb8ad5dbd76492f7e0905d7fa0dfea017a9e6462d927dac6ab042",
+      "tensors": {
+        "dual_coefficients": {
+          "shape": [
+            32,
+            128
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/thought-decoder-ridge.safetensors": {
+      "sha256": "72ad2463161147de9207dbf6ecdac7fd40bacfa2beb2004317ea90703a625f6e",
+      "tensors": {
+        "train_labels": {
+          "shape": [
+            32
+          ],
+          "dtype": "int64"
+        },
+        "dual_coefficients": {
+          "shape": [
+            32,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "kc_class_saliency": {
+          "shape": [
+            5177,
+            4
+          ],
+          "dtype": "float64"
+        },
+        "train_hidden_basis": {
+          "shape": [
+            32,
+            5177
+          ],
+          "dtype": "float64"
+        }
+      }
+    },
+    "results/thought-bridge/untrained-native.safetensors": {
+      "sha256": "fa0c7bbeaece0acfc94b59c4ef3477563eca51dee5fb38dd0528b6016797d34f",
+      "tensors": {
+        "hidden_ids": {
+          "shape": [
+            5177
+          ],
+          "dtype": "uint64"
+        },
+        "input_count": {
+          "shape": [
+            27848
+          ],
+          "dtype": "uint64"
+        },
+        "input_ids": {
+          "shape": [
+            319
+          ],
+          "dtype": "uint64"
+        },
+        "input_post": {
+          "shape": [
+            27848
+          ],
+          "dtype": "uint64"
+        },
+        "input_pre": {
+          "shape": [
+            27848
+          ],
+          "dtype": "uint64"
+        },
+        "output_actions": {
+          "shape": [
+            96
+          ],
+          "dtype": "uint64"
+        },
+        "output_ids": {
+          "shape": [
+            96
+          ],
+          "dtype": "uint64"
+        },
+        "plastic_count": {
+          "shape": [
+            62261
+          ],
+          "dtype": "uint64"
+        },
+        "plastic_post": {
+          "shape": [
+            62261
+          ],
+          "dtype": "uint64"
+        },
+        "plastic_pre": {
+          "shape": [
+            62261
+          ],
+          "dtype": "uint64"
+        },
+        "output_gains": {
+          "shape": [
+            96
+          ],
+          "dtype": "float32"
+        },
+        "plastic_weight": {
+          "shape": [
+            62261
+          ],
+          "dtype": "float32"
+        },
+        "input_sign": {
+          "shape": [
+            27848
+          ],
+          "dtype": "int8"
+        },
+        "plastic_sign": {
+          "shape": [
+            62261
+          ],
+          "dtype": "int8"
+        }
+      }
+    }
+  },
+  "artifact_sha256": {
+    "CHANGELOG.md": "fc73bf92c194bd33e55d6fd41bea994936914698d6b1726cf9cb9c72615880f3",
+    "README.ko.md": "1fec8d3bc5a59af347acffee848a3761bb2d5e4b5eed512dacaa12d4bdf30091",
+    "README.md": "0fb6ea8a6ae9a2c28c47f94ce15ad4e7580676f2ea47b5a890897b4cad448fbd",
+    "examples/bio_bridge/README.ko.md": "85408b723aaa7b4717a23125756fbf157343a16dccd292d3897d233a490a4b7c",
+    "examples/bio_bridge/README.md": "7da683c256f285b581a3333bfe46b00060c2d82bd316a76a87dac449c4317424",
+    "examples/bio_bridge/THOUGHT_RESEARCH.ko.md": "c345e06d508de3692866003e5f9c0f8753d073913d3c7eb6cd6a68c666b57f79",
+    "examples/bio_bridge/THOUGHT_RESEARCH.md": "2e5c9da400927363fee2a162efb80dab92cca64e1b265ca194c6518bc9879831",
+    "examples/bio_bridge/THOUGHT_RESULTS.ko.md": "0cfc60fdcb90d4b0af59a5e25665907654fce34cc00415f7ff990c2d534633d4",
+    "examples/bio_bridge/THOUGHT_RESULTS.md": "16069ff050da119753d3f2340fee9b6888233ac0b9e02e062c1fe273d1516c26",
+    "examples/bio_bridge/encode_thought_descriptions.py": "19f2edee98e48d2adf7f5c2d42dfe3c3fa3037e97950d38a5dc9ca16758a79b5",
+    "examples/bio_bridge/summarize_thought.py": "6018f5e4755d2763f76ed214421ba32b7dcfba99c5903a5b5189098aac19eb39",
+    "examples/bio_bridge/test_thought_embedding.py": "1ef42201f40039f195b9984b004bcd8a4740530f6d29bf19670fdcafb9a12fda",
+    "examples/bio_bridge/test_thought_interventions.py": "b4216c30ca6c1a5e841d6abfd9b755dfa2ead7e624a7782e5ade8816fc14461f",
+    "examples/bio_bridge/thought_descriptions.json": "5915ed43eb97f37c8de1b81dacb44f7836f44922efed669db59f65fb81a9dde1",
+    "examples/bio_bridge/thought_embedding.py": "06dc62d024d2b33fa3662dfe33a3cbdb69b6488adabb557cab381cea3b763b1e",
+    "examples/bio_bridge/thought_interventions.py": "7fc5ea59b31955ee4fa8ffc038640a242b4b320c4790f33598e141cbddce9f0d",
+    "results/thought-bridge/decoding-baseline.json": "0c8d43c90f905419f8228a4fd164beb4ac1920a130d129b3b93bf60261726858",
+    "results/thought-bridge/decoding.json": "3ec9dfe55f4589e45b2b92eeb6b4e5f80e251c497ef0ef4bb166316b6d6b5389",
+    "results/thought-bridge/demo-mbon.json": "29936aeb87b98ed231ad25aee5d4a43a55ca66b552794c5cc26a29d2b4c745aa",
+    "results/thought-bridge/demo.json": "5e7b51247e28d3bdfae6f95cdc227582f635e757df3e8d2a6f8446d58ce8c8be",
+    "results/thought-bridge/description-embeddings.safetensors": "4cd307acf6fedd3cd67e6c3bfb65feff3b432551aa31ac6d805b6317ec9a1dc9",
+    "results/thought-bridge/description-provenance.json": "9bd51fc6aacfbd4832f68b98bb435fc44e3f5edc4a59da1eeeddaf0d623596ed",
+    "results/thought-bridge/interventions.json": "3e054a360261df5962fcc4e2266ea60e091ddfb454716ff1757abdeba1d7eea5",
+    "results/thought-bridge/semantic-decoder-aligned.safetensors": "b73a54f4fb149c0b43b4e243ec6db1374fcd782f3330842aeea8d6a28bbd4532",
+    "results/thought-bridge/semantic-decoder-mbon_aligned.safetensors": "fdc88f6158c70b81d6defef0daf65810653ee881bbf5e85b6ba27b780b463371",
+    "results/thought-bridge/semantic-decoder-shuffled_11.safetensors": "656effee032399e20f0a8153fe1f1a74d81f2cb9327795333c1159ea5af01842",
+    "results/thought-bridge/semantic-decoder-shuffled_12.safetensors": "49f4878070f120947254041fe1fba292d1b6bb38cda56a70f163a28f43ca8b22",
+    "results/thought-bridge/semantic-decoder-shuffled_13.safetensors": "1e6604f67207e97d1ea3898c81d9af71f6778f8c5ed4a9aa73414aa1ef7f258e",
+    "results/thought-bridge/semantic-decoder-shuffled_14.safetensors": "c9d18b0b311306d6e0cdd3d31a1aa5c0d0ae45da539e27f992b42b7d190763b1",
+    "results/thought-bridge/semantic-decoder-shuffled_15.safetensors": "4ccbb8e5c9cfb8ad5dbd76492f7e0905d7fa0dfea017a9e6462d927dac6ab042",
+    "results/thought-bridge/semantic-readout.png": "1c25777d0c7ec4e00227ea55b7b01709799b6606aa2b31faa1527cbd589ae4c4",
+    "results/thought-bridge/semantic-readout.svg": "278ed17740ec8f82137cca8fa713b449de3b7c5693bebb08b50a9c3b4a5ef1f0",
+    "results/thought-bridge/summary.json": "682bddc0ad9269b03c21a08a3525adde3cfb13ce236575a080211dbb192b2478",
+    "results/thought-bridge/thought-decoder-ridge.safetensors": "72ad2463161147de9207dbf6ecdac7fd40bacfa2beb2004317ea90703a625f6e",
+    "results/thought-bridge/untrained-native.safetensors": "fa0c7bbeaece0acfc94b59c4ef3477563eca51dee5fb38dd0528b6016797d34f"
+  },
+  "checkpoint_distribution": "Safetensors remain ignored local generated artifacts; tracked scripts reproduce them from documented existing model/data prerequisites."
+}

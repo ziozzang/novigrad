@@ -1,0 +1,44 @@
+{
+  "purpose": "Frozen embeddings of authored semantic candidate descriptions; not decoded or observed biological thoughts.",
+  "external_validity": "None established. Candidates were authored independently and were not trained, tuned, or selected using evaluation outputs.",
+  "model": "/Users/a405394/models/google_embeddinggemma-300m",
+  "weight_sha256": {
+    "2_Dense/model.safetensors": "c327f2acb00149676ade24a75e11eb6ebbd367f9ee050267ba56829d2979f702",
+    "3_Dense/model.safetensors": "ffb6cc5162e11e2ce6bc2367e121ee3bbbc4e82e1ee26826bd7573d4948d81b8",
+    "model.safetensors": "cbf5a78393b6a033e0b8a63a57549964f7ed5c6fbeb4ba0694214f36123f2fd2"
+  },
+  "cases_path": "examples/bio_bridge/thought_descriptions.json",
+  "cases_sha256": "5915ed43eb97f37c8de1b81dacb44f7836f44922efed669db59f65fb81a9dde1",
+  "embedding_path": "results/thought-bridge/description-embeddings.safetensors",
+  "embedding_sha256": "4cd307acf6fedd3cd67e6c3bfb65feff3b432551aa31ac6d805b6317ec9a1dc9",
+  "rows": 40,
+  "supported_rows": 32,
+  "unsupported_rows": 8,
+  "shape": [
+    40,
+    768
+  ],
+  "dtype": "float32",
+  "normalized": true,
+  "norm_min": 0.9999999403953552,
+  "norm_max": 1.0000001192092896,
+  "prompt_name": "Classification",
+  "device": "mps",
+  "parameter_dtypes": [
+    "torch.float32"
+  ],
+  "model_load_seconds": 1.0602392107248306,
+  "encode_seconds": 0.4048024546355009,
+  "batch_size": 16,
+  "encoder_frozen": true,
+  "versions": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.0.1",
+    "safetensors": "0.8.0"
+  },
+  "row_order": "embedding row i corresponds to descriptions[i] in the cases JSON",
+  "generator": "examples/bio_bridge/encode_thought_descriptions.py",
+  "generator_sha256": "19f2edee98e48d2adf7f5c2d42dfe3c3fa3037e97950d38a5dc9ca16758a79b5",
+  "generator_note": "The original one-time artifact used the equivalent inline call; this canonical script was added afterward without regenerating or changing the embedding tensor."
+}

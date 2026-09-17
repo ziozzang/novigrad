@@ -105,3 +105,5 @@ Biological mechanism diagnostics: [EmbeddingGemma sparsity, FunctionGemma absten
 Signal timing and strength: [continuous versus one-shot input, host memory, reward magnitude, and spaced/repeated exposure](examples/bio_bridge/SIGNAL_RESULTS.md).
 
 Fly-inspired mechanism extraction: [adaptation, APL-style inhibition, and eligibility traces with matched controls](examples/bio_bridge/MECHANISM_RESULTS.md).
+
+Embedding-based neural state readout: [KC/MBON semantic reconstruction and causal controls](examples/bio_bridge/THOUGHT_RESULTS.md), with [biological decoding research](examples/bio_bridge/THOUGHT_RESEARCH.md).

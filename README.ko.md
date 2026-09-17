@@ -85,3 +85,5 @@ FunctionGemma API·LoRA 호출 실험: [예제](examples/function_bridge/README.
 신호 타이밍과 세기: [지속 입력·단발 입력, 외부 기억, 보상 크기, 반복·간격 학습 비교](examples/bio_bridge/SIGNAL_RESULTS.ko.md).
 
 초파리 메커니즘 추출·비교: [감각 적응, APL형 억제, 보상 흔적과 대조군 실험](examples/bio_bridge/MECHANISM_RESULTS.ko.md).
+
+임베딩 기반 신경 상태 판독: [KC/MBON 의미 복원과 인과 대조 실험](examples/bio_bridge/THOUGHT_RESULTS.ko.md), [생물학적 판독 연구](examples/bio_bridge/THOUGHT_RESEARCH.ko.md).
