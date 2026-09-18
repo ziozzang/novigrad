@@ -1,0 +1,20 @@
+{
+  "robotics.html": {
+    "sha256": "0670bd77d6faa7ec7d4551997321a9a381807de1c13a70bab649eb38a4e65fea",
+    "offline": true,
+    "desktop_mobile_no_overflow": true,
+    "mobile_table_scrollable": true,
+    "details_work": true,
+    "print_media_checked": true,
+    "no_browser_errors": true
+  },
+  "robotics.ko.html": {
+    "sha256": "e540af1dc1a74cb564b0af0513075acd0d210bbff930db486ce6c5118089192e",
+    "offline": true,
+    "desktop_mobile_no_overflow": true,
+    "mobile_table_scrollable": true,
+    "details_work": true,
+    "print_media_checked": true,
+    "no_browser_errors": true
+  }
+}

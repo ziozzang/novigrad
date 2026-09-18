@@ -1,0 +1,16 @@
+{
+  "same_environment_repeat": true,
+  "compared_fields_exact": {
+    "status": true,
+    "steps": true,
+    "timestep": true,
+    "actuated_dofs": true,
+    "initial_thorax_position_mm": true,
+    "trajectory": true,
+    "final_displacement_mm": true
+  },
+  "all_compared_exact": true,
+  "excluded": "Wall-clock timings and setup duration",
+  "replay_result_sha256": "32904fd8704db82890142ad763e9e04cab340e74463a4767f1e0757827044ceb",
+  "boundary": "One repeated 0.1 simulated-second trajectory on the same Mac and installed binaries. No cross-platform guarantee, long-term stability, or LM integration."
+}

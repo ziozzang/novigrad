@@ -25,6 +25,8 @@ cargo run --release --bin train_connectome -- \
 
 The checked-in confirmation used 8 held-out seeds (101–108), three tasks, and three reward conditions: task reward, zero reward, and shuffled ±1 reward. It evaluated independent noisy inputs after training and after reversing the task rule. Across the 8 seeds, trained greedy accuracy was 100% on binary, four-way, and XOR tasks; mean probability assigned to the correct answer was 99.55%, 98.29%, and 89.98%, respectively. Zero and shuffled rewards stayed near chance. The synthetic task inputs and engineered scalar rewards do not establish real sensory understanding. See the [v1 report](results/V1_REPORT.md) for controls, reversal, per-run artifacts, and caveats.
 
+The [biologically grounded robotics study](reports/neural-link/robotics.html) separates typed state tokens, learned soft-prefix inputs, and grounded action outputs. It includes primary-source mechanism mapping, a 1,280-case host-codec control diagnostic with retained timing failures, and an isolated Mac CPU FlyGym/MuJoCo installation and stepping check. These are engineering checks, not a newly trained language-model–body bridge. [한국어](reports/neural-link/robotics.ko.html).
+
 ## Generic engine
 
 The Rust library accepts two edge tables, arbitrary external input IDs and output IDs, and a configurable number of actions. A small end-to-end example trains, saves, loads, evaluates, and infers:

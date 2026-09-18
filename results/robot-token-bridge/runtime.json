@@ -1,0 +1,11 @@
+{
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "capture": "Original run/replay environment recorded after measurement",
+  "tests": {
+    "all_bio_bridge": 167,
+    "new_contract_tests": 8
+  },
+  "scope": "CPU NumPy host-codec diagnostic"
+}

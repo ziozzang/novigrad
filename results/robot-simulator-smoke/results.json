@@ -1,0 +1,592 @@
+{
+  "scope": "Installation and headless CPU physics/controller-step feasibility only; not LM bridge, motor learning, robotics transfer or biological alignment validation.",
+  "python": "3.12.11 (main, Jul  8 2025, 20:41:49) [Clang 20.1.4 ]",
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "machine": "arm64",
+  "script_sha256": "885b1b3e3a302f51387cc0ad4b751c61ccfae3de18f6c19958889f2fc8d967df",
+  "requested_seconds": 0.1,
+  "seed": 0,
+  "renderer": false,
+  "backend": "MuJoCo CPU; no Warp",
+  "sources": [
+    "https://neuromechfly.org/installation/",
+    "https://neuromechfly.org/tutorials/4c_hybrid_controller/",
+    "https://github.com/NeLy-EPFL/flygym/tree/v2.1.0"
+  ],
+  "licenses": "FlyGym Apache-2.0, separate from Novigrad MIT. Bundled NeuroMechFly assets and preprogrammed steps originate in the pinned FlyGym package; no third-party binary/assets redistributed here.",
+  "dependencies": {
+    "ImageIO": "2.37.4",
+    "PyOpenGL": "3.1.10",
+    "PyYAML": "6.0.3",
+    "Pygments": "2.21.0",
+    "absl-py": "2.5.0",
+    "asttokens": "3.0.2",
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "etils": "1.14.0",
+    "executing": "2.2.1",
+    "flygym": "2.1.0",
+    "fonttools": "4.65.0",
+    "fsspec": "2026.7.0",
+    "glfw": "2.10.2",
+    "imageio-ffmpeg": "0.6.0",
+    "ipython": "9.17.1",
+    "ipython_pygments_lexers": "1.1.1",
+    "jaxtyping": "0.3.7",
+    "jedi": "0.20.0",
+    "kiwisolver": "1.5.1",
+    "llvmlite": "0.49.0",
+    "loguru": "0.7.3",
+    "matplotlib": "3.11.2",
+    "matplotlib-inline": "0.2.2",
+    "mediapy": "1.2.7",
+    "mujoco": "3.9.0",
+    "numba": "0.67.0",
+    "numpy": "2.5.3",
+    "packaging": "26.3",
+    "parso": "0.8.7",
+    "pexpect": "4.9.0",
+    "pillow": "12.3.0",
+    "prompt_toolkit": "3.0.53",
+    "psutil": "7.2.2",
+    "ptyprocess": "0.7.0",
+    "pure_eval": "0.2.4",
+    "pyparsing": "3.3.2",
+    "python-dateutil": "2.9.0.post0",
+    "scipy": "1.18.1",
+    "six": "1.17.0",
+    "stack-data": "0.6.3",
+    "tabulate": "0.9.0",
+    "traitlets": "5.16.1",
+    "typing_extensions": "4.16.0",
+    "wadler_lindig": "0.1.7",
+    "wcwidth": "0.8.4",
+    "zipp": "4.1.0"
+  },
+  "distribution_metadata_hashes": {
+    "numpy-2.5.3.dist-info/METADATA": "451a9b8028000588e66b0b415587b6aef0bbc51a96d8e8a0cba0dc23acf64f99",
+    "numpy-2.5.3.dist-info/RECORD": "07e4a7dac8b4359b0a86fb7cea0d688cdc6ba4237fbfef0741965cf193c7dbae",
+    "pexpect-4.9.0.dist-info/METADATA": "2d7c5ac5fdefde4a0194ec522fbcc0ca70e99e1a2a956eea444168f8591650aa",
+    "pexpect-4.9.0.dist-info/RECORD": "18d1ff314a7a49821e1907a870b096a1aa90c0e726f99858d0da77043343a3ac",
+    "kiwisolver-1.5.1.dist-info/METADATA": "f07b7b6c0c9c2a624c8a31f931e16712f2cf3490e7dfd51643d68e9d42d4b2c9",
+    "kiwisolver-1.5.1.dist-info/RECORD": "0bc366d714ba47dafd947d80576cbc7ea8007dab54e7e1500c75cf4f8efd1b03",
+    "jedi-0.20.0.dist-info/METADATA": "436bd0fb249b82dee15e85e2fb91d08d8e797481a16af48a725b8e4fb5340478",
+    "jedi-0.20.0.dist-info/RECORD": "8aee5a15141dd898d3356eca862cd70ad85f382c676ced7d51041f98d32e63d9",
+    "ptyprocess-0.7.0.dist-info/METADATA": "c3c2b96b5d9a55da5958c34d08c18a0849f56609026cc46d5c95b8b77fcf3e0c",
+    "ptyprocess-0.7.0.dist-info/RECORD": "c4033a1a5bbd4f0aabc0b7f57aae33d735a97680c439581546f0a952654f1947",
+    "imageio-2.37.4.dist-info/METADATA": "bdc8cb937fcc650149184c2b1bd58eb53cd62da5c8dca8e7bdde36dd4fce844b",
+    "imageio-2.37.4.dist-info/RECORD": "bda149644e90dc04d5f7ec958a8eb71aea7473b8d4f4f5de4c4b404b3d0d60b7",
+    "packaging-26.3.dist-info/METADATA": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763",
+    "packaging-26.3.dist-info/RECORD": "1b8655965b0d83e9a067fd7f84b977bd1e117e0fb9f2874b2572781bdc9e2147",
+    "fonttools-4.65.0.dist-info/METADATA": "767c772df5fec424631e48baa13cfa55498f4d7be9b41d1071b34bf52cc28fa8",
+    "fonttools-4.65.0.dist-info/RECORD": "1c4e4f288b27fd8021d81fa3a1bcea0574cc2a20288bc0f42eaa5047b7891ba0",
+    "pygments-2.21.0.dist-info/METADATA": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43",
+    "pygments-2.21.0.dist-info/RECORD": "a13d8a6fb8f93ba6782cdfebfa83ae11523154ab3463ccba7cf0b805910f80af",
+    "prompt_toolkit-3.0.53.dist-info/METADATA": "d04994e4401b88abf884ca54fb3b85e50a8b4fb1fde1ed7eb3ece9d8bf5459a9",
+    "prompt_toolkit-3.0.53.dist-info/RECORD": "a40bdf71ed62886d4459e1462979f862f83d6fde483551fb8e547c0a6764df1d",
+    "executing-2.2.1.dist-info/METADATA": "d7586d1ae225bee126c4237eb0c4d7699a8580b81eb558cc500c263d29a633ff",
+    "executing-2.2.1.dist-info/RECORD": "483767c8f250006b2655250353b993e605b581fd6f5f41a5b7e2accb9bf3a414",
+    "etils-1.14.0.dist-info/METADATA": "924aa03746957f425eca8d3ef1ce6a0c6663d0a5f45fbd64b79ec19c74bac19a",
+    "etils-1.14.0.dist-info/RECORD": "11814e88f4f68fc8b8251de69ddd056f1ce22e6810138cdfeaeda973ed00c5a6",
+    "matplotlib_inline-0.2.2.dist-info/METADATA": "fedb3d587ec2d3fa4b0a81fd5353df697d2534c8ee714dbf050009afc60bcab7",
+    "matplotlib_inline-0.2.2.dist-info/RECORD": "9e3fca031d79eb520bebf44c820c831d604ddb76157308c28e9f7813f71268fe",
+    "flygym-2.1.0.dist-info/METADATA": "4031376ddae8efc0792578329d0fc6f3a236e0efb46e0e57078d5b2af8525246",
+    "flygym-2.1.0.dist-info/RECORD": "61a1c8823a9aeb89674441f36e9f0ae3933b84f13359d02f8887db3c218fb667",
+    "mediapy-1.2.7.dist-info/METADATA": "4ac328c143d8f9abb1c9f1621881d4fbf7bfa7a0772c2e2cac5a11b90bcca915",
+    "mediapy-1.2.7.dist-info/RECORD": "76aeae82b73b745957b66d12b4e11edaea35ec90f3c99d3f359e243c11a67ca9",
+    "traitlets-5.16.1.dist-info/METADATA": "e42b503240c058625ffb30c390818d72933117840cb25060614cb24f0be9e587",
+    "traitlets-5.16.1.dist-info/RECORD": "aff43c4596f0dbd321faaca9fe02b93fb1e62b8ff070763cd77ad26a97fc084f",
+    "ipython_pygments_lexers-1.1.1.dist-info/METADATA": "6b38c0946bdbc4778f4e38e2298547cbd7d13aeba9979ec4e4a412eabfbdfadb",
+    "ipython_pygments_lexers-1.1.1.dist-info/RECORD": "a601c87e87a63f4e126ce5e320367930d30129be677cb4a4980332f61b8aff31",
+    "pyopengl-3.1.10.dist-info/METADATA": "d31bac2f803d3d353d37999423520dc7c208530e6d1cc452169b100aa900ea14",
+    "pyopengl-3.1.10.dist-info/RECORD": "272d2da2b0e48fc99572459d394b1731c210dd956f3e39a934f3bc289f8794df",
+    "stack_data-0.6.3.dist-info/METADATA": "f28a66f2adde54e7031355e09a166e437bc0d023a31c10c973ac494288ca4c6f",
+    "stack_data-0.6.3.dist-info/RECORD": "522b69b3fb8bc2aba2e176a824f62b51cda7c3c30e78abbf9ebf90ce5e3cb615",
+    "contourpy-1.4.0.dist-info/METADATA": "40450acd747b288a5db999c435e1e921ffee0a38c7884a80cd46934c8004568f",
+    "contourpy-1.4.0.dist-info/RECORD": "1237b876596ef221ae4a5e23c1f8d3e526505e52a15f480ad4f4760f0a729791",
+    "fsspec-2026.7.0.dist-info/METADATA": "88b1657585de14e3bb82aa5278aa9595b30aa4ca74ead073d8950615c808099d",
+    "fsspec-2026.7.0.dist-info/RECORD": "bf8970ef32f4fa1da4c23e55e648fbcd3980d3d67f14268a514a5973514fd2a0",
+    "absl_py-2.5.0.dist-info/METADATA": "24eb8b2dbab3053ea20e46ae02ddb3b9157b5be7e7a38ad931fd0c596f517015",
+    "absl_py-2.5.0.dist-info/RECORD": "9db7b2cbf34dbc67015c1e51210186594af57c694f62c02d0bbcb70dd1a03798",
+    "loguru-0.7.3.dist-info/METADATA": "3a371f8b089014fdaee055edc440d448242847926ad67613621af402f9975fd9",
+    "loguru-0.7.3.dist-info/RECORD": "f561bf516e2dacc992d6041c129f33d6c98d63794d424e6738389eb031a40177",
+    "jaxtyping-0.3.7.dist-info/METADATA": "1349570d090f75d2b5e95bb03d053fab0216329f73be7cf0050a7670eedd8576",
+    "jaxtyping-0.3.7.dist-info/RECORD": "235ea62d76c2ebbe5d2d9b2d0c67c0cc71d932bcfdceec16c8fee5e160393dab",
+    "llvmlite-0.49.0.dist-info/METADATA": "981af48e46dfe1da9bc394d690969652721430730785db5f953d0bf2c4dce608",
+    "llvmlite-0.49.0.dist-info/RECORD": "b93ef37321e9f5052494ccbff1263666601a20a7b34bbb48f009a595d6eb58ed",
+    "python_dateutil-2.9.0.post0.dist-info/METADATA": "a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93",
+    "python_dateutil-2.9.0.post0.dist-info/RECORD": "e15e868a50b9c4e71df17b31369843617780146ac5adb1bbfdcced0ebe501824",
+    "pyyaml-6.0.3.dist-info/METADATA": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+    "pyyaml-6.0.3.dist-info/RECORD": "4e259774348bac93724047fa3547e03b71cbe2b7d37ca39be41513355d9cf36a",
+    "numba-0.67.0.dist-info/METADATA": "025ba2df60d252a02c4e25a02a3dd8616d0bf5f3159dd7da4e1c9322f7efd580",
+    "numba-0.67.0.dist-info/RECORD": "802962febd9fb56c5e4527e0867e8d5c1e5d972a62ef199e54c52bb289738a9c",
+    "matplotlib-3.11.2.dist-info/METADATA": "e5f532226d1025af2dd15ff951df27391f66d46403b8244ea61e6b8eb3e4d806",
+    "matplotlib-3.11.2.dist-info/RECORD": "3c4ede6ad4ccbdbb55955c225c771432e24462f5c0b73c4ebfaaf2a4506859d2",
+    "zipp-4.1.0.dist-info/METADATA": "a08698d0dd509325853fea0c5f7bbeff5046f16cf1666fcf0e03d0a6094c89d7",
+    "zipp-4.1.0.dist-info/RECORD": "09471a1e570a024020ae32570ac57c6e906d76a4840b93b92801ea1b6eec71a1",
+    "pure_eval-0.2.4.dist-info/METADATA": "4fe70f69411b9963d7275084210743afa819c2350899a29150bc43b1abf105d0",
+    "pure_eval-0.2.4.dist-info/RECORD": "a7827467bcdf9877f51deaf911c479feca74b4123dd93953acdc5a155347b933",
+    "imageio_ffmpeg-0.6.0.dist-info/METADATA": "c9697b379419a64049d99e2248c4cba963e03b5cad1dc65e10a887d1da7651ee",
+    "imageio_ffmpeg-0.6.0.dist-info/RECORD": "9d285285ce2326481a011b9a1fc5f82e7188bbd6f72377e3b6758edc42848340",
+    "cycler-0.12.1.dist-info/METADATA": "23289e19b76f1e01394227696e6af2b6cd1ce79e89731209bf9195148b18ed36",
+    "cycler-0.12.1.dist-info/RECORD": "cbcbee5f18d75bd4935199b135aa33c3ed62df14991110a35c428883798d7979",
+    "pyparsing-3.3.2.dist-info/METADATA": "3311a8b949d70f71a2b9788a9327f11d9d5a6a8012d6c046ca254ad2de877f45",
+    "pyparsing-3.3.2.dist-info/RECORD": "239325f438cc3542c4d936b77d4539132f7db3b83d55bf9b811db76cce83f0ee",
+    "mujoco-3.9.0.dist-info/METADATA": "b8a8c8eaa213f6d359a227c3ae657a517fe74c9cb1b624f7137515eea30aadfa",
+    "mujoco-3.9.0.dist-info/RECORD": "706450e3d2a8793690fe87c6250170d68ce6ac233375e90fcc34718156db6e1c",
+    "typing_extensions-4.16.0.dist-info/METADATA": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46",
+    "typing_extensions-4.16.0.dist-info/RECORD": "9e07fea845cac76293d927afa7157a14ecba39b318bc8af236b8de530b7656c1",
+    "asttokens-3.0.2.dist-info/METADATA": "8b3567b29654e6e9a60ab50fde2c317899152790acadaab7868a708bf931c3d3",
+    "asttokens-3.0.2.dist-info/RECORD": "7f0b4dabfd410366c48fb66b1af7671f17ab499310c80c3103855a7893694314",
+    "psutil-7.2.2.dist-info/METADATA": "525f8ba78523cf7bc3759d62a105e7c57fd679ea702402b9449fb0746aa0217f",
+    "psutil-7.2.2.dist-info/RECORD": "82a0585abe618fd6b841c095e45a9970cb4c8ace9aab3209d3602a8a1233ed49",
+    "parso-0.8.7.dist-info/METADATA": "2fd8c9f8209218163a6c086ba8075d177122430645fea770cc02c53cd426119d",
+    "parso-0.8.7.dist-info/RECORD": "f12d7035431df6048bd4ed5e00a3ff1b3e5821c6201e269ac0ad7f1e643cd9b7",
+    "wcwidth-0.8.4.dist-info/METADATA": "7a387bead1b8e6067c195ad2fa3e1cc8c5d0b938034ed596f0323bb27bd470f2",
+    "wcwidth-0.8.4.dist-info/RECORD": "14e3a8d6b0d298b1ceba426e083f04c6cb83303989750f81494c55cc1e98e5ce",
+    "pillow-12.3.0.dist-info/METADATA": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8",
+    "pillow-12.3.0.dist-info/RECORD": "45c037b8a45b62c77f1a01fe5895a67a77c9c3cb68634f80a0d7a5b060ac5f65",
+    "glfw-2.10.2.dist-info/METADATA": "aea6f1885bbd69b213db965ed8ccdd6f5d9772479f4de84c9116b4007fa296db",
+    "glfw-2.10.2.dist-info/RECORD": "2c6acfea5ed94adbcdb99725e41956a0d6a29c8c0526a168cba37a6a6a805544",
+    "wadler_lindig-0.1.7.dist-info/METADATA": "83659a4fe5e6a3a96abda2af32163a27769bb6e807e8babcd1fe37c54b87fa16",
+    "wadler_lindig-0.1.7.dist-info/RECORD": "34a3fabd5064fec98c7b22b577efc531439f6cef01f265bb6b2c4afab8c1c3c7",
+    "six-1.17.0.dist-info/METADATA": "562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468",
+    "six-1.17.0.dist-info/RECORD": "d16e50f347969b1e1919fb0c88bac4b9c644f5305bcfcfb00f72b646dbd4065d",
+    "scipy-1.18.1.dist-info/METADATA": "1adfbde8be136cbf348b889c51028e7e1824cdb90d29a26d8e81501948864fae",
+    "scipy-1.18.1.dist-info/RECORD": "d95b7aa2c03940de0bec301021a5753ff3577b5b7ce28e6342d59f9d8556258a",
+    "tabulate-0.9.0.dist-info/METADATA": "f2802aade2612091b45951f265af29174f90c3236f68cc8ccdeb646941e62969",
+    "tabulate-0.9.0.dist-info/RECORD": "e1ff270e624aeaceb4a190afe55933f453ca2766ac9d1d7802ca9507c85095ae",
+    "ipython-9.17.1.dist-info/METADATA": "e78cb2a71fde4012b32de9b2db8d3c50ba618a1bb1975acc1bf107453365a1be",
+    "ipython-9.17.1.dist-info/RECORD": "92fe331f3ea5494d30bbf1ffd2fc88908d7f7f84e8802644af2c8d0c9599ac32"
+  },
+  "asset_hashes": {
+    "flygym/assets/model/flybody/actuators.yaml": {
+      "sha256": "31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317",
+      "bytes": 3645
+    },
+    "flygym/assets/model/flybody/all_geom_suffixes.yaml": {
+      "sha256": "167c1949a77341ea23f204299987a810fd8ed1f13ef1cbc55d0871974f18b867",
+      "bytes": 1431
+    },
+    "flygym/assets/model/flybody/fruitfly.xml": {
+      "sha256": "66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c",
+      "bytes": 67648
+    },
+    "flygym/assets/model/flybody/joints.yaml": {
+      "sha256": "b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a",
+      "bytes": 10695
+    },
+    "flygym/assets/model/flybody/mujoco_globals.yaml": {
+      "sha256": "7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350",
+      "bytes": 520
+    },
+    "flygym/assets/model/flybody/pose/flight/yaw_roll_pitch.yaml": {
+      "sha256": "1d5a3034db1bc1d393fe37a9dbe044de34be05bb0aa232fa9856f9c45a4b5601",
+      "bytes": 1576
+    },
+    "flygym/assets/model/flybody/pose/neutral/yaw_roll_pitch.yaml": {
+      "sha256": "d7741963acf68c2905f03484d1fa2ff644baf28f9aeb9e3350c6783d2894c28d",
+      "bytes": 149
+    },
+    "flygym/assets/model/flybody/rigging.yaml": {
+      "sha256": "eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737",
+      "bytes": 23925
+    },
+    "flygym/assets/model/flybody/vision.yaml": {
+      "sha256": "1292a6d90fc7c7b54060e2053624a78d9f6deffcd8f7095ff87a9d1770ac9219",
+      "bytes": 856
+    },
+    "flygym/assets/model/flybody/visuals.yaml": {
+      "sha256": "a414609a7c48774e201948ea33701ab1c429bceb3949425b5a341e61a34470f5",
+      "bytes": 933
+    },
+    "flygym/assets/model/musculoskeletal/best_combined_arm_damping_stiff_cvt3.xml": {
+      "sha256": "04f6070d6733940357be005ca72c02ba0d9455538ff018da70c74de7458e9531",
+      "bytes": 49670
+    },
+    "flygym/assets/model/neuromechfly/compound_eye.npz": {
+      "sha256": "51afb29664ac1f4ef05535f417ae37ed8a625911c99995720ca382799eef36b3",
+      "bytes": 27591
+    },
+    "flygym/assets/model/neuromechfly/legacy/flygym1_config.yaml": {
+      "sha256": "521f2ebc9951bdd71ab71aed5c1c4f3352d036b2df257dba53b0370c0f2e16fb",
+      "bytes": 7217
+    },
+    "flygym/assets/model/neuromechfly/legacy/flygym1_deepfly3d_rollyawpitch.xml": {
+      "sha256": "01c2eb51a379e8f7af37ad64f795d942da3d433841ee2397f6bce4af8698484a",
+      "bytes": 47522
+    },
+    "flygym/assets/model/neuromechfly/legacy/flygym1_seqikpy_yawpitchroll.xml": {
+      "sha256": "e8bf4474c98b85cd142f1bf053d744edd92a2b39f01aff6cba3fb199e54059c7",
+      "bytes": 47518
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen12.stl": {
+      "sha256": "656b60100c06b0a8eb2dfbd201b12cac5eb31ffec6bf9c6c4ff3f97d14376371",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen3.stl": {
+      "sha256": "264af5ede95bfcb11720219b31c76141a0921394f7c46e7fb7fb6b7066880f3b",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen4.stl": {
+      "sha256": "662bbc3af32a987511af04e437d02c40e99840960809f5020abe9ec91b226ca4",
+      "bytes": 99984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen5.stl": {
+      "sha256": "87d1de98ad39ba52c096e0fd3b4860ae3a0aadeb4be46cac824e9b2501be6c48",
+      "bytes": 99984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen6.stl": {
+      "sha256": "748dda76a46554fd1743113eaafdf0dc2d10546095f5420406745e0eb47f87fb",
+      "bytes": 99984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_haustellum.stl": {
+      "sha256": "babceb7a6adf0c88e8de6ce9810c32b397d3d1cdd073c0b1bea1df9d8c6ac4e9",
+      "bytes": 99984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_head.stl": {
+      "sha256": "39c51acbdf5957af95e294fa485cd7602103ca83bf451e95e29d251bd43765b6",
+      "bytes": 99984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_rostrum.stl": {
+      "sha256": "4ed0fa33c5867013482011e2ff656b71189f2b29dfb0bda2b0797961d95d12e4",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_thorax.stl": {
+      "sha256": "b7fac1a3bcbad2100d063bae2ae6e81217e808f3c32564763ee7e43ec3904969",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_arista.stl": {
+      "sha256": "6201af1cbe213ee6e259a6d89df65080f9cb9d806e6526cbcc7c5f1ae793f97c",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_eye.stl": {
+      "sha256": "08ce40c3264c9ab87703b6c013eae39d1bc48fa3e4cf02aec06d529c94e70daf",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_funiculus.stl": {
+      "sha256": "d2a6d35751922fb8b1ce07b269bc432f33d7f8f6d243b2dd1801e021b91d8156",
+      "bytes": 26584
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_haltere.stl": {
+      "sha256": "13d77fcca66fca90db5cf00b33a7369ae80366fe39974df3667e709882e64ed6",
+      "bytes": 41284
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_pedicel.stl": {
+      "sha256": "6de0f06e57c78f8738f67c0c52b85e74cb105789497a4183944e90211d3a4bf4",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_wing.stl": {
+      "sha256": "142f77f15008fd75e1490b546bb859cf98c056121f1abd65acea2052c4e7764c",
+      "bytes": 100034
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_coxa.stl": {
+      "sha256": "bff053bfee772796dae2b396aa0e3be12919b7fb1ee33b5fde369bec00944b64",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus1.stl": {
+      "sha256": "29085dda732699c4a3110458303adf2eec667f7db6e42166d408c260ae6acf5e",
+      "bytes": 89584
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus2.stl": {
+      "sha256": "996735c15a7e8e0c022babf5500224fa6e23de0e277305279d4b6787d56335d8",
+      "bytes": 89884
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus3.stl": {
+      "sha256": "166044083a5a4a0e8b7db91cdd71ef0ea0e3feb18f1630955156de14931d9495",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus4.stl": {
+      "sha256": "c90d8c6ebd0e2384a45524944e4fb2e02ba413be26ee04bc5030b2afb5876943",
+      "bytes": 100034
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus5.stl": {
+      "sha256": "93b048052461fa756a767608418ec90e537435a1ff282f2a393faa45ba60ae73",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tibia.stl": {
+      "sha256": "8138fe5f1fc52588dca6677bb338d39451813ac96159f78d6cf677eba73f3862",
+      "bytes": 85534
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_trochanterfemur.stl": {
+      "sha256": "50e4e7baf2852a369f0dda2a2c9708a68c45893b3019a79dd74799e8e2ea64c9",
+      "bytes": 80984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_coxa.stl": {
+      "sha256": "ad3a10789b8bd5e0f3db2667a1fe373ffdb83cfc876b34d60508e9e34a51366d",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus1.stl": {
+      "sha256": "61af16259215525e092d61426b874c7855485a9c7cfa91eecfc2fe99281a2dc6",
+      "bytes": 38934
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus2.stl": {
+      "sha256": "da796bc3ad5d355b9e941aeeb6ad96c7fb00dee7421995605dcc81cd6fd7af12",
+      "bytes": 98684
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus3.stl": {
+      "sha256": "08280c942abf91279e86414d064f39cae2b46ba9f62845252a9763d0839fabe5",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus4.stl": {
+      "sha256": "623f9059236af1327770f6f8e5e4fb8dc87930c49f5559c36d3d4245f51f7678",
+      "bytes": 99984
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus5.stl": {
+      "sha256": "1b86c811928d0a6e04c693b9a213f06c0f7a037584252fc8f35d408be1bf87e8",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tibia.stl": {
+      "sha256": "2853873ade9abeb35da5f1a6c822d223bbe19a50d8ed77921bb77743b4782a60",
+      "bytes": 37484
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_trochanterfemur.stl": {
+      "sha256": "8e6b7ee8c4f6c388b64250086acc952c10abd469ac7bf0fb7015c2837e53d423",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_coxa.stl": {
+      "sha256": "01a6f4f4147b7cd308f0a1db79786694632c9fe5a3425b5e3454a7fa7624897b",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus1.stl": {
+      "sha256": "b7f50bfe1e75dfa65110a4f80e0216858a7a75712115b04605f344c8e837b1ae",
+      "bytes": 46284
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus2.stl": {
+      "sha256": "2dbb000ae11ef58de0023ccbdbfc8f1c5ff7b7517824a58d3e204f3ee00770c4",
+      "bytes": 77884
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus3.stl": {
+      "sha256": "8f1814f0054382e037279f04d0bb998e36ccaabd57ec418d35dd6f7e47bd51bb",
+      "bytes": 92884
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus4.stl": {
+      "sha256": "3f2881bd6f1fdb445bf01c00cac53c9a1b30388cd3fdc1b327704c60f138bf03",
+      "bytes": 100084
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus5.stl": {
+      "sha256": "3e9a76e4c0c4e829705271846f93a3aa056a0e87bc99996519722eeb841c1b70",
+      "bytes": 49384
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tibia.stl": {
+      "sha256": "dc1ad6da6db91ba703150e6150f59a498f9dbd311b1ec0678da3f896c421dab5",
+      "bytes": 33884
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_trochanterfemur.stl": {
+      "sha256": "9619105028e5006d891b12dfced77aafa3c41a599edbf49d14691907ce2eb502",
+      "bytes": 41384
+    },
+    "flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/simplification_metadata.csv": {
+      "sha256": "c3b77709577fe547b13ee4e39d1e71040edcd94743e78660b5f605d758a8745f",
+      "bytes": 4098
+    },
+    "flygym/assets/model/neuromechfly/mujoco_globals.yaml": {
+      "sha256": "e5b70e5bd5199ab2a9a68eb119ce9ef3f0b1dfa1890e13f1adb6d6cc20579988",
+      "bytes": 842
+    },
+    "flygym/assets/model/neuromechfly/pose/_manual_specs/neutral.yaml": {
+      "sha256": "1824449abfd55d6447ce24bc8ec190496a8f334a232b4c894495082c166f6924",
+      "bytes": 1394
+    },
+    "flygym/assets/model/neuromechfly/pose/neutral/pitch_roll_yaw.yaml": {
+      "sha256": "e3256fd1c9711daabcd90ed029dfc2a585720034b83e0900ac60697efe104aba",
+      "bytes": 1191
+    },
+    "flygym/assets/model/neuromechfly/pose/neutral/pitch_yaw_roll.yaml": {
+      "sha256": "bf69ba3a84f72b4b42371b4ea2e013a770956b113a05a4b0dec88a8ee525e12c",
+      "bytes": 1188
+    },
+    "flygym/assets/model/neuromechfly/pose/neutral/roll_pitch_yaw.yaml": {
+      "sha256": "bb39dac918af60e9287a122e4201eb4419ee8c6a78a404f67c82702b6f47a6db",
+      "bytes": 1136
+    },
+    "flygym/assets/model/neuromechfly/pose/neutral/roll_yaw_pitch.yaml": {
+      "sha256": "99ec76c61c427be836b37202edab010f92dc3150830c5460436b016a83ace287",
+      "bytes": 1132
+    },
+    "flygym/assets/model/neuromechfly/pose/neutral/yaw_pitch_roll.yaml": {
+      "sha256": "b4ada107c43a1588e5f361dace0bac5ea1ce7df181201e62a02cc6ec99dc48a9",
+      "bytes": 1184
+    },
+    "flygym/assets/model/neuromechfly/pose/neutral/yaw_roll_pitch.yaml": {
+      "sha256": "619a8efe6e3c2d4bb8acda82735f5732b7de039470ce0cd74e6c574cde6e1a8c",
+      "bytes": 1133
+    },
+    "flygym/assets/model/neuromechfly/rigging.yaml": {
+      "sha256": "4e51d5ed3f151aefc125c91ff9298921b3b79a9d64e03e6fe88f1ce9945dbe3d",
+      "bytes": 6425
+    },
+    "flygym/assets/model/neuromechfly/vision.yaml": {
+      "sha256": "aeaf9c67603e85ac81d251a01e7a20821687c1a62be0626af49ef09919e10545",
+      "bytes": 874
+    },
+    "flygym/assets/model/neuromechfly/vision/ommatidia_id_map.npy": {
+      "sha256": "270baa562cd56b74c91fd3d0a218548aaf41c00df3401ebf521a0461adadf21d",
+      "bytes": 460928
+    },
+    "flygym/assets/model/neuromechfly/vision/pale_mask.npy": {
+      "sha256": "1489f64d82dbf35d488448d0a86afa7314be1f29a58ffc7ce4c454a5d492bb3f",
+      "bytes": 849
+    },
+    "flygym/assets/model/neuromechfly/visuals.yaml": {
+      "sha256": "1b959ada4d8016d4c7f6bde4b118733b48e72d749acc74b8753b547c86b6546a",
+      "bytes": 4566
+    },
+    "flygym_demo/ball_flybody_data/assets/ball_flybody_clip.npz": {
+      "sha256": "f04c7e019e1049eb7eeb808abda971555c4d44542d7a3038b207aa02c8517cb0",
+      "bytes": 19998
+    },
+    "flygym_demo/complex_terrain/assets/flybody_step_selection.json": {
+      "sha256": "1c411f6ec212fc4befb84be5b264c5f2628d7ee7263610f43f1e3e54eb55bef3",
+      "bytes": 543
+    },
+    "flygym_demo/complex_terrain/assets/single_steps_flybody.meta.json": {
+      "sha256": "b22bba44c402a334dc23de491f613bdb58c0d4c3e262fc081b507b16909ee486",
+      "bytes": 1261
+    },
+    "flygym_demo/complex_terrain/assets/single_steps_flybody.npz": {
+      "sha256": "25c4d9ae6fa2adf7f4e30c696b8c07f8810721e352feb17e462b094defe2736b",
+      "bytes": 28186
+    },
+    "flygym_demo/complex_terrain/assets/single_steps_untethered.pkl": {
+      "sha256": "1e5b28bb6b3f50ac95a04773ea37af28d05e26d03bd90fdba57fa1b3eacfaf8c",
+      "bytes": 18024
+    },
+    "flygym_demo/complex_terrain/assets/ventral_replay.mp4": {
+      "sha256": "892eb4263d381e58c63b4239169b605f4474fdc0f735e4712836c2157430f5d0",
+      "bytes": 648607
+    },
+    "flygym_demo/muscle_imitation/assets/mocap/qpos/0002.npy": {
+      "sha256": "aa7e3e72325d7d76a17863057cbaba9259a346d66e41b7d820411570d5e00a42",
+      "bytes": 12728
+    },
+    "flygym_demo/muscle_imitation/assets/mocap/qvel/0002.npy": {
+      "sha256": "c472a3e03ed25a614efcb90e54641e41a031d23024092d99f44b4448b581dd12",
+      "bytes": 12728
+    },
+    "flygym_demo/muscle_imitation/assets/mocap/xipos/0002.npy": {
+      "sha256": "3f73c47ee4692b0ebf9a760869d1ea05af6c8bbd5795320fb2edb38f53c5c20c",
+      "bytes": 21728
+    },
+    "flygym_demo/muscle_imitation/assets/mocap/xivel/0002.npy": {
+      "sha256": "3eb99125864b8ecdf05286c72301eb1954ae9d9e2e113b350b6ca1c02f6e8d61",
+      "bytes": 43328
+    },
+    "flygym_demo/spotlight_data/assets/spotlight_behavior_clip.npz": {
+      "sha256": "6688dcffe1428e88cec0169513f4980abe6e0836ffe467f0ff6da4465db83a09",
+      "bytes": 528912
+    }
+  },
+  "setup_and_warmup_seconds": 29.919908666983247,
+  "status": "passed",
+  "steps": 1000,
+  "timestep": 0.0001,
+  "simulated_seconds": 0.1,
+  "step_wall_seconds": 0.5742664579302073,
+  "steps_per_wall_second": 1741.3519215526492,
+  "real_time_factor": 0.17413519215526493,
+  "actuated_dofs": 42,
+  "initial_thorax_position_mm": [
+    0.5509179218666584,
+    -3.179257153918122e-05,
+    1.1601775416602311
+  ],
+  "trajectory": [
+    {
+      "step": 1,
+      "thorax_position_mm": [
+        0.5508549054797356,
+        -3.217637306938705e-05,
+        1.16024769594883
+      ]
+    },
+    {
+      "step": 101,
+      "thorax_position_mm": [
+        0.5918292500591578,
+        -0.0064033768031297,
+        1.18022190404404
+      ]
+    },
+    {
+      "step": 201,
+      "thorax_position_mm": [
+        0.6603469362890169,
+        -0.031701717283933006,
+        1.1871727666409968
+      ]
+    },
+    {
+      "step": 301,
+      "thorax_position_mm": [
+        0.7157316093676819,
+        -0.028608116460952876,
+        1.1747378286392882
+      ]
+    },
+    {
+      "step": 401,
+      "thorax_position_mm": [
+        0.6840591919382933,
+        0.05091077898744822,
+        1.05326785324795
+      ]
+    },
+    {
+      "step": 501,
+      "thorax_position_mm": [
+        0.6288109148699615,
+        0.24788604825280414,
+        0.9015184875572552
+      ]
+    },
+    {
+      "step": 601,
+      "thorax_position_mm": [
+        0.701083880646803,
+        0.309975816564994,
+        0.7985541246863688
+      ]
+    },
+    {
+      "step": 701,
+      "thorax_position_mm": [
+        0.8042013207401498,
+        0.4033782599515068,
+        0.8786022185683778
+      ]
+    },
+    {
+      "step": 801,
+      "thorax_position_mm": [
+        0.9449351273585329,
+        0.41672691948284624,
+        0.9489952372254166
+      ]
+    },
+    {
+      "step": 901,
+      "thorax_position_mm": [
+        1.0253830443447416,
+        0.39071915558658576,
+        0.9463554508643003
+      ]
+    },
+    {
+      "step": 1000,
+      "thorax_position_mm": [
+        1.0776959683593723,
+        0.31758174479557844,
+        0.9085411214816597
+      ]
+    }
+  ],
+  "final_displacement_mm": [
+    0.5267780464927139,
+    0.3176135373671176,
+    -0.25163642017857146
+  ],
+  "external_asset_cache": {},
+  "external_asset_endpoint": "https://datasets.epfl.ch/nely-public-share/flygym_assets/ (only used if lazy assets requested)",
+  "requirements_sha256": "0cf916deb3fb5a4b363de09e2678141b859f38a9be7bc087e8b3f237c2911b62"
+}

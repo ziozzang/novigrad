@@ -1,0 +1,104 @@
+{
+  "config": {
+    "dt_s": 0.01,
+    "rate_hz": 100,
+    "steps": 300,
+    "duration_s": 3.0,
+    "goal_switch_s": 1.5,
+    "seeds": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008
+    ],
+    "initial_conditions_per_seed": 16,
+    "controller_gain": 2.0,
+    "max_turn_rate_rad_s": 2.5,
+    "success_error_rad": 0.15,
+    "command_validity": "half-open [issued_s, expires_s)",
+    "conditions": [
+      {
+        "name": "continuous_true_disturbance",
+        "bins": null,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins16_true_disturbance",
+        "bins": 16,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_true_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins256_true_disturbance",
+        "bins": 256,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_actioncopy_disturbance",
+        "bins": 64,
+        "feedback": "action_copy_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_wrongframe_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "wrong_frame",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_oneshot_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "one_shot",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_slow2hz_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "2hz_hold",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_true_no_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "logged_not_applied"
+      },
+      {
+        "name": "bins64_actuator_no_effect_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied",
+        "motor_plant_gain": 0.0
+      }
+    ],
+    "anti_goal_boundary": "Both sampled goals are checked only against the initial heading. A goal within .02 rad of exact pi initial error is shifted by .03 rad. There is no switch-time anti-goal guard; all resulting failures are retained."
+  },
+  "config_sha256": "db572a3bda24e88bc1052265160839c7dfd68e646ed9324f558e20bea8afcf5f",
+  "source_sha256": {
+    "examples/bio_bridge/robot_token_bridge.py": "c4b76e272b6af9d80a5653122a4078e43b559bcf424a111a9854f9f11ab03fab",
+    "examples/bio_bridge/test_robot_token_bridge.py": "d362f91b5096b9a3bf7e7f77fa751a7cf6db1ab3d44e5feccce17dcaa9375314"
+  },
+  "freeze_boundary": "Written before build_report or any corrected outcome calculation"
+}

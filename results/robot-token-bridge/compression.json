@@ -1,0 +1,9 @@
+{
+  "archive": "results.json.gz",
+  "compression": "gzip; mtime=0",
+  "compressed_bytes": 12593609,
+  "compressed_sha256": "9f2d8b96f7d8e1aaff4a10ec62ac73a60aeb976adb19abccdb62b04dfa9ec71e",
+  "uncompressed_bytes": 68034972,
+  "uncompressed_sha256": "3d6196109c85d4b346daeb555c9ec95e2e52f877422e7fbc51d813341f680f74",
+  "restore_method": "Decode with gzip.decompress, check uncompressed SHA-256 against run-manifest.json, then write results.json only if missing."
+}

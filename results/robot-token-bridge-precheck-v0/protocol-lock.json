@@ -1,0 +1,94 @@
+{
+  "config": {
+    "dt_s": 0.01,
+    "rate_hz": 100,
+    "steps": 300,
+    "duration_s": 3.0,
+    "goal_switch_s": 1.5,
+    "seeds": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008
+    ],
+    "initial_conditions_per_seed": 16,
+    "controller_gain": 2.0,
+    "max_turn_rate_rad_s": 2.5,
+    "success_error_rad": 0.15,
+    "conditions": [
+      {
+        "name": "continuous_true_disturbance",
+        "bins": null,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins16_true_disturbance",
+        "bins": 16,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_true_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins256_true_disturbance",
+        "bins": 256,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_actioncopy_disturbance",
+        "bins": 64,
+        "feedback": "action_copy_feedback",
+        "schedule": "100hz",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_wrongframe_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "wrong_frame",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_oneshot_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "one_shot",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_slow2hz_disturbance",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "2hz_hold",
+        "disturbance": "applied"
+      },
+      {
+        "name": "bins64_true_disturbance_noeffect",
+        "bins": 64,
+        "feedback": "true_feedback",
+        "schedule": "100hz",
+        "disturbance": "logged_not_applied"
+      }
+    ],
+    "anti_goal_boundary": "Initial and switched goals within .02 rad of exact pi error are deterministically shifted by .03 rad; exact anti-goal is an unstable zero of the sine controller."
+  },
+  "source_sha256": {
+    "examples/bio_bridge/robot_token_bridge.py": "0a75c1325d6224b70ae821bec1ea46dcaacfc3900d6577386619d8d9b677ebd8",
+    "examples/bio_bridge/test_robot_token_bridge.py": "24a39dac487741fca153b77911f325f5b8fc5e4cd8eda0258755813b5152c9c2"
+  },
+  "results_sha256": "ff46c2428156984cdd2ba8f3b6560f1c3e318ece0ad6e042dd91b467c02a4896"
+}

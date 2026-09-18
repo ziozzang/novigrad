@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add biological robotics interface research, typed heading-token/control contracts with pre-outcome configuration locks and retained TTL counterexample, and an isolated Mac CPU FlyGym 2.1/MuJoCo 3.9 stepping/replay check; publish bilingual HTML and lossless trace archives.
+
 - Add 84-condition causal-feedback diagnostics, observation-matched host references, paired actuator count-noise measurements, and post-hoc one-prototype routing; preserve harmed cases and host-reasoning limits, publish bilingual HTML and content-verified portable replay.
 
 - Add frozen embedding–circuit–FunctionGemma soft-prefix experiments, temporal query comparisons, 120/480-update controls, 64-case final evaluation, native-policy compatibility diagnostics, bilingual HTML, exact saved replay, and a portable Safetensors replay bundle. Retain negative findings and real ORN data access failures.

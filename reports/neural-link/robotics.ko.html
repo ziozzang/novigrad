@@ -1,0 +1,2767 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>생물학에서 양방향 로보틱스 브리지로</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f4f5f3;color:#17212b;font:16px/1.7 system-ui,sans-serif}
+main{max-width:1120px;margin:auto;padding:36px 28px}header{border-bottom:3px solid #326d9d;padding-bottom:24px}
+h1{font-size:clamp(28px,5vw,48px);line-height:1.2}h2{margin-top:42px;border-bottom:1px solid #ccd3d7;padding-bottom:8px}
+h3{margin-top:28px}a{color:#1c587f;overflow-wrap:anywhere}.eyebrow{letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+.boundary{background:#e6eef4;border-left:5px solid #326d9d;padding:18px 22px;margin:24px 0}
+.table-scroll{max-width:100%;overflow:auto}table{border-collapse:collapse;min-width:680px;width:100%;font-size:14px}
+td,th{padding:10px;border-bottom:1px solid #cdd6da;text-align:left}th{background:#e6ebee}
+pre{overflow:auto;background:#e8edef;padding:18px;font-size:13px}code{overflow-wrap:anywhere}svg{width:100%;height:auto}
+details{border:1px solid #ccd3d7;margin:18px 0;padding:12px}summary{cursor:pointer;font-weight:600}
+footer{font-size:13px;color:#4d5c67;border-top:1px solid #ccd3d7;margin-top:36px;padding-top:14px}
+@media(max-width:600px){main{padding:22px 16px}body{font-size:15px}.boundary{padding:14px}table{font-size:12px}}
+@media print{body{background:white}main{max-width:none;padding:0}a{color:inherit}pre{white-space:pre-wrap}h2,h3{break-after:avoid}svg{break-inside:avoid}}
+</style><main>
+<header><p class="eyebrow">Novigrad · Research and reproducible feasibility · 2026-09-18</p><h1>생물학에서 양방향 로보틱스 브리지로</h1><a href="robotics.html">English</a></header>
+<div class="boundary">문헌의 생물학적 관찰, 제안하는 언어모델 연결 구조, 실제 실행한 공학 검증을 구분합니다. 아래 방향 제어 실험에는 임베딩·언어모델·실제 신경 회로가 없습니다.</div>
+<section><h2>실행한 토큰·제어 규약 검사</h2><p>목표는 명시적으로 주어진 방향이며 1.5초에 바뀝니다. 8개 난수 seed × 16개 초기 조건은 짝지어진 합성 사례로, 독립적인 학습 반복이나 동물 표본이 아닙니다. 성공은 3초 시점 오차가 0.15 rad 미만인 경우입니다. 자기 명령만 적분한 상태는 외부 회전을 놓치도록 구성했습니다. 잘못된 좌표계 조건은 모든 명령을 거부하는 규약 검사이며, 일회 명령 조건은 만료 뒤 정지하는 펄스입니다. 지속 기억이나 생물학적 회상 비교가 아닙니다. 초기 검사에서 발견한 명령 만료 경계 오류와 수정 전 자료를 함께 보존했습니다.</p><div class="table-scroll"><table><thead><tr><th>조건</th><th>성공 / 사례</th><th>평균 최종 오차 (rad)</th><th>거부 명령 수</th></tr></thead><tbody><tr><td>continuous_true_disturbance</td><td>55 / 128</td><td>0.2904</td><td>0</td></tr><tr><td>bins16_true_disturbance</td><td>49 / 128</td><td>0.3257</td><td>0</td></tr><tr><td>bins64_true_disturbance</td><td>57 / 128</td><td>0.3040</td><td>0</td></tr><tr><td>bins256_true_disturbance</td><td>56 / 128</td><td>0.2894</td><td>0</td></tr><tr><td>bins64_actioncopy_disturbance</td><td>9 / 128</td><td>0.9211</td><td>0</td></tr><tr><td>bins64_wrongframe_disturbance</td><td>8 / 128</td><td>1.4594</td><td>38528</td></tr><tr><td>bins64_oneshot_disturbance</td><td>4 / 128</td><td>1.4721</td><td>0</td></tr><tr><td>bins64_slow2hz_disturbance</td><td>50 / 128</td><td>0.3743</td><td>0</td></tr><tr><td>bins64_true_no_disturbance</td><td>88 / 128</td><td>0.1972</td><td>0</td></tr><tr><td>bins64_actuator_no_effect_disturbance</td><td>8 / 128</td><td>1.4594</td><td>0</td></tr></tbody></table></div><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="432pt" viewBox="0 0 864 432" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 432
+L 864 432
+L 864 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 138.954927 397.998979
+L 489.135469 397.998979
+L 489.135469 21.001657
+L 138.954927 21.001657
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 138.954927 397.998979
+L 138.954927 21.001657
+" clip-path="url(#p49a7b23bc6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m63cd80a564" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m63cd80a564" x="138.954927" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <g transform="translate(135.773677 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-13" d="M 2034 4250
+Q 1547 4250 1301 3770
+Q 1056 3291 1056 2328
+Q 1056 1369 1301 889
+Q 1547 409 2034 409
+Q 2525 409 2770 889
+Q 3016 1369 3016 2328
+Q 3016 3291 2770 3770
+Q 2525 4250 2034 4250
+z
+M 2034 4750
+Q 2819 4750 3233 4129
+Q 3647 3509 3647 2328
+Q 3647 1150 3233 529
+Q 2819 -91 2034 -91
+Q 1250 -91 836 529
+Q 422 1150 422 2328
+Q 422 3509 836 4129
+Q 1250 4750 2034 4750
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-13"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 208.991036 397.998979
+L 208.991036 21.001657
+" clip-path="url(#p49a7b23bc6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m63cd80a564" x="208.991036" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 20 -->
+      <g transform="translate(202.628536 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-15" d="M 1228 531
+L 3431 531
+L 3431 0
+L 469 0
+L 469 531
+Q 828 903 1448 1529
+Q 2069 2156 2228 2338
+Q 2531 2678 2651 2914
+Q 2772 3150 2772 3378
+Q 2772 3750 2511 3984
+Q 2250 4219 1831 4219
+Q 1534 4219 1204 4116
+Q 875 4013 500 3803
+L 500 4441
+Q 881 4594 1212 4672
+Q 1544 4750 1819 4750
+Q 2544 4750 2975 4387
+Q 3406 4025 3406 3419
+Q 3406 3131 3298 2873
+Q 3191 2616 2906 2266
+Q 2828 2175 2409 1742
+Q 1991 1309 1228 531
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-15"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 279.027144 397.998979
+L 279.027144 21.001657
+" clip-path="url(#p49a7b23bc6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m63cd80a564" x="279.027144" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 40 -->
+      <g transform="translate(272.664644 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-17" d="M 2419 4116
+L 825 1625
+L 2419 1625
+L 2419 4116
+z
+M 2253 4666
+L 3047 4666
+L 3047 1625
+L 3713 1625
+L 3713 1100
+L 3047 1100
+L 3047 0
+L 2419 0
+L 2419 1100
+L 313 1100
+L 313 1709
+L 2253 4666
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-17"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 349.063252 397.998979
+L 349.063252 21.001657
+" clip-path="url(#p49a7b23bc6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m63cd80a564" x="349.063252" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 60 -->
+      <g transform="translate(342.700752 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-19" d="M 2113 2584
+Q 1688 2584 1439 2293
+Q 1191 2003 1191 1497
+Q 1191 994 1439 701
+Q 1688 409 2113 409
+Q 2538 409 2786 701
+Q 3034 994 3034 1497
+Q 3034 2003 2786 2293
+Q 2538 2584 2113 2584
+z
+M 3366 4563
+L 3366 3988
+Q 3128 4100 2886 4159
+Q 2644 4219 2406 4219
+Q 1781 4219 1451 3797
+Q 1122 3375 1075 2522
+Q 1259 2794 1537 2939
+Q 1816 3084 2150 3084
+Q 2853 3084 3261 2657
+Q 3669 2231 3669 1497
+Q 3669 778 3244 343
+Q 2819 -91 2113 -91
+Q 1303 -91 875 529
+Q 447 1150 447 2328
+Q 447 3434 972 4092
+Q 1497 4750 2381 4750
+Q 2619 4750 2861 4703
+Q 3103 4656 3366 4563
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-19"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 419.09936 397.998979
+L 419.09936 21.001657
+" clip-path="url(#p49a7b23bc6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m63cd80a564" x="419.09936" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 80 -->
+      <g transform="translate(412.73686 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-1b" d="M 2034 2216
+Q 1584 2216 1326 1975
+Q 1069 1734 1069 1313
+Q 1069 891 1326 650
+Q 1584 409 2034 409
+Q 2484 409 2743 651
+Q 3003 894 3003 1313
+Q 3003 1734 2745 1975
+Q 2488 2216 2034 2216
+z
+M 1403 2484
+Q 997 2584 770 2862
+Q 544 3141 544 3541
+Q 544 4100 942 4425
+Q 1341 4750 2034 4750
+Q 2731 4750 3128 4425
+Q 3525 4100 3525 3541
+Q 3525 3141 3298 2862
+Q 3072 2584 2669 2484
+Q 3125 2378 3379 2068
+Q 3634 1759 3634 1313
+Q 3634 634 3220 271
+Q 2806 -91 2034 -91
+Q 1263 -91 848 271
+Q 434 634 434 1313
+Q 434 1759 690 2068
+Q 947 2378 1403 2484
+z
+M 1172 3481
+Q 1172 3119 1398 2916
+Q 1625 2713 2034 2713
+Q 2441 2713 2670 2916
+Q 2900 3119 2900 3481
+Q 2900 3844 2670 4047
+Q 2441 4250 2034 4250
+Q 1625 4250 1398 4047
+Q 1172 3844 1172 3481
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-1b"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 489.135469 397.998979
+L 489.135469 21.001657
+" clip-path="url(#p49a7b23bc6)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m63cd80a564" x="489.135469" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 100 -->
+      <g transform="translate(479.591719 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-14" d="M 794 531
+L 1825 531
+L 1825 4091
+L 703 3866
+L 703 4441
+L 1819 4666
+L 2450 4666
+L 2450 531
+L 3481 531
+L 3481 0
+L 794 0
+L 794 531
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-14"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(127.25 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_7">
+     <!-- Final heading within 0.15 rad (%) -->
+     <g transform="translate(231.117854 426.597416) scale(0.1 -0.1)">
+      <defs>
+       <path id="DejaVuSans-29" d="M 628 4666
+L 3309 4666
+L 3309 4134
+L 1259 4134
+L 1259 2759
+L 3109 2759
+L 3109 2228
+L 1259 2228
+L 1259 0
+L 628 0
+L 628 4666
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-4c" d="M 603 3500
+L 1178 3500
+L 1178 0
+L 603 0
+L 603 3500
+z
+M 603 4863
+L 1178 4863
+L 1178 4134
+L 603 4134
+L 603 4863
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-51" d="M 3513 2113
+L 3513 0
+L 2938 0
+L 2938 2094
+Q 2938 2591 2744 2837
+Q 2550 3084 2163 3084
+Q 1697 3084 1428 2787
+Q 1159 2491 1159 1978
+L 1159 0
+L 581 0
+L 581 3500
+L 1159 3500
+L 1159 2956
+Q 1366 3272 1645 3428
+Q 1925 3584 2291 3584
+Q 2894 3584 3203 3211
+Q 3513 2838 3513 2113
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-44" d="M 2194 1759
+Q 1497 1759 1228 1600
+Q 959 1441 959 1056
+Q 959 750 1161 570
+Q 1363 391 1709 391
+Q 2188 391 2477 730
+Q 2766 1069 2766 1631
+L 2766 1759
+L 2194 1759
+z
+M 3341 1997
+L 3341 0
+L 2766 0
+L 2766 531
+Q 2569 213 2275 61
+Q 1981 -91 1556 -91
+Q 1019 -91 701 211
+Q 384 513 384 1019
+Q 384 1609 779 1909
+Q 1175 2209 1959 2209
+L 2766 2209
+L 2766 2266
+Q 2766 2663 2505 2880
+Q 2244 3097 1772 3097
+Q 1472 3097 1187 3025
+Q 903 2953 641 2809
+L 641 3341
+Q 956 3463 1253 3523
+Q 1550 3584 1831 3584
+Q 2591 3584 2966 3190
+Q 3341 2797 3341 1997
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-4f" d="M 603 4863
+L 1178 4863
+L 1178 0
+L 603 0
+L 603 4863
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-3" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-4b" d="M 3513 2113
+L 3513 0
+L 2938 0
+L 2938 2094
+Q 2938 2591 2744 2837
+Q 2550 3084 2163 3084
+Q 1697 3084 1428 2787
+Q 1159 2491 1159 1978
+L 1159 0
+L 581 0
+L 581 4863
+L 1159 4863
+L 1159 2956
+Q 1366 3272 1645 3428
+Q 1925 3584 2291 3584
+Q 2894 3584 3203 3211
+Q 3513 2838 3513 2113
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-48" d="M 3597 1894
+L 3597 1613
+L 953 1613
+Q 991 1019 1311 708
+Q 1631 397 2203 397
+Q 2534 397 2845 478
+Q 3156 559 3463 722
+L 3463 178
+Q 3153 47 2828 -22
+Q 2503 -91 2169 -91
+Q 1331 -91 842 396
+Q 353 884 353 1716
+Q 353 2575 817 3079
+Q 1281 3584 2069 3584
+Q 2775 3584 3186 3129
+Q 3597 2675 3597 1894
+z
+M 3022 2063
+Q 3016 2534 2758 2815
+Q 2500 3097 2075 3097
+Q 1594 3097 1305 2825
+Q 1016 2553 972 2059
+L 3022 2063
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-47" d="M 2906 2969
+L 2906 4863
+L 3481 4863
+L 3481 0
+L 2906 0
+L 2906 525
+Q 2725 213 2448 61
+Q 2172 -91 1784 -91
+Q 1150 -91 751 415
+Q 353 922 353 1747
+Q 353 2572 751 3078
+Q 1150 3584 1784 3584
+Q 2172 3584 2448 3432
+Q 2725 3281 2906 2969
+z
+M 947 1747
+Q 947 1113 1208 752
+Q 1469 391 1925 391
+Q 2381 391 2643 752
+Q 2906 1113 2906 1747
+Q 2906 2381 2643 2742
+Q 2381 3103 1925 3103
+Q 1469 3103 1208 2742
+Q 947 2381 947 1747
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-4a" d="M 2906 1791
+Q 2906 2416 2648 2759
+Q 2391 3103 1925 3103
+Q 1463 3103 1205 2759
+Q 947 2416 947 1791
+Q 947 1169 1205 825
+Q 1463 481 1925 481
+Q 2391 481 2648 825
+Q 2906 1169 2906 1791
+z
+M 3481 434
+Q 3481 -459 3084 -895
+Q 2688 -1331 1869 -1331
+Q 1566 -1331 1297 -1286
+Q 1028 -1241 775 -1147
+L 775 -588
+Q 1028 -725 1275 -790
+Q 1522 -856 1778 -856
+Q 2344 -856 2625 -561
+Q 2906 -266 2906 331
+L 2906 616
+Q 2728 306 2450 153
+Q 2172 0 1784 0
+Q 1141 0 747 490
+Q 353 981 353 1791
+Q 353 2603 747 3093
+Q 1141 3584 1784 3584
+Q 2172 3584 2450 3431
+Q 2728 3278 2906 2969
+L 2906 3500
+L 3481 3500
+L 3481 434
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-5a" d="M 269 3500
+L 844 3500
+L 1563 769
+L 2278 3500
+L 2956 3500
+L 3675 769
+L 4391 3500
+L 4966 3500
+L 4050 0
+L 3372 0
+L 2619 2869
+L 1863 0
+L 1184 0
+L 269 3500
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-57" d="M 1172 4494
+L 1172 3500
+L 2356 3500
+L 2356 3053
+L 1172 3053
+L 1172 1153
+Q 1172 725 1289 603
+Q 1406 481 1766 481
+L 2356 481
+L 2356 0
+L 1766 0
+Q 1100 0 847 248
+Q 594 497 594 1153
+L 594 3053
+L 172 3053
+L 172 3500
+L 594 3500
+L 594 4494
+L 1172 4494
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-11" d="M 684 794
+L 1344 794
+L 1344 0
+L 684 0
+L 684 794
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-18" d="M 691 4666
+L 3169 4666
+L 3169 4134
+L 1269 4134
+L 1269 2991
+Q 1406 3038 1543 3061
+Q 1681 3084 1819 3084
+Q 2600 3084 3056 2656
+Q 3513 2228 3513 1497
+Q 3513 744 3044 326
+Q 2575 -91 1722 -91
+Q 1428 -91 1123 -41
+Q 819 9 494 109
+L 494 744
+Q 775 591 1075 516
+Q 1375 441 1709 441
+Q 2250 441 2565 725
+Q 2881 1009 2881 1497
+Q 2881 1984 2565 2268
+Q 2250 2553 1709 2553
+Q 1456 2553 1204 2497
+Q 953 2441 691 2322
+L 691 4666
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-55" d="M 2631 2963
+Q 2534 3019 2420 3045
+Q 2306 3072 2169 3072
+Q 1681 3072 1420 2755
+Q 1159 2438 1159 1844
+L 1159 0
+L 581 0
+L 581 3500
+L 1159 3500
+L 1159 2956
+Q 1341 3275 1631 3429
+Q 1922 3584 2338 3584
+Q 2397 3584 2469 3576
+Q 2541 3569 2628 3553
+L 2631 2963
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-b" d="M 1984 4856
+Q 1566 4138 1362 3434
+Q 1159 2731 1159 2009
+Q 1159 1288 1364 580
+Q 1569 -128 1984 -844
+L 1484 -844
+Q 1016 -109 783 600
+Q 550 1309 550 2009
+Q 550 2706 781 3412
+Q 1013 4119 1484 4856
+L 1984 4856
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-8" d="M 4653 2053
+Q 4381 2053 4226 1822
+Q 4072 1591 4072 1178
+Q 4072 772 4226 539
+Q 4381 306 4653 306
+Q 4919 306 5073 539
+Q 5228 772 5228 1178
+Q 5228 1588 5073 1820
+Q 4919 2053 4653 2053
+z
+M 4653 2450
+Q 5147 2450 5437 2106
+Q 5728 1763 5728 1178
+Q 5728 594 5436 251
+Q 5144 -91 4653 -91
+Q 4153 -91 3862 251
+Q 3572 594 3572 1178
+Q 3572 1766 3864 2108
+Q 4156 2450 4653 2450
+z
+M 1428 4353
+Q 1159 4353 1004 4120
+Q 850 3888 850 3481
+Q 850 3069 1003 2837
+Q 1156 2606 1428 2606
+Q 1700 2606 1854 2837
+Q 2009 3069 2009 3481
+Q 2009 3884 1853 4118
+Q 1697 4353 1428 4353
+z
+M 4250 4750
+L 4750 4750
+L 1831 -91
+L 1331 -91
+L 4250 4750
+z
+M 1428 4750
+Q 1922 4750 2215 4408
+Q 2509 4066 2509 3481
+Q 2509 2891 2217 2550
+Q 1925 2209 1428 2209
+Q 931 2209 642 2551
+Q 353 2894 353 3481
+Q 353 4063 643 4406
+Q 934 4750 1428 4750
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-c" d="M 513 4856
+L 1013 4856
+Q 1481 4119 1714 3412
+Q 1947 2706 1947 2009
+Q 1947 1309 1714 600
+Q 1481 -109 1013 -844
+L 513 -844
+Q 928 -128 1133 580
+Q 1338 1288 1338 2009
+Q 1338 2731 1133 3434
+Q 928 4138 513 4856
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#DejaVuSans-29"/>
+      <use xlink:href="#DejaVuSans-4c" transform="translate(50.234375 0)"/>
+      <use xlink:href="#DejaVuSans-51" transform="translate(78.015625 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(141.390625 0)"/>
+      <use xlink:href="#DejaVuSans-4f" transform="translate(202.671875 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(230.453125 0)"/>
+      <use xlink:href="#DejaVuSans-4b" transform="translate(262.234375 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(325.609375 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(387.140625 0)"/>
+      <use xlink:href="#DejaVuSans-47" transform="translate(448.421875 0)"/>
+      <use xlink:href="#DejaVuSans-4c" transform="translate(511.90625 0)"/>
+      <use xlink:href="#DejaVuSans-51" transform="translate(539.6875 0)"/>
+      <use xlink:href="#DejaVuSans-4a" transform="translate(603.0625 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(666.546875 0)"/>
+      <use xlink:href="#DejaVuSans-5a" transform="translate(698.328125 0)"/>
+      <use xlink:href="#DejaVuSans-4c" transform="translate(780.109375 0)"/>
+      <use xlink:href="#DejaVuSans-57" transform="translate(807.890625 0)"/>
+      <use xlink:href="#DejaVuSans-4b" transform="translate(847.09375 0)"/>
+      <use xlink:href="#DejaVuSans-4c" transform="translate(910.46875 0)"/>
+      <use xlink:href="#DejaVuSans-51" transform="translate(938.25 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(1001.625 0)"/>
+      <use xlink:href="#DejaVuSans-13" transform="translate(1033.40625 0)"/>
+      <use xlink:href="#DejaVuSans-11" transform="translate(1097.03125 0)"/>
+      <use xlink:href="#DejaVuSans-14" transform="translate(1128.8125 0)"/>
+      <use xlink:href="#DejaVuSans-18" transform="translate(1192.4375 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(1256.0625 0)"/>
+      <use xlink:href="#DejaVuSans-55" transform="translate(1287.84375 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(1328.953125 0)"/>
+      <use xlink:href="#DejaVuSans-47" transform="translate(1390.234375 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(1453.71875 0)"/>
+      <use xlink:href="#DejaVuSans-b" transform="translate(1485.5 0)"/>
+      <use xlink:href="#DejaVuSans-8" transform="translate(1524.515625 0)"/>
+      <use xlink:href="#DejaVuSans-c" transform="translate(1619.53125 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <defs>
+       <path id="m1e298665a8" d="M 0 0
+L -3.5 0
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="52.126668" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- Continuous feedback -->
+      <g transform="translate(26.358052 55.925887) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-26" d="M 4122 4306
+L 4122 3641
+Q 3803 3938 3442 4084
+Q 3081 4231 2675 4231
+Q 1875 4231 1450 3742
+Q 1025 3253 1025 2328
+Q 1025 1406 1450 917
+Q 1875 428 2675 428
+Q 3081 428 3442 575
+Q 3803 722 4122 1019
+L 4122 359
+Q 3791 134 3420 21
+Q 3050 -91 2638 -91
+Q 1578 -91 968 557
+Q 359 1206 359 2328
+Q 359 3453 968 4101
+Q 1578 4750 2638 4750
+Q 3056 4750 3426 4639
+Q 3797 4528 4122 4306
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-52" d="M 1959 3097
+Q 1497 3097 1228 2736
+Q 959 2375 959 1747
+Q 959 1119 1226 758
+Q 1494 397 1959 397
+Q 2419 397 2687 759
+Q 2956 1122 2956 1747
+Q 2956 2369 2687 2733
+Q 2419 3097 1959 3097
+z
+M 1959 3584
+Q 2709 3584 3137 3096
+Q 3566 2609 3566 1747
+Q 3566 888 3137 398
+Q 2709 -91 1959 -91
+Q 1206 -91 779 398
+Q 353 888 353 1747
+Q 353 2609 779 3096
+Q 1206 3584 1959 3584
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-58" d="M 544 1381
+L 544 3500
+L 1119 3500
+L 1119 1403
+Q 1119 906 1312 657
+Q 1506 409 1894 409
+Q 2359 409 2629 706
+Q 2900 1003 2900 1516
+L 2900 3500
+L 3475 3500
+L 3475 0
+L 2900 0
+L 2900 538
+Q 2691 219 2414 64
+Q 2138 -91 1772 -91
+Q 1169 -91 856 284
+Q 544 659 544 1381
+z
+M 1991 3584
+L 1991 3584
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-56" d="M 2834 3397
+L 2834 2853
+Q 2591 2978 2328 3040
+Q 2066 3103 1784 3103
+Q 1356 3103 1142 2972
+Q 928 2841 928 2578
+Q 928 2378 1081 2264
+Q 1234 2150 1697 2047
+L 1894 2003
+Q 2506 1872 2764 1633
+Q 3022 1394 3022 966
+Q 3022 478 2636 193
+Q 2250 -91 1575 -91
+Q 1294 -91 989 -36
+Q 684 19 347 128
+L 347 722
+Q 666 556 975 473
+Q 1284 391 1588 391
+Q 1994 391 2212 530
+Q 2431 669 2431 922
+Q 2431 1156 2273 1281
+Q 2116 1406 1581 1522
+L 1381 1569
+Q 847 1681 609 1914
+Q 372 2147 372 2553
+Q 372 3047 722 3315
+Q 1072 3584 1716 3584
+Q 2034 3584 2315 3537
+Q 2597 3491 2834 3397
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-49" d="M 2375 4863
+L 2375 4384
+L 1825 4384
+Q 1516 4384 1395 4259
+Q 1275 4134 1275 3809
+L 1275 3500
+L 2222 3500
+L 2222 3053
+L 1275 3053
+L 1275 0
+L 697 0
+L 697 3053
+L 147 3053
+L 147 3500
+L 697 3500
+L 697 3744
+Q 697 4328 969 4595
+Q 1241 4863 1831 4863
+L 2375 4863
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-45" d="M 3116 1747
+Q 3116 2381 2855 2742
+Q 2594 3103 2138 3103
+Q 1681 3103 1420 2742
+Q 1159 2381 1159 1747
+Q 1159 1113 1420 752
+Q 1681 391 2138 391
+Q 2594 391 2855 752
+Q 3116 1113 3116 1747
+z
+M 1159 2969
+Q 1341 3281 1617 3432
+Q 1894 3584 2278 3584
+Q 2916 3584 3314 3078
+Q 3713 2572 3713 1747
+Q 3713 922 3314 415
+Q 2916 -91 2278 -91
+Q 1894 -91 1617 61
+Q 1341 213 1159 525
+L 1159 0
+L 581 0
+L 581 4863
+L 1159 4863
+L 1159 2969
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-46" d="M 3122 3366
+L 3122 2828
+Q 2878 2963 2633 3030
+Q 2388 3097 2138 3097
+Q 1578 3097 1268 2742
+Q 959 2388 959 1747
+Q 959 1106 1268 751
+Q 1578 397 2138 397
+Q 2388 397 2633 464
+Q 2878 531 3122 666
+L 3122 134
+Q 2881 22 2623 -34
+Q 2366 -91 2075 -91
+Q 1284 -91 818 406
+Q 353 903 353 1747
+Q 353 2603 823 3093
+Q 1294 3584 2113 3584
+Q 2378 3584 2631 3529
+Q 2884 3475 3122 3366
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-4e" d="M 581 4863
+L 1159 4863
+L 1159 1991
+L 2875 3500
+L 3609 3500
+L 1753 1863
+L 3688 0
+L 2938 0
+L 1159 1709
+L 1159 0
+L 581 0
+L 581 4863
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-26"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(69.828125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(131.015625 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(194.390625 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(233.59375 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(261.375 0)"/>
+       <use xlink:href="#DejaVuSans-58" transform="translate(324.75 0)"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(388.125 0)"/>
+       <use xlink:href="#DejaVuSans-58" transform="translate(449.3125 0)"/>
+       <use xlink:href="#DejaVuSans-56" transform="translate(512.6875 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(564.78125 0)"/>
+       <use xlink:href="#DejaVuSans-49" transform="translate(596.5625 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(631.765625 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(693.296875 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(754.828125 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(818.3125 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(881.796875 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(943.078125 0)"/>
+       <use xlink:href="#DejaVuSans-4e" transform="translate(998.0625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="87.09859" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <!-- 16-bin feedback -->
+      <g transform="translate(51.039302 90.897809) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-10" d="M 313 2009
+L 1997 2009
+L 1997 1497
+L 313 1497
+L 313 2009
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-14"/>
+       <use xlink:href="#DejaVuSans-19" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(127.25 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(163.328125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(226.8125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(254.59375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(317.96875 0)"/>
+       <use xlink:href="#DejaVuSans-49" transform="translate(349.75 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(384.953125 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(446.484375 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(508.015625 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(571.5 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(634.984375 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(696.265625 0)"/>
+       <use xlink:href="#DejaVuSans-4e" transform="translate(751.25 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="122.070513" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- 64-bin feedback -->
+      <g transform="translate(51.039302 125.869731) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-19"/>
+       <use xlink:href="#DejaVuSans-17" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(127.25 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(163.328125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(226.8125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(254.59375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(317.96875 0)"/>
+       <use xlink:href="#DejaVuSans-49" transform="translate(349.75 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(384.953125 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(446.484375 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(508.015625 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(571.5 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(634.984375 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(696.265625 0)"/>
+       <use xlink:href="#DejaVuSans-4e" transform="translate(751.25 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="157.042435" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- 256-bin feedback -->
+      <g transform="translate(44.676802 160.841654) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-15"/>
+       <use xlink:href="#DejaVuSans-18" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-19" transform="translate(127.25 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(190.875 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(226.953125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(290.4375 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(318.21875 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(381.59375 0)"/>
+       <use xlink:href="#DejaVuSans-49" transform="translate(413.375 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(448.578125 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(510.109375 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(571.640625 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(635.125 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(698.609375 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(759.890625 0)"/>
+       <use xlink:href="#DejaVuSans-4e" transform="translate(814.875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="192.014357" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- Command-only state -->
+      <g transform="translate(27.101802 195.813576) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-50" d="M 3328 2828
+Q 3544 3216 3844 3400
+Q 4144 3584 4550 3584
+Q 5097 3584 5394 3201
+Q 5691 2819 5691 2113
+L 5691 0
+L 5113 0
+L 5113 2094
+Q 5113 2597 4934 2840
+Q 4756 3084 4391 3084
+Q 3944 3084 3684 2787
+Q 3425 2491 3425 1978
+L 3425 0
+L 2847 0
+L 2847 2094
+Q 2847 2600 2669 2842
+Q 2491 3084 2119 3084
+Q 1678 3084 1418 2786
+Q 1159 2488 1159 1978
+L 1159 0
+L 581 0
+L 581 3500
+L 1159 3500
+L 1159 2956
+Q 1356 3278 1631 3431
+Q 1906 3584 2284 3584
+Q 2666 3584 2933 3390
+Q 3200 3197 3328 2828
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-5c" d="M 2059 -325
+Q 1816 -950 1584 -1140
+Q 1353 -1331 966 -1331
+L 506 -1331
+L 506 -850
+L 844 -850
+Q 1081 -850 1212 -737
+Q 1344 -625 1503 -206
+L 1606 56
+L 191 3500
+L 800 3500
+L 1894 763
+L 2988 3500
+L 3597 3500
+L 2059 -325
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-26"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(69.828125 0)"/>
+       <use xlink:href="#DejaVuSans-50" transform="translate(131.015625 0)"/>
+       <use xlink:href="#DejaVuSans-50" transform="translate(228.421875 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(325.828125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(387.109375 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(450.484375 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(513.96875 0)"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(551.90625 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(613.09375 0)"/>
+       <use xlink:href="#DejaVuSans-4f" transform="translate(676.46875 0)"/>
+       <use xlink:href="#DejaVuSans-5c" transform="translate(704.25 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(763.4375 0)"/>
+       <use xlink:href="#DejaVuSans-56" transform="translate(795.21875 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(847.3125 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(886.515625 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(947.796875 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(987 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="226.986279" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- Wrong frame (rejected) -->
+      <g transform="translate(15.11274 230.785498) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-3a" d="M 213 4666
+L 850 4666
+L 1831 722
+L 2809 4666
+L 3519 4666
+L 4500 722
+L 5478 4666
+L 6119 4666
+L 4947 0
+L 4153 0
+L 3169 4050
+L 2175 0
+L 1381 0
+L 213 4666
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-4d" d="M 603 3500
+L 1178 3500
+L 1178 -63
+Q 1178 -731 923 -1031
+Q 669 -1331 103 -1331
+L -116 -1331
+L -116 -844
+L 38 -844
+Q 366 -844 484 -692
+Q 603 -541 603 -63
+L 603 3500
+z
+M 603 4863
+L 1178 4863
+L 1178 4134
+L 603 4134
+L 603 4863
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-3a"/>
+       <use xlink:href="#DejaVuSans-55" transform="translate(94.390625 0)"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(133.296875 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(194.484375 0)"/>
+       <use xlink:href="#DejaVuSans-4a" transform="translate(257.859375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(321.34375 0)"/>
+       <use xlink:href="#DejaVuSans-49" transform="translate(353.125 0)"/>
+       <use xlink:href="#DejaVuSans-55" transform="translate(388.328125 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(429.4375 0)"/>
+       <use xlink:href="#DejaVuSans-50" transform="translate(490.71875 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(588.125 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(649.65625 0)"/>
+       <use xlink:href="#DejaVuSans-b" transform="translate(681.4375 0)"/>
+       <use xlink:href="#DejaVuSans-55" transform="translate(720.453125 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(759.359375 0)"/>
+       <use xlink:href="#DejaVuSans-4d" transform="translate(820.890625 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(848.671875 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(910.203125 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(965.1875 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(1004.390625 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(1065.921875 0)"/>
+       <use xlink:href="#DejaVuSans-c" transform="translate(1129.40625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="261.958201" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- Single expiring pulse -->
+      <g transform="translate(27.429927 265.75742) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-36" d="M 3425 4513
+L 3425 3897
+Q 3066 4069 2747 4153
+Q 2428 4238 2131 4238
+Q 1616 4238 1336 4038
+Q 1056 3838 1056 3469
+Q 1056 3159 1242 3001
+Q 1428 2844 1947 2747
+L 2328 2669
+Q 3034 2534 3370 2195
+Q 3706 1856 3706 1288
+Q 3706 609 3251 259
+Q 2797 -91 1919 -91
+Q 1588 -91 1214 -16
+Q 841 59 441 206
+L 441 856
+Q 825 641 1194 531
+Q 1563 422 1919 422
+Q 2459 422 2753 634
+Q 3047 847 3047 1241
+Q 3047 1584 2836 1778
+Q 2625 1972 2144 2069
+L 1759 2144
+Q 1053 2284 737 2584
+Q 422 2884 422 3419
+Q 422 4038 858 4394
+Q 1294 4750 2059 4750
+Q 2388 4750 2728 4690
+Q 3069 4631 3425 4513
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-5b" d="M 3513 3500
+L 2247 1797
+L 3578 0
+L 2900 0
+L 1881 1375
+L 863 0
+L 184 0
+L 1544 1831
+L 300 3500
+L 978 3500
+L 1906 2253
+L 2834 3500
+L 3513 3500
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-53" d="M 1159 525
+L 1159 -1331
+L 581 -1331
+L 581 3500
+L 1159 3500
+L 1159 2969
+Q 1341 3281 1617 3432
+Q 1894 3584 2278 3584
+Q 2916 3584 3314 3078
+Q 3713 2572 3713 1747
+Q 3713 922 3314 415
+Q 2916 -91 2278 -91
+Q 1894 -91 1617 61
+Q 1341 213 1159 525
+z
+M 3116 1747
+Q 3116 2381 2855 2742
+Q 2594 3103 2138 3103
+Q 1681 3103 1420 2742
+Q 1159 2381 1159 1747
+Q 1159 1113 1420 752
+Q 1681 391 2138 391
+Q 2594 391 2855 752
+Q 3116 1113 3116 1747
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-36"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(63.484375 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(91.265625 0)"/>
+       <use xlink:href="#DejaVuSans-4a" transform="translate(154.640625 0)"/>
+       <use xlink:href="#DejaVuSans-4f" transform="translate(218.125 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(245.90625 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(307.4375 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(339.21875 0)"/>
+       <use xlink:href="#DejaVuSans-5b" transform="translate(399 0)"/>
+       <use xlink:href="#DejaVuSans-53" transform="translate(458.1875 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(521.671875 0)"/>
+       <use xlink:href="#DejaVuSans-55" transform="translate(549.453125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(590.5625 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(618.34375 0)"/>
+       <use xlink:href="#DejaVuSans-4a" transform="translate(681.71875 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(745.203125 0)"/>
+       <use xlink:href="#DejaVuSans-53" transform="translate(776.984375 0)"/>
+       <use xlink:href="#DejaVuSans-58" transform="translate(840.46875 0)"/>
+       <use xlink:href="#DejaVuSans-4f" transform="translate(903.84375 0)"/>
+       <use xlink:href="#DejaVuSans-56" transform="translate(931.625 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(983.71875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="296.930124" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- 64-bin / 2 Hz updates -->
+      <g transform="translate(24.50024 300.729342) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-12" d="M 1625 4666
+L 2156 4666
+L 531 -594
+L 0 -594
+L 1625 4666
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-2b" d="M 628 4666
+L 1259 4666
+L 1259 2753
+L 3553 2753
+L 3553 4666
+L 4184 4666
+L 4184 0
+L 3553 0
+L 3553 2222
+L 1259 2222
+L 1259 0
+L 628 0
+L 628 4666
+z
+" transform="scale(0.015625)"/>
+        <path id="DejaVuSans-5d" d="M 353 3500
+L 3084 3500
+L 3084 2975
+L 922 459
+L 3084 459
+L 3084 0
+L 275 0
+L 275 525
+L 2438 3041
+L 353 3041
+L 353 3500
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-19"/>
+       <use xlink:href="#DejaVuSans-17" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(127.25 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(163.328125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(226.8125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(254.59375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(317.96875 0)"/>
+       <use xlink:href="#DejaVuSans-12" transform="translate(349.75 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(383.4375 0)"/>
+       <use xlink:href="#DejaVuSans-15" transform="translate(415.21875 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(478.84375 0)"/>
+       <use xlink:href="#DejaVuSans-2b" transform="translate(510.625 0)"/>
+       <use xlink:href="#DejaVuSans-5d" transform="translate(585.828125 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(638.3125 0)"/>
+       <use xlink:href="#DejaVuSans-58" transform="translate(670.09375 0)"/>
+       <use xlink:href="#DejaVuSans-53" transform="translate(733.46875 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(796.953125 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(860.4375 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(921.71875 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(960.921875 0)"/>
+       <use xlink:href="#DejaVuSans-56" transform="translate(1022.453125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="331.902046" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <!-- 64-bin / no disturbance -->
+      <g transform="translate(15.628365 335.701265) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-19"/>
+       <use xlink:href="#DejaVuSans-17" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(127.25 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(163.328125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(226.8125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(254.59375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(317.96875 0)"/>
+       <use xlink:href="#DejaVuSans-12" transform="translate(349.75 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(383.4375 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(415.21875 0)"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(478.59375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(539.78125 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(571.5625 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(635.046875 0)"/>
+       <use xlink:href="#DejaVuSans-56" transform="translate(662.828125 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(714.921875 0)"/>
+       <use xlink:href="#DejaVuSans-58" transform="translate(754.125 0)"/>
+       <use xlink:href="#DejaVuSans-55" transform="translate(817.5 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(858.609375 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(922.09375 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(983.375 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(1046.75 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(1101.734375 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m1e298665a8" x="138.954927" y="366.873968" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- 64-bin / disabled actuator -->
+      <g transform="translate(3.00024 370.673187) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-19"/>
+       <use xlink:href="#DejaVuSans-17" transform="translate(63.625 0)"/>
+       <use xlink:href="#DejaVuSans-10" transform="translate(127.25 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(163.328125 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(226.8125 0)"/>
+       <use xlink:href="#DejaVuSans-51" transform="translate(254.59375 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(317.96875 0)"/>
+       <use xlink:href="#DejaVuSans-12" transform="translate(349.75 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(383.4375 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(415.21875 0)"/>
+       <use xlink:href="#DejaVuSans-4c" transform="translate(478.703125 0)"/>
+       <use xlink:href="#DejaVuSans-56" transform="translate(506.484375 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(558.578125 0)"/>
+       <use xlink:href="#DejaVuSans-45" transform="translate(619.859375 0)"/>
+       <use xlink:href="#DejaVuSans-4f" transform="translate(683.34375 0)"/>
+       <use xlink:href="#DejaVuSans-48" transform="translate(711.125 0)"/>
+       <use xlink:href="#DejaVuSans-47" transform="translate(772.65625 0)"/>
+       <use xlink:href="#DejaVuSans-3" transform="translate(836.140625 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(867.921875 0)"/>
+       <use xlink:href="#DejaVuSans-46" transform="translate(929.203125 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(984.1875 0)"/>
+       <use xlink:href="#DejaVuSans-58" transform="translate(1023.390625 0)"/>
+       <use xlink:href="#DejaVuSans-44" transform="translate(1086.765625 0)"/>
+       <use xlink:href="#DejaVuSans-57" transform="translate(1148.046875 0)"/>
+       <use xlink:href="#DejaVuSans-52" transform="translate(1187.25 0)"/>
+       <use xlink:href="#DejaVuSans-55" transform="translate(1248.4375 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 138.954927 38.137899
+L 289.423129 38.137899
+L 289.423129 66.115437
+L 138.954927 66.115437
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 138.954927 73.109822
+L 273.008416 73.109822
+L 273.008416 101.087359
+L 138.954927 101.087359
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 138.954927 108.081744
+L 294.8947 108.081744
+L 294.8947 136.059282
+L 138.954927 136.059282
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 138.954927 143.053666
+L 292.158914 143.053666
+L 292.158914 171.031204
+L 138.954927 171.031204
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 138.954927 178.025588
+L 163.576997 178.025588
+L 163.576997 206.003126
+L 138.954927 206.003126
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 138.954927 212.99751
+L 160.841211 212.99751
+L 160.841211 240.975048
+L 138.954927 240.975048
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 138.954927 247.969433
+L 149.898069 247.969433
+L 149.898069 275.94697
+L 138.954927 275.94697
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 138.954927 282.941355
+L 275.744201 282.941355
+L 275.744201 310.918892
+L 138.954927 310.918892
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 138.954927 317.913277
+L 379.70405 317.913277
+L 379.70405 345.890815
+L 138.954927 345.890815
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 138.954927 352.885199
+L 160.841211 352.885199
+L 160.841211 380.862737
+L 138.954927 380.862737
+z
+" clip-path="url(#p49a7b23bc6)" style="fill: #326d9d"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 138.954927 397.998979
+L 138.954927 21.001657
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 138.954927 397.998979
+L 489.135469 397.998979
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_15">
+    <path d="M 510.819219 397.998979
+L 860.99976 397.998979
+L 860.99976 21.001657
+L 510.819219 21.001657
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_7">
+     <g id="line2d_23">
+      <path d="M 510.819219 397.998979
+L 510.819219 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m63cd80a564" x="510.819219" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <!-- 0 -->
+      <g transform="translate(507.637969 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-13"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_25">
+      <path d="M 550.360844 397.998979
+L 550.360844 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m63cd80a564" x="550.360844" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <!-- 10 -->
+      <g transform="translate(543.998344 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-14"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_27">
+      <path d="M 589.902469 397.998979
+L 589.902469 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m63cd80a564" x="589.902469" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <!-- 20 -->
+      <g transform="translate(583.539969 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-15"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_29">
+      <path d="M 629.444094 397.998979
+L 629.444094 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m63cd80a564" x="629.444094" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <!-- 30 -->
+      <g transform="translate(623.081594 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-16" d="M 2597 2516
+Q 3050 2419 3304 2112
+Q 3559 1806 3559 1356
+Q 3559 666 3084 287
+Q 2609 -91 1734 -91
+Q 1441 -91 1130 -33
+Q 819 25 488 141
+L 488 750
+Q 750 597 1062 519
+Q 1375 441 1716 441
+Q 2309 441 2620 675
+Q 2931 909 2931 1356
+Q 2931 1769 2642 2001
+Q 2353 2234 1838 2234
+L 1294 2234
+L 1294 2753
+L 1863 2753
+Q 2328 2753 2575 2939
+Q 2822 3125 2822 3475
+Q 2822 3834 2567 4026
+Q 2313 4219 1838 4219
+Q 1578 4219 1281 4162
+Q 984 4106 628 3988
+L 628 4550
+Q 988 4650 1302 4700
+Q 1616 4750 1894 4750
+Q 2613 4750 3031 4423
+Q 3450 4097 3450 3541
+Q 3450 3153 3228 2886
+Q 3006 2619 2597 2516
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-16"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_31">
+      <path d="M 668.985719 397.998979
+L 668.985719 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m63cd80a564" x="668.985719" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <!-- 40 -->
+      <g transform="translate(662.623219 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-17"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_33">
+      <path d="M 708.527343 397.998979
+L 708.527343 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m63cd80a564" x="708.527343" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <!-- 50 -->
+      <g transform="translate(702.164843 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-18"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_35">
+      <path d="M 748.068968 397.998979
+L 748.068968 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#m63cd80a564" x="748.068968" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <!-- 60 -->
+      <g transform="translate(741.706468 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-19"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_37">
+      <path d="M 787.610593 397.998979
+L 787.610593 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#m63cd80a564" x="787.610593" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <!-- 70 -->
+      <g transform="translate(781.248093 412.596635) scale(0.1 -0.1)">
+       <defs>
+        <path id="DejaVuSans-1a" d="M 525 4666
+L 3525 4666
+L 3525 4397
+L 1831 0
+L 1172 0
+L 2766 4134
+L 525 4134
+L 525 4666
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#DejaVuSans-1a"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_39">
+      <path d="M 827.152218 397.998979
+L 827.152218 21.001657
+" clip-path="url(#p86312f0ce3)" style="fill: none; stroke: #b0b0b0; stroke-opacity: 0.2; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#m63cd80a564" x="827.152218" y="397.998979" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_26">
+      <!-- 80 -->
+      <g transform="translate(820.789718 412.596635) scale(0.1 -0.1)">
+       <use xlink:href="#DejaVuSans-1b"/>
+       <use xlink:href="#DejaVuSans-13" transform="translate(63.625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_27">
+     <!-- Mean final absolute heading error (degrees) -->
+     <g transform="translate(575.722771 426.597416) scale(0.1 -0.1)">
+      <defs>
+       <path id="DejaVuSans-30" d="M 628 4666
+L 1569 4666
+L 2759 1491
+L 3956 4666
+L 4897 4666
+L 4897 0
+L 4281 0
+L 4281 4097
+L 3078 897
+L 2444 897
+L 1241 4097
+L 1241 0
+L 628 0
+L 628 4666
+z
+" transform="scale(0.015625)"/>
+       <path id="DejaVuSans-13af" d="M 3431 3500
+L 3431 0
+L 2853 0
+L 2853 3053
+L 1275 3053
+L 1275 0
+L 697 0
+L 697 3053
+L 147 3053
+L 147 3500
+L 697 3500
+L 697 3744
+Q 697 4316 967 4589
+Q 1238 4863 1797 4863
+L 2375 4863
+L 2375 4384
+L 1825 4384
+Q 1516 4384 1395 4259
+Q 1275 4134 1275 3809
+L 1275 3500
+L 3431 3500
+z
+M 2853 4856
+L 3431 4856
+L 3431 4128
+L 2853 4128
+L 2853 4856
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#DejaVuSans-30"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(86.28125 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(147.8125 0)"/>
+      <use xlink:href="#DejaVuSans-51" transform="translate(209.09375 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(272.46875 0)"/>
+      <use xlink:href="#DejaVuSans-13af" transform="translate(304.25 0)"/>
+      <use xlink:href="#DejaVuSans-51" transform="translate(367.234375 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(430.609375 0)"/>
+      <use xlink:href="#DejaVuSans-4f" transform="translate(491.890625 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(519.671875 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(551.453125 0)"/>
+      <use xlink:href="#DejaVuSans-45" transform="translate(612.734375 0)"/>
+      <use xlink:href="#DejaVuSans-56" transform="translate(676.21875 0)"/>
+      <use xlink:href="#DejaVuSans-52" transform="translate(728.3125 0)"/>
+      <use xlink:href="#DejaVuSans-4f" transform="translate(789.5 0)"/>
+      <use xlink:href="#DejaVuSans-58" transform="translate(817.28125 0)"/>
+      <use xlink:href="#DejaVuSans-57" transform="translate(880.65625 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(919.859375 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(981.390625 0)"/>
+      <use xlink:href="#DejaVuSans-4b" transform="translate(1013.171875 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(1076.546875 0)"/>
+      <use xlink:href="#DejaVuSans-44" transform="translate(1138.078125 0)"/>
+      <use xlink:href="#DejaVuSans-47" transform="translate(1199.359375 0)"/>
+      <use xlink:href="#DejaVuSans-4c" transform="translate(1262.84375 0)"/>
+      <use xlink:href="#DejaVuSans-51" transform="translate(1290.625 0)"/>
+      <use xlink:href="#DejaVuSans-4a" transform="translate(1354 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(1417.484375 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(1449.265625 0)"/>
+      <use xlink:href="#DejaVuSans-55" transform="translate(1510.796875 0)"/>
+      <use xlink:href="#DejaVuSans-55" transform="translate(1550.15625 0)"/>
+      <use xlink:href="#DejaVuSans-52" transform="translate(1589.0625 0)"/>
+      <use xlink:href="#DejaVuSans-55" transform="translate(1650.25 0)"/>
+      <use xlink:href="#DejaVuSans-3" transform="translate(1691.359375 0)"/>
+      <use xlink:href="#DejaVuSans-b" transform="translate(1723.140625 0)"/>
+      <use xlink:href="#DejaVuSans-47" transform="translate(1762.15625 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(1825.640625 0)"/>
+      <use xlink:href="#DejaVuSans-4a" transform="translate(1887.171875 0)"/>
+      <use xlink:href="#DejaVuSans-55" transform="translate(1950.65625 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(1989.5625 0)"/>
+      <use xlink:href="#DejaVuSans-48" transform="translate(2051.09375 0)"/>
+      <use xlink:href="#DejaVuSans-56" transform="translate(2112.625 0)"/>
+      <use xlink:href="#DejaVuSans-c" transform="translate(2164.71875 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_11">
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="52.126668" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="87.09859" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="122.070513" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="157.042435" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="192.014357" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="226.986279" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_47">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="261.958201" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_18">
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="296.930124" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_49">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="331.902046" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m1e298665a8" x="510.819219" y="366.873968" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_16">
+    <path d="M 510.819219 38.137899
+L 576.619552 38.137899
+L 576.619552 66.115437
+L 510.819219 66.115437
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 510.819219 73.109822
+L 584.619055 73.109822
+L 584.619055 101.087359
+L 510.819219 101.087359
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 510.819219 108.081744
+L 579.68537 108.081744
+L 579.68537 136.059282
+L 510.819219 136.059282
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 510.819219 143.053666
+L 576.384385 143.053666
+L 576.384385 171.031204
+L 510.819219 171.031204
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 510.819219 178.025588
+L 719.505214 178.025588
+L 719.505214 206.003126
+L 510.819219 206.003126
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 510.819219 212.99751
+L 841.445204 212.99751
+L 841.445204 240.975048
+L 510.819219 240.975048
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 510.819219 247.969433
+L 844.324496 247.969433
+L 844.324496 275.94697
+L 510.819219 275.94697
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 510.819219 282.941355
+L 595.611246 282.941355
+L 595.611246 310.918892
+L 510.819219 310.918892
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 510.819219 317.913277
+L 555.491118 317.913277
+L 555.491118 345.890815
+L 510.819219 345.890815
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 510.819219 352.885199
+L 841.445204 352.885199
+L 841.445204 380.862737
+L 510.819219 380.862737
+z
+" clip-path="url(#p86312f0ce3)" style="fill: #ad663c"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 510.819219 397.998979
+L 510.819219 21.001657
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 510.819219 397.998979
+L 860.99976 397.998979
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_28">
+   <!-- Typed host-codec diagnostic — no language model or learned circuit -->
+   <g transform="translate(226.12875 12.118365) scale(0.12 -0.12)">
+    <defs>
+     <path id="DejaVuSans-37" d="M -19 4666
+L 3928 4666
+L 3928 4134
+L 2272 4134
+L 2272 0
+L 1638 0
+L 1638 4134
+L -19 4134
+L -19 4666
+z
+" transform="scale(0.015625)"/>
+     <path id="DejaVuSans-af6" d="M 313 1978
+L 6088 1978
+L 6088 1528
+L 313 1528
+L 313 1978
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#DejaVuSans-37"/>
+    <use xlink:href="#DejaVuSans-5c" transform="translate(45.5 0)"/>
+    <use xlink:href="#DejaVuSans-53" transform="translate(104.6875 0)"/>
+    <use xlink:href="#DejaVuSans-48" transform="translate(168.171875 0)"/>
+    <use xlink:href="#DejaVuSans-47" transform="translate(229.703125 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(293.1875 0)"/>
+    <use xlink:href="#DejaVuSans-4b" transform="translate(324.96875 0)"/>
+    <use xlink:href="#DejaVuSans-52" transform="translate(388.34375 0)"/>
+    <use xlink:href="#DejaVuSans-56" transform="translate(449.53125 0)"/>
+    <use xlink:href="#DejaVuSans-57" transform="translate(501.625 0)"/>
+    <use xlink:href="#DejaVuSans-10" transform="translate(540.828125 0)"/>
+    <use xlink:href="#DejaVuSans-46" transform="translate(576.90625 0)"/>
+    <use xlink:href="#DejaVuSans-52" transform="translate(631.890625 0)"/>
+    <use xlink:href="#DejaVuSans-47" transform="translate(693.078125 0)"/>
+    <use xlink:href="#DejaVuSans-48" transform="translate(756.5625 0)"/>
+    <use xlink:href="#DejaVuSans-46" transform="translate(818.09375 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(873.078125 0)"/>
+    <use xlink:href="#DejaVuSans-47" transform="translate(904.859375 0)"/>
+    <use xlink:href="#DejaVuSans-4c" transform="translate(968.34375 0)"/>
+    <use xlink:href="#DejaVuSans-44" transform="translate(996.125 0)"/>
+    <use xlink:href="#DejaVuSans-4a" transform="translate(1057.40625 0)"/>
+    <use xlink:href="#DejaVuSans-51" transform="translate(1120.890625 0)"/>
+    <use xlink:href="#DejaVuSans-52" transform="translate(1184.265625 0)"/>
+    <use xlink:href="#DejaVuSans-56" transform="translate(1245.453125 0)"/>
+    <use xlink:href="#DejaVuSans-57" transform="translate(1297.546875 0)"/>
+    <use xlink:href="#DejaVuSans-4c" transform="translate(1336.75 0)"/>
+    <use xlink:href="#DejaVuSans-46" transform="translate(1364.53125 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(1419.515625 0)"/>
+    <use xlink:href="#DejaVuSans-af6" transform="translate(1451.296875 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(1551.296875 0)"/>
+    <use xlink:href="#DejaVuSans-51" transform="translate(1583.078125 0)"/>
+    <use xlink:href="#DejaVuSans-52" transform="translate(1646.453125 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(1707.640625 0)"/>
+    <use xlink:href="#DejaVuSans-4f" transform="translate(1739.421875 0)"/>
+    <use xlink:href="#DejaVuSans-44" transform="translate(1767.203125 0)"/>
+    <use xlink:href="#DejaVuSans-51" transform="translate(1828.484375 0)"/>
+    <use xlink:href="#DejaVuSans-4a" transform="translate(1891.859375 0)"/>
+    <use xlink:href="#DejaVuSans-58" transform="translate(1955.34375 0)"/>
+    <use xlink:href="#DejaVuSans-44" transform="translate(2018.71875 0)"/>
+    <use xlink:href="#DejaVuSans-4a" transform="translate(2080 0)"/>
+    <use xlink:href="#DejaVuSans-48" transform="translate(2143.484375 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(2205.015625 0)"/>
+    <use xlink:href="#DejaVuSans-50" transform="translate(2236.796875 0)"/>
+    <use xlink:href="#DejaVuSans-52" transform="translate(2334.203125 0)"/>
+    <use xlink:href="#DejaVuSans-47" transform="translate(2395.390625 0)"/>
+    <use xlink:href="#DejaVuSans-48" transform="translate(2458.875 0)"/>
+    <use xlink:href="#DejaVuSans-4f" transform="translate(2520.40625 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(2548.1875 0)"/>
+    <use xlink:href="#DejaVuSans-52" transform="translate(2579.96875 0)"/>
+    <use xlink:href="#DejaVuSans-55" transform="translate(2641.15625 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(2682.265625 0)"/>
+    <use xlink:href="#DejaVuSans-4f" transform="translate(2714.046875 0)"/>
+    <use xlink:href="#DejaVuSans-48" transform="translate(2741.828125 0)"/>
+    <use xlink:href="#DejaVuSans-44" transform="translate(2803.359375 0)"/>
+    <use xlink:href="#DejaVuSans-55" transform="translate(2864.640625 0)"/>
+    <use xlink:href="#DejaVuSans-51" transform="translate(2904 0)"/>
+    <use xlink:href="#DejaVuSans-48" transform="translate(2967.375 0)"/>
+    <use xlink:href="#DejaVuSans-47" transform="translate(3028.90625 0)"/>
+    <use xlink:href="#DejaVuSans-3" transform="translate(3092.390625 0)"/>
+    <use xlink:href="#DejaVuSans-46" transform="translate(3124.171875 0)"/>
+    <use xlink:href="#DejaVuSans-4c" transform="translate(3179.15625 0)"/>
+    <use xlink:href="#DejaVuSans-55" transform="translate(3206.9375 0)"/>
+    <use xlink:href="#DejaVuSans-46" transform="translate(3245.84375 0)"/>
+    <use xlink:href="#DejaVuSans-58" transform="translate(3300.828125 0)"/>
+    <use xlink:href="#DejaVuSans-4c" transform="translate(3364.203125 0)"/>
+    <use xlink:href="#DejaVuSans-57" transform="translate(3391.984375 0)"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p49a7b23bc6">
+   <rect x="138.954927" y="21.001657" width="350.180541" height="376.997321"/>
+  </clipPath>
+  <clipPath id="p86312f0ce3">
+   <rect x="510.819219" y="21.001657" width="350.180541" height="376.997321"/>
+  </clipPath>
+ </defs>
+</svg>
+<p><a href="../../results/robot-token-bridge/README.ko.md">방법·한계·재현</a> · <a href="../../results/robot-token-bridge/results.json.gz">전체 압축 경로</a></p></section>
+<section><h2>별도 물리 시뮬레이터 검증</h2><div>실제 실행 기록을 아래에 원문으로 포함합니다. 짧은 물리 step 검증이며 언어모델 브리지, 학습, 탐색 성공을 검증하지 않습니다. FlyGym 2.1.0 / MuJoCo 3.9.0; 1,000 steps; 0.1 s simulation / 0.574 s wall time (0.174×).<details><summary>실행 기록</summary><pre>{
+  &quot;scope&quot;: &quot;Installation and headless CPU physics/controller-step feasibility only; not LM bridge, motor learning, robotics transfer or biological alignment validation.&quot;,
+  &quot;python&quot;: &quot;3.12.11 (main, Jul  8 2025, 20:41:49) [Clang 20.1.4 ]&quot;,
+  &quot;platform&quot;: &quot;macOS-26.5-arm64-arm-64bit&quot;,
+  &quot;machine&quot;: &quot;arm64&quot;,
+  &quot;script_sha256&quot;: &quot;885b1b3e3a302f51387cc0ad4b751c61ccfae3de18f6c19958889f2fc8d967df&quot;,
+  &quot;requested_seconds&quot;: 0.1,
+  &quot;seed&quot;: 0,
+  &quot;renderer&quot;: false,
+  &quot;backend&quot;: &quot;MuJoCo CPU; no Warp&quot;,
+  &quot;sources&quot;: [
+    &quot;https://neuromechfly.org/installation/&quot;,
+    &quot;https://neuromechfly.org/tutorials/4c_hybrid_controller/&quot;,
+    &quot;https://github.com/NeLy-EPFL/flygym/tree/v2.1.0&quot;
+  ],
+  &quot;licenses&quot;: &quot;FlyGym Apache-2.0, separate from Novigrad MIT. Bundled NeuroMechFly assets and preprogrammed steps originate in the pinned FlyGym package; no third-party binary/assets redistributed here.&quot;,
+  &quot;dependencies&quot;: {
+    &quot;ImageIO&quot;: &quot;2.37.4&quot;,
+    &quot;PyOpenGL&quot;: &quot;3.1.10&quot;,
+    &quot;PyYAML&quot;: &quot;6.0.3&quot;,
+    &quot;Pygments&quot;: &quot;2.21.0&quot;,
+    &quot;absl-py&quot;: &quot;2.5.0&quot;,
+    &quot;asttokens&quot;: &quot;3.0.2&quot;,
+    &quot;contourpy&quot;: &quot;1.4.0&quot;,
+    &quot;cycler&quot;: &quot;0.12.1&quot;,
+    &quot;etils&quot;: &quot;1.14.0&quot;,
+    &quot;executing&quot;: &quot;2.2.1&quot;,
+    &quot;flygym&quot;: &quot;2.1.0&quot;,
+    &quot;fonttools&quot;: &quot;4.65.0&quot;,
+    &quot;fsspec&quot;: &quot;2026.7.0&quot;,
+    &quot;glfw&quot;: &quot;2.10.2&quot;,
+    &quot;imageio-ffmpeg&quot;: &quot;0.6.0&quot;,
+    &quot;ipython&quot;: &quot;9.17.1&quot;,
+    &quot;ipython_pygments_lexers&quot;: &quot;1.1.1&quot;,
+    &quot;jaxtyping&quot;: &quot;0.3.7&quot;,
+    &quot;jedi&quot;: &quot;0.20.0&quot;,
+    &quot;kiwisolver&quot;: &quot;1.5.1&quot;,
+    &quot;llvmlite&quot;: &quot;0.49.0&quot;,
+    &quot;loguru&quot;: &quot;0.7.3&quot;,
+    &quot;matplotlib&quot;: &quot;3.11.2&quot;,
+    &quot;matplotlib-inline&quot;: &quot;0.2.2&quot;,
+    &quot;mediapy&quot;: &quot;1.2.7&quot;,
+    &quot;mujoco&quot;: &quot;3.9.0&quot;,
+    &quot;numba&quot;: &quot;0.67.0&quot;,
+    &quot;numpy&quot;: &quot;2.5.3&quot;,
+    &quot;packaging&quot;: &quot;26.3&quot;,
+    &quot;parso&quot;: &quot;0.8.7&quot;,
+    &quot;pexpect&quot;: &quot;4.9.0&quot;,
+    &quot;pillow&quot;: &quot;12.3.0&quot;,
+    &quot;prompt_toolkit&quot;: &quot;3.0.53&quot;,
+    &quot;psutil&quot;: &quot;7.2.2&quot;,
+    &quot;ptyprocess&quot;: &quot;0.7.0&quot;,
+    &quot;pure_eval&quot;: &quot;0.2.4&quot;,
+    &quot;pyparsing&quot;: &quot;3.3.2&quot;,
+    &quot;python-dateutil&quot;: &quot;2.9.0.post0&quot;,
+    &quot;scipy&quot;: &quot;1.18.1&quot;,
+    &quot;six&quot;: &quot;1.17.0&quot;,
+    &quot;stack-data&quot;: &quot;0.6.3&quot;,
+    &quot;tabulate&quot;: &quot;0.9.0&quot;,
+    &quot;traitlets&quot;: &quot;5.16.1&quot;,
+    &quot;typing_extensions&quot;: &quot;4.16.0&quot;,
+    &quot;wadler_lindig&quot;: &quot;0.1.7&quot;,
+    &quot;wcwidth&quot;: &quot;0.8.4&quot;,
+    &quot;zipp&quot;: &quot;4.1.0&quot;
+  },
+  &quot;distribution_metadata_hashes&quot;: {
+    &quot;numpy-2.5.3.dist-info/METADATA&quot;: &quot;451a9b8028000588e66b0b415587b6aef0bbc51a96d8e8a0cba0dc23acf64f99&quot;,
+    &quot;numpy-2.5.3.dist-info/RECORD&quot;: &quot;07e4a7dac8b4359b0a86fb7cea0d688cdc6ba4237fbfef0741965cf193c7dbae&quot;,
+    &quot;pexpect-4.9.0.dist-info/METADATA&quot;: &quot;2d7c5ac5fdefde4a0194ec522fbcc0ca70e99e1a2a956eea444168f8591650aa&quot;,
+    &quot;pexpect-4.9.0.dist-info/RECORD&quot;: &quot;18d1ff314a7a49821e1907a870b096a1aa90c0e726f99858d0da77043343a3ac&quot;,
+    &quot;kiwisolver-1.5.1.dist-info/METADATA&quot;: &quot;f07b7b6c0c9c2a624c8a31f931e16712f2cf3490e7dfd51643d68e9d42d4b2c9&quot;,
+    &quot;kiwisolver-1.5.1.dist-info/RECORD&quot;: &quot;0bc366d714ba47dafd947d80576cbc7ea8007dab54e7e1500c75cf4f8efd1b03&quot;,
+    &quot;jedi-0.20.0.dist-info/METADATA&quot;: &quot;436bd0fb249b82dee15e85e2fb91d08d8e797481a16af48a725b8e4fb5340478&quot;,
+    &quot;jedi-0.20.0.dist-info/RECORD&quot;: &quot;8aee5a15141dd898d3356eca862cd70ad85f382c676ced7d51041f98d32e63d9&quot;,
+    &quot;ptyprocess-0.7.0.dist-info/METADATA&quot;: &quot;c3c2b96b5d9a55da5958c34d08c18a0849f56609026cc46d5c95b8b77fcf3e0c&quot;,
+    &quot;ptyprocess-0.7.0.dist-info/RECORD&quot;: &quot;c4033a1a5bbd4f0aabc0b7f57aae33d735a97680c439581546f0a952654f1947&quot;,
+    &quot;imageio-2.37.4.dist-info/METADATA&quot;: &quot;bdc8cb937fcc650149184c2b1bd58eb53cd62da5c8dca8e7bdde36dd4fce844b&quot;,
+    &quot;imageio-2.37.4.dist-info/RECORD&quot;: &quot;bda149644e90dc04d5f7ec958a8eb71aea7473b8d4f4f5de4c4b404b3d0d60b7&quot;,
+    &quot;packaging-26.3.dist-info/METADATA&quot;: &quot;70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763&quot;,
+    &quot;packaging-26.3.dist-info/RECORD&quot;: &quot;1b8655965b0d83e9a067fd7f84b977bd1e117e0fb9f2874b2572781bdc9e2147&quot;,
+    &quot;fonttools-4.65.0.dist-info/METADATA&quot;: &quot;767c772df5fec424631e48baa13cfa55498f4d7be9b41d1071b34bf52cc28fa8&quot;,
+    &quot;fonttools-4.65.0.dist-info/RECORD&quot;: &quot;1c4e4f288b27fd8021d81fa3a1bcea0574cc2a20288bc0f42eaa5047b7891ba0&quot;,
+    &quot;pygments-2.21.0.dist-info/METADATA&quot;: &quot;1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43&quot;,
+    &quot;pygments-2.21.0.dist-info/RECORD&quot;: &quot;a13d8a6fb8f93ba6782cdfebfa83ae11523154ab3463ccba7cf0b805910f80af&quot;,
+    &quot;prompt_toolkit-3.0.53.dist-info/METADATA&quot;: &quot;d04994e4401b88abf884ca54fb3b85e50a8b4fb1fde1ed7eb3ece9d8bf5459a9&quot;,
+    &quot;prompt_toolkit-3.0.53.dist-info/RECORD&quot;: &quot;a40bdf71ed62886d4459e1462979f862f83d6fde483551fb8e547c0a6764df1d&quot;,
+    &quot;executing-2.2.1.dist-info/METADATA&quot;: &quot;d7586d1ae225bee126c4237eb0c4d7699a8580b81eb558cc500c263d29a633ff&quot;,
+    &quot;executing-2.2.1.dist-info/RECORD&quot;: &quot;483767c8f250006b2655250353b993e605b581fd6f5f41a5b7e2accb9bf3a414&quot;,
+    &quot;etils-1.14.0.dist-info/METADATA&quot;: &quot;924aa03746957f425eca8d3ef1ce6a0c6663d0a5f45fbd64b79ec19c74bac19a&quot;,
+    &quot;etils-1.14.0.dist-info/RECORD&quot;: &quot;11814e88f4f68fc8b8251de69ddd056f1ce22e6810138cdfeaeda973ed00c5a6&quot;,
+    &quot;matplotlib_inline-0.2.2.dist-info/METADATA&quot;: &quot;fedb3d587ec2d3fa4b0a81fd5353df697d2534c8ee714dbf050009afc60bcab7&quot;,
+    &quot;matplotlib_inline-0.2.2.dist-info/RECORD&quot;: &quot;9e3fca031d79eb520bebf44c820c831d604ddb76157308c28e9f7813f71268fe&quot;,
+    &quot;flygym-2.1.0.dist-info/METADATA&quot;: &quot;4031376ddae8efc0792578329d0fc6f3a236e0efb46e0e57078d5b2af8525246&quot;,
+    &quot;flygym-2.1.0.dist-info/RECORD&quot;: &quot;61a1c8823a9aeb89674441f36e9f0ae3933b84f13359d02f8887db3c218fb667&quot;,
+    &quot;mediapy-1.2.7.dist-info/METADATA&quot;: &quot;4ac328c143d8f9abb1c9f1621881d4fbf7bfa7a0772c2e2cac5a11b90bcca915&quot;,
+    &quot;mediapy-1.2.7.dist-info/RECORD&quot;: &quot;76aeae82b73b745957b66d12b4e11edaea35ec90f3c99d3f359e243c11a67ca9&quot;,
+    &quot;traitlets-5.16.1.dist-info/METADATA&quot;: &quot;e42b503240c058625ffb30c390818d72933117840cb25060614cb24f0be9e587&quot;,
+    &quot;traitlets-5.16.1.dist-info/RECORD&quot;: &quot;aff43c4596f0dbd321faaca9fe02b93fb1e62b8ff070763cd77ad26a97fc084f&quot;,
+    &quot;ipython_pygments_lexers-1.1.1.dist-info/METADATA&quot;: &quot;6b38c0946bdbc4778f4e38e2298547cbd7d13aeba9979ec4e4a412eabfbdfadb&quot;,
+    &quot;ipython_pygments_lexers-1.1.1.dist-info/RECORD&quot;: &quot;a601c87e87a63f4e126ce5e320367930d30129be677cb4a4980332f61b8aff31&quot;,
+    &quot;pyopengl-3.1.10.dist-info/METADATA&quot;: &quot;d31bac2f803d3d353d37999423520dc7c208530e6d1cc452169b100aa900ea14&quot;,
+    &quot;pyopengl-3.1.10.dist-info/RECORD&quot;: &quot;272d2da2b0e48fc99572459d394b1731c210dd956f3e39a934f3bc289f8794df&quot;,
+    &quot;stack_data-0.6.3.dist-info/METADATA&quot;: &quot;f28a66f2adde54e7031355e09a166e437bc0d023a31c10c973ac494288ca4c6f&quot;,
+    &quot;stack_data-0.6.3.dist-info/RECORD&quot;: &quot;522b69b3fb8bc2aba2e176a824f62b51cda7c3c30e78abbf9ebf90ce5e3cb615&quot;,
+    &quot;contourpy-1.4.0.dist-info/METADATA&quot;: &quot;40450acd747b288a5db999c435e1e921ffee0a38c7884a80cd46934c8004568f&quot;,
+    &quot;contourpy-1.4.0.dist-info/RECORD&quot;: &quot;1237b876596ef221ae4a5e23c1f8d3e526505e52a15f480ad4f4760f0a729791&quot;,
+    &quot;fsspec-2026.7.0.dist-info/METADATA&quot;: &quot;88b1657585de14e3bb82aa5278aa9595b30aa4ca74ead073d8950615c808099d&quot;,
+    &quot;fsspec-2026.7.0.dist-info/RECORD&quot;: &quot;bf8970ef32f4fa1da4c23e55e648fbcd3980d3d67f14268a514a5973514fd2a0&quot;,
+    &quot;absl_py-2.5.0.dist-info/METADATA&quot;: &quot;24eb8b2dbab3053ea20e46ae02ddb3b9157b5be7e7a38ad931fd0c596f517015&quot;,
+    &quot;absl_py-2.5.0.dist-info/RECORD&quot;: &quot;9db7b2cbf34dbc67015c1e51210186594af57c694f62c02d0bbcb70dd1a03798&quot;,
+    &quot;loguru-0.7.3.dist-info/METADATA&quot;: &quot;3a371f8b089014fdaee055edc440d448242847926ad67613621af402f9975fd9&quot;,
+    &quot;loguru-0.7.3.dist-info/RECORD&quot;: &quot;f561bf516e2dacc992d6041c129f33d6c98d63794d424e6738389eb031a40177&quot;,
+    &quot;jaxtyping-0.3.7.dist-info/METADATA&quot;: &quot;1349570d090f75d2b5e95bb03d053fab0216329f73be7cf0050a7670eedd8576&quot;,
+    &quot;jaxtyping-0.3.7.dist-info/RECORD&quot;: &quot;235ea62d76c2ebbe5d2d9b2d0c67c0cc71d932bcfdceec16c8fee5e160393dab&quot;,
+    &quot;llvmlite-0.49.0.dist-info/METADATA&quot;: &quot;981af48e46dfe1da9bc394d690969652721430730785db5f953d0bf2c4dce608&quot;,
+    &quot;llvmlite-0.49.0.dist-info/RECORD&quot;: &quot;b93ef37321e9f5052494ccbff1263666601a20a7b34bbb48f009a595d6eb58ed&quot;,
+    &quot;python_dateutil-2.9.0.post0.dist-info/METADATA&quot;: &quot;a9d436da322be808332f98d88325998e87cb693a678a9969feb4cfad729a6e93&quot;,
+    &quot;python_dateutil-2.9.0.post0.dist-info/RECORD&quot;: &quot;e15e868a50b9c4e71df17b31369843617780146ac5adb1bbfdcced0ebe501824&quot;,
+    &quot;pyyaml-6.0.3.dist-info/METADATA&quot;: &quot;03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34&quot;,
+    &quot;pyyaml-6.0.3.dist-info/RECORD&quot;: &quot;4e259774348bac93724047fa3547e03b71cbe2b7d37ca39be41513355d9cf36a&quot;,
+    &quot;numba-0.67.0.dist-info/METADATA&quot;: &quot;025ba2df60d252a02c4e25a02a3dd8616d0bf5f3159dd7da4e1c9322f7efd580&quot;,
+    &quot;numba-0.67.0.dist-info/RECORD&quot;: &quot;802962febd9fb56c5e4527e0867e8d5c1e5d972a62ef199e54c52bb289738a9c&quot;,
+    &quot;matplotlib-3.11.2.dist-info/METADATA&quot;: &quot;e5f532226d1025af2dd15ff951df27391f66d46403b8244ea61e6b8eb3e4d806&quot;,
+    &quot;matplotlib-3.11.2.dist-info/RECORD&quot;: &quot;3c4ede6ad4ccbdbb55955c225c771432e24462f5c0b73c4ebfaaf2a4506859d2&quot;,
+    &quot;zipp-4.1.0.dist-info/METADATA&quot;: &quot;a08698d0dd509325853fea0c5f7bbeff5046f16cf1666fcf0e03d0a6094c89d7&quot;,
+    &quot;zipp-4.1.0.dist-info/RECORD&quot;: &quot;09471a1e570a024020ae32570ac57c6e906d76a4840b93b92801ea1b6eec71a1&quot;,
+    &quot;pure_eval-0.2.4.dist-info/METADATA&quot;: &quot;4fe70f69411b9963d7275084210743afa819c2350899a29150bc43b1abf105d0&quot;,
+    &quot;pure_eval-0.2.4.dist-info/RECORD&quot;: &quot;a7827467bcdf9877f51deaf911c479feca74b4123dd93953acdc5a155347b933&quot;,
+    &quot;imageio_ffmpeg-0.6.0.dist-info/METADATA&quot;: &quot;c9697b379419a64049d99e2248c4cba963e03b5cad1dc65e10a887d1da7651ee&quot;,
+    &quot;imageio_ffmpeg-0.6.0.dist-info/RECORD&quot;: &quot;9d285285ce2326481a011b9a1fc5f82e7188bbd6f72377e3b6758edc42848340&quot;,
+    &quot;cycler-0.12.1.dist-info/METADATA&quot;: &quot;23289e19b76f1e01394227696e6af2b6cd1ce79e89731209bf9195148b18ed36&quot;,
+    &quot;cycler-0.12.1.dist-info/RECORD&quot;: &quot;cbcbee5f18d75bd4935199b135aa33c3ed62df14991110a35c428883798d7979&quot;,
+    &quot;pyparsing-3.3.2.dist-info/METADATA&quot;: &quot;3311a8b949d70f71a2b9788a9327f11d9d5a6a8012d6c046ca254ad2de877f45&quot;,
+    &quot;pyparsing-3.3.2.dist-info/RECORD&quot;: &quot;239325f438cc3542c4d936b77d4539132f7db3b83d55bf9b811db76cce83f0ee&quot;,
+    &quot;mujoco-3.9.0.dist-info/METADATA&quot;: &quot;b8a8c8eaa213f6d359a227c3ae657a517fe74c9cb1b624f7137515eea30aadfa&quot;,
+    &quot;mujoco-3.9.0.dist-info/RECORD&quot;: &quot;706450e3d2a8793690fe87c6250170d68ce6ac233375e90fcc34718156db6e1c&quot;,
+    &quot;typing_extensions-4.16.0.dist-info/METADATA&quot;: &quot;b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46&quot;,
+    &quot;typing_extensions-4.16.0.dist-info/RECORD&quot;: &quot;9e07fea845cac76293d927afa7157a14ecba39b318bc8af236b8de530b7656c1&quot;,
+    &quot;asttokens-3.0.2.dist-info/METADATA&quot;: &quot;8b3567b29654e6e9a60ab50fde2c317899152790acadaab7868a708bf931c3d3&quot;,
+    &quot;asttokens-3.0.2.dist-info/RECORD&quot;: &quot;7f0b4dabfd410366c48fb66b1af7671f17ab499310c80c3103855a7893694314&quot;,
+    &quot;psutil-7.2.2.dist-info/METADATA&quot;: &quot;525f8ba78523cf7bc3759d62a105e7c57fd679ea702402b9449fb0746aa0217f&quot;,
+    &quot;psutil-7.2.2.dist-info/RECORD&quot;: &quot;82a0585abe618fd6b841c095e45a9970cb4c8ace9aab3209d3602a8a1233ed49&quot;,
+    &quot;parso-0.8.7.dist-info/METADATA&quot;: &quot;2fd8c9f8209218163a6c086ba8075d177122430645fea770cc02c53cd426119d&quot;,
+    &quot;parso-0.8.7.dist-info/RECORD&quot;: &quot;f12d7035431df6048bd4ed5e00a3ff1b3e5821c6201e269ac0ad7f1e643cd9b7&quot;,
+    &quot;wcwidth-0.8.4.dist-info/METADATA&quot;: &quot;7a387bead1b8e6067c195ad2fa3e1cc8c5d0b938034ed596f0323bb27bd470f2&quot;,
+    &quot;wcwidth-0.8.4.dist-info/RECORD&quot;: &quot;14e3a8d6b0d298b1ceba426e083f04c6cb83303989750f81494c55cc1e98e5ce&quot;,
+    &quot;pillow-12.3.0.dist-info/METADATA&quot;: &quot;8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8&quot;,
+    &quot;pillow-12.3.0.dist-info/RECORD&quot;: &quot;45c037b8a45b62c77f1a01fe5895a67a77c9c3cb68634f80a0d7a5b060ac5f65&quot;,
+    &quot;glfw-2.10.2.dist-info/METADATA&quot;: &quot;aea6f1885bbd69b213db965ed8ccdd6f5d9772479f4de84c9116b4007fa296db&quot;,
+    &quot;glfw-2.10.2.dist-info/RECORD&quot;: &quot;2c6acfea5ed94adbcdb99725e41956a0d6a29c8c0526a168cba37a6a6a805544&quot;,
+    &quot;wadler_lindig-0.1.7.dist-info/METADATA&quot;: &quot;83659a4fe5e6a3a96abda2af32163a27769bb6e807e8babcd1fe37c54b87fa16&quot;,
+    &quot;wadler_lindig-0.1.7.dist-info/RECORD&quot;: &quot;34a3fabd5064fec98c7b22b577efc531439f6cef01f265bb6b2c4afab8c1c3c7&quot;,
+    &quot;six-1.17.0.dist-info/METADATA&quot;: &quot;562042078c2752549f6d8a7c86dbc5dd708088a7be6d80672ec7b07100b72468&quot;,
+    &quot;six-1.17.0.dist-info/RECORD&quot;: &quot;d16e50f347969b1e1919fb0c88bac4b9c644f5305bcfcfb00f72b646dbd4065d&quot;,
+    &quot;scipy-1.18.1.dist-info/METADATA&quot;: &quot;1adfbde8be136cbf348b889c51028e7e1824cdb90d29a26d8e81501948864fae&quot;,
+    &quot;scipy-1.18.1.dist-info/RECORD&quot;: &quot;d95b7aa2c03940de0bec301021a5753ff3577b5b7ce28e6342d59f9d8556258a&quot;,
+    &quot;tabulate-0.9.0.dist-info/METADATA&quot;: &quot;f2802aade2612091b45951f265af29174f90c3236f68cc8ccdeb646941e62969&quot;,
+    &quot;tabulate-0.9.0.dist-info/RECORD&quot;: &quot;e1ff270e624aeaceb4a190afe55933f453ca2766ac9d1d7802ca9507c85095ae&quot;,
+    &quot;ipython-9.17.1.dist-info/METADATA&quot;: &quot;e78cb2a71fde4012b32de9b2db8d3c50ba618a1bb1975acc1bf107453365a1be&quot;,
+    &quot;ipython-9.17.1.dist-info/RECORD&quot;: &quot;92fe331f3ea5494d30bbf1ffd2fc88908d7f7f84e8802644af2c8d0c9599ac32&quot;
+  },
+  &quot;asset_hashes&quot;: {
+    &quot;flygym/assets/model/flybody/actuators.yaml&quot;: {
+      &quot;sha256&quot;: &quot;31feee850de6046860f8ef486471fab9b762a733857845986b019853277fd317&quot;,
+      &quot;bytes&quot;: 3645
+    },
+    &quot;flygym/assets/model/flybody/all_geom_suffixes.yaml&quot;: {
+      &quot;sha256&quot;: &quot;167c1949a77341ea23f204299987a810fd8ed1f13ef1cbc55d0871974f18b867&quot;,
+      &quot;bytes&quot;: 1431
+    },
+    &quot;flygym/assets/model/flybody/fruitfly.xml&quot;: {
+      &quot;sha256&quot;: &quot;66e495951d1713559066e18eae55e9ed0e368350dd9006bea0be2b615bfb1a2c&quot;,
+      &quot;bytes&quot;: 67648
+    },
+    &quot;flygym/assets/model/flybody/joints.yaml&quot;: {
+      &quot;sha256&quot;: &quot;b90bf60cc04fc3b32350d58e00d6f2f18c202073a54644a8b3c514c2431f977a&quot;,
+      &quot;bytes&quot;: 10695
+    },
+    &quot;flygym/assets/model/flybody/mujoco_globals.yaml&quot;: {
+      &quot;sha256&quot;: &quot;7ea81498d8cf02ce6380a4f9d9a4b3610b8acbedfa81f19844ad8c2c4901e350&quot;,
+      &quot;bytes&quot;: 520
+    },
+    &quot;flygym/assets/model/flybody/pose/flight/yaw_roll_pitch.yaml&quot;: {
+      &quot;sha256&quot;: &quot;1d5a3034db1bc1d393fe37a9dbe044de34be05bb0aa232fa9856f9c45a4b5601&quot;,
+      &quot;bytes&quot;: 1576
+    },
+    &quot;flygym/assets/model/flybody/pose/neutral/yaw_roll_pitch.yaml&quot;: {
+      &quot;sha256&quot;: &quot;d7741963acf68c2905f03484d1fa2ff644baf28f9aeb9e3350c6783d2894c28d&quot;,
+      &quot;bytes&quot;: 149
+    },
+    &quot;flygym/assets/model/flybody/rigging.yaml&quot;: {
+      &quot;sha256&quot;: &quot;eb852760f6cc7fedea4e2d75cff89b0b4eec6dad09b67368266644d8db628737&quot;,
+      &quot;bytes&quot;: 23925
+    },
+    &quot;flygym/assets/model/flybody/vision.yaml&quot;: {
+      &quot;sha256&quot;: &quot;1292a6d90fc7c7b54060e2053624a78d9f6deffcd8f7095ff87a9d1770ac9219&quot;,
+      &quot;bytes&quot;: 856
+    },
+    &quot;flygym/assets/model/flybody/visuals.yaml&quot;: {
+      &quot;sha256&quot;: &quot;a414609a7c48774e201948ea33701ab1c429bceb3949425b5a341e61a34470f5&quot;,
+      &quot;bytes&quot;: 933
+    },
+    &quot;flygym/assets/model/musculoskeletal/best_combined_arm_damping_stiff_cvt3.xml&quot;: {
+      &quot;sha256&quot;: &quot;04f6070d6733940357be005ca72c02ba0d9455538ff018da70c74de7458e9531&quot;,
+      &quot;bytes&quot;: 49670
+    },
+    &quot;flygym/assets/model/neuromechfly/compound_eye.npz&quot;: {
+      &quot;sha256&quot;: &quot;51afb29664ac1f4ef05535f417ae37ed8a625911c99995720ca382799eef36b3&quot;,
+      &quot;bytes&quot;: 27591
+    },
+    &quot;flygym/assets/model/neuromechfly/legacy/flygym1_config.yaml&quot;: {
+      &quot;sha256&quot;: &quot;521f2ebc9951bdd71ab71aed5c1c4f3352d036b2df257dba53b0370c0f2e16fb&quot;,
+      &quot;bytes&quot;: 7217
+    },
+    &quot;flygym/assets/model/neuromechfly/legacy/flygym1_deepfly3d_rollyawpitch.xml&quot;: {
+      &quot;sha256&quot;: &quot;01c2eb51a379e8f7af37ad64f795d942da3d433841ee2397f6bce4af8698484a&quot;,
+      &quot;bytes&quot;: 47522
+    },
+    &quot;flygym/assets/model/neuromechfly/legacy/flygym1_seqikpy_yawpitchroll.xml&quot;: {
+      &quot;sha256&quot;: &quot;e8bf4474c98b85cd142f1bf053d744edd92a2b39f01aff6cba3fb199e54059c7&quot;,
+      &quot;bytes&quot;: 47518
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen12.stl&quot;: {
+      &quot;sha256&quot;: &quot;656b60100c06b0a8eb2dfbd201b12cac5eb31ffec6bf9c6c4ff3f97d14376371&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen3.stl&quot;: {
+      &quot;sha256&quot;: &quot;264af5ede95bfcb11720219b31c76141a0921394f7c46e7fb7fb6b7066880f3b&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen4.stl&quot;: {
+      &quot;sha256&quot;: &quot;662bbc3af32a987511af04e437d02c40e99840960809f5020abe9ec91b226ca4&quot;,
+      &quot;bytes&quot;: 99984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen5.stl&quot;: {
+      &quot;sha256&quot;: &quot;87d1de98ad39ba52c096e0fd3b4860ae3a0aadeb4be46cac824e9b2501be6c48&quot;,
+      &quot;bytes&quot;: 99984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen6.stl&quot;: {
+      &quot;sha256&quot;: &quot;748dda76a46554fd1743113eaafdf0dc2d10546095f5420406745e0eb47f87fb&quot;,
+      &quot;bytes&quot;: 99984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_haustellum.stl&quot;: {
+      &quot;sha256&quot;: &quot;babceb7a6adf0c88e8de6ce9810c32b397d3d1cdd073c0b1bea1df9d8c6ac4e9&quot;,
+      &quot;bytes&quot;: 99984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_head.stl&quot;: {
+      &quot;sha256&quot;: &quot;39c51acbdf5957af95e294fa485cd7602103ca83bf451e95e29d251bd43765b6&quot;,
+      &quot;bytes&quot;: 99984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_rostrum.stl&quot;: {
+      &quot;sha256&quot;: &quot;4ed0fa33c5867013482011e2ff656b71189f2b29dfb0bda2b0797961d95d12e4&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_thorax.stl&quot;: {
+      &quot;sha256&quot;: &quot;b7fac1a3bcbad2100d063bae2ae6e81217e808f3c32564763ee7e43ec3904969&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_arista.stl&quot;: {
+      &quot;sha256&quot;: &quot;6201af1cbe213ee6e259a6d89df65080f9cb9d806e6526cbcc7c5f1ae793f97c&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_eye.stl&quot;: {
+      &quot;sha256&quot;: &quot;08ce40c3264c9ab87703b6c013eae39d1bc48fa3e4cf02aec06d529c94e70daf&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_funiculus.stl&quot;: {
+      &quot;sha256&quot;: &quot;d2a6d35751922fb8b1ce07b269bc432f33d7f8f6d243b2dd1801e021b91d8156&quot;,
+      &quot;bytes&quot;: 26584
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_haltere.stl&quot;: {
+      &quot;sha256&quot;: &quot;13d77fcca66fca90db5cf00b33a7369ae80366fe39974df3667e709882e64ed6&quot;,
+      &quot;bytes&quot;: 41284
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_pedicel.stl&quot;: {
+      &quot;sha256&quot;: &quot;6de0f06e57c78f8738f67c0c52b85e74cb105789497a4183944e90211d3a4bf4&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_wing.stl&quot;: {
+      &quot;sha256&quot;: &quot;142f77f15008fd75e1490b546bb859cf98c056121f1abd65acea2052c4e7764c&quot;,
+      &quot;bytes&quot;: 100034
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_coxa.stl&quot;: {
+      &quot;sha256&quot;: &quot;bff053bfee772796dae2b396aa0e3be12919b7fb1ee33b5fde369bec00944b64&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus1.stl&quot;: {
+      &quot;sha256&quot;: &quot;29085dda732699c4a3110458303adf2eec667f7db6e42166d408c260ae6acf5e&quot;,
+      &quot;bytes&quot;: 89584
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus2.stl&quot;: {
+      &quot;sha256&quot;: &quot;996735c15a7e8e0c022babf5500224fa6e23de0e277305279d4b6787d56335d8&quot;,
+      &quot;bytes&quot;: 89884
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus3.stl&quot;: {
+      &quot;sha256&quot;: &quot;166044083a5a4a0e8b7db91cdd71ef0ea0e3feb18f1630955156de14931d9495&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus4.stl&quot;: {
+      &quot;sha256&quot;: &quot;c90d8c6ebd0e2384a45524944e4fb2e02ba413be26ee04bc5030b2afb5876943&quot;,
+      &quot;bytes&quot;: 100034
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus5.stl&quot;: {
+      &quot;sha256&quot;: &quot;93b048052461fa756a767608418ec90e537435a1ff282f2a393faa45ba60ae73&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tibia.stl&quot;: {
+      &quot;sha256&quot;: &quot;8138fe5f1fc52588dca6677bb338d39451813ac96159f78d6cf677eba73f3862&quot;,
+      &quot;bytes&quot;: 85534
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_trochanterfemur.stl&quot;: {
+      &quot;sha256&quot;: &quot;50e4e7baf2852a369f0dda2a2c9708a68c45893b3019a79dd74799e8e2ea64c9&quot;,
+      &quot;bytes&quot;: 80984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_coxa.stl&quot;: {
+      &quot;sha256&quot;: &quot;ad3a10789b8bd5e0f3db2667a1fe373ffdb83cfc876b34d60508e9e34a51366d&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus1.stl&quot;: {
+      &quot;sha256&quot;: &quot;61af16259215525e092d61426b874c7855485a9c7cfa91eecfc2fe99281a2dc6&quot;,
+      &quot;bytes&quot;: 38934
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus2.stl&quot;: {
+      &quot;sha256&quot;: &quot;da796bc3ad5d355b9e941aeeb6ad96c7fb00dee7421995605dcc81cd6fd7af12&quot;,
+      &quot;bytes&quot;: 98684
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus3.stl&quot;: {
+      &quot;sha256&quot;: &quot;08280c942abf91279e86414d064f39cae2b46ba9f62845252a9763d0839fabe5&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus4.stl&quot;: {
+      &quot;sha256&quot;: &quot;623f9059236af1327770f6f8e5e4fb8dc87930c49f5559c36d3d4245f51f7678&quot;,
+      &quot;bytes&quot;: 99984
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus5.stl&quot;: {
+      &quot;sha256&quot;: &quot;1b86c811928d0a6e04c693b9a213f06c0f7a037584252fc8f35d408be1bf87e8&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tibia.stl&quot;: {
+      &quot;sha256&quot;: &quot;2853873ade9abeb35da5f1a6c822d223bbe19a50d8ed77921bb77743b4782a60&quot;,
+      &quot;bytes&quot;: 37484
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_trochanterfemur.stl&quot;: {
+      &quot;sha256&quot;: &quot;8e6b7ee8c4f6c388b64250086acc952c10abd469ac7bf0fb7015c2837e53d423&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_coxa.stl&quot;: {
+      &quot;sha256&quot;: &quot;01a6f4f4147b7cd308f0a1db79786694632c9fe5a3425b5e3454a7fa7624897b&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus1.stl&quot;: {
+      &quot;sha256&quot;: &quot;b7f50bfe1e75dfa65110a4f80e0216858a7a75712115b04605f344c8e837b1ae&quot;,
+      &quot;bytes&quot;: 46284
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus2.stl&quot;: {
+      &quot;sha256&quot;: &quot;2dbb000ae11ef58de0023ccbdbfc8f1c5ff7b7517824a58d3e204f3ee00770c4&quot;,
+      &quot;bytes&quot;: 77884
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus3.stl&quot;: {
+      &quot;sha256&quot;: &quot;8f1814f0054382e037279f04d0bb998e36ccaabd57ec418d35dd6f7e47bd51bb&quot;,
+      &quot;bytes&quot;: 92884
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus4.stl&quot;: {
+      &quot;sha256&quot;: &quot;3f2881bd6f1fdb445bf01c00cac53c9a1b30388cd3fdc1b327704c60f138bf03&quot;,
+      &quot;bytes&quot;: 100084
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus5.stl&quot;: {
+      &quot;sha256&quot;: &quot;3e9a76e4c0c4e829705271846f93a3aa056a0e87bc99996519722eeb841c1b70&quot;,
+      &quot;bytes&quot;: 49384
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tibia.stl&quot;: {
+      &quot;sha256&quot;: &quot;dc1ad6da6db91ba703150e6150f59a498f9dbd311b1ec0678da3f896c421dab5&quot;,
+      &quot;bytes&quot;: 33884
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_trochanterfemur.stl&quot;: {
+      &quot;sha256&quot;: &quot;9619105028e5006d891b12dfced77aafa3c41a599edbf49d14691907ce2eb502&quot;,
+      &quot;bytes&quot;: 41384
+    },
+    &quot;flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/simplification_metadata.csv&quot;: {
+      &quot;sha256&quot;: &quot;c3b77709577fe547b13ee4e39d1e71040edcd94743e78660b5f605d758a8745f&quot;,
+      &quot;bytes&quot;: 4098
+    },
+    &quot;flygym/assets/model/neuromechfly/mujoco_globals.yaml&quot;: {
+      &quot;sha256&quot;: &quot;e5b70e5bd5199ab2a9a68eb119ce9ef3f0b1dfa1890e13f1adb6d6cc20579988&quot;,
+      &quot;bytes&quot;: 842
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/_manual_specs/neutral.yaml&quot;: {
+      &quot;sha256&quot;: &quot;1824449abfd55d6447ce24bc8ec190496a8f334a232b4c894495082c166f6924&quot;,
+      &quot;bytes&quot;: 1394
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/neutral/pitch_roll_yaw.yaml&quot;: {
+      &quot;sha256&quot;: &quot;e3256fd1c9711daabcd90ed029dfc2a585720034b83e0900ac60697efe104aba&quot;,
+      &quot;bytes&quot;: 1191
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/neutral/pitch_yaw_roll.yaml&quot;: {
+      &quot;sha256&quot;: &quot;bf69ba3a84f72b4b42371b4ea2e013a770956b113a05a4b0dec88a8ee525e12c&quot;,
+      &quot;bytes&quot;: 1188
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/neutral/roll_pitch_yaw.yaml&quot;: {
+      &quot;sha256&quot;: &quot;bb39dac918af60e9287a122e4201eb4419ee8c6a78a404f67c82702b6f47a6db&quot;,
+      &quot;bytes&quot;: 1136
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/neutral/roll_yaw_pitch.yaml&quot;: {
+      &quot;sha256&quot;: &quot;99ec76c61c427be836b37202edab010f92dc3150830c5460436b016a83ace287&quot;,
+      &quot;bytes&quot;: 1132
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/neutral/yaw_pitch_roll.yaml&quot;: {
+      &quot;sha256&quot;: &quot;b4ada107c43a1588e5f361dace0bac5ea1ce7df181201e62a02cc6ec99dc48a9&quot;,
+      &quot;bytes&quot;: 1184
+    },
+    &quot;flygym/assets/model/neuromechfly/pose/neutral/yaw_roll_pitch.yaml&quot;: {
+      &quot;sha256&quot;: &quot;619a8efe6e3c2d4bb8acda82735f5732b7de039470ce0cd74e6c574cde6e1a8c&quot;,
+      &quot;bytes&quot;: 1133
+    },
+    &quot;flygym/assets/model/neuromechfly/rigging.yaml&quot;: {
+      &quot;sha256&quot;: &quot;4e51d5ed3f151aefc125c91ff9298921b3b79a9d64e03e6fe88f1ce9945dbe3d&quot;,
+      &quot;bytes&quot;: 6425
+    },
+    &quot;flygym/assets/model/neuromechfly/vision.yaml&quot;: {
+      &quot;sha256&quot;: &quot;aeaf9c67603e85ac81d251a01e7a20821687c1a62be0626af49ef09919e10545&quot;,
+      &quot;bytes&quot;: 874
+    },
+    &quot;flygym/assets/model/neuromechfly/vision/ommatidia_id_map.npy&quot;: {
+      &quot;sha256&quot;: &quot;270baa562cd56b74c91fd3d0a218548aaf41c00df3401ebf521a0461adadf21d&quot;,
+      &quot;bytes&quot;: 460928
+    },
+    &quot;flygym/assets/model/neuromechfly/vision/pale_mask.npy&quot;: {
+      &quot;sha256&quot;: &quot;1489f64d82dbf35d488448d0a86afa7314be1f29a58ffc7ce4c454a5d492bb3f&quot;,
+      &quot;bytes&quot;: 849
+    },
+    &quot;flygym/assets/model/neuromechfly/visuals.yaml&quot;: {
+      &quot;sha256&quot;: &quot;1b959ada4d8016d4c7f6bde4b118733b48e72d749acc74b8753b547c86b6546a&quot;,
+      &quot;bytes&quot;: 4566
+    },
+    &quot;flygym_demo/ball_flybody_data/assets/ball_flybody_clip.npz&quot;: {
+      &quot;sha256&quot;: &quot;f04c7e019e1049eb7eeb808abda971555c4d44542d7a3038b207aa02c8517cb0&quot;,
+      &quot;bytes&quot;: 19998
+    },
+    &quot;flygym_demo/complex_terrain/assets/flybody_step_selection.json&quot;: {
+      &quot;sha256&quot;: &quot;1c411f6ec212fc4befb84be5b264c5f2628d7ee7263610f43f1e3e54eb55bef3&quot;,
+      &quot;bytes&quot;: 543
+    },
+    &quot;flygym_demo/complex_terrain/assets/single_steps_flybody.meta.json&quot;: {
+      &quot;sha256&quot;: &quot;b22bba44c402a334dc23de491f613bdb58c0d4c3e262fc081b507b16909ee486&quot;,
+      &quot;bytes&quot;: 1261
+    },
+    &quot;flygym_demo/complex_terrain/assets/single_steps_flybody.npz&quot;: {
+      &quot;sha256&quot;: &quot;25c4d9ae6fa2adf7f4e30c696b8c07f8810721e352feb17e462b094defe2736b&quot;,
+      &quot;bytes&quot;: 28186
+    },
+    &quot;flygym_demo/complex_terrain/assets/single_steps_untethered.pkl&quot;: {
+      &quot;sha256&quot;: &quot;1e5b28bb6b3f50ac95a04773ea37af28d05e26d03bd90fdba57fa1b3eacfaf8c&quot;,
+      &quot;bytes&quot;: 18024
+    },
+    &quot;flygym_demo/complex_terrain/assets/ventral_replay.mp4&quot;: {
+      &quot;sha256&quot;: &quot;892eb4263d381e58c63b4239169b605f4474fdc0f735e4712836c2157430f5d0&quot;,
+      &quot;bytes&quot;: 648607
+    },
+    &quot;flygym_demo/muscle_imitation/assets/mocap/qpos/0002.npy&quot;: {
+      &quot;sha256&quot;: &quot;aa7e3e72325d7d76a17863057cbaba9259a346d66e41b7d820411570d5e00a42&quot;,
+      &quot;bytes&quot;: 12728
+    },
+    &quot;flygym_demo/muscle_imitation/assets/mocap/qvel/0002.npy&quot;: {
+      &quot;sha256&quot;: &quot;c472a3e03ed25a614efcb90e54641e41a031d23024092d99f44b4448b581dd12&quot;,
+      &quot;bytes&quot;: 12728
+    },
+    &quot;flygym_demo/muscle_imitation/assets/mocap/xipos/0002.npy&quot;: {
+      &quot;sha256&quot;: &quot;3f73c47ee4692b0ebf9a760869d1ea05af6c8bbd5795320fb2edb38f53c5c20c&quot;,
+      &quot;bytes&quot;: 21728
+    },
+    &quot;flygym_demo/muscle_imitation/assets/mocap/xivel/0002.npy&quot;: {
+      &quot;sha256&quot;: &quot;3eb99125864b8ecdf05286c72301eb1954ae9d9e2e113b350b6ca1c02f6e8d61&quot;,
+      &quot;bytes&quot;: 43328
+    },
+    &quot;flygym_demo/spotlight_data/assets/spotlight_behavior_clip.npz&quot;: {
+      &quot;sha256&quot;: &quot;6688dcffe1428e88cec0169513f4980abe6e0836ffe467f0ff6da4465db83a09&quot;,
+      &quot;bytes&quot;: 528912
+    }
+  },
+  &quot;setup_and_warmup_seconds&quot;: 29.919908666983247,
+  &quot;status&quot;: &quot;passed&quot;,
+  &quot;steps&quot;: 1000,
+  &quot;timestep&quot;: 0.0001,
+  &quot;simulated_seconds&quot;: 0.1,
+  &quot;step_wall_seconds&quot;: 0.5742664579302073,
+  &quot;steps_per_wall_second&quot;: 1741.3519215526492,
+  &quot;real_time_factor&quot;: 0.17413519215526493,
+  &quot;actuated_dofs&quot;: 42,
+  &quot;initial_thorax_position_mm&quot;: [
+    0.5509179218666584,
+    -3.179257153918122e-05,
+    1.1601775416602311
+  ],
+  &quot;trajectory&quot;: [
+    {
+      &quot;step&quot;: 1,
+      &quot;thorax_position_mm&quot;: [
+        0.5508549054797356,
+        -3.217637306938705e-05,
+        1.16024769594883
+      ]
+    },
+    {
+      &quot;step&quot;: 101,
+      &quot;thorax_position_mm&quot;: [
+        0.5918292500591578,
+        -0.0064033768031297,
+        1.18022190404404
+      ]
+    },
+    {
+      &quot;step&quot;: 201,
+      &quot;thorax_position_mm&quot;: [
+        0.6603469362890169,
+        -0.031701717283933006,
+        1.1871727666409968
+      ]
+    },
+    {
+      &quot;step&quot;: 301,
+      &quot;thorax_position_mm&quot;: [
+        0.7157316093676819,
+        -0.028608116460952876,
+        1.1747378286392882
+      ]
+    },
+    {
+      &quot;step&quot;: 401,
+      &quot;thorax_position_mm&quot;: [
+        0.6840591919382933,
+        0.05091077898744822,
+        1.05326785324795
+      ]
+    },
+    {
+      &quot;step&quot;: 501,
+      &quot;thorax_position_mm&quot;: [
+        0.6288109148699615,
+        0.24788604825280414,
+        0.9015184875572552
+      ]
+    },
+    {
+      &quot;step&quot;: 601,
+      &quot;thorax_position_mm&quot;: [
+        0.701083880646803,
+        0.309975816564994,
+        0.7985541246863688
+      ]
+    },
+    {
+      &quot;step&quot;: 701,
+      &quot;thorax_position_mm&quot;: [
+        0.8042013207401498,
+        0.4033782599515068,
+        0.8786022185683778
+      ]
+    },
+    {
+      &quot;step&quot;: 801,
+      &quot;thorax_position_mm&quot;: [
+        0.9449351273585329,
+        0.41672691948284624,
+        0.9489952372254166
+      ]
+    },
+    {
+      &quot;step&quot;: 901,
+      &quot;thorax_position_mm&quot;: [
+        1.0253830443447416,
+        0.39071915558658576,
+        0.9463554508643003
+      ]
+    },
+    {
+      &quot;step&quot;: 1000,
+      &quot;thorax_position_mm&quot;: [
+        1.0776959683593723,
+        0.31758174479557844,
+        0.9085411214816597
+      ]
+    }
+  ],
+  &quot;final_displacement_mm&quot;: [
+    0.5267780464927139,
+    0.3176135373671176,
+    -0.25163642017857146
+  ],
+  &quot;external_asset_cache&quot;: {},
+  &quot;external_asset_endpoint&quot;: &quot;https://datasets.epfl.ch/nely-public-share/flygym_assets/ (only used if lazy assets requested)&quot;,
+  &quot;requirements_sha256&quot;: &quot;0cf916deb3fb5a4b363de09e2678141b859f38a9be7bc087e8b3f237c2911b62&quot;
+}</pre></details></div><a href="../../results/robot-simulator-smoke/README.ko.md">출처와 의존성 기록</a></section>
+<section><h2>Novi를 위한 범위가 제한된 로보틱스 브리지</h2>
+<p>이 문서는 실험을 제안할 뿐, 새로운 실행 결과나 학습된 언어 모델, FlyGym 결과를 보고하지 않는다. 현재 Novi는 실제 연결에서 가져온 단순화된 PN→KC→MBON rate 회로를 구현한다. 중앙복합체(CX), 하행뉴런(DN) 경로, 배쪽신경삭, 근육, 생물학적 감각운동 폐루프는 구현하지 않았다. 따라서 소프트웨어 변수에 파리 기능의 이름을 붙였다는 이유로 빠진 계통을 구현했다고 암시하면 안 된다.</p>
+<h2>생물학에서 측정한 것과 그것이 보장하지 않는 것</h2>
+<h3>현재 방향과 목표 방향</h3>
+<p><a href="https://www.nature.com/articles/nature14446">Seelig와 Jayaraman (2015)</a>은 구속된 파리의 중앙복합체 나침반 뉴런에서 동물의 현재 방향을 따라 회전하고 시각·자기운동 단서로 갱신되는 activity bump를 측정했다. 이는 시험 조건에서 동적으로 유지되는 방향 변수를 지지한다. 임의의 임베딩 좌표가 나침반 뉴런이라는 뜻은 아니다.</p>
+<p><a href="https://www.nature.com/articles/s41586-023-07006-3">Mussells Pires 등 (2024)</a>은 목표 방향 표현을 현재 방향과 구분하고 FC2/PFL3 회로를 방향 행동과 연결했다. 따라서 <strong>원하는 방향</strong>과 <strong>관측한 방향</strong>을 서로 다른 typed variable로 유지해야 한다. 이 목표는 항법 방향이었으며 제한 없는 자연어 의도가 아니었다.</p>
+<h3>학습 가치, 내부 상태, 행동 문맥</h3>
+<p><a href="https://elifesciences.org/articles/04580">Aso 등 (2014)</a>은 MBON 집단 activity와 인과 조작을 학습된 양·음의 valence 및 행동 선택과 연결했다. 이는 가치에 민감한 버섯체 출력 단계를 지지한다. MBON이 일반 언어 의미를 담거나 관절 torque를 직접 지정한다는 결과가 아니다.</p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2780032/">Krashes 등 (2009)</a>은 배고픔 상태가 확인된 neuromodulatory mechanism을 통해 appetitive memory의 인출·표현을 gate함을 보였다. 로보틱스 대응물은 내부 상태를 명시적 입력으로 노출하고 기억 의존 정책 변화가 있는지 시험할 수 있다. <code>hunger</code>라는 software scalar는 여전히 공학적 추상화이며 측정된 호르몬 회로가 아니다.</p>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6327952/">Kim 등 (2015)</a>은 초파리 visuomotor processing에서 efference copy의 세포 수준 근거를 제시했다. 확인된 시각 뉴런은 saccade 중 예상되는 시각 운동을 상쇄하기에 적합한 timing과 sign의 motor-related input을 받았다. 따라서 command의 예상 감각 결과, 외부 시각 신호의 residual, 실제 관측된 운동을 서로 분리해야 한다. 명령은 관측이 아니다. 미끄러짐, 충돌, actuator 고장으로 둘은 달라질 수 있다.</p>
+<h3>고유감각과 하행 제어</h3>
+<p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6481666/">Mamiya 등 (2018)</a>은 tibia 위치, 운동 방향과 속도, 또는 진동에 선택적인 femoral chordotonal organ(FeCO) 고유감각 뉴런 subclass를 규명했다. 공학적으로는 서로 다른 고유감각 양을 하나의 일반적인 body-state scalar로 합치지 않고, motor command와 분리하여 timestamp 및 uncertainty와 함께 공급해야 한다.</p>
+<p><a href="https://elifesciences.org/articles/34272">Namiki 등 (2018)</a>은 뇌 영역을 배쪽신경삭에 잇는 하행뉴런을 지도화했고, <a href="https://elifesciences.org/articles/34275">Cande 등 (2018)</a>은 하행뉴런 활성화로 개별·조합 경로와 행동의 관계를 조사했다. 이는 단어 하나를 motor 하나에 대응시키기보다 다대다 하행 제어 interface를 지지한다. 고수준 목표에서 locomotor command로 가는 완전한 역함수를 제공하지는 않는다.</p>
+<p>이 결과들은 typed state, 기억·가치 조절, 방향 비교, 고유감각 feedback, 하행 action interface에 영감을 준다. 현재 Novi PN→KC→MBON 회로를 CX 또는 DN 모델로 검증하지 않는다.</p>
+<h2>실제 양방향 인터페이스의 선례</h2>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/34016775/?dopt=Abstract">Flesher 등 (Science, 2021)</a>은 운동피질 신호로 로봇 팔을 제어하는 읽기 경로와, 체성감각피질 자극으로 촉각 피드백을 전달하는 쓰기 경로를 결합했다. 연구한 참가자에서 촉각 피드백은 과제 완료 시간을 개선했다. 여기서 가져올 공학적 원리는 역할이 다른 읽기·쓰기 경로를 각각 보정하고 실제 과제 결과로 평가한다는 것이다. 이것이 파리–언어모델 연결을 입증하거나 소프트웨어 prefix를 신경 자극과 동등하게 만들지는 않는다. 제안하는 소프트웨어도 행동의 실제 효과와 환경에서 되돌아오는 정보의 기여를 모두 검증해야 한다.</p>
+<h2>세 가지 token interface</h2>
+<p>Interface 선택에 따라 무엇을 학습해야 하는지가 달라진다.</p>
+<ol>
+<li><strong>Typed text.</strong> 목표, 관측 상태, uncertainty, 허용 tool로 이루어진 작은 schema를 일반 text token으로 직렬화한다. 언어 모델 tokenizer를 바꾸지 않고 감사할 수 있지만 길고 metric precision을 잃을 수 있다. Text는 측정을 기술해야 하며 정답 action이나 미래 outcome을 몰래 포함해서는 안 된다.</li>
+<li><strong>연속 soft prefix, <code>m × d_model</code>.</strong> 학습 bridge가 고정 길이 state window를 모델 embedding stream에 넣을 <code>m</code>개의 floating-point vector로 바꾼다. 이 vector는 token ID, 단어, 뉴런이 아니다. Perceiver 계열 latent query, <a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/tackling-multiple-tasks-with-a-single-visual-language-model/flamingo.pdf">Flamingo</a>, <a href="https://openreview.net/pdf?id=KU9UojoX7U">BLIP-2</a>는 비텍스트 입력을 동결 또는 부분 동결 언어 모델에 압축하는 방법을 보여 주지만 vector를 유용하게 만드는 paired objective는 여전히 필요하다.</li>
+<li><strong>학습된 discrete token.</strong> 상태나 action chunk를 양자화하고 token ID를 확장하거나 재사용한다. <a href="https://arxiv.org/abs/2307.15818">RT-2</a>와 <a href="https://openvla.github.io/">OpenVLA</a>는 robot trajectory로 vision-language-action 모델을 학습하며, <a href="https://huggingface.co/physical-intelligence/fast/blob/main/README.md">FAST</a>는 연속 action sequence용 tokenizer를 학습한다. ID만 배정해서 grounded meaning이 생기지 않는다. 모델이 code를 읽거나 출력하도록 학습·적응해야 하며 tokenizer collision도 배제해야 한다.</li>
+</ol>
+<p>같은 차원이나 embedding table을 공유하는 것은 전송 규약일 뿐 alignment가 아니다. Embedding encoder는 비생성 semantic feature extractor다. Text similarity를 요약할 수 있지만, 임의의 물리 측정을 같은 폭으로 projection한다고 semantic해지지는 않는다.</p>
+<h2>제안하는 두 clock 구조</h2>
+<p>안정화에는 <strong>빠른 motor loop</strong>, 목표·mode 변경과 recovery 결정에는 <strong>느린 semantic loop</strong>를 사용한다.</p>
+<p>대략 20–100 Hz의 specialist controller는 pose, contact, local sensory feature, 현재의 제한된 goal을 받아 joint target이나 작은 motor primitive를 출력한다. 대략 0.5–2 Hz 또는 event 발생 시 language path가 집계된 state window를 읽고 <code>set_goal_heading</code>, <code>approach_odor</code>, <code>stop</code>, <code>request_recovery</code> 같은 typed command를 고른다. Safety layer가 범위, 만료, 허용 tool을 검사한 뒤 command를 확정한다. 정확한 속도는 실험 parameter이며 생물학 주장이 아니다.</p>
+<p>Read bridge와 write bridge는 독립된 map이다.</p>
+<pre><code class="language-text">관측 -&gt; state encoder R -&gt; text / soft prefix / token code -&gt; LM
+LM tool 결정 -&gt; parser와 guard -&gt; action-grounding map W -&gt; specialist controller
+                                      ^                           |
+                                      |------ 관측 outcome -------|
+</code></pre>
+<p><code>W</code>를 <code>Rᵀ</code>로 정의하거나 <code>R</code>의 역함수라고 가정해서는 안 된다. Reading은 어떤 latent state가 semantic decision을 예측하는지 물으므로 calibration 또는 paired alignment 근거가 필요하다. Writing은 어떤 grounded command가 몸을 안전하게 바꾸는지 묻는다. 그 grounding은 측정된 analytic controller나 fitted model에서 올 수 있다. 두 경로 모두 독립적으로 검증된 mapping이 필요하지만 반드시 learned dynamics가 필요한 것은 아니다. Task success, valid-command loss, paired observation의 representation alignment, 미래 관측 상태 예측을 objective와 점검 항목으로 함께 쓸 수 있다. Cycle consistency는 보조 loss가 될 수 있으나, 표현력이 큰 두 network가 물리 의미 없이 정보를 숨겨 서로 복원할 수 있다. Goal, observation, action availability, feedback 중 하나를 조작하고 matched alternative를 고정하는 인과 대조가 필요하다.</p>
+<p>Typed message는 실제 관측과 의도를 구분해야 한다.</p>
+<pre><code class="language-json">{
+  &quot;seq&quot;: 1842,
+  &quot;frame&quot;: &quot;arena/world&quot;,
+  &quot;time_s&quot;: 27.440,
+  &quot;valid_until_s&quot;: 27.940,
+  &quot;goal&quot;: {&quot;type&quot;: &quot;heading&quot;, &quot;rad&quot;: 1.20},
+  &quot;observed&quot;: {&quot;heading_rad&quot;: 0.83, &quot;sigma_rad&quot;: 0.12, &quot;odor&quot;: 0.41},
+  &quot;commanded&quot;: {&quot;turn_rate_rad_s&quot;: 0.30, &quot;issued_at_s&quot;: 27.420},
+  &quot;ack&quot;: {&quot;command_seq&quot;: 1841, &quot;status&quot;: &quot;accepted&quot;}
+}
+</code></pre>
+<p>Sequence number는 오래된 acknowledgement를 막고, frame과 unit은 좌표 오류를 막으며, expiry는 느린 모델 latency를 제한한다. 가능하면 bridge를 지나는 동안 distribution, interval, top-k hypothesis를 보존한다. 이른 argmax는 ambiguity를 없애고 근거보다 downstream decision이 더 잘 calibrated된 것처럼 보이게 할 수 있다.</p>
+<h2>쓰기 브리지의 두 목적지</h2>
+<p>로봇을 제어하는 tool call과 신경집단 상태를 바꾸는 입력은 서로 다른 쓰기 대상이다. 둘 다 연결할 수 있지만 각각의 보정이 필요하다.</p>
+<p><strong>의미에서 회로 입력으로.</strong> 명령 임베딩을 확인된 Novi 입력 포트의 비음수 패턴으로 바꾸고 강도·지속 시간·시작 시각을 붙일 수 있다. 기존 PortBridge는 이미 공학적인 임베딩→PN 표현을 제공하지만 텍스트 임베딩을 매핑했다는 사실이 자연적인 파리 감각 코드임을 입증하지는 않는다. 목표 방향을 원형 활동 분포로 쓰는 후속 모듈도 생각할 수 있다. 다만 현재 PN→KC→MBON에는 그 분포를 넣을 FC2/PFL3 동역학이 없으므로 별도 구현과 검증이 필요하다. 임의 projection에 FC2라는 이름만 붙여서는 안 된다.</p>
+<p><strong>회로 출력 또는 모델 의도에서 운동으로.</strong> 모의 신경집단의 읽기 결과나 검증된 언어모델 의도를, 효과를 보정한 운동 패턴에 연결할 수 있다. 신경 포트에 쓰는 제안이라면 <code>u = B a</code>로 정의한다. <code>B</code>의 각 열은 허용하는 공간 패턴이고 <code>a</code>는 적은 수의 강도 값이며, 시간 포락선으로 지속 시간을 붙인다. 강도·부호·시간 제약은 실제 시뮬레이터/API에 맞춰야 한다. 동물 자극 처방이 아닌 소프트웨어 개입이다. 먼저 <code>(상태, 입력 u) -&gt; 다음 관측/행동</code>의 순방향 효과를 보정하고, 그다음 원하는 과제 변화를 만드는 쓰기 정책을 맞춘다. 상태를 잘 읽었다고 복원한 표현을 주입해 그 상태를 만들 수 있는 것은 아니다.</p>
+<p>같은 초기 상태와 난수에서 패턴 계수를 하나씩 바꾸고, 실제 과제 변수의 변화로 국소 효과 행렬을 추정한다. 행렬의 rank와 조건수를 검사하면 도달할 수 없는 방향이나 구별되지 않는 입력을 찾을 수 있다. 임베딩이 커져도 액추에이터가 만들 수 없는 행동은 복구하지 못한다. 이전 Novi 실행부의 도달 가능 행동 수 제한이 이런 문제의 예다. 의도하지 않은 효과, 비선형 강도 반응, 입력을 제거한 뒤 회복도 검사해야 하며 국소 행렬만으로 전역 제어 가능성을 입증할 수는 없다.</p>
+<p>읽기·쓰기 보정은 독립적으로 측정한 결과로 평가해야 한다. 자기 latent를 복원하는 순환은 임의 코드를 서로 주고받으면서도 몸을 잘못 움직일 수 있다. 자극 대응 순열, 같은 크기의 무효 입력, 액추에이터 차단, 같은 관측을 받는 전문 제어기를 대조군으로 둔다. 환경에서 나온 보상과 언어모델의 보상 예측도 분리한다. 모델이 성공했다고 말한 문장이 학습 보상이나 실제 성공 판정이 되어서는 안 된다.</p>
+<h2>범위가 제한된 실험과 예측</h2>
+<p>모든 scenario에서 먼저 LM 없이 작동하는 rule-based 또는 learned specialist controller를 사용해야 한다. 언어 interface는 선언한 goal이나 mode만 바꾼다.</p>
+<ul>
+<li><strong>냄새–바람 anemotaxis:</strong> odor 유무, wind direction, turbulence, plume loss를 교차한다. Plume loss 뒤에는 temporal state가 latest-frame input보다 나을 것으로 예측한다. Oracle plume vector, hand-coded cast/surge, linear/MLP state policy, structured text, soft prefix를 비교한다.</li>
+<li><strong>어둠 속 목표 방향:</strong> 방향을 설정한 뒤 visual landmark를 제거하고 통제된 self-motion bias를 넣는다. 정확한 방향을 꾸며내는 대신 uncertainty가 증가하고 성능이 완만하게 저하되어야 한다. Oracle heading, path integration, 마지막 heading 고정, shuffled goal을 비교한다.</li>
+<li><strong>내부 상태 memory gating:</strong> 기억한 odor value와 독립적으로 공급한 hunger-like state를 교차한다. Memory와 state가 함께 요구할 때만 상태 의존 선택이 나타날 것으로 예측한다. Memory-shuffled, state-shuffled, state-only, label-oracle 대조를 둔다.</li>
+<li><strong>고유감각 교란:</strong> 발행 command는 유지하면서 관측 leg state를 offset 또는 delay하고, 별도로 actuator를 교란한다. Sensing fault와 execution fault가 다른 signature를 보여야 한다. Command-only, observation-only, matched-delay, no-perturbation을 비교한다.</li>
+<li><strong>Reversal과 reward omission:</strong> 습득 뒤 하나의 goal–outcome 관계를 뒤집고 때때로 기대 reward를 생략한다. Trial 단위 adaptation, perseveration, recovery를 측정한다. Host Bayesian update, supervised retraining, fixed policy는 서로 다른 baseline이다. 측정된 mechanism 없이 어느 것도 dopamine learning이라 부르지 않는다.</li>
+<li><strong>Tool–body 조합 일반화:</strong> semantic tool, body side, terrain, language paraphrase의 조합을 holdout한다. Action grounding을 독립적으로 학습한 경우에만 typed composition이 도움이 될 것으로 예측한다. Flat class ID, compositional schema, text-only state, oracle action을 비교한다.</li>
+</ul>
+<p>고정 episode seed를 쓰고 겹치는 window가 아니라 전체 scene/trajectory 단위로 split한다. Success, 시간, fall/collision, energy 또는 distance, invalid/stale command, intervention 수, deadline miss, stop latency, 교란 후 recovery, calibration을 보고한다. 느린 loop의 semantic accuracy와 빠른 loop의 control quality를 따로 보고한다. 필수 인과 대조는 zero/random/shuffled state, permuted state-to-case pairing, swapped goal, unavailable-action mask, delayed feedback, 동일 관측 replay, 같은 capacity의 non-connectome encoder다. Valid tool call은 motor competence의 증거가 아니다. Closed-loop 향상만으로 LM, host algorithm, specialist controller 중 무엇이 원인인지 식별할 수 없다.</p>
+<h2>현재 robot foundation model과의 관계</h2>
+<p>RT-2와 OpenVLA는 robot action을 언어 모델식 출력으로 이산화하고 robot data로 학습한다. 이는 grounded interface의 공동 학습을 지지하며, 일반 LM에서 motor meaning이 zero-shot으로 생긴다는 증거가 아니다. FAST는 이런 discrete autoregressive action generation을 위한 sequence compression을 개선한다. 반대로 <a href="https://www.physicalintelligence.company/download/pi0.pdf">π0</a>는 vision-language backbone으로 조건화된 별도의 continuous action expert를 사용한다. Semantic reasoning과 빠른 연속 제어가 context를 공유하되 output clock은 공유하지 않을 수 있다는 점에서 Novi에 특히 적합한 선례다.</p>
+<p><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/fe51de4e7baf52e743b679e3bdba7905-Abstract-Conference.html">NDT2</a>와 <a href="https://poyo-brain.github.io/">POYO-1</a> 같은 neural-data model은 timestamp event, heterogeneous session, contextual adaptation의 유용한 선례다. Neural activity가 LLM에 alignment되었다거나 여러 recording session으로 학습한 decoder가 causal motor command를 제공한다는 결과는 아니다.</p>
+<h2>FlyGym 실현 가능성과 release 규율</h2>
+<p><a href="https://neuromechfly.org/installation/">FlyGym 2.x</a>는 NeuroMechFly 기반의 Apache-2.0 simulation environment이며 CPU 실행을 지원한다. Optional NVIDIA Warp 경로는 Mac용 경로가 아니다. 현재 repository 환경은 Python 3.11을 쓰지만 현재 FlyGym 2.x 설치 안내는 Python 3.12를 대상으로 하므로 repository interpreter를 바꾸지 말고 격리된 pinned environment를 사용해야 한다. FlyGym 2.x는 논문 시기의 1.x와 API도 다르므로 정확한 package/version, MuJoCo version, timestep, arena, controller parameter, asset, reset seed를 고정한다.</p>
+<p>첫 readiness check는 native rule controller를 사용한 CPU smoke test여야 한다. Deterministic reset, 수백 step의 안정적 simulation, 유효한 observation/action, 고정 환경에서의 동일 replay를 확인한다. 그다음 heading-token 또는 soft-prefix toy test를 할 수 있지만 여전히 interface test다. 별도의 고정 실험으로 측정하기 전에는 LM training, embodied success, 생물학적 motor circuit을 주장하지 않는다.</p></section><footer>jioh jung · Novigrad · 동료 심사 전 연구 설계·공학 검증 문서<br>Result SHA-256: <code>3d6196109c85d4b346daeb555c9ec95e2e52f877422e7fbc51d813341f680f74</code></footer></main></html>

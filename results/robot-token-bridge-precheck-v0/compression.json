@@ -1,0 +1,9 @@
+{
+  "archive": "results.json.gz",
+  "compression": "gzip; mtime=0",
+  "compressed_bytes": 11477692,
+  "compressed_sha256": "91087b2879bd8e3377882be2f35b5471edf25f657e6224294ac276b9b5f55c3c",
+  "uncompressed_bytes": 61011169,
+  "uncompressed_sha256": "ff46c2428156984cdd2ba8f3b6560f1c3e318ece0ad6e042dd91b467c02a4896",
+  "restore_method": "gzip.decompress; original pre-correction result hash retained"
+}

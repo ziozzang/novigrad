@@ -1,5 +1,7 @@
 # Neural interface research report
 
+The [biological robotics supplement](robotics.html) ([한국어](robotics.ko.html)) combines primary-source research, independent read/write adapter design, a replayed 1,280-case typed host-token control diagnostic, and a separate FlyGym CPU physics smoke test. Rebuild with `build_robotics_report.py` using `requirements-robotics.txt`; verify offline layout with `verify_robotics_report.py`. Numerical token tests do not execute an embedding model or LM.
+
 The [causal-feedback supplement](feedback.html) ([한국어](feedback.ko.html)) adds 84 frozen feedback conditions, matched host controls, a separate actuator count-noise assay, and post-hoc one-prototype routing with retained counterexamples. [Methods and portable replay](../../results/causal-feedback/README.md). Rebuild with `.venv/bin/python reports/neural-link/build_feedback_report.py`; browser checks use `verify_feedback_report.py`.
 
 The [bilateral interface supplement](bilateral.html) ([한국어](bilateral.ko.html)) tests typed site/time pooling and actual frozen FunctionGemma soft-prefix conditioning, including 120/480-update comparisons, held-out generated calls, constant/shuffled controls, wrong fixed points, and checkpoint compatibility. [Full methods and replay](../../results/bilateral-bridge/README.md). Rebuild with `.venv/bin/python reports/neural-link/build_bilateral_report.py`.

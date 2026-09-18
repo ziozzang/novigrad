@@ -28,3 +28,7 @@ __pycache__/
 
 # Duplicate generated end-to-end reproducibility runs.
 /results/precise-reproduction*/
+
+# Full robot diagnostic traces are tracked losslessly as deterministic gzip.
+/results/robot-token-bridge/results.json
+/results/robot-token-bridge-precheck-v0/results.json

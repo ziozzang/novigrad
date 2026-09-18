@@ -1,0 +1,11 @@
+{
+  "files": {
+    "results.json": "fd4d145d995414045d9910fb8eb0e46c899ad114d5e3f88633dc664de24b161b",
+    "requirements-freeze.txt": "0cf916deb3fb5a4b363de09e2678141b859f38a9be7bc087e8b3f237c2911b62",
+    "README.md": "1e08bcad12d0adf921c734fe7d99bb7542861320a3e6757c3d65d20387ce8846"
+  },
+  "script": {
+    "path": "examples/bio_bridge/flygym_smoke.py",
+    "sha256": "885b1b3e3a302f51387cc0ad4b751c61ccfae3de18f6c19958889f2fc8d967df"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Research synthesis plus interface and simulator feasibility; no new LM training or biological validation",
+  "numeric_results_sha256": "3d6196109c85d4b346daeb555c9ec95e2e52f877422e7fbc51d813341f680f74",
+  "sources": {
+    "reports/neural-link/build_robotics_report.py": "a9b442a8eb5447f6ed1a24887f8a93cbef9ebdac7e7695ca551afcb3e3a0227c",
+    "results/robot-token-bridge/protocol-lock.json": "f76d5e3c2464aa56d480750d6a03cf38bb71ebd4e6a27a7964ceca3c316ed5a7",
+    "results/robot-token-bridge/run-manifest.json": "f49dbeaadd959de36cb9eb81659d36c4735baebd11d5becc84dc10c1142f188d",
+    "results/robot-token-bridge/verification.json": "0e02ceb593f56621d812f4b32c16a5260e79d16fc42559aa20be300f80729916",
+    "results/robot-simulator-smoke/results.json": "fd4d145d995414045d9910fb8eb0e46c899ad114d5e3f88633dc664de24b161b",
+    "examples/bio_bridge/ROBOTICS_BRIDGE_RESEARCH.md": "848b707c5a5f23f95fcd590c06d87ce2185310169d70a0ea142b5fb7eebc22bd",
+    "examples/bio_bridge/ROBOTICS_BRIDGE_RESEARCH.ko.md": "100ca947eeaf826e002ba661b463a5862fe556a605b1faaba4f41194ebda67ed"
+  },
+  "outputs": {
+    "robotics.html": "0670bd77d6faa7ec7d4551997321a9a381807de1c13a70bab649eb38a4e65fea",
+    "robotics.ko.html": "e540af1dc1a74cb564b0af0513075acd0d210bbff930db486ce6c5118089192e",
+    "robotics-control.svg": "dc560657e7673c22df8bc436497e4dd1aab25ce5fc9f86eb300dac696d2ce0b7",
+    "robotics-control.png": "11711dcba3c0943dd3fc5255c1e6da10cf3916c0570c4324563ca45fb260df35"
+  },
+  "matplotlib": "3.11.2",
+  "markdown": "3.8.2"
+}
